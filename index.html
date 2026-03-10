@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiago Zeni — Marketing Digital &amp; Liderança Executiva</title>
+  <style>
+    /* ── Reset & Variables ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0f14;
+      --surface:   #13161e;
+      --border:    #1e2330;
+      --accent:    #4f8ef7;
+      --accent2:   #7c5cfc;
+      --text:      #e8eaf0;
+      --muted:     #7a7f96;
+      --radius:    12px;
+      --max-w:     1100px;
+      --transition: 0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+    /* ── Navbar ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(13, 15, 20, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      color: var(--muted);
+      transition: color var(--transition);
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: var(--transition); }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,142,247,0.12) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: var(--max-w);
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(79,142,247,0.3);
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-name {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+    }
+
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(79,142,247,0.3); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* Avatar placeholder */
+    .hero-visual {
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .avatar-ring {
+      position: relative;
+      width: 320px; height: 320px;
+    }
+
+    .avatar-ring::before {
+      content: '';
+      position: absolute; inset: -3px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      z-index: 0;
+    }
+
+    .avatar-inner {
+      position: absolute; inset: 3px;
+      border-radius: 50%;
+      background: var(--surface);
+      z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6rem;
+      color: var(--muted);
+      overflow: hidden;
+    }
+
+    .avatar-initials {
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-stats {
+      display: flex; gap: 2rem; margin-top: 3rem;
+    }
+
+    .stat { text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+    .stat-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+
+    /* ── Sections ── */
+    section { padding: 6rem 2rem; }
+
+    .container { max-width: var(--max-w); margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc { color: var(--muted); max-width: 560px; margin-bottom: 3.5rem; }
+
+    /* ── About ── */
+    #about { background: var(--surface); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text p { color: var(--muted); margin-bottom: 1rem; }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .highlight-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .highlight-card:hover { border-color: var(--accent); transform: translateX(4px); }
+
+    .highlight-icon {
+      width: 40px; height: 40px; min-width: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(79,142,247,0.15), rgba(124,92,252,0.15));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .highlight-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .highlight-desc { font-size: 0.85rem; color: var(--muted); }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .skill-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+
+    .skill-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-name { font-weight: 600; font-size: 0.9rem; }
+    .skill-pct { font-size: 0.85rem; color: var(--accent); font-weight: 700; }
+
+    .skill-bar {
+      height: 6px; background: var(--border);
+      border-radius: 3px; overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      width: 0;
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .skill-category { font-size: 0.75rem; color: var(--muted); margin-bottom: 1rem; }
+
+    /* ── Experience ── */
+    #experience { background: var(--surface); }
+
+    .timeline { position: relative; padding-left: 2rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: -2.5rem; top: 0.35rem;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px rgba(79,142,247,0.3);
+    }
+
+    .timeline-date {
+      font-size: 0.78rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-role {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-company {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-desc { font-size: 0.9rem; color: var(--muted); }
+
+    .timeline-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      background: rgba(79,142,247,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(79,142,247,0.2);
+    }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      display: flex; flex-direction: column;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .project-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+
+    .project-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(79,142,247,0.15), rgba(124,92,252,0.15));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .project-desc { font-size: 0.88rem; color: var(--muted); flex: 1; margin-bottom: 1.25rem; }
+    .project-link { font-size: 0.85rem; color: var(--accent); font-weight: 600; display: flex; align-items: center; gap: 0.3rem; }
+    .project-link:hover { text-decoration: underline; }
+
+    /* ── Contact ── */
+    #contact { background: var(--surface); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-form {
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    label { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+
+    input, textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border-color var(--transition);
+      outline: none;
+    }
+
+    input:focus, textarea:focus { border-color: var(--accent); }
+
+    textarea { resize: vertical; min-height: 130px; }
+
+    .contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      transition: border-color var(--transition);
+    }
+
+    .contact-item:hover { border-color: var(--accent); }
+
+    .contact-item-icon {
+      width: 40px; height: 40px; min-width: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(79,142,247,0.15), rgba(124,92,252,0.15));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .contact-item-label { font-size: 0.75rem; color: var(--muted); }
+    .contact-item-value { font-size: 0.9rem; font-weight: 600; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer span { color: var(--accent); }
+
+    /* ── Animations ── */
+    .fade-in {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Brands ── */
+    .brands-grid {
+      display: flex; flex-wrap: wrap; gap: 0.75rem;
+    }
+
+    .brand-badge {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: border-color var(--transition), transform var(--transition), background var(--transition);
+      cursor: default;
+    }
+
+    .brand-badge:hover {
+      border-color: var(--accent);
+      background: rgba(79,142,247,0.07);
+      transform: translateY(-2px);
+    }
+
+    .brand-badge small {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 0.1rem;
+    }
+
+    /* ── Awards ── */
+    #awards { background: var(--surface); }
+
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .award-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .award-card:hover { border-color: #f5c842; transform: translateY(-4px); }
+
+    .award-year {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f5c842;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .award-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .award-prizes { display: flex; flex-direction: column; gap: 0.35rem; }
+
+    .award-prize {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+
+    .award-prize::before {
+      content: '';
+      display: inline-block;
+      width: 8px; height: 8px; min-width: 8px;
+      border-radius: 50%;
+      background: #f5c842;
+      opacity: 0.7;
+    }
+
+    .award-prize.gold { color: var(--text); }
+    .award-prize.gold::before { opacity: 1; }
+
+    /* ── Roles journey ── */
+    .roles-flow {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .role-chip {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      background: rgba(79,142,247,0.08);
+      border: 1px solid rgba(79,142,247,0.2);
+      color: var(--muted);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-visual { display: none; }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--surface); padding: 2rem; border-bottom: 1px solid var(--border); gap: 1rem; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav>
+    <div class="nav-logo">TZ.</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#skills">Competências</a></li>
+      <li><a href="#experience">Experiência</a></li>
+      <li><a href="#brands">Marcas</a></li>
+      <li><a href="#awards">Prêmios</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">Porto Alegre &middot; Florianópolis &middot; São Paulo</div>
+        <h1 class="hero-name">Thiago Zeni</h1>
+        <p class="hero-title">Marketing Digital &middot; Inovação &middot; <span>Inteligência Artificial</span></p>
+        <p class="hero-desc">
+          28 anos de experiência em comunicação e marketing digital. Sócio de agência digital,
+          diretor de grupo de comunicação e consultor de IA para empresas líderes em diversos setores.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Entre em contato</a>
+          <a href="#experience" class="btn btn-outline">Ver trajetória</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-num">28+</div><div class="stat-label">Anos de exp.</div></div>
+          <div class="stat"><div class="stat-num">13+</div><div class="stat-label">Grandes marcas</div></div>
+          <div class="stat"><div class="stat-num">7x</div><div class="stat-label">Premiado</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-ring">
+          <div class="avatar-inner">
+            <img src="img/perfil_thiago_zeni.jpg" alt="Thiago Zeni" style="width:100%;height:100%;object-fit:cover;border-radius:50%;object-position:center;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid fade-in">
+        <div class="about-text">
+          <div class="section-label">Sobre mim</div>
+          <h2 class="section-title">Quem sou eu</h2>
+          <p>
+            41 anos. 28 anos de web. Uma trajetória completa no universo digital — de Webmaster
+            a Diretor de Grupo de Comunicação, passando por todas as disciplinas que constroem
+            um profissional verdadeiramente completo: desenvolvimento web, direção de arte,
+            planejamento, gestão de contas, novos negócios e consultoria estratégica.
+          </p>
+          <p>
+            Sócio de agência digital há mais de 20 anos, construí e liderei estratégias de marketing
+            digital para algumas das maiores marcas do Brasil e da América Latina — da Stihl ao
+            Grupo Harman, de Mormaii à Coca-Cola Clothing. Projetos premiados com Ouro no Top de
+            Marketing ADVB-RS e título de Agência do Ano.
+          </p>
+          <p>
+            Mais recentemente, tenho me dedicado à consultoria em inovação e inteligência artificial,
+            apoiando empresas de setores relevantes da economia na implementação prática de soluções
+            de IA junto às suas áreas de inovação. Entusiasta da transformação digital e do impacto
+            que a tecnologia gera na sociedade e nos negócios.
+          </p>
+          <p>
+            Fluente em inglês e com bom nível em espanhol, atuo com clientes e parceiros nacionais
+            e internacionais.
+          </p>
+          <div style="margin-top: 2rem;">
+            <a href="#contact" class="btn btn-primary">Vamos conversar</a>
+          </div>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon">&#128200;</div>
+            <div>
+              <div class="highlight-title">28 Anos de Web</div>
+              <div class="highlight-desc">Do Webmaster ao Diretor — visão 360° do digital, construída na prática ao longo de quase três décadas.</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">&#127942;</div>
+            <div>
+              <div class="highlight-title">Projetos Premiados</div>
+              <div class="highlight-desc">Múltiplos Ouros no Top de Marketing ADVB-RS, incluindo Ouro da Noite e Agência do Ano em 2021.</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">&#128176;</div>
+            <div>
+              <div class="highlight-title">Sócio &amp; Investidor</div>
+              <div class="highlight-desc">Mais de 20 anos como sócio de agência digital e investidor ativo em novas iniciativas de tecnologia.</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">&#129504;</div>
+            <div>
+              <div class="highlight-title">Consultoria em IA &amp; Inovação</div>
+              <div class="highlight-desc">Apoio a grandes empresas de diversos setores na implementação estratégica de inteligência artificial.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Habilidades</div>
+        <h2 class="section-title">Competências</h2>
+        <p class="section-desc">Uma trajetória de 28 anos que passou por todas as disciplinas do digital — da execução técnica à liderança estratégica.</p>
+      </div>
+      <div class="fade-in" style="margin-bottom: 2.5rem;">
+        <p style="font-size:0.8rem; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem;">Funções exercidas ao longo da carreira</p>
+        <div class="roles-flow">
+          <span class="role-chip">Webmaster</span>
+          <span class="role-chip">Desenvolvedor Web</span>
+          <span class="role-chip">Diretor de Arte</span>
+          <span class="role-chip">Planner</span>
+          <span class="role-chip">Key Account</span>
+          <span class="role-chip">Diretor de Novos Negócios</span>
+          <span class="role-chip">Consultoria em Estratégia de Comunicação</span>
+          <span class="role-chip">Consultoria em E-commerce</span>
+          <span class="role-chip">CMO / CTO</span>
+          <span class="role-chip">Consultor de IA &amp; Inovação</span>
+        </div>
+      </div>
+      <div class="skills-grid fade-in">
+        <div class="skill-card">
+          <div class="skill-category">Core</div>
+          <div class="skill-header"><span class="skill-name">Marketing Digital</span><span class="skill-pct">28 anos</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="97"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Core</div>
+          <div class="skill-header"><span class="skill-name">Estratégia de Comunicação</span><span class="skill-pct">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="96"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Negócios</div>
+          <div class="skill-header"><span class="skill-name">Business Development</span><span class="skill-pct">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="94"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Digital</div>
+          <div class="skill-header"><span class="skill-name">E-commerce &amp; Lojas Virtuais</span><span class="skill-pct">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Gestão</div>
+          <div class="skill-header"><span class="skill-name">Gestão de Projetos</span><span class="skill-pct">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="93"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Liderança</div>
+          <div class="skill-header"><span class="skill-name">Liderança Executiva &amp; Diretoria</span><span class="skill-pct">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Inovação</div>
+          <div class="skill-header"><span class="skill-name">Consultoria em IA</span><span class="skill-pct">Avançado</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="87"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Criação</div>
+          <div class="skill-header"><span class="skill-name">Direção de Arte &amp; Planejamento</span><span class="skill-pct">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section id="experience">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Trajetória</div>
+        <h2 class="section-title">Experiência Profissional</h2>
+        <p class="section-desc">Minha jornada nas empresas e projetos que moldaram minha carreira.</p>
+      </div>
+      <div class="timeline fade-in">
+
+        <div class="timeline-item">
+          <div class="timeline-date">Recente &mdash; Presente</div>
+          <div class="timeline-role">Consultor de Inovação &amp; Inteligência Artificial</div>
+          <div class="timeline-company">Atuação Independente &mdash; Multi-setorial</div>
+          <p class="timeline-desc">
+            Consultoria para empresas de relevância em diversos setores da economia, atuando junto
+            às áreas de inovação na identificação de oportunidades e implementação de soluções de
+            inteligência artificial — desde o diagnóstico estratégico até a adoção prática de IA
+            nos processos de negócio.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Inteligência Artificial</span>
+            <span class="tag">Inovação Corporativa</span>
+            <span class="tag">Transformação Digital</span>
+            <span class="tag">Consultoria Estratégica</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jan 2019 &mdash; Presente &middot; 7+ anos</div>
+          <div class="timeline-role">Investidor</div>
+          <div class="timeline-company">ZN</div>
+          <p class="timeline-desc">
+            Atuação como investidor, identificando e apoiando iniciativas com potencial de crescimento
+            no ecossistema de tecnologia e marketing digital.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Investimentos</span>
+            <span class="tag">Inovação</span>
+            <span class="tag">Tecnologia</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jan 2021 &mdash; Jan 2024 &middot; 3 anos</div>
+          <div class="timeline-role">CMO / CTO</div>
+          <div class="timeline-company">Brasil Media House &mdash; São Paulo, SP</div>
+          <p class="timeline-desc">
+            Responsável pela liderança dupla de Marketing e Tecnologia, unindo visão estratégica de
+            comunicação à execução tecnológica para escalar a operação da empresa.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">CMO</span>
+            <span class="tag">CTO</span>
+            <span class="tag">Estratégia Digital</span>
+            <span class="tag">Liderança</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 2013 &mdash; Jun 2023 &middot; 10 anos</div>
+          <div class="timeline-role">Business Development Director</div>
+          <div class="timeline-company">BRA Marketing Digital</div>
+          <p class="timeline-desc">
+            Desenvolvimento de novos negócios e relacionamento com o mercado. Expansão da carteira
+            de clientes e consolidação da agência como referência em marketing digital no Brasil.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Business Development</span>
+            <span class="tag">Marketing Digital</span>
+            <span class="tag">Relacionamento Comercial</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jun 2009 &mdash; Jun 2013 &middot; 4 anos</div>
+          <div class="timeline-role">Project Manager</div>
+          <div class="timeline-company">BRA Marketing Digital</div>
+          <p class="timeline-desc">
+            Gerência de projetos digitais, coordenando equipes multidisciplinares e garantindo
+            a entrega de campanhas e soluções dentro do prazo e escopo definidos.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Gestão de Projetos</span>
+            <span class="tag">Liderança de Times</span>
+            <span class="tag">Marketing Digital</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Mai 2015 &mdash; Abr 2017 &middot; 2 anos</div>
+          <div class="timeline-role">Vice-presidente</div>
+          <div class="timeline-company">ABRADi-RS</div>
+          <p class="timeline-desc">
+            Representação e fortalecimento do setor de marketing digital e internet no Rio Grande do Sul,
+            contribuindo para o desenvolvimento do ecossistema digital gaúcho.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Liderança Setorial</span>
+            <span class="tag">Associativismo</span>
+            <span class="tag">Marketing Digital</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2008 &mdash; 2014 &middot; 6 anos</div>
+          <div class="timeline-role">Diretor</div>
+          <div class="timeline-company">ABRADi-RS &amp; ABRADi Nacional</div>
+          <p class="timeline-desc">
+            8 anos de atuação na Associação Brasileira dos Agentes Digitais — como Diretor por 6 anos,
+            Vice-presidente por 2 anos e Diretor na ABRADi Nacional — promovendo o setor digital,
+            conectando profissionais e contribuindo para o desenvolvimento do ecossistema digital brasileiro.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Diretoria</span>
+            <span class="tag">Vice-presidência</span>
+            <span class="tag">ABRADi Nacional</span>
+            <span class="tag">Representação Setorial</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Marcas ── -->
+  <section id="brands">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Clientes &amp; Marcas</div>
+        <h2 class="section-title">Quem já confiou no meu trabalho</h2>
+        <p class="section-desc">Estratégias e projetos planejados, desenvolvidos e implementados para marcas líderes em seus segmentos.</p>
+      </div>
+      <div class="brands-grid fade-in">
+        <div class="brand-badge">Stihl</div>
+        <div class="brand-badge">Grupo Harman América Latina<small>JBL · AKG · Harman Kardon</small></div>
+        <div class="brand-badge">Mormaii</div>
+        <div class="brand-badge">Via Marte</div>
+        <div class="brand-badge">Luz da Lua</div>
+        <div class="brand-badge">Klin</div>
+        <div class="brand-badge">Móveis Saccaro</div>
+        <div class="brand-badge">Grupo Unicasa<small>Favorita · Dellano · New · Casa Brasileira</small></div>
+        <div class="brand-badge">Bontempo</div>
+        <div class="brand-badge">Grupo Dakota</div>
+        <div class="brand-badge">Coca-Cola Clothing</div>
+        <div class="brand-badge">Lojas Colombo</div>
+        <div class="brand-badge">Lojas Lebes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Prêmios ── -->
+  <section id="awards">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Reconhecimento</div>
+        <h2 class="section-title">Prêmios &amp; Premiações</h2>
+        <p class="section-desc">Projetos reconhecidos pelos principais prêmios do mercado de comunicação e marketing digital do Brasil.</p>
+      </div>
+      <div class="awards-grid fade-in">
+
+        <div class="award-card">
+          <div class="award-year">Top de Marketing ADVB-RS &mdash; 2021</div>
+          <div class="award-title">O ano mais premiado</div>
+          <div class="award-prizes">
+            <div class="award-prize gold">Ouro da Noite</div>
+            <div class="award-prize gold">Agência do Ano</div>
+            <div class="award-prize gold">Ouro — Categoria 1</div>
+            <div class="award-prize gold">Ouro — Categoria 2</div>
+            <div class="award-prize gold">Ouro — Categoria 3</div>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">Top de Marketing ADVB-RS &mdash; 2018</div>
+          <div class="award-title">Duplo Ouro</div>
+          <div class="award-prizes">
+            <div class="award-prize gold">Ouro da Noite</div>
+            <div class="award-prize gold">Ouro — Categoria 1</div>
+            <div class="award-prize gold">Ouro — Categoria 2</div>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">Prêmio Colunistas-RS &mdash; 2018</div>
+          <div class="award-title">Três categorias premiadas</div>
+          <div class="award-prizes">
+            <div class="award-prize gold">Prata</div>
+            <div class="award-prize">Bronze</div>
+            <div class="award-prize">Finalista</div>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">Top de Mídia RS &mdash; 2018</div>
+          <div class="award-title">Excelência em Mídia</div>
+          <div class="award-prizes">
+            <div class="award-prize gold">Projeto Premiado</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Contato</div>
+        <h2 class="section-title">Vamos trabalhar juntos?</h2>
+        <p class="section-desc">Tem um projeto em mente ou quer bater um papo? Manda mensagem!</p>
+      </div>
+      <div class="fade-in" style="max-width: 600px;">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" placeholder="Conte sobre seu projeto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    // ── Mobile menu ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // ── Scroll animations ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          // Animate skill bars
+          e.target.querySelectorAll('.skill-fill').forEach(bar => {
+            bar.style.width = bar.dataset.pct + '%';
+          });
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ── Smooth active nav highlight ──
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
+      });
+    });
+
+    // ── Contact form ──
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name    = document.getElementById('name').value;
+      const email   = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const subject = encodeURIComponent('Contato via site – ' + name);
+      const body    = encodeURIComponent('Nome: ' + name + '\nE-mail: ' + email + '\n\n' + message);
+      window.location.href = 'mailto:thiagoazeni@gmail.com?subject=' + subject + '&body=' + body;
+      const btn = this.querySelector('button');
+      btn.textContent = 'Abrindo seu e-mail…';
+      btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+      setTimeout(() => {
+        btn.textContent = 'Enviar mensagem';
+        btn.style.background = '';
+        this.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
