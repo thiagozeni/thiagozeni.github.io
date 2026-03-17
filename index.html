@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thiago Zeni — Marketing Digital & Liderança Executiva</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
@@ -1203,6 +1204,187 @@
       letter-spacing: 0.05em;
     }
 
+    /* ─── CASES ──────────────────────────────────────────── */
+    #cases {
+      padding: 9rem 3rem;
+      background: var(--deep);
+    }
+
+    .cases-inner { max-width: 1300px; margin: 0 auto; }
+
+    .cases-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 5rem;
+      align-items: end;
+    }
+
+    .cases-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .case-card {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0;
+      border: 1px solid var(--border2);
+      border-radius: 2px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), border-color 0.4s, box-shadow 0.4s;
+    }
+
+    .case-card.visible { opacity: 1; transform: translateY(0); }
+
+    .case-card:hover {
+      border-color: var(--border);
+      box-shadow: 0 0 60px rgba(198,255,0,0.07);
+    }
+
+    .case-aside {
+      padding: 3rem 2.5rem;
+      background: var(--panel);
+      border-right: 1px solid var(--border2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .case-year {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--lime);
+    }
+
+    .case-client {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    .case-agency {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .case-tag {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      color: var(--lime);
+    }
+
+    .case-body {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .case-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.2rem, 2vw, 1.7rem);
+      letter-spacing: -0.03em;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .case-desc {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 640px;
+    }
+
+    .case-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border2);
+      border-bottom: 1px solid var(--border2);
+    }
+
+    .case-stat-value {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      letter-spacing: -0.04em;
+      color: var(--lime);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .case-stat-label {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    .case-awards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .case-award-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      padding: 0.45rem 0.9rem;
+      background: rgba(198,255,0,0.05);
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      color: var(--white);
+    }
+
+    .case-award-badge .medal {
+      font-size: 0.7rem;
+      font-weight: 900;
+      font-family: var(--font-display);
+      color: var(--lime);
+    }
+
+    @media (max-width: 900px) {
+      .case-card { grid-template-columns: 1fr; }
+      .case-aside { border-right: none; border-bottom: 1px solid var(--border2); }
+      .case-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .cases-header { grid-template-columns: 1fr; }
+      .case-body { padding: 2rem; }
+      .case-aside { padding: 2rem; }
+      .case-stats { grid-template-columns: 1fr 1fr; }
+    }
+
     /* ─── GENERIC REVEAL ─────────────────────────────────── */
     .reveal {
       opacity: 0;
@@ -1278,6 +1460,7 @@
       <li><a href="#about">Sobre</a></li>
       <li><a href="#experience">Trajetória</a></li>
       <li><a href="#brands">Marcas</a></li>
+      <li><a href="#cases">Cases</a></li>
       <li><a href="#awards">Prêmios</a></li>
       <li><a href="#contact">Contato</a></li>
     </ul>
@@ -1294,6 +1477,7 @@
     <a href="#about"      onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Sobre</a>
     <a href="#experience" onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Trajetória</a>
     <a href="#brands"     onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Marcas</a>
+    <a href="#cases"      onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Cases</a>
     <a href="#awards"     onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Prêmios</a>
     <a href="#contact"    onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;color:var(--lime);">Contato</a>
   </div>
@@ -1631,13 +1815,81 @@
   </section>
 
   <!-- ══════════════════════════════════════════════════════
+       CASES
+  ══════════════════════════════════════════════════════════ -->
+  <section id="cases">
+    <div class="cases-inner">
+      <div class="cases-header reveal">
+        <div>
+          <div class="section-num">05 — Cases</div>
+          <h2 class="section-title">Cases de<br>Sucesso</h2>
+        </div>
+        <p style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
+          Projetos que geraram impacto real — em audiência, reputação
+          e reconhecimento de mercado.
+        </p>
+      </div>
+      <div class="cases-grid">
+
+        <!-- Case: 50 Dias de Verde -->
+        <div class="case-card">
+          <div class="case-aside">
+            <div>
+              <div class="case-year">2018</div>
+              <div class="case-client">STIHL</div>
+              <div class="case-agency">via BRA Digital</div>
+            </div>
+            <div class="case-tags">
+              <span class="case-tag">Branded Content</span>
+              <span class="case-tag">Transmídia</span>
+              <span class="case-tag">Inbound</span>
+              <span class="case-tag">YouTube</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <div>
+              <div class="case-title">Jardim das Ideias STIHL — 50 Dias de Verde</div>
+              <p class="case-desc">
+                Webserie de branded content que transformou um quintal comum em Holambra (SP)
+                em um jardim dos sonhos em 50 dias corridos. 42 episódios gravados e 8 lives ao vivo,
+                com distribuição transmídia entre YouTube, Facebook, Instagram e TV por assinatura —
+                posicionando a STIHL junto ao público de jardinagem doméstica de forma orgânica e escalável.
+              </p>
+            </div>
+            <div class="case-stats">
+              <div>
+                <div class="case-stat-value">+6M</div>
+                <div class="case-stat-label">visualizações nas plataformas</div>
+              </div>
+              <div>
+                <div class="case-stat-value">50</div>
+                <div class="case-stat-label">dias de conteúdo contínuo</div>
+              </div>
+              <div>
+                <div class="case-stat-value">+46M</div>
+                <div class="case-stat-label">impactos de mídia</div>
+              </div>
+            </div>
+            <div class="case-awards">
+              <div class="case-award-badge"><span class="medal">Au</span> Ouro — Colunistas Sul · Não Ficção Online</div>
+              <div class="case-award-badge"><span class="medal">Ag</span> Prata — Colunistas Sul · Branded Content</div>
+              <div class="case-award-badge"><span class="medal">★</span> Top de Marketing ADVB-RS 2018</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
        AWARDS
   ══════════════════════════════════════════════════════════ -->
   <section id="awards">
     <div class="awards-inner">
       <div class="awards-header reveal">
         <div>
-          <div class="section-num">05 — Reconhecimento</div>
+          <div class="section-num">06 — Reconhecimento</div>
           <h2 class="section-title">Prêmios &amp;<br>Premiações</h2>
         </div>
         <p style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
@@ -1805,7 +2057,7 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal, .exp-item, .award-card').forEach(el => revealObs.observe(el));
+    document.querySelectorAll('.reveal, .exp-item, .award-card, .case-card').forEach(el => revealObs.observe(el));
 
     document.querySelectorAll('.exp-item').forEach((el, i) => {
       el.style.transitionDelay = (i * 0.07) + 's';
