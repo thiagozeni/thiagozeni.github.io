@@ -975,6 +975,31 @@
       align-items: end;
     }
 
+    .awards-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+      margin-bottom: 4rem;
+      aspect-ratio: 21/9;
+    }
+    .awards-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+      filter: brightness(0.82);
+      transition: transform 0.9s var(--ease);
+    }
+    .awards-photo:hover img { transform: scale(1.025); }
+    .awards-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(5,5,5,0.55) 100%);
+      pointer-events: none;
+    }
+
     .awards-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -2269,6 +2294,11 @@
           Projetos reconhecidos pelos principais prêmios do mercado de comunicação
           e marketing digital do Brasil.
         </p>
+      </div>
+      <div class="awards-photo reveal">
+        <img src="img/premiacoes/FabianoPanizzi_20211214_01_0056.jpg"
+             alt="Troféus Top de Marketing ADVB-RS 2021 — Ouro da Noite, Agência TOP e Personalidade de Marketing"
+             loading="lazy" />
       </div>
       <div class="awards-grid">
         <div class="award-card">

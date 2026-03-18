@@ -399,6 +399,23 @@
       line-height: 1.4;
     }
 
+    /* ── CEREMONY PHOTO ── */
+    .ceremony-photo-wide {
+      margin: 2.5rem 0 0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .ceremony-photo-wide img {
+      width: 100%;
+      display: block;
+      max-height: 400px;
+      object-fit: cover;
+      object-position: center 15%;
+      filter: brightness(0.84) contrast(1.05);
+      transition: transform 0.9s ease;
+    }
+    .ceremony-photo-wide:hover img { transform: scale(1.02); }
+
     /* ── CTA ── */
     .case-cta {
       background: var(--panel);
@@ -650,6 +667,11 @@
           <span class="award-text">Top de Marketing ADVB-RS 2018 — case principal da STIHL na premiação</span>
         </div>
       </div>
+      <figure class="ceremony-photo-wide">
+        <img src="../img/premiacoes/FB_IMG_1557693392786.jpg"
+             alt="Time BRA Digital recebendo os prêmios Colunistas 2018 pelo case Jardim das Ideias STIHL"
+             loading="lazy" />
+      </figure>
     </div>
 
     <div class="case-section">
