@@ -2330,7 +2330,11 @@
     document.querySelectorAll('.case-header').forEach(btn => {
       btn.addEventListener('click', () => {
         const card   = btn.closest('.case-card');
-        const isOpen = card.classList.contains('open');
+        const cards    = [...allCards];
+        const idx      = cards.indexOf(card);
+        const isOpen   = card.classList.contains('open');
+        // Verifica se havia card aberto acima ANTES de fechar tudo
+        const hasAbove = cards.slice(0, idx).some(c => c.classList.contains('open'));
         // Fecha todos
         allCards.forEach(c => {
           c.classList.remove('open');
@@ -2342,7 +2346,7 @@
           btn.setAttribute('aria-expanded', 'true');
           setTimeout(() => {
             card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 580);
+          }, hasAbove ? 580 : 0);
         }
       });
     });
