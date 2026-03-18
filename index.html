@@ -2400,13 +2400,13 @@
 
         if (!isOpen) {
           if (openCard) {
-            // Sequência: fecha → reposiciona → abre
+            // Sequência: fecha → scroll suave → abre
             setTimeout(() => {
-              card.scrollIntoView({ behavior: 'instant', block: 'start' });
+              card.scrollIntoView({ behavior: 'smooth', block: 'start' });
               setTimeout(() => {
                 card.classList.add('open');
                 btn.setAttribute('aria-expanded', 'true');
-              }, 50);
+              }, 600);
             }, 580);
           } else {
             // Nenhum card aberto: abre e ancora direto
