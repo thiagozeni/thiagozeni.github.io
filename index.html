@@ -2340,7 +2340,9 @@
           card.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
           setTimeout(() => {
-            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const navH = document.querySelector('nav').offsetHeight;
+            const top  = card.getBoundingClientRect().top + window.scrollY - navH - 16;
+            window.scrollTo({ top, behavior: 'smooth' });
           }, 50);
         }
       });
