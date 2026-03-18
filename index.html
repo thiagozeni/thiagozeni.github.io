@@ -1882,8 +1882,8 @@
       <div class="cases-grid">
 
         <!-- Case: Florense — IA & Inovação -->
-        <div class="case-card">
-          <button class="case-header" aria-expanded="false">
+        <div class="case-card open">
+          <button class="case-header" aria-expanded="true">
             <span class="case-year">2024–2025</span>
             <span class="case-client">Florense</span>
             <div class="case-tags">
@@ -2325,12 +2325,21 @@
     }
 
     // ── Cases accordion ────────────────────────────────────
+    const allCards = document.querySelectorAll('.case-card');
     document.querySelectorAll('.case-header').forEach(btn => {
       btn.addEventListener('click', () => {
         const card   = btn.closest('.case-card');
         const isOpen = card.classList.contains('open');
-        card.classList.toggle('open', !isOpen);
-        btn.setAttribute('aria-expanded', String(!isOpen));
+        // Fecha todos
+        allCards.forEach(c => {
+          c.classList.remove('open');
+          c.querySelector('.case-header').setAttribute('aria-expanded', 'false');
+        });
+        // Abre o clicado (se estava fechado)
+        if (!isOpen) {
+          card.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
 
