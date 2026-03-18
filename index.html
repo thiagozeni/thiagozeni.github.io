@@ -2335,10 +2335,13 @@
           c.classList.remove('open');
           c.querySelector('.case-header').setAttribute('aria-expanded', 'false');
         });
-        // Abre o clicado (se estava fechado)
+        // Abre o clicado (se estava fechado) e ancora no topo do card
         if (!isOpen) {
           card.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
+          setTimeout(() => {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 50);
         }
       });
     });
