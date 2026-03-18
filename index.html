@@ -1235,6 +1235,7 @@
       transform: translateY(30px);
       transition: opacity 0.7s var(--ease), transform 0.7s var(--ease),
                   border-color 0.4s, box-shadow 0.4s;
+      scroll-margin-top: 90px;
     }
     .case-card.visible { opacity: 1; transform: translateY(0); }
     .case-card.open {
@@ -1882,7 +1883,7 @@
       <div class="cases-grid">
 
         <!-- Case: Florense — IA & Inovação -->
-        <div class="case-card open">
+        <div id="case-florense" class="case-card open">
           <button class="case-header" aria-expanded="true">
             <span class="case-year">2024–2025</span>
             <span class="case-client">Florense</span>
@@ -1944,7 +1945,7 @@
         </div>
 
         <!-- Case: 50 Dias de Verde -->
-        <div class="case-card">
+        <div id="case-stihl" class="case-card">
           <button class="case-header" aria-expanded="false">
             <span class="case-year">2018</span>
             <span class="case-client">STIHL</span>
@@ -2340,9 +2341,7 @@
           card.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
           setTimeout(() => {
-            const navH = document.querySelector('nav').offsetHeight;
-            const top  = card.getBoundingClientRect().top + window.scrollY - navH - 16;
-            window.scrollTo({ top, behavior: 'smooth' });
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 580);
         }
       });
