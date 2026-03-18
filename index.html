@@ -2613,6 +2613,24 @@
 
     // ── Cases accordion ────────────────────────────────────
     const allCards = document.querySelectorAll('.case-card');
+
+    // Restaura estado salvo ao voltar de um case
+    const savedCaseId = sessionStorage.getItem('openCase');
+    if (savedCaseId) {
+      const savedCard = document.getElementById(savedCaseId);
+      if (savedCard) {
+        allCards.forEach(c => { c.classList.remove('open'); c.querySelector('.case-header').setAttribute('aria-expanded', 'false'); });
+        savedCard.classList.add('open');
+        savedCard.querySelector('.case-header').setAttribute('aria-expanded', 'true');
+        if (location.hash === '#cases') {
+          history.replaceState(null, '', location.pathname);
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            savedCard.scrollIntoView({ behavior: 'instant', block: 'start' });
+          }));
+        }
+      }
+    }
+
     document.querySelectorAll('.case-header').forEach(btn => {
       btn.addEventListener('click', () => {
         const card     = btn.closest('.case-card');
@@ -2639,6 +2657,7 @@
                 window.removeEventListener('scroll', onScroll);
                 card.classList.add('open');
                 btn.setAttribute('aria-expanded', 'true');
+                sessionStorage.setItem('openCase', card.id);
               };
               const onScroll = () => {
                 clearTimeout(scrollTimer);
@@ -2653,7 +2672,10 @@
             card.classList.add('open');
             btn.setAttribute('aria-expanded', 'true');
             card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            sessionStorage.setItem('openCase', card.id);
           }
+        } else {
+          sessionStorage.removeItem('openCase');
         }
       });
     });
