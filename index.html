@@ -2400,14 +2400,27 @@
 
         if (!isOpen) {
           if (openCard) {
-            // Sequência: fecha → scroll suave → abre
-            setTimeout(() => {
+            // Sequência: fecha → scroll suave → abre (sem pausas fixas)
+            openCard.querySelector('.case-expand').addEventListener('transitionend', () => {
+              // Fechamento concluído → inicia scroll
               card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              setTimeout(() => {
+
+              // Detecta fim do scroll via debounce no evento scroll
+              let scrollTimer;
+              const openWhenDone = () => {
+                clearTimeout(scrollTimer);
+                window.removeEventListener('scroll', onScroll);
                 card.classList.add('open');
                 btn.setAttribute('aria-expanded', 'true');
-              }, 600);
-            }, 580);
+              };
+              const onScroll = () => {
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(openWhenDone, 80);
+              };
+              window.addEventListener('scroll', onScroll, { passive: true });
+              // Fallback: se o card já estiver na posição e não houver scroll
+              scrollTimer = setTimeout(openWhenDone, 80);
+            }, { once: true });
           } else {
             // Nenhum card aberto: abre e ancora direto
             card.classList.add('open');
