@@ -105,6 +105,14 @@
     footer { padding:1.5rem 3rem; border-top:1px solid var(--border2); display:flex; align-items:center; justify-content:space-between; font-size:0.72rem; color:var(--muted); }
     .footer-logo { font-family:var(--font-display); font-weight:900; font-size:0.9rem; color:var(--lime); }
 
+    /* ── Scroll Reveal ── */
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @keyframes heroFadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .case-hero h1 { animation:heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+    .case-hero .case-lead { animation:heroFadeUp 0.85s cubic-bezier(0.16,1,0.3,1) 0.28s both; }
+    .case-hero .case-agency-line { animation:heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+
     @media (max-width:768px) {
       nav { padding:1rem 1.5rem; }
       .case-hero { padding:3rem 1.5rem 2.5rem; }
@@ -142,7 +150,7 @@
     <p class="case-agency-line">BRA Digital</p>
   </header>
 
-  <div class="stats-bar">
+  <div class="stats-bar reveal">
     <div class="stat-item">
       <span class="stat-value">35%</span>
       <span class="stat-label">do faturamento atual vindo do digital</span>
@@ -163,7 +171,7 @@
 
   <main class="case-content">
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">O Contexto</div>
       <h2>O e-commerce como ameaça à rede física</h2>
       <p>
@@ -179,7 +187,7 @@
       </p>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">A Visão Estratégica</div>
       <h2>Transformar o e-commerce no maior aliado do franqueado</h2>
       <p>
@@ -188,7 +196,7 @@
         o e-commerce não deveria competir com as lojas físicas. Deveria depender delas.
       </p>
 
-      <div class="insight-box">
+      <div class="insight-box reveal">
         <p>"O franqueado não é obstáculo para o digital. Ele é a infraestrutura logística mais eficiente que a marca já tem — e a maioria das empresas não percebe isso."</p>
       </div>
 
@@ -211,7 +219,7 @@
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Implementação</div>
       <h2>Integração de sistemas legados em uma arquitetura unificada</h2>
       <p>
@@ -226,7 +234,7 @@
       </ul>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Legado</div>
       <h2>De pioneiro a benchmark nacional</h2>
       <p>
@@ -245,7 +253,7 @@
 
   </main>
 
-  <div class="case-cta">
+  <div class="case-cta reveal">
     <p>Quer conversar sobre estratégia digital, omnichannel ou transformação de modelos de negócio?</p>
     <a href="../index.html#contact" class="btn-back">Fale com o Thiago →</a>
     <a href="../index.html#cases" class="nav-back" style="margin-top:0.5rem;"><span>←</span> Ver todos os cases</a>
@@ -256,5 +264,18 @@
     <div>&copy; 2025 Thiago Zeni · <a href="../index.html" style="color:var(--lime);">thiagozeni.com.br</a></div>
   </footer>
 
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    ['stat-item','module-card','persona-card','pillar-card','channel-card','award-item'].forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i * 0.09) + 's';
+        obs.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>

@@ -115,6 +115,14 @@
     footer { padding:1.5rem 3rem; border-top:1px solid var(--border2); display:flex; align-items:center; justify-content:space-between; font-size:0.72rem; color:var(--muted); }
     .footer-logo { font-family:var(--font-display); font-weight:900; font-size:0.9rem; color:var(--lime); }
 
+    /* ── Scroll Reveal ── */
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @keyframes heroFadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .case-hero h1 { animation:heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+    .case-hero .case-lead { animation:heroFadeUp 0.85s cubic-bezier(0.16,1,0.3,1) 0.28s both; }
+    .case-hero .case-agency-line { animation:heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+
     @media (max-width:768px) {
       nav { padding:1rem 1.5rem; }
       .case-hero { padding:3rem 1.5rem 2.5rem; }
@@ -152,7 +160,7 @@
     <p class="case-agency-line">Diretor de Novos Negócios · BRA Digital</p>
   </header>
 
-  <div class="stats-bar">
+  <div class="stats-bar reveal">
     <div class="stat-item">
       <span class="stat-value">#1</span>
       <span class="stat-label">plataforma do setor — inédita no Brasil</span>
@@ -173,7 +181,7 @@
 
   <main class="case-content">
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Cenário</div>
       <h2>O isolamento social como janela de oportunidade</h2>
       <p>
@@ -188,12 +196,12 @@
         valor real e conhecimento técnico — não publicidade.
       </p>
 
-      <div class="insight-box">
+      <div class="insight-box reveal">
         <p>"O consumidor não quer um catálogo de produtos. Ele quer saber como usar, quando usar e por que aquela ferramenta vai transformar o espaço dele."</p>
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">A Estratégia</div>
       <h2>Um ecossistema de Inbound Marketing disfarçado de escola</h2>
       <p>
@@ -230,7 +238,7 @@
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">O Ciclo Comercial</div>
       <h2>Da capacitação à venda: o funil pós-digital</h2>
       <ul>
@@ -242,7 +250,7 @@
       </ul>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Reconhecimento</div>
       <h2>Top de Marketing ADVB-RS 2021 — três categorias estratégicas</h2>
       <div class="awards-with-photo">
@@ -264,7 +272,7 @@
             <span class="award-text"><strong>Top de Marketing ADVB-RS 2021</strong> — destaque máximo do marketing gaúcho</span>
           </div>
         </div>
-        <figure class="ceremony-photo">
+        <figure class="ceremony-photo reveal">
           <img src="../img/premiacoes/FabianoPanizzi_20211214_01_0529.jpg"
                alt="Thiago Zeni recebendo o prêmio Top de Marketing ADVB-RS 2021 no palco"
                loading="lazy" />
@@ -272,7 +280,7 @@
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Legado</div>
       <h2>O que o Pró-Jardim provou sobre a era pós-digital</h2>
       <p>
@@ -289,7 +297,7 @@
 
   </main>
 
-  <div class="case-cta">
+  <div class="case-cta reveal">
     <p>Quer discutir estratégias de conteúdo, e-learning ou construção de comunidade de marca?</p>
     <a href="../index.html#contact" class="btn-back">Fale com o Thiago →</a>
     <a href="../index.html#cases" class="nav-back" style="margin-top:0.5rem;"><span>←</span> Ver todos os cases</a>
@@ -300,5 +308,18 @@
     <div>&copy; 2025 Thiago Zeni · <a href="../index.html" style="color:var(--lime);">thiagozeni.com.br</a></div>
   </footer>
 
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    ['stat-item','module-card','persona-card','pillar-card','channel-card','award-item'].forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i * 0.09) + 's';
+        obs.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>

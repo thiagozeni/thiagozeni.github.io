@@ -106,6 +106,14 @@
     footer { padding:1.5rem 3rem; border-top:1px solid var(--border2); display:flex; align-items:center; justify-content:space-between; font-size:0.72rem; color:var(--muted); }
     .footer-logo { font-family:var(--font-display); font-weight:900; font-size:0.9rem; color:var(--lime); }
 
+    /* ── Scroll Reveal ── */
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @keyframes heroFadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .case-hero h1 { animation:heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+    .case-hero .case-lead { animation:heroFadeUp 0.85s cubic-bezier(0.16,1,0.3,1) 0.28s both; }
+    .case-hero .case-agency-line { animation:heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+
     @media (max-width:768px) {
       nav { padding:1rem 1.5rem; }
       .case-hero { padding:3rem 1.5rem 2.5rem; }
@@ -143,7 +151,7 @@
     <p class="case-agency-line">BRA Digital · via Grupo Harman AL</p>
   </header>
 
-  <div class="stats-bar">
+  <div class="stats-bar reveal">
     <div class="stat-item">
       <span class="stat-value">4</span>
       <span class="stat-label">personas segmentadas individualmente</span>
@@ -164,7 +172,7 @@
 
   <main class="case-content">
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">O Desafio</div>
       <h2>Produto de nicho em mercado saturado</h2>
       <p>
@@ -180,7 +188,7 @@
       </p>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">A Solução</div>
       <h2>Arquitetura de conteúdo multiperfilada</h2>
       <p>
@@ -211,7 +219,7 @@
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">A Inteligência de Distribuição</div>
       <h2>Fazer o algoritmo entregar o vídeo certo para a pessoa certa</h2>
       <p>
@@ -225,12 +233,12 @@
         porque o conteúdo era imediatamente relevante para quem o via.
       </p>
 
-      <div class="insight-box">
+      <div class="insight-box reveal">
         <p>"A taxa de retenção não é problema de edição. É problema de targeting. Quando a pessoa certa vê o vídeo certo, ela assiste até o fim porque está vendo a solução para o problema dela."</p>
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Resultado</div>
       <h2>Estoque esgotado e produção ampliada</h2>
       <p>
@@ -245,7 +253,7 @@
       </p>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Metodologia</div>
       <h2>STP aplicado ao marketing de conteúdo digital</h2>
       <ul>
@@ -259,7 +267,7 @@
 
   </main>
 
-  <div class="case-cta">
+  <div class="case-cta reveal">
     <p>Quer conversar sobre estratégia de conteúdo, lançamentos digitais ou segmentação de audiência?</p>
     <a href="../index.html#contact" class="btn-back">Fale com o Thiago →</a>
     <a href="../index.html#cases" class="nav-back" style="margin-top:0.5rem;"><span>←</span> Ver todos os cases</a>
@@ -270,5 +278,18 @@
     <div>&copy; 2025 Thiago Zeni · <a href="../index.html" style="color:var(--lime);">thiagozeni.com.br</a></div>
   </footer>
 
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    ['stat-item','module-card','persona-card','pillar-card','channel-card','award-item'].forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i * 0.09) + 's';
+        obs.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>

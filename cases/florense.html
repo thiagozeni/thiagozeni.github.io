@@ -112,6 +112,14 @@
     footer { padding:1.5rem 3rem; border-top:1px solid var(--border2); display:flex; align-items:center; justify-content:space-between; font-size:0.72rem; color:var(--muted); }
     .footer-logo { font-family:var(--font-display); font-weight:900; font-size:0.9rem; color:var(--lime); }
 
+    /* ── Scroll Reveal ── */
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @keyframes heroFadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .case-hero h1 { animation:heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+    .case-hero .case-lead { animation:heroFadeUp 0.85s cubic-bezier(0.16,1,0.3,1) 0.28s both; }
+    .case-hero .case-agency-line { animation:heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+
     @media (max-width:768px) {
       nav { padding:1rem 1.5rem; }
       .case-hero { padding:3rem 1.5rem 2.5rem; }
@@ -155,7 +163,7 @@
     As informações apresentadas nesta página descrevem apenas a metodologia, o escopo e as frentes de trabalho.
   </div>
 
-  <div class="stats-bar">
+  <div class="stats-bar reveal">
     <div class="stat-item">
       <span class="stat-value">5</span>
       <span class="stat-label">frentes de consultoria</span>
@@ -176,7 +184,7 @@
 
   <main class="case-content">
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">O Cliente</div>
       <h2>Florense — marca premium em aceleração tecnológica</h2>
       <p>
@@ -193,7 +201,7 @@
       </p>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">A Abordagem</div>
       <h2>Metodologia: evidências antes de opiniões</h2>
       <p>
@@ -207,7 +215,7 @@
       </ul>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">As Cinco Frentes</div>
       <h2>Um diagnóstico integrado da jornada de inovação</h2>
       <div class="frentes-grid">
@@ -249,7 +257,7 @@
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Entregas</div>
       <h2>Documentação produzida</h2>
       <div class="deliverables-list">
@@ -280,7 +288,7 @@
       </div>
     </div>
 
-    <div class="case-section">
+    <div class="case-section reveal">
       <div class="section-label">Aprendizados</div>
       <h2>O que esse projeto reforçou</h2>
       <p>
@@ -290,14 +298,14 @@
         emergentes gera mais ruído do que resultado.
       </p>
 
-      <div class="insight-box">
+      <div class="insight-box reveal">
         <p>"Inovação consistente nasce de dados reais, benchmarking rigoroso e entregas que conectam a estratégia à operação — não do entusiasmo com a tecnologia do momento."</p>
       </div>
     </div>
 
   </main>
 
-  <div class="case-cta">
+  <div class="case-cta reveal">
     <p>Quer conversar sobre estratégia de IA, inovação corporativa ou transformação digital?</p>
     <a href="../index.html#contact" class="btn-back">Fale com o Thiago →</a>
     <a href="../index.html#cases" class="nav-back" style="margin-top:0.5rem;"><span>←</span> Ver todos os cases</a>
@@ -308,5 +316,18 @@
     <div>&copy; 2025 Thiago Zeni · <a href="../index.html" style="color:var(--lime);">thiagozeni.com.br</a></div>
   </footer>
 
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    ['stat-item','module-card','persona-card','pillar-card','channel-card','award-item'].forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i * 0.09) + 's';
+        obs.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
