@@ -2344,9 +2344,7 @@
         if (!isOpen) {
           card.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
-          setTimeout(() => {
-            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, hasAbove ? 580 : 0);
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
