@@ -2392,10 +2392,17 @@
   <script>
     // ── Preloader ──────────────────────────────────────────
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('preloader').classList.add('hidden');
+      const fromInternalPage = document.referrer.includes(location.hostname) && document.referrer !== location.href;
+      const preloader = document.getElementById('preloader');
+      if (fromInternalPage) {
+        preloader.classList.add('hidden');
         startCounters();
-      }, 2000);
+      } else {
+        setTimeout(() => {
+          preloader.classList.add('hidden');
+          startCounters();
+        }, 2000);
+      }
     });
 
     // ── Scroll Progress ────────────────────────────────────
