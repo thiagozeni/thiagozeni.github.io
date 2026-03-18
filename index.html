@@ -2388,24 +2388,32 @@
     const allCards = document.querySelectorAll('.case-card');
     document.querySelectorAll('.case-header').forEach(btn => {
       btn.addEventListener('click', () => {
-        const card   = btn.closest('.case-card');
-        const cards    = [...allCards];
-        const idx      = cards.indexOf(card);
+        const card     = btn.closest('.case-card');
         const isOpen   = card.classList.contains('open');
-        // Verifica se havia card aberto acima ANTES de fechar tudo
-        const hasAbove = cards.slice(0, idx).some(c => c.classList.contains('open'));
+        const openCard = [...allCards].find(c => c !== card && c.classList.contains('open'));
+
         // Fecha todos
         allCards.forEach(c => {
           c.classList.remove('open');
           c.querySelector('.case-header').setAttribute('aria-expanded', 'false');
         });
-        // Abre o clicado (se estava fechado) e ancora no topo do card
+
         if (!isOpen) {
-          card.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-          setTimeout(() => {
+          if (openCard) {
+            // Sequência: fecha → reposiciona → abre
+            setTimeout(() => {
+              card.scrollIntoView({ behavior: 'instant', block: 'start' });
+              setTimeout(() => {
+                card.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+              }, 50);
+            }, 580);
+          } else {
+            // Nenhum card aberto: abre e ancora direto
+            card.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
             card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, hasAbove ? 580 : 0);
+          }
         }
       });
     });
