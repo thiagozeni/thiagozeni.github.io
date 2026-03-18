@@ -1944,6 +1944,65 @@
           </div>
         </div>
 
+        <!-- Case: Omnichannel Mormaii -->
+        <div id="case-mormaii" class="case-card">
+          <button class="case-header" aria-expanded="false">
+            <span class="case-year">2008</span>
+            <span class="case-client">Mormaii</span>
+            <div class="case-tags">
+              <span class="case-tag">Omnichannel</span>
+              <span class="case-tag">E-commerce</span>
+              <span class="case-tag">Estratégia Digital</span>
+              <span class="case-tag">Integração</span>
+            </div>
+            <span class="case-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="case-expand">
+            <div class="case-expand-inner">
+              <div class="case-details">
+                <div class="case-details-left">
+                  <div class="case-agency">via BRA Digital</div>
+                  <div class="case-tags" style="flex-direction:column;">
+                    <span class="case-tag">Omnichannel</span>
+                    <span class="case-tag">E-commerce</span>
+                    <span class="case-tag">Estratégia Digital</span>
+                    <span class="case-tag">Integração</span>
+                  </div>
+                </div>
+                <div class="case-details-right">
+                  <div class="case-title">Mormaii Omnichannel — E-commerce como Aliado da Rede de Franquias</div>
+                  <p class="case-desc">
+                    Em 2008, quando o e-commerce brasileiro ainda operava com estoques centralizados e isolados das redes físicas,
+                    idealizei para a Mormaii uma arquitetura de negócios disruptiva: transformar o e-commerce no maior aliado do
+                    franqueado — e não em seu concorrente. O projeto integrou ERP das lojas físicas à plataforma digital em tempo real,
+                    criou um modelo de logística descentralizada (ship-from-store) e gerou valor direto para cada ponto da rede a cada
+                    venda online. O que começou como uma aposta virou o benchmark de omnichannel no Brasil.
+                  </p>
+                  <div class="case-stats">
+                    <div>
+                      <div class="case-stat-value">~35%</div>
+                      <div class="case-stat-label">do faturamento via digital</div>
+                    </div>
+                    <div>
+                      <div class="case-stat-value">+15</div>
+                      <div class="case-stat-label">anos de legado ativo</div>
+                    </div>
+                    <div>
+                      <div class="case-stat-value">#1</div>
+                      <div class="case-stat-label">benchmark omnichannel no Brasil</div>
+                    </div>
+                  </div>
+                  <div class="case-awards">
+                    <div class="case-award-badge"><span class="medal">◈</span> Ship-from-store pioneiro no Brasil</div>
+                    <div class="case-award-badge"><span class="medal">◈</span> Integração ERP + e-commerce em tempo real</div>
+                    <div class="case-award-badge"><span class="medal">◈</span> Modelo replicado por toda a rede de franquias</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Case: 50 Dias de Verde -->
         <div id="case-stihl" class="case-card">
           <button class="case-header" aria-expanded="false">
@@ -2344,7 +2403,9 @@
         if (!isOpen) {
           card.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
-          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(() => {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, hasAbove ? 580 : 0);
         }
       });
     });
