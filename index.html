@@ -1223,53 +1223,120 @@
     .cases-grid {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
     }
 
+    /* ── Card wrapper ── */
     .case-card {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 0;
       border: 1px solid var(--border2);
       border-radius: 2px;
       overflow: hidden;
       opacity: 0;
       transform: translateY(30px);
-      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), border-color 0.4s, box-shadow 0.4s;
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease),
+                  border-color 0.4s, box-shadow 0.4s;
     }
-
     .case-card.visible { opacity: 1; transform: translateY(0); }
-
-    .case-card:hover {
-      border-color: var(--border);
+    .case-card.open {
+      border-color: rgba(198,255,0,0.28);
       box-shadow: 0 0 60px rgba(198,255,0,0.07);
     }
 
-    .case-aside {
-      padding: 3rem 2.5rem;
-      background: var(--panel);
-      border-right: 1px solid var(--border2);
+    /* ── Clickable header bar ── */
+    .case-header {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
       gap: 2rem;
+      padding: 1.6rem 2.5rem;
+      background: var(--panel);
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.3s;
     }
+    .case-header:hover { background: rgba(255,255,255,0.025); }
 
     .case-year {
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--lime);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .case-client {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      font-size: clamp(1.3rem, 2.5vw, 2.2rem);
       letter-spacing: -0.04em;
       line-height: 1;
       color: var(--white);
+      flex: 1;
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    .case-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.65rem;
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      color: var(--lime);
+      white-space: nowrap;
+    }
+
+    /* Chevron */
+    .case-chevron {
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid var(--lime);
+      border-bottom: 2px solid var(--lime);
+      transform: rotate(45deg);
+      transition: transform 0.4s var(--ease);
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+      opacity: 0.7;
+    }
+    .case-card.open .case-chevron { transform: rotate(-135deg); }
+
+    /* ── Expandable body ── */
+    .case-expand {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .case-card.open .case-expand { grid-template-rows: 1fr; }
+
+    .case-expand-inner {
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .case-details {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0;
+      border-top: 1px solid var(--border2);
+    }
+
+    .case-details-left {
+      padding: 2.5rem;
+      background: rgba(0,0,0,0.2);
+      border-right: 1px solid var(--border2);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .case-agency {
@@ -1279,34 +1346,17 @@
       color: var(--muted);
     }
 
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .case-tag {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.7rem;
-      border: 1px solid var(--border);
-      border-radius: 1px;
-      color: var(--lime);
-    }
-
-    .case-body {
-      padding: 3rem;
+    .case-details-right {
+      padding: 2.5rem 3rem;
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     .case-title {
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: clamp(1.2rem, 2vw, 1.7rem);
+      font-size: clamp(1.1rem, 1.8vw, 1.5rem);
       letter-spacing: -0.03em;
       color: var(--white);
       line-height: 1.2;
@@ -1318,14 +1368,13 @@
       font-size: 1.05rem;
       color: var(--muted);
       line-height: 1.7;
-      max-width: 640px;
     }
 
     .case-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      padding: 2rem 0;
+      padding: 1.5rem 0;
       border-top: 1px solid var(--border2);
       border-bottom: 1px solid var(--border2);
     }
@@ -1349,7 +1398,7 @@
     .case-awards {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 0.65rem;
     }
 
     .case-award-badge {
@@ -1373,15 +1422,16 @@
     }
 
     @media (max-width: 900px) {
-      .case-card { grid-template-columns: 1fr; }
-      .case-aside { border-right: none; border-bottom: 1px solid var(--border2); }
+      .case-details { grid-template-columns: 1fr; }
+      .case-details-left { border-right: none; border-bottom: 1px solid var(--border2); }
       .case-stats { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
       .cases-header { grid-template-columns: 1fr; }
-      .case-body { padding: 2rem; }
-      .case-aside { padding: 2rem; }
+      .case-header { flex-wrap: wrap; gap: 1rem; padding: 1.2rem 1.5rem; }
+      .case-tags { display: none; }
+      .case-details-left, .case-details-right { padding: 1.5rem; }
       .case-stats { grid-template-columns: 1fr 1fr; }
     }
 
@@ -1833,98 +1883,120 @@
 
         <!-- Case: Florense — IA & Inovação -->
         <div class="case-card">
-          <div class="case-aside">
-            <div>
-              <div class="case-year">2024–2025</div>
-              <div class="case-client">Florense</div>
-              <div class="case-agency">Consultoria independente</div>
-            </div>
+          <button class="case-header" aria-expanded="false">
+            <span class="case-year">2024–2025</span>
+            <span class="case-client">Florense</span>
             <div class="case-tags">
               <span class="case-tag">IA & Inovação</span>
               <span class="case-tag">Estratégia Digital</span>
               <span class="case-tag">Pesquisa</span>
               <span class="case-tag">Org Design</span>
             </div>
-          </div>
-          <div class="case-body">
-            <div>
-              <div class="case-title">Florense — Estratégia de IA & Inovação</div>
-              <p class="case-desc">
-                Consultoria estratégica para uma das principais marcas brasileiras de móveis planejados premium,
-                com foco em mapear oportunidades de IA, modernizar a estrutura de marketing e construir
-                um roteiro de inovação fundamentado em dados. O trabalho combinou diagnóstico de presença digital,
-                benchmarking competitivo, pesquisa de ferramentas e projeto conceitual de plataforma de
-                conhecimento corporativo — tudo desenvolvido com especificidade para o mercado de alto padrão.
-              </p>
-              <p style="font-size:0.72rem; letter-spacing:0.06em; color:var(--muted); margin-top:1rem; padding: 0.6rem 1rem; border-left: 2px solid var(--border); line-height:1.6;">
-                ⚠ Por acordo de confidencialidade (NDA), informações detalhadas sobre métricas, entregas e resultados deste projeto são de divulgação restrita.
-              </p>
-            </div>
-            <div class="case-stats">
-              <div>
-                <div class="case-stat-value">5</div>
-                <div class="case-stat-label">frentes de consultoria</div>
+            <span class="case-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="case-expand">
+            <div class="case-expand-inner">
+              <div class="case-details">
+                <div class="case-details-left">
+                  <div class="case-agency">Consultoria independente</div>
+                  <div class="case-tags" style="flex-direction:column;">
+                    <span class="case-tag">IA & Inovação</span>
+                    <span class="case-tag">Estratégia Digital</span>
+                    <span class="case-tag">Pesquisa</span>
+                    <span class="case-tag">Org Design</span>
+                  </div>
+                </div>
+                <div class="case-details-right">
+                  <div class="case-title">Florense — Estratégia de IA & Inovação</div>
+                  <p class="case-desc">
+                    Consultoria estratégica para uma das principais marcas brasileiras de móveis planejados premium,
+                    com foco em mapear oportunidades de IA, modernizar a estrutura de marketing e construir
+                    um roteiro de inovação fundamentado em dados. O trabalho combinou diagnóstico de presença digital,
+                    benchmarking competitivo, pesquisa de ferramentas e projeto conceitual de plataforma de
+                    conhecimento corporativo — tudo desenvolvido com especificidade para o mercado de alto padrão.
+                  </p>
+                  <p style="font-size:0.72rem; letter-spacing:0.06em; color:var(--muted); padding: 0.6rem 1rem; border-left: 2px solid var(--border); line-height:1.6;">
+                    ⚠ Por acordo de confidencialidade (NDA), informações detalhadas sobre métricas, entregas e resultados deste projeto são de divulgação restrita.
+                  </p>
+                  <div class="case-stats">
+                    <div>
+                      <div class="case-stat-value">5</div>
+                      <div class="case-stat-label">frentes de consultoria</div>
+                    </div>
+                    <div>
+                      <div class="case-stat-value">6</div>
+                      <div class="case-stat-label">plataformas digitais analisadas</div>
+                    </div>
+                    <div>
+                      <div class="case-stat-value">6</div>
+                      <div class="case-stat-label">entregas documentadas</div>
+                    </div>
+                  </div>
+                  <div class="case-awards">
+                    <div class="case-award-badge"><span class="medal">◈</span> Diagnóstico de presença digital cross-channel</div>
+                    <div class="case-award-badge"><span class="medal">◈</span> Roteiro de adoção de IA por departamento</div>
+                    <div class="case-award-badge"><span class="medal">◈</span> Reestruturação organizacional do marketing</div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <div class="case-stat-value">6</div>
-                <div class="case-stat-label">plataformas digitais analisadas</div>
-              </div>
-              <div>
-                <div class="case-stat-value">6</div>
-                <div class="case-stat-label">entregas documentadas</div>
-              </div>
-            </div>
-            <div class="case-awards">
-              <div class="case-award-badge"><span class="medal">◈</span> Diagnóstico de presença digital cross-channel</div>
-              <div class="case-award-badge"><span class="medal">◈</span> Roteiro de adoção de IA por departamento</div>
-              <div class="case-award-badge"><span class="medal">◈</span> Reestruturação organizacional do marketing</div>
             </div>
           </div>
         </div>
 
         <!-- Case: 50 Dias de Verde -->
         <div class="case-card">
-          <div class="case-aside">
-            <div>
-              <div class="case-year">2018</div>
-              <div class="case-client">STIHL</div>
-              <div class="case-agency">via BRA Digital</div>
-            </div>
+          <button class="case-header" aria-expanded="false">
+            <span class="case-year">2018</span>
+            <span class="case-client">STIHL</span>
             <div class="case-tags">
               <span class="case-tag">Branded Content</span>
               <span class="case-tag">Transmídia</span>
               <span class="case-tag">Inbound</span>
               <span class="case-tag">YouTube</span>
             </div>
-          </div>
-          <div class="case-body">
-            <div>
-              <div class="case-title">Jardim das Ideias STIHL — 50 Dias de Verde</div>
-              <p class="case-desc">
-                Webserie de branded content que transformou um quintal comum em Holambra (SP)
-                em um jardim dos sonhos em 50 dias corridos. 42 episódios gravados e 8 lives ao vivo,
-                com distribuição transmídia entre YouTube, Facebook, Instagram e TV por assinatura —
-                posicionando a STIHL junto ao público de jardinagem doméstica de forma orgânica e escalável.
-              </p>
-            </div>
-            <div class="case-stats">
-              <div>
-                <div class="case-stat-value">+6M</div>
-                <div class="case-stat-label">visualizações nas plataformas</div>
+            <span class="case-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="case-expand">
+            <div class="case-expand-inner">
+              <div class="case-details">
+                <div class="case-details-left">
+                  <div class="case-agency">via BRA Digital</div>
+                  <div class="case-tags" style="flex-direction:column;">
+                    <span class="case-tag">Branded Content</span>
+                    <span class="case-tag">Transmídia</span>
+                    <span class="case-tag">Inbound</span>
+                    <span class="case-tag">YouTube</span>
+                  </div>
+                </div>
+                <div class="case-details-right">
+                  <div class="case-title">Jardim das Ideias STIHL — 50 Dias de Verde</div>
+                  <p class="case-desc">
+                    Webserie de branded content que transformou um quintal comum em Holambra (SP)
+                    em um jardim dos sonhos em 50 dias corridos. 42 episódios gravados e 8 lives ao vivo,
+                    com distribuição transmídia entre YouTube, Facebook, Instagram e TV por assinatura —
+                    posicionando a STIHL junto ao público de jardinagem doméstica de forma orgânica e escalável.
+                  </p>
+                  <div class="case-stats">
+                    <div>
+                      <div class="case-stat-value">+6M</div>
+                      <div class="case-stat-label">visualizações nas plataformas</div>
+                    </div>
+                    <div>
+                      <div class="case-stat-value">50</div>
+                      <div class="case-stat-label">dias de conteúdo contínuo</div>
+                    </div>
+                    <div>
+                      <div class="case-stat-value">+46M</div>
+                      <div class="case-stat-label">impactos de mídia</div>
+                    </div>
+                  </div>
+                  <div class="case-awards">
+                    <div class="case-award-badge"><span class="medal">Au</span> Ouro — Colunistas Sul · Não Ficção Online</div>
+                    <div class="case-award-badge"><span class="medal">Ag</span> Prata — Colunistas Sul · Branded Content</div>
+                    <div class="case-award-badge"><span class="medal">★</span> Top de Marketing ADVB-RS 2018</div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <div class="case-stat-value">50</div>
-                <div class="case-stat-label">dias de conteúdo contínuo</div>
-              </div>
-              <div>
-                <div class="case-stat-value">+46M</div>
-                <div class="case-stat-label">impactos de mídia</div>
-              </div>
-            </div>
-            <div class="case-awards">
-              <div class="case-award-badge"><span class="medal">Au</span> Ouro — Colunistas Sul · Não Ficção Online</div>
-              <div class="case-award-badge"><span class="medal">Ag</span> Prata — Colunistas Sul · Branded Content</div>
-              <div class="case-award-badge"><span class="medal">★</span> Top de Marketing ADVB-RS 2018</div>
             </div>
           </div>
         </div>
@@ -2251,6 +2323,16 @@
       // Roda uma vez no carregamento
       applyParallax();
     }
+
+    // ── Cases accordion ────────────────────────────────────
+    document.querySelectorAll('.case-header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card   = btn.closest('.case-card');
+        const isOpen = card.classList.contains('open');
+        card.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
 
     // ── Smooth scroll ──────────────────────────────────────
     document.querySelectorAll('a[href^="#"]').forEach(a => {
