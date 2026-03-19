@@ -989,16 +989,14 @@
       margin-bottom: 4rem;
       aspect-ratio: 21/9;
     }
-    .awards-photo img {
+    .awards-photo video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center 40%;
       display: block;
       filter: brightness(0.82);
-      transition: transform 0.9s var(--ease);
     }
-    .awards-photo:hover img { transform: scale(1.025); }
     .awards-photo::after {
       content: '';
       position: absolute;
@@ -2307,9 +2305,8 @@
         </p>
       </div>
       <div class="awards-photo reveal">
-        <img src="img/premiacoes/FabianoPanizzi_20211214_01_0056.jpg"
-             alt="Troféus Top de Marketing ADVB-RS 2021 — Ouro da Noite, Agência TOP e Personalidade de Marketing"
-             loading="lazy" />
+        <video id="awards-video" src="videos/premios-cinematic.mp4"
+               muted playsinline preload="auto"></video>
       </div>
       <div class="awards-grid">
         <div class="award-card">
@@ -2569,12 +2566,27 @@
       });
     }
 
+    // Awards video — scrubbing por scroll (sem pin, baseado na posição do elemento)
+    const awardsVideo = document.getElementById('awards-video');
+    if (isMobile && awardsVideo) {
+      // Mobile: play quando visível, pausa quando sai
+      const awObs = new IntersectionObserver(entries => {
+        entries[0].isIntersecting ? awardsVideo.play() : awardsVideo.pause();
+      }, { threshold: 0.1 });
+      awObs.observe(awardsVideo);
+    } else if (awardsVideo) {
+      awardsVideo.addEventListener('loadedmetadata', () => {
+        awardsVideo.currentTime = 0;
+      });
+    }
+
     if (!prefersReduced && !isMobile) {
       const heroBgVideo   = heroVideo;
       const heroContent   = document.querySelector('.hero-content');
       const heroScroll    = document.querySelector('.hero-scroll');
       const manifestoDeco = document.querySelector('.manifesto-deco');
       const aboutPhoto    = document.querySelector('.about-photo-wrap');
+      const awVid         = awardsVideo;
 
       // Guarda os offsets de cada seção para cálculo local
       function getSectionOffset(el) {
@@ -2629,6 +2641,17 @@
           if (rel > 0 && rel < sec.offsetHeight + vh) {
             aboutPhoto.style.transform = `translateY(${rel * -0.07}px)`;
           }
+        }
+
+        // ⑥ Awards video — scrubbing baseado na passagem do elemento pela viewport
+        if (awVid && awVid.readyState >= 2 && awVid.duration) {
+          const elTop = awVid.closest('.awards-photo').offsetTop;
+          const elH   = awVid.closest('.awards-photo').offsetHeight;
+          // 0 = elemento entra pela base da viewport; 1 = sai pelo topo
+          const start    = elTop - vh;
+          const end      = elTop + elH;
+          const progress = Math.max(0, Math.min(1, (sy - start) / (end - start)));
+          awVid.currentTime = progress * awVid.duration;
         }
 
         ticking = false;
