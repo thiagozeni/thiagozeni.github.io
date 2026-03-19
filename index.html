@@ -1635,7 +1635,7 @@
   <section id="hero">
     <div class="hero-bg-photo">
       <video id="hero-video" src="videos/perfil-360.mp4"
-             muted playsinline preload="auto" autoplay loop></video>
+             muted playsinline preload="auto"></video>
     </div>
 
     <div class="hero-scroll">
@@ -2555,12 +2555,13 @@
 
     const heroVideo = document.getElementById('hero-video');
 
-    // Desktop: remove loop, pausa e faz scrubbing por scroll
-    // Mobile: mantém autoplay+loop (scrubbing em touch é instável no iOS)
-    if (!isMobile && heroVideo) {
-      heroVideo.removeAttribute('loop');
+    // Mobile: autoplay+loop passivo
+    // Desktop: parado no frame 0, scrubbing por scroll
+    if (isMobile && heroVideo) {
+      heroVideo.setAttribute('loop', '');
+      heroVideo.play();
+    } else if (heroVideo) {
       heroVideo.addEventListener('loadedmetadata', () => {
-        heroVideo.pause();
         heroVideo.currentTime = 0;
       });
     }
