@@ -2575,11 +2575,16 @@
     // Awards video — scrubbing por scroll (sem pin, baseado na posição do elemento)
     const awardsVideo = document.getElementById('awards-video');
     if (isMobile && awardsVideo) {
-      // Mobile: play quando visível, pausa quando sai
-      const awObs = new IntersectionObserver(entries => {
-        entries[0].isIntersecting ? awardsVideo.play() : awardsVideo.pause();
-      }, { threshold: 0.1 });
-      awObs.observe(awardsVideo);
+      awardsVideo.addEventListener('loadedmetadata', () => { awardsVideo.currentTime = 0; });
+      window.addEventListener('scroll', () => {
+        if (awardsVideo.readyState < 2 || !awardsVideo.duration) return;
+        const el   = awardsVideo.closest('.awards-photo');
+        const vh   = window.innerHeight;
+        const start    = el.offsetTop - vh;
+        const end      = el.offsetTop + el.offsetHeight;
+        const progress = Math.max(0, Math.min(1, (window.scrollY - start) / (end - start)));
+        awardsVideo.currentTime = progress * Math.min(awardsVideo.duration, 6);
+      }, { passive: true });
     } else if (awardsVideo) {
       awardsVideo.addEventListener('loadedmetadata', () => {
         awardsVideo.currentTime = 0;
