@@ -740,10 +740,7 @@
     .exp-inner { max-width: 1300px; margin: 0 auto; }
 
     .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
       padding-bottom: 2rem;
       border-bottom: 1px solid var(--border);
     }
@@ -975,11 +972,7 @@
     .awards-inner { max-width: 1300px; margin: 0 auto; }
 
     .awards-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 5rem;
-      align-items: end;
+      margin-bottom: 4rem;
     }
 
     .awards-photo {
@@ -1284,11 +1277,7 @@
     .cases-inner { max-width: 1300px; margin: 0 auto; }
 
     .cases-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 5rem;
-      align-items: end;
+      margin-bottom: 4rem;
     }
 
     .cases-grid {
@@ -1461,7 +1450,6 @@
     }
 
     @media (max-width: 600px) {
-      .cases-header { grid-template-columns: 1fr; }
       .case-grid-card { padding: 1.75rem 1.5rem; }
     }
 
@@ -1501,13 +1489,11 @@
       #about, #experience, #skills, #cases, #awards, #contact { padding: 6rem 1.5rem; }
 
       .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
-      .exp-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
       .exp-item::before { left: -1.5rem; }
 
       .skills-grid { grid-template-columns: repeat(2, 1fr); }
 
       .awards-grid { grid-template-columns: 1fr; }
-      .awards-header { grid-template-columns: 1fr; }
 
       .form-row { grid-template-columns: 1fr; }
 
