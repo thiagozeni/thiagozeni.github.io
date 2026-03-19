@@ -318,13 +318,19 @@
     }
 
     /* ─── HERO ───────────────────────────────────────────── */
+    /* Pin wrapper — absorve 200vh de scroll antes de liberar a página */
+    #hero-pin {
+      height: 300vh;
+    }
+
     #hero {
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding: 0 3rem 4rem;
-      position: relative;
+      position: sticky;
+      top: 0;
       overflow: hidden;
     }
 
@@ -1546,7 +1552,8 @@
       .nav-cta { display: none; }
       .hamburger { display: flex; }
 
-      #hero { padding: 0 1.5rem 3rem; }
+      #hero-pin { height: auto; }
+      #hero { position: relative; height: auto; min-height: 100vh; padding: 0 1.5rem 3rem; }
       .hero-name { font-size: clamp(3rem, 15vw, 6rem); }
       .hero-bottom { flex-direction: column; align-items: flex-start; }
       .hero-stats { gap: 1.5rem; }
@@ -1622,8 +1629,9 @@
   </div>
 
   <!-- ══════════════════════════════════════════════════════
-       HERO
+       HERO  (pin wrapper = 300vh — hero sticky até vídeo terminar)
   ══════════════════════════════════════════════════════════ -->
+  <div id="hero-pin">
   <section id="hero">
     <div class="hero-bg-photo">
       <video id="hero-video" src="videos/perfil-360.mp4"
@@ -1663,6 +1671,7 @@
       </div>
     </div>
   </section>
+  </div>
 
   <!-- ══════════════════════════════════════════════════════
        MANIFESTO
@@ -2575,21 +2584,20 @@
         const sy = window.scrollY;
         const vh = window.innerHeight;
 
-        // ① Hero background — parallax suave + scrubbing de frames por scroll
-        if (heroBgVideo) {
-          heroBgVideo.style.transform = `translateY(${sy * 0.35}px)`;
-
-          // Scrubbing: mapeia progresso de scroll dentro do hero → currentTime
-          if (heroBgVideo.readyState >= 2 && heroBgVideo.duration) {
-            const heroH   = document.getElementById('hero').offsetHeight;
-            const progress = Math.max(0, Math.min(1, sy / heroH));
-            heroBgVideo.currentTime = progress * heroBgVideo.duration;
-          }
+        // ① Scrubbing: mapeia os 200vh do pin wrapper → currentTime do vídeo
+        //    O hero fica sticky durante esse range; a página só avança depois
+        if (heroBgVideo && heroBgVideo.readyState >= 2 && heroBgVideo.duration) {
+          const scrubRange = vh * 2;          // 200vh de "combustível" de scroll
+          const progress   = Math.max(0, Math.min(1, sy / scrubRange));
+          heroBgVideo.currentTime = progress * heroBgVideo.duration;
         }
 
-        // ② Hero content — move levemente para cima enquanto hero sai de vista
+        // ② Hero content — fadeout suave ao sair da zona de pin
         if (heroContent) {
-          heroContent.style.transform = `translateY(${sy * 0.10}px)`;
+          const fadeStart = vh * 2;          // começa a sair depois do scrub
+          const rel = sy - fadeStart;
+          heroContent.style.transform = rel > 0
+            ? `translateY(${rel * 0.10}px)` : '';
         }
 
         // ③ Hero scroll indicator — desaparece mais rápido
