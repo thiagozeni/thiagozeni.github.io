@@ -2558,15 +2558,14 @@
     // Mobile: autoplay+loop passivo
     // Desktop: parado no frame 0, scrubbing por scroll
     if (isMobile && heroVideo) {
-      const heroObs = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting) {
-          heroVideo.currentTime = 0;
-          heroVideo.play();
-        } else {
-          heroVideo.pause();
+      heroVideo.addEventListener('loadedmetadata', () => { heroVideo.currentTime = 0; });
+      window.addEventListener('scroll', () => {
+        if (heroVideo.readyState < 2 || !heroVideo.duration) return;
+        const heroH = document.getElementById('hero').offsetHeight;
+        if (window.scrollY <= heroH) {
+          heroVideo.currentTime = (window.scrollY / heroH) * heroVideo.duration;
         }
-      }, { threshold: 0.1 });
-      heroObs.observe(heroVideo);
+      }, { passive: true });
     } else if (heroVideo) {
       heroVideo.addEventListener('loadedmetadata', () => {
         heroVideo.currentTime = 0;
