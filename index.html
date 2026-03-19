@@ -2558,8 +2558,15 @@
     // Mobile: autoplay+loop passivo
     // Desktop: parado no frame 0, scrubbing por scroll
     if (isMobile && heroVideo) {
-      heroVideo.setAttribute('loop', '');
-      heroVideo.play();
+      const heroObs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          heroVideo.currentTime = 0;
+          heroVideo.play();
+        } else {
+          heroVideo.pause();
+        }
+      }, { threshold: 0.1 });
+      heroObs.observe(heroVideo);
     } else if (heroVideo) {
       heroVideo.addEventListener('loadedmetadata', () => {
         heroVideo.currentTime = 0;
