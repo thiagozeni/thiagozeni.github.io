@@ -2561,6 +2561,7 @@
       let reverseRaf = null;
 
       function playReverse() {
+        if (reverseRaf) cancelAnimationFrame(reverseRaf);
         let lastTs = null;
         function tick(ts) {
           if (lastTs === null) lastTs = ts;
@@ -2574,18 +2575,18 @@
         reverseRaf = requestAnimationFrame(tick);
       }
 
-      heroVideo.addEventListener('ended', () => {
-        heroVideo.pause();
-        playReverse();
-      });
-
       const heroObs = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
           if (reverseRaf) { cancelAnimationFrame(reverseRaf); reverseRaf = null; }
-          heroVideo.currentTime = 0;
-          heroVideo.play();
+          heroVideo.addEventListener('loadedmetadata', () => {
+            heroVideo.currentTime = heroVideo.duration;
+            playReverse();
+          }, { once: true });
+          if (heroVideo.readyState >= 1) {
+            heroVideo.currentTime = heroVideo.duration;
+            playReverse();
+          }
         } else {
-          heroVideo.pause();
           if (reverseRaf) { cancelAnimationFrame(reverseRaf); reverseRaf = null; }
         }
       }, { threshold: 0.1 });
