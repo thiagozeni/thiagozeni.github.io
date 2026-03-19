@@ -2357,14 +2357,21 @@
     const awardsVideo = document.getElementById('awards-video');
     if (isMobile && awardsVideo) {
       awardsVideo.addEventListener('loadedmetadata', () => { awardsVideo.currentTime = 0; });
+      let awTicking = false;
       window.addEventListener('scroll', () => {
-        if (awardsVideo.readyState < 2 || !awardsVideo.duration) return;
-        const el   = awardsVideo.closest('.awards-photo');
-        const vh   = window.innerHeight;
-        const start    = el.offsetTop - vh;
-        const end      = el.offsetTop + el.offsetHeight;
-        const progress = Math.max(0, Math.min(1, (window.scrollY - start) / (end - start)));
-        awardsVideo.currentTime = progress * Math.min(awardsVideo.duration, 6);
+        if (awTicking) return;
+        awTicking = true;
+        requestAnimationFrame(() => {
+          if (awardsVideo.readyState >= 2 && awardsVideo.duration) {
+            const el   = awardsVideo.closest('.awards-photo');
+            const vh   = window.innerHeight;
+            const start    = el.offsetTop - vh;
+            const end      = el.offsetTop + el.offsetHeight;
+            const progress = Math.max(0, Math.min(1, (window.scrollY - start) / (end - start)));
+            awardsVideo.currentTime = progress * Math.min(awardsVideo.duration, 6);
+          }
+          awTicking = false;
+        });
       }, { passive: true });
     } else if (awardsVideo) {
       awardsVideo.addEventListener('loadedmetadata', () => {
