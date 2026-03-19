@@ -334,7 +334,8 @@
       z-index: 0;
     }
 
-    .hero-bg-photo img {
+    .hero-bg-photo video {
+      display: block;
       width: 100%;
       height: 130%;         /* extra height para o parallax não cortar */
       object-fit: cover;
@@ -1625,7 +1626,8 @@
   ══════════════════════════════════════════════════════════ -->
   <section id="hero">
     <div class="hero-bg-photo">
-      <img src="img/perfil_thiago_zeni.jpg" alt="Thiago Zeni" />
+      <video id="hero-video" src="videos/perfil-360.mp4"
+             muted playsinline preload="auto" autoplay loop></video>
     </div>
 
     <div class="hero-scroll">
@@ -2542,8 +2544,19 @@
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isMobile = window.innerWidth < 768;
 
+    const heroVideo = document.getElementById('hero-video');
+
+    // Desktop: pausa o vídeo e faz scrubbing por scroll
+    // Mobile: deixa autoplay+loop (scrubbing em touch é instável no iOS)
+    if (!isMobile && heroVideo) {
+      heroVideo.addEventListener('loadedmetadata', () => {
+        heroVideo.pause();
+        heroVideo.currentTime = 0;
+      });
+    }
+
     if (!prefersReduced && !isMobile) {
-      const heroBgImg     = document.querySelector('.hero-bg-photo img');
+      const heroBgVideo   = heroVideo;
       const heroContent   = document.querySelector('.hero-content');
       const heroScroll    = document.querySelector('.hero-scroll');
       const manifestoDeco = document.querySelector('.manifesto-deco');
@@ -2562,9 +2575,16 @@
         const sy = window.scrollY;
         const vh = window.innerHeight;
 
-        // ① Hero background — move 35% da velocidade de scroll (drift suave para cima)
-        if (heroBgImg) {
-          heroBgImg.style.transform = `translateY(${sy * 0.35}px)`;
+        // ① Hero background — parallax suave + scrubbing de frames por scroll
+        if (heroBgVideo) {
+          heroBgVideo.style.transform = `translateY(${sy * 0.35}px)`;
+
+          // Scrubbing: mapeia progresso de scroll dentro do hero → currentTime
+          if (heroBgVideo.readyState >= 2 && heroBgVideo.duration) {
+            const heroH   = document.getElementById('hero').offsetHeight;
+            const progress = Math.max(0, Math.min(1, sy / heroH));
+            heroBgVideo.currentTime = progress * heroBgVideo.duration;
+          }
         }
 
         // ② Hero content — move levemente para cima enquanto hero sai de vista
