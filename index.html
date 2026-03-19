@@ -2555,9 +2555,10 @@
 
     const heroVideo = document.getElementById('hero-video');
 
-    // Desktop: pausa o vídeo e faz scrubbing por scroll
-    // Mobile: deixa autoplay+loop (scrubbing em touch é instável no iOS)
+    // Desktop: remove loop, pausa e faz scrubbing por scroll
+    // Mobile: mantém autoplay+loop (scrubbing em touch é instável no iOS)
     if (!isMobile && heroVideo) {
+      heroVideo.removeAttribute('loop');
       heroVideo.addEventListener('loadedmetadata', () => {
         heroVideo.pause();
         heroVideo.currentTime = 0;
@@ -2585,11 +2586,12 @@
         const vh = window.innerHeight;
 
         // ① Scrubbing: mapeia os 200vh do pin wrapper → currentTime do vídeo
-        //    O hero fica sticky durante esse range; a página só avança depois
+        //    Para de atualizar após o scrub para evitar flickering no loop boundary
         if (heroBgVideo && heroBgVideo.readyState >= 2 && heroBgVideo.duration) {
-          const scrubRange = vh * 2;          // 200vh de "combustível" de scroll
-          const progress   = Math.max(0, Math.min(1, sy / scrubRange));
-          heroBgVideo.currentTime = progress * heroBgVideo.duration;
+          const scrubRange = vh * 2;
+          if (sy <= scrubRange) {
+            heroBgVideo.currentTime = (sy / scrubRange) * heroBgVideo.duration;
+          }
         }
 
         // ② Hero content — fadeout suave ao sair da zona de pin
