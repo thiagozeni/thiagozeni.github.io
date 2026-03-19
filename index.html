@@ -2448,9 +2448,12 @@
     });
 
     // ── Navbar scroll ──────────────────────────────────────
+    // No desktop o hero fica pinned por 200vh de scrub — só muda o nav
+    // após esse range, quando a página efetivamente começa a rolar
     const navbar = document.getElementById('navbar');
+    const navScrollThreshold = isMobile ? 60 : window.innerHeight * 2 + 60;
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      navbar.classList.toggle('scrolled', window.scrollY > navScrollThreshold);
     }, { passive: true });
 
     // ── Mobile menu ────────────────────────────────────────
