@@ -1294,12 +1294,13 @@
     .cases-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: var(--faint);
+      gap: 1.5rem;
     }
 
     .case-grid-card {
       background: var(--panel);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
       padding: 2.5rem;
       display: flex;
       flex-direction: column;
@@ -1308,11 +1309,17 @@
       text-decoration: none;
       opacity: 0;
       transform: translateY(24px);
-      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), background 0.3s;
+      transition: opacity 0.7s var(--ease), transform 0.6s var(--ease), background 0.3s, box-shadow 0.3s, border-color 0.3s;
+      will-change: transform;
+      transform-style: preserve-3d;
       scroll-margin-top: 90px;
     }
     .case-grid-card.visible { opacity: 1; transform: translateY(0); }
-    .case-grid-card:hover { background: rgba(198,255,0,0.03); }
+    .case-grid-card:hover {
+      background: rgba(198,255,0,0.02);
+      border-color: rgba(198,255,0,0.2);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
 
     .cgc-top {
       display: flex;
@@ -2456,7 +2463,23 @@
     // ── Cases grid — stagger reveal ────────────────────────
     document.querySelectorAll('.case-grid-card').forEach((card, i) => {
       card.style.transitionDelay = (i * 0.08) + 's';
-      obs.observe(card);
+    });
+
+    // ── Cases grid — 3D tilt hover ─────────────────────────
+    document.querySelectorAll('.case-grid-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        const rotY =  (x - 0.5) * 12;
+        const rotX = -(y - 0.5) * 10;
+        card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(6px)`;
+        card.style.transition = 'box-shadow 0.3s, background 0.3s, border-color 0.3s';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+        card.style.transition = 'transform 0.5s var(--ease), box-shadow 0.3s, background 0.3s, border-color 0.3s';
+      });
     });
 
     // ── Smooth scroll ──────────────────────────────────────
