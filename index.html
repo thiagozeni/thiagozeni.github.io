@@ -2651,7 +2651,7 @@
           const start    = elTop - vh;
           const end      = elTop + elH;
           const progress = Math.max(0, Math.min(1, (sy - start) / (end - start)));
-          awVid.currentTime = progress * awVid.duration;
+          awVid.currentTime = progress * Math.min(awVid.duration, 6);
         }
 
         ticking = false;
