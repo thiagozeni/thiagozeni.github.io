@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa 4 por 4 — Maior Programa Ao Vivo Independente do YouTube Brasil · Thiago Zeni</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Como construímos do zero o maior programa ao vivo independente do YouTube Brasil — 140 mil espectadores simultâneos, 500 mil inscritos em 2 meses e 9 plataformas digitais." />
+  <meta name="author" content="Thiago Zeni" />
+  <link rel="canonical" href="https://thiagozeni.com.br/cases/programa-4por4" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://thiagozeni.com.br/cases/programa-4por4" />
+  <meta property="og:title"       content="Programa 4 por 4 — Maior Programa Ao Vivo Independente do YouTube Brasil · Thiago Zeni" />
+  <meta property="og:description" content="140 mil espectadores simultâneos, 500K inscritos em 2 meses, 9 plataformas. Como planejamento estratégico rigoroso e execução consistente construíram um veículo independente que competia com a TV aberta." />
+  <meta property="og:image"       content="https://thiagozeni.com.br/img/4por4.jpg" />
+  <meta property="og:locale"      content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Programa 4 por 4 — Maior Programa Ao Vivo Independente do YouTube Brasil · Thiago Zeni" />
+  <meta name="twitter:description" content="140 mil espectadores simultâneos, 500K inscritos em 2 meses, 9 plataformas. Como planejamento estratégico rigoroso e execução consistente construíram um veículo independente que competia com a TV aberta." />
+  <meta name="twitter:image"       content="https://thiagozeni.com.br/img/4por4.jpg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Programa 4 por 4 — Maior Programa Ao Vivo Independente do YouTube Brasil",
+    "description": "Como construímos do zero o maior programa ao vivo independente do YouTube Brasil — 140 mil espectadores simultâneos, 500 mil inscritos em 2 meses.",
+    "author": { "@type": "Person", "name": "Thiago Zeni", "url": "https://thiagozeni.com.br/" },
+    "publisher": { "@type": "Person", "name": "Thiago Zeni" },
+    "url": "https://thiagozeni.com.br/cases/programa-4por4",
+    "datePublished": "2021-07-04",
+    "keywords": "YouTube ao vivo, programa independente, marketing digital, produção de conteúdo, crescimento de canal, multiplataforma, estratégia digital, Brasil Media House"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root {
+      --black:#050505; --deep:#0D0D0D; --panel:#111111;
+      --lime:#C6FF00; --lime2:#DEFF4F; --white:#F2F2F2;
+      --muted:#7A7A7A; --faint:#3A3A3A;
+      --border:rgba(198,255,0,0.14); --border2:rgba(255,255,255,0.07);
+      --font-display:'Unbounded',sans-serif; --font-body:'DM Sans',sans-serif;
+      --font-serif:'Cormorant Garamond',serif;
+    }
+    html { scroll-behavior:smooth; }
+    body { font-family:var(--font-body); background:var(--black); color:var(--white); line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+
+    nav { position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.2rem 3rem; background:rgba(5,5,5,0.95); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
+    .nav-back { display:flex; align-items:center; gap:0.5rem; font-size:0.72rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); transition:color 0.3s; }
+    .nav-back:hover { color:var(--lime); }
+    .nav-back span { font-size:1rem; }
+    .nav-logo { font-family:var(--font-display); font-weight:900; font-size:1rem; letter-spacing:-0.04em; color:var(--lime); }
+
+    .case-hero { padding:5rem 3rem 4rem; max-width:900px; margin:0 auto; }
+    .case-meta { display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+    .case-year-badge { font-family:var(--font-display); font-size:0.65rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--lime); border:1px solid var(--lime); padding:0.3rem 0.8rem; border-radius:1px; }
+    .case-tag { font-size:0.65rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); border:1px solid var(--faint); padding:0.25rem 0.7rem; border-radius:1px; }
+    .case-client-label { font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+    .case-hero h1 { font-family:var(--font-display); font-size:clamp(2rem,5vw,3.5rem); font-weight:800; line-height:1.1; letter-spacing:-0.03em; margin-bottom:1.5rem; }
+    .case-hero h1 em { font-style:normal; -webkit-text-stroke:1px var(--white); color:transparent; }
+    .case-lead { font-family:var(--font-serif); font-size:1.25rem; font-style:italic; color:rgba(242,242,242,0.75); line-height:1.6; border-left:2px solid var(--lime); padding-left:1.5rem; margin-bottom:1rem; }
+    .case-agency-line { font-size:0.78rem; color:var(--muted); letter-spacing:0.06em; }
+
+    .stats-bar { background:var(--panel); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:2.5rem 3rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:2rem; }
+    .stat-item { text-align:center; }
+    .stat-value { font-family:var(--font-display); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:var(--lime); line-height:1; display:block; margin-bottom:0.4rem; }
+    .stat-label { font-size:0.72rem; color:var(--muted); letter-spacing:0.06em; line-height:1.4; }
+
+    .case-content { max-width:900px; margin:0 auto; padding:4rem 3rem; }
+    .case-section { margin-bottom:3.5rem; }
+    .section-label { font-family:var(--font-display); font-size:0.6rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--lime); margin-bottom:0.75rem; }
+    .case-section h2 { font-family:var(--font-display); font-size:clamp(1.1rem,2.5vw,1.5rem); font-weight:700; letter-spacing:-0.02em; margin-bottom:1.2rem; line-height:1.2; }
+    .case-section p { color:rgba(242,242,242,0.8); font-size:0.97rem; margin-bottom:1rem; line-height:1.75; }
+    .case-section ul { list-style:none; padding:0; margin:0 0 1rem; }
+    .case-section ul li { color:rgba(242,242,242,0.8); font-size:0.97rem; line-height:1.7; padding:0.5rem 0 0.5rem 1.5rem; border-bottom:1px solid var(--border2); position:relative; }
+    .case-section ul li::before { content:'→'; position:absolute; left:0; color:var(--lime); font-size:0.85rem; }
+
+    .timeline-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:var(--faint); margin-top:1.2rem; }
+    .timeline-card { background:var(--panel); padding:1.75rem; }
+    .timeline-period { font-family:var(--font-display); font-size:0.6rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--lime); margin-bottom:0.5rem; }
+    .timeline-milestone { font-family:var(--font-display); font-size:0.9rem; font-weight:700; color:var(--white); margin-bottom:0.5rem; line-height:1.2; }
+    .timeline-desc { font-size:0.85rem; color:var(--muted); line-height:1.55; }
+
+    .platform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:1px; background:var(--faint); margin-top:1.2rem; }
+    .platform-item { background:var(--panel); padding:1.2rem 1.5rem; font-size:0.82rem; color:var(--muted); letter-spacing:0.04em; }
+    .platform-item strong { display:block; color:var(--white); font-size:0.85rem; margin-bottom:0.2rem; }
+
+    .roles-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:var(--faint); margin-top:1.2rem; }
+    .role-card { background:var(--panel); padding:1.75rem; }
+    .role-label { font-family:var(--font-display); font-size:0.6rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--lime); margin-bottom:0.5rem; }
+    .role-title { font-family:var(--font-display); font-size:0.88rem; font-weight:700; color:var(--white); margin-bottom:0.6rem; line-height:1.2; }
+    .role-desc { font-size:0.85rem; color:var(--muted); line-height:1.55; }
+
+    .insight-box { background:var(--panel); border-left:2px solid var(--lime); padding:1.5rem 2rem; margin:1.2rem 0; }
+    .insight-box p { font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:rgba(242,242,242,0.85); margin:0; line-height:1.6; }
+
+    .case-video-hero { position:relative; width:100%; max-height:62vh; overflow:hidden; }
+    .case-video-hero video { width:100%; max-height:62vh; object-fit:cover; display:block; }
+    .case-video-hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(5,5,5,0.15) 0%, rgba(5,5,5,0.7) 100%); pointer-events:none; }
+    .case-video-caption { position:absolute; bottom:1.2rem; left:1.75rem; font-family:var(--font-display); font-size:0.58rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(242,242,242,0.45); z-index:1; }
+
+    .case-studio-photo { width:100%; display:block; margin-top:1.5rem; border:1px solid var(--border2); }
+    .case-studio-caption { font-size:0.68rem; color:var(--muted); letter-spacing:0.06em; margin-top:0.5rem; padding-left:0.2rem; }
+
+    .plaque-banner { position:relative; width:100%; height:300px; overflow:hidden; margin:1.75rem 0 0; border:1px solid var(--border); }
+    .plaque-banner video { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.7) contrast(1.1) saturate(0.65); }
+    .plaque-banner::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(5,5,5,0.5) 0%, rgba(5,5,5,0.1) 50%, rgba(5,5,5,0.5) 100%); pointer-events:none; }
+    .plaque-banner-label { position:absolute; bottom:1rem; right:1.25rem; font-family:var(--font-display); font-size:0.58rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(242,242,242,0.4); z-index:1; }
+
+    .case-cta { background:var(--panel); border-top:1px solid var(--border); padding:4rem 3rem; display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.5rem; }
+    .case-cta p { font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); max-width:640px; }
+    .btn-back { display:inline-flex; align-items:center; gap:0.6rem; font-family:var(--font-display); font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--black); background:var(--lime); padding:0.8rem 2rem; border-radius:1px; transition:background 0.3s,box-shadow 0.3s; }
+    .btn-back:hover { background:var(--lime2); box-shadow:0 0 24px rgba(198,255,0,0.3); }
+
+    footer { padding:1.5rem 3rem; border-top:1px solid var(--border2); display:flex; align-items:center; justify-content:space-between; font-size:0.72rem; color:var(--muted); }
+    .footer-logo { font-family:var(--font-display); font-weight:900; font-size:0.9rem; color:var(--lime); }
+
+    /* ── Scroll Reveal ── */
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @keyframes heroFadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .case-hero h1 { animation:heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+    .case-hero .case-lead { animation:heroFadeUp 0.85s cubic-bezier(0.16,1,0.3,1) 0.28s both; }
+    .case-hero .case-agency-line { animation:heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+
+    @media (max-width:768px) {
+      nav { padding:1rem 1.5rem; }
+      .case-hero { padding:3rem 1.5rem 2.5rem; }
+      .stats-bar { padding:2rem 1.5rem; grid-template-columns:repeat(2,1fr); }
+      .case-content { padding:2.5rem 1.5rem; }
+      .case-cta { padding:2.5rem 1.5rem; }
+      footer { padding:1.5rem; flex-direction:column; gap:0.5rem; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html#cases" class="nav-back"><span>←</span> Voltar ao portfólio</a>
+    <div class="nav-logo">ZN.</div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="case-meta">
+      <span class="case-year-badge">2021–2024</span>
+      <span class="case-client-label">Programa 4 por 4 · Brasil Media House</span>
+    </div>
+    <div class="case-meta" style="margin-bottom:1.2rem;">
+      <span class="case-tag">YouTube</span>
+      <span class="case-tag">Produção ao Vivo</span>
+      <span class="case-tag">Marketing Digital</span>
+      <span class="case-tag">Multiplataforma</span>
+    </div>
+    <h1>Programa 4 por 4 —<br><em>Maior Ao Vivo Independente</em><br>do YouTube Brasil</h1>
+    <p class="case-lead">
+      Um veículo de mídia independente capaz de competir com a TV aberta em horário nobre — usando
+      apenas plataformas digitais, sem a estrutura de uma emissora, e alcançando 500 mil inscritos
+      em menos de dois meses.
+    </p>
+    <p class="case-agency-line">Brasil Media House · Sócio idealizador, estrategista de marketing digital e arquiteto de tecnologia</p>
+  </header>
+
+  <div class="case-video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="../videos/VID_20220626_201040.mp4" type="video/mp4">
+    </video>
+    <span class="case-video-caption">Bastidores — domingo, 26 jun 2022 · 20h10</span>
+  </div>
+
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <span class="stat-value">140K</span>
+      <span class="stat-label">espectadores simultâneos (pico)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">~1M</span>
+      <span class="stat-label">inscritos no YouTube</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">800K+</span>
+      <span class="stat-label">visualizações por semana (pico)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value">9+</span>
+      <span class="stat-label">plataformas simultâneas</span>
+    </div>
+  </div>
+
+  <main class="case-content">
+
+    <div class="case-section reveal">
+      <div class="section-label">O Desafio</div>
+      <h2>TV aberta, audiência digital, estrutura zero</h2>
+      <p>
+        Criar do zero um programa jornalístico semanal ao vivo, 100% independente, fora do ecossistema
+        das emissoras tradicionais — capaz de competir com a TV aberta usando exclusivamente plataformas
+        digitais.
+      </p>
+      <p>
+        O desafio não era só de produção. Era construir rapidamente uma base de assinantes e apoiadores
+        para viabilizar o modelo de negócio, ao mesmo tempo que entregávamos um produto com padrão
+        profissional de emissora toda semana, ao vivo, sem rede de apoio institucional.
+      </p>
+    </div>
+
+    <div class="case-section reveal">
+      <div class="section-label">O Projeto</div>
+      <h2>Programa semanal de debates no horário nobre da TV brasileira</h2>
+      <p>
+        Lançado em 4 de julho de 2021, o Programa 4 por 4 foi ao ar toda semana às 20h30 de domingo
+        no YouTube — disputando diretamente o horário nobre da TV aberta com um formato de debates
+        sobre política, economia e comportamento.
+      </p>
+      <p>
+        O elenco foi uma das alavancas centrais da estratégia: Luís Ernesto Lacombe, Rodrigo Constantino,
+        Ana Paula Henkel e Guilherme Fiuza. Cada um com audiência própria e consolidada, a combinação
+        eliminou a fase de "partida fria" e criou um efeito multiplicador imediato no lançamento.
+      </p>
+
+      <div class="insight-box reveal">
+        <p>"Capital de influência do elenco não é apenas audiência importada — é credibilidade transferida. Quando você combina vozes que já têm autoridade estabelecida, o programa nasce com reputação, não precisa construí-la."</p>
+      </div>
+
+      <img src="../img/4por4.jpg" alt="Estúdio do Programa 4 por 4 — apresentadores ao vivo com painel LED" class="case-studio-photo reveal">
+      <p class="case-studio-caption reveal">Estúdio do Programa 4 por 4 — Jair Bolsonaro, então presidente do Brasil, como convidado remoto</p>
+    </div>
+
+    <div class="case-section reveal">
+      <div class="section-label">Minha Atuação</div>
+      <h2>Três frentes simultâneas desde a fundação</h2>
+
+      <div class="roles-grid">
+        <div class="role-card">
+          <div class="role-label">Sócio Idealizador</div>
+          <div class="role-title">Visão e Concepção do Projeto</div>
+          <div class="role-desc">Cofundador do programa ao lado de João Paulo da BMH e dos jornalistas do elenco. Concepção do modelo de negócio, definição do formato e estruturação do projeto desde o início.</div>
+        </div>
+        <div class="role-card">
+          <div class="role-label">Estrategista de Marketing Digital</div>
+          <div class="role-title">Crescimento e Distribuição</div>
+          <div class="role-desc">Planejamento de lançamento, estratégia de conteúdo em três camadas (ao vivo, cortes, exclusivos) e gestão do ecossistema de 9+ plataformas.</div>
+        </div>
+        <div class="role-card">
+          <div class="role-label">Arquiteto de Tecnologia</div>
+          <div class="role-title">Infraestrutura Digital</div>
+          <div class="role-desc">Estruturação do ecossistema tecnológico: site próprio com assinaturas, app iOS/Android lançado em tempo recorde e integração com plataformas alternativas.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section reveal">
+      <div class="section-label">Estratégia de Crescimento</div>
+      <h2>Do lançamento a quase 1 milhão de inscritos</h2>
+      <p>
+        O planejamento de lançamento foi coordenado com uma semana de antecedência — anúncio oficial
+        em 29 de junho de 2021, com divulgação nos canais pessoais de cada apresentador criando
+        efeito multiplicador imediato. O episódio de estreia ultrapassou 700 mil visualizações.
+      </p>
+
+      <div class="plaque-banner reveal">
+        <video autoplay muted loop playsinline>
+          <source src="../videos/VID_20230331_175955.mp4" type="video/mp4">
+        </video>
+        <span class="plaque-banner-label">Crescimento do canal — YouTube</span>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="timeline-period">Jul/2021</div>
+          <div class="timeline-milestone">Estreia</div>
+          <div class="timeline-desc">Episódio inaugural ultrapassa 700 mil views. App iOS/Android lançado no mesmo mês.</div>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-period">Primeiras semanas</div>
+          <div class="timeline-milestone">100K inscritos</div>
+          <div class="timeline-desc">Placa de prata do YouTube conquistada rapidamente após o lançamento.</div>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-period">~2 meses (ago/2021)</div>
+          <div class="timeline-milestone">500K inscritos</div>
+          <div class="timeline-desc">14M+ views acumuladas. Um dos crescimentos mais rápidos da história do YouTube Brasil para canal de notícias.</div>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-period">~3 meses (set/2021)</div>
+          <div class="timeline-milestone">859K inscritos</div>
+          <div class="timeline-desc">Quase 30 milhões de views acumuladas. Liderança de audiência ao vivo no YouTube Brasil aos domingos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section reveal">
+      <div class="section-label">Estratégia de Conteúdo</div>
+      <h2>Três camadas: alcance, engajamento e monetização</h2>
+      <p>
+        A arquitetura de conteúdo foi desenhada para operar em três camadas simultâneas, cada uma
+        com função específica dentro do funil de crescimento:
+      </p>
+      <ul>
+        <li><strong>Programa ao vivo (âncora semanal):</strong> o compromisso dominical de 20h30 criava hábito de consumo e senso de comunidade em tempo real</li>
+        <li><strong>Cortes e melhores momentos:</strong> distribuídos nas redes para ampliação de alcance e aquisição orgânica contínua de novos espectadores</li>
+        <li><strong>Conteúdo exclusivo para apoiadores:</strong> camada de monetização direta e fidelização da audiência mais engajada</li>
+      </ul>
+    </div>
+
+    <div class="case-section reveal">
+      <div class="section-label">Ecossistema Multiplataforma</div>
+      <h2>9+ plataformas como blindagem operacional</h2>
+      <p>
+        A decisão de operar em múltiplas plataformas simultaneamente foi tanto estratégia de
+        crescimento quanto gestão de risco. Quando o episódio de estreia foi removido pelo YouTube
+        ainda em julho de 2021 (já com 700 mil views), o ecossistema alternativo garantiu
+        a continuidade das operações.
+      </p>
+
+      <div class="platform-grid">
+        <div class="platform-item"><strong>YouTube</strong>plataforma principal</div>
+        <div class="platform-item"><strong>App próprio</strong>iOS &amp; Android</div>
+        <div class="platform-item"><strong>Site próprio</strong>assinaturas</div>
+        <div class="platform-item"><strong>Podcast</strong>Spreaker/Spotify</div>
+        <div class="platform-item"><strong>Instagram</strong>347K seguidores</div>
+        <div class="platform-item"><strong>Facebook</strong>125K+ curtidas</div>
+        <div class="platform-item"><strong>Telegram</strong>comunidade</div>
+        <div class="platform-item"><strong>Rumble/Vimeo</strong>alternativas</div>
+        <div class="platform-item"><strong>X/Twitter</strong>distribuição</div>
+      </div>
+
+      <div class="insight-box reveal" style="margin-top:1.5rem;">
+        <p>"Diversificação de plataformas não é excesso — é blindagem. Quando sua operação depende de uma única plataforma, você terceiriza sua continuidade para uma empresa que não te conhece."</p>
+      </div>
+    </div>
+
+    <div class="case-section reveal">
+      <div class="section-label">Resultado</div>
+      <h2>Líder de audiência ao vivo no YouTube Brasil</h2>
+      <p>
+        Em menos de três meses, o Programa 4 por 4 se consolidou como o maior programa ao vivo
+        independente do YouTube Brasil, com picos de 120 a 140 mil espectadores simultâneos
+        e liderança de audiência ao vivo no horário nobre dos domingos.
+      </p>
+      <ul>
+        <li>Crescimento de 0 a 500 mil inscritos em menos de dois meses — um dos mais rápidos da história do YouTube Brasil para canais de notícias</li>
+        <li>Quase 30 milhões de visualizações nos primeiros três meses de operação</li>
+        <li>Até 800 mil visualizações por semana no pico de audiência</li>
+        <li>347 mil seguidores no Instagram; 125 mil+ curtidas no Facebook</li>
+        <li>App próprio lançado em tempo recorde com assinantes pagantes</li>
+        <li>Operação contínua de julho de 2021 até início de 2024</li>
+      </ul>
+    </div>
+
+    <div class="case-section reveal">
+      <div class="section-label">Aprendizados</div>
+      <h2>O que esse case ensina sobre construir mídia independente</h2>
+      <ul>
+        <li><strong>Consistência cria hábito:</strong> o "compromisso dominical" de 20h30 transformou espectadores casuais em audiência fiel — a consistência semanal é mais valiosa que qualquer episódio singular</li>
+        <li><strong>Capital de influência elimina a partida fria:</strong> elenco com autoridade estabelecida transfere credibilidade para o veículo desde o primeiro dia</li>
+        <li><strong>Conteúdo derivado sustenta o crescimento:</strong> cortes e melhores momentos funcionam como motor de aquisição orgânica contínua entre episódios</li>
+        <li><strong>Comunidade engajada supera audiência passiva:</strong> apoiadores que pagam pelo conteúdo exclusivo são mais valiosos — e mais estáveis — do que milhões de views passivas</li>
+        <li><strong>Diversificação de plataformas é gestão de risco:</strong> o ecossistema de 9 plataformas garantiu continuidade operacional durante crises de moderação</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <div class="case-cta reveal">
+    <p>Quer conversar sobre estratégia digital, lançamentos ou construção de audiência do zero?</p>
+    <a href="../index.html#contact" class="btn-back">Fale com o Thiago →</a>
+    <a href="../index.html#cases" class="nav-back" style="margin-top:0.5rem;"><span>←</span> Ver todos os cases</a>
+  </div>
+
+  <footer>
+    <div class="footer-logo">ZN.</div>
+    <div>&copy; 2025 Thiago Zeni · <a href="../index.html" style="color:var(--lime);">thiagozeni.com.br</a></div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    ['stat-item','timeline-card','role-card','platform-item'].forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i * 0.09) + 's';
+        obs.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
