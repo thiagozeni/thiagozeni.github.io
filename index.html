@@ -2558,12 +2558,35 @@
     // Mobile: autoplay+loop passivo
     // Desktop: parado no frame 0, scrubbing por scroll
     if (isMobile && heroVideo) {
+      let reverseRaf = null;
+
+      function playReverse() {
+        let lastTs = null;
+        function tick(ts) {
+          if (lastTs === null) lastTs = ts;
+          const delta = (ts - lastTs) / 1000;
+          lastTs = ts;
+          heroVideo.currentTime = Math.max(0, heroVideo.currentTime - delta);
+          if (heroVideo.currentTime > 0) {
+            reverseRaf = requestAnimationFrame(tick);
+          }
+        }
+        reverseRaf = requestAnimationFrame(tick);
+      }
+
+      heroVideo.addEventListener('ended', () => {
+        heroVideo.pause();
+        playReverse();
+      });
+
       const heroObs = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
+          if (reverseRaf) { cancelAnimationFrame(reverseRaf); reverseRaf = null; }
           heroVideo.currentTime = 0;
           heroVideo.play();
         } else {
           heroVideo.pause();
+          if (reverseRaf) { cancelAnimationFrame(reverseRaf); reverseRaf = null; }
         }
       }, { threshold: 0.1 });
       heroObs.observe(heroVideo);
