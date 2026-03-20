@@ -349,6 +349,13 @@
       filter: grayscale(100%) brightness(0.28) contrast(1.2);
       will-change: transform;
       transform-origin: center top;
+      transition: opacity 0.5s linear;
+    }
+    .hero-video-clone {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
     }
 
     /* Lime tint overlay */
@@ -2336,11 +2343,46 @@
     // Desktop: parado no frame 0, scrubbing por scroll
     const awardsVideo = document.getElementById('awards-video');
     if (isMobile) {
+      // Hero: crossfade loop com double-buffering
       if (heroVideo) {
-        heroVideo.setAttribute('autoplay', '');
-        heroVideo.setAttribute('loop', '');
+        const FADE = 0.5;
+        const clone = document.createElement('video');
+        clone.src = heroVideo.src;
+        clone.muted = true;
+        clone.setAttribute('playsinline', '');
+        clone.setAttribute('preload', 'auto');
+        clone.className = 'hero-video-clone';
+        heroVideo.parentNode.appendChild(clone);
+
+        let a = heroVideo, b = clone, xfading = false;
+
+        function heroSwap(from, to) {
+          if (xfading) return;
+          xfading = true;
+          to.currentTime = 0;
+          to.play().catch(() => {});
+          to.style.opacity = '1';
+          from.style.opacity = '0';
+          setTimeout(() => {
+            from.pause();
+            from.currentTime = 0;
+            a = to; b = from;
+            xfading = false;
+          }, FADE * 1000);
+        }
+
+        function onHeroTimeUpdate() {
+          if (this === a && this.duration && this.currentTime >= this.duration - FADE) {
+            heroSwap(a, b);
+          }
+        }
+
+        heroVideo.addEventListener('timeupdate', onHeroTimeUpdate);
+        clone.addEventListener('timeupdate', onHeroTimeUpdate);
         heroVideo.play().catch(() => {});
       }
+
+      // Awards: autoplay+loop simples
       if (awardsVideo) {
         awardsVideo.setAttribute('autoplay', '');
         awardsVideo.setAttribute('loop', '');
