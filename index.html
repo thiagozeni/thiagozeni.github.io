@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,23 +8,26 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
   <!-- SEO -->
-  <meta name="description" content="Thiago Zeni — 28 anos de experiência em Marketing Digital, Inovação e Inteligência Artificial. Especialista em liderança executiva e construção de marcas. Porto Alegre · Florianópolis · São Paulo." />
+  <meta name="description"
+    content="Thiago Zeni — 28 anos de experiência em Marketing Digital, Inovação e Inteligência Artificial. Especialista em liderança executiva e construção de marcas. Porto Alegre · Florianópolis · São Paulo." />
   <meta name="author" content="Thiago Zeni" />
   <link rel="canonical" href="https://thiagozeni.github.io/" />
 
   <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://thiagozeni.github.io/" />
-  <meta property="og:title"       content="Thiago Zeni — Marketing Digital & Liderança Executiva" />
-  <meta property="og:description" content="28 anos construindo marcas que importam. Especialista em Marketing Digital, Inovação e Inteligência Artificial." />
-  <meta property="og:image"       content="https://thiagozeni.github.io/img/perfil_thiago_zeni.jpg" />
-  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thiagozeni.github.io/" />
+  <meta property="og:title" content="Thiago Zeni — Marketing Digital & Liderança Executiva" />
+  <meta property="og:description"
+    content="28 anos construindo marcas que importam. Especialista em Marketing Digital, Inovação e Inteligência Artificial." />
+  <meta property="og:image" content="https://thiagozeni.github.io/img/perfil_thiago_zeni.jpg" />
+  <meta property="og:locale" content="pt_BR" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Thiago Zeni — Marketing Digital & Liderança Executiva" />
-  <meta name="twitter:description" content="28 anos construindo marcas que importam. Especialista em Marketing Digital, Inovação e Inteligência Artificial." />
-  <meta name="twitter:image"       content="https://thiagozeni.com.br/img/perfil_thiago_zeni.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thiago Zeni — Marketing Digital & Liderança Executiva" />
+  <meta name="twitter:description"
+    content="28 anos construindo marcas que importam. Especialista em Marketing Digital, Inovação e Inteligência Artificial." />
+  <meta name="twitter:image" content="https://thiagozeni.com.br/img/perfil_thiago_zeni.jpg" />
 
   <!-- Schema.org / JSON-LD -->
   <script type="application/ld+json">
@@ -33,7 +37,7 @@
     "name": "Thiago Zeni",
     "url": "https://thiagozeni.com.br/",
     "image": "https://thiagozeni.com.br/img/perfil_thiago_zeni.jpg",
-    "jobTitle": "Especialista em Marketing Digital & Liderança Executiva",
+    "jobTitle": "Especialista em Marketing Digital, IA & Liderança Executiva",
     "description": "28 anos de experiência em Marketing Digital, Inovação e Inteligência Artificial. Construindo marcas que importam.",
     "address": {
       "@type": "PostalAddress",
@@ -51,7 +55,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-F44T3HG5PZ');
   </script>
@@ -59,44 +63,54 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet">
 
   <style>
     /* ─── RESET & TOKENS ─────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       /* ─ Base ─ */
-      --black:   #050505;
-      --deep:    #0D0D0D;
-      --panel:   #111111;
+      --black: #050505;
+      --deep: #0D0D0D;
+      --panel: #111111;
 
       /* ─ Accent: Electric Lime ─ */
-      --lime:    #C6FF00;
-      --lime2:   #DEFF4F;
-      --lime-dim: rgba(198,255,0,0.08);
+      --lime: #C6FF00;
+      --lime2: #DEFF4F;
+      --lime-dim: rgba(198, 255, 0, 0.08);
 
       /* ─ Text ─ */
-      --white:   #F2F2F2;
-      --muted:   #7A7A7A;
-      --faint:   #3A3A3A;
+      --white: #F2F2F2;
+      --muted: #7A7A7A;
+      --faint: #3A3A3A;
 
       /* ─ Pop accent (used sparingly) ─ */
-      --red:     #FF2D2D;
+      --red: #FF2D2D;
 
       /* ─ Borders ─ */
-      --border:  rgba(198,255,0,0.14);
-      --border2: rgba(255,255,255,0.07);
+      --border: rgba(198, 255, 0, 0.14);
+      --border2: rgba(255, 255, 255, 0.07);
 
       /* ─ Typography ─ */
       --font-display: 'Unbounded', sans-serif;
-      --font-body:    'DM Sans', sans-serif;
-      --font-serif:   'Cormorant Garamond', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-serif: 'Cormorant Garamond', serif;
 
       --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    html { scroll-behavior: auto; }
+    html {
+      scroll-behavior: auto;
+    }
 
     body {
       font-family: var(--font-body);
@@ -107,8 +121,15 @@
       cursor: none;
     }
 
-    a { color: inherit; text-decoration: none; cursor: none; }
-    img { display: block; }
+    a {
+      color: inherit;
+      text-decoration: none;
+      cursor: none;
+    }
+
+    img {
+      display: block;
+    }
 
     /* ─── GRAIN OVERLAY ──────────────────────────────────── */
     body::before {
@@ -125,19 +146,21 @@
     /* ─── SCROLL PROGRESS ────────────────────────────────── */
     #progress {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       height: 2px;
       width: 0%;
       background: var(--lime);
       z-index: 10000;
       transition: width 0.1s linear;
-      box-shadow: 0 0 12px rgba(198,255,0,0.6);
+      box-shadow: 0 0 12px rgba(198, 255, 0, 0.6);
     }
 
     /* ─── CUSTOM CURSOR ──────────────────────────────────── */
     #cursor-dot {
       position: fixed;
-      width: 7px; height: 7px;
+      width: 7px;
+      height: 7px;
       background: var(--lime);
       border-radius: 50%;
       pointer-events: none;
@@ -145,30 +168,34 @@
       transform: translate(-50%, -50%);
       transition: width 0.2s var(--ease), height 0.2s var(--ease), background 0.2s;
       will-change: transform;
-      box-shadow: 0 0 8px rgba(198,255,0,0.8);
+      box-shadow: 0 0 8px rgba(198, 255, 0, 0.8);
     }
 
     #cursor-ring {
       position: fixed;
-      width: 38px; height: 38px;
+      width: 38px;
+      height: 38px;
       border: 1.5px solid var(--lime);
       border-radius: 50%;
       pointer-events: none;
       z-index: 99998;
       transform: translate(-50%, -50%);
       transition: width 0.4s var(--ease), height 0.4s var(--ease),
-                  border-color 0.3s, opacity 0.3s;
+        border-color 0.3s, opacity 0.3s;
       will-change: transform;
       opacity: 0.45;
     }
 
     body.cursor-hover #cursor-dot {
-      width: 12px; height: 12px;
+      width: 12px;
+      height: 12px;
       background: var(--lime2);
-      box-shadow: 0 0 18px rgba(198,255,0,0.9);
+      box-shadow: 0 0 18px rgba(198, 255, 0, 0.9);
     }
+
     body.cursor-hover #cursor-ring {
-      width: 64px; height: 64px;
+      width: 64px;
+      height: 64px;
       border-color: var(--lime2);
       opacity: 0.25;
     }
@@ -185,7 +212,10 @@
       transition: opacity 0.9s var(--ease), visibility 0.9s;
     }
 
-    #preloader.hidden { opacity: 0; visibility: hidden; }
+    #preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
 
     .preloader-monogram {
       font-family: var(--font-display);
@@ -197,7 +227,7 @@
       position: relative;
       overflow: hidden;
       text-shadow: none;
-      filter: drop-shadow(0 0 20px rgba(198,255,0,0.4));
+      filter: drop-shadow(0 0 20px rgba(198, 255, 0, 0.4));
     }
 
     .preloader-monogram::after {
@@ -210,27 +240,34 @@
     }
 
     @keyframes preloader-fill {
-      to { clip-path: inset(0% 0 0 0); }
+      to {
+        clip-path: inset(0% 0 0 0);
+      }
     }
 
     .preloader-line {
       position: absolute;
-      bottom: 0; left: 0;
+      bottom: 0;
+      left: 0;
       height: 2px;
       background: var(--lime);
       width: 0;
       animation: preloader-line 1.4s var(--ease) 0.1s forwards;
-      box-shadow: 0 0 12px rgba(198,255,0,0.7);
+      box-shadow: 0 0 12px rgba(198, 255, 0, 0.7);
     }
 
     @keyframes preloader-line {
-      to { width: 100%; }
+      to {
+        width: 100%;
+      }
     }
 
     /* ─── NAVBAR ─────────────────────────────────────────── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
       display: flex;
       align-items: center;
@@ -252,7 +289,7 @@
       font-size: 1.15rem;
       letter-spacing: -0.04em;
       color: var(--lime);
-      filter: drop-shadow(0 0 10px rgba(198,255,0,0.4));
+      filter: drop-shadow(0 0 10px rgba(198, 255, 0, 0.4));
     }
 
     .nav-links {
@@ -274,7 +311,9 @@
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -3px; left: 0; right: 0;
+      bottom: -3px;
+      left: 0;
+      right: 0;
       height: 1px;
       background: var(--lime);
       transform: scaleX(0);
@@ -282,8 +321,13 @@
       transition: transform 0.3s var(--ease);
     }
 
-    .nav-links a:hover { color: var(--lime); }
-    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-links a:hover {
+      color: var(--lime);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
 
     .nav-cta {
       font-size: 0.72rem;
@@ -295,12 +339,12 @@
       padding: 0.55rem 1.4rem;
       border-radius: 1px;
       transition: background 0.3s, box-shadow 0.3s;
-      box-shadow: 0 0 0 rgba(198,255,0,0);
+      box-shadow: 0 0 0 rgba(198, 255, 0, 0);
     }
 
     .nav-cta:hover {
       background: var(--lime2);
-      box-shadow: 0 0 24px rgba(198,255,0,0.35);
+      box-shadow: 0 0 24px rgba(198, 255, 0, 0.35);
     }
 
     .hamburger {
@@ -312,7 +356,8 @@
 
     .hamburger span {
       display: block;
-      width: 26px; height: 1.5px;
+      width: 26px;
+      height: 1.5px;
       background: var(--white);
       transition: 0.3s;
     }
@@ -343,7 +388,8 @@
     .hero-bg-photo video {
       display: block;
       width: 100%;
-      height: 130%;         /* extra height para o parallax não cortar */
+      height: 130%;
+      /* extra height para o parallax não cortar */
       object-fit: cover;
       object-position: center top;
       filter: grayscale(100%) brightness(0.28) contrast(1.2);
@@ -351,6 +397,7 @@
       transform-origin: center top;
       transition: opacity 0.5s linear;
     }
+
     .hero-video-clone {
       position: absolute;
       top: 0;
@@ -363,7 +410,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 70% 40%, rgba(198,255,0,0.06) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 60% at 70% 40%, rgba(198, 255, 0, 0.06) 0%, transparent 70%);
       z-index: 1;
     }
 
@@ -372,13 +419,11 @@
       position: absolute;
       inset: 0;
       z-index: 2;
-      background: linear-gradient(
-        to bottom,
-        rgba(5,5,5,0.1) 0%,
-        rgba(5,5,5,0.0) 25%,
-        rgba(5,5,5,0.45) 60%,
-        rgba(5,5,5,0.98) 100%
-      );
+      background: linear-gradient(to bottom,
+          rgba(5, 5, 5, 0.1) 0%,
+          rgba(5, 5, 5, 0.0) 25%,
+          rgba(5, 5, 5, 0.45) 60%,
+          rgba(5, 5, 5, 0.98) 100%);
     }
 
     .hero-content {
@@ -425,15 +470,21 @@
       animation: slide-up 1s var(--ease) 2.05s forwards;
       color: transparent;
       -webkit-text-stroke: 2px var(--lime);
-      filter: drop-shadow(0 0 30px rgba(198,255,0,0.3));
+      filter: drop-shadow(0 0 30px rgba(198, 255, 0, 0.3));
     }
 
     @keyframes slide-up {
-      to { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes reveal-up {
-      to { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero-bottom {
@@ -443,7 +494,7 @@
       gap: 2rem;
       margin-top: 3rem;
       padding-top: 2rem;
-      border-top: 1px solid rgba(198,255,0,0.2);
+      border-top: 1px solid rgba(198, 255, 0, 0.2);
       opacity: 0;
       animation: reveal-up 0.9s var(--ease) 2.5s forwards;
     }
@@ -453,7 +504,7 @@
       font-style: italic;
       font-size: clamp(1rem, 2vw, 1.4rem);
       font-weight: 300;
-      color: rgba(242,242,242,0.6);
+      color: rgba(242, 242, 242, 0.6);
       max-width: 500px;
       line-height: 1.5;
     }
@@ -463,7 +514,9 @@
       gap: 3rem;
     }
 
-    .hero-stat { text-align: right; }
+    .hero-stat {
+      text-align: right;
+    }
 
     .hero-stat-num {
       font-family: var(--font-display);
@@ -472,7 +525,7 @@
       color: var(--lime);
       line-height: 1;
       display: block;
-      text-shadow: 0 0 20px rgba(198,255,0,0.5);
+      text-shadow: 0 0 20px rgba(198, 255, 0, 0.5);
     }
 
     .hero-stat-label {
@@ -509,12 +562,21 @@
       height: 50px;
       background: linear-gradient(to bottom, var(--lime), transparent);
       animation: scroll-pulse 2s ease-in-out infinite 3.5s;
-      box-shadow: 0 0 6px rgba(198,255,0,0.5);
+      box-shadow: 0 0 6px rgba(198, 255, 0, 0.5);
     }
 
     @keyframes scroll-pulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(1.1); }
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scaleY(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1.1);
+      }
     }
 
     /* ─── MANIFESTO ──────────────────────────────────────── */
@@ -532,7 +594,9 @@
     #manifesto::after {
       content: '';
       position: absolute;
-      top: 0; left: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
       width: 4px;
       background: var(--lime);
     }
@@ -545,7 +609,7 @@
       font-family: var(--font-serif);
       font-size: 30rem;
       line-height: 1;
-      color: rgba(0,0,0,0.05);
+      color: rgba(0, 0, 0, 0.05);
       pointer-events: none;
       will-change: transform;
       user-select: none;
@@ -567,10 +631,10 @@
     .manifesto-text {
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: clamp(1.8rem, 4.5vw, 5rem);
+      font-size: clamp(1.4rem, 3.8vw, 4.2rem);
       line-height: 1.1;
       letter-spacing: -0.03em;
-      max-width: 900px;
+      max-width: 1100px;
     }
 
     .manifesto-text .word {
@@ -642,7 +706,7 @@
     .about-photo-frame {
       position: absolute;
       inset: -12px;
-      border: 1px solid rgba(198,255,0,0.35);
+      border: 1px solid rgba(198, 255, 0, 0.35);
       border-radius: 2px;
     }
 
@@ -650,8 +714,9 @@
       position: absolute;
       bottom: -20px;
       right: -20px;
-      width: 60%; height: 60%;
-      border: 1px solid rgba(198,255,0,0.15);
+      width: 60%;
+      height: 60%;
+      border: 1px solid rgba(198, 255, 0, 0.15);
       border-radius: 2px;
     }
 
@@ -670,26 +735,32 @@
     /* Lime corner accent */
     .about-photo-corner {
       position: absolute;
-      top: -4px; left: -4px;
-      width: 30px; height: 30px;
+      top: -4px;
+      left: -4px;
+      width: 30px;
+      height: 30px;
       border-top: 3px solid var(--lime);
       border-left: 3px solid var(--lime);
-      box-shadow: 0 0 12px rgba(198,255,0,0.4);
+      box-shadow: 0 0 12px rgba(198, 255, 0, 0.4);
     }
 
     .about-photo-corner2 {
       position: absolute;
-      bottom: -4px; right: -4px;
-      width: 30px; height: 30px;
+      bottom: -4px;
+      right: -4px;
+      width: 30px;
+      height: 30px;
       border-bottom: 3px solid var(--lime);
       border-right: 3px solid var(--lime);
-      box-shadow: 0 0 12px rgba(198,255,0,0.4);
+      box-shadow: 0 0 12px rgba(198, 255, 0, 0.4);
     }
 
-    .about-right { padding-top: 4rem; }
+    .about-right {
+      padding-top: 4rem;
+    }
 
     .about-body p {
-      color: rgba(242,242,242,0.6);
+      color: rgba(242, 242, 242, 0.6);
       font-size: 1.05rem;
       margin-bottom: 1.4rem;
       line-height: 1.75;
@@ -721,7 +792,10 @@
       border-color: var(--border);
     }
 
-    .ab-icon { font-size: 1.3rem; margin-bottom: 0.75rem; }
+    .ab-icon {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
 
     .ab-title {
       font-family: var(--font-display);
@@ -744,7 +818,10 @@
       background: var(--deep);
     }
 
-    .exp-inner { max-width: 1300px; margin: 0 auto; }
+    .exp-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
 
     .exp-header {
       margin-bottom: 4rem;
@@ -752,27 +829,35 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .exp-list { display: flex; flex-direction: column; }
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+    }
 
     .exp-item {
       display: grid;
       grid-template-columns: 220px 1fr;
       gap: 3rem;
       padding: 2.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       position: relative;
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
     }
 
-    .exp-item.visible { opacity: 1; transform: translateY(0); }
+    .exp-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* Lime left stripe on hover */
     .exp-item::before {
       content: '';
       position: absolute;
-      left: -3rem; top: 0; bottom: 0;
+      left: -3rem;
+      top: 0;
+      bottom: 0;
       width: 2px;
       background: transparent;
       transition: background 0.4s, box-shadow 0.4s;
@@ -780,7 +865,7 @@
 
     .exp-item:hover::before {
       background: var(--lime);
-      box-shadow: 0 0 12px rgba(198,255,0,0.5);
+      box-shadow: 0 0 12px rgba(198, 255, 0, 0.5);
     }
 
     .exp-date {
@@ -792,7 +877,10 @@
       margin-bottom: 0.5rem;
     }
 
-    .exp-company { font-size: 0.85rem; color: var(--muted); }
+    .exp-company {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
 
     .exp-role {
       font-family: var(--font-display);
@@ -810,14 +898,19 @@
       max-width: 600px;
     }
 
-    .exp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
 
     .exp-tag {
       font-size: 0.68rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--lime);
-      border: 1px solid rgba(198,255,0,0.25);
+      border: 1px solid rgba(198, 255, 0, 0.25);
       padding: 0.25rem 0.7rem;
       border-radius: 1px;
       background: var(--lime-dim);
@@ -829,9 +922,14 @@
       background: var(--black);
     }
 
-    .skills-inner { max-width: 1300px; margin: 0 auto; }
+    .skills-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
 
-    .skills-header { margin-bottom: 4rem; }
+    .skills-header {
+      margin-bottom: 4rem;
+    }
 
     .skills-grid {
       display: grid;
@@ -852,33 +950,44 @@
     .skill-cell::before {
       content: attr(data-num);
       position: absolute;
-      bottom: -0.2em; right: 0.1em;
+      bottom: -0.2em;
+      right: 0.1em;
       font-family: var(--font-display);
       font-weight: 900;
       font-size: 6rem;
-      color: rgba(198,255,0,0.04);
+      color: rgba(198, 255, 0, 0.04);
       line-height: 1;
       pointer-events: none;
       transition: color 0.3s, font-size 0.3s;
     }
 
-    .skill-cell:hover { background: var(--lime-dim); }
-    .skill-cell:hover::before { color: rgba(198,255,0,0.12); font-size: 7rem; }
+    .skill-cell:hover {
+      background: var(--lime-dim);
+    }
+
+    .skill-cell:hover::before {
+      color: rgba(198, 255, 0, 0.12);
+      font-size: 7rem;
+    }
 
     /* Lime top border on hover */
     .skill-cell::after {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
       background: var(--lime);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.4s var(--ease);
-      box-shadow: 0 0 8px rgba(198,255,0,0.5);
+      box-shadow: 0 0 8px rgba(198, 255, 0, 0.5);
     }
 
-    .skill-cell:hover::after { transform: scaleX(1); }
+    .skill-cell:hover::after {
+      transform: scaleX(1);
+    }
 
     .skill-name {
       font-family: var(--font-display);
@@ -914,7 +1023,11 @@
       margin-bottom: 3.5rem;
     }
 
-    .marquee-wrapper { display: flex; flex-direction: column; gap: 1.5rem; }
+    .marquee-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
     .marquee-row {
       display: flex;
@@ -930,16 +1043,32 @@
       will-change: transform;
     }
 
-    .marquee-track2 { animation: marquee2 22s linear infinite; }
+    .marquee-track2 {
+      animation: marquee2 22s linear infinite;
+    }
+
+    .marquee-track3 {
+      animation: marquee 34s linear infinite;
+    }
 
     @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     @keyframes marquee2 {
-      from { transform: translateX(-50%); }
-      to { transform: translateX(0); }
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
     }
 
     .brand-chip {
@@ -949,7 +1078,7 @@
       padding: 0.85rem 1.75rem;
       border: 1px solid var(--border2);
       border-radius: 1px;
-      background: rgba(255,255,255,0.02);
+      background: rgba(255, 255, 255, 0.02);
       flex-shrink: 0;
       transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
     }
@@ -957,7 +1086,7 @@
     .brand-chip:hover {
       background: var(--lime-dim);
       border-color: var(--border);
-      box-shadow: 0 0 20px rgba(198,255,0,0.08);
+      box-shadow: 0 0 20px rgba(198, 255, 0, 0.08);
     }
 
     .brand-chip-name {
@@ -968,7 +1097,11 @@
       color: var(--white);
     }
 
-    .brand-chip-sub { font-size: 0.68rem; color: var(--muted); margin-top: 0.15rem; }
+    .brand-chip-sub {
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
 
     /* ─── AWARDS ─────────────────────────────────────────── */
     #awards {
@@ -976,7 +1109,10 @@
       background: var(--black);
     }
 
-    .awards-inner { max-width: 1300px; margin: 0 auto; }
+    .awards-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
 
     .awards-header {
       margin-bottom: 4rem;
@@ -989,6 +1125,7 @@
       margin-bottom: 4rem;
       aspect-ratio: 21/9;
     }
+
     .awards-photo video {
       width: 100%;
       height: 100%;
@@ -997,11 +1134,12 @@
       display: block;
       filter: brightness(0.82);
     }
+
     .awards-photo::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, transparent 50%, rgba(5,5,5,0.55) 100%);
+      background: linear-gradient(to bottom, transparent 50%, rgba(5, 5, 5, 0.55) 100%);
       pointer-events: none;
     }
 
@@ -1022,25 +1160,31 @@
       transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), border-color 0.4s, box-shadow 0.4s;
     }
 
-    .award-card.visible { opacity: 1; transform: translateY(0); }
+    .award-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     .award-card:hover {
       border-color: var(--border);
-      box-shadow: 0 0 40px rgba(198,255,0,0.06);
+      box-shadow: 0 0 40px rgba(198, 255, 0, 0.06);
     }
 
     .award-card::before {
       content: '★';
       position: absolute;
-      top: -0.2em; right: 0.1em;
+      top: -0.2em;
+      right: 0.1em;
       font-size: 10rem;
-      color: rgba(198,255,0,0.03);
+      color: rgba(198, 255, 0, 0.03);
       line-height: 1;
       pointer-events: none;
       transition: color 0.4s;
     }
 
-    .award-card:hover::before { color: rgba(198,255,0,0.07); }
+    .award-card:hover::before {
+      color: rgba(198, 255, 0, 0.07);
+    }
 
     .award-year {
       font-size: 0.68rem;
@@ -1068,7 +1212,11 @@
       margin-bottom: 1.5rem;
     }
 
-    .award-prizes { display: flex; flex-direction: column; gap: 0.6rem; }
+    .award-prizes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
 
     .award-prize {
       display: flex;
@@ -1079,7 +1227,8 @@
     }
 
     .prize-medal {
-      width: 22px; height: 22px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       border: 1.5px solid var(--muted);
       display: flex;
@@ -1095,7 +1244,7 @@
       background: linear-gradient(135deg, var(--lime), var(--lime2));
       border-color: transparent;
       color: var(--black);
-      box-shadow: 0 0 10px rgba(198,255,0,0.4);
+      box-shadow: 0 0 10px rgba(198, 255, 0, 0.4);
     }
 
     .prize-medal.silver {
@@ -1110,7 +1259,9 @@
       color: var(--black);
     }
 
-    .award-prize.is-gold { color: var(--white); }
+    .award-prize.is-gold {
+      color: var(--white);
+    }
 
     /* ─── CONTACT ────────────────────────────────────────── */
     #contact {
@@ -1119,7 +1270,10 @@
       text-align: center;
     }
 
-    .contact-inner { max-width: 800px; margin: 0 auto; }
+    .contact-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
     .contact-headline {
       font-family: var(--font-display);
@@ -1134,7 +1288,7 @@
     .contact-headline .outline {
       color: transparent;
       -webkit-text-stroke: 2px var(--lime);
-      filter: drop-shadow(0 0 20px rgba(198,255,0,0.25));
+      filter: drop-shadow(0 0 20px rgba(198, 255, 0, 0.25));
     }
 
     .contact-sub {
@@ -1154,9 +1308,17 @@
       margin: 0 auto;
     }
 
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
 
-    .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
 
     .form-field label {
       font-size: 0.68rem;
@@ -1169,7 +1331,7 @@
     .form-field textarea {
       background: transparent;
       border: none;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       padding: 0.75rem 0;
       color: var(--white);
       font-family: var(--font-body);
@@ -1181,10 +1343,13 @@
     .form-field input:focus,
     .form-field textarea:focus {
       border-color: var(--lime);
-      box-shadow: 0 2px 0 rgba(198,255,0,0.2);
+      box-shadow: 0 2px 0 rgba(198, 255, 0, 0.2);
     }
 
-    .form-field textarea { resize: none; height: 100px; }
+    .form-field textarea {
+      resize: none;
+      height: 100px;
+    }
 
     .btn-submit {
       align-self: center;
@@ -1206,7 +1371,7 @@
       position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s;
-      box-shadow: 0 0 0 rgba(198,255,0,0);
+      box-shadow: 0 0 0 rgba(198, 255, 0, 0);
     }
 
     .btn-submit::before {
@@ -1220,11 +1385,17 @@
     }
 
     .btn-submit:hover {
-      box-shadow: 0 0 30px rgba(198,255,0,0.4);
+      box-shadow: 0 0 30px rgba(198, 255, 0, 0.4);
     }
 
-    .btn-submit:hover::before { transform: scaleX(1); }
-    .btn-submit span { position: relative; z-index: 1; }
+    .btn-submit:hover::before {
+      transform: scaleX(1);
+    }
+
+    .btn-submit span {
+      position: relative;
+      z-index: 1;
+    }
 
     .contact-links {
       display: flex;
@@ -1266,7 +1437,7 @@
       font-size: 1rem;
       letter-spacing: -0.04em;
       color: var(--lime);
-      filter: drop-shadow(0 0 8px rgba(198,255,0,0.4));
+      filter: drop-shadow(0 0 8px rgba(198, 255, 0, 0.4));
     }
 
     .footer-copy {
@@ -1281,7 +1452,10 @@
       background: var(--deep);
     }
 
-    .cases-inner { max-width: 1300px; margin: 0 auto; }
+    .cases-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
 
     .cases-header {
       margin-bottom: 4rem;
@@ -1310,22 +1484,34 @@
       transition: opacity 0.7s var(--ease), transform 0.6s var(--ease), border-color 0.3s;
       scroll-margin-top: 90px;
     }
-    .case-grid-card.visible { opacity: 1; transform: translateY(0); }
-    .case-grid-card:hover { border-color: rgba(198,255,0,0.35); }
+
+    .case-grid-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .case-grid-card:hover {
+      border-color: rgba(198, 255, 0, 0.35);
+    }
 
     /* Linha lime deslizante no topo — igual ao skill-cell */
     .case-grid-card::after {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
       background: var(--lime);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.4s var(--ease);
-      box-shadow: 0 0 8px rgba(198,255,0,0.5);
+      box-shadow: 0 0 8px rgba(198, 255, 0, 0.5);
     }
-    .case-grid-card:hover::after { transform: scaleX(1); }
+
+    .case-grid-card:hover::after {
+      transform: scaleX(1);
+    }
 
     .cgc-top {
       display: flex;
@@ -1333,6 +1519,7 @@
       justify-content: space-between;
       gap: 1rem;
     }
+
     .cgc-year {
       font-family: var(--font-display);
       font-size: 0.6rem;
@@ -1341,6 +1528,7 @@
       text-transform: uppercase;
       color: var(--lime);
     }
+
     .cgc-agency {
       font-family: var(--font-serif);
       font-style: italic;
@@ -1383,6 +1571,7 @@
       line-height: 1.65;
       display: -webkit-box;
       -webkit-line-clamp: 3;
+      line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -1395,6 +1584,7 @@
       border-top: 1px solid var(--border2);
       border-bottom: 1px solid var(--border2);
     }
+
     .cgc-stat-value {
       font-family: var(--font-display);
       font-weight: 900;
@@ -1404,6 +1594,7 @@
       line-height: 1;
       margin-bottom: 0.3rem;
     }
+
     .cgc-stat-label {
       font-size: 0.68rem;
       color: var(--muted);
@@ -1411,7 +1602,11 @@
       line-height: 1.3;
     }
 
-    .cgc-awards { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .cgc-awards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
     .cgc-cta {
       display: inline-flex;
@@ -1425,11 +1620,15 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--lime);
-      border-bottom: 1px solid rgba(198,255,0,0.3);
+      border-bottom: 1px solid rgba(198, 255, 0, 0.3);
       padding-bottom: 0.1rem;
       transition: color 0.3s, border-color 0.3s;
     }
-    .case-grid-card:hover .cgc-cta { color: var(--lime2); border-color: var(--lime2); }
+
+    .case-grid-card:hover .cgc-cta {
+      color: var(--lime2);
+      border-color: var(--lime2);
+    }
 
     .case-award-badge {
       display: flex;
@@ -1438,7 +1637,7 @@
       font-size: 0.72rem;
       letter-spacing: 0.04em;
       padding: 0.45rem 0.9rem;
-      background: rgba(198,255,0,0.05);
+      background: rgba(198, 255, 0, 0.05);
       border: 1px solid var(--border);
       border-radius: 1px;
       color: var(--white);
@@ -1452,12 +1651,19 @@
     }
 
     @media (max-width: 768px) {
-      .cases-grid { grid-template-columns: 1fr; }
-      .cgc-client { font-size: clamp(1.5rem, 5vw, 2rem); }
+      .cases-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cgc-client {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+      }
     }
 
     @media (max-width: 600px) {
-      .case-grid-card { padding: 1.75rem 1.5rem; }
+      .case-grid-card {
+        padding: 1.75rem 1.5rem;
+      }
     }
 
     /* ─── GENERIC REVEAL ─────────────────────────────────── */
@@ -1466,52 +1672,141 @@
       transform: translateY(40px);
       transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .skills-grid { grid-template-columns: repeat(3, 1fr); }
-      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .about-left { position: static; }
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-left {
+        position: static;
+      }
     }
 
     @media (max-width: 768px) {
-      nav { padding: 1.2rem 1.5rem; }
-      nav.scrolled { padding: 0.9rem 1.5rem; }
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
+      nav {
+        padding: 1.2rem 1.5rem;
+      }
 
-      #hero-pin { height: auto; }
-      #hero { position: relative; height: auto; min-height: 100vh; padding: 0 1.5rem 3rem; }
-      .hero-name { font-size: clamp(3rem, 15vw, 6rem); }
-      .hero-bottom { flex-direction: column; align-items: flex-start; }
-      .hero-stats { gap: 1.5rem; }
-      .hero-stat { text-align: left; }
-      .hero-name-line:nth-child(2) { -webkit-text-stroke-width: 1.5px; }
+      nav.scrolled {
+        padding: 0.9rem 1.5rem;
+      }
 
-      #manifesto { padding: 6rem 1.5rem; }
-      #manifesto::before { display: none; }
+      .nav-links {
+        display: none;
+      }
 
-      #about, #experience, #skills, #cases, #awards, #contact { padding: 6rem 1.5rem; }
+      .nav-cta {
+        display: none;
+      }
 
-      .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
-      .exp-item::before { left: -1.5rem; }
+      .hamburger {
+        display: flex;
+      }
 
-      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      #hero-pin {
+        height: auto;
+      }
 
-      .awards-grid { grid-template-columns: 1fr; }
+      #hero {
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        padding: 0 1.5rem 3rem;
+      }
 
-      .form-row { grid-template-columns: 1fr; }
+      .hero-name {
+        font-size: clamp(3rem, 15vw, 6rem);
+      }
 
-      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-      #cursor-dot, #cursor-ring { display: none; }
-      body { cursor: auto; }
-      a { cursor: auto; }
+      .hero-stats {
+        gap: 1.5rem;
+      }
+
+      .hero-stat {
+        text-align: left;
+      }
+
+      .hero-name-line:nth-child(2) {
+        -webkit-text-stroke-width: 1.5px;
+      }
+
+      #manifesto {
+        padding: 6rem 1.5rem;
+      }
+
+      #manifesto::before {
+        display: none;
+      }
+
+      #about,
+      #experience,
+      #skills,
+      #cases,
+      #awards,
+      #contact {
+        padding: 6rem 1.5rem;
+      }
+
+      .exp-item {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .exp-item::before {
+        left: -1.5rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .awards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      #cursor-dot,
+      #cursor-ring {
+        display: none;
+      }
+
+      body {
+        cursor: auto;
+      }
+
+      a {
+        cursor: auto;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div id="progress"></div>
@@ -1548,57 +1843,62 @@
     z-index:999; flex-direction:column; align-items:center; justify-content:center;
     gap:2.5rem; backdrop-filter:blur(20px);
   ">
-    <a href="#about"      onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Sobre</a>
-    <a href="#experience" onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Trajetória</a>
-    <a href="#brands"     onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Marcas</a>
-    <a href="#cases"      onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Cases</a>
-    <a href="#awards"     onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Prêmios</a>
-    <a href="#contact"    onclick="closeMobile()" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;color:var(--lime);">Contato</a>
+    <a href="#about" onclick="closeMobile()"
+      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Sobre</a>
+    <a href="#experience" onclick="closeMobile()"
+      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Trajetória</a>
+    <a href="#brands" onclick="closeMobile()"
+      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Marcas</a>
+    <a href="#cases" onclick="closeMobile()"
+      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Cases</a>
+    <a href="#awards" onclick="closeMobile()"
+      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Prêmios</a>
+    <a href="#contact" onclick="closeMobile()"
+      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;color:var(--lime);">Contato</a>
   </div>
 
   <!-- ══════════════════════════════════════════════════════
        HERO  (pin wrapper = 300vh — hero sticky até vídeo terminar)
   ══════════════════════════════════════════════════════════ -->
   <div id="hero-pin">
-  <section id="hero">
-    <div class="hero-bg-photo">
-      <video id="hero-video" src="videos/perfil-360.mp4"
-             muted playsinline preload="auto"></video>
-    </div>
+    <section id="hero">
+      <div class="hero-bg-photo">
+        <video id="hero-video" src="videos/perfil-360.mp4" muted playsinline preload="auto"></video>
+      </div>
 
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
 
-    <div class="hero-content">
-      <div class="hero-location">Porto Alegre &middot; Florianópolis &middot; São Paulo</div>
-      <h1 class="hero-name">
-        <span class="hero-name-line">THIAGO</span>
-        <span class="hero-name-line">ZENI</span>
-      </h1>
-      <div class="hero-bottom">
-        <p class="hero-tagline">
-          Marketing Digital &middot; Inovação &middot; Inteligência Artificial<br>
-          <em>28 anos construindo marcas que importam.</em>
-        </p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-target="28">0</span>
-            <span class="hero-stat-label">Anos de experiência</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-target="13">0</span>
-            <span class="hero-stat-label">Grandes marcas</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-target="7">0</span>
-            <span class="hero-stat-label">Vezes premiado</span>
+      <div class="hero-content">
+        <div class="hero-location">Porto Alegre &middot; Florianópolis &middot; São Paulo</div>
+        <h1 class="hero-name">
+          <span class="hero-name-line">THIAGO</span>
+          <span class="hero-name-line">ZENI</span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-tagline">
+            Marketing Digital &middot; Inovação &middot; Inteligência Artificial<br>
+            <em>28 anos construindo marcas que importam.</em>
+          </p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-target="28">0</span>
+              <span class="hero-stat-label">Anos de experiência</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-target="40">0</span>
+              <span class="hero-stat-label">Grandes marcas</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-target="10">0</span>
+              <span class="hero-stat-label">Vezes premiado</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </div>
 
   <!-- ══════════════════════════════════════════════════════
@@ -1608,7 +1908,8 @@
     <span class="manifesto-deco" aria-hidden="true">"</span>
     <div class="manifesto-inner">
       <div class="manifesto-label">Manifesto</div>
-      <p class="manifesto-text" id="manifestoText">28 anos construindo o digital. Não como tendência. Como propósito.</p>
+      <p class="manifesto-text" id="manifestoText">Três décadas de marketing digital, uma vida de entusiasmo tecnológico: conectando a inovação que diferencia marcas à revolução que transforma sociedades.
+      </p>
     </div>
   </section>
 
@@ -1688,7 +1989,8 @@
           <div class="section-num">02 — Trajetória</div>
           <h2 class="section-title">Experiência<br>Profissional</h2>
         </div>
-        <p style="max-width:340px; font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.6;">
+        <p
+          style="max-width:340px; font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.6;">
           Uma jornada de quase três décadas em empresas e projetos que moldaram o digital brasileiro.
         </p>
       </div>
@@ -1702,7 +2004,8 @@
           </div>
           <div class="exp-right">
             <div class="exp-role">Consultor de Inovação &amp; IA</div>
-            <p class="exp-desc">Consultoria para empresas de relevância em diversos setores, atuando junto às áreas de inovação na identificação de oportunidades e implementação de soluções de inteligência artificial.</p>
+            <p class="exp-desc">Consultoria para empresas de relevância em diversos setores, atuando junto às áreas de
+              inovação na identificação de oportunidades e implementação de soluções de inteligência artificial.</p>
             <div class="exp-tags">
               <span class="exp-tag">Inteligência Artificial</span>
               <span class="exp-tag">Inovação Corporativa</span>
@@ -1718,7 +2021,8 @@
           </div>
           <div class="exp-right">
             <div class="exp-role">Investidor</div>
-            <p class="exp-desc">Identificação e apoio a iniciativas com potencial de crescimento no ecossistema de tecnologia e marketing digital.</p>
+            <p class="exp-desc">Identificação e apoio a iniciativas com potencial de crescimento no ecossistema de
+              tecnologia e marketing digital.</p>
             <div class="exp-tags">
               <span class="exp-tag">Investimentos</span>
               <span class="exp-tag">Tecnologia</span>
@@ -1733,7 +2037,8 @@
           </div>
           <div class="exp-right">
             <div class="exp-role">CMO / CTO</div>
-            <p class="exp-desc">Liderança dupla de Marketing e Tecnologia, unindo visão estratégica de comunicação à execução tecnológica para escalar a operação da empresa.</p>
+            <p class="exp-desc">Liderança dupla de Marketing e Tecnologia, unindo visão estratégica de comunicação à
+              execução tecnológica para escalar a operação da empresa.</p>
             <div class="exp-tags">
               <span class="exp-tag">CMO</span>
               <span class="exp-tag">CTO</span>
@@ -1749,7 +2054,8 @@
           </div>
           <div class="exp-right">
             <div class="exp-role">Business Development Director</div>
-            <p class="exp-desc">10 anos desenvolvendo novos negócios e consolidando a agência como referência em marketing digital no Brasil. Expansão de carteira e relacionamento com grandes marcas.</p>
+            <p class="exp-desc">10 anos desenvolvendo novos negócios e consolidando a agência como referência em
+              marketing digital no Brasil. Expansão de carteira e relacionamento com grandes marcas.</p>
             <div class="exp-tags">
               <span class="exp-tag">Business Development</span>
               <span class="exp-tag">Marketing Digital</span>
@@ -1764,7 +2070,8 @@
           </div>
           <div class="exp-right">
             <div class="exp-role">Project Manager</div>
-            <p class="exp-desc">Gerência de projetos digitais, coordenando equipes multidisciplinares e garantindo a entrega de campanhas e soluções dentro do prazo e escopo.</p>
+            <p class="exp-desc">Gerência de projetos digitais, coordenando equipes multidisciplinares e garantindo a
+              entrega de campanhas e soluções dentro do prazo e escopo.</p>
             <div class="exp-tags">
               <span class="exp-tag">Gestão de Projetos</span>
               <span class="exp-tag">Liderança de Times</span>
@@ -1779,7 +2086,9 @@
           </div>
           <div class="exp-right">
             <div class="exp-role">Diretor &amp; Vice-presidente</div>
-            <p class="exp-desc">8 anos na Associação Brasileira dos Agentes Digitais — Diretor por 6 anos, Vice-presidente por 2 anos e representação na ABRADi Nacional, promovendo o ecossistema digital brasileiro.</p>
+            <p class="exp-desc">8 anos na Associação Brasileira dos Agentes Digitais — Diretor por 6 anos,
+              Vice-presidente por 2 anos e representação na ABRADi Nacional, promovendo o ecossistema digital
+              brasileiro.</p>
             <div class="exp-tags">
               <span class="exp-tag">Diretoria</span>
               <span class="exp-tag">Vice-presidência</span>
@@ -1861,6 +2170,7 @@
           <div class="brand-chip"><span class="brand-chip-name">Luz da Lua</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Klin</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Móveis Saccaro</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Minelab</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Stihl</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Grupo Harman AL</span><span class="brand-chip-sub">JBL · AKG · Harman Kardon</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Mormaii</span></div>
@@ -1868,6 +2178,7 @@
           <div class="brand-chip"><span class="brand-chip-name">Luz da Lua</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Klin</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Móveis Saccaro</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Minelab</span></div>
         </div>
       </div>
       <div class="marquee-row">
@@ -1875,17 +2186,41 @@
           <div class="brand-chip"><span class="brand-chip-name">Grupo Unicasa</span><span class="brand-chip-sub">Favorita · Dellano · New · Casa Brasileira</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Bontempo</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Florense</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Dakota</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Grupo Dakota</span><span class="brand-chip-sub">Tanara · Campesi · Kolosh</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Coca-Cola Clothing</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Lojas Colombo</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Lojas Lebes</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Grupo Unicasa</span><span class="brand-chip-sub">Favorita · Dellano · New · Casa Brasileira</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Bontempo</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Florense</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Dakota</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Grupo Dakota</span><span class="brand-chip-sub">Tanara · Campesi · Kolosh</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Coca-Cola Clothing</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Lojas Colombo</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Lojas Lebes</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
+        </div>
+      </div>
+      <div class="marquee-row">
+        <div class="marquee-track marquee-track3">
+          <div class="brand-chip"><span class="brand-chip-name">Sicred</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Ford Motorcraft</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Shell</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Hercosul</span><span class="brand-chip-sub">Biofresh · Three Dogs · Three Cats · Primocão e Primogato</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Universidade Feevale</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Cobasi</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Pamplona Alimentos</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Calçados Bibi</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Sicred</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Ford Motorcraft</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Shell</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Hercosul</span><span class="brand-chip-sub">Biofresh · Three Dogs · Three Cats · Primocão e Primogato</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Universidade Feevale</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Cobasi</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Pamplona Alimentos</span></div>
+          <div class="brand-chip"><span class="brand-chip-name">Calçados Bibi</span></div>
         </div>
       </div>
     </div>
@@ -1901,7 +2236,8 @@
           <div class="section-num">05 — Cases</div>
           <h2 class="section-title">Cases de<br>Sucesso</h2>
         </div>
-        <p style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
+        <p
+          style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
           Projetos que geraram impacto real — em audiência, reputação
           e reconhecimento de mercado.
         </p>
@@ -1921,10 +2257,15 @@
             <span class="case-tag">Pesquisa</span>
             <span class="case-tag">Org Design</span>
           </div>
-          <p class="cgc-desc">Consultoria estratégica para uma das principais marcas brasileiras de móveis planejados premium, com foco em mapear oportunidades de IA, modernizar a estrutura de marketing e construir um roteiro de inovação fundamentado em dados.</p>
-          <p style="font-size:0.72rem; letter-spacing:0.06em; color:var(--muted); padding:0.6rem 1rem; border-left:2px solid var(--border); line-height:1.6;">⚠ Por acordo de confidencialidade (NDA), métricas e resultados são de divulgação restrita.</p>
+          <p class="cgc-desc">Consultoria estratégica para uma das principais marcas brasileiras de móveis planejados
+            premium, com foco em mapear oportunidades de IA, modernizar a estrutura de marketing e construir um roteiro
+            de inovação fundamentado em dados.</p>
+          <p
+            style="font-size:0.72rem; letter-spacing:0.06em; color:var(--muted); padding:0.6rem 1rem; border-left:2px solid var(--border); line-height:1.6;">
+            ⚠ Por acordo de confidencialidade (NDA), métricas e resultados são de divulgação restrita.</p>
           <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Diagnóstico de presença digital cross-channel</div>
+            <div class="case-award-badge"><span class="medal">◈</span> Diagnóstico de presença digital cross-channel
+            </div>
             <div class="case-award-badge"><span class="medal">◈</span> Roteiro de adoção de IA por departamento</div>
             <div class="case-award-badge"><span class="medal">◈</span> Reestruturação organizacional do marketing</div>
           </div>
@@ -1944,16 +2285,29 @@
             <span class="case-tag">Marketing Digital</span>
             <span class="case-tag">Multiplataforma</span>
           </div>
-          <p class="cgc-desc">Como sócio idealizador, estrategista de marketing digital e arquiteto de tecnologia, ajudei a construir o maior programa ao vivo independente do YouTube Brasil — 140 mil espectadores simultâneos no pico, 500 mil inscritos em menos de dois meses.</p>
+          <p class="cgc-desc">Como sócio idealizador, estrategista de marketing digital e arquiteto de tecnologia,
+            ajudei a construir o maior programa ao vivo independente do YouTube Brasil — 140 mil espectadores
+            simultâneos no pico, 500 mil inscritos em menos de dois meses.</p>
           <div class="cgc-stats">
-            <div><div class="cgc-stat-value">140K</div><div class="cgc-stat-label">espectadores simultâneos (pico)</div></div>
-            <div><div class="cgc-stat-value">~1M</div><div class="cgc-stat-label">inscritos no YouTube</div></div>
-            <div><div class="cgc-stat-value">9+</div><div class="cgc-stat-label">plataformas simultâneas</div></div>
+            <div>
+              <div class="cgc-stat-value">140K</div>
+              <div class="cgc-stat-label">espectadores simultâneos (pico)</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">~1M</div>
+              <div class="cgc-stat-label">inscritos no YouTube</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">9+</div>
+              <div class="cgc-stat-label">plataformas simultâneas</div>
+            </div>
           </div>
           <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Maior programa ao vivo independente do YouTube Brasil</div>
+            <div class="case-award-badge"><span class="medal">◈</span> Maior programa ao vivo independente do YouTube
+              Brasil</div>
             <div class="case-award-badge"><span class="medal">◈</span> 0 → 500K inscritos em menos de 2 meses</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Ecossistema de 9+ plataformas com app próprio iOS/Android</div>
+            <div class="case-award-badge"><span class="medal">◈</span> Ecossistema de 9+ plataformas com app próprio
+              iOS/Android</div>
           </div>
           <span class="cgc-cta">Ver case completo →</span>
         </a>
@@ -1971,16 +2325,30 @@
             <span class="case-tag">Branded Content</span>
             <span class="case-tag">Segmentação</span>
           </div>
-          <p class="cgc-desc">O desafio era lançar um som portátil para veículos de duas rodas num mercado saturado. A solução foi uma arquitetura de conteúdo multiperfilada — múltiplos vídeos nativos no YouTube, cada um criado para uma persona específica.</p>
+          <p class="cgc-desc">O desafio era lançar um som portátil para veículos de duas rodas num mercado saturado. A
+            solução foi uma arquitetura de conteúdo multiperfilada — múltiplos vídeos nativos no YouTube, cada um criado
+            para uma persona específica.</p>
           <div class="cgc-stats">
-            <div><div class="cgc-stat-value">4</div><div class="cgc-stat-label">personas segmentadas</div></div>
-            <div><div class="cgc-stat-value">Esgotado</div><div class="cgc-stat-label">estoque no 1º ciclo de pedidos</div></div>
-            <div><div class="cgc-stat-value">↑</div><div class="cgc-stat-label">aumento de produção solicitado</div></div>
+            <div>
+              <div class="cgc-stat-value">4</div>
+              <div class="cgc-stat-label">personas segmentadas</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">Esgotado</div>
+              <div class="cgc-stat-label">estoque no 1º ciclo de pedidos</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">↑</div>
+              <div class="cgc-stat-label">aumento de produção solicitado</div>
+            </div>
           </div>
           <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Conteúdo nativo por persona — ciclistas, entusiastas urbanos e delivery</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Multiperfilamento de targets via algoritmos YouTube</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Estoque esgotado e produção ampliada no primeiro ciclo</div>
+            <div class="case-award-badge"><span class="medal">◈</span> Conteúdo nativo por persona — ciclistas,
+              entusiastas urbanos e delivery</div>
+            <div class="case-award-badge"><span class="medal">◈</span> Multiperfilamento de targets via algoritmos
+              YouTube</div>
+            <div class="case-award-badge"><span class="medal">◈</span> Estoque esgotado e produção ampliada no primeiro
+              ciclo</div>
           </div>
           <span class="cgc-cta">Ver case completo →</span>
         </a>
@@ -1998,11 +2366,22 @@
             <span class="case-tag">Branding</span>
             <span class="case-tag">Marketing Digital</span>
           </div>
-          <p class="cgc-desc">Com o isolamento social impulsionando o interesse por jardinagem, identifiquei para a STIHL uma oportunidade além da venda de máquinas: ocupar o papel de educadora. Nasceu o Pró-Jardim — a primeira plataforma de capacitação 100% online e gratuita do setor.</p>
+          <p class="cgc-desc">Com o isolamento social impulsionando o interesse por jardinagem, identifiquei para a
+            STIHL uma oportunidade além da venda de máquinas: ocupar o papel de educadora. Nasceu o Pró-Jardim — a
+            primeira plataforma de capacitação 100% online e gratuita do setor.</p>
           <div class="cgc-stats">
-            <div><div class="cgc-stat-value">4</div><div class="cgc-stat-label">módulos de capacitação</div></div>
-            <div><div class="cgc-stat-value">#1</div><div class="cgc-stat-label">plataforma do setor — inédita no Brasil</div></div>
-            <div><div class="cgc-stat-value">3×</div><div class="cgc-stat-label">Ouro ADVB-RS 2021</div></div>
+            <div>
+              <div class="cgc-stat-value">4</div>
+              <div class="cgc-stat-label">módulos de capacitação</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">#1</div>
+              <div class="cgc-stat-label">plataforma do setor — inédita no Brasil</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">3×</div>
+              <div class="cgc-stat-label">Ouro ADVB-RS 2021</div>
+            </div>
           </div>
           <div class="cgc-awards">
             <div class="case-award-badge"><span class="medal">Au</span> Ouro — Branding · ADVB-RS 2021</div>
@@ -2026,17 +2405,29 @@
             <span class="case-tag">Inbound</span>
             <span class="case-tag">YouTube</span>
           </div>
-          <p class="cgc-desc">Webserie de branded content que transformou um quintal comum em Holambra (SP) em um jardim dos sonhos em 50 dias corridos — 42 episódios gravados e 8 lives ao vivo, com distribuição transmídia entre YouTube, Facebook, Instagram e TV por assinatura.</p>
+          <p class="cgc-desc">Webserie de branded content que transformou um quintal comum em Holambra (SP) em um jardim
+            dos sonhos em 50 dias corridos — 42 episódios gravados e 8 lives ao vivo, com distribuição transmídia entre
+            YouTube, Facebook, Instagram e TV por assinatura.</p>
           <div class="cgc-stats">
-            <div><div class="cgc-stat-value">+6M</div><div class="cgc-stat-label">visualizações nas plataformas</div></div>
-            <div><div class="cgc-stat-value">50</div><div class="cgc-stat-label">dias de conteúdo contínuo</div></div>
-            <div><div class="cgc-stat-value">+46M</div><div class="cgc-stat-label">impactos de mídia</div></div>
+            <div>
+              <div class="cgc-stat-value">+6M</div>
+              <div class="cgc-stat-label">visualizações nas plataformas</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">50</div>
+              <div class="cgc-stat-label">dias de conteúdo contínuo</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">+46M</div>
+              <div class="cgc-stat-label">impactos de mídia</div>
+            </div>
           </div>
           <div class="cgc-awards">
             <div class="case-award-badge"><span class="medal">Au</span> Ouro — Colunistas Sul · Não Ficção Online</div>
             <div class="case-award-badge"><span class="medal">Ag</span> Prata — Colunistas Sul · Branded Content</div>
             <div class="case-award-badge"><span class="medal">Au</span> Top de Marketing ADVB-RS 2018 · Ouro</div>
-            <div class="case-award-badge"><span class="medal">Au</span> Top de Marketing ADVB-RS 2018 · Estratégias Digitais</div>
+            <div class="case-award-badge"><span class="medal">Au</span> Top de Marketing ADVB-RS 2018 · Estratégias
+              Digitais</div>
             <div class="case-award-badge"><span class="medal">Au</span> Top de Marketing ADVB-RS 2018 · Indústria</div>
           </div>
           <span class="cgc-cta">Ver case completo →</span>
@@ -2055,16 +2446,28 @@
             <span class="case-tag">Estratégia Digital</span>
             <span class="case-tag">Integração</span>
           </div>
-          <p class="cgc-desc">Em 2017, quando o e-commerce brasileiro ainda operava com estoques isolados das redes físicas, idealizei para a Mormaii uma arquitetura de negócios disruptiva: transformar o e-commerce no maior aliado do franqueado — e não em seu concorrente.</p>
+          <p class="cgc-desc">Em 2017, quando o e-commerce brasileiro ainda operava com estoques isolados das redes
+            físicas, idealizei para a Mormaii uma arquitetura de negócios disruptiva: transformar o e-commerce no maior
+            aliado do franqueado — e não em seu concorrente.</p>
           <div class="cgc-stats">
-            <div><div class="cgc-stat-value">~35%</div><div class="cgc-stat-label">do faturamento via digital</div></div>
-            <div><div class="cgc-stat-value">+8</div><div class="cgc-stat-label">anos de legado ativo</div></div>
-            <div><div class="cgc-stat-value">#1</div><div class="cgc-stat-label">benchmark omnichannel no Brasil</div></div>
+            <div>
+              <div class="cgc-stat-value">~35%</div>
+              <div class="cgc-stat-label">do faturamento via digital</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">+8</div>
+              <div class="cgc-stat-label">anos de legado ativo</div>
+            </div>
+            <div>
+              <div class="cgc-stat-value">#1</div>
+              <div class="cgc-stat-label">benchmark omnichannel no Brasil</div>
+            </div>
           </div>
           <div class="cgc-awards">
             <div class="case-award-badge"><span class="medal">◈</span> Ship-from-store pioneiro no Brasil</div>
             <div class="case-award-badge"><span class="medal">◈</span> Integração ERP + e-commerce em tempo real</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Modelo replicado por toda a rede de franquias</div>
+            <div class="case-award-badge"><span class="medal">◈</span> Modelo replicado por toda a rede de franquias
+            </div>
           </div>
           <span class="cgc-cta">Ver case completo →</span>
         </a>
@@ -2083,14 +2486,14 @@
           <div class="section-num">06 — Reconhecimento</div>
           <h2 class="section-title">Prêmios &amp;<br>Premiações</h2>
         </div>
-        <p style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
+        <p
+          style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
           Projetos reconhecidos pelos principais prêmios do mercado de comunicação
           e marketing digital do Brasil.
         </p>
       </div>
       <div class="awards-photo reveal">
-        <video id="awards-video" src="videos/premios-cinematic.mp4"
-               muted playsinline preload="auto"></video>
+        <video id="awards-video" src="videos/premios-cinematic.mp4" muted playsinline preload="auto"></video>
       </div>
       <div class="awards-grid">
         <div class="award-card">
@@ -2098,11 +2501,21 @@
           <div class="award-event">Top de Marketing ADVB-RS</div>
           <div class="award-title">O ano mais premiado</div>
           <div class="award-prizes">
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Ouro da Noite</div>
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Agência do Ano</div>
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Ouro — Categoria 1</div>
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Ouro — Categoria 2</div>
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Ouro — Categoria 3</div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Ouro da Noite
+            </div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Agência do Ano
+            </div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Ouro — Categoria 1
+            </div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Ouro — Categoria 2
+            </div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Ouro — Categoria 3
+            </div>
           </div>
         </div>
         <div class="award-card">
@@ -2110,9 +2523,15 @@
           <div class="award-event">Top de Marketing ADVB-RS</div>
           <div class="award-title">Duplo Ouro</div>
           <div class="award-prizes">
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Ouro da Noite</div>
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Ouro — Categoria 1</div>
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Ouro — Categoria 2</div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Ouro da Noite
+            </div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Ouro — Categoria 1
+            </div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Ouro — Categoria 2
+            </div>
           </div>
         </div>
         <div class="award-card">
@@ -2120,9 +2539,15 @@
           <div class="award-event">Prêmio Colunistas-RS</div>
           <div class="award-title">Três categorias premiadas</div>
           <div class="award-prizes">
-            <div class="award-prize is-gold"><div class="prize-medal silver">Ag</div>Prata</div>
-            <div class="award-prize"><div class="prize-medal bronze">Br</div>Bronze</div>
-            <div class="award-prize"><div class="prize-medal">★</div>Finalista</div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal silver">Ag</div>Prata
+            </div>
+            <div class="award-prize">
+              <div class="prize-medal bronze">Br</div>Bronze
+            </div>
+            <div class="award-prize">
+              <div class="prize-medal">★</div>Finalista
+            </div>
           </div>
         </div>
         <div class="award-card">
@@ -2130,7 +2555,9 @@
           <div class="award-event">Top de Mídia RS</div>
           <div class="award-title">Excelência em Mídia</div>
           <div class="award-prizes">
-            <div class="award-prize is-gold"><div class="prize-medal gold">Au</div>Projeto Premiado</div>
+            <div class="award-prize is-gold">
+              <div class="prize-medal gold">Au</div>Projeto Premiado
+            </div>
           </div>
         </div>
       </div>
@@ -2205,21 +2632,21 @@
     }, { passive: true });
 
     // ── Custom Cursor ──────────────────────────────────────
-    const dot  = document.getElementById('cursor-dot');
+    const dot = document.getElementById('cursor-dot');
     const ring = document.getElementById('cursor-ring');
     let mx = 0, my = 0, rx = 0, ry = 0;
 
     document.addEventListener('mousemove', e => {
       mx = e.clientX; my = e.clientY;
       dot.style.left = mx + 'px';
-      dot.style.top  = my + 'px';
+      dot.style.top = my + 'px';
     });
 
     (function animRing() {
       rx += (mx - rx) * 0.12;
       ry += (my - ry) * 0.12;
       ring.style.left = rx + 'px';
-      ring.style.top  = ry + 'px';
+      ring.style.top = ry + 'px';
       requestAnimationFrame(animRing);
     })();
 
@@ -2238,7 +2665,7 @@
     }, { passive: true });
 
     // ── Mobile menu ────────────────────────────────────────
-    const hamburger  = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     let menuOpen = false;
 
@@ -2288,17 +2715,31 @@
 
     // ── Manifesto word reveal ──────────────────────────────
     const manifestoRaw = [
-      { text: '28 anos',      cls: '' },
-      { text: 'construindo',  cls: '' },
-      { text: 'o digital.',   cls: '' },
-      { text: 'Não',          cls: '' },
-      { text: 'como',         cls: '' },
-      { text: 'tendência.',   cls: 'italic' },
-      { text: 'Como',         cls: '' },
-      { text: 'propósito.',   cls: 'accent' },
+      { text: 'Três', cls: '' },
+      { text: 'décadas', cls: '' },
+      { text: 'de', cls: '' },
+      { text: 'marketing', cls: '' },
+      { text: 'digital,', cls: '' },
+      { text: 'uma', cls: '' },
+      { text: 'vida', cls: '' },
+      { text: 'de', cls: '' },
+      { text: 'entusiasmo', cls: '' },
+      { text: 'tecnológico:', cls: '' },
+      { text: 'conectando', cls: '' },
+      { text: 'a', cls: '' },
+      { text: 'inovação', cls: 'italic' },
+      { text: 'que', cls: '' },
+      { text: 'diferencia', cls: '' },
+      { text: 'marcas', cls: 'accent' },
+      { text: 'à', cls: '' },
+      { text: 'revolução', cls: '' },
+      { text: 'que', cls: '' },
+      { text: 'transforma', cls: '' },
+      { text: 'sociedades.', cls: '' }
     ];
 
     const manifestoEl = document.getElementById('manifestoText');
+    manifestoEl.innerHTML = '';
     manifestoRaw.forEach((w, i) => {
       const span = document.createElement('span');
       span.className = 'word' + (w.cls ? ' ' + w.cls : '');
@@ -2319,13 +2760,13 @@
     manifestoObs.observe(manifestoEl);
 
     // ── Contact form ───────────────────────────────────────
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      const name    = document.getElementById('name').value;
-      const email   = document.getElementById('email').value;
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
       const message = document.getElementById('message').value;
       const subject = encodeURIComponent('Contato via site — ' + name);
-      const body    = encodeURIComponent('Nome: ' + name + '\nE-mail: ' + email + '\n\n' + message);
+      const body = encodeURIComponent('Nome: ' + name + '\nE-mail: ' + email + '\n\n' + message);
       window.location.href = 'mailto:thiagoazeni@gmail.com?subject=' + subject + '&body=' + body;
       const btn = this.querySelector('.btn-submit span');
       btn.textContent = 'Abrindo seu e-mail…';
@@ -2360,7 +2801,7 @@
           if (xfading) return;
           xfading = true;
           to.currentTime = 0;
-          to.play().catch(() => {});
+          to.play().catch(() => { });
           to.style.opacity = '1';
           from.style.opacity = '0';
           setTimeout(() => {
@@ -2379,14 +2820,14 @@
 
         heroVideo.addEventListener('timeupdate', onHeroTimeUpdate);
         clone.addEventListener('timeupdate', onHeroTimeUpdate);
-        heroVideo.play().catch(() => {});
+        heroVideo.play().catch(() => { });
       }
 
       // Awards: autoplay+loop simples
       if (awardsVideo) {
         awardsVideo.setAttribute('autoplay', '');
         awardsVideo.setAttribute('loop', '');
-        awardsVideo.play().catch(() => {});
+        awardsVideo.play().catch(() => { });
       }
     } else {
       if (heroVideo) {
@@ -2398,12 +2839,12 @@
     }
 
     if (!prefersReduced && !isMobile) {
-      const heroBgVideo   = heroVideo;
-      const heroContent   = document.querySelector('.hero-content');
-      const heroScroll    = document.querySelector('.hero-scroll');
+      const heroBgVideo = heroVideo;
+      const heroContent = document.querySelector('.hero-content');
+      const heroScroll = document.querySelector('.hero-scroll');
       const manifestoDeco = document.querySelector('.manifesto-deco');
-      const aboutPhoto    = document.querySelector('.about-photo-wrap');
-      const awVid         = awardsVideo;
+      const aboutPhoto = document.querySelector('.about-photo-wrap');
+      const awVid = awardsVideo;
 
       // Guarda os offsets de cada seção para cálculo local
       function getSectionOffset(el) {
@@ -2463,10 +2904,10 @@
         // ⑥ Awards video — scrubbing baseado na passagem do elemento pela viewport
         if (awVid && awVid.readyState >= 2 && awVid.duration) {
           const elTop = awVid.closest('.awards-photo').offsetTop;
-          const elH   = awVid.closest('.awards-photo').offsetHeight;
+          const elH = awVid.closest('.awards-photo').offsetHeight;
           // 0 = elemento entra pela base da viewport; 1 = sai pelo topo
-          const start    = elTop - vh;
-          const end      = elTop + elH;
+          const start = elTop - vh;
+          const end = elTop + elH;
           const progress = Math.max(0, Math.min(1, (sy - start) / (end - start)));
           awVid.currentTime = progress * Math.min(awVid.duration, 6);
         }
@@ -2499,4 +2940,5 @@
     });
   </script>
 </body>
+
 </html>
