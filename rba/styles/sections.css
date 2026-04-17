@@ -784,7 +784,7 @@
   grid-template-columns: auto 1fr;
   gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
-  padding: clamp(3.5rem, 7vw, 5.5rem) calc((100vw - var(--content-max)) / 2 + var(--gutter));
+  padding: clamp(3.5rem, 7vw, 5.5rem) max(var(--gutter), calc((100vw - var(--content-max)) / 2 + var(--gutter)));
   min-height: 430px;
   background: var(--color-lilac);
   border-radius: 0;
