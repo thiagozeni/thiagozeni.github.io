@@ -450,6 +450,9 @@
 .division[data-division="360"] { --dc: var(--color-navy-soft); }
 .division[data-division="bra"] { --dc: var(--color-orange); }
 .division[data-division="mix"] { --dc: var(--color-lilac); }
+.division[data-division="mixdesign"] { --dc: var(--color-orange-warm); }
+.division[data-division="visa"] { --dc: var(--color-navy-soft); }
+.division[data-division="ia"] { --dc: var(--color-orange); }
 
 .division::before {
   content: "";
@@ -753,6 +756,24 @@
   will-change: transform;
 }
 .client:hover img { opacity: 1; transform: scale(1.05); }
+
+/* Wordmarks em texto — fallback enquanto os SVGs oficiais não chegam */
+.client--text span {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-variation-settings: "SOFT" 60, "opsz" 96;
+  font-style: italic;
+  font-size: clamp(1.5rem, 1rem + 1vw, 2.1rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-navy-soft);
+  opacity: 0.82;
+  text-align: center;
+  transition: opacity var(--dur) var(--ease-out-quart),
+              transform var(--dur) var(--ease-hand);
+  will-change: transform;
+}
+.client--text:hover span { opacity: 1; transform: scale(1.05); }
 
 @keyframes marqueeClients {
   from { transform: translate3d(0, 0, 0); }
