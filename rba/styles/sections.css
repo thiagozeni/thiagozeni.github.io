@@ -739,11 +739,11 @@
   display: grid;
   place-items: center;
   padding: 1.25rem;
-  background: var(--color-cream);
-  border-right: 1px solid rgba(10, 37, 95, 0.1);
+  background: #ffffff;
+  border-right: 1px solid rgba(10, 37, 95, 0.08);
   transition: background-color var(--dur-fast);
 }
-.client:hover { background: var(--color-cream-warm); }
+.client:hover { background: #f7f5f1; }
 .client img {
   max-width: 100%;
   max-height: 78%;
