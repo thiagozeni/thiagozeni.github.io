@@ -28,3 +28,7 @@ build/
 *.bak
 *.tmp
 *~
+
+# Secrets
+service_account.json
+*.pem
