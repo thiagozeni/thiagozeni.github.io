@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /rba/diagnostico.html
+Disallow: /rba/diagnostico/
 
 Sitemap: https://thiagozeni.com.br/sitemap.xml
