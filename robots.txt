@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /rba/diagnostico.html
 Disallow: /rba/diagnostico/
+Disallow: /rba/gantt.html
 
 Sitemap: https://thiagozeni.com.br/sitemap.xml

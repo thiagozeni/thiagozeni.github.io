@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>Plano de Ação Grupo RBA — Gantt</title>
+<style>
+  :root{
+    --week: 30px;
+    --row-h: 34px;
+    --label-w: 300px;
+    --area-w: 130px;
+    --total-weeks: 33;
+
+    /* Identidade RBA (espelho do deck do diagnóstico) */
+    --color-ink: #0a255f;
+    --color-navy: #001f63;
+    --color-navy-soft: #1a3faa;
+    --color-orange: #f9633b;
+    --color-orange-deep: #d54a26;
+    --color-lilac: #bbb4f0;
+    --color-cream-warm: #fff7ef;
+    --color-line-dark: rgba(10, 37, 95, 0.18);
+    --color-line-soft: rgba(10, 37, 95, 0.08);
+
+    /* Códigos de gestão (mantidos — leitura consagrada) */
+    --onda1: #F4B183;
+    --onda2: #FFD966;
+    --onda3: #A9D08E;
+    --onda4: #9DC3E6;
+
+    --onda1-light: #FCE4D6;
+    --onda2-light: #FFF2CC;
+    --onda3-light: #E2EFDA;
+    --onda4-light: #DDEBF7;
+
+    --urgente: #C00000;
+    --alta: #BF8F00;
+    --media: #548235;
+    --baixa: #305496;
+
+    --ink: var(--color-ink);
+    --muted: #6B6B6B;
+    --grid: #E6E6E6;
+    --bg: var(--color-cream-warm);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px; line-height: 1.45;
+  }
+
+  .wrap { max-width: 1600px; margin: 0 auto; padding: 28px 32px 80px; }
+
+  header.title { border-bottom: 1px solid var(--color-line-dark); padding-bottom: 16px; margin-bottom: 20px; position: relative; }
+  header.title::after {
+    content: ""; position: absolute; left: 0; bottom: -2px;
+    width: 64px; height: 3px; background: var(--color-orange);
+  }
+  header.title .eyebrow { font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--color-navy-soft); font-weight: 700;}
+  header.title h1 { margin: 4px 0 2px; font-size: 24px; font-weight: 700; color: var(--color-navy);}
+  header.title .sub { color: var(--muted); font-size: 13px;}
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center;
+    padding: 12px 16px; background: #FFFFFF; border: 1px solid var(--color-line-dark); border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  .legend .group { display:flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .legend .group strong { font-size: 11px; letter-spacing: .8px; text-transform: uppercase; color: var(--muted); margin-right: 4px;}
+  .chip { display:inline-flex; align-items:center; gap:6px; font-size:12px; }
+  .chip .sw { width: 14px; height: 14px; border-radius: 3px; display:inline-block;}
+  .chip .dot { width: 10px; height: 10px; border-radius: 50%; display:inline-block;}
+  .chip .diamond {
+    width: 10px; height: 10px; display:inline-block;
+    background: var(--color-navy); transform: rotate(45deg);
+  }
+  .chip .cpath { width: 22px; height: 10px; display:inline-block;
+    background: repeating-linear-gradient(45deg, #C00000 0 4px, transparent 4px 8px);
+    border: 1px solid #C00000; border-radius: 2px;
+  }
+
+  .gantt {
+    background: #FFFFFF; border: 1px solid var(--color-line-dark); border-radius: 6px;
+    overflow: auto;
+  }
+
+  /* Header: months and weeks */
+  .gantt-head {
+    display: grid;
+    grid-template-columns: var(--area-w) var(--label-w) calc(var(--week) * var(--total-weeks));
+    position: sticky; top: 0; z-index: 5; background: #FFFFFF;
+    border-bottom: 2px solid var(--color-line-dark);
+    padding-top: 36px;  /* faixa reservada para os rótulos de reuniões presenciais (R2-R8) */
+  }
+  .gantt-head .corner { padding: 8px 10px; font-size:11px; letter-spacing:.6px; text-transform: uppercase; color: var(--muted); border-right: 1px solid var(--grid);}
+  .gantt-head .corner.area { background: #F4F4F1; }
+  .gantt-head .corner.init { background: #F4F4F1; }
+
+  .timeline-head { position: relative; }
+  .months { display: grid; grid-template-columns: repeat(var(--total-weeks), var(--week)); height: 26px;}
+  .month-band {
+    grid-row: 1;
+    background: #F4F4F1; color: #333;
+    font-size: 11px; font-weight: 600; letter-spacing: .6px;
+    display: flex; align-items: center; justify-content: center;
+    border-right: 1px solid var(--color-line-dark); border-bottom: 1px solid var(--color-line-dark);
+  }
+  .weeks { display: grid; grid-template-columns: repeat(var(--total-weeks), var(--week)); height: 22px;}
+  .week-cell {
+    font-size: 9.5px; color: var(--muted);
+    text-align: center; border-right: 1px solid var(--color-line-soft);
+    display:flex; align-items:center; justify-content:center;
+    background: var(--color-cream-warm);
+  }
+  .week-cell.onda1 { background: var(--onda1-light); }
+  .week-cell.onda2 { background: var(--onda2-light); }
+  .week-cell.onda3 { background: var(--onda3-light); }
+  .week-cell.onda4 { background: var(--onda4-light); }
+
+  /* Onda strip */
+  .ondas {
+    display: grid; grid-template-columns: repeat(var(--total-weeks), var(--week)); height: 24px;
+    border-bottom: 1px solid var(--color-line-dark);
+  }
+  .onda-band {
+    display:flex; align-items:center; justify-content:center;
+    font-size: 11px; font-weight: 700; color: #fff;
+    letter-spacing: .6px;
+  }
+  .ob1 { background: var(--onda1); }
+  .ob2 { background: var(--onda2); color: #5A4700;}
+  .ob3 { background: var(--onda3); color: #1E3B0B;}
+  .ob4 { background: var(--onda4); color: #1A365D;}
+
+  /* Body rows */
+  .row {
+    display: grid;
+    grid-template-columns: var(--area-w) var(--label-w) calc(var(--week) * var(--total-weeks));
+    border-bottom: 1px solid var(--color-line-soft);
+    min-height: var(--row-h);
+  }
+  .row:hover { background: #FCFCFA; }
+
+  .area-cell, .init-cell {
+    padding: 8px 10px; display:flex; align-items:center;
+    border-right: 1px solid var(--grid); background: #FDFDFB;
+    font-size: 12.5px;
+  }
+  .area-cell { font-weight: 600; color: #333; font-size: 11.5px;}
+  .area-cell.group { background: #EEECE8; color:#222; text-transform: uppercase; letter-spacing:.7px; font-size: 10.5px;}
+  .init-cell { color: #222; }
+  .init-cell .prio {
+    display:inline-block; font-size: 9px; font-weight: 700;
+    padding: 2px 6px; border-radius: 3px; color: #fff; margin-right: 8px;
+    letter-spacing: .4px;
+  }
+  .prio.urgente { background: var(--urgente); }
+  .prio.alta    { background: var(--alta); }
+  .prio.media   { background: var(--media); }
+  .prio.baixa   { background: var(--baixa); }
+  .prio.prereq  { background: #595959; }
+
+  .timeline {
+    position: relative;
+    background-image:
+      linear-gradient(to right, var(--color-line-soft) 1px, transparent 1px);
+    background-size: var(--week) 100%;
+  }
+  .timeline.onda1-bg { background-color: var(--onda1-light);}
+  .timeline.onda2-bg { background-color: var(--onda2-light);}
+  .timeline.onda3-bg { background-color: var(--onda3-light);}
+  .timeline.onda4-bg { background-color: var(--onda4-light);}
+
+  /* Mixed timeline: layered onda tints using stacked gradients */
+  .timeline {
+    background:
+      linear-gradient(to right,
+        var(--onda1-light) 0, var(--onda1-light) calc(var(--week) * 8),
+        var(--onda2-light) calc(var(--week) * 8), var(--onda2-light) calc(var(--week) * 20),
+        var(--onda3-light) calc(var(--week) * 20), var(--onda3-light) calc(var(--week) * 28),
+        var(--onda4-light) calc(var(--week) * 28), var(--onda4-light) 100%),
+      linear-gradient(to right, var(--color-line-soft) 1px, transparent 1px);
+    background-size: 100% 100%, var(--week) 100%;
+  }
+
+  .bar {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    height: 20px; border-radius: 4px;
+    display:flex; align-items:center; padding: 0 8px;
+    color: #FFFFFF; font-size: 10.5px; font-weight: 600; letter-spacing: .2px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    box-shadow: 0 1px 2px rgba(0,0,0,.12);
+  }
+  .bar.o1 { background: linear-gradient(180deg, #E68A4E 0%, #D97A3E 100%); }
+  .bar.o2 { background: linear-gradient(180deg, #E6B84A 0%, #C9A030 100%); color:#3B2F00;}
+  .bar.o3 { background: linear-gradient(180deg, #7CB659 0%, #5E9B3C 100%); }
+  .bar.o4 { background: linear-gradient(180deg, #5E9DD1 0%, #3C82BA 100%); }
+  .bar.continuo { background: repeating-linear-gradient(45deg, #7A7A7A 0 6px, #919191 6px 12px); }
+  .bar.cpath::after {
+    content: "";
+    position: absolute; inset: 0;
+    border: 2px dashed #C00000;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  .bar small { opacity: .85; font-weight: 400; margin-left: 6px; font-size: 9.5px;}
+
+  /* Milestones */
+  .milestones { position: relative; height: 0; }
+  .milestone-line {
+    position: absolute; top: 0; width: 0; border-left: 2px dashed var(--color-navy);
+    z-index: 2; pointer-events: none;
+  }
+  .milestone-label {
+    position: absolute; transform: translateX(-50%); top: -4px;
+    background: var(--color-navy); color: #fff; font-size: 10px; font-weight: 700;
+    padding: 3px 7px; border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    z-index: 6;
+    border: none; cursor: pointer; white-space: nowrap;
+    transition: background .15s;
+  }
+  .milestone-label:hover { background: var(--color-navy-soft); }
+  .milestone-label:hover::after { border-top-color: var(--color-navy-soft); }
+  .milestone-label::after {
+    content:""; position:absolute; left:50%; transform: translateX(-50%);
+    bottom: -6px; width: 0; height: 0;
+    border-left: 6px solid transparent; border-right: 6px solid transparent;
+    border-top: 6px solid var(--color-navy);
+  }
+
+  .notes {
+    margin-top: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .card {
+    background: #FFFFFF; border: 1px solid var(--color-line-dark); border-radius: 6px;
+    padding: 16px 20px;
+  }
+  .card h3 { margin: 0 0 10px; font-size: 14px; color: var(--color-navy);}
+  .card ul { margin: 0; padding-left: 18px;}
+  .card li { margin: 6px 0; font-size: 12.5px;}
+  .card .cp { color: var(--urgente); font-weight: 700;}
+
+  /* Visitas presenciais — família de marcos distinta dos milestones M */
+  .visit-line {
+    position: absolute; top: 0; width: 0;
+    border-left: 1.5px dashed var(--color-orange);
+    z-index: 2; pointer-events: none;
+    opacity: .6;
+  }
+  .visit-label {
+    position: absolute; transform: translateX(-50%); top: -30px;
+    background: var(--color-orange); color: #fff; font-size: 10px; font-weight: 700;
+    padding: 3px 8px; border-radius: 3px;
+    border: none; cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    z-index: 7; white-space: nowrap;
+    transition: background .15s;
+  }
+  .visit-label::after {
+    content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+    bottom: -6px; width: 0; height: 0;
+    border-left: 6px solid transparent; border-right: 6px solid transparent;
+    border-top: 6px solid var(--color-orange);
+  }
+  .visit-label:hover { background: var(--color-orange-deep); }
+  .visit-label:hover::after { border-top-color: var(--color-orange-deep); }
+
+  .today-line {
+    position: absolute; top: -24px; bottom: 0;
+    width: 0; border-left: 2px solid #000; z-index: 3;
+  }
+  .today-badge {
+    position: absolute; transform: translate(-50%, -100%); top: -8px;
+    background: #000; color: #fff; font-size: 9.5px; font-weight: 700;
+    padding: 2px 6px; border-radius: 3px;
+  }
+
+  footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 11px;}
+
+  /* Info button + popover */
+  .init-cell .title { flex: 1; padding-right: 6px; }
+  .info-btn {
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: rgba(187, 180, 240, 0.22); color: var(--color-navy);
+    font-size: 10.5px; font-weight: 700;
+    font-family: Georgia, serif; font-style: italic;
+    display: inline-flex; align-items: center; justify-content: center;
+    cursor: pointer; border: 1px solid var(--color-lilac);
+    padding: 0; margin-left: auto;
+    transition: background .15s, color .15s, transform .1s;
+    line-height: 1;
+  }
+  .info-btn:hover { background: var(--color-navy); color: #fff; border-color: var(--color-navy); }
+  .info-btn:active { transform: scale(.92); }
+
+  .popover {
+    position: fixed; z-index: 200;
+    width: 380px; max-width: 92vw;
+    background: #FFFFFF; color: var(--color-ink);
+    border: 1px solid var(--color-line-dark); border-radius: 8px;
+    box-shadow: 0 10px 32px rgba(0, 31, 99, 0.18);
+    padding: 14px 16px 16px;
+    font-size: 12.5px; line-height: 1.55;
+  }
+  .popover[hidden] { display: none; }
+  .popover .pop-close {
+    position: absolute; top: 6px; right: 6px;
+    width: 24px; height: 24px;
+    border: none; background: transparent;
+    color: #777; font-size: 20px; line-height: 1;
+    cursor: pointer; border-radius: 4px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .popover .pop-close:hover { background: var(--color-line-soft); color: var(--color-navy); }
+  .popover .pop-title {
+    font-weight: 700; font-size: 13.5px; color: var(--color-navy);
+    padding-right: 28px; margin-bottom: 6px;
+  }
+  .popover .pop-meta {
+    display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center;
+    margin-bottom: 10px;
+    font-size: 11px; color: #555;
+  }
+  .popover .pop-meta .meta-prio {
+    display: inline-block; padding: 2px 7px; border-radius: 3px;
+    color: #fff; font-weight: 700; font-size: 10px; letter-spacing: .3px;
+  }
+  .popover .pop-meta .meta-sep { color: #BBB; }
+  .popover .pop-body { font-size: 12.5px; color: #222; }
+  .popover .pop-arrow {
+    position: absolute; width: 10px; height: 10px;
+    background: #FFFFFF; border: 1px solid var(--color-line-dark);
+    transform: rotate(45deg);
+  }
+  .popover.arrow-left .pop-arrow {
+    left: -6px; top: 18px; border-right: none; border-top: none;
+  }
+  .popover.arrow-right .pop-arrow {
+    right: -6px; top: 18px; border-left: none; border-bottom: none;
+  }
+
+  /* ==========================================================
+     TEMA NOITE — paleta unificada com dossie / concorrentes /
+     mission control RBA (Inter cyan/purple + dark navy).
+     ========================================================== */
+  [data-theme="dark"] {
+    --color-ink: #e2e8f0;
+    --color-navy: #818cf8;
+    --color-navy-soft: #38bdf8;
+    --color-orange: #fb923c;
+    --color-orange-deep: #f97316;
+    --color-lilac: #a5b4fc;
+    --color-cream-warm: #0c0f1a;
+    --color-line-dark: #232845;
+    --color-line-soft: rgba(56, 189, 248, 0.08);
+
+    --ink: var(--color-ink);
+    --muted: #8892b0;
+    --grid: #232845;
+    --bg: var(--color-cream-warm);
+
+    /* tons das ondas como tints muito sutis sobre fundo escuro */
+    --onda1-light: rgba(244, 177, 131, 0.10);
+    --onda2-light: rgba(255, 217, 102, 0.09);
+    --onda3-light: rgba(169, 208, 142, 0.10);
+    --onda4-light: rgba(157, 195, 230, 0.10);
+  }
+
+  [data-theme="dark"] .gantt,
+  [data-theme="dark"] .legend,
+  [data-theme="dark"] .card,
+  [data-theme="dark"] .popover { background: #141829; color: var(--color-ink); }
+
+  [data-theme="dark"] .gantt-head { background: #0e1225; }
+  [data-theme="dark"] .corner.area,
+  [data-theme="dark"] .corner.init { background: #0e1225; color: var(--muted); }
+  [data-theme="dark"] .month-band { background: #1a1f36; color: var(--color-ink); border-right-color: var(--color-line-dark); border-bottom-color: var(--color-line-dark); }
+  [data-theme="dark"] .week-cell { background: #0e1225; color: var(--muted); }
+  [data-theme="dark"] .week-cell.onda1 { background: rgba(244, 177, 131, 0.16); }
+  [data-theme="dark"] .week-cell.onda2 { background: rgba(255, 217, 102, 0.14); }
+  [data-theme="dark"] .week-cell.onda3 { background: rgba(169, 208, 142, 0.16); }
+  [data-theme="dark"] .week-cell.onda4 { background: rgba(157, 195, 230, 0.16); }
+
+  [data-theme="dark"] .area-cell,
+  [data-theme="dark"] .init-cell { background: #0e1225; color: var(--color-ink); border-right-color: var(--color-line-dark); }
+  [data-theme="dark"] .area-cell { color: var(--muted); }
+  [data-theme="dark"] .area-cell.group { background: #1a1f36; color: var(--color-ink); }
+  [data-theme="dark"] .row { border-bottom-color: var(--color-line-dark); }
+  [data-theme="dark"] .row:hover { background: rgba(56, 189, 248, 0.04); }
+
+  [data-theme="dark"] .bar { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); }
+  [data-theme="dark"] .bar.continuo { background: repeating-linear-gradient(45deg, #3a4170 0 6px, #4a5290 6px 12px); color: var(--color-ink); }
+
+  [data-theme="dark"] .info-btn { background: rgba(129, 140, 248, 0.14); color: #a5b4fc; border-color: rgba(129, 140, 248, 0.3); }
+  [data-theme="dark"] .info-btn:hover { background: #818cf8; color: #0c0f1a; border-color: #818cf8; }
+
+  [data-theme="dark"] .popover { color: var(--color-ink); border-color: var(--color-line-dark); box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55); }
+  [data-theme="dark"] .popover .pop-arrow { background: #141829; border-color: var(--color-line-dark); }
+  [data-theme="dark"] .popover .pop-close { color: var(--muted); }
+  [data-theme="dark"] .popover .pop-close:hover { background: #1a1f36; color: var(--color-ink); }
+  [data-theme="dark"] .popover .pop-meta { color: var(--muted); }
+  [data-theme="dark"] .popover .pop-meta .meta-sep { color: #4a5270; }
+  [data-theme="dark"] .popover .pop-body { color: var(--color-ink); }
+
+  [data-theme="dark"] header.title { border-bottom-color: var(--color-line-dark); }
+  [data-theme="dark"] header.title .sub { color: var(--muted); }
+
+  [data-theme="dark"] .card li { color: var(--color-ink); }
+
+  /* Toggle dia/noite */
+  .theme-toggle {
+    position: absolute; top: 0; right: 0;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 31, 99, 0.06); color: var(--color-navy);
+    border: 1px solid var(--color-line-dark);
+    cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 16px; line-height: 1;
+    transition: background .18s, color .18s, transform .12s;
+  }
+  .theme-toggle:hover { background: var(--color-navy); color: #fff; }
+  .theme-toggle:active { transform: scale(.94); }
+  [data-theme="dark"] .theme-toggle {
+    background: rgba(56, 189, 248, 0.08); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);
+  }
+  [data-theme="dark"] .theme-toggle:hover { background: #38bdf8; color: #0c0f1a; }
+
+  @media (max-width: 1400px) {
+    :root { --week: 26px; --label-w: 260px; --area-w: 110px; }
+    body { font-size: 12px; }
+    header.title h1 { font-size: 21px; }
+    .bar { font-size: 9.5px; padding: 0 6px; }
+    .area-cell { font-size: 11px; }
+    .init-cell { font-size: 12px; }
+  }
+
+  @media print {
+    @page { size: A3 landscape; margin: 12mm; }
+    body { background: #fff; }
+    .wrap { max-width: none; padding: 12mm; }
+    .gantt { border: none; overflow: visible; box-shadow: none; }
+    .info-btn, .popover { display: none !important; }
+    header.title, .legend, .notes, .card { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="title">
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema dia/noite" title="Alternar dia/noite">
+      <span class="theme-toggle__icon" aria-hidden="true">☀</span>
+    </button>
+    <div class="eyebrow">Grupo RBA · Consultoria estratégica de IA</div>
+    <h1>Plano de Ação — Gantt de execução</h1>
+    <div class="sub">27 de abril a 15 de dezembro de 2026 · 33 semanas · derivado do Diagnóstico v0.5</div>
+  </header>
+
+  <div class="legend">
+    <div class="group">
+      <strong>Ondas</strong>
+      <span class="chip"><span class="sw" style="background:var(--onda1)"></span>Onda 1 — Mobilização</span>
+      <span class="chip"><span class="sw" style="background:var(--onda2)"></span>Onda 2 — Consolidação</span>
+      <span class="chip"><span class="sw" style="background:var(--onda3)"></span>Onda 3 — Expansão</span>
+      <span class="chip"><span class="sw" style="background:var(--onda4)"></span>Onda 4 — Encerramento</span>
+    </div>
+    <div class="group">
+      <strong>Prioridade</strong>
+      <span class="chip"><span class="dot" style="background:var(--urgente)"></span>Urgente</span>
+      <span class="chip"><span class="dot" style="background:var(--alta)"></span>Alta</span>
+      <span class="chip"><span class="dot" style="background:var(--media)"></span>Média</span>
+      <span class="chip"><span class="dot" style="background:var(--baixa)"></span>Baixa</span>
+      <span class="chip"><span class="dot" style="background:#595959"></span>Pré-requisito</span>
+    </div>
+    <div class="group">
+      <strong>Marcas</strong>
+      <span class="chip"><span class="diamond"></span>Milestone (M)</span>
+      <span class="chip"><span class="sw" style="background:var(--color-orange);border-radius:2px;"></span>Reunião presencial (R)</span>
+      <span class="chip"><span class="cpath"></span>Caminho crítico</span>
+      <span class="chip"><span class="sw" style="background:repeating-linear-gradient(45deg,#7A7A7A 0 4px,#919191 4px 8px);"></span>Contínuo / acretado</span>
+    </div>
+  </div>
+
+  <div class="gantt" id="gantt">
+    <!-- Cabeçalho: meses, semanas, ondas -->
+    <div class="gantt-head">
+      <div class="corner area">Área</div>
+      <div class="corner init">Iniciativa</div>
+      <div class="timeline-head" id="timeline-head"></div>
+    </div>
+
+    <!-- Rows (injected via JS) -->
+    <div id="rows"></div>
+  </div>
+
+  <div class="notes">
+    <div class="card">
+      <h3>Caminho crítico</h3>
+      <ul>
+        <li><span class="cp">Fio 1 · SIM piloto Harman</span> — depende do parecer de procurement Samsung; acionar no dia 1, alternativas Stihl/Via Marte pré-aprovadas.</li>
+        <li><span class="cp">Fio 2 · Double-check de verbas</span> — MVP com 3 regras para não eternizar discussão técnica.</li>
+        <li><span class="cp">Fio 3 · Automação de relatórios</span> — depende de obter amostras reais (Via Marte/Stihl) nos primeiros 10 dias úteis.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Regras de paralelismo e acretação</h3>
+      <ul>
+        <li>Máximo 1 frente pesada por área por onda.</li>
+        <li>Gate de decisão em cada milestone — só avança se o critério de sucesso anterior foi declarado pela equipe.</li>
+        <li>Tiago Mendes atua como evangelizador interno desde a Onda 1; referências internas por área definidas em M1.</li>
+        <li>Qualquer iniciativa que falhe no critério de 30 dias é arquivada formalmente, não estendida.</li>
+        <li><strong>Entregáveis horizontais</strong> (stack mínimo, biblioteca de prompts, trilha de treinamento) acretam ao longo das ondas: toda decisão operacional de ferramenta é imediatamente registrada no artefato correspondente. A Onda 4 consolida e formaliza, não desenha do zero.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    Consultoria Thiago Zeni · versão 1.0 · abril de 2026 · complementa o documento <em>Plano_de_Acao_RBA_v1.0.docx</em>
+  </footer>
+</div>
+
+<div id="popover" class="popover" role="dialog" aria-labelledby="pop-title" hidden>
+  <button class="pop-close" aria-label="Fechar" type="button">&times;</button>
+  <div class="pop-arrow"></div>
+  <div id="pop-title" class="pop-title"></div>
+  <div id="pop-meta" class="pop-meta"></div>
+  <div id="pop-body" class="pop-body"></div>
+</div>
+
+<script>
+/* =========================================================
+ * DADOS
+ * ========================================================= */
+const TOTAL_WEEKS = 33;
+
+// Estrutura de semanas → mês (para header)
+const MONTHS = [
+  { label: "Abril", weeks: 1 },   // w1 (só 27-30)
+  { label: "Maio", weeks: 4 },    // w2-w5
+  { label: "Junho", weeks: 4 },   // w6-w9 (até 28)
+  { label: "Julho", weeks: 4 },   // w10-w13
+  { label: "Agosto", weeks: 5 },  // w14-w18
+  { label: "Setembro", weeks: 4 },// w19-w22
+  { label: "Outubro", weeks: 4 }, // w23-w26
+  { label: "Novembro", weeks: 5 },// w27-w31
+  { label: "Dezembro", weeks: 2 } // w32-w33
+];
+
+// Ondas: faixas de semanas (inclusivo inicio, inclusivo fim)
+const ONDAS = [
+  { id: 1, start: 1,  end: 8,  label: "ONDA 1 · MOBILIZAÇÃO E QUICK WINS",   cls: "ob1", bg: "onda1" },
+  { id: 2, start: 9,  end: 20, label: "ONDA 2 · CONSOLIDAÇÃO ESTRUTURAL",    cls: "ob2", bg: "onda2" },
+  { id: 3, start: 21, end: 28, label: "ONDA 3 · EXPANSÃO E ACELERAÇÃO",      cls: "ob3", bg: "onda3" },
+  { id: 4, start: 29, end: 33, label: "ONDA 4 · ENCERRAMENTO",               cls: "ob4", bg: "onda4" }
+];
+
+// Milestones — posição = fim da semana indicada
+const MILESTONES = [
+  { id: "M1", week: 5, date: "30/05",
+    moment: "Fim da semana 5 — primeiro ciclo de quick wins",
+    content: [
+      "Workshop de letramento em IA realizado (≥ 85% de presença)",
+      "Referências internas de IA anunciadas formalmente por área",
+      "Alertas de renovação de contratos ativos (Google Calendar ou Notion)",
+      "Revisão assistida de 1 edital modelo entregue com checklist replicável",
+      "Procurement Samsung/Harman formalmente acionado"
+    ],
+    decision: "Confirmar piloto SIM e seguir para a Onda 2 sem reescopo." },
+  { id: "M2", week: 8, date: "21/06",
+    moment: "Fim da Onda 1 — encerramento da mobilização",
+    content: [
+      "Double-check de verbas MVP em produção com as 3 regras validadas",
+      "Mapeamento e teste de IAs para PDV 3D concluído (relatório comparativo + peça-teste aprovada)",
+      "Parecer de procurement Samsung/Harman em mãos (aprovado, ou com alternativa definida)",
+      "Pasta estruturada do SIM com brand guides, entregas aprovadas e briefings coletados"
+    ],
+    decision: "Ativar SIM piloto e automação de relatórios na Onda 2." },
+  { id: "M3", week: 15, date: "08/08",
+    moment: "Metade da Onda 2 — gate intermediário",
+    content: [
+      "Template de relatório Sprout com tempo de geração reduzido em ≥ 50%",
+      "SIM com vault estruturado e em uso inicial pela equipe",
+      "Pipeline de prospecção em construção (listas + enriquecimento de dados)",
+      "Agente de monitoramento de mercado em operação semanal"
+    ],
+    decision: "Avaliar desempenho do SIM e acionar (ou não) o Gate 3 da Onda 2 — expansão para a 2ª marca." },
+  { id: "M4", week: 20, date: "13/09",
+    moment: "Fim da Onda 2 — encerramento da consolidação",
+    content: [
+      "SIM com consulta espontânea pela equipe ≥ 1×/semana e ≥ 3 incidentes de desvio de marca evitados",
+      "Relatório mensal de mídia automatizado aprovado pelo cliente em pelo menos 1 ciclo",
+      "Pipeline de prospecção com ≥ 50 leads qualificados e ≥ 10 em aquecimento ativo",
+      "Agente de monitoramento ativo com alertas semanais relevantes"
+    ],
+    decision: "Aprovar desdobramento de peças com IA e expansão do SIM para a 2ª marca." },
+  { id: "M5", week: 33, date: "15/12",
+    moment: "Encerramento da consultoria — apresentação final",
+    content: [
+      "Política de uso aceitável de IA publicada",
+      "Stack mínimo consolidado (uma página por área: ferramenta, licença, classe de dado permitida, responsável interno)",
+      "Relatório Final de Diagnóstico e Recomendações entregue",
+      "Versão executiva (≤ 10 páginas) apresentada a Afonso e Roque",
+      "Plano de continuidade aprovado para 2027"
+    ],
+    decision: "Fechamento formal da consultoria; abertura do bloco de continuidade (Mission Control e Sistema de Inteligência de Consumo)." }
+];
+
+// Visitas presenciais — 3ª semana de cada mês (sexta-feira), maio a novembro.
+// Dezembro coincide com M5 (apresentação final em 15/12).
+const VISITS = [
+  { week: 3 + 5/7,  id: "R2", date: "22/05", month: "Maio",     ondaContext: "Onda 1 — execução (w4)",
+    agenda: [
+      "Levantar acessos ao PUBLI necessários para o double-check de verbas",
+      "Confirmar o andamento do parecer de procurement Samsung/Harman para o SIM",
+      "Coletar exemplos reais de relatórios Sprout e REPORTEI (Via Marte e Stihl)",
+      "Validar com Gabriel a lista inicial de segmentos-alvo para o pipeline de prospecção",
+      "Definir com Clever a ferramenta dos alertas de renovação (Google Cal ou Notion)",
+      "Aprovar roteiro e data firme do workshop de letramento em IA"
+    ]},
+  { week: 7 + 5/7,  id: "R3", date: "19/06", month: "Junho",    ondaContext: "Fechamento Onda 1 · véspera de M2 (w8)",
+    agenda: [
+      "Debrief do double-check MVP com Natali e Diciane (incidentes evitados)",
+      "Apresentação interna do mapeamento de IAs para PDV 3D com Beto e Criação",
+      "Confirmação formal do parecer Samsung/Harman para o piloto do SIM",
+      "Anúncio público das referências internas de IA por área (evangelizadores)",
+      "Alinhamento final de responsáveis, datas e acessos para toda a Onda 2",
+      "Kickoff da coleta de material do SIM com Maristela"
+    ]},
+  { week: 11 + 5/7, id: "R4", date: "17/07", month: "Julho",    ondaContext: "Onda 2 — construção (w12)",
+    agenda: [
+      "Acompanhamento presencial da construção do vault do SIM com Maristela e Carol",
+      "Validação do template de relatório Sprout em ciclo piloto (meta ≥ 50% de redução)",
+      "Aprovação de ferramentas do pipeline de prospecção com Gabriel",
+      "Levantamento de editais e setores-alvo para o agente de monitoramento",
+      "Checkpoint com Carol sobre prompts mestre em formalização",
+      "Definir data e escopo do 1º módulo da trilha contínua de treinamento"
+    ]},
+  { week: 16 + 5/7, id: "R5", date: "21/08", month: "Agosto",   ondaContext: "Pós-M3 · meio Onda 2 (w17)",
+    agenda: [
+      "Avaliação de performance do SIM piloto — evidências de consulta espontânea",
+      "Primeiro ciclo do relatório mensal de mídia com narrativa IA — aprovação do cliente",
+      "Revisão da base de leads e sequências do pipeline de prospecção",
+      "Preparação da decisão de expansão do SIM para 2ª marca em M4",
+      "Planejamento conjunto com Criação para a Onda 3 (desdobramento de peças)",
+      "Levantamento de contratos com renovação no 2º semestre com Clever"
+    ]},
+  { week: 20 + 5/7, id: "R6", date: "18/09", month: "Setembro", ondaContext: "Pós-M4 · kickoff Onda 3 (w21)",
+    agenda: [
+      "Kickoff presencial do desdobramento de peças com IA com Rafael e Samuel",
+      "Ativação formal da 2ª marca do SIM (se autorizada em M4) — escopo e prazos",
+      "Revisão da taxa de conversão do pipeline de prospecção com Gabriel",
+      "Alinhamento com Beto sobre ampliação de escopo comercial",
+      "Definição da biblioteca de prompts por marca — custódia e governança",
+      "Levantamento de ferramentas a registrar formalmente no stack mínimo"
+    ]},
+  { week: 24 + 5/7, id: "R7", date: "16/10", month: "Outubro",  ondaContext: "Meio Onda 3 (w25)",
+    agenda: [
+      "Checkpoint do desdobramento de peças com IA — campanha real em andamento",
+      "Avaliação da biblioteca de prompts em construção (meta ≥ 20 prompts)",
+      "Primeiros leads convertidos em reunião comercial — análise com Gabriel",
+      "Revisão preliminar do stack mínimo consolidado por área",
+      "Feedback dos clientes sobre consistência de marca (efeito SIM)",
+      "Preparação do fechamento da Onda 3"
+    ]},
+  { week: 29 + 5/7, id: "R8", date: "20/11", month: "Novembro", ondaContext: "Kickoff Onda 4 (w30)",
+    agenda: [
+      "Revisão das ferramentas adotadas por área antes da consolidação do stack mínimo",
+      "Levantamento de casos reais a incluir na Política de Uso Aceitável de IA",
+      "Definição do formato da apresentação executiva para a diretoria",
+      "Alinhamento do handoff com os evangelizadores internos (Tiago Mendes + por área)",
+      "Planejamento do conteúdo do Relatório Final de Diagnóstico e Recomendações",
+      "Decisão sobre blocos de segundo momento (Mission Control, CRM Inteligente)"
+    ]}
+];
+
+// Grupos de área com iniciativas
+// bar: { start, end, onda, title, prio, critical, continuo }
+const GROUPS = [
+  { area: "Mídia", items: [
+      { start:1,  end:8,  onda:1, title:"Double-check de verbas — MVP (3 regras)", prio:"urgente", critical:true,
+        desc:"Script determinístico de validação que checa configurações de campanha contra três regras críticas antes do upload ao PUBLI: verba mensal configurada como diária, limite por campanha e bid máximo coerente com histórico. Não é IA generativa — é engenharia de regras. Elimina o risco financeiro documentado na imersão (caso da verba mensal consumida em um único dia)." },
+      { start:11, end:18, onda:2, title:"Automação de relatório de mídia (REPORTEI + narrativa IA)", prio:"alta",
+        desc:"Template único que consolida dados do REPORTEI, Locker Studio e Power BI/Big Carry, aplica visualizações padronizadas e gera narrativa de insights com IA — sempre revisada pelo mídia antes de enviar ao cliente. Substitui o processo manual de 'uma tarde inteira' relatado por Natali e Diciane. Meta: ciclo mensal aprovado com tempo reduzido em ≥ 50%." }
+  ]},
+  { area: "Atendimento", items: [
+      { start:1,  end:8,  onda:1, title:"Preparação do SIM · procurement Harman + coleta de ativos", prio:"prereq", critical:true,
+        desc:"Duas frentes em paralelo. (1) Acionar formalmente com Samsung/Harman o pedido de aprovação para uso de IA externa em dados da conta — bloqueador potencialmente longo (4 a 8 semanas) que precisa ser aberto no dia 1. (2) Consolidar em pasta estruturada todos os ativos: brand guides, últimos 6 meses de entregas aprovadas, briefings e feedbacks de cliente. Sem esse material, o vault do SIM inicia vazio." },
+      { start:9,  end:20, onda:2, title:"SIM piloto Harman — vault Obsidian", prio:"alta", critical:true,
+        desc:"Aposta estratégica central do projeto. Vault em Obsidian organizado por eixos de marca (voz, tom, visual, estratégia, restrições), alimentado continuamente com brand guides e entregas aprovadas. Equipe consulta via Claude ou GPT apontando para o contexto curado. É a formalização sistêmica do que Carol já faz manualmente em Social Media — validação orgânica da necessidade." },
+      { start:9,  end:14, onda:2, title:"Automação do relatório modelo Sprout", prio:"alta", critical:true,
+        desc:"Template padronizado que ingere o export do Sprout Social e entrega o relatório formatado e pronto para apresentação ao cliente. Sucesso medido por redução de ≥ 50% no tempo de geração (hoje 'uma tarde inteira' segundo Maristela) e adoção em ≥ 2 contas." },
+      { start:21, end:26, onda:3, title:"Expansão do SIM — 2ª marca (condicional)", prio:"alta",
+        desc:"Só ativa se o Gate 3 da Onda 2 for cumprido — equipe consultando o vault Harman espontaneamente ao menos uma vez por semana. Candidatas prováveis: Stihl ou Via Marte. Se o piloto não validar, esta janela é realocada para aprofundar o SIM da primeira marca (bot de consulta em Claude Projects, novos eixos, prompts avançados)." },
+      { start:22, end:24, onda:3, title:"Ferramenta de tradução em imagens (teste)", prio:"baixa",
+        desc:"Teste curto de ferramentas com inpainting + OCR para traduzir textos aplicados sobre imagens — dor específica da Maristela nos brand guides da Harman em múltiplos idiomas. Saída binária: adotar uma ferramenta ou arquivar formalmente a demanda." }
+  ]},
+  { area: "Criação / PDV", items: [
+      { start:1,  end:6,  onda:1, title:"Mapeamento de IAs para PDV 3D — piloto Harman", prio:"urgente",
+        desc:"Demanda ativa trazida pelo Beto Noronha: ferramenta que converta sketch → 2D → multi-ângulos → 3D manipulável para peças de PDV. Entregável é um relatório comparativo de ferramentas testadas com recomendação final e uma peça-teste aprovada internamente na conta Harman." },
+      { start:21, end:28, onda:3, title:"Desdobramento de peças com IA (fluxo controlado)", prio:"alta",
+        desc:"Ataque ao gargalo mais citado pela Criação. Entra deliberadamente na Onda 3 para que os prompts de geração possam consumir o contexto do SIM já construído — sem esse insumo, reproduz exatamente o problema diagnosticado ('corrigir o output custou mais que fazer manual'). Meta: redução ≥ 40% no tempo de desdobramento em uma campanha real aprovada pelo cliente." }
+  ]},
+  { area: "Social Media", items: [
+      { start:9,  end:11, onda:2, title:"SEMrush / diagnóstico SEO — contratação e onboarding", prio:"media",
+        desc:"Contratação da ferramenta solicitada por Carol para embasar decisões de pauta em dados de oportunidade, não em intuição. Inclui onboarding de ≥ 2 redatoras para uso autônomo no fluxo semanal de conteúdo." },
+      { start:9,  end:20, onda:2, title:"SIM — co-liderança com Carol (prompts mestre)", prio:"alta",
+        desc:"Carol é co-líder natural do SIM porque já construiu uma versão primitiva com 'prompts mestre' por marca. Esta frente formaliza o processo dela, amplia escopo para além do Social Media e serve de ponte entre a criação de conteúdo diária e o vault estruturado." },
+      { start:21, end:28, onda:3, title:"Biblioteca central de prompts aprovados por marca", prio:"media", continuo:true,
+        desc:"Dentro do vault do SIM, pasta dedicada a prompts que passaram no teste da equipe e do cliente — acessível a redatoras e criadores de qualquer conta. Meta: ≥ 20 prompts aprovados documentados até o fim da Onda 3, publicados progressivamente no canal Discord." }
+  ]},
+  { area: "Comercial / Gestão", items: [
+      { start:9,  end:18, onda:2, title:"Pipeline de prospecção com IA (listas + aquecimento)", prio:"alta",
+        desc:"Construção do pipeline sob demanda do Gabriel Daudt. Inclui geração automática de listas, enriquecimento de dados (cargo, empresa, sinais de compra) e sequências de aquecimento via e-mail/LinkedIn. Não é agente autônomo — é workflow assistido operado pelo Gabriel. Meta ao fim da Onda 2: ≥ 50 leads qualificados e ≥ 10 em sequência ativa." },
+      { start:11, end:16, onda:2, title:"Agente de monitoramento de mercado (licitações)", prio:"media",
+        desc:"Varredura automatizada semanal de portais de licitações, editais públicos e movimentos de concorrentes relevantes para o Grupo RBA. Alerta por e-mail ou Discord com ≥ 3 oportunidades qualificadas por semana para o Gabriel avaliar." },
+      { start:21, end:28, onda:3, title:"Pipeline de prospecção — operação e refinamento", prio:"alta",
+        desc:"Segunda metade do projeto de prospecção, já em operação regular. Foco em refinar taxa de resposta, ajustar sequências e medir conversão em reuniões comerciais. Meta: ≥ 3 leads convertidos em reunião comercial até o fim da Onda 3." }
+  ]},
+  { area: "Financeiro", items: [
+      { start:1,  end:4,  onda:1, title:"Alertas de renovação de contratos (Google Cal/Notion)", prio:"media",
+        desc:"Substitui a agenda física (papel) que o Clever usa hoje para controle de renovações. Implementação simples em Google Calendar ou Notion, com alertas 60/30/15 dias antes do vencimento. Elimina risco de perda de prazo e faturamento — um dos riscos operacionais mais concretos identificados na imersão." },
+      { start:3,  end:6,  onda:1, title:"Revisão assistida de 1 edital modelo + checklist", prio:"media",
+        desc:"Usar Claude ou GPT para fazer leitura crítica de um edital modelo — identificar requisitos, prazos, riscos e cláusulas atípicas. Output é um checklist replicável que passa a ser usado em cada novo edital, reduzindo tempo de leitura técnica em ≥ 50% e evitando que cláusulas importantes passem despercebidas." }
+  ]},
+  { area: "Transversal", items: [
+      { start:2,  end:4,  onda:1, title:"Workshop de letramento em IA (3h, 100% do time)", prio:"media",
+        desc:"Evento único de 3 horas, presença mínima 85% do time. Objetivo triplo: (1) estabelecer linguagem comum sobre IA na agência, (2) apresentar o roadmap completo da consultoria, (3) identificar e anunciar publicamente os evangelizadores internos por área. Co-facilitado com Tiago Mendes, que é o profissional com maior maturidade em IA da casa." },
+      { start:9,  end:28, onda:2, title:"Trilha contínua de treinamento por área", prio:"media", continuo:true,
+        desc:"Módulos práticos entregues ao longo das Ondas 2 e 3, um por área. Formato padrão: workshop de 2h + material de apoio + exercício prático com o fluxo real da área + revisão quinzenal. Biblioteca de prompts publicada progressivamente no canal Discord de IA da agência." },
+      { start:1,  end:33, onda:4, title:"Stack mínimo por perfil — acretado a cada decisão operacional, consolidado na Onda 4", prio:"alta", continuo:true,
+        desc:"Documento vivo que registra imediatamente cada ferramenta adotada formalmente por uma área — não é desenhado no fim da consultoria, é consolidado. Critério: nenhuma iniciativa se encerra sem registro da ferramenta/regra escolhida no stack da área correspondente. A Onda 4 apenas formaliza em documento final de uma página por área (ferramenta, tipo de licença, classe de dado permitida, responsável interno)." },
+      { start:29, end:31, onda:4, title:"Política de uso aceitável de IA", prio:"alta",
+        desc:"Documento de governança de 3 a 6 páginas. Define classificação de dados (público/confidencial do cliente/estratégico da agência), ferramentas autorizadas por classe, fluxo de aprovação de novas ferramentas, obrigações de LGPD, regras de atribuição ao cliente em entregas e regime de consequências por descumprimento. Emparelhada com o stack mínimo — mesmo tema visto por dois ângulos." }
+  ]},
+  { area: "Consultor", items: [
+      { start:30, end:33, onda:4, title:"Relatório Final de Diagnóstico e Recomendações", prio:"alta", critical:true,
+        desc:"Evolução final do Diagnóstico v0.5, com resultados medidos de cada onda, matriz de prioridades atualizada, mapa de oportunidades por fase e recomendações consolidadas. Documento de referência que substitui este Plano de Ação como fonte única ao fim da consultoria." },
+      { start:32, end:33, onda:4, title:"Versão executiva (≤ 10 páginas) · apresentação à diretoria", prio:"alta",
+        desc:"Síntese do Relatório Final em formato executivo para apresentação a Afonso e Roque. Foco em resultados observados, ROI real por iniciativa, aprendizados e decisões que ficam na mesa da diretoria para 2027." },
+      { start:32, end:33, onda:4, title:"Plano de continuidade (Mission Control, CRM Inteligente)", prio:"media",
+        desc:"Cronograma proposto para os blocos explicitamente diferidos como 'segundo momento': Mission Control de Mídia (painel unificado PUBLI + GA + Meta) e CRM Inteligente / Sistema de Inteligência de Consumo por marca. Ambos condicionados à validação do SIM; retomada proposta para o 1º trimestre de 2027." },
+      { start:29, end:33, onda:4, title:"Handoff de referências internas de IA", prio:"media", continuo:true,
+        desc:"Transferência formal de responsabilidade para os evangelizadores internos identificados em M1 — Tiago Mendes como referência transversal, e uma referência por área operacional. Sem esse handoff estruturado, os ganhos operacionais não sobrevivem ao fim da consultoria." }
+  ]}
+];
+
+/* =========================================================
+ * RENDER
+ * ========================================================= */
+
+const tlHead = document.getElementById("timeline-head");
+
+// Meses
+const monthsDiv = document.createElement("div");
+monthsDiv.className = "months";
+monthsDiv.style.gridTemplateColumns = "repeat(" + TOTAL_WEEKS + ", var(--week))";
+let col = 1;
+MONTHS.forEach(m => {
+  const el = document.createElement("div");
+  el.className = "month-band";
+  el.style.gridColumn = `${col} / span ${m.weeks}`;
+  el.textContent = m.label;
+  monthsDiv.appendChild(el);
+  col += m.weeks;
+});
+tlHead.appendChild(monthsDiv);
+
+// Semanas
+const weeksDiv = document.createElement("div");
+weeksDiv.className = "weeks";
+for (let w = 1; w <= TOTAL_WEEKS; w++) {
+  const el = document.createElement("div");
+  el.className = "week-cell";
+  // colorir por onda
+  const onda = ONDAS.find(o => w >= o.start && w <= o.end);
+  if (onda) el.classList.add("onda" + onda.id);
+  el.textContent = "s" + w;
+  weeksDiv.appendChild(el);
+}
+tlHead.appendChild(weeksDiv);
+
+// Faixa de Ondas
+const ondasDiv = document.createElement("div");
+ondasDiv.className = "ondas";
+ondasDiv.style.gridTemplateColumns = "repeat(" + TOTAL_WEEKS + ", var(--week))";
+ONDAS.forEach(o => {
+  const el = document.createElement("div");
+  el.className = "onda-band " + o.cls;
+  el.style.gridColumn = `${o.start} / span ${o.end - o.start + 1}`;
+  el.textContent = o.label;
+  ondasDiv.appendChild(el);
+});
+tlHead.appendChild(ondasDiv);
+
+// Linhas
+const rowsWrap = document.getElementById("rows");
+
+GROUPS.forEach(g => {
+  g.items.forEach((it, idx) => {
+    const row = document.createElement("div");
+    row.className = "row";
+
+    const areaCell = document.createElement("div");
+    areaCell.className = "area-cell";
+    if (idx === 0) {
+      areaCell.classList.add("group");
+      areaCell.textContent = g.area;
+    } else {
+      areaCell.textContent = "";
+    }
+    row.appendChild(areaCell);
+
+    const initCell = document.createElement("div");
+    initCell.className = "init-cell";
+    const prioTag = document.createElement("span");
+    prioTag.className = "prio " + it.prio;
+    prioTag.textContent =
+      it.prio === "urgente" ? "URG" :
+      it.prio === "alta" ? "ALTA" :
+      it.prio === "media" ? "MÉD" :
+      it.prio === "baixa" ? "BAIXA" :
+      it.prio === "prereq" ? "PRÉ" : it.prio.toUpperCase();
+    initCell.appendChild(prioTag);
+
+    const titleSpan = document.createElement("span");
+    titleSpan.className = "title";
+    titleSpan.textContent = it.title;
+    initCell.appendChild(titleSpan);
+
+    const infoBtn = document.createElement("button");
+    infoBtn.className = "info-btn";
+    infoBtn.type = "button";
+    infoBtn.textContent = "i";
+    infoBtn.setAttribute("aria-label", "Mais informações sobre esta iniciativa");
+    infoBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showPopover(infoBtn, it);
+    });
+    initCell.appendChild(infoBtn);
+
+    row.appendChild(initCell);
+
+    const timeline = document.createElement("div");
+    timeline.className = "timeline";
+    timeline.style.position = "relative";
+    timeline.style.minHeight = "var(--row-h)";
+
+    const bar = document.createElement("div");
+    const duration = it.end - it.start + 1;
+    bar.className = "bar o" + it.onda + (it.continuo ? " continuo" : "") + (it.critical ? " cpath" : "");
+    bar.style.left = `calc(var(--week) * ${it.start - 1} + 3px)`;
+    bar.style.width = `calc(var(--week) * ${duration} - 6px)`;
+    bar.textContent = `s${it.start}–s${it.end}`;
+    if (duration >= 4) {
+      const s = document.createElement("small");
+      s.textContent = "(" + duration + "sem)";
+      bar.appendChild(s);
+    }
+    timeline.appendChild(bar);
+
+    row.appendChild(timeline);
+    rowsWrap.appendChild(row);
+  });
+});
+
+/* Milestones — overlay */
+const ms = document.createElement("div");
+ms.className = "milestones";
+ms.style.position = "relative";
+ms.style.pointerEvents = "none";
+
+// Posicionar linhas verticais que atravessam todas as rows usando overlay absoluto no container da timeline (head + rows)
+// Estratégia: adicionar ao timeline-head overlays absolutos começando lá no topo e estendendo via CSS variáveis.
+// Para simplificar, iremos "desenhar" as linhas nos cabeçalhos de timeline e rotular em cima.
+
+// Criar overlay dentro do timeline-head, estendendo pra baixo via altura calculada
+const totalRows = GROUPS.reduce((s, g) => s + g.items.length, 0);
+const overlayHeight = totalRows * 34 + 72; // +head
+
+const overlay = document.createElement("div");
+overlay.style.position = "absolute";
+overlay.style.top = "0";
+overlay.style.left = "0";
+overlay.style.right = "0";
+overlay.style.height = overlayHeight + "px";
+overlay.style.pointerEvents = "none";
+overlay.style.zIndex = "4";
+
+MILESTONES.forEach(m => {
+  const line = document.createElement("div");
+  line.className = "milestone-line";
+  line.style.left = `calc(var(--week) * ${m.week})`;
+  line.style.height = overlayHeight + "px";
+  overlay.appendChild(line);
+
+  const lbl = document.createElement("button");
+  lbl.type = "button";
+  lbl.className = "milestone-label";
+  lbl.style.left = `calc(var(--week) * ${m.week})`;
+  lbl.innerHTML = `${m.id} · ${m.date}`;
+  lbl.title = m.moment + " — clique para detalhes";
+  lbl.style.pointerEvents = "auto";
+  lbl.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showMilestonePopover(lbl, m);
+  });
+  overlay.appendChild(lbl);
+});
+
+// Visitas presenciais (acima dos milestones, em teal)
+VISITS.forEach(v => {
+  const line = document.createElement("div");
+  line.className = "visit-line";
+  line.style.left = `calc(var(--week) * ${v.week})`;
+  line.style.top = "-6px";
+  line.style.height = (overlayHeight + 6) + "px";
+  overlay.appendChild(line);
+
+  const lbl = document.createElement("button");
+  lbl.type = "button";
+  lbl.className = "visit-label";
+  lbl.style.left = `calc(var(--week) * ${v.week})`;
+  lbl.innerHTML = `${v.id} · ${v.date}`;
+  lbl.title = "Reunião presencial · " + v.month + " — clique para ver a agenda";
+  lbl.style.pointerEvents = "auto";
+  lbl.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showVisitPopover(lbl, v);
+  });
+  overlay.appendChild(lbl);
+});
+// Garantir que o overlay permita eventos nos botões apesar do pointerEvents:none geral
+overlay.style.pointerEvents = "none";
+
+
+tlHead.style.position = "relative";
+tlHead.appendChild(overlay);
+
+/* Today line — 24/04 = antes da semana 1, mostra apenas marca se dentro do range */
+const today = new Date("2026-04-24");
+const projectStart = new Date("2026-04-27");
+const diffDays = Math.floor((today - projectStart) / (1000*60*60*24));
+const todayWeek = diffDays / 7; // pode ser negativo
+if (todayWeek >= 0 && todayWeek <= TOTAL_WEEKS) {
+  const todayLine = document.createElement("div");
+  todayLine.className = "today-line";
+  todayLine.style.left = `calc(var(--week) * ${todayWeek})`;
+  todayLine.style.height = overlayHeight + "px";
+  overlay.appendChild(todayLine);
+
+  const badge = document.createElement("div");
+  badge.className = "today-badge";
+  badge.style.left = `calc(var(--week) * ${todayWeek})`;
+  badge.textContent = "HOJE";
+  overlay.appendChild(badge);
+}
+
+/* =========================================================
+ * POPOVER (info button)
+ * ========================================================= */
+const popover   = document.getElementById("popover");
+const popClose  = popover.querySelector(".pop-close");
+const popTitle  = document.getElementById("pop-title");
+const popMeta   = document.getElementById("pop-meta");
+const popBody   = document.getElementById("pop-body");
+
+const ONDA_LABEL = { 1: "Onda 1 · Mobilização", 2: "Onda 2 · Consolidação", 3: "Onda 3 · Expansão", 4: "Onda 4 · Encerramento" };
+const PRIO_LABEL = { urgente:"URGENTE", alta:"ALTA", media:"MÉDIA", baixa:"BAIXA", prereq:"PRÉ-REQUISITO" };
+
+function showPopover(anchor, item){
+  // Content
+  popTitle.textContent = item.title;
+
+  const duration = item.end - item.start + 1;
+  popMeta.innerHTML = "";
+  const prioSpan = document.createElement("span");
+  prioSpan.className = "meta-prio prio " + item.prio;
+  prioSpan.textContent = PRIO_LABEL[item.prio] || item.prio.toUpperCase();
+  popMeta.appendChild(prioSpan);
+
+  const addMeta = (t) => {
+    const s = document.createElement("span");
+    s.textContent = t;
+    popMeta.appendChild(s);
+    const sep = document.createElement("span");
+    sep.className = "meta-sep";
+    sep.textContent = "·";
+    popMeta.appendChild(sep);
+  };
+  addMeta(ONDA_LABEL[item.onda]);
+  addMeta(`Semanas ${item.start}–${item.end} (${duration} sem)`);
+  if (item.critical) addMeta("Caminho crítico");
+  if (item.continuo) addMeta("Contínuo / acretado");
+  // remove trailing separator
+  if (popMeta.lastChild && popMeta.lastChild.classList && popMeta.lastChild.classList.contains("meta-sep")) {
+    popMeta.removeChild(popMeta.lastChild);
+  }
+
+  popBody.textContent = item.desc || "Sem descrição adicional registrada para esta iniciativa.";
+
+  // Position
+  popover.hidden = false;
+  popover.classList.remove("arrow-left", "arrow-right");
+  // Let it render to measure
+  popover.style.left = "-9999px";
+  popover.style.top = "0px";
+
+  const r = anchor.getBoundingClientRect();
+  const pw = popover.offsetWidth;
+  const ph = popover.offsetHeight;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const gap = 12;
+
+  // Prefer right of button; fall back to left
+  let left, placeLeft = false;
+  if (r.right + gap + pw <= vw - 8) {
+    left = r.right + gap;
+  } else if (r.left - gap - pw >= 8) {
+    left = r.left - gap - pw;
+    placeLeft = true;
+  } else {
+    left = Math.max(8, Math.min(vw - pw - 8, r.right + gap));
+  }
+  popover.classList.add(placeLeft ? "arrow-right" : "arrow-left");
+
+  // Vertically center on button; clamp within viewport
+  let top = r.top + r.height / 2 - 24; // arrow at ~18px
+  if (top + ph > vh - 8) top = vh - ph - 8;
+  if (top < 8) top = 8;
+
+  popover.style.left = left + "px";
+  popover.style.top  = top + "px";
+
+  popover.dataset.open = "true";
+  popClose.focus();
+}
+
+function showMilestonePopover(anchor, m){
+  popTitle.textContent = "Milestone " + m.id + " · " + m.date;
+
+  popMeta.innerHTML = "";
+  const pill = document.createElement("span");
+  pill.className = "meta-prio";
+  pill.style.background = "var(--color-navy)";
+  pill.textContent = m.id;
+  popMeta.appendChild(pill);
+
+  const addMeta = (t) => {
+    const s = document.createElement("span");
+    s.textContent = t;
+    popMeta.appendChild(s);
+    const sep = document.createElement("span");
+    sep.className = "meta-sep";
+    sep.textContent = "·";
+    popMeta.appendChild(sep);
+  };
+  addMeta(m.moment);
+  addMeta("Gate com a diretoria");
+  if (popMeta.lastChild && popMeta.lastChild.classList && popMeta.lastChild.classList.contains("meta-sep")) {
+    popMeta.removeChild(popMeta.lastChild);
+  }
+
+  popBody.innerHTML = "";
+  const h1 = document.createElement("div");
+  h1.textContent = "Estado esperado neste ponto";
+  h1.style.fontWeight = "700";
+  h1.style.color = "var(--color-navy)";
+  h1.style.marginBottom = "6px";
+  popBody.appendChild(h1);
+
+  const ul = document.createElement("ul");
+  ul.style.margin = "0 0 12px";
+  ul.style.paddingLeft = "18px";
+  m.content.forEach(a => {
+    const li = document.createElement("li");
+    li.textContent = a;
+    li.style.marginBottom = "4px";
+    ul.appendChild(li);
+  });
+  popBody.appendChild(ul);
+
+  const h2 = document.createElement("div");
+  h2.textContent = "Decisão esperada da diretoria";
+  h2.style.fontWeight = "700";
+  h2.style.color = "var(--color-navy)";
+  h2.style.marginBottom = "4px";
+  popBody.appendChild(h2);
+
+  const decisionP = document.createElement("div");
+  decisionP.textContent = m.decision;
+  popBody.appendChild(decisionP);
+
+  // Posicionamento — preferir abaixo do rótulo (que está no topo do gráfico)
+  popover.hidden = false;
+  popover.classList.remove("arrow-left", "arrow-right");
+  popover.style.left = "-9999px";
+  popover.style.top = "0px";
+
+  const r = anchor.getBoundingClientRect();
+  const pw = popover.offsetWidth;
+  const ph = popover.offsetHeight;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const gap = 12;
+
+  let top = r.bottom + gap;
+  if (top + ph > vh - 8) top = Math.max(8, r.top - ph - gap);
+  let left = r.left + r.width / 2 - pw / 2;
+  if (left + pw > vw - 8) left = vw - pw - 8;
+  if (left < 8) left = 8;
+
+  popover.style.left = left + "px";
+  popover.style.top  = top + "px";
+  popover.dataset.open = "true";
+  popClose.focus();
+}
+
+function showVisitPopover(anchor, visit){
+  popTitle.textContent = "Reunião presencial · " + visit.month;
+
+  popMeta.innerHTML = "";
+  const datePill = document.createElement("span");
+  datePill.className = "meta-prio";
+  datePill.style.background = "var(--color-orange)";
+  datePill.textContent = visit.date + " · sexta";
+  popMeta.appendChild(datePill);
+
+  const addMeta = (t) => {
+    const s = document.createElement("span");
+    s.textContent = t;
+    popMeta.appendChild(s);
+    const sep = document.createElement("span");
+    sep.className = "meta-sep";
+    sep.textContent = "·";
+    popMeta.appendChild(sep);
+  };
+  addMeta(visit.ondaContext);
+  addMeta("No cliente");
+  if (popMeta.lastChild && popMeta.lastChild.classList && popMeta.lastChild.classList.contains("meta-sep")) {
+    popMeta.removeChild(popMeta.lastChild);
+  }
+
+  popBody.innerHTML = "";
+  const preface = document.createElement("div");
+  preface.textContent = "Aproveitar a presença para levantar informações e acessos que são premissas para as próximas entregas:";
+  preface.style.marginBottom = "8px";
+  popBody.appendChild(preface);
+
+  const ul = document.createElement("ul");
+  ul.style.margin = "0";
+  ul.style.paddingLeft = "18px";
+  visit.agenda.forEach(a => {
+    const li = document.createElement("li");
+    li.textContent = a;
+    li.style.marginBottom = "4px";
+    ul.appendChild(li);
+  });
+  popBody.appendChild(ul);
+
+  // Posicionamento (mesma lógica do popover das iniciativas)
+  popover.hidden = false;
+  popover.classList.remove("arrow-left", "arrow-right");
+  popover.style.left = "-9999px";
+  popover.style.top = "0px";
+
+  const r = anchor.getBoundingClientRect();
+  const pw = popover.offsetWidth;
+  const ph = popover.offsetHeight;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const gap = 12;
+
+  // Preferir abaixo do label (visita está no topo do gráfico)
+  let top = r.bottom + gap;
+  if (top + ph > vh - 8) top = Math.max(8, r.top - ph - gap);
+  let left = r.left + r.width / 2 - pw / 2;
+  if (left + pw > vw - 8) left = vw - pw - 8;
+  if (left < 8) left = 8;
+
+  popover.style.left = left + "px";
+  popover.style.top  = top + "px";
+  popover.dataset.open = "true";
+  popClose.focus();
+}
+
+function hidePopover(){
+  popover.hidden = true;
+  delete popover.dataset.open;
+}
+
+popClose.addEventListener("click", hidePopover);
+
+document.addEventListener("click", (e) => {
+  if (popover.hidden) return;
+  if (popover.contains(e.target)) return;
+  if (e.target.classList && (
+      e.target.classList.contains("info-btn") ||
+      e.target.classList.contains("visit-label") ||
+      e.target.classList.contains("milestone-label")
+  )) return;
+  hidePopover();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !popover.hidden) hidePopover();
+});
+
+window.addEventListener("resize", hidePopover);
+window.addEventListener("scroll", hidePopover, true);
+
+/* =========================================================
+ * Corrige alturas do overlay e das linhas com base no tamanho
+ * real renderizado (linhas quebram em múltiplas linhas quando
+ * o título é longo, e a estimativa fixa de 34px subestima).
+ * ========================================================= */
+function adjustLineHeights() {
+  const headH = tlHead.offsetHeight;
+  const rowsH = rowsWrap.offsetHeight;
+  const total = headH + rowsH;
+
+  overlay.style.height = total + "px";
+
+  overlay.querySelectorAll(".milestone-line").forEach(l => {
+    l.style.height = total + "px";
+  });
+  overlay.querySelectorAll(".visit-line").forEach(l => {
+    l.style.height = (total + 6) + "px";  // começa 6px acima do overlay
+  });
+  const tl = overlay.querySelector(".today-line");
+  if (tl) tl.style.height = total + "px";
+}
+
+// Executa assim que layout estiver disponível
+window.requestAnimationFrame(adjustLineHeights);
+
+// Recalcula em resize (largura afeta quebra de título e altura das linhas)
+let _resizeTimer = null;
+window.addEventListener("resize", () => {
+  clearTimeout(_resizeTimer);
+  _resizeTimer = setTimeout(adjustLineHeights, 120);
+});
+
+// Também recalcula caso fontes demorem a carregar
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(adjustLineHeights);
+}
+
+/* =========================================================
+ * TEMA DIA/NOITE — toggle com persistência em localStorage
+ * ========================================================= */
+(function initThemeToggle() {
+  const STORAGE_KEY = "rba-gantt-theme";
+  const root = document.documentElement;
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) return;
+  const icon = toggle.querySelector(".theme-toggle__icon");
+
+  const saved = localStorage.getItem(STORAGE_KEY) || "light";
+  applyTheme(saved);
+
+  toggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") || "light";
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem(STORAGE_KEY, next);
+  });
+
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    if (icon) icon.textContent = theme === "dark" ? "☾" : "☀";
+    toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  }
+})();
+</script>
+</body>
+</html>
