@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **Thiago Zeni** — consultor de IA e growth.
 
-🔗 **URL em produção:** https://thiagozeni.com.br
+🔗 **URL em produção:** https://thiagozeni.com
 🔗 **Canonical (GitHub Pages):** https://thiagozeni.github.io
 
 ## Stack
@@ -54,7 +54,7 @@ Template fixo (fonts, CSS vars, nav, hero, stats-bar, case-section, case-cta, fo
 ### Domínios
 
 - `thiagozeni.github.io` → Open Graph
-- `thiagozeni.com.br` → canonical + JSON-LD
+- `thiagozeni.com` → canonical + JSON-LD
 
 Manter consistência entre os dois.
 
@@ -64,7 +64,7 @@ Atualizar `sitemap.xml` ao adicionar case novo. Última modificação: 2026-03-1
 
 ## Deploy
 
-GitHub Pages com deploy automático ao push em `main`. CNAME aponta para `thiagozeni.com.br`.
+GitHub Pages com deploy automático ao push em `main`. CNAME aponta para `thiagozeni.com`.
 
 ```bash
 git push origin main   # publicado em ~1min
