@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" width="360" height="160">
+  <!-- ZN. Block · selo · ZN preto sobre bloco lime -->
+  <rect x="0" y="0" width="360" height="160" fill="#C6FF00"/>
+  <text x="40" y="124"
+        font-family="Unbounded, 'Arial Black', sans-serif"
+        font-weight="900" font-size="120"
+        letter-spacing="-9.6"
+        fill="#050505">ZN.</text>
+</svg>

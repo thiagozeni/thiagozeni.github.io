@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120">
+  <!-- ZN. Split · campaign · metade superior lime deslocada -->
+  <defs>
+    <clipPath id="top-half">
+      <rect x="-10" y="0" width="340" height="58"/>
+    </clipPath>
+  </defs>
+  <!-- Branco base -->
+  <text x="0" y="100"
+        font-family="Unbounded, 'Arial Black', sans-serif"
+        font-weight="900" font-size="120"
+        letter-spacing="-9.6"
+        fill="#F2F2F2">ZN<tspan fill="#C6FF00">.</tspan></text>
+  <!-- Lime metade superior deslocado -3, -2 -->
+  <g clip-path="url(#top-half)" transform="translate(-3 -2)">
+    <text x="0" y="100"
+          font-family="Unbounded, 'Arial Black', sans-serif"
+          font-weight="900" font-size="120"
+          letter-spacing="-9.6"
+          fill="#C6FF00">ZN.</text>
+  </g>
+</svg>

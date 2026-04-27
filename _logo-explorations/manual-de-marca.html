@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>ZN. — Manual de Marca · Thiago Zeni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;800;900&family=DM+Sans:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #050505; --deep: #0D0D0D; --panel: #111111;
+    --lime: #C6FF00; --lime2: #DEFF4F; --lime-dim: rgba(198,255,0,0.08);
+    --white: #F2F2F2; --muted: #7A7A7A; --faint: #3A3A3A;
+    --red: #FF2D2D;
+    --border: rgba(198,255,0,0.14); --border2: rgba(255,255,255,0.07);
+    --font-display: 'Unbounded', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--black); color: var(--white); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.035;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: 200px 200px;
+  }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 3rem; }
+  @media (max-width: 700px) { .wrap { padding: 0 1.2rem; } }
+
+  /* ================ COVER ================ */
+  .cover {
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;
+    padding: 3rem 0 4rem; border-bottom: 1px solid var(--border2);
+  }
+  .cover-top {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .cover-top b { color: var(--lime); }
+  .cover-mark {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    margin: 4rem 0;
+  }
+  .cover-mark .zn {
+    font-family: var(--font-display); font-weight: 900;
+    font-size: clamp(8rem, 22vw, 22rem); letter-spacing: -0.08em; line-height: 0.85;
+    color: var(--white);
+  }
+  .cover-mark .dot { color: var(--lime); text-shadow: 0 0 60px rgba(198,255,0,0.6); }
+  .cover-bottom {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+    border-top: 1px solid var(--border2); padding-top: 2rem;
+  }
+  @media (max-width: 700px) { .cover-bottom { grid-template-columns: 1fr; } }
+  .cover-title {
+    font-family: var(--font-display); font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.6rem); letter-spacing: -0.04em; line-height: 1.05;
+  }
+  .cover-title em { font-family: var(--font-serif); font-style: italic; font-weight: 300; color: var(--lime); }
+  .cover-lead { color: var(--muted); font-size: 1rem; line-height: 1.75; max-width: 480px; }
+  .cover-lead b { color: var(--white); font-weight: 500; }
+
+  /* ================ SECTION SCAFFOLD ================ */
+  section { padding: 6rem 0; border-bottom: 1px solid var(--border2); }
+  .section-num {
+    font-family: var(--font-display); font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.22em; color: var(--lime); margin-bottom: 1.5rem; text-transform: uppercase;
+    display: block;
+  }
+  .section-title {
+    font-family: var(--font-display); font-weight: 900;
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem); letter-spacing: -0.04em; line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .section-title em { font-family: var(--font-serif); font-style: italic; font-weight: 300; color: var(--lime); }
+  .section-lead {
+    color: var(--muted); max-width: 720px; font-size: 0.95rem; line-height: 1.75;
+    margin-bottom: 3rem;
+  }
+  .section-lead b { color: var(--white); font-weight: 500; }
+
+  /* ================ 02 · VARIANT GRID ================ */
+  .vgrid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border2); padding: 1px;
+  }
+  @media (max-width: 900px) { .vgrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .vgrid { grid-template-columns: 1fr; } }
+  .vtile { background: var(--black); display: flex; flex-direction: column; min-height: 360px; }
+  .vstage { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; min-height: 240px; position: relative; }
+  .vstage.invert { background: #F5F5F5; }
+  .vstage.deep { background: var(--deep); }
+  .vstage.white { background: #FFFFFF; }
+  .vmeta { padding: 1.2rem 1.4rem 1.4rem; border-top: 1px solid var(--border2); }
+  .vname { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; letter-spacing: -0.02em; }
+  .vname-tag { font-family: var(--font-mono); font-size: 0.62rem; color: var(--lime); letter-spacing: 0.18em; margin-bottom: 0.4rem; text-transform: uppercase; }
+  .vuse { color: var(--muted); font-size: 0.78rem; line-height: 1.5; margin-top: 0.5rem; }
+
+  /* === Variant logo styles === */
+  .v-solid { font-family: var(--font-display); font-weight: 900; font-size: 5rem; letter-spacing: -0.08em; line-height: 0.9; color: var(--white); }
+  .v-solid .dot { color: var(--lime); text-shadow: 0 0 18px rgba(198,255,0,0.55); }
+
+  .v-block-wrap { background: var(--lime); padding: 1.4rem 1.7rem 1.1rem; box-shadow: 0 0 30px rgba(198,255,0,0.18); }
+  .v-block { font-family: var(--font-display); font-weight: 900; font-size: 4rem; letter-spacing: -0.08em; line-height: 0.85; color: var(--black); }
+
+  .v-ghost { font-family: var(--font-display); font-weight: 900; font-size: 5.5rem; letter-spacing: -0.07em; line-height: 0.9;
+    color: transparent; -webkit-text-stroke: 1.5px var(--lime); filter: drop-shadow(0 0 18px rgba(198,255,0,0.4)); }
+  .v-ghost .dot { color: var(--lime); -webkit-text-stroke: 0; text-shadow: 0 0 18px rgba(198,255,0,0.7); }
+
+  .v-split { font-family: var(--font-display); font-weight: 900; font-size: 5rem; letter-spacing: -0.07em; line-height: 0.9; color: var(--white); position: relative; }
+  .v-split .frag { display: inline-block; position: relative; }
+  .v-split .frag::before { content: attr(data-c); position: absolute; left: 0; top: 0; width: 100%; height: 50%; overflow: hidden; color: var(--lime); transform: translate(-2px, -1px); text-shadow: 0 0 12px rgba(198,255,0,0.45); }
+  .v-split .dot { color: var(--lime); text-shadow: 0 0 18px rgba(198,255,0,0.55); }
+
+  .v-mono-w { font-family: var(--font-display); font-weight: 900; font-size: 5rem; letter-spacing: -0.08em; line-height: 0.9; color: var(--white); }
+  .v-mono-b { font-family: var(--font-display); font-weight: 900; font-size: 5rem; letter-spacing: -0.08em; line-height: 0.9; color: var(--black); }
+
+  /* ================ 03 · CONSTRUCTION GRID ================ */
+  .construction {
+    background: var(--deep); padding: 4rem 3rem; position: relative; overflow: hidden;
+    border: 1px solid var(--border2);
+  }
+  .construction::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgba(198,255,0,0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(198,255,0,0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .construction-mark {
+    position: relative; display: inline-block;
+    font-family: var(--font-display); font-weight: 900;
+    font-size: 16rem; letter-spacing: -0.08em; line-height: 0.9; color: var(--white);
+  }
+  .construction-mark .dot { color: var(--lime); text-shadow: 0 0 30px rgba(198,255,0,0.55); }
+  .construction-labels {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;
+    position: relative;
+  }
+  @media (max-width: 700px) { .construction-labels { grid-template-columns: 1fr; } }
+  .clabel { border-left: 2px solid var(--lime); padding-left: 1rem; }
+  .clabel-key { font-family: var(--font-mono); font-size: 0.65rem; color: var(--lime); letter-spacing: 0.18em; text-transform: uppercase; }
+  .clabel-val { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; margin-top: 0.3rem; letter-spacing: -0.02em; }
+  .clabel-desc { color: var(--muted); font-size: 0.78rem; line-height: 1.5; margin-top: 0.4rem; }
+
+  /* ================ 04 · CLEAR SPACE + MIN SIZE ================ */
+  .clearance {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: stretch;
+  }
+  @media (max-width: 900px) { .clearance { grid-template-columns: 1fr; } }
+  .clearance-box {
+    background: var(--deep); border: 1px solid var(--border2); padding: 3rem;
+    display: flex; align-items: center; justify-content: center; position: relative; min-height: 320px;
+  }
+  .clearance-mark {
+    position: relative;
+    font-family: var(--font-display); font-weight: 900; font-size: 6rem; letter-spacing: -0.08em; line-height: 0.9;
+    color: var(--white);
+    padding: 1.4rem;
+    /* clear space = altura do "Z" inteiro como margem */
+  }
+  .clearance-mark .dot { color: var(--lime); }
+  .clearance-mark::after {
+    content: ''; position: absolute; inset: 0;
+    border: 1px dashed rgba(198,255,0,0.45);
+    pointer-events: none;
+  }
+  .clearance-mark::before {
+    content: 'X'; position: absolute; left: -1.4rem; top: 50%; transform: translateY(-50%);
+    font-family: var(--font-mono); font-size: 0.65rem; color: var(--lime); letter-spacing: 0.15em;
+  }
+
+  .sizes {
+    background: var(--deep); border: 1px solid var(--border2); padding: 2rem;
+    display: flex; flex-direction: column; justify-content: center; gap: 1.6rem;
+  }
+  .size-row { display: flex; align-items: center; gap: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border2); }
+  .size-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .size-mark { font-family: var(--font-display); font-weight: 900; letter-spacing: -0.08em; color: var(--white); flex-shrink: 0; }
+  .size-mark .dot { color: var(--lime); }
+  .size-info { flex: 1; }
+  .size-px { font-family: var(--font-mono); font-size: 0.7rem; color: var(--lime); letter-spacing: 0.15em; }
+  .size-label { font-size: 0.85rem; color: var(--white); margin-top: 0.2rem; }
+  .size-note { color: var(--faint); font-size: 0.72rem; margin-top: 0.15rem; }
+
+  /* ================ 05 · COLOR ================ */
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border2); padding: 1px; }
+  @media (max-width: 900px) { .swatches { grid-template-columns: repeat(2, 1fr); } }
+  .swatch { padding: 2.5rem 1.4rem; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; }
+  .sw-name { font-family: var(--font-display); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; }
+  .sw-hex { font-family: var(--font-mono); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 1rem; }
+  .sw-meta { font-family: var(--font-mono); font-size: 0.7rem; line-height: 1.6; opacity: 0.75; }
+  .sw-use { font-size: 0.78rem; line-height: 1.5; margin-top: 0.5rem; opacity: 0.8; }
+  .sw-lime { background: var(--lime); color: var(--black); }
+  .sw-black { background: var(--black); color: var(--white); border-right: 1px solid var(--border2); }
+  .sw-white { background: #F5F5F5; color: var(--black); }
+  .sw-red { background: var(--red); color: var(--black); }
+
+  /* ================ 06 · TYPOGRAPHY ================ */
+  .typo { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  .typo-row {
+    background: var(--deep); border: 1px solid var(--border2); padding: 2.5rem 2rem;
+    display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: center;
+  }
+  @media (max-width: 700px) { .typo-row { grid-template-columns: 1fr; } }
+  .typo-key { font-family: var(--font-mono); font-size: 0.7rem; color: var(--lime); letter-spacing: 0.18em; text-transform: uppercase; line-height: 1.6; }
+  .typo-key b { color: var(--white); display: block; margin-top: 0.3rem; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: -0.01em; text-transform: none; }
+  .typo-spec { color: var(--muted); font-size: 0.72rem; margin-top: 0.5rem; }
+  .typo-sample-1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 5vw, 4.2rem); letter-spacing: -0.04em; line-height: 1; color: var(--white); }
+  .typo-sample-2 { font-family: var(--font-body); font-weight: 400; font-size: 1rem; line-height: 1.7; color: var(--white); max-width: 540px; }
+  .typo-sample-3 { font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.4rem, 2.8vw, 2.2rem); line-height: 1.4; color: var(--white); }
+  .typo-sample-3 em { color: var(--lime); }
+
+  /* ================ 07 · BACKGROUNDS ================ */
+  .bgmatrix { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border2); padding: 1px; }
+  @media (max-width: 900px) { .bgmatrix { grid-template-columns: 1fr; } }
+  .bgcell { padding: 3rem 2rem; min-height: 200px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 1.5rem; }
+  .bg-status { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.25rem 0.6rem; border: 1px solid currentColor; }
+  .bg-status.ok { color: var(--lime); }
+  .bg-status.warn { color: #FFB347; }
+  .bg-status.bad { color: var(--red); }
+  .bg-mark-sm { font-family: var(--font-display); font-weight: 900; font-size: 2.4rem; letter-spacing: -0.08em; line-height: 0.9; }
+  .bg-note { font-size: 0.78rem; line-height: 1.5; opacity: 0.85; }
+  .bg-1 { background: var(--black); color: var(--white); }
+  .bg-1 .bg-mark-sm .dot { color: var(--lime); }
+  .bg-2 { background: #F5F5F5; color: var(--black); }
+  .bg-2 .bg-mark-sm .dot { color: var(--lime); text-shadow: 0 0 6px rgba(198,255,0,0.3); }
+  .bg-3 { background: linear-gradient(135deg, #2a2a2a 0%, #555 100%); color: var(--white); }
+  .bg-3 .bg-mark-sm .dot { color: var(--lime); }
+  .bg-4 { background: var(--lime); color: var(--black); }
+  .bg-4 .bg-mark-sm .dot { color: var(--black); }
+  .bg-5 { background: #8B0000; color: var(--white); }
+  .bg-5 .bg-mark-sm .dot { color: var(--lime); }
+  .bg-6 {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' fill='%23444'/><circle cx='80' cy='100' r='60' fill='%23888'/><circle cx='130' cy='80' r='30' fill='%23ccc'/></svg>") center/cover;
+    color: var(--white);
+  }
+  .bg-6 .bg-mark-sm .dot { color: var(--lime); }
+
+  /* ================ 08 · DONT'S ================ */
+  .donts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border2); padding: 1px; }
+  @media (max-width: 900px) { .donts { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .donts { grid-template-columns: 1fr; } }
+  .dont {
+    background: var(--black); padding: 2.5rem 1.6rem; min-height: 240px;
+    display: flex; flex-direction: column; gap: 1rem; position: relative;
+  }
+  .dont-flag {
+    position: absolute; top: 0.7rem; right: 0.7rem;
+    font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.18em;
+    color: var(--red); border: 1px solid var(--red); padding: 0.15rem 0.45rem;
+    text-transform: uppercase;
+  }
+  .dont-stage { flex: 1; display: flex; align-items: center; justify-content: center; opacity: 0.85; }
+  .dont-text { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+  .dont-text b { color: var(--white); font-weight: 500; }
+
+  .d-sm { font-family: var(--font-display); font-weight: 900; font-size: 3rem; letter-spacing: -0.08em; line-height: 0.9; color: var(--white); }
+  .d-sm .dot { color: var(--lime); }
+  .d1 { transform: scaleY(0.6); }
+  .d2 { color: #ff44aa; -webkit-text-fill-color: #ff44aa; }
+  .d2 .dot { color: #ff44aa; }
+  .d3 { transform: rotate(-12deg); }
+  .d4 { font-family: 'DM Sans', sans-serif; font-weight: 900; }
+  .d5 { letter-spacing: 0.2em; }
+  .d6 { background: linear-gradient(90deg, #ff00ff, #00ffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .d6 .dot { -webkit-text-fill-color: var(--lime); }
+
+  /* ================ 09 · APPLICATIONS ================ */
+  .apps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border2); padding: 1px; }
+  @media (max-width: 900px) { .apps { grid-template-columns: 1fr; } }
+  .app { background: var(--black); display: flex; flex-direction: column; min-height: 300px; }
+  .app-stage { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; min-height: 240px; background: var(--deep); border-bottom: 1px solid var(--border2); }
+  .app-meta { padding: 1.2rem 1.4rem 1.4rem; }
+  .app-name { font-family: var(--font-display); font-weight: 800; font-size: 0.9rem; letter-spacing: -0.02em; }
+  .app-name-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--lime); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .app-note { font-size: 0.75rem; color: var(--muted); line-height: 1.5; margin-top: 0.4rem; }
+
+  /* Favicon mockup */
+  .fav-row { display: flex; gap: 1.2rem; align-items: flex-end; }
+  .fav { background: var(--black); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border2); }
+  .fav-16 { width: 16px; height: 16px; }
+  .fav-32 { width: 32px; height: 32px; }
+  .fav-64 { width: 64px; height: 64px; }
+  .fav-text { font-family: var(--font-display); font-weight: 900; color: var(--lime); letter-spacing: -0.05em; }
+  .fav-16 .fav-text { font-size: 9px; }
+  .fav-32 .fav-text { font-size: 16px; }
+  .fav-64 .fav-text { font-size: 32px; }
+
+  /* Avatar */
+  .avatar {
+    width: 180px; height: 180px; border-radius: 50%;
+    background: var(--lime); display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 60px rgba(198,255,0,0.25);
+  }
+  .avatar-text { font-family: var(--font-display); font-weight: 900; font-size: 4.4rem; letter-spacing: -0.08em; color: var(--black); line-height: 1; }
+
+  /* OG image */
+  .og {
+    width: 100%; max-width: 480px; aspect-ratio: 1200/630; background: var(--black);
+    display: flex; flex-direction: column; justify-content: space-between; padding: 1.6rem;
+    border: 1px solid var(--border2); position: relative;
+  }
+  .og-mark { font-family: var(--font-display); font-weight: 900; font-size: 3.5rem; letter-spacing: -0.08em; color: var(--white); line-height: 0.9; }
+  .og-mark .dot { color: var(--lime); text-shadow: 0 0 12px rgba(198,255,0,0.5); }
+  .og-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+  .og-tag { font-family: var(--font-mono); font-size: 0.65rem; color: var(--lime); letter-spacing: 0.18em; text-transform: uppercase; }
+  .og-name { font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: 1.2rem; color: var(--muted); }
+
+  /* Email signature */
+  .email {
+    background: #FFFFFF; color: #050505; padding: 1.4rem 1.6rem;
+    width: 100%; max-width: 360px; font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; line-height: 1.5;
+    border: 1px solid var(--border2);
+  }
+  .email-mark { font-family: var(--font-display); font-weight: 900; font-size: 1.4rem; letter-spacing: -0.06em; line-height: 1; }
+  .email-mark .dot { color: var(--lime); }
+  .email-name { font-weight: 700; margin-top: 0.7rem; font-size: 0.85rem; }
+  .email-role { color: #666; font-size: 0.72rem; margin-top: 0.1rem; }
+  .email-rule { height: 2px; background: var(--lime); width: 32px; margin: 0.7rem 0 0.6rem; }
+  .email-link { color: #050505; text-decoration: none; font-size: 0.72rem; }
+  .email-link:hover { color: #C6FF00; }
+
+  /* Watermark */
+  .watermark {
+    width: 100%; max-width: 360px; aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+    position: relative; display: flex; align-items: flex-end; justify-content: flex-end;
+    padding: 1rem; border: 1px solid var(--border2);
+  }
+  .watermark::before {
+    content: ''; position: absolute; inset: 0; opacity: 0.15;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.4), transparent 50%);
+  }
+  .wm-mark {
+    font-family: var(--font-display); font-weight: 900; font-size: 1rem; letter-spacing: -0.06em;
+    color: rgba(255,255,255,0.7); position: relative;
+  }
+  .wm-mark .dot { color: var(--lime); }
+
+  /* ================ 10 · FOOTER ================ */
+  footer {
+    padding: 4rem 0 5rem; text-align: left;
+  }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  @media (max-width: 700px) { .foot-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .foot-key { font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.22em; color: var(--lime); margin-bottom: 1rem; text-transform: uppercase; }
+  .foot-text { color: var(--muted); font-size: 0.85rem; line-height: 1.7; }
+  .foot-text b { color: var(--white); font-weight: 500; }
+  .foot-list { list-style: none; }
+  .foot-list li { color: var(--muted); font-size: 0.78rem; padding: 0.3rem 0; border-bottom: 1px solid var(--border2); font-family: var(--font-mono); letter-spacing: 0.05em; }
+  .foot-list li:last-child { border-bottom: 0; }
+
+  .nav {
+    position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%); z-index: 100;
+    display: flex; flex-direction: column; gap: 0.4rem;
+    background: rgba(5,5,5,0.85); padding: 0.7rem 0.5rem; border: 1px solid var(--border2);
+    backdrop-filter: blur(8px);
+  }
+  @media (max-width: 900px) { .nav { display: none; } }
+  .nav a {
+    width: 26px; height: 18px; font-family: var(--font-mono); font-size: 0.55rem;
+    color: var(--faint); text-decoration: none; display: flex; align-items: center; justify-content: center;
+    letter-spacing: 0.05em; transition: color 0.2s;
+  }
+  .nav a:hover { color: var(--lime); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#s01">01</a>
+  <a href="#s02">02</a>
+  <a href="#s03">03</a>
+  <a href="#s04">04</a>
+  <a href="#s05">05</a>
+  <a href="#s06">06</a>
+  <a href="#s07">07</a>
+  <a href="#s08">08</a>
+  <a href="#s09">09</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ COVER ============ -->
+<section class="cover" id="s00" style="border-bottom: 1px solid var(--border2);">
+  <div class="cover-top">
+    <div><b>Brand Manual</b> · v1.0 · 2026</div>
+    <div>thiagozeni.com.br</div>
+  </div>
+  <div class="cover-mark">
+    <div class="zn">ZN<span class="dot">.</span></div>
+  </div>
+  <div class="cover-bottom">
+    <h1 class="cover-title">Manual de marca <em>ZN.</em> — sistema de wordmark, paleta, tipografia e aplicações.</h1>
+    <p class="cover-lead">
+      Este documento define o uso correto da marca <b>ZN.</b> nos canais digitais e impressos
+      do ecossistema Thiago Zeni. Quatro variantes do wordmark, mais duas versões mono,
+      compõem o sistema. <b>Tudo aqui é regra, não sugestão.</b>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 01 · IDENTIDADE ============ -->
+<section id="s01">
+  <span class="section-num">01 — identidade</span>
+  <h2 class="section-title">O que é <em>ZN.</em></h2>
+  <p class="section-lead">
+    <b>ZN.</b> é o monograma de Thiago Zeni — wordmark sólido, brutalista, com um único accent lime
+    (o ponto). Funciona como assinatura pessoal-executiva: autoridade sem ostentação, contemporâneo
+    sem cair no genérico tech. O ponto não é decoração — é o <b>pulse</b> da marca, único elemento
+    que pode se mover, brilhar ou variar de cor controladamente.
+  </p>
+
+  <div class="construction">
+    <div class="construction-mark">ZN<span class="dot">.</span></div>
+    <div class="construction-labels">
+      <div class="clabel">
+        <div class="clabel-key">Tipografia</div>
+        <div class="clabel-val">Unbounded 900</div>
+        <div class="clabel-desc">Pesos abaixo de 800 não são autorizados para o wordmark.</div>
+      </div>
+      <div class="clabel">
+        <div class="clabel-key">Tracking</div>
+        <div class="clabel-val">−0.08em</div>
+        <div class="clabel-desc">Letras coladas. Nunca espaçadas, nunca tracking positivo.</div>
+      </div>
+      <div class="clabel">
+        <div class="clabel-key">Ponto</div>
+        <div class="clabel-val">Sempre lime</div>
+        <div class="clabel-desc">O ponto é o accent obrigatório. Glow opcional, remoção proibida.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · SISTEMA DE VARIANTES ============ -->
+<section id="s02">
+  <span class="section-num">02 — sistema de variantes</span>
+  <h2 class="section-title">Quatro expressões + duas mono. <em>Mesma marca.</em></h2>
+  <p class="section-lead">
+    Toda variante mantém: Unbounded 900, tracking −0.08em, ponto presente. O que muda é
+    <b>tratamento de superfície</b> (sólido, recorte, outline, ruptura) e <b>contexto de uso</b>.
+    As duas mono cobrem restrições reais (impressão a 1 cor, fax, bordado, gravação).
+    <b>Master = Solid.</b> Tudo deriva dele.
+  </p>
+
+  <div class="vgrid">
+    <!-- 1. Solid -->
+    <div class="vtile">
+      <div class="vstage"><div class="v-solid">ZN<span class="dot">.</span></div></div>
+      <div class="vmeta">
+        <div class="vname-tag">01 · master</div>
+        <div class="vname">ZN. Solid</div>
+        <p class="vuse">Uso primário. Header do site, currículo, apresentações, qualquer contexto de marca <b>sem restrição</b>.</p>
+      </div>
+    </div>
+
+    <!-- 2. Block -->
+    <div class="vtile">
+      <div class="vstage white"><div class="v-block-wrap"><div class="v-block">ZN.</div></div></div>
+      <div class="vmeta">
+        <div class="vname-tag">02 · reverse</div>
+        <div class="vname">ZN. Block</div>
+        <p class="vuse">Selo / badge. <b>OG image, watermark de vídeo, sticker, capa de relatório, assinatura de proposta</b>. Inverte a equação cromática.</p>
+      </div>
+    </div>
+
+    <!-- 3. Ghost -->
+    <div class="vtile">
+      <div class="vstage deep"><div class="v-ghost">ZN<span class="dot">.</span></div></div>
+      <div class="vmeta">
+        <div class="vname-tag">03 · outline</div>
+        <div class="vname">ZN. Ghost</div>
+        <p class="vuse">Atmosférico. <b>Hero de landing, vinheta de abertura/fechamento de vídeo, divisor de seção</b>. Presença sem peso. Não usar abaixo de 64px.</p>
+      </div>
+    </div>
+
+    <!-- 4. Split -->
+    <div class="vtile">
+      <div class="vstage deep"><div class="v-split"><span class="frag" data-c="ZN">ZN</span><span class="dot">.</span></div></div>
+      <div class="vmeta">
+        <div class="vname-tag">04 · campaign</div>
+        <div class="vname">ZN. Split</div>
+        <p class="vuse">Editorial. <b>Capa de campanha, vinheta de manifesto, post-chave, banner sazonal</b>. Uso esporádico — vira ruído se repetida.</p>
+      </div>
+    </div>
+
+    <!-- 5. Mono White -->
+    <div class="vtile">
+      <div class="vstage deep"><div class="v-mono-w">ZN.</div></div>
+      <div class="vmeta">
+        <div class="vname-tag">05 · mono</div>
+        <div class="vname">ZN. Mono White</div>
+        <p class="vuse">1 cor sobre fundos escuros, fotos densas, vídeo. <b>Sem ponto destacado</b> — toda a marca vira texto branco. Backup de Solid quando lime não pode ser reproduzido.</p>
+      </div>
+    </div>
+
+    <!-- 6. Mono Black -->
+    <div class="vtile">
+      <div class="vstage white"><div class="v-mono-b">ZN.</div></div>
+      <div class="vmeta">
+        <div class="vname-tag">06 · mono</div>
+        <div class="vname">ZN. Mono Black</div>
+        <p class="vuse">1 cor sobre fundos claros, papel timbrado, gravação a laser, bordado, fax. <b>Versão de última instância</b> — sempre que possível, usar Solid ou Block.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · CONSTRUÇÃO ============ -->
+<section id="s03">
+  <span class="section-num">03 — construção</span>
+  <h2 class="section-title">Como o wordmark é <em>construído.</em></h2>
+  <p class="section-lead">
+    O ZN. não é redesenhado a cada uso — é <b>renderizado</b> a partir da fonte Unbounded em peso 900,
+    com o ponto manualmente colorido em <b>#C6FF00</b>. Isso garante consistência absoluta entre web,
+    print e qualquer aplicação futura. <b>Não vetorize manualmente. Não recrie.</b>
+    Use o SVG master ou renderize do CSS abaixo.
+  </p>
+  <pre style="background: var(--deep); padding: 2rem; border: 1px solid var(--border2); font-family: var(--font-mono); font-size: 0.8rem; color: var(--white); line-height: 1.7; overflow-x: auto;">
+.zn-mark {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  color: #F2F2F2;
+}
+.zn-mark .dot {
+  color: #C6FF00;
+  /* opcional · text-shadow: 0 0 28px rgba(198,255,0,0.55); */
+}
+&lt;span class="zn-mark"&gt;ZN&lt;span class="dot"&gt;.&lt;/span&gt;&lt;/span&gt;</pre>
+</section>
+
+<!-- ============ 04 · CLEAR SPACE + MIN SIZE ============ -->
+<section id="s04">
+  <span class="section-num">04 — espaço de respiro & tamanho mínimo</span>
+  <h2 class="section-title">A marca <em>respira.</em></h2>
+  <p class="section-lead">
+    Em volta do wordmark deve existir uma área livre de <b>X = altura do "Z"</b> em todas as direções.
+    Nenhum elemento gráfico, texto ou imagem entra nessa zona. Em layouts apertados, prefira
+    diminuir o logo a invadir o respiro.
+  </p>
+
+  <div class="clearance">
+    <div class="clearance-box">
+      <div class="clearance-mark">ZN<span class="dot">.</span></div>
+    </div>
+    <div class="sizes">
+      <div class="size-row">
+        <div class="size-mark" style="font-size: 0.75rem;">ZN<span class="dot">.</span></div>
+        <div class="size-info">
+          <div class="size-px">12 PX · MÍNIMO</div>
+          <div class="size-label">Apenas para metadata, footer técnico</div>
+          <div class="size-note">Use Mono Black/White — ponto pode sumir</div>
+        </div>
+      </div>
+      <div class="size-row">
+        <div class="size-mark" style="font-size: 1rem;">ZN<span class="dot">.</span></div>
+        <div class="size-info">
+          <div class="size-px">16 PX · DIGITAL MIN</div>
+          <div class="size-label">Favicon, ícones de app, navegação compacta</div>
+          <div class="size-note">Solid ou Mono — Ghost e Split proibidos</div>
+        </div>
+      </div>
+      <div class="size-row">
+        <div class="size-mark" style="font-size: 1.6rem;">ZN<span class="dot">.</span></div>
+        <div class="size-info">
+          <div class="size-px">24 PX · STANDARD</div>
+          <div class="size-label">Header de site, assinatura de email, footer</div>
+          <div class="size-note">Todas as variantes liberadas</div>
+        </div>
+      </div>
+      <div class="size-row">
+        <div class="size-mark" style="font-size: 2.4rem;">ZN<span class="dot">.</span></div>
+        <div class="size-info">
+          <div class="size-px">48 PX+ · EXPRESSIVE</div>
+          <div class="size-label">Hero, capa, OG image, banner</div>
+          <div class="size-note">Glow lime recomendado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · PALETA ============ -->
+<section id="s05">
+  <span class="section-num">05 — paleta cromática</span>
+  <h2 class="section-title">Lime + dois neutros. <em>Vermelho só pra emergência.</em></h2>
+  <p class="section-lead">
+    Quatro cores no sistema. <b>Lime é a marca</b> — sem ele, não há ZN. Black e White-bone
+    são suporte. Vermelho é alerta — só badges críticos, erros, warnings. <b>Não use vermelho como accent geral.</b>
+  </p>
+
+  <div class="swatches">
+    <div class="swatch sw-lime">
+      <div>
+        <div class="sw-name">Electric Lime</div>
+        <div class="sw-hex">#C6FF00</div>
+      </div>
+      <div>
+        <div class="sw-meta">RGB 198 255 0<br>HSL 73° 100% 50%<br>Pantone 389 C</div>
+        <div class="sw-use">Accent obrigatório. CTAs, links, ponto do wordmark, glow.</div>
+      </div>
+    </div>
+    <div class="swatch sw-black">
+      <div>
+        <div class="sw-name">Pure Black</div>
+        <div class="sw-hex">#050505</div>
+      </div>
+      <div>
+        <div class="sw-meta">RGB 5 5 5<br>HSL 0° 0% 2%<br>Pantone Black 6 C</div>
+        <div class="sw-use">Background principal, texto sobre lime, modo dark default.</div>
+      </div>
+    </div>
+    <div class="swatch sw-white">
+      <div>
+        <div class="sw-name">Bone White</div>
+        <div class="sw-hex">#F5F5F5</div>
+      </div>
+      <div>
+        <div class="sw-meta">RGB 245 245 245<br>HSL 0° 0% 96%<br>Pantone Cool Gray 1 C</div>
+        <div class="sw-use">Background invertido, texto principal sobre black.</div>
+      </div>
+    </div>
+    <div class="swatch sw-red">
+      <div>
+        <div class="sw-name">Alert Red</div>
+        <div class="sw-hex">#FF2D2D</div>
+      </div>
+      <div>
+        <div class="sw-meta">RGB 255 45 45<br>HSL 0° 100% 59%<br>Pantone 172 C</div>
+        <div class="sw-use">Reservado. Erros, alertas críticos, badges raros.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · TIPOGRAFIA ============ -->
+<section id="s06">
+  <span class="section-num">06 — tipografia</span>
+  <h2 class="section-title">Três famílias. <em>Cada uma com seu papel.</em></h2>
+  <p class="section-lead">
+    <b>Unbounded</b> sustenta o wordmark e todos os títulos — é a espinha visual.
+    <b>DM Sans</b> faz o trabalho do dia-a-dia (corpo de texto, navegação).
+    <b>Cormorant Garamond italic</b> é o contraponto — citações, taglines, momentos de pausa.
+    Nunca trocar Unbounded por Inter, SF Pro ou Roboto por "facilidade".
+  </p>
+
+  <div class="typo">
+    <div class="typo-row">
+      <div class="typo-key">Display<b>Unbounded</b><div class="typo-spec">300 / 400 / 700 / 800 / 900</div></div>
+      <div class="typo-sample-1">Construir.<br>Liderar.<br>Entregar.</div>
+    </div>
+    <div class="typo-row">
+      <div class="typo-key">Body<b>DM Sans</b><div class="typo-spec">300 / 400 / 500 (+ italic)</div></div>
+      <div class="typo-sample-2">28 anos liderando marketing digital, inovação e IA para 120+ marcas no Brasil e fora. O trabalho fala — e quando precisa explicar, fala em DM Sans, com line-height generoso e tracking neutro. Direto, sem ornamento.</div>
+    </div>
+    <div class="typo-row">
+      <div class="typo-key">Decorative<b>Cormorant Garamond</b><div class="typo-spec">300 / 400 italic</div></div>
+      <div class="typo-sample-3">"Marca não é o que você diz que é. <em>É o que sobra na cabeça das pessoas.</em>"</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · BACKGROUNDS ============ -->
+<section id="s07">
+  <span class="section-num">07 — superfícies & contraste</span>
+  <h2 class="section-title">Onde a marca <em>respira ou sufoca.</em></h2>
+  <p class="section-lead">
+    A marca foi construída pra fundo escuro — é onde o lime vibra mais. Em fundos claros funciona,
+    desde que o lime tenha contraste suficiente com o texto. Fundos coloridos saturados são
+    território perigoso — o lime perde força ou briga.
+  </p>
+
+  <div class="bgmatrix">
+    <div class="bgcell bg-1">
+      <div class="bg-status ok">✓ ideal</div>
+      <div class="bg-mark-sm">ZN<span class="dot">.</span></div>
+      <div class="bg-note">Black puro — habitat natural. Solid, Ghost e Split todos liberados.</div>
+    </div>
+    <div class="bgcell bg-2">
+      <div class="bg-status ok">✓ ok</div>
+      <div class="bg-mark-sm">ZN<span class="dot">.</span></div>
+      <div class="bg-note">Bone white — Solid e Mono Black liberados. Ghost perde contraste.</div>
+    </div>
+    <div class="bgcell bg-3">
+      <div class="bg-status warn">! cuidado</div>
+      <div class="bg-mark-sm">ZN<span class="dot">.</span></div>
+      <div class="bg-note">Cinza médio — só Mono White sobre fotos com sombra. Solid pode brigar.</div>
+    </div>
+    <div class="bgcell bg-4">
+      <div class="bg-status warn">! exceção</div>
+      <div class="bg-mark-sm">ZN<span class="dot">.</span></div>
+      <div class="bg-note">Lime puro — ponto vira black. Só pra Block (selo) ou Mono Black.</div>
+    </div>
+    <div class="bgcell bg-5">
+      <div class="bg-status bad">✕ proibido</div>
+      <div class="bg-mark-sm">ZN<span class="dot">.</span></div>
+      <div class="bg-note">Vermelho/rosa saturado — lime briga e fica ilegível. Não use.</div>
+    </div>
+    <div class="bgcell bg-6">
+      <div class="bg-status warn">! depende</div>
+      <div class="bg-mark-sm">ZN<span class="dot">.</span></div>
+      <div class="bg-note">Foto — só Mono White com peso visual mínimo. Aplicar overlay 40% black.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 · DON'TS ============ -->
+<section id="s08">
+  <span class="section-num">08 — proibições</span>
+  <h2 class="section-title">Seis maneiras de <em>quebrar a marca.</em></h2>
+  <p class="section-lead">
+    Estas são erradas. Sem exceção. Se a regra atrapalha o seu layout, o problema é o layout —
+    não a marca. <b>Pra cada "vontade" de variar, existe uma variante oficial</b> (seção 02) que
+    cobre o caso.
+  </p>
+
+  <div class="donts">
+    <div class="dont">
+      <div class="dont-flag">não</div>
+      <div class="dont-stage"><div class="d-sm d1">ZN<span class="dot">.</span></div></div>
+      <div class="dont-text"><b>Não distorça.</b> Nunca alterar proporção horizontal/vertical. Use o tamanho diretamente — escala uniforme apenas.</div>
+    </div>
+    <div class="dont">
+      <div class="dont-flag">não</div>
+      <div class="dont-stage"><div class="d-sm d2">ZN<span class="dot">.</span></div></div>
+      <div class="dont-text"><b>Não troque a cor.</b> Lime é fixo. Recolorir a marca anula o sistema inteiro. Pra contextos sem lime, use Mono White ou Mono Black.</div>
+    </div>
+    <div class="dont">
+      <div class="dont-flag">não</div>
+      <div class="dont-stage"><div class="d-sm d3">ZN<span class="dot">.</span></div></div>
+      <div class="dont-text"><b>Não rotacione.</b> A marca é sempre horizontal. Sem inclinação, sem orientação vertical, sem "criatividade" angular.</div>
+    </div>
+    <div class="dont">
+      <div class="dont-flag">não</div>
+      <div class="dont-stage"><div class="d-sm d4">ZN<span class="dot">.</span></div></div>
+      <div class="dont-text"><b>Não troque a fonte.</b> Unbounded 900 é regra. DM Sans, Inter, Helvetica, Arial — todas anulam o ZN. Sem exceção, sem "no momento estou sem a fonte".</div>
+    </div>
+    <div class="dont">
+      <div class="dont-flag">não</div>
+      <div class="dont-stage"><div class="d-sm d5">ZN<span class="dot">.</span></div></div>
+      <div class="dont-text"><b>Não abra o tracking.</b> Letras separadas matam o peso brutalista. Tracking é fixo em −0.08em. Diminuir é OK em casos extremos, abrir nunca.</div>
+    </div>
+    <div class="dont">
+      <div class="dont-flag">não</div>
+      <div class="dont-stage"><div class="d-sm d6">ZN<span class="dot">.</span></div></div>
+      <div class="dont-text"><b>Não aplique gradiente.</b> A marca é cor sólida. Gradientes (mesmo lime → lime claro) viram ruído visual e quebram a hierarquia do ponto.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 · APLICAÇÕES ============ -->
+<section id="s09">
+  <span class="section-num">09 — aplicações reais</span>
+  <h2 class="section-title">A marca <em>no mundo.</em></h2>
+  <p class="section-lead">
+    Como o sistema se comporta nos canais reais. Cada aplicação usa a variante mais adequada
+    e respeita clear space, contraste e tamanho mínimo. <b>Esta seção é referência, não exaustão</b> —
+    novas aplicações devem seguir as regras das seções 02 a 08.
+  </p>
+
+  <div class="apps">
+    <!-- Favicon -->
+    <div class="app">
+      <div class="app-stage">
+        <div class="fav-row">
+          <div style="text-align:center"><div class="fav fav-16"><span class="fav-text">ZN.</span></div><div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--faint);margin-top:0.4rem;">16</div></div>
+          <div style="text-align:center"><div class="fav fav-32"><span class="fav-text">ZN.</span></div><div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--faint);margin-top:0.4rem;">32</div></div>
+          <div style="text-align:center"><div class="fav fav-64"><span class="fav-text">ZN.</span></div><div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--faint);margin-top:0.4rem;">64</div></div>
+        </div>
+      </div>
+      <div class="app-meta">
+        <div class="app-name-tag">favicon · 16/32/64</div>
+        <div class="app-name">Browser tab</div>
+        <p class="app-note">Variante <b>Mono Lime sobre Black</b> em quadrado fechado — ZN. inteiro fica lime pra sobreviver à compressão. Ponto separado some abaixo de 32px.</p>
+      </div>
+    </div>
+
+    <!-- Avatar -->
+    <div class="app">
+      <div class="app-stage">
+        <div class="avatar"><div class="avatar-text">ZN.</div></div>
+      </div>
+      <div class="app-meta">
+        <div class="app-name-tag">avatar · 400×400</div>
+        <div class="app-name">Social profile</div>
+        <p class="app-note">Variante <b>Block</b> em círculo. Twitter, LinkedIn, GitHub. Lime de fundo + ZN. preto = máxima visibilidade em qualquer feed.</p>
+      </div>
+    </div>
+
+    <!-- OG Image -->
+    <div class="app">
+      <div class="app-stage">
+        <div class="og">
+          <div class="og-mark">ZN<span class="dot">.</span></div>
+          <div class="og-bottom">
+            <div class="og-tag">marketing · ia · 28 anos</div>
+            <div class="og-name">Thiago Zeni</div>
+          </div>
+        </div>
+      </div>
+      <div class="app-meta">
+        <div class="app-name-tag">og image · 1200×630</div>
+        <div class="app-name">Social share</div>
+        <p class="app-note">Variante <b>Solid</b> em canto, com tag/nome no rodapé. Layout limpo — tudo respira. Funciona em Twitter, WhatsApp, LinkedIn, iMessage.</p>
+      </div>
+    </div>
+
+    <!-- Email Signature -->
+    <div class="app">
+      <div class="app-stage">
+        <div class="email">
+          <div class="email-mark">ZN<span class="dot">.</span></div>
+          <div class="email-name">Thiago Zeni</div>
+          <div class="email-role">Marketing · Inovação · IA</div>
+          <div class="email-rule"></div>
+          <a href="#" class="email-link">thiagozeni.com.br</a><br>
+          <a href="#" class="email-link">linkedin.com/in/thiagozeni</a>
+        </div>
+      </div>
+      <div class="app-meta">
+        <div class="app-name-tag">assinatura · email</div>
+        <div class="app-name">Email signature</div>
+        <p class="app-note">Variante <b>Solid</b> sobre fundo branco do cliente de email. HTML inline — sem imagens (clientes bloqueiam). Régua lime de 32×2px assina abaixo do nome.</p>
+      </div>
+    </div>
+
+    <!-- Watermark -->
+    <div class="app">
+      <div class="app-stage">
+        <div class="watermark"><div class="wm-mark">ZN<span class="dot">.</span></div></div>
+      </div>
+      <div class="app-meta">
+        <div class="app-name-tag">watermark · vídeo / foto</div>
+        <div class="app-name">Watermark</div>
+        <p class="app-note">Variante <b>Mono White com 70% opacity</b>, ponto em lime full. Canto inferior direito. Sempre menor do que o conteúdo principal — é assinatura, não logo de canal.</p>
+      </div>
+    </div>
+
+    <!-- Print/Card -->
+    <div class="app">
+      <div class="app-stage" style="background: #F5F5F5;">
+        <div style="background: var(--black); padding: 1.6rem 2rem; border: 1px solid #333; min-width: 240px;">
+          <div style="font-family: var(--font-display); font-weight: 900; font-size: 2.2rem; letter-spacing: -0.08em; color: var(--white); line-height: 0.9;">ZN<span style="color: var(--lime);">.</span></div>
+          <div style="height: 2px; background: var(--lime); width: 24px; margin: 0.7rem 0;"></div>
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: 0.7rem; color: var(--white); letter-spacing: 0.05em;">Thiago Zeni</div>
+          <div style="font-family: var(--font-body); font-size: 0.6rem; color: var(--muted); margin-top: 0.15rem; letter-spacing: 0.04em;">marketing · ia · inovação</div>
+          <div style="margin-top: 0.9rem; font-family: var(--font-mono); font-size: 0.55rem; color: var(--lime); letter-spacing: 0.12em;">thiagozeni.com.br</div>
+        </div>
+      </div>
+      <div class="app-meta">
+        <div class="app-name-tag">cartão · 90×50mm</div>
+        <div class="app-name">Business card</div>
+        <p class="app-note">Variante <b>Solid</b> sobre cartão preto. Régua lime curta como divisor. Verso pode ser puramente lime liso, sem texto — virar objeto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-key">Manual de marca · ZN.</div>
+      <p class="foot-text">
+        Versão 1.0 · 2026-04-27. Manual aplicável ao ecossistema digital e impresso de
+        <b>Thiago Zeni</b> (thiagozeni.com.br) e projetos correlatos do mesmo autor.
+        Para usos não previstos, consultar o brand spec completo em
+        <code style="color:var(--lime);">~/.claude/skills/brand-guide-thiago-zeni/</code>.
+      </p>
+    </div>
+    <div>
+      <div class="foot-key">Variantes</div>
+      <ul class="foot-list">
+        <li>01 · ZN. Solid</li>
+        <li>02 · ZN. Block</li>
+        <li>03 · ZN. Ghost</li>
+        <li>04 · ZN. Split</li>
+        <li>05 · ZN. Mono White</li>
+        <li>06 · ZN. Mono Black</li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-key">Próximos passos</div>
+      <ul class="foot-list">
+        <li>Exportar SVG master</li>
+        <li>Gerar favicons 16/32/192</li>
+        <li>Atualizar OG image do site</li>
+        <li>Aplicar avatar nas redes</li>
+        <li>Criar template de signature</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
