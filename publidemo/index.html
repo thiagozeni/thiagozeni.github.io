@@ -6,6 +6,18 @@
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agenc.ia · Sistema de gestão para agência</title>
+<script>
+(() => {
+  let stored = 'auto';
+  try { stored = localStorage.getItem('theme') || 'auto'; } catch { /* localStorage unavailable */ }
+  let prefersDark = false;
+  try { prefersDark = matchMedia('(prefers-color-scheme: dark)').matches; } catch { /* matchMedia unavailable */ }
+  const resolved = stored === 'auto' ? (prefersDark ? 'dark' : 'light') : stored;
+  const root = document.documentElement;
+  root.dataset.theme = stored;
+  root.dataset.resolved = resolved;
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -44,6 +56,7 @@ html, body { height: 100%; }
     --shadow-card-1:       0 0 0 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.04);
     --shadow-card-2:       0 0 0 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.04), 0 8px 8px -8px rgba(0,0,0,0.04);
     --shadow-focus:        0 0 0 2px hsla(212, 100%, 48%, 0.4);
+    --backdrop:        rgba(0,0,0,0.4);
 
     /* Data ink · cliente sky/indigo/pink */
     --data-sky:        #38bdf8;
@@ -70,6 +83,9 @@ html, body { height: 100%; }
     --warning-soft:    #fef3c7;
     --danger:          #dc2626;
     --danger-soft:     #fee2e2;
+    --success-text:    #166534;
+    --warning-text:    #92400e;
+    --danger-text:     #991b1b;
 
     /* Timer system · família dedicada (verde reaproveita success por convenção)
        Regra: timer = verde em toda superfície de operação · laranja CTA exclusivo
@@ -131,6 +147,92 @@ html, body { height: 100%; }
     --client-other-text: #475569;
 }
 
+/* ============================================================
+   NIGHT MODE · tokens dark
+   Spec: docs/superpowers/specs/2026-05-03-night-mode-design.md
+   Doutrina: timer = verde · CTA = laranja · data = sky/indigo/pink
+   Soft = alpha translúcido · shadow-border = inset claro
+   ============================================================ */
+:root[data-resolved="dark"] {
+    /* Surfaces */
+    --surface-page:    #0a0a0a;
+    --surface-sunken:  #050505;
+    --surface-tint:    #1a1a1a;
+    --surface-inverted:#fafafa;
+
+    /* Ink */
+    --ink-primary:     #fafafa;
+    --ink-secondary:   #d4d4d4;
+    --ink-tertiary:    #a3a3a3;
+    --ink-muted:       #808080;
+    --ink-disabled:    #525252;
+    --on-inverted:     #171717;
+
+    /* Borders */
+    --border:          #262626;
+    --border-strong:   #404040;
+
+    /* Shadows · inset claro substitui sombra preta */
+    --shadow-border:       inset 0 0 0 1px rgba(255,255,255,0.08);
+    --shadow-border-light: inset 0 0 0 1px #262626;
+    --shadow-card-1:       inset 0 0 0 1px rgba(255,255,255,0.08);
+    --shadow-card-2:       inset 0 0 0 1px rgba(255,255,255,0.08), 0 8px 24px rgba(0,0,0,0.4);
+    --shadow-focus:        0 0 0 2px hsla(212, 100%, 60%, 0.5);
+    --backdrop:        rgba(0,0,0,0.6);
+
+    /* Data ink · cliente */
+    --data-sky:        #38bdf8;
+    --data-sky-soft:   rgba(56, 189, 248, 0.14);
+    --data-sky-text:   #7dd3fc;
+    --data-indigo:     #a5b4fc;
+    --data-indigo-soft:rgba(129, 140, 248, 0.16);
+    --data-indigo-text:#c7d2fe;
+    --data-pink:       #f9a8d4;
+    --data-pink-soft:  rgba(244, 114, 182, 0.16);
+    --data-pink-text:  #fbcfe8;
+
+    --client-other:      #cbd5e1;                    /* sobe de #94a3b8 */
+    --client-other-soft: rgba(148, 163, 184, 0.16);  /* alpha translúcido */
+    --client-other-text: #e2e8f0;                    /* texto claro sobre soft */
+
+    /* CTA · laranja preservado */
+    --cta:             #ff7849;
+    --cta-hover:       #ff8a5a;
+    --cta-press:       #e66437;
+    --cta-soft:        rgba(255, 120, 73, 0.16);
+    --on-cta:          #1a0d05;
+
+    /* Status */
+    --success:         #22c55e;
+    --success-soft:    rgba(34, 197, 94, 0.16);
+    --warning:         #fbbf24;
+    --warning-soft:    rgba(245, 158, 11, 0.16);
+    --danger:          #f87171;
+    --danger-soft:     rgba(220, 38, 38, 0.18);
+    --success-text:    #86efac;
+    --warning-text:    #fcd34d;
+    --danger-text:     #fca5a5;
+
+    /* Timer · doutrina cromática preservada */
+    --timer-primary:        #22c55e;
+    --timer-primary-soft:   rgba(34, 197, 94, 0.16);
+    --timer-primary-text:   #86efac;
+    --timer-primary-line:   rgba(34, 197, 94, 0.36);
+    --timer-primary-line-strong: rgba(34, 197, 94, 0.5);
+    --timer-primary-hover:  rgba(34, 197, 94, 0.22);
+    --timer-paused:         #fbbf24;
+    --timer-paused-soft:    rgba(245, 158, 11, 0.16);
+    --timer-paused-text:    #fcd34d;
+    --timer-paused-line:    rgba(245, 158, 11, 0.4);
+    --timer-paused-hover:   rgba(245, 158, 11, 0.2);
+    --timer-other:          #fbbf24;
+    --timer-other-soft:     rgba(245, 158, 11, 0.16);
+    --timer-other-text:     #fcd34d;
+    --timer-other-line:     rgba(245, 158, 11, 0.4);
+    --timer-locked:         #525252;
+    --timer-stop:           #f87171;
+}
+
 /* === A11y: focus visível em interativos === */
 *:focus-visible {
     outline: 2px solid var(--data-sky);
@@ -164,6 +266,7 @@ body {
     text-rendering: optimizeLegibility;
     font-feature-settings: "liga" 1, "cv11" 1;
     line-height: 1.5;
+    transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
 }
 
 /* === Layout shell === */
@@ -528,13 +631,13 @@ body {
 .kpi[data-color="indigo"] .kpi-num { color: var(--data-indigo-text); }
 .kpi[data-color="warn"] {
     box-shadow: 0 0 0 1px rgba(245,158,11,0.35), 0 2px 2px rgba(245,158,11,0.05);
-    background: linear-gradient(180deg, rgba(254,243,199,0.4), transparent 30%);
+    background: linear-gradient(180deg, var(--warning-soft), transparent 30%);
 }
-.kpi[data-color="warn"] .kpi-num { color: #92400e; }
-.kpi[data-color="warn"] .kpi-label { color: #92400e; }
+.kpi[data-color="warn"] .kpi-num { color: var(--warning-text); }
+.kpi[data-color="warn"] .kpi-label { color: var(--warning-text); }
 .kpi[data-color="danger"] {
     box-shadow: 0 0 0 1px rgba(220,38,38,0.3), 0 2px 2px rgba(220,38,38,0.05);
-    background: linear-gradient(180deg, rgba(254,226,226,0.5), transparent 30%);
+    background: linear-gradient(180deg, var(--danger-soft), transparent 30%);
 }
 .kpi[data-color="danger"] .kpi-num { color: var(--danger); }
 .kpi[data-color="danger"] .kpi-label { color: var(--danger); }
@@ -597,7 +700,7 @@ body {
     display: inline-flex; align-items: center; gap: 1px;
     color: var(--ink-muted); font-weight: 600;
 }
-.kpi-week .d.ok   { color: #16a34a; }
+.kpi-week .d.ok   { color: var(--success); }
 .kpi-week .d.miss { color: var(--warning); font-weight: 700; }
 .kpi-week .d.future { color: var(--ink-disabled); }
 
@@ -631,6 +734,9 @@ body {
     padding: 1px 6px; border-radius: 4px;
     background: rgba(255,255,255,0.6); color: var(--ink-tertiary);
     margin-left: 4px;
+}
+:root[data-resolved="dark"] .timer-cta .kbd {
+    background: rgba(0,0,0,0.32); color: currentColor; opacity: 0.85;
 }
 .timer-cta .hint {
     font-weight: 400; font-size: 11px;
@@ -741,9 +847,9 @@ body {
 .timer-pill-menu {
     position: absolute; top: calc(100% + 6px); right: 0;
     min-width: 220px;
-    background: var(--surface-page);
+    background: var(--surface-tint);
     border-radius: var(--radius-md);
-    box-shadow: 0 12px 32px rgba(15,23,42,0.18), 0 2px 6px rgba(15,23,42,0.06);
+    box-shadow: var(--shadow-card-2);
     padding: 4px;
     opacity: 0; visibility: hidden; pointer-events: none;
     transform: translateY(-4px);
@@ -800,7 +906,7 @@ body {
 /* Running */
 .timer-pill.running {
     background: rgba(22, 163, 74, 0.08);
-    color: #15803d;
+    color: var(--timer-primary-text);
     box-shadow: inset 0 0 0 1px rgba(22, 163, 74, 0.18);
     padding: 0 4px 0 12px;
     gap: 0;
@@ -820,7 +926,7 @@ body {
     margin-right: 10px;
 }
 .timer-pill.running .time {
-    font-family: var(--font-mono); font-weight: 600; color: #15803d;
+    font-family: var(--font-mono); font-weight: 600; color: var(--timer-primary-text);
     margin-right: 8px;
     font-feature-settings: "tnum" 1;
 }
@@ -829,7 +935,7 @@ body {
     border: none;
     background: rgba(22, 163, 74, 0.12);
     border-radius: 50%;
-    color: #15803d;
+    color: var(--timer-primary-text);
     display: grid; place-items: center;
     cursor: pointer;
     transition: background var(--motion-fast) var(--ease-standard), color var(--motion-fast) var(--ease-standard);
@@ -844,7 +950,7 @@ body {
     box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.25);
 }
 .timer-pill.warn .pulse-dot { background: #f59e0b; }
-.timer-pill.warn .time { color: #92400e; }
+.timer-pill.warn .time { color: var(--warning-text); }
 
 /* ============= QUICK-START ▶ em listas de tarefa ============= */
 .ctask { position: relative; }
@@ -862,8 +968,8 @@ body {
     z-index: 2;
 }
 .ctask:hover .task-quickstart, .task-block:hover .task-quickstart { opacity: 1; }
-.task-quickstart:hover { background: rgba(22,163,74,0.12); color: #15803d; }
-.task-quickstart.active { opacity: 1; background: rgba(22,163,74,0.12); color: #15803d; }
+.task-quickstart:hover { background: rgba(22,163,74,0.12); color: var(--timer-primary-text); }
+.task-quickstart.active { opacity: 1; background: rgba(22,163,74,0.12); color: var(--timer-primary-text); }
 .task-quickstart svg { width: 12px; height: 12px; }
 .task-block { position: relative; }
 
@@ -880,9 +986,9 @@ body {
     transform: translateX(180px) translateY(-4px);
     z-index: 230;
     width: 380px;
-    background: var(--surface-page);
+    background: var(--surface-tint);
     border-radius: var(--radius-md);
-    box-shadow: 0 16px 48px rgba(15,23,42,0.18), 0 4px 12px rgba(15,23,42,0.08);
+    box-shadow: var(--shadow-card-2);
     opacity: 0; visibility: hidden; pointer-events: none;
     transition: opacity var(--motion-base) var(--ease-out), transform var(--motion-base) var(--ease-out), visibility var(--motion-base) var(--ease-out);
 }
@@ -985,7 +1091,7 @@ body {
 .meu-dia-entry:hover { filter: brightness(1.02); }
 .meu-dia-entry.locked { background: var(--surface-page); border: 1px solid var(--border); }
 .meu-dia-entry.draft { background: var(--data-indigo-soft); color: var(--data-indigo-text); }
-.meu-dia-entry.running { background: var(--success-soft); color: #166534; box-shadow: inset 0 0 0 1px rgba(22,163,74,0.4); }
+.meu-dia-entry.running { background: var(--success-soft); color: var(--success-text); box-shadow: inset 0 0 0 1px rgba(22,163,74,0.4); }
 .meu-dia-entry .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; background: currentColor; opacity: 0.7; }
 .meu-dia-entry.running .dot { background: var(--success); animation: meudiaPulse 1.6s var(--ease-out) infinite; opacity: 1; }
 @keyframes meudiaPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
@@ -1013,7 +1119,7 @@ body {
 /* ============= SWITCH DIALOG · troca de task ============= */
 .switch-dialog-backdrop {
     position: fixed; inset: 0; z-index: 240;
-    background: rgba(15, 23, 42, 0.32);
+    background: var(--backdrop);
     opacity: 0; visibility: hidden;
     transition: opacity var(--motion-base) var(--ease-out), visibility var(--motion-base) var(--ease-out);
 }
@@ -1023,9 +1129,9 @@ body {
     transform: translate(-50%, -48%) scale(0.98);
     z-index: 250;
     width: 380px;
-    background: var(--surface-page);
+    background: var(--surface-tint);
     border-radius: var(--radius-md);
-    box-shadow: 0 20px 56px rgba(15,23,42,0.24), 0 6px 16px rgba(15,23,42,0.10);
+    box-shadow: var(--shadow-card-2);
     opacity: 0; visibility: hidden; pointer-events: none;
     transition: opacity var(--motion-base) var(--ease-out), transform var(--motion-base) var(--ease-out), visibility var(--motion-base) var(--ease-out);
 }
@@ -1133,8 +1239,8 @@ body {
 }
 .ai-slash-menu {
     position: absolute; left: 100px; margin-top: -4px;
-    width: 320px; background: var(--surface-page);
-    border-radius: var(--radius-md); box-shadow: 0 12px 32px rgba(15,23,42,0.18), 0 2px 6px rgba(15,23,42,0.08);
+    width: 320px; background: var(--surface-tint);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-card-2);
     overflow: hidden; z-index: 5;
 }
 .ai-slash-header {
@@ -1266,7 +1372,7 @@ body {
 .check:hover { box-shadow: 0 0 0 1px var(--ink-tertiary); }
 
 .check.done {
-    background: var(--ink-primary);
+    background: var(--surface-inverted);
     box-shadow: var(--shadow-border);
     position: relative;
     animation: check-pop var(--motion-base) var(--ease-out-expo);
@@ -1279,7 +1385,7 @@ body {
     left: 4px;
     width: 8px;
     height: 4px;
-    border-left: 1.5px solid white;
+    border-left: 1.5px solid var(--on-inverted);
     border-bottom: 1.5px solid white;
     transform: rotate(-45deg);
     animation: check-draw var(--motion-base) var(--ease-out-expo);
@@ -1348,8 +1454,8 @@ body {
 .chip.sky    { background: var(--data-sky-soft);    color: var(--data-sky-text);    box-shadow: none; }
 .chip.indigo { background: var(--data-indigo-soft); color: var(--data-indigo-text); box-shadow: none; }
 .chip.pink   { background: var(--data-pink-soft);   color: var(--data-pink-text);   box-shadow: none; }
-.chip.warning{ background: var(--warning-soft);     color: #92400e;                 box-shadow: none; }
-.chip.success{ background: var(--success-soft);     color: #166534;                 box-shadow: none; }
+.chip.warning{ background: var(--warning-soft);     color: var(--warning-text);     box-shadow: none; }
+.chip.success{ background: var(--success-soft);     color: var(--success-text);     box-shadow: none; }
 
 /* === Approval list === */
 .appr-row {
@@ -1427,7 +1533,7 @@ body {
 
 .appr-btn:hover { box-shadow: var(--shadow-card-1); }
 
-.appr-btn.approve { background: var(--success-soft); color: #166534; box-shadow: none; }
+.appr-btn.approve { background: var(--success-soft); color: var(--success-text); box-shadow: none; }
 .appr-btn.approve:hover { background: var(--success); color: white; }
 
 .appr-btn.reject { background: var(--danger-soft); color: var(--danger); box-shadow: none; }
@@ -1692,8 +1798,8 @@ body {
 .task-block.sky    { background: var(--data-sky-soft);    color: var(--data-sky-text);    box-shadow: none; }
 .task-block.indigo { background: var(--data-indigo-soft); color: var(--data-indigo-text); box-shadow: none; }
 .task-block.pink   { background: var(--data-pink-soft);   color: var(--data-pink-text);   box-shadow: none; }
-.task-block.warning{ background: var(--warning-soft);     color: #92400e;                 box-shadow: none; }
-.task-block.success{ background: var(--success-soft);     color: #166534;                 box-shadow: none; }
+.task-block.warning{ background: var(--warning-soft);     color: var(--warning-text);     box-shadow: none; }
+.task-block.success{ background: var(--success-soft);     color: var(--success-text);     box-shadow: none; }
 .task-block.muted  { color: var(--ink-muted); background: transparent; box-shadow: none; font-style: italic; }
 
 /* Pipeline legend */
@@ -1717,6 +1823,31 @@ body {
 /* Copilot variants */
 .copilot-inline.warning .copilot-icon { background: rgba(245,158,11,0.15); color: var(--warning); }
 .copilot-inline.warning .copilot-text strong { color: var(--warning); }
+
+/* Dark mode · .copilot-inline foi desenhado como hero invertido (papel escuro
+   sobre página clara). Em dark, o "papel invertido" vira branco e o texto
+   ficaria branco-em-branco. Aqui re-tonamos a superfície pra surface-tint
+   (papel discreto sobre página) e re-tonamos os filhos pra ink claros. */
+:root[data-resolved="dark"] .copilot-inline {
+    background: var(--surface-tint);
+    color: var(--ink-primary);
+}
+:root[data-resolved="dark"] .copilot-inline .copilot-icon {
+    background: rgba(255,255,255,0.08);
+}
+:root[data-resolved="dark"] .copilot-inline .copilot-text {
+    color: var(--ink-secondary);
+}
+:root[data-resolved="dark"] .copilot-inline .copilot-text strong {
+    color: var(--data-sky-text);
+}
+:root[data-resolved="dark"] .copilot-inline.warning .copilot-icon {
+    background: rgba(251,191,36,0.16);
+    color: var(--warning);
+}
+:root[data-resolved="dark"] .copilot-inline.warning .copilot-text strong {
+    color: var(--warning-text);
+}
 
 /* === Toolbar (search + filters + actions) === */
 .toolbar {
@@ -1771,6 +1902,37 @@ body {
 .btn.ghost-light:hover { box-shadow: var(--shadow-card-1); }
 
 .filter-pill.sm { padding: 4px 10px; font-size: 11px; }
+
+/* Logo de cliente uploadado — chip branco protege a marca em dark mode.
+   background: #ffffff é literal (não token) — papel branco sobrevive ao tema. */
+.logo-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-border-light);
+}
+.logo-chip img,
+.logo-chip svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Mídia intocável (criativos, screenshots, decks) — moldura sutil pra
+   sobreviver em dark sem mexer no conteúdo. background: #ffffff literal. */
+.creative,
+.screenshot,
+.asset-preview,
+.deck-preview,
+img.creative,
+img.screenshot {
+    outline: 1px solid var(--border);
+    border-radius: 6px;
+    background: #ffffff;
+}
 
 /* === Clientes grid === */
 .clientes-grid {
@@ -1908,15 +2070,24 @@ body {
     background: var(--ink-tertiary);
 }
 
-.status-pill.success { background: var(--success-soft); color: #166534; box-shadow: none; }
+.status-pill.success { background: var(--success-soft); color: var(--success-text); box-shadow: none; }
 .status-pill.success::before { background: var(--success); }
-.status-pill.warning { background: var(--warning-soft); color: #92400e; box-shadow: none; }
+.status-pill.warning { background: var(--warning-soft); color: var(--warning-text); box-shadow: none; }
 .status-pill.warning::before { background: var(--warning); }
 .status-pill.danger  { background: var(--danger-soft);  color: var(--danger); box-shadow: none; }
 .status-pill.danger::before { background: var(--danger); }
 .status-pill.sky     { background: var(--data-sky-soft); color: var(--data-sky-text); box-shadow: none; }
 .status-pill.sky::before { background: var(--data-sky); }
 .status-pill.indigo  { background: var(--data-indigo-soft); color: var(--data-indigo-text); box-shadow: none; }
+/* Pills sobre gradients brand-locked · texto e dot via inline custom props */
+.status-pill.on-gradient {
+    background: rgba(255,255,255,0.92);
+    color: var(--pill-text, #171717);
+    box-shadow: none;
+}
+.status-pill.on-gradient::before {
+    background: var(--pill-dot, var(--pill-text, #171717));
+}
 .status-pill.indigo::before { background: var(--data-indigo); }
 
 /* === Projetos table === */
@@ -1951,8 +2122,8 @@ body {
 
 .proj-row:last-child { border-bottom: none; }
 .proj-row:hover { background: var(--surface-sunken); cursor: pointer; }
-.proj-row.row-danger { background: linear-gradient(90deg, rgba(254,226,226,0.6) 0%, transparent 60%); }
-.proj-row.row-danger:hover { background: linear-gradient(90deg, rgba(254,226,226,0.7) 0%, var(--surface-sunken) 60%); }
+.proj-row.row-danger { background: linear-gradient(90deg, var(--danger-soft) 0%, transparent 60%); }
+.proj-row.row-danger:hover { background: linear-gradient(90deg, var(--danger-soft) 0%, var(--surface-sunken) 60%); }
 
 .proj-head-row {
     background: var(--surface-sunken);
@@ -2108,7 +2279,7 @@ body {
 .inbox-source.l  { background: linear-gradient(135deg, #f472b6, #9f1f5c); }
 .inbox-source.b  { background: linear-gradient(135deg, #16a34a, #15803d); }
 .inbox-source.f  { background: linear-gradient(135deg, #ff7849, #e66437); }
-.inbox-source.s  { background: var(--ink-primary); }
+.inbox-source.s  { background: var(--surface-inverted); color: var(--on-inverted); }
 .inbox-source.wa { background: linear-gradient(135deg, #25D366, #128C7E); }
 
 .inbox-msg { min-width: 0; }
@@ -2319,7 +2490,7 @@ body {
 .midia-block.indigo { background: var(--data-indigo-soft); color: var(--data-indigo-text); }
 .midia-block.pink   { background: var(--data-pink-soft);   color: var(--data-pink-text); }
 .midia-block.cta    { background: var(--cta-soft);         color: var(--cta-press); }
-.midia-block.warn   { background: var(--warning-soft);     color: #92400e; }
+.midia-block.warn   { background: var(--warning-soft);     color: var(--warning-text); }
 .midia-block.neutral{ background: #f1f5f9;                 color: #475569; }
 .midia-block.muted  { background: transparent; color: var(--ink-muted); border: 1px dashed var(--border); font-style: italic; }
 
@@ -2594,7 +2765,7 @@ body {
     padding: 4px 12px 4px 10px;
     border-radius: var(--radius-pill);
     background: var(--success-soft);
-    color: #166534;
+    color: var(--success-text);
     font-family: var(--font-mono);
     font-size: 11px;
     font-weight: 600;
@@ -3413,13 +3584,13 @@ body {
     width: 48px;
     height: 48px;
     border-radius: var(--radius-pill);
-    background: var(--ink-primary);
-    color: white;
+    background: var(--surface-inverted);
+    color: var(--on-inverted);
     border: none;
     cursor: pointer;
     display: grid;
     place-items: center;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-card-2);
     z-index: 60;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     font-size: 20px;
@@ -3494,7 +3665,7 @@ body {
     width: 28px;
     height: 28px;
     border-radius: var(--radius-pill);
-    background: var(--ink-primary);
+    background: var(--surface-inverted);
     color: var(--data-sky);
     display: grid;
     place-items: center;
@@ -3569,7 +3740,7 @@ body {
     border-radius: var(--radius-sm);
 }
 
-.copilot-tip-cat.warn { color: #92400e; background: var(--warning-soft); }
+.copilot-tip-cat.warn { color: var(--warning-text); background: var(--warning-soft); }
 .copilot-tip-cat.danger { color: var(--danger); background: var(--danger-soft); }
 
 .copilot-tip-time {
@@ -3645,7 +3816,7 @@ body {
 .drawer-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(23, 23, 23, 0.4);
+    background: var(--backdrop);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.25s, visibility 0.25s;
@@ -4063,7 +4234,7 @@ body {
 
 .empty-success-text {
     font-size: 13px;
-    color: #166534;
+    color: var(--success-text);
     line-height: 1.45;
 }
 
@@ -4092,7 +4263,7 @@ body {
     .sidebar-backdrop {
         position: fixed;
         inset: var(--header-h) 0 0 0;
-        background: rgba(0,0,0,0.3);
+        background: var(--backdrop);
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s, visibility 0.2s;
@@ -4151,7 +4322,7 @@ body {
 
 .cmdk-backdrop {
     position: fixed; inset: 0; z-index: 200;
-    background: rgba(15, 23, 42, 0.42); backdrop-filter: blur(4px);
+    background: var(--backdrop); backdrop-filter: blur(4px);
     opacity: 0; visibility: hidden;
     transition: opacity var(--motion-base) var(--ease-standard), visibility var(--motion-base) var(--ease-standard);
 }
@@ -4161,8 +4332,8 @@ body {
     position: fixed; top: 14vh; left: 50%; transform: translateX(-50%) scale(0.97);
     z-index: 210; width: min(640px, calc(100vw - 32px));
     max-height: 64vh; display: flex; flex-direction: column;
-    background: var(--surface-page); border-radius: var(--radius-lg);
-    box-shadow: 0 20px 60px rgba(15,23,42,0.25), 0 4px 12px rgba(15,23,42,0.1);
+    background: var(--surface-tint); border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card-2);
     opacity: 0; visibility: hidden; pointer-events: none;
     transition: opacity var(--motion-base) var(--ease-out), transform var(--motion-base) var(--ease-out), visibility var(--motion-base) var(--ease-out);
 }
@@ -4224,6 +4395,43 @@ body {
 @media (max-width: 760px) {
     .cmdk-trigger { min-width: 0; padding: 6px 10px; }
     .cmdk-trigger > span:nth-child(2) { display: none; }
+}
+
+/* Theme toggle · toast + indicador de tema ativo no Cmd+K */
+.theme-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--surface-tint);
+    color: var(--ink-primary);
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-card-1);
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    pointer-events: none;
+}
+.theme-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cmdk-item[data-action^="theme-"]::after {
+    content: '';
+    margin-left: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+    flex-shrink: 0;
+}
+.cmdk-item[data-action="theme-auto"][data-active]::after,
+.cmdk-item[data-action="theme-light"][data-active]::after,
+.cmdk-item[data-action="theme-dark"][data-active]::after {
+    background: var(--ink-primary);
 }
 </style>
 </head>
@@ -4567,11 +4775,11 @@ body {
 
             <div class="pipeline-legend">
                 <span style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--ink-secondary);margin-right:4px">CORES = TIPO DE TAREFA ·</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#e0f2fe"></span>Mídia</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#eef2ff"></span>Criação</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#fef3c7"></span>Atendimento</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#fce7f3"></span>Planejamento</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#fafafa;box-shadow:inset 0 0 0 1px #ebebeb"></span>Outros</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--data-sky-soft)"></span>Mídia</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--data-indigo-soft)"></span>Criação</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--warning-soft)"></span>Atendimento</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--data-pink-soft)"></span>Planejamento</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--surface-sunken);box-shadow:inset 0 0 0 1px var(--border)"></span>Outros</span>
             </div>
 
             <div class="pipeline-wrap">
@@ -5031,7 +5239,7 @@ body {
                 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
                     <div class="card" data-lens-target="campanha" style="cursor:pointer;padding:0;overflow:hidden">
                         <div style="height:64px;background:linear-gradient(135deg,#DC2626 0%,#EA580C 50%,#EAB308 100%);display:flex;align-items:flex-end;padding:10px 12px">
-                            <span class="status-pill" style="background:rgba(255,255,255,0.92);color:#7C2D12;font-weight:600">Em produção · 35%</span>
+                            <span class="status-pill on-gradient" style="--pill-text:#7C2D12;--pill-dot:#7C2D12;font-weight:600">Em produção · 35%</span>
                         </div>
                         <div style="padding:12px">
                             <div style="font-size:13px;font-weight:600;letter-spacing:-0.005em;margin-bottom:4px">Campanha São João JBL 2026</div>
@@ -5045,7 +5253,7 @@ body {
 
                     <div class="card" style="cursor:pointer;padding:0;overflow:hidden;opacity:0.92">
                         <div style="height:64px;background:linear-gradient(135deg,#7C3AED 0%,#EC4899 60%,#F97316 100%);display:flex;align-items:flex-end;padding:10px 12px">
-                            <span class="status-pill warning" style="background:rgba(255,255,255,0.92)">Atenção · criativos atrasados</span>
+                            <span class="status-pill on-gradient" style="--pill-text:#92400e;--pill-dot:#f59e0b">Atenção · criativos atrasados</span>
                         </div>
                         <div style="padding:12px">
                             <div style="font-size:13px;font-weight:600;letter-spacing:-0.005em;margin-bottom:4px">Dia das Mães JBL</div>
@@ -5059,7 +5267,7 @@ body {
 
                     <div class="card" style="cursor:pointer;padding:0;overflow:hidden;opacity:0.92">
                         <div style="height:64px;background:linear-gradient(135deg,#0891B2 0%,#0EA5E9 60%,#6366F1 100%);display:flex;align-items:flex-end;padding:10px 12px">
-                            <span class="status-pill sky" style="background:rgba(255,255,255,0.92)">No ar · semana 6</span>
+                            <span class="status-pill on-gradient" style="--pill-text:#075985;--pill-dot:#0EA5E9">No ar · semana 6</span>
                         </div>
                         <div style="padding:12px">
                             <div style="font-size:13px;font-weight:600;letter-spacing:-0.005em;margin-bottom:4px">STIHL · Baterias Always-On</div>
@@ -5084,13 +5292,13 @@ body {
 
             <div class="pipeline-legend">
                 <span style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--ink-secondary);margin-right:4px">CORES = CLIENTE ·</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#e0f2fe"></span>STIHL</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#eef2ff"></span>CINEX</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#fce7f3"></span>fornecedor</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#f1f5f9;box-shadow:inset 0 0 0 1px #ebebeb"></span>outros</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--data-sky-soft)"></span>STIHL</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--data-indigo-soft)"></span>CINEX</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--data-pink-soft)"></span>fornecedor</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--client-other-soft);box-shadow:inset 0 0 0 1px var(--border)"></span>outros</span>
                 <span class="pipeline-legend-item" style="margin-left:8px;padding-left:12px;border-left:1px solid var(--border);font-family:var(--font-mono);font-size:10px;color:var(--ink-secondary);font-weight:700;letter-spacing:0.08em">STATUS ·</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:#fef3c7"></span>NFS-e pendente</span>
-                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:transparent;border:1px dashed #d4d4d4"></span>planejado</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:var(--warning-soft)"></span>NFS-e pendente</span>
+                <span class="pipeline-legend-item"><span class="pipeline-legend-swatch" style="background:transparent;border:1px dashed var(--border-strong)"></span>planejado</span>
             </div>
 
             <div class="midia-wrap">
@@ -5257,7 +5465,7 @@ body {
                 <div class="cashflow-head">
                     <div class="cashflow-title">Fluxo de caixa projetado · 60 dias</div>
                     <div class="cashflow-meta">
-                        <span style="display:inline-flex; align-items:center; gap:5px; margin-right:14px"><span style="display:inline-block; width:14px; height:2px; background:#171717"></span>confirmado</span>
+                        <span style="display:inline-flex; align-items:center; gap:5px; margin-right:14px"><span style="display:inline-block; width:14px; height:2px; background:var(--ink-primary)"></span>confirmado</span>
                         <span style="display:inline-flex; align-items:center; gap:5px"><span style="display:inline-block; width:14px; height:0; border-top:2px dashed #38bdf8"></span><span style="font-family:var(--font-mono); color:var(--data-sky-text)">✦ previsão IA</span></span>
                     </div>
                 </div>
@@ -5268,19 +5476,19 @@ body {
                             <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
                         </linearGradient>
                         <linearGradient id="cfgInk" x1="0" x2="0" y1="0" y2="1">
-                            <stop offset="0" stop-color="#171717" stop-opacity="0.08"/>
-                            <stop offset="1" stop-color="#171717" stop-opacity="0"/>
+                            <stop offset="0" style="stop-color:var(--ink-primary)" stop-opacity="0.08"/>
+                            <stop offset="1" style="stop-color:var(--ink-primary)" stop-opacity="0"/>
                         </linearGradient>
                     </defs>
-                    <line x1="50" y1="40" x2="780" y2="40" stroke="#ebebeb" stroke-width="1"/>
-                    <line x1="50" y1="100" x2="780" y2="100" stroke="#ebebeb" stroke-width="1"/>
-                    <line x1="50" y1="160" x2="780" y2="160" stroke="#ebebeb" stroke-width="1"/>
+                    <line x1="50" y1="40" x2="780" y2="40" style="stroke:var(--border)" stroke-width="1"/>
+                    <line x1="50" y1="100" x2="780" y2="100" style="stroke:var(--border)" stroke-width="1"/>
+                    <line x1="50" y1="160" x2="780" y2="160" style="stroke:var(--border)" stroke-width="1"/>
                     <text x="6" y="44" font-size="10" fill="#808080" font-family="JetBrains Mono">R$ 800k</text>
                     <text x="6" y="104" font-size="10" fill="#808080" font-family="JetBrains Mono">R$ 400k</text>
                     <text x="6" y="164" font-size="10" fill="#808080" font-family="JetBrains Mono">R$ 0</text>
 
                     <path d="M50,150 L100,140 L150,135 L200,120 L250,110 L300,90 L350,80 L350,200 L50,200 Z" fill="url(#cfgInk)"/>
-                    <path d="M50,150 L100,140 L150,135 L200,120 L250,110 L300,90 L350,80" fill="none" stroke="#171717" stroke-width="2"/>
+                    <path d="M50,150 L100,140 L150,135 L200,120 L250,110 L300,90 L350,80" fill="none" style="stroke:var(--ink-primary)" stroke-width="2"/>
 
                     <path d="M350,80 L400,70 L450,60 L500,55 L550,45 L600,50 L650,40 L700,38 L750,32 L750,200 L350,200 Z" fill="url(#cfgSky)"/>
                     <path d="M350,80 L400,70 L450,60 L500,55 L550,45 L600,50 L650,40 L700,38 L750,32" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3"/>
@@ -5294,7 +5502,7 @@ body {
                     <text x="650" y="190" font-size="10" fill="#808080" font-family="JetBrains Mono">+30d</text>
                     <text x="730" y="190" font-size="10" fill="#808080" font-family="JetBrains Mono">+60d</text>
 
-                    <circle cx="350" cy="80" r="3.5" fill="#171717"/>
+                    <circle cx="350" cy="80" r="3.5" style="fill:var(--ink-primary)"/>
                     <circle cx="500" cy="55" r="3.5" fill="#38bdf8"/>
                     <circle cx="650" cy="40" r="3.5" fill="#38bdf8"/>
                 </svg>
@@ -6096,12 +6304,12 @@ body {
                             <strong style="display:block;margin-bottom:10px">Sinais do Copilot · esta semana</strong>
                             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
                                 <div class="card" style="padding:14px;border-left:3px solid #16A34A">
-                                    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#15803D;font-weight:600;margin-bottom:6px">✦ OPORTUNIDADE</div>
+                                    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--success-text);font-weight:600;margin-bottom:6px">✦ OPORTUNIDADE</div>
                                     <div style="font-size:13px;line-height:1.4;margin-bottom:8px"><strong>JBL Car Audio</strong> aparece em 3 briefings da Harman EUA mas nunca foi rodado no Brasil — janela de upsell.</div>
                                     <button class="btn ghost-light sm">Pautar com Estefania</button>
                                 </div>
                                 <div class="card" style="padding:14px;border-left:3px solid #DC2626">
-                                    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#991B1B;font-weight:600;margin-bottom:6px">⚠ RISCO</div>
+                                    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--danger-text);font-weight:600;margin-bottom:6px">⚠ RISCO</div>
                                     <div style="font-size:13px;line-height:1.4;margin-bottom:8px">Dia das Mães JBL (AHR-0042/26) com criativos atrasados 2 dias — prazo de mídia paga é 06/05.</div>
                                     <button class="btn ghost-light sm">Abrir projeto</button>
                                 </div>
@@ -6491,7 +6699,7 @@ body {
                                             <div style="display:flex;align-items:center;gap:8px;font-size:13px"><span style="width:18px;height:18px;border-radius:50%;background:var(--success);color:white;display:grid;place-items:center;font-size:10px;font-weight:700">✓</span>Cruzar com itens em fila de aprovação da Mariana <span class="mono" style="margin-left:auto;color:var(--ink-muted);font-size:10px">3 itens</span></div>
                                             <div style="display:flex;align-items:center;gap:8px;font-size:13px"><span style="width:18px;height:18px;border-radius:50%;background:var(--warning);color:white;display:grid;place-items:center;font-size:10px;font-weight:700">!</span>Gerar rascunho de e-mail e <strong>aguardar sua aprovação</strong> antes de enviar</div>
                                         </div>
-                                        <div style="background:white;border-radius:var(--radius-sm);padding:10px 12px;font-size:12px;line-height:1.5;box-shadow:var(--shadow-border);margin-bottom:10px">
+                                        <div style="background:var(--surface-page);border-radius:var(--radius-sm);padding:10px 12px;font-size:12px;line-height:1.5;box-shadow:var(--shadow-border);margin-bottom:10px">
                                             <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-muted);margin-bottom:6px">PARA mariana@harman.com · ASSUNTO 3 aprovações pendentes · São João JBL</div>
                                             Oi Mariana, tudo bem?<br><br>Tem 3 itens da campanha São João JBL parados na sua fila há mais de 48h: <strong>vídeo manifesto 60s</strong>, <strong>carrossel produtos</strong> e <strong>OOH outdoor 9x3m</strong>. Como o go-live é dia 15/05 e o prazo de envio de arte da OOH é dia 09, queria conferir se posso te ajudar com algum bloqueio.<br><br>Abraço,<br>Estefania
                                         </div>
@@ -6563,7 +6771,7 @@ body {
                         <div style="display:flex;gap:8px;align-items:center;background:var(--surface-sunken);border-radius:var(--radius-md);padding:10px 12px">
                             <span style="color:var(--ink-muted);font-size:14px">✦</span>
                             <input style="flex:1;border:none;background:transparent;outline:none;font-family:var(--font-sans);font-size:13px;color:var(--ink-primary)" placeholder="Pergunte · peça uma ação · @ pra mencionar cliente, projeto, pessoa…">
-                            <span class="mono" style="font-size:10px;color:var(--ink-muted);background:white;padding:2px 6px;border-radius:var(--radius-sm);box-shadow:var(--shadow-border)">⌘ K</span>
+                            <span class="mono" style="font-size:10px;color:var(--ink-muted);background:var(--surface-page);padding:2px 6px;border-radius:var(--radius-sm);box-shadow:var(--shadow-border)">⌘ K</span>
                             <button class="btn cta sm">Enviar</button>
                         </div>
                         <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
@@ -6826,17 +7034,17 @@ body {
                             <strong style="display:block;margin-bottom:10px">Sinais do Copilot</strong>
                             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
                                 <div class="card" style="padding:14px;border-left:3px solid #DC2626">
-                                    <div style="font-size:11px;color:#991B1B;font-weight:600;margin-bottom:6px">⚠ CRÍTICO</div>
+                                    <div style="font-size:11px;color:var(--danger-text);font-weight:600;margin-bottom:6px">⚠ CRÍTICO</div>
                                     <div style="font-size:13px;line-height:1.4;margin-bottom:8px">OOH regional Norte/Nordeste sem fornecedor confirmado · prazo de envio de arte é 09/05.</div>
                                     <button class="btn ghost-light sm">Abrir veiculação</button>
                                 </div>
                                 <div class="card" style="padding:14px;border-left:3px solid #EAB308">
-                                    <div style="font-size:11px;color:#92400E;font-weight:600;margin-bottom:6px">⏱ APROVAÇÃO TRAVADA</div>
+                                    <div style="font-size:11px;color:var(--warning-text);font-weight:600;margin-bottom:6px">⏱ APROVAÇÃO TRAVADA</div>
                                     <div style="font-size:13px;line-height:1.4;margin-bottom:8px">Vídeo manifesto 60s aguarda Rafael Cavalcanti há 71h. Padrão dele é &lt;6h.</div>
                                     <button class="btn cta sm">Gerar follow-up <span class="btn-key">↵</span></button>
                                 </div>
                                 <div class="card" style="padding:14px;border-left:3px solid #16A34A">
-                                    <div style="font-size:11px;color:#15803D;font-weight:600;margin-bottom:6px">✦ PADRÃO HISTÓRICO</div>
+                                    <div style="font-size:11px;color:var(--success-text);font-weight:600;margin-bottom:6px">✦ PADRÃO HISTÓRICO</div>
                                     <div style="font-size:13px;line-height:1.4;margin-bottom:8px">Festa Junina 2024 e 2025 entregaram +18% e +22% vs meta. Projeção atual: +15%.</div>
                                     <button class="btn ghost-light sm">Ver benchmarks</button>
                                 </div>
@@ -7616,7 +7824,7 @@ body {
         <div data-tab="brief" style="padding-bottom:18px;border-bottom:1px solid var(--border);margin-bottom:18px">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
                 <div style="display:flex;align-items:center;gap:8px">
-                    <span style="width:22px;height:22px;border-radius:50%;background:var(--ink-primary);color:white;display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;font-weight:700">1</span>
+                    <span style="width:22px;height:22px;border-radius:50%;background:var(--surface-inverted);color:var(--on-inverted);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;font-weight:700">1</span>
                     <strong style="font-size:14px">Briefing</strong>
                 </div>
                 <button class="btn ghost-light sm" style="display:inline-flex;align-items:center;gap:6px"><span style="background:linear-gradient(135deg,#FF7849,#818CF8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:600">✦</span>Preencher com IA</button>
@@ -7654,7 +7862,7 @@ body {
         <div data-tab="mix" style="padding-bottom:18px;border-bottom:1px solid var(--border);margin-bottom:18px">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
                 <div style="display:flex;align-items:center;gap:8px">
-                    <span style="width:22px;height:22px;border-radius:50%;background:var(--ink-primary);color:white;display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;font-weight:700">2</span>
+                    <span style="width:22px;height:22px;border-radius:50%;background:var(--surface-inverted);color:var(--on-inverted);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;font-weight:700">2</span>
                     <strong style="font-size:14px">Mix de canais</strong>
                 </div>
                 <button class="btn ghost-light sm" style="display:inline-flex;align-items:center;gap:6px"><span style="background:linear-gradient(135deg,#FF7849,#818CF8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:600">✦</span>Sugerir com IA</button>
@@ -7720,7 +7928,7 @@ body {
         <div data-tab="veiculos" style="padding-bottom:18px;border-bottom:1px solid var(--border);margin-bottom:18px">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
                 <div style="display:flex;align-items:center;gap:8px">
-                    <span style="width:22px;height:22px;border-radius:50%;background:var(--ink-primary);color:white;display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;font-weight:700">3</span>
+                    <span style="width:22px;height:22px;border-radius:50%;background:var(--surface-inverted);color:var(--on-inverted);display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;font-weight:700">3</span>
                     <strong style="font-size:14px">Veículos & flights</strong>
                 </div>
                 <span class="mono" style="font-size:11px;color:var(--ink-muted)">CENP-Meios · Jovedata sincronizado</span>
@@ -7939,7 +8147,7 @@ body {
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;font-family:var(--font-mono)">
                 <span style="display:inline-flex;align-items:center;gap:5px;padding:6px 12px;background:var(--surface-page);border-radius:var(--radius-pill);box-shadow:var(--shadow-border)"><span style="width:6px;height:6px;border-radius:50%;background:var(--success)"></span>Brief aprovado</span>
                 <span style="color:var(--ink-disabled)">→</span>
-                <span style="display:inline-flex;align-items:center;gap:5px;padding:6px 12px;background:var(--ink-primary);color:white;border-radius:var(--radius-pill);font-weight:600">★ esta task</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;padding:6px 12px;background:var(--surface-inverted);color:var(--on-inverted);border-radius:var(--radius-pill);font-weight:600">★ esta task</span>
                 <span style="color:var(--ink-disabled)">→</span>
                 <span style="display:inline-flex;align-items:center;gap:5px;padding:6px 12px;background:var(--surface-page);border-radius:var(--radius-pill);box-shadow:var(--shadow-border)"><span style="width:6px;height:6px;border-radius:50%;background:var(--ink-disabled)"></span>Mídia comprometida</span>
                 <span style="color:var(--ink-disabled)">·</span>
@@ -8845,6 +9053,11 @@ const cmdkData = [
     { group: 'Comandos', label: 'Nova campanha', meta: 'Cria campanha · linka a projeto · define período', icon: '+', color: '#0EA5E9', target: 'midia' },
     { group: 'Comandos', label: 'Importar PIs', meta: 'CSV · OFX · API Jovedata', icon: '↓', color: '#16A34A', target: 'midia' },
     { group: 'Comandos', label: 'Conciliar financeiro', meta: 'Cruza NFS-e com PIs e contratos', icon: '⚖', color: '#16A34A', target: 'financeiro' },
+
+    // Aparência · tema (auto / claro / escuro)
+    { group: 'Aparência', label: 'Tema · Sistema', meta: 'Segue OS · auto night noturno light dark', icon: '🌗', color: '#64748B', action: 'theme-auto', shortcut: '⌘⇧L' },
+    { group: 'Aparência', label: 'Tema · Claro', meta: 'Modo claro · light day diurno', icon: '☀', color: '#F59E0B', action: 'theme-light' },
+    { group: 'Aparência', label: 'Tema · Escuro', meta: 'Modo escuro · dark night noturno', icon: '🌙', color: '#1E293B', action: 'theme-dark' },
 ];
 
 const cmdk = document.getElementById('cmdk');
@@ -8873,7 +9086,8 @@ function cmdkRender(query) {
         }
         const isGradient = it.color && it.color.startsWith('linear-gradient');
         const bg = isGradient ? `background:${it.color}` : `background:${it.color}`;
-        html += `<div class="cmdk-item${i===0?' selected':''}" data-idx="${i}">
+        const actionAttr = it.action ? ` data-action="${it.action}"` : '';
+        html += `<div class="cmdk-item${i===0?' selected':''}" data-idx="${i}"${actionAttr}>
             <span class="cmdk-ico" style="${bg}">${it.icon}</span>
             <span class="cmdk-text"><div class="cmdk-label">${it.label}</div><div class="cmdk-meta">${it.meta}</div></span>
             ${it.shortcut ? `<span class="cmdk-shortcut">${it.shortcut}</span>` : ''}
@@ -8884,6 +9098,7 @@ function cmdkRender(query) {
         el.addEventListener('mouseenter', () => cmdkSelect(parseInt(el.dataset.idx)));
         el.addEventListener('click', () => cmdkActivate());
     });
+    window.refreshThemeActiveMarker?.();
 }
 
 function cmdkSelect(i) {
@@ -8903,6 +9118,9 @@ function cmdkActivate() {
     else if (it.action === 'timerStop')     { timerActionStop(); }
     else if (it.action === 'timerManual')   { timerActionManual(); }
     else if (it.action === 'timerTimesheet'){ activateLens('hoje'); }
+    else if (it.action === 'theme-auto')    { window.__setTheme && window.__setTheme('auto'); }
+    else if (it.action === 'theme-light')   { window.__setTheme && window.__setTheme('light'); }
+    else if (it.action === 'theme-dark')    { window.__setTheme && window.__setTheme('dark'); }
     else if (it.target) activateLens(it.target);
 }
 
@@ -9009,6 +9227,76 @@ if (menuToggle && sidebar && sidebarBackdrop) {
         });
     });
 }
+</script>
+
+<!-- Theme toggle · toast + atalho ⌘⇧L + dispatch via window.__setTheme -->
+<div class="theme-toast" id="themeToast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const root = document.documentElement;
+  const toastEl = document.getElementById('themeToast');
+  let toastTimer;
+
+  function applyTheme(theme) {
+    // Cálculo do resolved espelha o snippet anti-flash do <head> · manter sincronizado.
+    const resolved = theme === 'auto'
+      ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : theme;
+    root.dataset.theme = theme;
+    root.dataset.resolved = resolved;
+    try { localStorage.setItem('theme', theme); } catch { /* persistence unavailable */ }
+    showToast(theme, resolved);
+    refreshThemeActiveMarker();
+  }
+
+  function showToast(theme, resolved) {
+    const labels = {
+      auto:  `Tema: sistema (${resolved === 'dark' ? 'escuro' : 'claro'})`,
+      light: 'Tema: claro',
+      dark:  'Tema: escuro'
+    };
+    toastEl.textContent = labels[theme];
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 1200);
+  }
+
+  function cycleTheme() {
+    const current = root.dataset.theme || 'auto';
+    const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
+    applyTheme(next);
+  }
+
+  function refreshThemeActiveMarker() {
+    const current = root.dataset.theme || 'auto';
+    document.querySelectorAll('.cmdk-item[data-action^="theme-"]').forEach(el => {
+      el.toggleAttribute('data-active', el.dataset.action === `theme-${current}`);
+    });
+  }
+
+  // Atalho global ⌘⇧L · intencionalmente fira mesmo dentro de inputs
+  // (combo com modifiers raramente é digitado por acidente).
+  document.addEventListener('keydown', (e) => {
+    if (e.key && e.key.toLowerCase() === 'l' && e.shiftKey && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      cycleTheme();
+    }
+  });
+
+  // Listener de mudança do OS quando modo = auto
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (root.dataset.theme === 'auto') {
+      root.dataset.resolved = e.matches ? 'dark' : 'light';
+    }
+  });
+
+  // Expor API
+  window.__setTheme = applyTheme;
+  window.refreshThemeActiveMarker = refreshThemeActiveMarker;
+
+  // Marker inicial
+  refreshThemeActiveMarker();
+})();
 </script>
 
 </body>
