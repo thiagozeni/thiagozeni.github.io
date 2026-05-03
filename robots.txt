@@ -3,5 +3,7 @@ Allow: /
 Disallow: /rba/diagnostico.html
 Disallow: /rba/diagnostico/
 Disallow: /rba/gantt.html
+Disallow: /publi/
+Disallow: /publidemo/
 
 Sitemap: https://thiagozeni.com/sitemap.xml
