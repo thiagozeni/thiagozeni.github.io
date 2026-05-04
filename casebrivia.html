@@ -14,7 +14,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Unbounded:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
 <!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
@@ -44,6 +44,12 @@
     --warning: #f59e0b;
     --tier1: #f472b6;
     --rba: #38bdf8;
+
+    /* ZN brand layer (autoria — header + footer) */
+    --zn-lime: #C6FF00;
+    --zn-black: #050505;
+    --zn-display: 'Unbounded', sans-serif;
+    --zn-body-zn: 'DM Sans', sans-serif;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
@@ -85,6 +91,42 @@
     transition:all .2s;
   }
   .back-link:hover { color:var(--accent); border-color:var(--accent); }
+
+  /* ZN brand — fixed wordmark */
+  .zn-mark-fixed {
+    position:fixed; top:18px; right:28px; z-index:60;
+    font-family:var(--zn-display); font-weight:900;
+    font-size:1.1rem; letter-spacing:-.04em; color:var(--zn-lime);
+    text-decoration:none;
+    text-shadow:0 0 24px rgba(198,255,0,.35);
+    transition:opacity .2s;
+  }
+  .zn-mark-fixed:hover { opacity:.75; }
+  .zn-mark-fixed .dot { color:var(--zn-lime); }
+
+  /* ZN brand — nav (on-scroll) */
+  .nav-zn {
+    font-family:var(--zn-display); font-weight:900;
+    color:var(--zn-lime); letter-spacing:-.04em;
+    margin-right:12px; font-size:.95rem;
+  }
+  .nav-caption {
+    color:var(--text-muted); font-weight:500;
+    font-family:var(--zn-body-zn); font-size:.78rem; letter-spacing:.01em;
+  }
+
+  /* ZN brand — hero wordmark */
+  .hero-zn {
+    font-family:var(--zn-display); font-weight:900;
+    font-size:1.5rem; letter-spacing:-.05em; color:var(--zn-lime);
+    margin-bottom:24px; line-height:1;
+    text-shadow:0 0 40px rgba(198,255,0,.3);
+  }
+
+  @media (max-width:520px) {
+    .back-link { font-size:.66rem; padding:6px 10px; }
+    .zn-mark-fixed { font-size:.9rem; top:14px; right:18px; }
+  }
 
   /* Hero */
   .hero {
@@ -390,18 +432,54 @@
   }
   .sources-list a:hover { color:var(--accent); }
 
-  /* Footer */
+  /* Footer — bloco ZN forte */
   footer {
-    padding:36px 28px; text-align:center;
-    border-top:1px solid var(--border); background:var(--bg2);
-    font-size:.78rem; color:var(--text-dim);
+    padding:72px 28px 48px; text-align:center;
+    border-top:1px solid var(--border); background:var(--zn-black);
+    position:relative; overflow:hidden;
   }
-  footer .container { padding:0; }
+  footer::before {
+    content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:200px; height:1px;
+    background:linear-gradient(90deg,transparent,var(--zn-lime),transparent);
+    opacity:.5;
+  }
+  footer .container { padding:0; max-width:720px; }
+  .footer-zn-block { margin-bottom:18px; }
+  .footer-mark {
+    font-family:var(--zn-display); font-weight:900;
+    font-size:4rem; letter-spacing:-.07em; color:var(--zn-lime);
+    line-height:1;
+    text-shadow:0 0 60px rgba(198,255,0,.35);
+  }
+  .footer-tagline {
+    font-family:var(--zn-body-zn); font-size:.88rem; color:var(--text-muted);
+    margin-top:14px; letter-spacing:.02em;
+  }
+  .footer-links {
+    display:flex; gap:14px; justify-content:center; align-items:center;
+    margin:32px 0 32px; font-family:var(--zn-body-zn); font-size:.82rem;
+    flex-wrap:wrap;
+  }
+  .footer-links a {
+    color:var(--zn-lime); text-decoration:none;
+    transition:opacity .2s; font-weight:500;
+  }
+  .footer-links a:hover { opacity:.65; }
+  .footer-links .sep { color:var(--text-dim); }
+  .footer-credits {
+    font-size:.74rem; color:var(--text-dim); line-height:1.6;
+    max-width:560px; margin:0 auto 18px;
+    font-family:var(--zn-body-zn);
+  }
   .privacy-note {
-    margin-top:12px; padding:12px 18px; background:rgba(245,158,11,.05);
+    margin-top:18px; padding:12px 18px; background:rgba(245,158,11,.05);
     border:1px solid rgba(245,158,11,.15); border-radius:10px;
-    font-size:.72rem; color:var(--warning); max-width:720px; margin-left:auto; margin-right:auto;
+    font-size:.72rem; color:var(--warning); max-width:560px;
+    margin-left:auto; margin-right:auto;
+    font-family:var(--zn-body-zn);
   }
+  .privacy-note code { font-family:'JetBrains Mono', monospace; font-size:.95em; }
 
   /* Fade-in */
   .fade-in { opacity:0; transform:translateY(16px); transition:opacity .7s, transform .7s; }
@@ -411,11 +489,15 @@
 <body>
 
 <a href="/" class="back-link">← thiagozeni.com</a>
+<a href="https://thiagozeni.com" class="zn-mark-fixed" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <div class="nav-brand">Brivia <span>· Estudo de Caso</span></div>
+    <div class="nav-brand">
+      <span class="nav-zn">ZN.</span>
+      <span class="nav-caption">Estudo de caso · Brivia</span>
+    </div>
     <div class="nav-links">
       <a href="#timeline">Timeline</a>
       <a href="#ma">M&amp;A</a>
@@ -430,6 +512,7 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-content">
+    <div class="hero-zn">ZN<span class="dot">.</span></div>
     <div class="hero-badge">Estudo de Caso · Mai 2026</div>
     <h1>Brivia</h1>
     <p class="hero-tagline">
@@ -1202,10 +1285,23 @@
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    Brivia · Estudo de Caso · Construído por Thiago Zeni para a consultoria Grupo RBA · Maio 2026
+    <div class="footer-zn-block">
+      <div class="footer-mark">ZN<span class="dot">.</span></div>
+      <div class="footer-tagline">Consultoria de IA &amp; Inovação para empresas</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://thiagozeni.com" target="_blank" rel="noopener">thiagozeni.com</a>
+      <span class="sep">·</span>
+      <a href="mailto:thiagoazeni@gmail.com">contato</a>
+      <span class="sep">·</span>
+      <a href="https://thiagozeni.com/#cases" target="_blank" rel="noopener">cases</a>
+    </div>
+    <div class="footer-credits">
+      Brivia · Estudo de Caso · Maio 2026<br>
+      Construído por Thiago Zeni para a consultoria do Grupo RBA · sobre fontes públicas
+    </div>
     <div class="privacy-note">
-      Documento de uso interno para a consultoria de IA do Grupo RBA. Construído sobre fontes públicas.
-      Marcado como <code>noindex</code> e excluído de buscadores. Acesso por link direto.
+      Documento de uso interno. Marcado como <code>noindex</code> e excluído de buscadores. Acesso por link direto.
     </div>
   </div>
 </footer>
