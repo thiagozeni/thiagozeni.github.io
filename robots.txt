@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /rba/diagnostico.html
-Disallow: /rba/diagnostico/
-Disallow: /rba/gantt.html
 Disallow: /publi/
 Disallow: /publidemo/
 Disallow: /casebrivia
