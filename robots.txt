@@ -5,5 +5,7 @@ Disallow: /rba/diagnostico/
 Disallow: /rba/gantt.html
 Disallow: /publi/
 Disallow: /publidemo/
+Disallow: /casebrivia
+Disallow: /casebrivia.html
 
 Sitemap: https://thiagozeni.com/sitemap.xml
