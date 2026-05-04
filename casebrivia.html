@@ -115,14 +115,6 @@
     font-family:var(--zn-body-zn); font-size:.78rem; letter-spacing:.01em;
   }
 
-  /* ZN brand — hero wordmark */
-  .hero-zn {
-    font-family:var(--zn-display); font-weight:900;
-    font-size:1.5rem; letter-spacing:-.05em; color:var(--zn-lime);
-    margin-bottom:24px; line-height:1;
-    text-shadow:0 0 40px rgba(198,255,0,.3);
-  }
-
   @media (max-width:520px) {
     .back-link { font-size:.66rem; padding:6px 10px; }
     .zn-mark-fixed { font-size:.9rem; top:14px; right:18px; }
@@ -135,13 +127,21 @@
     background:radial-gradient(ellipse at 50% 0%,#151d45 0%,var(--bg) 70%);
   }
   .hero-content { max-width:900px; }
-  .hero-badge {
-    display:inline-flex; align-items:center; gap:8px; padding:7px 16px;
-    background:rgba(244,114,182,.08); border:1px solid rgba(244,114,182,.2);
-    border-radius:999px; font-size:.72rem; font-weight:600; color:var(--tier1);
-    text-transform:uppercase; letter-spacing:.1em; margin-bottom:28px;
+  .hero-meta {
+    display:inline-flex; align-items:center; gap:14px; flex-wrap:wrap;
+    justify-content:center; margin-bottom:32px; line-height:1;
   }
-  .hero-badge::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--tier1); }
+  .hero-meta .hm-zn {
+    font-family:var(--zn-display); font-weight:900;
+    font-size:1.05rem; letter-spacing:-.04em; color:var(--zn-lime);
+    text-shadow:0 0 24px rgba(198,255,0,.35);
+  }
+  .hero-meta .hm-sep { color:var(--text-dim); font-size:.85rem; }
+  .hero-meta .hm-text {
+    font-family:var(--zn-body-zn); font-weight:500;
+    font-size:.72rem; color:var(--text-muted);
+    letter-spacing:.14em; text-transform:uppercase;
+  }
   .hero h1 {
     font-size:clamp(2.4rem,6vw,4.4rem); font-weight:800; line-height:1.05;
     letter-spacing:-.025em; margin-bottom:24px;
@@ -512,8 +512,13 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-content">
-    <div class="hero-zn">ZN<span class="dot">.</span></div>
-    <div class="hero-badge">Estudo de Caso · Mai 2026</div>
+    <div class="hero-meta">
+      <span class="hm-zn">ZN<span class="dot">.</span></span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">Estudo de caso</span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">Mai 2026</span>
+    </div>
     <h1>Brivia</h1>
     <p class="hero-tagline">
       Anatomia de uma agência que partiu de <strong>Novo Hamburgo</strong> e virou grupo nacional em ~18 anos via <strong>M&amp;A</strong>, produto proprietário de <strong>IA</strong> e reposicionamento como <strong>"Creative Smartech"</strong>.
