@@ -7,5 +7,7 @@ Disallow: /publi/
 Disallow: /publidemo/
 Disallow: /casebrivia
 Disallow: /casebrivia.html
+Disallow: /concorrenciars
+Disallow: /concorrenciars.html
 
 Sitemap: https://thiagozeni.com/sitemap.xml

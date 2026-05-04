@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Análise Competitiva — Agências RS vs RBA · Estudo de Caso</title>
+<meta name="description" content="Mapeamento competitivo das agências de comunicação do RS, com foco em maturidade de IA e posicionamento de inovação. Estudo construído para a consultoria do Grupo RBA.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Análise Competitiva — Agências RS vs RBA">
+<meta property="og:description" content="Mapeamento competitivo das agências do RS com foco em IA e inovação.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Unbounded:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-F44T3HG5PZ');
+</script>
+<style>
+  :root {
+    --bg: #0a0d1a;
+    --bg2: #0f1225;
+    --bg-card: #141829;
+    --bg-card-hover: #1a1f36;
+    --border: #1e2340;
+    --text: #e2e8f0;
+    --text-muted: #8892b0;
+    --text-dim: #4a5270;
+    --accent: #38bdf8;
+    --accent2: #818cf8;
+    --accent3: #34d399;
+    --accent4: #f472b6;
+    --accent5: #fb923c;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --success: #22c55e;
+    --tier1: #f472b6;
+    --tier2: #818cf8;
+    --tier3: #64748b;
+    --rba: #38bdf8;
+
+    /* ZN brand layer (autoria — header + footer) */
+    --zn-lime: #C6FF00;
+    --zn-black: #050505;
+    --zn-display: 'Unbounded', sans-serif;
+    --zn-body-zn: 'DM Sans', sans-serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container { max-width:1280px; margin:0 auto; padding:0 28px; }
+
+  /* Animations */
+  .fade-in { opacity:0; transform:translateY(24px); transition:opacity .5s ease, transform .5s ease; }
+  .fade-in.visible { opacity:1; transform:translateY(0); }
+
+  /* NAV */
+  .nav {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(10,13,26,.88); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); padding:0 28px;
+    transform:translateY(-100%); transition:transform .3s ease;
+  }
+  .nav.visible { transform:translateY(0); }
+  .nav-inner { max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:54px; }
+  .nav-brand { font-weight:800; font-size:.95rem; color:#fff; display:flex; align-items:center; }
+  .nav-zn {
+    font-family:var(--zn-display); font-weight:900;
+    color:var(--zn-lime); letter-spacing:-.04em;
+    margin-right:12px; font-size:.95rem;
+  }
+  .nav-caption {
+    color:var(--text-muted); font-weight:500;
+    font-family:var(--zn-body-zn); font-size:.78rem; letter-spacing:.01em;
+  }
+  .nav-links { display:flex; gap:20px; }
+  .nav-links a { font-size:.7rem; color:var(--text-muted); text-decoration:none; text-transform:uppercase; letter-spacing:.08em; font-weight:500; transition:color .2s; }
+  .nav-links a:hover { color:var(--accent); }
+  @media(max-width:768px) { .nav-links { display:none; } }
+
+  /* Back-link (top-left fixed) */
+  .back-link {
+    position:fixed; top:18px; left:28px; z-index:60;
+    font-size:.72rem; color:var(--text-muted); text-decoration:none;
+    text-transform:uppercase; letter-spacing:.1em; font-weight:500;
+    padding:8px 14px; border:1px solid var(--border); border-radius:999px;
+    background:rgba(10,13,26,.6); backdrop-filter:blur(8px);
+    transition:opacity .25s, color .2s, border-color .2s;
+  }
+  .back-link:hover { color:var(--accent); border-color:var(--accent); }
+  .back-link.hidden { opacity:0; pointer-events:none; }
+
+  /* ZN brand — fixed wordmark (top-right) */
+  .zn-mark-fixed {
+    position:fixed; top:18px; right:28px; z-index:60;
+    font-family:var(--zn-display); font-weight:900;
+    font-size:1.1rem; letter-spacing:-.04em; color:var(--zn-lime);
+    text-decoration:none;
+    text-shadow:0 0 24px rgba(198,255,0,.35);
+    transition:opacity .25s;
+  }
+  .zn-mark-fixed:hover { opacity:.75; }
+  .zn-mark-fixed.hidden { opacity:0; pointer-events:none; }
+  .zn-mark-fixed .dot { color:var(--zn-lime); }
+
+  @media (max-width:520px) {
+    .back-link { font-size:.66rem; padding:6px 10px; }
+    .zn-mark-fixed { font-size:.9rem; top:14px; right:18px; }
+  }
+
+  /* HERO */
+  .hero {
+    min-height:80vh; display:flex; align-items:center; justify-content:center; text-align:center;
+    position:relative; overflow:hidden;
+    background:radial-gradient(ellipse at 50% 0%,#151d45 0%,var(--bg) 70%);
+    padding:120px 28px 80px;
+  }
+  .hero::before {
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(circle at 20% 30%,rgba(244,114,182,.04) 0%,transparent 50%),
+               radial-gradient(circle at 80% 70%,rgba(56,189,248,.04) 0%,transparent 50%);
+    pointer-events:none;
+  }
+  .hero-content { position:relative; z-index:1; max-width:900px; }
+  .hero-meta {
+    display:inline-flex; align-items:center; gap:14px; flex-wrap:wrap;
+    justify-content:center; margin-bottom:32px; line-height:1;
+  }
+  .hero-meta .hm-sep { color:var(--text-dim); font-size:.85rem; }
+  .hero-meta .hm-text {
+    font-family:var(--zn-body-zn); font-weight:500;
+    font-size:.72rem; color:var(--text-muted);
+    letter-spacing:.14em; text-transform:uppercase;
+  }
+  .hero h1 {
+    font-size:clamp(2.2rem,6vw,4.2rem); font-weight:900; letter-spacing:-.03em; line-height:1.1; margin-bottom:16px;
+    background:linear-gradient(135deg,#fff 0%,var(--accent) 60%,var(--accent2) 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  .hero p { font-size:1.05rem; color:var(--text-muted); max-width:650px; margin:0 auto 40px; }
+  .hero-metrics { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; }
+  .hero-metric { text-align:center; }
+  .hero-metric .hm-num { font-size:2rem; font-weight:800; display:block; }
+  .hero-metric .hm-label { font-size:.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:.1em; }
+
+  /* SECTIONS */
+  section { padding:90px 0; }
+  .section-header { margin-bottom:48px; }
+  .section-label { font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.14em; color:var(--accent); margin-bottom:10px; }
+  .section-title { font-size:clamp(1.6rem,3.5vw,2.2rem); font-weight:800; letter-spacing:-.02em; color:#fff; margin-bottom:10px; }
+  .section-sub { font-size:1rem; color:var(--text-muted); max-width:600px; }
+  .divider { height:1px; background:linear-gradient(90deg,transparent,var(--border),transparent); }
+  .bg-alt { background:var(--bg2); }
+
+  /* CARDS */
+  .card {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px;
+    transition:all .25s ease;
+  }
+  .card:hover { background:var(--bg-card-hover); border-color:rgba(56,189,248,.15); transform:translateY(-2px); }
+
+  /* GRIDS */
+  .grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px; }
+  .grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+  .grid-4 { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+
+  /* RANKING TABLE */
+  .rank-table { width:100%; border-collapse:collapse; }
+  .rank-table th {
+    text-align:left; padding:10px 14px; font-size:.65rem; text-transform:uppercase;
+    letter-spacing:.1em; color:var(--text-dim); border-bottom:2px solid var(--border);
+  }
+  .rank-table td { padding:14px; border-bottom:1px solid var(--border); font-size:.88rem; vertical-align:middle; }
+  .rank-table tr:hover { background:rgba(56,189,248,.03); }
+  .rank-table .rank-num {
+    font-weight:800; font-size:1.1rem; width:40px; text-align:center;
+  }
+  .rank-table .rank-num.top3 { color:var(--accent); }
+  .rank-table .rank-num.rba { color:var(--rba); }
+  .rank-table .agency-name { font-weight:600; color:#fff; }
+  .rank-table .agency-name.rba { color:var(--rba); }
+  .rank-table .city { color:var(--text-muted); }
+  .rank-table .city.nh { color:var(--accent3); font-weight:500; }
+  .rank-table .clients { color:var(--text-muted); font-size:.82rem; }
+  .tag-sm {
+    display:inline-block; padding:2px 8px; border-radius:6px; font-size:.65rem; font-weight:600;
+    text-transform:uppercase; letter-spacing:.06em;
+  }
+  .tag-poa { background:rgba(129,140,248,.1); color:var(--accent2); }
+  .tag-nh { background:rgba(52,211,153,.1); color:var(--accent3); }
+
+  /* AGENCY PROFILES */
+  .agency-profile { position:relative; overflow:hidden; }
+  .agency-profile .ap-header { display:flex; align-items:flex-start; gap:16px; margin-bottom:16px; }
+  .ap-rank {
+    width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+    font-weight:900; font-size:1rem; flex-shrink:0;
+  }
+  .ap-rank.t1 { background:rgba(244,114,182,.12); color:var(--tier1); }
+  .ap-rank.t2 { background:rgba(129,140,248,.12); color:var(--tier2); }
+  .ap-rank.t3 { background:rgba(100,116,139,.12); color:var(--tier3); }
+  .ap-rank.rba { background:rgba(56,189,248,.12); color:var(--rba); }
+  .ap-name { font-size:1.15rem; font-weight:700; color:#fff; }
+  .ap-sub { font-size:.8rem; color:var(--text-muted); }
+  .ap-body { font-size:.88rem; color:var(--text-muted); line-height:1.7; }
+  .ap-body ul { list-style:none; padding:0; }
+  .ap-body li { padding:4px 0 4px 18px; position:relative; }
+  .ap-body li::before { content:''; position:absolute; left:0; top:12px; width:5px; height:5px; border-radius:50%; background:var(--text-dim); }
+  .ap-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .ap-tag {
+    padding:4px 10px; background:rgba(56,189,248,.06); border:1px solid rgba(56,189,248,.15);
+    border-radius:6px; font-size:.72rem; color:var(--accent); font-weight:500;
+  }
+  .ap-tag.client { background:rgba(52,211,153,.06); border-color:rgba(52,211,153,.15); color:var(--accent3); }
+  .ap-tag.award { background:rgba(251,146,60,.06); border-color:rgba(251,146,60,.15); color:var(--accent5); }
+
+  /* TIER BADGES */
+  .tier-badge {
+    display:inline-flex; align-items:center; gap:6px; padding:4px 12px;
+    border-radius:8px; font-size:.72rem; font-weight:600; letter-spacing:.04em;
+  }
+  .tier-badge.t1 { background:rgba(244,114,182,.1); color:var(--tier1); border:1px solid rgba(244,114,182,.2); }
+  .tier-badge.t2 { background:rgba(129,140,248,.1); color:var(--tier2); border:1px solid rgba(129,140,248,.2); }
+  .tier-badge.t3 { background:rgba(100,116,139,.1); color:var(--tier3); border:1px solid rgba(100,116,139,.2); }
+  .tier-dot { width:6px; height:6px; border-radius:50%; }
+  .tier-dot.t1 { background:var(--tier1); }
+  .tier-dot.t2 { background:var(--tier2); }
+  .tier-dot.t3 { background:var(--tier3); }
+
+  /* ARP CHART */
+  .arp-bar-chart { display:flex; flex-direction:column; gap:10px; }
+  .arp-row { display:flex; align-items:center; gap:12px; }
+  .arp-label { width:100px; font-size:.82rem; font-weight:500; color:var(--text-muted); text-align:right; flex-shrink:0; }
+  .arp-bar-wrap { flex:1; height:28px; background:rgba(56,189,248,.06); border-radius:8px; overflow:hidden; position:relative; }
+  .arp-bar { height:100%; border-radius:8px; display:flex; align-items:center; padding-left:10px; font-size:.75rem; font-weight:700; color:#fff; transition:width 1.2s ease; }
+  .arp-bar.escala { background:linear-gradient(90deg,var(--accent),var(--accent2)); }
+  .arp-bar.hoc { background:linear-gradient(90deg,var(--tier1),#e879a8); }
+  .arp-bar.bistro { background:linear-gradient(90deg,var(--accent5),#f9a86c); }
+  .arp-bar.sobe { background:linear-gradient(90deg,var(--accent3),#5ee9b5); }
+  .arp-bar.other { background:linear-gradient(90deg,var(--text-dim),#6b7999); }
+  .arp-count { font-size:.8rem; color:var(--text-dim); width:30px; text-align:right; flex-shrink:0; }
+
+  /* COMPARISON TABLE */
+  .comp-table { width:100%; border-collapse:collapse; font-size:.85rem; }
+  .comp-table th {
+    text-align:left; padding:12px 10px; font-size:.65rem; text-transform:uppercase;
+    letter-spacing:.1em; color:var(--text-dim); border-bottom:2px solid var(--border);
+    position:sticky; top:0; background:var(--bg-card);
+  }
+  .comp-table th.rba-col { color:var(--rba); }
+  .comp-table td { padding:12px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .comp-table td:first-child { font-weight:600; color:var(--text); white-space:nowrap; }
+  .comp-table tr:hover { background:rgba(56,189,248,.02); }
+  .comp-table .highlight { color:var(--rba); font-weight:600; }
+  .comp-table .winner { color:var(--accent3); font-weight:600; }
+  .comp-table .threat { color:var(--danger); font-weight:500; }
+
+  /* MARKET STATS */
+  .mstat { text-align:center; padding:24px 16px; }
+  .mstat .ms-num { font-size:1.8rem; font-weight:800; display:block; margin-bottom:4px; }
+  .mstat .ms-label { font-size:.78rem; color:var(--text-muted); line-height:1.4; }
+  .mstat .ms-sub { font-size:.68rem; color:var(--text-dim); margin-top:4px; }
+
+  /* FLOOD IMPACT */
+  .flood-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
+  .flood-stat { text-align:center; padding:20px 12px; }
+  .flood-stat .fs-num { font-size:1.6rem; font-weight:800; color:var(--danger); display:block; }
+  .flood-stat .fs-label { font-size:.75rem; color:var(--text-muted); }
+
+  /* OPPORTUNITIES */
+  .opp-card { border-left:3px solid; }
+  .opp-card.gap { border-left-color:var(--accent3); }
+  .opp-card.threat { border-left-color:var(--danger); }
+  .opp-card h4 { font-size:.95rem; font-weight:600; color:#fff; margin-bottom:6px; }
+  .opp-card p { font-size:.85rem; color:var(--text-muted); }
+  .opp-icon {
+    display:inline-flex; width:28px; height:28px; border-radius:8px; align-items:center; justify-content:center;
+    font-size:.75rem; font-weight:700; margin-bottom:10px;
+  }
+  .opp-icon.gap { background:rgba(52,211,153,.12); color:var(--accent3); }
+  .opp-icon.threat { background:rgba(239,68,68,.12); color:var(--danger); }
+
+  /* SINAPRO BOX */
+  .sinapro-box {
+    padding:28px 32px; border-radius:14px;
+    background:linear-gradient(135deg,rgba(129,140,248,.06),rgba(56,189,248,.06));
+    border:1px solid var(--border); border-left:4px solid var(--accent2);
+  }
+  .sinapro-box h3 { font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:12px; }
+  .sinapro-box p { font-size:.9rem; color:var(--text-muted); margin-bottom:10px; }
+  .sinapro-modules { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .sinapro-mod {
+    padding:6px 14px; background:rgba(129,140,248,.08); border:1px solid rgba(129,140,248,.18);
+    border-radius:8px; font-size:.78rem; color:var(--accent2); font-weight:500;
+  }
+
+  /* SOURCES */
+  .sources-list { columns:2; column-gap:28px; list-style:none; }
+  @media(max-width:768px) { .sources-list { columns:1; } }
+  .sources-list li { padding:5px 0; break-inside:avoid; }
+  .sources-list a { color:var(--text-muted); text-decoration:none; font-size:.78rem; transition:color .2s; }
+  .sources-list a:hover { color:var(--accent); }
+
+  /* FOOTER */
+  /* Footer — bloco ZN forte */
+  footer {
+    padding:72px 28px 48px; text-align:center;
+    border-top:1px solid var(--border); background:var(--zn-black);
+    position:relative; overflow:hidden;
+  }
+  footer::before {
+    content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:200px; height:1px;
+    background:linear-gradient(90deg,transparent,var(--zn-lime),transparent);
+    opacity:.5;
+  }
+  footer .container { padding:0; max-width:720px; }
+  .footer-zn-block { margin-bottom:18px; }
+  .footer-mark {
+    font-family:var(--zn-display); font-weight:900;
+    font-size:4rem; letter-spacing:-.07em; color:var(--zn-lime);
+    line-height:1;
+    text-shadow:0 0 60px rgba(198,255,0,.35);
+  }
+  .footer-tagline {
+    font-family:var(--zn-body-zn); font-size:.88rem; color:var(--text-muted);
+    margin-top:14px; letter-spacing:.02em;
+  }
+  .footer-links {
+    display:flex; gap:14px; justify-content:center; align-items:center;
+    margin:32px 0 32px; font-family:var(--zn-body-zn); font-size:.82rem;
+    flex-wrap:wrap;
+  }
+  .footer-links a {
+    color:var(--zn-lime); text-decoration:none;
+    transition:opacity .2s; font-weight:500;
+  }
+  .footer-links a:hover { opacity:.65; }
+  .footer-links .sep { color:var(--text-dim); }
+  .footer-credits {
+    font-size:.74rem; color:var(--text-dim); line-height:1.6;
+    max-width:560px; margin:0 auto;
+    font-family:var(--zn-body-zn);
+  }
+
+  /* RESPONSIVE */
+  @media(max-width:640px) {
+    .hero-metrics { gap:20px; }
+    .hero-metric .hm-num { font-size:1.5rem; }
+    section { padding:60px 0; }
+    .arp-label { width:70px; font-size:.72rem; }
+    .comp-table { font-size:.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<a href="/" class="back-link">← thiagozeni.com</a>
+<a href="/" class="zn-mark-fixed" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="nav-zn">ZN.</span>
+      <span class="nav-caption">Análise competitiva · Agências RS</span>
+    </div>
+    <div class="nav-links">
+      <a href="#ranking">Ranking</a>
+      <a href="#ia-tiers">Maturidade IA</a>
+      <a href="#arp">Premiação</a>
+      <a href="#comparativo">Comparativo</a>
+      <a href="#mercado">Mercado</a>
+      <a href="#oportunidades">Oportunidades</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-meta">
+      <span class="hm-text">Inteligência Competitiva</span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">Abril 2026</span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">atualizado Mai 2026 (+ Brivia)</span>
+    </div>
+    <h1>Agências do RS<br>vs. RBA</h1>
+    <p>Mapeamento competitivo completo das agências de comunicação do Rio Grande do Sul, com foco em posicionamento de inovação e IA.</p>
+    <div class="hero-metrics">
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent)">12</span>
+        <span class="hm-label">Agências no Cenp-Meios RS</span>
+      </div>
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent2)">47</span>
+        <span class="hm-label">Associadas Sinapro-RS</span>
+      </div>
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--tier1)">9ª</span>
+        <span class="hm-label">Posição RBA</span>
+      </div>
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent3)">R$ 1,1B</span>
+        <span class="hm-label">Invest. Publicitário Sul</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- RANKING CENP-MEIOS -->
+<section id="ranking">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">01 — Ranking Oficial</div>
+      <h2 class="section-title">Cenp-Meios RS — Por Volume de Mídia</h2>
+      <p class="section-sub">As 12 maiores agências do RS pelo painel Cenp-Meios. Agências digital-first (W3haus, Cadastra, HOC) e grupos nacionais com origem regional (<strong style="color:var(--accent3)">Brivia</strong> — sede em N. Hamburgo) não declaram aqui.</p>
+    </div>
+    <div class="card fade-in" style="overflow-x:auto">
+      <table class="rank-table">
+        <thead>
+          <tr>
+            <th style="width:50px">#</th>
+            <th>Agência</th>
+            <th>Cidade</th>
+            <th>Fund.</th>
+            <th>Porte</th>
+            <th>Clientes / Destaques</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank-num top3">1</td>
+            <td class="agency-name">Suno Paim</td>
+            <td class="city"><span class="tag-sm tag-poa">POA</span></td>
+            <td>1992</td>
+            <td>130+</td>
+            <td class="clients">Renner, Ambev, TIM. Rede Suno United Creators</td>
+          </tr>
+          <tr>
+            <td class="rank-num top3">2</td>
+            <td class="agency-name">Ag. Matriz</td>
+            <td class="city"><span class="tag-sm tag-poa">POA</span></td>
+            <td>2000</td>
+            <td>51-200</td>
+            <td class="clients">Zaffari, Expointer, Expoagas</td>
+          </tr>
+          <tr>
+            <td class="rank-num top3">3</td>
+            <td class="agency-name">Escala</td>
+            <td class="city"><span class="tag-sm tag-poa">POA</span></td>
+            <td>1980</td>
+            <td>~120</td>
+            <td class="clients"><strong style="color:var(--warning)">STIHL</strong>, Banrisul, Todeschini. Ag. Ano ADVB 2025</td>
+          </tr>
+          <tr>
+            <td class="rank-num">4</td>
+            <td class="agency-name">Publica</td>
+            <td class="city"><span class="tag-sm tag-poa">POA</span></td>
+            <td>—</td>
+            <td>—</td>
+            <td class="clients">Info limitada</td>
+          </tr>
+          <tr>
+            <td class="rank-num">5</td>
+            <td class="agency-name">CENTRO</td>
+            <td class="city"><span class="tag-sm tag-poa">POA</span></td>
+            <td>~2000</td>
+            <td>—</td>
+            <td class="clients">Posicionamento estratégico</td>
+          </tr>
+          <tr>
+            <td class="rank-num">6</td>
+            <td class="agency-name">Globalcomm</td>
+            <td class="city"><span class="tag-sm tag-poa">POA</span></td>
+            <td>1997</td>
+            <td>Médio</td>
+            <td class="clients">Full-service tradicional</td>
+          </tr>
+          <tr>
+            <td class="rank-num">7</td>
+            <td class="agency-name">Competence (G5)</td>
+            <td class="city"><span class="tag-sm tag-poa">POA</span></td>
+            <td>1991</td>
+            <td>51-200</td>
+            <td class="clients">Ecossistema 8 empresas (G-Tech, G-Data, TWF)</td>
+          </tr>
+          <tr style="background:rgba(52,211,153,.04)">
+            <td class="rank-num" style="color:var(--accent3)">8</td>
+            <td class="agency-name" style="color:var(--accent3)">SPR</td>
+            <td class="city"><span class="tag-sm tag-nh">N. Hamburgo</span></td>
+            <td>1997</td>
+            <td>11-50</td>
+            <td class="clients">Randon, Sesc/RS, Piccadilly, Gov. RS</td>
+          </tr>
+          <tr style="background:rgba(56,189,248,.06); border-left:3px solid var(--rba)">
+            <td class="rank-num rba">9</td>
+            <td class="agency-name rba">RBA</td>
+            <td class="city"><span class="tag-sm tag-nh">N. Hamburgo</span></td>
+            <td>1976</td>
+            <td>~54</td>
+            <td class="clients">Stihl, JBL, Via Marte, Ford, Shell</td>
+          </tr>
+          <tr>
+            <td class="rank-num">10</td>
+            <td class="agency-name" style="color:var(--text-muted)">Pro Target</td>
+            <td class="city"><span class="tag-sm tag-nh">N. Hamburgo</span></td>
+            <td>—</td>
+            <td>—</td>
+            <td class="clients">Dakota, indústria calçadista</td>
+          </tr>
+          <tr>
+            <td class="rank-num">11</td>
+            <td class="agency-name" style="color:var(--text-muted)">Insight Design</td>
+            <td class="city" style="color:var(--text-dim)">RS</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="clients">—</td>
+          </tr>
+          <tr>
+            <td class="rank-num">12</td>
+            <td class="agency-name" style="color:var(--text-muted)">Selling</td>
+            <td class="city" style="color:var(--text-dim)">RS</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="clients">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:16px; padding:14px 20px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; font-size:.82rem; color:var(--text-muted);" class="fade-in">
+      <strong style="color:var(--accent3)">Novo Hamburgo</strong> é o único cluster fora de Porto Alegre no top 12, com SPR (8º), RBA (9º) e Pro Target (10º). Some-se a esse cluster a <strong style="color:var(--accent3)">Brivia</strong> — também com sede em NH, fora do ranking por operar como grupo nacional, e hoje no <strong>Tier 1</strong> de maturidade em IA (ver §02).
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MATURIDADE IA -->
+<section id="ia-tiers" class="bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">02 — Maturidade em IA/Inovação</div>
+      <h2 class="section-title">Quem Está na Frente</h2>
+      <p class="section-sub">Ranking de maturidade tecnológica e adoção de IA entre as agências gaúchas.</p>
+    </div>
+
+    <!-- TIER 1 -->
+    <div style="margin-bottom:40px">
+      <div class="fade-in" style="margin-bottom:16px">
+        <span class="tier-badge t1"><span class="tier-dot t1"></span> Tier 1 — Integração Avançada de IA</span>
+      </div>
+      <div class="grid-2 fade-in">
+        <div class="card agency-profile">
+          <div class="ap-header">
+            <div class="ap-rank t1">T1</div>
+            <div>
+              <div class="ap-name">Cadastra / Adtail / Pmweb</div>
+              <div class="ap-sub">Grupo DBG — Porto Alegre + SP</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li><strong>Líder indiscutível em data/IA no RS</strong></li>
+              <li>Filosofia "AI in the Skin" — IA como mindset organizacional</li>
+              <li>28 vagas de estágio focadas em IA (Digital Start 2025)</li>
+              <li>Pmweb: líder CRM na América Latina, 25+ anos, grupo WPP</li>
+              <li>Única empresa latam a ganhar Markie Awards (5x)</li>
+              <li>Publica sobre agentes de IA para automação de CRM</li>
+            </ul>
+          </div>
+          <div class="ap-tags">
+            <span class="ap-tag">AI in the Skin</span>
+            <span class="ap-tag">28 vagas IA</span>
+            <span class="ap-tag award">5x Markie Awards</span>
+            <span class="ap-tag award">GPTW</span>
+          </div>
+        </div>
+        <div class="card agency-profile">
+          <div class="ap-header">
+            <div class="ap-rank t1">T1</div>
+            <div>
+              <div class="ap-name">Elevenmind</div>
+              <div class="ap-sub">Porto Alegre — fund. 2011</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li>Posiciona-se entre "0,3% a 0,1% mais avançadas em IA"</li>
+              <li>Plataforma proprietária APP.Center.AI (CRM + ERP + agentes)</li>
+              <li>80+ serviços, IA nativa em todas as camadas</li>
+              <li>Especialização em chatbots e agentes de IA</li>
+            </ul>
+            <p style="margin-top:10px; padding:8px 12px; background:rgba(245,158,11,.06); border:1px solid rgba(245,158,11,.15); border-radius:8px; font-size:.78rem; color:var(--warning);">
+              Ressalva: Autopromoção agressiva via SEO. Claims precisam verificação com resultados reais.
+            </p>
+          </div>
+          <div class="ap-tags">
+            <span class="ap-tag">APP.Center.AI</span>
+            <span class="ap-tag">Agentes IA</span>
+            <span class="ap-tag" style="background:rgba(245,158,11,.06); border-color:rgba(245,158,11,.15); color:var(--warning)">Verificar claims</span>
+          </div>
+        </div>
+        <div class="card agency-profile" style="border-color:rgba(52,211,153,.25)">
+          <div class="ap-header">
+            <div class="ap-rank t1">T1</div>
+            <div>
+              <div class="ap-name">Brivia (Brivia Group) <span class="tag-sm tag-nh" style="margin-left:6px; vertical-align:middle">N. Hamburgo</span></div>
+              <div class="ap-sub">Sede em NH + 8 outras + Lisboa — fund. ~2008</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li>Posicionamento <strong>"The Creative Smartech"</strong> — IA + dados + criatividade no core</li>
+              <li>Produto proprietário <strong>Orqstra</strong>: plataforma de IA para decisões de mídia, com agente conversacional treinado em dados reais de campanha</li>
+              <li>Reconhecida pelo <strong>ISG</strong> como uma das principais martechs de serviços do BR</li>
+              <li>600+ pessoas em 70+ cidades; top 20 grupos de comunicação BR (M&M)</li>
+              <li>Trajetória M&A: Sistema Dez (2018), A2C (2019), Heads (2022)</li>
+            </ul>
+            <p style="margin-top:10px; padding:8px 12px; background:rgba(56,189,248,.06); border:1px solid rgba(56,189,248,.18); border-radius:8px; font-size:.78rem; color:var(--rba);">
+              Não é concorrente direto pelo perfil de cliente, mas é o benchmark mais próximo de "agência que partiu de N. Hamburgo e se reposicionou via IA + M&A". Régua a observar.
+            </p>
+          </div>
+          <div class="ap-tags">
+            <span class="ap-tag">Creative Smartech</span>
+            <span class="ap-tag">Orqstra (IA própria)</span>
+            <span class="ap-tag client">Banco do Brasil</span>
+            <span class="ap-tag client">Petrobras</span>
+            <span class="ap-tag client">Vivo</span>
+            <span class="ap-tag client">O Boticário</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2 -->
+    <div style="margin-bottom:40px">
+      <div class="fade-in" style="margin-bottom:16px">
+        <span class="tier-badge t2"><span class="tier-dot t2"></span> Tier 2 — Digital/Data Forte, IA Crescente</span>
+      </div>
+      <div class="grid-2 fade-in">
+        <div class="card agency-profile">
+          <div class="ap-header">
+            <div class="ap-rank t2">T2</div>
+            <div>
+              <div class="ap-name">W3haus (Stefanini)</div>
+              <div class="ap-sub">POA + SP + RJ — fund. 2000</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li>Adquirida pela Stefanini (multinacional TI, 41 países)</li>
+              <li>Ecossistema: HUIA, Brooke, CAPS, Hopo, NOW3</li>
+              <li>Infraestrutura tech robusta via corporação</li>
+            </ul>
+          </div>
+          <div class="ap-tags">
+            <span class="ap-tag client">Ambev</span>
+            <span class="ap-tag client">Petrobras</span>
+            <span class="ap-tag client">Santander</span>
+            <span class="ap-tag client">Tramontina</span>
+          </div>
+        </div>
+        <div class="card agency-profile" style="border-color:rgba(245,158,11,.2)">
+          <div class="ap-header">
+            <div class="ap-rank t2">T2</div>
+            <div>
+              <div class="ap-name">Escala (EscalaCity+)</div>
+              <div class="ap-sub">Porto Alegre — fund. 1980 — ~120 func.</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li>Vertical dedicada de <strong>Data Analytics/T&D</strong></li>
+              <li>Incorporou City Consultoria Estratégica</li>
+              <li>"Direção estratégica orientada a performance"</li>
+              <li style="color:var(--warning)"><strong>Atende STIHL — overlap direto com RBA</strong></li>
+            </ul>
+          </div>
+          <div class="ap-tags">
+            <span class="ap-tag client">STIHL</span>
+            <span class="ap-tag client">Banrisul</span>
+            <span class="ap-tag award">12 cases ARP 2025</span>
+            <span class="ap-tag award">Ag. Ano ADVB 2025</span>
+          </div>
+        </div>
+        <div class="card agency-profile">
+          <div class="ap-header">
+            <div class="ap-rank t2">T2</div>
+            <div>
+              <div class="ap-name">Competence (G5)</div>
+              <div class="ap-sub">Porto Alegre — fund. 1991 — 51-200 func.</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li><strong>G-Tech</strong> (tecnologia) e <strong>G-Data</strong> (analytics) como unidades</li>
+              <li>TWF para digital, Brandesign para visual</li>
+              <li>Ecossistema de 8 empresas especializadas</li>
+            </ul>
+          </div>
+          <div class="ap-tags">
+            <span class="ap-tag">G-Tech</span>
+            <span class="ap-tag">G-Data</span>
+            <span class="ap-tag">8 empresas</span>
+          </div>
+        </div>
+        <div class="card agency-profile">
+          <div class="ap-header">
+            <div class="ap-rank t2">T2</div>
+            <div>
+              <div class="ap-name">HOC</div>
+              <div class="ap-sub">Porto Alegre — fund. 2009</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li>Dominância criativa absoluta (hexacampeã ARP)</li>
+              <li>Sem diferenciação pública em IA/tech ainda</li>
+              <li><em>Se adicionar IA, torna-se concorrente formidável</em></li>
+            </ul>
+          </div>
+          <div class="ap-tags">
+            <span class="ap-tag client">Unimed POA</span>
+            <span class="ap-tag client">Panvel</span>
+            <span class="ap-tag award">Ag. Ano ARP 2025 (6x)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 3 -->
+    <div>
+      <div class="fade-in" style="margin-bottom:16px">
+        <span class="tier-badge t3"><span class="tier-dot t3"></span> Tier 3 — Uso Padrão / Início de Adoção</span>
+      </div>
+      <div class="grid-3 fade-in">
+        <div class="card agency-profile">
+          <div class="ap-header">
+            <div class="ap-rank t3">T3</div>
+            <div>
+              <div class="ap-name">Suno Paim</div>
+              <div class="ap-sub">#1 Cenp-Meios — 130+ func.</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li>Rede Suno dá escala nacional</li>
+              <li>Sem ferramentas/programas IA públicos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card agency-profile" style="border-color:rgba(52,211,153,.25)">
+          <div class="ap-header">
+            <div class="ap-rank t3" style="background:rgba(52,211,153,.12); color:var(--accent3)">T3</div>
+            <div>
+              <div class="ap-name" style="color:var(--accent3)">SPR</div>
+              <div class="ap-sub">Concorrente direto — N. Hamburgo</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li><strong>Mesmo mercado e porte que RBA</strong></li>
+              <li>Randon, Sesc, Governo RS</li>
+              <li>Sem evidência de adoção de IA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card agency-profile" style="border-color:rgba(56,189,248,.25)">
+          <div class="ap-header">
+            <div class="ap-rank rba">RBA</div>
+            <div>
+              <div class="ap-name" style="color:var(--rba)">RBA (posição atual)</div>
+              <div class="ap-sub">#9 Cenp-Meios — 50 anos</div>
+            </div>
+          </div>
+          <div class="ap-body">
+            <ul>
+              <li>Estágio <strong>pré-IA</strong></li>
+              <li>MIX já é data-driven (fundação para IA)</li>
+              <li style="color:var(--accent3)">Bem posicionada para first-mover regional</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SALÃO ARP 2025 -->
+<section id="arp">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">03 — Salão ARP 2025</div>
+      <h2 class="section-title">Quem Ganha Prêmios</h2>
+      <p class="section-sub">Edição recorde: 528 cases inscritos (+28%), 900+ profissionais. O ARP usou IA para validar inscrições.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="arp-bar-chart">
+        <div class="arp-row">
+          <span class="arp-label">Escala</span>
+          <div class="arp-bar-wrap"><div class="arp-bar escala" style="width:100%">12 cases</div></div>
+          <span class="arp-count">12</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">HOC</span>
+          <div class="arp-bar-wrap"><div class="arp-bar hoc" style="width:83%">10 cases</div></div>
+          <span class="arp-count">10</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">Bistro</span>
+          <div class="arp-bar-wrap"><div class="arp-bar bistro" style="width:50%">6</div></div>
+          <span class="arp-count">6</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">Sobe</span>
+          <div class="arp-bar-wrap"><div class="arp-bar sobe" style="width:50%">6</div></div>
+          <span class="arp-count">6</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">WT.AG</span>
+          <div class="arp-bar-wrap"><div class="arp-bar other" style="width:25%">3</div></div>
+          <span class="arp-count">3</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">Moove</span>
+          <div class="arp-bar-wrap"><div class="arp-bar other" style="width:17%">2</div></div>
+          <span class="arp-count">2</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">W3haus</span>
+          <div class="arp-bar-wrap"><div class="arp-bar other" style="width:17%">2</div></div>
+          <span class="arp-count">2</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">AKAU</span>
+          <div class="arp-bar-wrap"><div class="arp-bar other" style="width:17%">2</div></div>
+          <span class="arp-count">2</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">Matriz</span>
+          <div class="arp-bar-wrap"><div class="arp-bar other" style="width:8%"></div></div>
+          <span class="arp-count">1</span>
+        </div>
+        <div class="arp-row">
+          <span class="arp-label">e21</span>
+          <div class="arp-bar-wrap"><div class="arp-bar other" style="width:8%"></div></div>
+          <span class="arp-count">1</span>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2 fade-in" style="margin-top:20px">
+      <div style="padding:16px 20px; background:rgba(244,114,182,.05); border:1px solid rgba(244,114,182,.15); border-radius:10px; font-size:.85rem; color:var(--text-muted);">
+        <strong style="color:var(--tier1)">HOC:</strong> Agência do Ano — hexacampeã (6 títulos consecutivos)
+      </div>
+      <div style="padding:16px 20px; background:rgba(56,189,248,.05); border:1px solid rgba(56,189,248,.15); border-radius:10px; font-size:.85rem; color:var(--text-muted);">
+        <strong style="color:var(--rba)">RBA:</strong> Não premiada no ARP 2025. Prata no Colunistas Sul 2024 (JBL).
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPARATIVO DIRETO -->
+<section id="comparativo" class="bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">04 — Comparativo Direto</div>
+      <h2 class="section-title">RBA vs. Principais Concorrentes</h2>
+      <p class="section-sub">Face a face com os concorrentes mais relevantes em diferentes dimensões.</p>
+    </div>
+    <div class="card fade-in" style="overflow-x:auto">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Fator</th>
+            <th class="rba-col">RBA</th>
+            <th>SPR</th>
+            <th>Escala</th>
+            <th>Cadastra</th>
+            <th>HOC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cenp-Meios RS</td>
+            <td class="highlight">9º</td>
+            <td>8º</td>
+            <td class="winner">3º</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Funcionários</td>
+            <td class="highlight">~54</td>
+            <td>11-50</td>
+            <td class="winner">~120</td>
+            <td class="winner">Grande</td>
+            <td>Médio-grande</td>
+          </tr>
+          <tr>
+            <td>Fundação</td>
+            <td class="highlight">1976</td>
+            <td>1997</td>
+            <td>1980</td>
+            <td>2000s</td>
+            <td>2009</td>
+          </tr>
+          <tr>
+            <td>Maturidade IA</td>
+            <td class="threat">Pré-IA</td>
+            <td class="threat">Pré-IA</td>
+            <td>Tier 2</td>
+            <td class="winner">Tier 1</td>
+            <td>Tier 2 (criativo)</td>
+          </tr>
+          <tr>
+            <td>Clientes overlap</td>
+            <td class="highlight">Stihl, multinacionais</td>
+            <td>Industrial, governo</td>
+            <td class="threat">STIHL, Banrisul</td>
+            <td>Digital brands</td>
+            <td>Unimed, Panvel</td>
+          </tr>
+          <tr>
+            <td>Prêmios 2024-25</td>
+            <td class="highlight">Prata Colunistas</td>
+            <td>Prata Colunistas</td>
+            <td class="winner">12 ARP + ADVB</td>
+            <td>GPTW</td>
+            <td class="winner">10 ARP + Ag. Ano</td>
+          </tr>
+          <tr>
+            <td>Data/Analytics</td>
+            <td class="highlight">MIX (manual)</td>
+            <td>Sem evidência</td>
+            <td class="winner">Vertical dedicada</td>
+            <td class="winner">Avançado, proprietário</td>
+            <td>Sem evidência</td>
+          </tr>
+          <tr>
+            <td>Diferencial</td>
+            <td class="highlight">50 anos, 3 divisões</td>
+            <td>Mesmo mercado</td>
+            <td>Porte + data</td>
+            <td>IA como DNA</td>
+            <td>Criatividade premiada</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTEXTO INSTITUCIONAL -->
+<section id="institucional">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">05 — Contexto Institucional</div>
+      <h2 class="section-title">O Mercado se Movimenta</h2>
+      <p class="section-sub">Iniciativas institucionais e certificações que definem o baseline do setor.</p>
+    </div>
+
+    <div class="sinapro-box fade-in" style="margin-bottom:24px">
+      <h3>Sinapro-RS + Trezion — Imersão em IA (Out/2025 — Jan/2026)</h3>
+      <p>Maior investimento dos 47 anos do Sinapro-RS. Parceria com Trezion (consultoria de IA para indústria criativa). <strong>70+ líderes de agências</strong> participaram.</p>
+      <p style="color:var(--accent2); font-weight:500;">Implicação: A maioria das agências RS recebeu o mesmo baseline. Diferenciação virá de quem for além.</p>
+      <div class="sinapro-modules">
+        <span class="sinapro-mod">Liderança em IA (8h)</span>
+        <span class="sinapro-mod">Imersão IA (10h)</span>
+        <span class="sinapro-mod">Mídia e Dados (6h)</span>
+        <span class="sinapro-mod">Criação com IA (6h)</span>
+        <span class="sinapro-mod">Planejamento com IA (6h)</span>
+      </div>
+    </div>
+
+    <div class="grid-2 fade-in">
+      <div class="card">
+        <h4 style="font-size:.95rem; font-weight:600; color:#fff; margin-bottom:10px;">Google AI Assessments</h4>
+        <p style="font-size:.88rem; color:var(--text-muted);">4 agências brasileiras no nível máximo ("Multimomento"):</p>
+        <div style="display:flex; flex-wrap:wrap; gap:6px; margin:12px 0;">
+          <span class="ap-tag">AlmapBBDO</span>
+          <span class="ap-tag">EssenceMediacom</span>
+          <span class="ap-tag">i-Cherry</span>
+          <span class="ap-tag">Monks</span>
+        </div>
+        <p style="font-size:.85rem; color:var(--danger); font-weight:500;">Nenhuma é do RS. Google vai premiar uso de IA em 2026.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:.95rem; font-weight:600; color:#fff; margin-bottom:10px;">Gramado Summit 2026</h4>
+        <p style="font-size:.88rem; color:var(--text-muted);">6-8 de maio, tema "Make it Human"</p>
+        <div style="display:flex; flex-wrap:wrap; gap:6px; margin:12px 0;">
+          <span class="ap-tag">25.000+ visitantes</span>
+          <span class="ap-tag">350 palestrantes</span>
+          <span class="ap-tag">~8.000 marcas</span>
+        </div>
+        <p style="font-size:.85rem; color:var(--accent2); font-weight:500;">Track dedicada: "AI Brasil Experience"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DADOS DE MERCADO -->
+<section id="mercado" class="bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">06 — Dados de Mercado</div>
+      <h2 class="section-title">O Tamanho da Arena</h2>
+    </div>
+    <div class="grid-4 fade-in">
+      <div class="card mstat">
+        <span class="ms-num" style="color:var(--accent)">R$ 1,1B</span>
+        <span class="ms-label">Invest. publicitário Sul</span>
+        <span class="ms-sub">RS + SC + PR (2025)</span>
+      </div>
+      <div class="card mstat">
+        <span class="ms-num" style="color:var(--accent2)">4,04%</span>
+        <span class="ms-label">Share do Sul no total BR</span>
+        <span class="ms-sub">de R$ 28,9B nacional</span>
+      </div>
+      <div class="card mstat">
+        <span class="ms-num" style="color:var(--accent3)">~R$ 500M</span>
+        <span class="ms-label">Estimativa RS isolado</span>
+        <span class="ms-sub">~45% do Sul</span>
+      </div>
+      <div class="card mstat">
+        <span class="ms-num" style="color:var(--accent5)">+10%</span>
+        <span class="ms-label">Crescimento nacional</span>
+        <span class="ms-sub">YoY 2025 vs 2024</span>
+      </div>
+    </div>
+
+    <div style="margin-top:48px" class="fade-in">
+      <h3 style="font-size:1.05rem; font-weight:700; color:var(--danger); margin-bottom:20px;">Impacto das Enchentes de 2024</h3>
+      <div class="flood-grid">
+        <div class="card flood-stat">
+          <span class="fs-num">69%</span>
+          <span class="fs-label">agências com perdas financeiras</span>
+        </div>
+        <div class="card flood-stat">
+          <span class="fs-num">92%</span>
+          <span class="fs-label">com clientes impactados</span>
+        </div>
+        <div class="card flood-stat">
+          <span class="fs-num">65%</span>
+          <span class="fs-label">pedidos de renegociação</span>
+        </div>
+        <div class="card flood-stat">
+          <span class="fs-num">~33%</span>
+          <span class="fs-label">contratos interrompidos</span>
+        </div>
+        <div class="card flood-stat">
+          <span class="fs-num">54%</span>
+          <span class="fs-label">funcionários afetados</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OPORTUNIDADES & AMEAÇAS -->
+<section id="oportunidades">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">07 — Gaps, Oportunidades & Ameaças</div>
+      <h2 class="section-title">O Que Isso Significa pra RBA</h2>
+      <p class="section-sub">Onde estão as janelas abertas e de onde vêm as ameaças competitivas.</p>
+    </div>
+
+    <!-- GAPS -->
+    <div class="fade-in" style="margin-bottom:12px">
+      <h3 style="font-size:1rem; font-weight:700; color:var(--accent3); margin-bottom:16px;">Nenhuma agência RS possui:</h3>
+    </div>
+    <div class="grid-3 fade-in" style="margin-bottom:40px">
+      <div style="padding:20px; background:rgba(52,211,153,.04); border:1px solid rgba(52,211,153,.15); border-radius:12px; text-align:center;">
+        <div style="font-size:1.4rem; margin-bottom:8px;">0</div>
+        <div style="font-size:.82rem; color:var(--text-muted);">Certificações Google AI Maturity</div>
+      </div>
+      <div style="padding:20px; background:rgba(52,211,153,.04); border:1px solid rgba(52,211,153,.15); border-radius:12px; text-align:center;">
+        <div style="font-size:1.4rem; margin-bottom:8px;">0</div>
+        <div style="font-size:.82rem; color:var(--text-muted);">Parcerias HubSpot Elite / Salesforce</div>
+      </div>
+      <div style="padding:20px; background:rgba(52,211,153,.04); border:1px solid rgba(52,211,153,.15); border-radius:12px; text-align:center;">
+        <div style="font-size:1.4rem; margin-bottom:8px;">0</div>
+        <div style="font-size:.82rem; color:var(--text-muted);">Cannes Lions (2024 e 2025)</div>
+      </div>
+    </div>
+
+    <!-- OPPS -->
+    <div class="fade-in" style="margin-bottom:12px">
+      <h3 style="font-size:1rem; font-weight:700; color:var(--accent3); margin-bottom:16px;">Oportunidades para RBA via IA</h3>
+    </div>
+    <div class="grid-2 fade-in" style="margin-bottom:40px">
+      <div class="card opp-card gap">
+        <div class="opp-icon gap">1</div>
+        <h4>First-mover regional</h4>
+        <p>Apenas 38% das agências BR têm processos IA padronizados. A maioria no RS recebeu apenas o baseline Sinapro.</p>
+      </div>
+      <div class="card opp-card gap">
+        <div class="opp-icon gap">2</div>
+        <h4>Certificação Google AI</h4>
+        <p>Seria a primeira agência RS certificada. Google premiará uso de IA por agências em 2026.</p>
+      </div>
+      <div class="card opp-card gap">
+        <div class="opp-icon gap">3</div>
+        <h4>Diferencial vs SPR</h4>
+        <p>Concorrente direto (mesmo mercado, mesmo porte) sem nenhuma evidência de adoção de IA.</p>
+      </div>
+      <div class="card opp-card gap">
+        <div class="opp-icon gap">4</div>
+        <h4>Retenção Stihl via IA</h4>
+        <p>Escala também atende Stihl e tem vertical de data analytics. IA pode ser argumento de retenção e diferenciação.</p>
+      </div>
+      <div class="card opp-card gap">
+        <div class="opp-icon gap">5</div>
+        <h4>IA como serviço premium</h4>
+        <p>Nenhuma agência RS oferece analytics preditivo ou otimização IA como offering para clientes.</p>
+      </div>
+    </div>
+
+    <!-- THREATS -->
+    <div class="fade-in" style="margin-bottom:12px">
+      <h3 style="font-size:1rem; font-weight:700; color:var(--danger); margin-bottom:16px;">Ameaças competitivas</h3>
+    </div>
+    <div class="grid-2 fade-in">
+      <div class="card opp-card threat">
+        <div class="opp-icon threat">!</div>
+        <h4>Cadastra/Adtail/Pmweb</h4>
+        <p>Líder absoluto em IA no RS, com programa de contratação dedicado e filosofia "AI in the Skin".</p>
+      </div>
+      <div class="card opp-card threat">
+        <div class="opp-icon threat">!</div>
+        <h4>W3haus / Stefanini</h4>
+        <p>Backing de multinacional tech (41 países). Infraestrutura e investimento incomparáveis.</p>
+      </div>
+      <div class="card opp-card threat">
+        <div class="opp-icon threat">!</div>
+        <h4>Escala + Data Analytics + Stihl</h4>
+        <p>Vertical de data dedicada, atende Stihl, e dominou o ARP 2025. Ameaça direta ao portfólio RBA.</p>
+      </div>
+      <div class="card opp-card threat">
+        <div class="opp-icon threat">!</div>
+        <h4>Agências SP com certificação Google AI</h4>
+        <p>AlmapBBDO, Monks já certificadas. Podem capturar budgets de multinacionais sediadas no RS.</p>
+      </div>
+      <div class="card opp-card threat">
+        <div class="opp-icon threat">!</div>
+        <h4>Brivia (origem N. Hamburgo)</h4>
+        <p>Não compete pelo mesmo perfil de cliente hoje, mas tem produto proprietário de IA (Orqstra) e narrativa "Creative Smartech" madura. Se decidir voltar a anunciantes regionais médios, chega armada — gap atual da RBA.</p>
+      </div>
+    </div>
+
+    <!-- BENCHMARK -->
+    <div class="fade-in" style="margin-top:32px; padding:18px 22px; background:rgba(56,189,248,.06); border:1px solid rgba(56,189,248,.2); border-radius:12px;">
+      <h3 style="font-size:.95rem; font-weight:700; color:var(--rba); margin-bottom:8px;">Benchmark de trajetória — Brivia como espelho de futuro possível</h3>
+      <p style="font-size:.85rem; color:var(--text-muted); line-height:1.55;">
+        Em ~15 anos a Brivia partiu de Novo Hamburgo e se tornou grupo nacional via <strong>IA + M&A + reposicionamento</strong>. Não é modelo a copiar (perfil de cliente é outro), mas informa duas decisões críticas para a RBA: (1) <strong>quão alto colocar a régua</strong> do SIM e dos painéis para que não nasçam obsoletos diante de soluções já maduras como o Orqstra; (2) <strong>qual narrativa pública adotar</strong> ao comunicar maturidade em IA — diferenciando-se da linguagem "Creative Smartech" já ocupada por uma vizinha de NH.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FONTES -->
+<section id="fontes" class="bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">08 — Fontes</div>
+      <h2 class="section-title">Referências</h2>
+    </div>
+    <div class="card fade-in">
+      <ul class="sources-list">
+        <li><a href="https://www.meioemensagem.com.br/comunicacao/cenp-meios-divulga-ranking-das-maiores-agencias-por-estado" target="_blank">Cenp-Meios ranking por estado</a></li>
+        <li><a href="https://www.arpnet.com.br/wp/salao-arp-2025-premia-os-destaques-da-comunicacao-gaucha-em-edicao-historica/" target="_blank">Salão ARP 2025 — edição recorde</a></li>
+        <li><a href="https://grandesnomesdapropaganda.com.br/agencias/escala-domina-o-salao-arp-2025-com-recorde-de-premiacoes/" target="_blank">Escala domina ARP 2025</a></li>
+        <li><a href="https://grandesnomesdapropaganda.com.br/agencias/escala-e-a-agencia-do-ano-no-top-de-marketing-advb-rs-2025/" target="_blank">Escala Agência do Ano ADVB 2025</a></li>
+        <li><a href="https://acontecendoaqui.com.br/propaganda/hoc-e-eleita-agencia-do-ano-e-conquista-hexacampeonato-no-premio-arp-2025/" target="_blank">HOC hexacampeã ARP 2025</a></li>
+        <li><a href="https://expansao.co/sinapro-rs-lanca-imersao-em-inteligencia-artificial-para-agencias-gauchas/" target="_blank">Sinapro-RS imersão em IA</a></li>
+        <li><a href="https://canaltech.com.br/mercado/grupo-cadastra-abre-28-vagas-para-estagio-com-foco-em-inteligencia-artificial/" target="_blank">Cadastra — 28 vagas IA</a></li>
+        <li><a href="https://blog.pmweb.com.br/2025/05/30/agentes-de-ia-a-nova-era-da-automacao-inteligente-e-personalizada-no-crm/" target="_blank">Pmweb — agentes IA no CRM</a></li>
+        <li><a href="https://www.meioemensagem.com.br/comunicacao/quais-agencias-de-publicidade-atingiram-maturidade-no-uso-de-ia" target="_blank">Google — agências com maturidade IA</a></li>
+        <li><a href="https://www.meioemensagem.com.br/comunicacao/como-as-enchentes-afetaram-as-agencias-de-publicidade-do-rs" target="_blank">Enchentes RS — impacto nas agências</a></li>
+        <li><a href="https://stefanini.com/pt-br/insights/noticias/stefanini-adquire-holding-haus" target="_blank">Stefanini adquire W3haus</a></li>
+        <li><a href="https://www.meioemensagem.com.br/comunicacao/paim-comunicacao-associa-se-a-suno-united-creators" target="_blank">Paim se associa à Suno</a></li>
+        <li><a href="https://colunistas.com.br/anos/pc2024/pc2024sl-ata.html" target="_blank">Colunistas Sul 2024 — vencedores</a></li>
+        <li><a href="https://amanha.com.br/categoria/gestao/sul-do-brasil-e-referencia-em-martech" target="_blank">Sul do Brasil referência em Martech</a></li>
+        <li><a href="https://expansao.co/cenp-meios-regiao-sul-concentrou-r-11-bilhao-de-investimento-em-propaganda-em-2025/" target="_blank">Cenp-Meios — Sul R$ 1,1B</a></li>
+        <li><a href="https://sinaprors.com.br/associadas/" target="_blank">Sinapro-RS — associadas</a></li>
+        <li><a href="https://www.gramadosummit.com/" target="_blank">Gramado Summit 2026</a></li>
+        <li><a href="https://elevenmind.com.br/agencia-full-service-em-porto-alegre-a-expertise-elevenmind-em-solucoes-avancadas-de-ia-para-empresas/" target="_blank">Elevenmind — IA em Porto Alegre</a></li>
+        <li><a href="https://www.brivia.com.br/" target="_blank">Brivia — site oficial "The Creative Smartech"</a></li>
+        <li><a href="https://briviagroup.com.br/" target="_blank">Brivia Group — site institucional</a></li>
+        <li><a href="https://coletiva.net/noticias/brivia-group-apresenta-plataforma-para-apoiar-tomada-de-decisoes-sobre-investimentos-em-marketing/" target="_blank">Brivia apresenta plataforma Orqstra (Coletiva)</a></li>
+        <li><a href="https://www.metropoles.com/colunas/m-buzz/de-olho-em-mais-aquisicoes-agencia-briviadez-agora-e-brivia-group" target="_blank">BriviaDez vira Brivia Group (Metrópoles)</a></li>
+        <li><a href="https://coletiva.net/noticias/brivia-dobra-de-tamanho-e-consolida-plano-de-aceleracao-em-2022,422868.jhtml" target="_blank">Brivia dobra de tamanho em 2022 (Coletiva)</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-zn-block">
+      <div class="footer-mark">ZN<span class="dot">.</span></div>
+      <div class="footer-tagline">Consultoria de IA &amp; Inovação para empresas</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://thiagozeni.com" target="_blank" rel="noopener">thiagozeni.com</a>
+      <span class="sep">·</span>
+      <a href="mailto:thiagoazeni@gmail.com">contato</a>
+      <span class="sep">·</span>
+      <a href="https://thiagozeni.com/#cases" target="_blank" rel="noopener">cases</a>
+    </div>
+    <div class="footer-credits">
+      Análise Competitiva · Agências RS vs RBA · Abril 2026 · revisado Mai 2026<br>
+      Construído por Thiago Zeni para a consultoria do Grupo RBA · sobre fontes públicas
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Nav on scroll — toggle nav e esconde back-link/zn-mark-fixed quando nav aparece
+  const nav = document.getElementById('nav');
+  const backLink = document.querySelector('.back-link');
+  const znMark = document.querySelector('.zn-mark-fixed');
+  window.addEventListener('scroll', () => {
+    const showNav = window.scrollY > window.innerHeight * 0.4;
+    nav.classList.toggle('visible', showNav);
+    backLink.classList.toggle('hidden', showNav);
+    znMark.classList.toggle('hidden', showNav);
+  });
+</script>
+</body>
+</html>
