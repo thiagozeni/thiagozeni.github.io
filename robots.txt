@@ -9,5 +9,7 @@ Disallow: /casebrivia
 Disallow: /casebrivia.html
 Disallow: /concorrenciars
 Disallow: /concorrenciars.html
+Disallow: /dossie
+Disallow: /dossie.html
 
 Sitemap: https://thiagozeni.com/sitemap.xml

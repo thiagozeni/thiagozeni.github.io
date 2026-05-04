@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dossiê RBA Comunicação · Consultoria IA</title>
+<meta name="description" content="Dossiê de preparação sobre a RBA Comunicação — perfil institucional, divisões, clientes e maturidade digital. Construído para a consultoria de IA do Grupo RBA.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dossiê RBA Comunicação · Consultoria IA">
+<meta property="og:description" content="Dossiê de preparação sobre a RBA Comunicação — perfil, divisões, clientes e maturidade digital.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Unbounded:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-F44T3HG5PZ');
+</script>
+<style>
+  :root {
+    --bg: #0c0f1a;
+    --bg-card: #141829;
+    --bg-card-hover: #1a1f36;
+    --border: #232845;
+    --text: #e2e8f0;
+    --text-muted: #8892b0;
+    --text-dim: #5a6380;
+    --accent: #38bdf8;
+    --accent2: #818cf8;
+    --accent3: #34d399;
+    --accent4: #f472b6;
+    --accent5: #fb923c;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --success: #22c55e;
+
+    /* ZN brand layer (autoria — header + footer) */
+    --zn-lime: #C6FF00;
+    --zn-black: #050505;
+    --zn-display: 'Unbounded', sans-serif;
+    --zn-body-zn: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .6; } }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 0%, #1e2a5a 0%, var(--bg) 70%);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(129, 140, 248, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-meta {
+    display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    justify-content: center; margin-bottom: 32px; line-height: 1;
+  }
+  .hero-meta .hm-sep { color: var(--text-dim); font-size: 0.85rem; }
+  .hero-meta .hm-text {
+    font-family: var(--zn-body-zn); font-weight: 500;
+    font-size: 0.72rem; color: var(--text-muted);
+    letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #fff 0%, #38bdf8 50%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero .tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 48px;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+  }
+  .hero-stat .label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    animation: pulse 2s infinite;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 100px 0; }
+  .section-header {
+    margin-bottom: 56px;
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 600px;
+  }
+
+  /* ─── CARDS ─── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
+  }
+
+  /* ─── GRID LAYOUTS ─── */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+
+  /* ─── IDENTIDADE ─── */
+  .id-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+  .id-item {
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .id-item .id-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+  }
+  .id-item .id-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .id-item .id-value.warn {
+    color: var(--warning);
+    font-size: 0.85rem;
+  }
+
+  /* ─── DIVISÕES ─── */
+  .division-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .division-card .division-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .division-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .division-card .division-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .division-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .division-card li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .division-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .div-360 .division-icon { background: rgba(56, 189, 248, 0.15); color: var(--accent); }
+  .div-360 li::before { background: var(--accent); }
+  .div-bra .division-icon { background: rgba(129, 140, 248, 0.15); color: var(--accent2); }
+  .div-bra li::before { background: var(--accent2); }
+  .div-mix .division-icon { background: rgba(52, 211, 153, 0.15); color: var(--accent3); }
+  .div-mix li::before { background: var(--accent3); }
+
+  .methodology-bar {
+    margin-top: 40px;
+    padding: 24px 32px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.06), rgba(129, 140, 248, 0.06));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .methodology-bar .meth-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    font-weight: 600;
+  }
+  .methodology-tag {
+    padding: 4px 14px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ─── LIDERANÇA ─── */
+  .leaders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .leaders-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+  }
+  .leaders-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .leaders-table tr:hover { background: rgba(56, 189, 248, 0.03); }
+  .leaders-table .name { font-weight: 600; color: #fff; }
+  .leaders-table .role { color: var(--text-muted); }
+
+  .key-people {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .key-person {
+    padding: 10px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.85rem;
+  }
+  .key-person .kp-name { font-weight: 600; color: #fff; }
+  .key-person .kp-role { color: var(--text-muted); margin-left: 6px; }
+
+  /* ─── CLIENTES ─── */
+  .clients-group { margin-bottom: 32px; }
+  .clients-group-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .clients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .client-tag {
+    padding: 10px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .client-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .client-tag.highlight {
+    border-color: rgba(56, 189, 248, 0.3);
+    background: rgba(56, 189, 248, 0.06);
+    color: var(--accent);
+  }
+
+  /* ─── CASES ─── */
+  .cases-grid { margin-top: 40px; }
+  .case-card {
+    padding: 24px;
+    border-left: 3px solid var(--accent);
+  }
+  .case-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .case-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .awards-list {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .award-tag {
+    padding: 8px 16px;
+    background: rgba(251, 146, 60, 0.08);
+    border: 1px solid rgba(251, 146, 60, 0.25);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--accent5);
+    font-weight: 500;
+  }
+
+  /* ─── PRESENÇA DIGITAL ─── */
+  .social-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+  }
+  .social-info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .social-info .social-handle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .social-info .social-metric {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  .maturity-indicator {
+    margin-top: 32px;
+    padding: 20px 28px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .maturity-indicator.low {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+  .maturity-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  .maturity-dot.low { background: var(--danger); }
+  .maturity-text { font-size: 0.9rem; color: var(--text-muted); }
+  .maturity-text strong { color: var(--danger); }
+
+  /* ─── MATURIDADE ─── */
+  .maturity-split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 768px) { .maturity-split { grid-template-columns: 1fr; } }
+  .maturity-col h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .maturity-col.exists h3 { color: var(--success); }
+  .maturity-col.missing h3 { color: var(--danger); }
+  .maturity-col ul { list-style: none; }
+  .maturity-col li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(35, 40, 69, 0.5);
+  }
+  .maturity-col.exists li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .maturity-col.missing li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: var(--danger);
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .conclusion-box {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.06), rgba(129, 140, 248, 0.06));
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  .conclusion-box strong { color: var(--accent); }
+
+  /* ─── MERCADO ─── */
+  .stat-card {
+    text-align: center;
+    padding: 28px 20px;
+  }
+  .stat-card .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .stat-card .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  .stat-card .stat-sub {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+  }
+
+  .progress-section { margin-top: 48px; }
+  .progress-item { margin-bottom: 20px; }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .progress-label { font-size: 0.85rem; color: var(--text-muted); }
+  .progress-value { font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+  .progress-bar {
+    height: 8px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transition: width 1.5s ease;
+  }
+
+  /* ─── CONCORRÊNCIA ─── */
+  .comp-level { margin-bottom: 28px; }
+  .comp-level-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-left: 14px;
+    border-left: 3px solid;
+  }
+  .comp-level-label.regional { color: var(--accent3); border-color: var(--accent3); }
+  .comp-level-label.estadual { color: var(--accent2); border-color: var(--accent2); }
+  .comp-level-label.nacional { color: var(--accent4); border-color: var(--accent4); }
+  .comp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .comp-tag {
+    padding: 6px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .positioning-box {
+    margin-top: 24px;
+    padding: 20px 24px;
+    background: rgba(52, 211, 153, 0.06);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .positioning-box strong { color: var(--accent3); }
+
+  /* ─── REGULATÓRIO ─── */
+  .reg-card {
+    border-left: 3px solid;
+  }
+  .reg-card.vigente { border-left-color: var(--success); }
+  .reg-card.tramitacao { border-left-color: var(--warning); }
+  .reg-status {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .reg-status.active { background: rgba(34, 197, 94, 0.15); color: var(--success); }
+  .reg-status.pending { background: rgba(245, 158, 11, 0.15); color: var(--warning); }
+  .reg-card h4 { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .reg-card p { font-size: 0.85rem; color: var(--text-muted); }
+  .reg-card ul { list-style: none; padding: 0; margin-top: 8px; }
+  .reg-card li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 4px 0 4px 16px;
+    position: relative;
+  }
+  .reg-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--text-dim);
+  }
+
+  /* ─── OPORTUNIDADES ─── */
+  .opp-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .opp-tab {
+    padding: 10px 24px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-card);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .opp-tab:hover { border-color: var(--accent); color: var(--accent); }
+  .opp-tab.active {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .opp-panel { display: none; }
+  .opp-panel.active { display: block; }
+  .opp-table { width: 100%; border-collapse: collapse; }
+  .opp-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    border-bottom: 2px solid var(--border);
+  }
+  .opp-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    vertical-align: top;
+  }
+  .opp-table .pain { color: var(--text-muted); }
+  .opp-table .solution { color: var(--accent3); font-weight: 500; }
+  .opp-table tr:hover { background: rgba(56, 189, 248, 0.03); }
+
+  .cross-div {
+    margin-top: 40px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.05), rgba(129, 140, 248, 0.05), rgba(52, 211, 153, 0.05));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .cross-div h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  .cross-div li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 6px 0;
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+  }
+  .cross-div li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--accent2);
+    font-size: 0.6rem;
+    top: 10px;
+  }
+
+  /* ─── RECOMENDAÇÕES ─── */
+  .rec-card {
+    position: relative;
+    padding-left: 60px;
+  }
+  .rec-number {
+    position: absolute;
+    left: 20px;
+    top: 28px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--border);
+  }
+  .rec-card.top3 .rec-number { color: var(--accent); }
+  .rec-card.top3 { border-color: rgba(56, 189, 248, 0.25); }
+  .rec-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .rec-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ─── FONTES ─── */
+  .sources-list {
+    columns: 2;
+    column-gap: 32px;
+    list-style: none;
+  }
+  @media (max-width: 768px) { .sources-list { columns: 1; } }
+  .sources-list li {
+    padding: 6px 0;
+    break-inside: avoid;
+  }
+  .sources-list a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s;
+  }
+  .sources-list a:hover { color: var(--accent); }
+
+  /* ─── FOOTER (bloco ZN forte) ─── */
+  footer {
+    padding: 72px 28px 48px; text-align: center;
+    border-top: 1px solid var(--border); background: var(--zn-black);
+    position: relative; overflow: hidden;
+  }
+  footer::before {
+    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 200px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--zn-lime), transparent);
+    opacity: 0.5;
+  }
+  footer .container { padding: 0; max-width: 720px; }
+  .footer-zn-block { margin-bottom: 18px; }
+  .footer-mark {
+    font-family: var(--zn-display); font-weight: 900;
+    font-size: 4rem; letter-spacing: -0.07em; color: var(--zn-lime);
+    line-height: 1;
+    text-shadow: 0 0 60px rgba(198, 255, 0, 0.35);
+  }
+  .footer-tagline {
+    font-family: var(--zn-body-zn); font-size: 0.88rem; color: var(--text-muted);
+    margin-top: 14px; letter-spacing: 0.02em;
+  }
+  .footer-links {
+    display: flex; gap: 14px; justify-content: center; align-items: center;
+    margin: 32px 0; font-family: var(--zn-body-zn); font-size: 0.82rem;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: var(--zn-lime); text-decoration: none;
+    transition: opacity 0.2s; font-weight: 500;
+  }
+  .footer-links a:hover { opacity: 0.65; }
+  .footer-links .sep { color: var(--text-dim); }
+  .footer-credits {
+    font-size: 0.74rem; color: var(--text-dim); line-height: 1.6;
+    max-width: 560px; margin: 0 auto;
+    font-family: var(--zn-body-zn);
+  }
+
+  /* ─── NAV ─── */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(12, 15, 26, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  .nav.visible { transform: translateY(0); }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .nav-brand {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .nav-zn {
+    font-family: var(--zn-display); font-weight: 900;
+    color: var(--zn-lime); letter-spacing: -0.04em;
+    margin-right: 12px; font-size: 0.95rem;
+  }
+  .nav-caption {
+    color: var(--text-muted); font-weight: 500;
+    font-family: var(--zn-body-zn); font-size: 0.78rem; letter-spacing: 0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+
+  /* Back-link (top-left fixed) */
+  .back-link {
+    position: fixed; top: 18px; left: 28px; z-index: 60;
+    font-size: 0.72rem; color: var(--text-muted); text-decoration: none;
+    text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;
+    padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px;
+    background: rgba(12, 15, 26, 0.6); backdrop-filter: blur(8px);
+    transition: opacity 0.25s, color 0.2s, border-color 0.2s;
+  }
+  .back-link:hover { color: var(--accent); border-color: var(--accent); }
+  .back-link.hidden { opacity: 0; pointer-events: none; }
+
+  /* ZN brand — fixed wordmark (top-right) */
+  .zn-mark-fixed {
+    position: fixed; top: 18px; right: 28px; z-index: 60;
+    font-family: var(--zn-display); font-weight: 900;
+    font-size: 1.1rem; letter-spacing: -0.04em; color: var(--zn-lime);
+    text-decoration: none;
+    text-shadow: 0 0 24px rgba(198, 255, 0, 0.35);
+    transition: opacity 0.25s;
+  }
+  .zn-mark-fixed:hover { opacity: 0.75; }
+  .zn-mark-fixed.hidden { opacity: 0; pointer-events: none; }
+  .zn-mark-fixed .dot { color: var(--zn-lime); }
+
+  @media (max-width: 520px) {
+    .back-link { font-size: 0.66rem; padding: 6px 10px; }
+    .zn-mark-fixed { font-size: 0.9rem; top: 14px; right: 18px; }
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 640px) {
+    .hero-stats { gap: 24px; }
+    .hero-stat .number { font-size: 1.8rem; }
+    section { padding: 60px 0; }
+    .rec-card { padding-left: 48px; }
+    .rec-number { left: 16px; font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<a href="/" class="back-link">← thiagozeni.com</a>
+<a href="/" class="zn-mark-fixed" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="nav-zn">ZN.</span>
+      <span class="nav-caption">Dossiê · RBA Comunicação</span>
+    </div>
+    <div class="nav-links">
+      <a href="#identidade">Identidade</a>
+      <a href="#estrutura">Estrutura</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#maturidade">Maturidade</a>
+      <a href="#oportunidades">Oportunidades IA</a>
+      <a href="#recomendacoes">Recomendações</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-meta">
+      <span class="hm-text">Dossiê de preparação</span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">Consultoria IA</span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">Início 15 Abr 2026</span>
+    </div>
+    <h1>RBA+</h1>
+    <p class="tagline">"Criada para se recriar"</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="number">50</span>
+        <span class="label">Anos</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number">~54</span>
+        <span class="label">Pessoas</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number">3</span>
+        <span class="label">Divisões</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number">18+</span>
+        <span class="label">Clientes</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll para explorar</div>
+</header>
+
+<!-- IDENTIDADE -->
+<section id="identidade">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">01 — Identidade Corporativa</div>
+      <h2 class="section-title">Quem é a RBA</h2>
+      <p class="section-subtitle">Grupo de comunicação e marketing com meio século de história no Vale dos Sinos.</p>
+    </div>
+    <div class="id-grid fade-in">
+      <div class="id-item">
+        <div class="id-label">Razão Social</div>
+        <div class="id-value">RBA Comunicação Ltda</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">CNPJ</div>
+        <div class="id-value">88.867.874/0001-91</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">Fundação</div>
+        <div class="id-value">31/03/1976</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">CNAE</div>
+        <div class="id-value">M-7311-4/00 — Agências de publicidade</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">Sede</div>
+        <div class="id-value">Rua João Antonio da Silveira, 126 — Novo Hamburgo, RS</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">Filial</div>
+        <div class="id-value">Caxias do Sul, RS (1-10 funcionários)</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">Telefone</div>
+        <div class="id-value">(51) 3594-8555</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">Receita Estimada</div>
+        <div class="id-value warn">~US$ 12,6M/ano (~R$ 65M) — não confirmada</div>
+      </div>
+      <div class="id-item">
+        <div class="id-label">Sites</div>
+        <div class="id-value">rba.com.br · bradigital.com.br · rbagrupo.com.br</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ESTRUTURA -->
+<section id="estrutura">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">02 — Estrutura do Grupo</div>
+      <h2 class="section-title">Três Divisões Integradas</h2>
+      <p class="section-subtitle">Comunicação, performance digital e inteligência de mercado sob um mesmo teto.</p>
+    </div>
+    <div class="grid-3 fade-in">
+      <div class="card division-card div-360">
+        <div class="division-icon">360</div>
+        <h3>RBA 360</h3>
+        <div class="division-sub">Comunicação Integrada</div>
+        <ul>
+          <li>Metodologia proprietária de jornada do consumidor</li>
+          <li>Campanhas em todos os touchpoints da marca</li>
+          <li>Posicionamento e engajamento</li>
+          <li>Criação e produção publicitária</li>
+        </ul>
+      </div>
+      <div class="card division-card div-bra">
+        <div class="division-icon">BRA</div>
+        <h3>BRA Digital</h3>
+        <div class="division-sub">E-commerce & Performance</div>
+        <ul>
+          <li>Tráfego pago de alta performance</li>
+          <li>Desenvolvimento de lojas virtuais</li>
+          <li>Publicidade personalizada com dados</li>
+          <li>"Agência pós-digital"</li>
+        </ul>
+      </div>
+      <div class="card division-card div-mix">
+        <div class="division-icon">MIX</div>
+        <h3>MIX</h3>
+        <div class="division-sub">Inteligência de Mercado</div>
+        <ul>
+          <li>Coleta e análise de dados proprietária</li>
+          <li>Imersões etnográficas e netnográficas</li>
+          <li>Pesquisa comportamental e estatística</li>
+          <li>Grupos de discussão e experimentação</li>
+        </ul>
+      </div>
+    </div>
+    <div class="methodology-bar fade-in">
+      <span class="meth-label">Metodologias</span>
+      <span class="methodology-tag">Connective Thinking</span>
+      <span class="methodology-tag">Market Thinking</span>
+      <span class="methodology-tag">Design Thinking</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LIDERANÇA -->
+<section id="lideranca">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">03 — Liderança</div>
+      <h2 class="section-title">Quem Decide</h2>
+      <p class="section-subtitle">Empresa familiar — famílias Zeni e Cardoso entre os fundadores.</p>
+    </div>
+    <div class="card fade-in" style="overflow-x:auto">
+      <table class="leaders-table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cargo / Função</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="name">Roque Luiz Zeni</td><td class="role">Administrador / Diretor Financeiro</td></tr>
+          <tr><td class="name">Rudimar Camilo Zeni</td><td class="role">Sócio / Gerente Financeiro</td></tr>
+          <tr><td class="name">Afonso Celso Cardoso</td><td class="role">Sócio / Diretor de Atendimento</td></tr>
+          <tr><td class="name">Carlos Roberto Cardoso</td><td class="role">Sócio / Gerente de Produção</td></tr>
+          <tr><td class="name">Paulo Roberto Rosa de Noronha</td><td class="role">Sócio / Gerente de Planejamento</td></tr>
+          <tr><td class="name">Vera Maria Walter</td><td class="role">Sócia / Gerente de Atendimento</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="key-people fade-in">
+      <div class="key-person"><span class="kp-name">Gabriel Daudt</span><span class="kp-role">— Head de Planejamento</span></div>
+      <div class="key-person"><span class="kp-name">Thiago Mendes</span><span class="kp-role">— Head de Market Intelligence</span></div>
+      <div class="key-person"><span class="kp-name">Nathalie de Paula</span><span class="kp-role">— Head de Online Media</span></div>
+      <div class="key-person"><span class="kp-name">Poliana Zeni</span><span class="kp-role">— Atendimento</span></div>
+      <div class="key-person"><span class="kp-name">Rafael Plegge</span><span class="kp-role">— Dir. Arte Criativo</span></div>
+      <div class="key-person"><span class="kp-name">Gabriele Martins</span><span class="kp-role">— Diretora de Arte</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CLIENTES -->
+<section id="clientes">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">04 — Portfólio de Clientes</div>
+      <h2 class="section-title">Quem Eles Atendem</h2>
+      <p class="section-subtitle">Mix de multinacionais, marcas nacionais e líderes regionais. Perfil B2B predominante.</p>
+    </div>
+
+    <div class="clients-group fade-in">
+      <div class="clients-group-label">Marcas Internacionais</div>
+      <div class="clients-grid">
+        <span class="client-tag highlight">Stihl</span>
+        <span class="client-tag highlight">JBL</span>
+        <span class="client-tag highlight">Harman Kardon</span>
+        <span class="client-tag highlight">AcDelco</span>
+        <span class="client-tag highlight">Ford</span>
+        <span class="client-tag highlight">Shell</span>
+      </div>
+    </div>
+    <div class="clients-group fade-in">
+      <div class="clients-group-label">Marcas Nacionais</div>
+      <div class="clients-grid">
+        <span class="client-tag">Via Marte</span>
+        <span class="client-tag">Tramonto</span>
+        <span class="client-tag">Mormaii</span>
+        <span class="client-tag">Saccaro</span>
+        <span class="client-tag">Nutrire</span>
+      </div>
+    </div>
+    <div class="clients-group fade-in">
+      <div class="clients-group-label">Regionais</div>
+      <div class="clients-grid">
+        <span class="client-tag">Cinex</span>
+        <span class="client-tag">Romanzza</span>
+        <span class="client-tag">Grupo Sinosserra</span>
+        <span class="client-tag">Guaibacar</span>
+        <span class="client-tag">Sinoscar</span>
+        <span class="client-tag">Sinfacil</span>
+      </div>
+    </div>
+
+    <div class="cases-grid grid-2 fade-in">
+      <div class="card case-card">
+        <h4>Stihl VR Experience</h4>
+        <p>Primeira experiência de realidade virtual da Stihl no Brasil — cafezais em 360° para o produto SP 20 em feiras agrícolas.</p>
+      </div>
+      <div class="card case-card">
+        <h4>"Onde tem Stihl, tem história pra contar"</h4>
+        <p>Campanha de storytelling convidando fãs a compartilhar memórias com a marca, transformadas em vídeos branded.</p>
+      </div>
+    </div>
+
+    <div class="awards-list fade-in">
+      <span class="award-tag">Prata — Branded Content (Stihl Pro-Jardim)</span>
+      <span class="award-tag">Top de Marketing ADVB/RS 2021</span>
+      <span class="award-tag">Finalista 4 categorias — Prêmio Colunistas 2022</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRESENÇA DIGITAL -->
+<section id="digital">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">05 — Presença Digital</div>
+      <h2 class="section-title">Pegada Online</h2>
+      <p class="section-subtitle">Presença modesta para uma agência com 50 anos e clientes desse calibre.</p>
+    </div>
+    <div class="grid-4 fade-in">
+      <div class="card social-card">
+        <div class="social-icon">Li</div>
+        <div class="social-info">
+          <h4>LinkedIn</h4>
+          <div class="social-handle">RBA Comunicação</div>
+          <div class="social-metric">~790 seguidores</div>
+        </div>
+      </div>
+      <div class="card social-card">
+        <div class="social-icon">Ig</div>
+        <div class="social-info">
+          <h4>Instagram</h4>
+          <div class="social-handle">@rbacomunicacao</div>
+          <div class="social-metric">1.474 seguidores</div>
+        </div>
+      </div>
+      <div class="card social-card">
+        <div class="social-icon">Ig</div>
+        <div class="social-info">
+          <h4>Instagram Grupo</h4>
+          <div class="social-handle">@gruporbaoficial</div>
+          <div class="social-metric">6.658 seguidores</div>
+        </div>
+      </div>
+      <div class="card social-card">
+        <div class="social-icon">Fb</div>
+        <div class="social-info">
+          <h4>Facebook</h4>
+          <div class="social-handle">AgenciaRBA</div>
+          <div class="social-metric">~2.582 likes</div>
+        </div>
+      </div>
+    </div>
+    <div class="maturity-indicator low fade-in">
+      <div class="maturity-dot low"></div>
+      <div class="maturity-text">Maturidade digital: <strong>Baixa</strong> — Sem canal YouTube, sem blog, engajamento abaixo do esperado para o porte.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MATURIDADE TECNOLÓGICA -->
+<section id="maturidade">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">06 — Maturidade Tecnológica</div>
+      <h2 class="section-title">Diagnóstico Digital</h2>
+      <p class="section-subtitle">O que existe hoje e o que está ausente.</p>
+    </div>
+    <div class="maturity-split fade-in">
+      <div class="card maturity-col exists">
+        <h3>✓ O que existe</h3>
+        <ul>
+          <li>BRA Digital: tráfego pago, e-commerce, analytics</li>
+          <li>MIX: coleta de dados e pesquisa estatística</li>
+          <li>Campanha de VR (abertura a inovação)</li>
+          <li>Metodologias proprietárias consolidadas</li>
+        </ul>
+      </div>
+      <div class="card maturity-col missing">
+        <h3>✗ O que NÃO existe</h3>
+        <ul>
+          <li>Nenhuma menção a IA, ML ou automação</li>
+          <li>Sem blog ou hub de conteúdo</li>
+          <li>Sem case studies no site</li>
+          <li>Sem badges (Google Partner, Meta BP)</li>
+          <li>Sem stack tecnológico visível</li>
+          <li>Sem equipe de data science</li>
+          <li>Site single-page básico</li>
+        </ul>
+      </div>
+    </div>
+    <div class="conclusion-box fade-in">
+      A RBA está num estágio <strong>pré-IA</strong>. A consultoria estará introduzindo capacidades novas, não otimizando existentes.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTEXTO DE MERCADO -->
+<section id="mercado">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">07 — Contexto de Mercado</div>
+      <h2 class="section-title">O Setor em Números</h2>
+      <p class="section-subtitle">Mercado publicitário brasileiro e adoção de IA no setor.</p>
+    </div>
+    <div class="grid-3 fade-in">
+      <div class="card stat-card">
+        <div class="stat-number" style="color: var(--accent)">R$ 28,9B</div>
+        <div class="stat-label">Investimento publicitário via agências</div>
+        <div class="stat-sub">+10% YoY (2025)</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number" style="color: var(--accent2)">40%+</div>
+        <div class="stat-label">Internet na quota de mídia</div>
+        <div class="stat-sub">Superou TV aberta + paga</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number" style="color: var(--accent3)">US$ 395B</div>
+        <div class="stat-label">Mercado global projetado</div>
+        <div class="stat-sub">Agências de marketing digital (2032)</div>
+      </div>
+    </div>
+
+    <div class="progress-section fade-in">
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 24px;">Adoção de IA no Setor</h3>
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Empresas BR usando IA em Marketing & Vendas</span>
+          <span class="progress-value">58%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 58%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Agências usando IA em estratégias de marketing</span>
+          <span class="progress-value">71%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 71%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Empresas que planejam aumentar investimento em IA até 2026</span>
+          <span class="progress-value">78%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 78%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Agências com processos de IA padronizados</span>
+          <span class="progress-value" style="color: var(--danger)">38%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 38%; background: linear-gradient(90deg, var(--danger), var(--warning))"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONCORRÊNCIA -->
+<section id="concorrencia">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">08 — Concorrência</div>
+      <h2 class="section-title">Landscape Competitivo</h2>
+    </div>
+    <div class="card fade-in">
+      <div class="comp-level">
+        <div class="comp-level-label regional">Regional — Vale dos Sinos</div>
+        <div class="comp-tags">
+          <span class="comp-tag">ACME Comunicação</span>
+          <span class="comp-tag">WiseData Marketing</span>
+          <span class="comp-tag">Nemor Marketing Digital</span>
+          <span class="comp-tag">Escape Comunicação</span>
+        </div>
+      </div>
+      <div class="comp-level">
+        <div class="comp-level-label estadual">Estadual — Rio Grande do Sul</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Escala</span>
+          <span class="comp-tag">Competence</span>
+          <span class="comp-tag">CENTRO</span>
+          <span class="comp-tag">Agência Penso</span>
+          <span class="comp-tag">Digitall Evolution</span>
+          <span class="comp-tag">Agência Moove</span>
+        </div>
+      </div>
+      <div class="comp-level">
+        <div class="comp-level-label nacional">Nacional</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Africa Creative</span>
+          <span class="comp-tag">AlmapBBDO</span>
+          <span class="comp-tag">DPZ&T</span>
+          <span class="comp-tag">WMcCann</span>
+          <span class="comp-tag">Publicis</span>
+        </div>
+      </div>
+    </div>
+    <div class="positioning-box fade-in">
+      <strong>Posição:</strong> Líder regional forte, mas não aparece em rankings nacionais. IA pode ser a estratégia de leapfrog.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- REGULATÓRIO -->
+<section id="regulatorio">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">09 — Ambiente Regulatório</div>
+      <h2 class="section-title">Compliance & Regulação</h2>
+      <p class="section-subtitle">O que já está vigente e o que vem pela frente.</p>
+    </div>
+    <div class="grid-2 fade-in">
+      <div class="card reg-card vigente">
+        <span class="reg-status active">Vigente</span>
+        <h4>LGPD</h4>
+        <p>Agências são co-responsáveis pelo tratamento de dados. Atividades da MIX (coleta, pesquisa comportamental) diretamente afetadas.</p>
+      </div>
+      <div class="card reg-card vigente">
+        <span class="reg-status active">Vigente</span>
+        <h4>ANPD Fortalecida (2025)</h4>
+        <p>Autarquia independente com poder de fiscalização ampliado. Foco em adtech e dados sensíveis.</p>
+      </div>
+      <div class="card reg-card vigente">
+        <span class="reg-status active">Vigente</span>
+        <h4>Lei 15.211/2025 — ECA Digital</h4>
+        <p>Regras sobre menores em ambientes digitais — impacta estratégias de targeting.</p>
+      </div>
+      <div class="card reg-card tramitacao">
+        <span class="reg-status pending">Em Tramitação</span>
+        <h4>Marco Legal da IA (PL 2.338/2023)</h4>
+        <p>Aprovado no Senado, na Câmara. Expectativa: 2026.</p>
+        <ul>
+          <li>IA de alto risco: governança e supervisão humana</li>
+          <li>Direito à explicação de decisões automatizadas</li>
+          <li>Regras contra discriminação algorítmica</li>
+          <li>Copyright: uso comercial requer licenciamento</li>
+          <li>ANPD como regulador residual de IA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OPORTUNIDADES -->
+<section id="oportunidades">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">10 — Oportunidades de IA</div>
+      <h2 class="section-title">Onde a IA Entra</h2>
+      <p class="section-subtitle">Mapeamento de dores atuais e soluções por divisão.</p>
+    </div>
+
+    <div class="opp-tabs fade-in">
+      <button class="opp-tab active" onclick="showTab('mix')">MIX — Entry Point</button>
+      <button class="opp-tab" onclick="showTab('bra')">BRA Digital</button>
+      <button class="opp-tab" onclick="showTab('rba360')">RBA 360</button>
+    </div>
+
+    <div class="fade-in">
+      <div id="tab-mix" class="opp-panel active">
+        <div class="card" style="overflow-x:auto">
+          <table class="opp-table">
+            <thead><tr><th>Dor Atual</th><th>Solução IA</th></tr></thead>
+            <tbody>
+              <tr><td class="pain">Coleta manual de dados</td><td class="solution">Web scraping inteligente, social listening com NLP</td></tr>
+              <tr><td class="pain">Análise manual de sentimento</td><td class="solution">Análise de sentimento automatizada (redes, reviews)</td></tr>
+              <tr><td class="pain">Pesquisa comportamental lenta</td><td class="solution">Modelos preditivos de comportamento do consumidor</td></tr>
+              <tr><td class="pain">Relatórios de insights manuais</td><td class="solution">Geração automática de insights com narrativa</td></tr>
+              <tr><td class="pain">Monitoramento competitivo</td><td class="solution">Tracking automatizado de concorrentes e tendências</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="tab-bra" class="opp-panel">
+        <div class="card" style="overflow-x:auto">
+          <table class="opp-table">
+            <thead><tr><th>Dor Atual</th><th>Solução IA</th></tr></thead>
+            <tbody>
+              <tr><td class="pain">Otimização manual de bids</td><td class="solution">IA para gestão automatizada de lances</td></tr>
+              <tr><td class="pain">Segmentação baseada em regras</td><td class="solution">Segmentação preditiva por ML</td></tr>
+              <tr><td class="pain">Testes A/B limitados</td><td class="solution">Otimização criativa multi-variada com GenAI</td></tr>
+              <tr><td class="pain">Relatórios de performance manuais</td><td class="solution">Dashboards em tempo real com insights automáticos</td></tr>
+              <tr><td class="pain">Recomendações de e-commerce genéricas</td><td class="solution">ML para recomendações e pricing dinâmico</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="tab-rba360" class="opp-panel">
+        <div class="card" style="overflow-x:auto">
+          <table class="opp-table">
+            <thead><tr><th>Dor Atual</th><th>Solução IA</th></tr></thead>
+            <tbody>
+              <tr><td class="pain">Produção de conteúdo como gargalo</td><td class="solution">GenAI para rascunhos de copy, variações, ideação</td></tr>
+              <tr><td class="pain">Ciclos longos de planejamento</td><td class="solution">Briefings assistidos por IA, media planning automatizado</td></tr>
+              <tr><td class="pain">Dificuldade em provar ROI</td><td class="solution">Modelagem de atribuição com IA</td></tr>
+              <tr><td class="pain">Apresentações para clientes</td><td class="solution">Relatórios auto-gerados com narrativa</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="cross-div fade-in">
+      <h3>Cross-Division</h3>
+      <ul>
+        <li><strong>Unificação de dados</strong> entre MIX, BRA e RBA 360 para inteligência end-to-end de campanhas</li>
+        <li><strong>Novos serviços IA</strong> como offering premium para clientes (Stihl, JBL, Sinosserra)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RECOMENDAÇÕES -->
+<section id="recomendacoes">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">11 — Recomendações Estratégicas</div>
+      <h2 class="section-title">Como Abordar</h2>
+      <p class="section-subtitle">9 recomendações para a consultoria, priorizadas por impacto.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card rec-card top3 fade-in">
+        <div class="rec-number">01</div>
+        <h4>Liderar pela MIX</h4>
+        <p>Divisão de inteligência é o entry point natural — já orientada a dados, ROI mais demonstrável, quick wins possíveis.</p>
+      </div>
+      <div class="card rec-card top3 fade-in">
+        <div class="rec-number">02</div>
+        <h4>Dimensionar para ~54 pessoas</h4>
+        <p>Soluções right-sized. Ferramentas enterprise-scale não fazem sentido. Preferir SaaS acessíveis e automações com APIs.</p>
+      </div>
+      <div class="card rec-card top3 fade-in">
+        <div class="rec-number">03</div>
+        <h4>IA como expansão de margem</h4>
+        <p>Agências com margens pressionadas. Mostrar como a compressão de 2 semanas → 2 dias se traduz nos workflows da RBA.</p>
+      </div>
+      <div class="card rec-card fade-in">
+        <div class="rec-number">04</div>
+        <h4>LGPD desde o dia 1</h4>
+        <p>Qualquer implementação tocando dados da MIX ou targeting da BRA deve ser LGPD-compliant.</p>
+      </div>
+      <div class="card rec-card fade-in">
+        <div class="rec-number">05</div>
+        <h4>Antecipar Marco Legal da IA</h4>
+        <p>Preparar a RBA para transparência em decisões automatizadas e compliance de copyright em conteúdo gerado por IA.</p>
+      </div>
+      <div class="card rec-card fade-in">
+        <div class="rec-number">06</div>
+        <h4>Diferenciação competitiva</h4>
+        <p>Apenas 38% das agências com processos IA padronizados. Posicionar RBA+ como "agência AI-augmented" no Vale dos Sinos.</p>
+      </div>
+      <div class="card rec-card fade-in">
+        <div class="rec-number">07</div>
+        <h4>Serviços IA para clientes</h4>
+        <p>Além de eficiência interna, oferecer analytics preditivo e otimização IA como serviço premium.</p>
+      </div>
+      <div class="card rec-card fade-in">
+        <div class="rec-number">08</div>
+        <h4>Dinâmica familiar</h4>
+        <p>Empresa familiar com 50 anos — change management é crucial. Propor mudanças incrementais, não disruptivas.</p>
+      </div>
+      <div class="card rec-card fade-in">
+        <div class="rec-number">09</div>
+        <h4>Presença digital própria</h4>
+        <p>Quick win para demonstrar capacidade de IA: otimizar o próprio marketing da RBA com as ferramentas propostas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FONTES -->
+<section id="fontes">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">12 — Fontes</div>
+      <h2 class="section-title">Referências</h2>
+    </div>
+    <div class="card fade-in">
+      <ul class="sources-list">
+        <li><a href="https://rba.com.br/" target="_blank">RBA+ Website</a></li>
+        <li><a href="https://bradigital.com.br/" target="_blank">BRA Digital</a></li>
+        <li><a href="http://www.rbagrupo.com.br/" target="_blank">Grupo RBA</a></li>
+        <li><a href="https://br.linkedin.com/company/rba-comunica%C3%A7%C3%A3o" target="_blank">LinkedIn RBA Comunicação</a></li>
+        <li><a href="https://www.econodata.com.br/consulta-empresa/88867874000191-rba-comunicacao-ltda" target="_blank">Econodata (CNPJ)</a></li>
+        <li><a href="https://www.acinh.com.br/associado/rba-comunicacao" target="_blank">ACI Novo Hamburgo</a></li>
+        <li><a href="https://portfoliodeagencias.meioemensagem.com.br/anuario/propaganda/agencias/RBA+PUBLICIDADE/1632" target="_blank">Meio & Mensagem</a></li>
+        <li><a href="http://www.portaldapropaganda.com.br/noticias/10704/" target="_blank">Portal da Propaganda (VR Stihl)</a></li>
+        <li><a href="https://www.portaldapropaganda.com.br/noticias/4336/" target="_blank">Portal da Propaganda (Via Marte)</a></li>
+        <li><a href="https://rocketreach.co/rba-comunicacao-profile_b45d1eebfc6c8520" target="_blank">RocketReach</a></li>
+        <li><a href="https://www.cenp.com.br/" target="_blank">Cenp-Meios 2025</a></li>
+        <li><a href="https://www.kantar.com/brazil/inspiration/marcas/10-tendencias-de-marketing-para-2026" target="_blank">Kantar Tendências 2026</a></li>
+        <li><a href="https://www.rdstation.com/blog/marketing/tendencias-marketing-e-vendas/" target="_blank">RD Station Tendências 2026</a></li>
+        <li><a href="https://gruposinosserra.com.br/" target="_blank">Grupo Sinosserra</a></li>
+        <li><a href="https://sinaprors.com.br/associadas/" target="_blank">Sinapro-RS</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-zn-block">
+      <div class="footer-mark">ZN<span class="dot">.</span></div>
+      <div class="footer-tagline">Consultoria de IA &amp; Inovação para empresas</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://thiagozeni.com" target="_blank" rel="noopener">thiagozeni.com</a>
+      <span class="sep">·</span>
+      <a href="mailto:thiagoazeni@gmail.com">contato</a>
+      <span class="sep">·</span>
+      <a href="https://thiagozeni.com/#cases" target="_blank" rel="noopener">cases</a>
+    </div>
+    <div class="footer-credits">
+      Dossiê · RBA Comunicação · Abril 2026<br>
+      Construído por Thiago Zeni para a consultoria do Grupo RBA · sobre fontes públicas
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll-triggered fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Nav show on scroll — toggle nav e esconde back-link/zn-mark-fixed quando nav aparece
+  const nav = document.getElementById('nav');
+  const backLink = document.querySelector('.back-link');
+  const znMark = document.querySelector('.zn-mark-fixed');
+  window.addEventListener('scroll', () => {
+    const showNav = window.scrollY > window.innerHeight * 0.5;
+    nav.classList.toggle('visible', showNav);
+    backLink.classList.toggle('hidden', showNav);
+    znMark.classList.toggle('hidden', showNav);
+  });
+
+  // Tabs
+  function showTab(tab) {
+    document.querySelectorAll('.opp-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.opp-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
