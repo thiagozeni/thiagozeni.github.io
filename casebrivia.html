@@ -88,9 +88,10 @@
     text-transform:uppercase; letter-spacing:.1em; font-weight:500;
     padding:8px 14px; border:1px solid var(--border); border-radius:999px;
     background:rgba(10,13,26,.6); backdrop-filter:blur(8px);
-    transition:all .2s;
+    transition:opacity .25s, color .2s, border-color .2s;
   }
   .back-link:hover { color:var(--accent); border-color:var(--accent); }
+  .back-link.hidden { opacity:0; pointer-events:none; }
 
   /* ZN brand — fixed wordmark */
   .zn-mark-fixed {
@@ -99,9 +100,10 @@
     font-size:1.1rem; letter-spacing:-.04em; color:var(--zn-lime);
     text-decoration:none;
     text-shadow:0 0 24px rgba(198,255,0,.35);
-    transition:opacity .2s;
+    transition:opacity .25s;
   }
   .zn-mark-fixed:hover { opacity:.75; }
+  .zn-mark-fixed.hidden { opacity:0; pointer-events:none; }
   .zn-mark-fixed .dot { color:var(--zn-lime); }
 
   /* ZN brand — nav (on-scroll) */
@@ -1318,10 +1320,15 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // Nav on scroll
+  // Nav on scroll — toggle nav e esconde back-link/zn-mark-fixed quando nav aparece
   const nav = document.getElementById('nav');
+  const backLink = document.querySelector('.back-link');
+  const znMark = document.querySelector('.zn-mark-fixed');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('visible', window.scrollY > window.innerHeight * 0.4);
+    const showNav = window.scrollY > window.innerHeight * 0.4;
+    nav.classList.toggle('visible', showNav);
+    backLink.classList.toggle('hidden', showNav);
+    znMark.classList.toggle('hidden', showNav);
   });
 </script>
 </body>
