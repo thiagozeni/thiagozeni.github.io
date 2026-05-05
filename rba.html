@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Grupo RBA · Engagement de Consultoria em IA · Hub</title>
+<meta name="description" content="Hub central com todos os artefatos do engagement de consultoria em IA para o Grupo RBA — pesquisa, diagnóstico, plano de ação e materiais para diretoria.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grupo RBA · Engagement de Consultoria em IA">
+<meta property="og:description" content="Hub com todos os artefatos da consultoria.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Unbounded:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-F44T3HG5PZ');
+</script>
+
+<style>
+  :root {
+    --bg: #0a0d1a;
+    --bg2: #0f1225;
+    --bg-card: #141829;
+    --bg-card-hover: #1a1f36;
+    --border: #1e2340;
+    --text: #e2e8f0;
+    --text-muted: #8892b0;
+    --text-dim: #4a5270;
+    --accent: #38bdf8;
+    --accent2: #818cf8;
+    --accent3: #34d399;
+    --accent4: #f472b6;
+    --accent5: #fb923c;
+    --warning: #f59e0b;
+
+    /* ZN brand layer */
+    --zn-lime: #C6FF00;
+    --zn-black: #050505;
+    --zn-display: 'Unbounded', sans-serif;
+    --zn-body-zn: 'DM Sans', sans-serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .container { max-width:1240px; margin:0 auto; padding:0 28px; }
+  section { padding:60px 0; }
+  .bg-alt { background:var(--bg2); }
+  .divider { height:1px; background:linear-gradient(90deg,transparent,var(--border),transparent); }
+
+  /* ZN top-right */
+  .zn-mark-fixed {
+    position:fixed; top:18px; right:28px; z-index:60;
+    font-family:var(--zn-display); font-weight:900;
+    font-size:1.1rem; letter-spacing:-.04em; color:var(--zn-lime);
+    text-decoration:none;
+    text-shadow:0 0 24px rgba(198,255,0,.35);
+    transition:opacity .25s;
+  }
+  .zn-mark-fixed:hover { opacity:.75; }
+
+  /* HERO */
+  .hero {
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:140px 28px 80px;
+    background:radial-gradient(ellipse at 50% 0%,#151d45 0%,var(--bg) 70%);
+  }
+  .hero-content { max-width:880px; }
+  .hero-meta {
+    display:inline-flex; align-items:center; gap:14px; flex-wrap:wrap;
+    justify-content:center; margin-bottom:36px; line-height:1;
+  }
+  .hero-meta .hm-sep { color:var(--text-dim); font-size:.85rem; }
+  .hero-meta .hm-text {
+    font-family:var(--zn-body-zn); font-weight:500;
+    font-size:.72rem; color:var(--text-muted);
+    letter-spacing:.14em; text-transform:uppercase;
+  }
+  .hero h1 {
+    font-size:clamp(2.5rem,7vw,5rem); font-weight:800; line-height:1.05;
+    letter-spacing:-.025em; margin-bottom:24px;
+    background:linear-gradient(135deg,#fff 0%,var(--accent) 50%,var(--accent2) 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  .hero p.tagline {
+    font-size:1.1rem; color:var(--text-muted); max-width:680px; margin:0 auto 56px;
+    font-weight:400; line-height:1.6;
+  }
+  .hero-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; max-width:760px; margin:0 auto; }
+  .hero-stat { display:flex; flex-direction:column; gap:6px; }
+  .hs-num { font-size:1.8rem; font-weight:800; letter-spacing:-.02em; }
+  .hs-label { font-size:.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:.1em; }
+  @media (max-width:640px) {
+    .hero-stats { grid-template-columns:repeat(2,1fr); gap:20px; }
+  }
+
+  /* SECTIONS */
+  .section-header { margin-bottom:36px; max-width:780px; }
+  .section-label { font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.14em; color:var(--accent); margin-bottom:10px; }
+  .section-title { font-size:clamp(1.6rem,3.2vw,2.2rem); font-weight:700; line-height:1.15; letter-spacing:-.02em; margin-bottom:12px; }
+  .section-sub { font-size:.95rem; color:var(--text-muted); max-width:660px; }
+
+  /* CARDS */
+  .cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px; }
+  .card-link {
+    display:flex; flex-direction:column; gap:14px;
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px;
+    padding:28px; text-decoration:none; color:inherit;
+    transition:all .25s;
+    position:relative; overflow:hidden;
+  }
+  .card-link::after {
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+    background:var(--accent); opacity:.5;
+    transition:opacity .25s, background .25s;
+  }
+  .card-link:hover {
+    background:var(--bg-card-hover); border-color:rgba(56,189,248,.25);
+    transform:translateY(-3px);
+  }
+  .card-link:hover::after { opacity:1; }
+  .card-link.brand-zn::after { background:var(--zn-lime); }
+  .card-link.brand-rba::after { background:linear-gradient(90deg,var(--accent),var(--accent2)); }
+  .card-link.brand-warm::after { background:var(--accent5); }
+
+  .card-meta {
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    font-family:var(--zn-body-zn); font-size:.66rem;
+    text-transform:uppercase; letter-spacing:.1em;
+    color:var(--text-muted); font-weight:600;
+  }
+  .card-format {
+    padding:3px 9px; border-radius:999px; background:rgba(56,189,248,.08);
+    border:1px solid rgba(56,189,248,.2); color:var(--accent);
+  }
+  .card-format.docx { background:rgba(251,146,60,.08); border-color:rgba(251,146,60,.2); color:var(--accent5); }
+  .card-format.html { background:rgba(56,189,248,.08); border-color:rgba(56,189,248,.2); color:var(--accent); }
+  .card-version { color:var(--text-dim); }
+
+  .card-title {
+    font-size:1.1rem; font-weight:700; line-height:1.25; letter-spacing:-.01em;
+    color:var(--text);
+  }
+  .card-desc {
+    font-size:.86rem; color:var(--text-muted); line-height:1.55;
+    flex-grow:1;
+  }
+  .card-cta {
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:.78rem; color:var(--accent); font-weight:600;
+    margin-top:4px;
+  }
+  .card-cta .arrow { transition:transform .2s; display:inline-block; }
+  .card-link:hover .card-cta .arrow { transform:translateX(4px); }
+
+  /* FOOTER */
+  footer {
+    padding:72px 28px 48px; text-align:center;
+    border-top:1px solid var(--border); background:var(--zn-black);
+    position:relative; overflow:hidden;
+  }
+  footer::before {
+    content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:200px; height:1px;
+    background:linear-gradient(90deg,transparent,var(--zn-lime),transparent);
+    opacity:.5;
+  }
+  footer .container { padding:0; max-width:720px; }
+  .footer-zn-block { margin-bottom:18px; }
+  .footer-mark {
+    font-family:var(--zn-display); font-weight:900;
+    font-size:4rem; letter-spacing:-.07em; color:var(--zn-lime);
+    line-height:1;
+    text-shadow:0 0 60px rgba(198,255,0,.35);
+    text-decoration:none; display:inline-block;
+    transition:opacity .2s;
+  }
+  .footer-mark:hover { opacity:.75; }
+  .footer-tagline {
+    font-family:var(--zn-body-zn); font-size:.88rem; color:var(--text-muted);
+    margin-top:14px; letter-spacing:.02em;
+  }
+  .footer-links {
+    display:flex; gap:14px; justify-content:center; align-items:center;
+    margin:32px 0; font-family:var(--zn-body-zn); font-size:.82rem;
+    flex-wrap:wrap;
+  }
+  .footer-links a { color:var(--zn-lime); text-decoration:none; transition:opacity .2s; font-weight:500; }
+  .footer-links a:hover { opacity:.65; }
+  .footer-links .sep { color:var(--text-dim); }
+  .footer-credits {
+    font-size:.74rem; color:var(--text-dim); line-height:1.6;
+    max-width:560px; margin:0 auto;
+    font-family:var(--zn-body-zn);
+  }
+
+  .fade-in { opacity:0; transform:translateY(16px); transition:opacity .6s, transform .6s; }
+  .fade-in.visible { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<a href="https://thiagozeni.com" class="zn-mark-fixed" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-meta">
+      <span class="hm-text">Consultoria em IA</span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">Engagement Mai 2026</span>
+      <span class="hm-sep">·</span>
+      <span class="hm-text">v1.0 · Documento Vivo</span>
+    </div>
+    <h1>Grupo RBA</h1>
+    <p class="tagline">
+      Hub central com todos os artefatos produzidos no engagement de consultoria em IA — pesquisa, diagnóstico, plano de ação e materiais para diretoria.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hs-num" style="color:var(--accent)">9</span>
+        <span class="hs-label">Artefatos publicados</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hs-num" style="color:var(--accent3)">2</span>
+        <span class="hs-label">Dias de imersão</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hs-num" style="color:var(--accent2)">11</span>
+        <span class="hs-label">Iniciativas mapeadas</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hs-num" style="color:var(--tier1,#f472b6)">7</span>
+        <span class="hs-label">Eixos cobertos</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- §01 PESQUISA -->
+<section id="pesquisa">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">01 — Pesquisa &amp; Preparação</div>
+      <h2 class="section-title">Mapeamento prévio do cliente e do mercado</h2>
+      <p class="section-sub">Levantamento institucional do Grupo RBA, mapeamento competitivo das agências do RS e estudo de caso aprofundado da agência mais relevante como benchmark.</p>
+    </div>
+    <div class="cards-grid fade-in">
+
+      <a href="/dossie" class="card-link">
+        <div class="card-meta">
+          <span class="card-format html">HTML</span>
+          <span class="card-version">Abr 2026</span>
+        </div>
+        <div class="card-title">Dossiê do cliente</div>
+        <div class="card-desc">Perfil institucional do Grupo RBA — divisões, clientes, equipe, posicionamento histórico e maturidade digital.</div>
+        <div class="card-cta">Abrir dossiê <span class="arrow">→</span></div>
+      </a>
+
+      <a href="/concorrenciars" class="card-link">
+        <div class="card-meta">
+          <span class="card-format html">HTML</span>
+          <span class="card-version">Abr 2026 · rev. Mai</span>
+        </div>
+        <div class="card-title">Análise competitiva — Agências RS</div>
+        <div class="card-desc">Mapeamento das principais agências do Rio Grande do Sul, com foco em posicionamento, premiações e maturidade em IA.</div>
+        <div class="card-cta">Abrir análise <span class="arrow">→</span></div>
+      </a>
+
+      <a href="/casebrivia" class="card-link">
+        <div class="card-meta">
+          <span class="card-format html">HTML</span>
+          <span class="card-version">Mai 2026</span>
+        </div>
+        <div class="card-title">Estudo de caso · Brivia</div>
+        <div class="card-desc">Anatomia da agência que partiu de Novo Hamburgo e virou grupo nacional via M&amp;A, IA proprietária e reposicionamento. Benchmark de trajetória.</div>
+        <div class="card-cta">Abrir estudo <span class="arrow">→</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §02 DIAGNÓSTICO -->
+<section id="diagnostico" class="bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">02 — Diagnóstico</div>
+      <h2 class="section-title">Imersão, mapeamento e iniciativa-âncora</h2>
+      <p class="section-sub">Resultado consolidado das duas jornadas de imersão com a equipe — 7 eixos investigados, 11 iniciativas mapeadas e detalhamento da iniciativa SIM (Sistema de Inteligência de Marca).</p>
+    </div>
+    <div class="cards-grid fade-in">
+
+      <a href="/diagnostico" class="card-link brand-rba">
+        <div class="card-meta">
+          <span class="card-format html">HTML</span>
+          <span class="card-version">v0.2 · Dias 1+2 · Abr 2026</span>
+        </div>
+        <div class="card-title">Diagnóstico estratégico · Relatório</div>
+        <div class="card-desc">Landing consolidada do diagnóstico — equipe entrevistada, contexto, 11 iniciativas priorizadas, padrões observados e próximos passos.</div>
+        <div class="card-cta">Abrir relatório <span class="arrow">→</span></div>
+      </a>
+
+      <a href="/sim" class="card-link brand-rba">
+        <div class="card-meta">
+          <span class="card-format html">HTML</span>
+          <span class="card-version">MVP Ondas 1+2 · v1.2 · Mai 2026</span>
+        </div>
+        <div class="card-title">Sistema de Inteligência de Marca (SIM)</div>
+        <div class="card-desc">Visualização técnica completa do SIM — blueprint, esquema de dados, 5 camadas, casos de uso, governança e roadmap de implementação. Iniciativa-âncora do diagnóstico.</div>
+        <div class="card-cta">Abrir visualização <span class="arrow">→</span></div>
+      </a>
+
+      <a href="/rba-docs/Diagnostico_Estrategico_RBA_v0.5.docx" class="card-link" download>
+        <div class="card-meta">
+          <span class="card-format docx">DOCX · Download</span>
+          <span class="card-version">v0.5 · Mai 2026</span>
+        </div>
+        <div class="card-title">Diagnóstico Estratégico · Documento</div>
+        <div class="card-desc">Versão Word completa do diagnóstico — formato editável para revisão, anotações e arquivo institucional. Contém todo o conteúdo da landing + apêndices.</div>
+        <div class="card-cta">Baixar <span class="arrow">↓</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §03 PLANO -->
+<section id="plano">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">03 — Plano de Ação</div>
+      <h2 class="section-title">Execução por ondas com cronograma visual</h2>
+      <p class="section-sub">Plano de ação estruturado em 4 ondas, com responsáveis, ferramentas e critérios de sucesso definidos para cada iniciativa. Inclui visualização Gantt interativa.</p>
+    </div>
+    <div class="cards-grid fade-in">
+
+      <a href="/gantt" class="card-link brand-warm">
+        <div class="card-meta">
+          <span class="card-format html">HTML interativo</span>
+          <span class="card-version">v1.0 · Abr 2026 · 33 semanas</span>
+        </div>
+        <div class="card-title">Gantt do Plano de Ação</div>
+        <div class="card-desc">Cronograma visual com filtros, popovers detalhados e marcos de cada iniciativa por onda. Identidade visual do deck oficial do Grupo RBA.</div>
+        <div class="card-cta">Abrir Gantt <span class="arrow">→</span></div>
+      </a>
+
+      <a href="/rba-docs/Plano_de_Acao_RBA_v1.0.docx" class="card-link" download>
+        <div class="card-meta">
+          <span class="card-format docx">DOCX · Download</span>
+          <span class="card-version">v1.0 · Abr 2026</span>
+        </div>
+        <div class="card-title">Plano de Ação · Documento</div>
+        <div class="card-desc">Versão Word do plano completo — descrição detalhada de cada iniciativa, responsáveis, dependências, ferramentas necessárias e critérios de sucesso.</div>
+        <div class="card-cta">Baixar <span class="arrow">↓</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §04 DIRETORIA -->
+<section id="diretoria" class="bg-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">04 — Apresentação à Diretoria</div>
+      <h2 class="section-title">Versão executiva e síntese de decisão</h2>
+      <p class="section-sub">Material destilado para a apresentação à diretoria — recomendações priorizadas, ROI esperado por iniciativa e próximos marcos.</p>
+    </div>
+    <div class="cards-grid fade-in">
+
+      <a href="/rba-docs/Resumo_Executivo_Diretoria_v0.3.docx" class="card-link" download>
+        <div class="card-meta">
+          <span class="card-format docx">DOCX · Download</span>
+          <span class="card-version">v0.3 · Mai 2026</span>
+        </div>
+        <div class="card-title">Resumo Executivo · Diretoria</div>
+        <div class="card-desc">Versão sintética de 5-7 páginas para apresentação à diretoria — diagnóstico em 1 página, top 5 iniciativas priorizadas por payback, recomendação de piloto e próximos passos.</div>
+        <div class="card-cta">Baixar <span class="arrow">↓</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-zn-block">
+      <a href="https://thiagozeni.com" class="footer-mark" target="_blank" rel="noopener" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+      <div class="footer-tagline">Consultoria de IA &amp; Inovação para empresas</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://thiagozeni.com" target="_blank" rel="noopener">thiagozeni.com</a>
+      <span class="sep">·</span>
+      <a href="mailto:thiagoazeni@gmail.com">contato</a>
+      <span class="sep">·</span>
+      <a href="https://thiagozeni.com/#cases" target="_blank" rel="noopener">cases</a>
+    </div>
+    <div class="footer-credits">
+      Grupo RBA · Engagement de Consultoria em IA · Maio 2026<br>
+      Construído por Thiago Zeni · Documento de uso restrito ao cliente · acesso por link direto
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Grupo RBA · Diagnóstico Estratégico de IA</title>
+<meta name="description" content="Diagnóstico estratégico consolidado da consultoria de IA para o Grupo RBA — 7 eixos, 11 iniciativas, mapeamento de oportunidades.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grupo RBA · Diagnóstico Estratégico de IA">
+<meta property="og:description" content="Mapeamento completo de oportunidades, gargalos e caminhos de transformação para o Grupo RBA.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Unbounded:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-F44T3HG5PZ');
+</script>
+<style>
+:root {
+  --bg: #0c0f1a;
+  --bg-card: #141829;
+  --bg-card-hover: #1a1f36;
+  --border: #232845;
+  --border-hover: rgba(56, 189, 248, 0.2);
+  --text: #e2e8f0;
+  --text-muted: #8892b0;
+  --text-dim: #5a6380;
+  --accent: #38bdf8;
+  --accent2: #818cf8;
+  --accent3: #34d399;
+  --accent4: #f472b6;
+  --accent5: #fb923c;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #22c55e;
+
+  /* ZN brand layer (autoria — header + footer) */
+  --zn-lime: #C6FF00;
+  --zn-display: 'Unbounded', sans-serif;
+  --zn-body-zn: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: rgba(56,189,248,0.2) transparent; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--bg); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: rgba(56,189,248,0.2); border-radius: 3px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .6; } }
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-delay-1 { transition-delay: 0.1s; }
+.fade-delay-2 { transition-delay: 0.2s; }
+.fade-delay-3 { transition-delay: 0.3s; }
+.fade-delay-4 { transition-delay: 0.4s; }
+.fade-delay-5 { transition-delay: 0.5s; }
+
+.bg-glow { position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(56,189,248,0.04) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(129,140,248,0.03) 0%, transparent 50%); }
+
+.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); z-index: 200; width: 0%; }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(20px); background: rgba(12,15,26,0.9); border-bottom: 1px solid var(--border); transform: translateY(-100%); transition: transform 0.3s ease; }
+.nav.scrolled { transform: translateY(0); }
+.nav__logo { font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; }
+.nav__logo span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.nav__links { display: flex; gap: 24px; list-style: none; }
+.nav__links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.nav__links a:hover { color: var(--accent); }
+.nav__badge { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--accent3); background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); padding: 4px 12px; border-radius: 999px; }
+.nav__right { display: flex; align-items: center; gap: 16px; }
+.nav__zn {
+  font-family: var(--zn-display); font-weight: 900;
+  font-size: 1.05rem; letter-spacing: -0.04em; color: var(--zn-lime);
+  text-decoration: none; line-height: 1;
+  text-shadow: 0 0 24px rgba(198,255,0,0.35);
+  transition: opacity 0.2s;
+}
+.nav__zn:hover { opacity: 0.75; }
+.nav__zn .dot { color: var(--zn-lime); }
+
+.back-link {
+  position: fixed; top: 18px; left: 28px; z-index: 60;
+  font-size: 0.72rem; color: var(--text-muted); text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;
+  padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px;
+  background: rgba(12,15,26,0.6); backdrop-filter: blur(8px);
+  transition: opacity 0.25s, color 0.2s, border-color 0.2s;
+}
+.back-link:hover { color: var(--accent); border-color: var(--accent); }
+.back-link.hidden { opacity: 0; pointer-events: none; }
+
+/* HERO */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; background: radial-gradient(ellipse at 50% 0%, #1e2a5a 0%, var(--bg) 70%); }
+.hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 20%, rgba(56,189,248,0.05) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(129,140,248,0.04) 0%, transparent 50%); pointer-events: none; }
+.hero-content { position: relative; z-index: 1; max-width: 860px; padding: 0 24px; }
+.hero-badge { display: inline-block; padding: 6px 18px; background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); border-radius: 999px; font-size: 0.8rem; font-weight: 500; color: var(--accent3); letter-spacing: 0.05em; margin-bottom: 32px; opacity: 0; animation: fadeInUp 0.6s ease 0.2s forwards; }
+.hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 16px; background: linear-gradient(135deg, #fff 0%, #38bdf8 50%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; opacity: 0; animation: fadeInUp 0.8s ease 0.4s forwards; }
+.hero .tagline { font-size: 1.1rem; color: var(--text-muted); font-weight: 300; margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0; animation: fadeInUp 0.6s ease 0.7s forwards; }
+.hero-stats { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; opacity: 0; animation: fadeInUp 0.6s ease 1s forwards; }
+.hero-stat { text-align: center; }
+.hero-stat .number { font-size: 2.5rem; font-weight: 800; color: var(--accent); display: block; }
+.hero-stat .label { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.scroll-hint { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-dim); font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0; animation: fadeInUp 0.6s ease 1.3s forwards; }
+.scroll-hint__line { width: 1px; height: 32px; background: linear-gradient(to bottom, var(--accent), transparent); animation: scrollLine 2s ease-in-out infinite; }
+
+/* SECTIONS */
+section { padding: 100px 0; position: relative; z-index: 1; }
+.section-header { margin-bottom: 48px; }
+.section-label { font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 12px; }
+.section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; color: #fff; margin-bottom: 12px; }
+.section-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; font-weight: 300; }
+
+/* CARDS */
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; transition: all 0.3s ease; }
+.card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); transform: translateY(-2px); }
+
+/* GRIDS */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+
+/* TEAM GRID */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+.team-card { text-align: center; padding: 24px 16px; }
+.team-card__avatar { width: 52px; height: 52px; border-radius: 14px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 800; }
+.team-card__day { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+.team-card__name { font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 2px; }
+.team-card__role { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px; }
+.team-card__ais { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.ai-tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; padding: 2px 7px; border-radius: 5px; background: rgba(56,189,248,0.08); color: var(--text-muted); border: 1px solid var(--border); }
+
+/* team avatar colors cycling */
+.team-card:nth-child(5n+1) .team-card__avatar { background: rgba(56,189,248,0.15); color: var(--accent); }
+.team-card:nth-child(5n+2) .team-card__avatar { background: rgba(129,140,248,0.15); color: var(--accent2); }
+.team-card:nth-child(5n+3) .team-card__avatar { background: rgba(52,211,153,0.15); color: var(--accent3); }
+.team-card:nth-child(5n+4) .team-card__avatar { background: rgba(244,114,182,0.15); color: var(--accent4); }
+.team-card:nth-child(5n+5) .team-card__avatar { background: rgba(251,146,60,0.15); color: var(--accent5); }
+
+.day-separator { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+.day-separator__label { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); white-space: nowrap; }
+.day-separator__line { flex: 1; height: 1px; background: var(--border); }
+
+/* STATS STRIP */
+.stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 48px; }
+.stat-card { text-align: center; padding: 28px 20px; }
+.stat-card__number { font-size: 3rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.stat-card__label { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+.stat-card__desc { font-size: 0.78rem; color: var(--text-dim); margin-top: 4px; }
+
+/* CONTEXT BOX */
+.context-box { background: linear-gradient(135deg, rgba(56,189,248,0.06), rgba(129,140,248,0.06)); border: 1px solid var(--border); border-radius: 16px; padding: 32px 36px; }
+.context-box p { font-size: 1rem; line-height: 1.8; color: var(--text-muted); }
+.context-box p + p { margin-top: 16px; }
+.context-box strong { color: #fff; font-weight: 600; }
+
+/* VALIDATION BOX */
+.validation-box { background: linear-gradient(135deg, rgba(52,211,153,0.06), rgba(56,189,248,0.06)); border: 1px solid rgba(52,211,153,0.25); border-radius: 16px; padding: 28px 32px; margin-top: 32px; }
+.validation-box__badge { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent3); margin-bottom: 10px; font-weight: 500; }
+.validation-box p { font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); }
+.validation-box strong { color: #fff; font-weight: 600; }
+
+/* AXES */
+.axis-card { position: relative; overflow: hidden; }
+.axis-card .axis-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; }
+.axis-card h3 { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 6px; }
+.axis-card .axis-area { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+.axis-card:nth-child(1) .axis-icon { background: rgba(56,189,248,0.15); color: var(--accent); }
+.axis-card:nth-child(2) .axis-icon { background: rgba(129,140,248,0.15); color: var(--accent2); }
+.axis-card:nth-child(3) .axis-icon { background: rgba(52,211,153,0.15); color: var(--accent3); }
+.axis-card:nth-child(4) .axis-icon { background: rgba(244,114,182,0.15); color: var(--accent4); }
+.axis-card:nth-child(5) .axis-icon { background: rgba(251,146,60,0.15); color: var(--accent5); }
+.axis-card:nth-child(6) .axis-icon { background: rgba(239,68,68,0.15); color: var(--danger); }
+.axis-card:nth-child(7) .axis-icon { background: rgba(56,189,248,0.15); color: var(--accent); }
+.axis-card:nth-child(8) .axis-icon { background: rgba(129,140,248,0.15); color: var(--accent2); }
+.axis-card:nth-child(9) .axis-icon { background: rgba(52,211,153,0.15); color: var(--accent3); }
+
+/* SIM SECTION */
+.sim-section { background: linear-gradient(180deg, var(--bg) 0%, #0e1225 50%, var(--bg) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.sim-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: var(--danger); font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; margin-bottom: 16px; }
+.sim-badge::before { content: ''; width: 6px; height: 6px; background: var(--danger); border-radius: 50%; animation: pulse 1.5s infinite; }
+.sim-hero-text { font-size: 1.15rem; font-weight: 300; line-height: 1.8; color: var(--text-muted); max-width: 750px; margin-bottom: 48px; }
+.sim-hero-text em { color: var(--accent); font-style: normal; font-weight: 500; }
+.sim-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
+.sim-col { border-radius: 16px; }
+.sim-col--problem { border-top: 3px solid var(--danger); }
+.sim-col--solution { border-top: 3px solid var(--success); }
+.sim-col__header { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; font-weight: 500; }
+.sim-col--problem .sim-col__header { color: var(--danger); }
+.sim-col--solution .sim-col__header { color: var(--success); }
+.sim-list { list-style: none; }
+.sim-list li { padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: var(--text-muted); }
+.sim-list li:last-child { border: none; }
+.sim-list li strong { color: #fff; font-weight: 500; display: block; }
+.sim-list li .dim { display: block; font-size: 0.78rem; color: var(--text-dim); margin-top: 2px; }
+.sim-list .icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+.sim-pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 48px 0; }
+.sim-step { text-align: center; }
+.sim-step__number { width: 48px; height: 48px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 800; margin: 0 auto 14px; transition: transform 0.3s ease; }
+.sim-step:hover .sim-step__number { transform: scale(1.1); }
+.sim-step:nth-child(1) .sim-step__number { background: rgba(56,189,248,0.15); color: var(--accent); }
+.sim-step:nth-child(2) .sim-step__number { background: rgba(129,140,248,0.15); color: var(--accent2); }
+.sim-step:nth-child(3) .sim-step__number { background: rgba(52,211,153,0.15); color: var(--accent3); }
+.sim-step:nth-child(4) .sim-step__number { background: rgba(239,68,68,0.15); color: var(--danger); }
+.sim-step__title { font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 6px; }
+.sim-step__desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.sim-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 32px; }
+.sim-benefit__for { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-weight: 500; }
+.sim-benefit__text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+/* AREA CARDS */
+.area-cards { display: flex; flex-direction: column; gap: 16px; }
+.area-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: border-color 0.3s; }
+.area-card:hover { border-color: var(--border-hover); }
+.area-card--urgent { border-color: rgba(239,68,68,0.3); }
+.area-card--urgent:hover { border-color: rgba(239,68,68,0.6); }
+.area-card__header { display: flex; align-items: center; justify-content: space-between; padding: 24px 28px; cursor: pointer; user-select: none; transition: background 0.3s; }
+.area-card__header:hover { background: var(--bg-card-hover); }
+.area-card__left { display: flex; align-items: center; gap: 16px; flex: 1; min-width: 0; }
+.area-card__num { font-size: 1.8rem; font-weight: 800; color: var(--accent); opacity: 0.4; line-height: 1; flex-shrink: 0; }
+.area-card__info h3 { font-size: 1rem; font-weight: 600; color: #fff; }
+.area-card__info p { font-size: 0.8rem; color: var(--text-dim); margin-top: 2px; }
+.area-card__tools { display: flex; gap: 6px; flex-wrap: wrap; margin-left: auto; margin-right: 16px; }
+.tool-tag { font-family: 'DM Mono', monospace; font-size: 0.65rem; padding: 3px 8px; border-radius: 6px; background: rgba(56,189,248,0.08); color: var(--accent); border: 1px solid rgba(56,189,248,0.2); }
+.tool-tag--danger { background: rgba(239,68,68,0.08); color: var(--danger); border-color: rgba(239,68,68,0.2); }
+.area-card__toggle { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border); background: none; color: var(--text-dim); font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; flex-shrink: 0; }
+.area-card__toggle:hover { border-color: var(--accent); color: var(--accent); }
+.area-card.open .area-card__toggle { transform: rotate(45deg); border-color: var(--accent); color: var(--accent); }
+.area-card__body { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.area-card.open .area-card__body { max-height: 2400px; }
+.area-card__content { padding: 0 28px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.area-col__title { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; font-weight: 500; }
+.area-col__title--pain { color: var(--danger); }
+.area-col__title--opp { color: var(--success); }
+.area-col__list { list-style: none; }
+.area-col__list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; display: flex; gap: 10px; align-items: flex-start; }
+.area-col__list li:last-child { border: none; }
+.area-col__list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 8px; }
+.area-col--pain li::before { background: var(--danger); }
+.area-col--opp li::before { background: var(--success); }
+.area-note { margin: 0 28px 20px; padding: 14px 18px; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2); border-radius: 10px; font-size: 0.83rem; color: var(--text-muted); line-height: 1.7; }
+.area-note strong { color: var(--danger); }
+
+/* PATTERNS */
+.pattern-list { display: flex; flex-direction: column; gap: 0; }
+.pattern-item { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 24px 28px; border-bottom: 1px solid var(--border); transition: background 0.3s; align-items: start; }
+.pattern-item:first-child { border-radius: 16px 16px 0 0; }
+.pattern-item:last-child { border-radius: 0 0 16px 16px; border: none; }
+.pattern-item:hover { background: var(--bg-card-hover); }
+.pattern-item--urgent { background: rgba(239,68,68,0.04); border-left: 3px solid var(--danger); }
+.pattern-item--urgent:hover { background: rgba(239,68,68,0.07); }
+.pattern-item__num { font-size: 1.8rem; font-weight: 800; color: var(--accent); opacity: 0.3; line-height: 1; text-align: right; }
+.pattern-item--urgent .pattern-item__num { color: var(--danger); opacity: 0.6; }
+.pattern-item__title { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 4px; }
+.pattern-item--urgent .pattern-item__title { color: var(--danger); }
+.pattern-item__desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+/* PRIORITY TABLE */
+.priority-table { width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.priority-table thead th { text-align: left; padding: 14px 20px; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border-bottom: 1px solid var(--border); font-weight: 500; }
+.priority-table tbody tr { transition: background 0.3s; }
+.priority-table tbody tr:hover { background: rgba(56,189,248,0.03); }
+.priority-table tbody tr.row-urgent { background: rgba(239,68,68,0.04); }
+.priority-table tbody tr.row-urgent:hover { background: rgba(239,68,68,0.07); }
+.priority-table tbody td { padding: 14px 20px; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--text-muted); vertical-align: middle; }
+.priority-table tbody tr:last-child td { border: none; }
+.priority-table tbody td:first-child { color: #fff; font-weight: 500; }
+.priority-badge { display: inline-flex; align-items: center; gap: 4px; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; font-weight: 500; }
+.priority-badge--urgente { background: rgba(239,68,68,0.15); color: var(--danger); border: 1px solid rgba(239,68,68,0.5); animation: pulse 2s infinite; }
+.priority-badge--alta { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.3); }
+.priority-badge--media { background: rgba(245,158,11,0.1); color: var(--warning); border: 1px solid rgba(245,158,11,0.3); }
+.priority-badge--baixa { background: rgba(34,197,94,0.1); color: var(--success); border: 1px solid rgba(34,197,94,0.3); }
+.impact-badge { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--text-dim); }
+.impact-badge--transform { color: var(--accent5); font-weight: 600; }
+.impact-badge--critico { color: var(--danger); font-weight: 600; }
+
+/* TOOLS CLOUD */
+.tools-cloud { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 32px 0; }
+.tool-bubble { padding: 10px 18px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; font-size: 0.85rem; color: var(--text-muted); transition: all 0.3s ease; cursor: default; }
+.tool-bubble:hover { border-color: var(--border-hover); color: #fff; transform: translateY(-2px); }
+.tool-bubble__user { display: block; font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text-dim); margin-top: 2px; }
+
+/* NEXT STEPS */
+.next-steps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.next-col__title { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; font-weight: 500; }
+.next-col__list { list-style: none; }
+.next-col__list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 10px; align-items: flex-start; line-height: 1.6; }
+.next-col__list li:last-child { border: none; }
+.step-check { width: 18px; height: 18px; border-radius: 6px; border: 1px solid var(--border); flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: transparent; transition: all 0.3s; cursor: pointer; }
+.step-check:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.1); }
+.step-check.checked { border-color: var(--success); color: var(--success); background: rgba(34,197,94,0.1); }
+
+/* DIVIDER */
+.divider { display: flex; align-items: center; gap: 16px; margin: 48px 0; }
+.divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.divider__dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; opacity: 0.5; }
+
+/* FOOTER */
+.footer { padding: 40px 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+
+/* ZN signature block */
+.footer-zn-block {
+  margin-top: 12px; padding: 36px 0 8px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.footer-zn-mark {
+  display: inline-block;
+  font-family: var(--zn-display); font-weight: 900;
+  font-size: 2.6rem; letter-spacing: -0.06em; color: var(--zn-lime);
+  line-height: 1; text-decoration: none;
+  text-shadow: 0 0 50px rgba(198,255,0,0.3);
+  transition: opacity 0.2s;
+}
+.footer-zn-mark:hover { opacity: 0.75; }
+.footer-zn-tagline {
+  font-family: var(--zn-body-zn); font-size: 0.78rem;
+  color: var(--text-muted); margin-top: 12px; letter-spacing: 0.02em;
+}
+.footer-zn-tagline a { color: var(--zn-lime); text-decoration: none; }
+.footer-zn-tagline a:hover { opacity: 0.75; }
+.footer__left { font-size: 0.9rem; font-weight: 600; color: var(--text-dim); }
+.footer__left span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.footer__right { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text-dim); letter-spacing: 0.08em; }
+
+@media (max-width: 1024px) {
+  .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  .sim-pipeline { grid-template-columns: repeat(2, 1fr); }
+  .sim-columns { grid-template-columns: 1fr; }
+  .area-card__content { grid-template-columns: 1fr; }
+  .next-steps-grid { grid-template-columns: 1fr; }
+  .nav__links { display: none; }
+}
+@media (max-width: 640px) {
+  section { padding: 60px 0; }
+  .nav { padding: 12px 16px; }
+  .stats-strip { grid-template-columns: 1fr; }
+  .sim-pipeline { grid-template-columns: 1fr; }
+  .hero-stats { gap: 24px; }
+  .area-card__tools { display: none; }
+  .area-card__header { padding: 16px 20px; }
+  .area-card__content { padding: 0 20px 20px; }
+  .footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<a href="/rba" class="back-link">← Hub RBA</a>
+
+<div class="bg-glow"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav__logo">Grupo <span>RBA</span></div>
+  <ul class="nav__links">
+    <li><a href="#equipe">Equipe</a></li>
+    <li><a href="#contexto">Contexto</a></li>
+    <li><a href="#sim">SIM</a></li>
+    <li><a href="#diagnostico">Diagn&oacute;stico</a></li>
+    <li><a href="#padroes">Padr&otilde;es</a></li>
+    <li><a href="#prioridades">Prioridades</a></li>
+    <li><a href="#proximos">Pr&oacute;ximos Passos</a></li>
+  </ul>
+  <div class="nav__right">
+    <span class="nav__badge">v0.2 &mdash; Dias 1 &amp; 2</span>
+    <a class="nav__zn" href="https://thiagozeni.com" target="_blank" rel="noopener" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Relat&oacute;rio de Imers&atilde;o &bull; Consolidado Dias 1 e 2 &bull; Documento Vivo</div>
+    <h1>Diagn&oacute;stico Estrat&eacute;gico de IA</h1>
+    <p class="tagline">Mapeamento completo de oportunidades, gargalos e caminhos de transforma&ccedil;&atilde;o para o Grupo RBA a partir de duas jornadas de imers&atilde;o com a equipe.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="number" data-count="9">0</span>
+        <span class="label">&Aacute;reas Mapeadas</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number" data-count="14">0</span>
+        <span class="label">Interlocutores</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number" data-count="16">0</span>
+        <span class="label">Iniciativas</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number" data-count="24">0</span>
+        <span class="label">Ferramentas de IA</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Explorar<div class="scroll-hint__line"></div></div>
+</section>
+
+<!-- TEAM MAP -->
+<section id="equipe">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Se&ccedil;&atilde;o 01</div>
+      <h2 class="section-title">Mapa de Interlocutores</h2>
+      <p class="section-subtitle">14 profissionais entrevistados em duas jornadas de imers&atilde;o.</p>
+    </div>
+    <div class="team-grid">
+      <div class="day-separator fade-in">
+        <div class="day-separator__label">Dia 1</div>
+        <div class="day-separator__line"></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-1">
+        <div class="team-card__day">Planejamento</div>
+        <div class="team-card__avatar">TM</div>
+        <div class="team-card__name">Tiago Mendes</div>
+        <div class="team-card__role">Planejamento Estrat&eacute;gico</div>
+        <div class="team-card__ais"><span class="ai-tag">GPT</span><span class="ai-tag">Midjourney</span><span class="ai-tag">ElevenLabs</span><span class="ai-tag">Suno</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-2">
+        <div class="team-card__day">Atendimento</div>
+        <div class="team-card__avatar">M</div>
+        <div class="team-card__name">Maristela</div>
+        <div class="team-card__role">Atendimento S&ecirc;nior</div>
+        <div class="team-card__ais"><span class="ai-tag">Nano Banana</span><span class="ai-tag">Sprout Social</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-3">
+        <div class="team-card__day">Gest&atilde;o</div>
+        <div class="team-card__avatar">GD</div>
+        <div class="team-card__name">Gabriel Daudt</div>
+        <div class="team-card__role">Gest&atilde;o &amp; Prospec&ccedil;&atilde;o</div>
+        <div class="team-card__ais"><span class="ai-tag">Inner</span><span class="ai-tag">Gemini</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-4">
+        <div class="team-card__day">Gest&atilde;o / Digital</div>
+        <div class="team-card__avatar">BN</div>
+        <div class="team-card__name">Beto Noronha</div>
+        <div class="team-card__role">Dir. Arte &amp; Digital</div>
+        <div class="team-card__ais"><span class="ai-tag">Perplexity</span><span class="ai-tag">NotebookLM</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-5">
+        <div class="team-card__day">Diretoria</div>
+        <div class="team-card__avatar">A</div>
+        <div class="team-card__name">Afonso</div>
+        <div class="team-card__role">Diretor Majorit&aacute;rio</div>
+        <div class="team-card__ais"><span class="ai-tag" style="opacity:0.4">Vis&atilde;o estrat&eacute;gica</span></div>
+      </div>
+
+      <div class="day-separator fade-in">
+        <div class="day-separator__label">Dia 2</div>
+        <div class="day-separator__line"></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-1">
+        <div class="team-card__day">M&iacute;dia</div>
+        <div class="team-card__avatar">D</div>
+        <div class="team-card__name">Diciane</div>
+        <div class="team-card__role">M&iacute;dia</div>
+        <div class="team-card__ais"><span class="ai-tag">READ AI</span><span class="ai-tag">PUBLI</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-2">
+        <div class="team-card__day">M&iacute;dia</div>
+        <div class="team-card__avatar">N</div>
+        <div class="team-card__name">Natali</div>
+        <div class="team-card__role">M&iacute;dia</div>
+        <div class="team-card__ais"><span class="ai-tag">PUBLI</span><span class="ai-tag">Locker Studio</span><span class="ai-tag">Power BI</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-3">
+        <div class="team-card__day">Cria&ccedil;&atilde;o</div>
+        <div class="team-card__avatar">RP</div>
+        <div class="team-card__name">Rafael P.</div>
+        <div class="team-card__role">Cria&ccedil;&atilde;o</div>
+        <div class="team-card__ais"><span class="ai-tag">Midjourney</span><span class="ai-tag">GPT</span><span class="ai-tag">Suno</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-4">
+        <div class="team-card__day">Cria&ccedil;&atilde;o</div>
+        <div class="team-card__avatar">S</div>
+        <div class="team-card__name">Samuel</div>
+        <div class="team-card__role">Cria&ccedil;&atilde;o</div>
+        <div class="team-card__ais"><span class="ai-tag">Nano Banana</span><span class="ai-tag">Freepik</span><span class="ai-tag">CapCut</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-5">
+        <div class="team-card__day">Estrat&eacute;gia</div>
+        <div class="team-card__avatar">V</div>
+        <div class="team-card__name">Vera</div>
+        <div class="team-card__role">Estrat&eacute;gia</div>
+        <div class="team-card__ais"><span class="ai-tag">Claude</span><span class="ai-tag">GPT</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-1">
+        <div class="team-card__day">Cria&ccedil;&atilde;o / Produ&ccedil;&atilde;o</div>
+        <div class="team-card__avatar">Do</div>
+        <div class="team-card__name">Douglas</div>
+        <div class="team-card__role">Cria&ccedil;&atilde;o &amp; V&iacute;deo</div>
+        <div class="team-card__ais"><span class="ai-tag">Google Flow</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-2">
+        <div class="team-card__day">Social Media</div>
+        <div class="team-card__avatar">C</div>
+        <div class="team-card__name">Carol</div>
+        <div class="team-card__role">Social Media</div>
+        <div class="team-card__ais"><span class="ai-tag">Claude</span><span class="ai-tag">GPT</span><span class="ai-tag">Prompt mestre</span></div>
+      </div>
+      <div class="card team-card fade-in fade-delay-3">
+        <div class="team-card__day">Financeiro</div>
+        <div class="team-card__avatar">Cl</div>
+        <div class="team-card__name">Clever</div>
+        <div class="team-card__role">Financeiro</div>
+        <div class="team-card__ais"><span class="ai-tag">ChatGPT</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="contexto">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Se&ccedil;&atilde;o 02</div>
+      <h2 class="section-title">Resumo Executivo</h2>
+      <p class="section-subtitle">Consolidado das jornadas de imers&atilde;o dos Dias 1 e 2. 9 &aacute;reas cobertas.</p>
+    </div>
+
+    <div class="stats-strip fade-in">
+      <div class="card stat-card">
+        <div class="stat-card__number" data-count="9">0</div>
+        <div class="stat-card__label">&Aacute;reas</div>
+        <div class="stat-card__desc">Planej., Atend., Gest&atilde;o, M&iacute;dia, Cria&ccedil;&atilde;o, Social, Est., Fin., Dir.</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-card__number" data-count="9">0</div>
+        <div class="stat-card__label">Eixos</div>
+        <div class="stat-card__desc">Vetores de transforma&ccedil;&atilde;o identificados</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-card__number" data-count="16">0</div>
+        <div class="stat-card__label">Iniciativas</div>
+        <div class="stat-card__desc">Na matriz de prioridades</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-card__number" data-count="24">0</div>
+        <div class="stat-card__label">Ferramentas</div>
+        <div class="stat-card__desc">J&aacute; em uso na ag&ecirc;ncia</div>
+      </div>
+    </div>
+
+    <div class="context-box fade-in">
+      <p>O <strong>Grupo RBA</strong> enfrenta press&atilde;o estrutural sobre rentabilidade: a transi&ccedil;&atilde;o da m&iacute;dia tradicional para o digital reduziu o BV (b&ocirc;nus de volume), sem que as taxas de gest&atilde;o digital compensassem proporcionalmente. A resposta estrat&eacute;gica passa por dois vetores: <strong>(1) efici&ecirc;ncia operacional</strong> e <strong>(2) ampliar faturamento</strong> via prospec&ccedil;&atilde;o e novos servi&ccedil;os.</p>
+      <p>A imers&atilde;o revelou que o uso de IA na ag&ecirc;ncia &eacute; <strong>fragmentado, pessoal e sem padroniza&ccedil;&atilde;o</strong> em todas as &aacute;reas. H&aacute; entusiasmo real, mas uma lacuna entre interesse e produtividade. E um risco financeiro cr&iacute;tico ativo: falhas de configura&ccedil;&atilde;o de verbas em campanhas de m&iacute;dia sem valida&ccedil;&atilde;o autom&aacute;tica.</p>
+      <p>Ponto de destaque positivo: a equipe de Social Media j&aacute; criou espontaneamente um <strong>sistema primitivo de mem&oacute;ria de marca</strong> &mdash; validando organicamente o conceito do SIM (Se&ccedil;&atilde;o 03).</p>
+    </div>
+
+    <div class="divider fade-in"><div class="divider__dot"></div></div>
+
+    <div class="section-header fade-in">
+      <div class="section-label">Eixos de Transforma&ccedil;&atilde;o</div>
+      <h2 class="section-title">9 vetores estrat&eacute;gicos identificados</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="card axis-card fade-in fade-delay-1">
+        <div class="axis-icon">&#x1F4CA;</div>
+        <h3>Automa&ccedil;&atilde;o de Relat&oacute;rios &amp; Dashboards</h3>
+        <div class="axis-area">Atendimento &bull; M&iacute;dia</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-2">
+        <div class="axis-icon">&#x1F3A8;</div>
+        <h3>Acelera&ccedil;&atilde;o de Desdobramentos Criativos</h3>
+        <div class="axis-area">Arte &bull; Social Media</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-3">
+        <div class="axis-icon">&#x1F3AF;</div>
+        <h3>Prospec&ccedil;&atilde;o Inteligente &amp; Aquecimento de Leads</h3>
+        <div class="axis-area">Gest&atilde;o Comercial</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-1">
+        <div class="axis-icon">&#x1F4A1;</div>
+        <h3>CRM como Produto de Intelig&ecirc;ncia</h3>
+        <div class="axis-area">Diretoria &bull; Atendimento</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-2">
+        <div class="axis-icon">&#x1F4B0;</div>
+        <h3>Digitaliza&ccedil;&atilde;o do Financeiro</h3>
+        <div class="axis-area">Financeiro</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-3">
+        <div class="axis-icon">&#x1F310;</div>
+        <h3>Cultura e Distribui&ccedil;&atilde;o de IA</h3>
+        <div class="axis-area">Toda a ag&ecirc;ncia &bull; Processos</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-1">
+        <div class="axis-icon">&#x1F6E1;</div>
+        <h3>Sistema de Intelig&ecirc;ncia de Marca (SIM)</h3>
+        <div class="axis-area">Toda a Ag&ecirc;ncia &mdash; Alta Prioridade</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-2">
+        <div class="axis-icon">&#x1F9ED;</div>
+        <h3>Mission Control de M&iacute;dia</h3>
+        <div class="axis-area">M&iacute;dia &bull; PUBLI &bull; GA &bull; Meta</div>
+      </div>
+      <div class="card axis-card fade-in fade-delay-3">
+        <div class="axis-icon">&#x26A0;</div>
+        <h3>Valida&ccedil;&atilde;o Autom&aacute;tica de Verbas</h3>
+        <div class="axis-area">M&iacute;dia &mdash; Risco Financeiro Cr&iacute;tico</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIM -->
+<section class="sim-section" id="sim">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Se&ccedil;&atilde;o 03 &mdash; Percep&ccedil;&atilde;o Estrat&eacute;gica do Consultor</div>
+      <div class="sim-badge">Alta Prioridade Estrat&eacute;gica</div>
+      <h2 class="section-title">Sistema de Intelig&ecirc;ncia de Marca</h2>
+    </div>
+
+    <p class="sim-hero-text fade-in">
+      Existe na RBA um <em>ativo estrat&eacute;gico de valor incalcul&aacute;vel</em> que est&aacute; hoje disperso, subutilizado e em risco constante de perda: o conhecimento profundo sobre a personalidade de cada marca gerenciada. Voz, tom, dire&ccedil;&atilde;o visual, posicionamento, guardrails &mdash; este corpo de conhecimento provavelmente ultrapassa a pr&oacute;pria capacidade dos clientes de dominar seus guardrails de comunica&ccedil;&atilde;o.
+    </p>
+
+    <div class="sim-columns fade-in">
+      <div class="card sim-col sim-col--problem">
+        <div class="sim-col__header">&#9888; O Problema: Conhecimento Fragmentado</div>
+        <ul class="sim-list">
+          <li><span class="icon">&#128196;</span><div><strong>Brand Guides</strong><span class="dim">PDFs extensos, desatualizados ou n&atilde;o totalmente conhecidos pela equipe</span></div></li>
+          <li><span class="icon">&#128193;</span><div><strong>Drives da Ag&ecirc;ncia</strong><span class="dim">Arquivos hist&oacute;ricos sem indexa&ccedil;&atilde;o ou busca inteligente</span></div></li>
+          <li><span class="icon">&#128274;</span><div><strong>Drives do Cliente</strong><span class="dim">Materiais propriet&aacute;rios dispersos e de dif&iacute;cil acesso</span></div></li>
+          <li><span class="icon">&#128241;</span><div><strong>Redes Sociais</strong><span class="dim">Tom praticado, rea&ccedil;&otilde;es, evolu&ccedil;&atilde;o visual ao longo do tempo</span></div></li>
+          <li><span class="icon">&#127760;</span><div><strong>Sites e Portais</strong><span class="dim">Conte&uacute;do institucional, mensagens-chave, posicionamento</span></div></li>
+          <li><span class="icon">&#129504;</span><div><strong>Mem&oacute;ria da Equipe</strong><span class="dim">Conhecimento t&aacute;cito, vulner&aacute;vel &agrave; rotatividade</span></div></li>
+          <li><span class="icon">&#128231;</span><div><strong>E-mails e Aprova&ccedil;&otilde;es</strong><span class="dim">Hist&oacute;rico de feedbacks quase nunca sistematizado</span></div></li>
+        </ul>
+      </div>
+      <div class="card sim-col sim-col--solution">
+        <div class="sim-col__header">&#10003; A Solu&ccedil;&atilde;o: Infraestrutura Centralizada</div>
+        <ul class="sim-list">
+          <li><span class="icon">&#128161;</span><div><strong>Vault de Conhecimento Unificado</strong><span class="dim">RAG com embeddings ou vault estruturado por marca</span></div></li>
+          <li><span class="icon">&#128737;</span><div><strong>Guardi&atilde;o Automatizado</strong><span class="dim">IA avalia materiais contra guardrails antes da entrega ao cliente</span></div></li>
+          <li><span class="icon">&#128218;</span><div><strong>Eixos Organizados por Marca</strong><span class="dim">Voz, tom, visual, estrat&eacute;gia, diferencia&ccedil;&atilde;o, restri&ccedil;&otilde;es</span></div></li>
+          <li><span class="icon">&#9851;</span><div><strong>Enriquecimento Cont&iacute;nuo</strong><span class="dim">Alimentado com materiais aprovados, feedbacks e aprendizados</span></div></li>
+          <li><span class="icon">&#127919;</span><div><strong>Onboarding Acelerado</strong><span class="dim">Novos criadores absorvem DNA da marca em horas, n&atilde;o meses</span></div></li>
+          <li><span class="icon">&#128200;</span><div><strong>Escala sem Perda</strong><span class="dim">Crescer em contas sem perder consist&ecirc;ncia de comunica&ccedil;&atilde;o</span></div></li>
+          <li><span class="icon">&#128176;</span><div><strong>Produto Fatur&aacute;vel</strong><span class="dim">SIM como servi&ccedil;o premium oferec&iacute;vel a clientes</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- VALIDATION from Day 2 -->
+    <div class="validation-box fade-in">
+      <div class="validation-box__badge">&#10003; Valida&ccedil;&atilde;o Org&acirc;nica &mdash; Dia 2</div>
+      <p><strong>Carol (Social Media) j&aacute; criou por iniciativa pr&oacute;pria um SIM primitivo.</strong> A partir do documento do planner + &uacute;ltimas entregas aprovadas, as redatoras constroem um &ldquo;prompt mestre&rdquo; por marca &mdash; an&aacute;logo a um arquivo .MD de mem&oacute;ria permanente, com personas, tom, tamanho de textos e expectativas de entrega. Este processo foi desenvolvido de forma intuitiva, existe para algumas marcas e depende de iniciativa individual. O SIM &eacute; a evolu&ccedil;&atilde;o sistematizada e escal&aacute;vel do que Carol j&aacute; faz. <strong>A valida&ccedil;&atilde;o org&acirc;nica comprova que a necessidade &eacute; real e a equipe j&aacute; est&aacute; pronta.</strong></p>
+    </div>
+
+    <div class="divider fade-in"><div class="divider__dot"></div></div>
+    <div class="section-header fade-in"><div class="section-label">Arquitetura do Sistema</div></div>
+    <div class="sim-pipeline fade-in">
+      <div class="card sim-step">
+        <div class="sim-step__number">1</div>
+        <div class="sim-step__title">Extra&ccedil;&atilde;o</div>
+        <div class="sim-step__desc">Coleta sistematizada de brand guides, campanhas, redes sociais, briefings e feedbacks.</div>
+      </div>
+      <div class="card sim-step">
+        <div class="sim-step__number">2</div>
+        <div class="sim-step__title">Consolida&ccedil;&atilde;o</div>
+        <div class="sim-step__desc">Unifica&ccedil;&atilde;o em vault centralizado via RAG ou vault estruturado. Cada marca com seu espa&ccedil;o.</div>
+      </div>
+      <div class="card sim-step">
+        <div class="sim-step__number">3</div>
+        <div class="sim-step__title">Enriquecimento</div>
+        <div class="sim-step__desc">Alimenta&ccedil;&atilde;o cont&iacute;nua com materiais aprovados e feedbacks. Organismo vivo.</div>
+      </div>
+      <div class="card sim-step">
+        <div class="sim-step__number">4</div>
+        <div class="sim-step__title">Guardi&atilde;o</div>
+        <div class="sim-step__desc">IA avalia cada material contra os guardrails, apontando desvios antes da entrega.</div>
+      </div>
+    </div>
+
+    <div class="divider fade-in"><div class="divider__dot"></div></div>
+    <div class="section-header fade-in">
+      <div class="section-label">Benef&iacute;cios</div>
+      <h2 class="section-title">A Ag&ecirc;ncia que Conhece a Marca Melhor que o Cliente</h2>
+    </div>
+    <div class="sim-benefits fade-in">
+      <div class="card"><div class="sim-benefit__for">Para a Ag&ecirc;ncia</div><div class="sim-benefit__text">Redu&ccedil;&atilde;o dr&aacute;stica de retrabalho. Onboarding acelerado. Consist&ecirc;ncia garantida mesmo com rotatividade. Argumento de venda poderoso.</div></div>
+      <div class="card"><div class="sim-benefit__for">Para o Cliente</div><div class="sim-benefit__text">Consist&ecirc;ncia em todos os canais. Parceiro que conhece a marca em profundidade. Relat&oacute;rios de ader&ecirc;ncia de marca.</div></div>
+      <div class="card"><div class="sim-benefit__for">Para a Equipe Criativa</div><div class="sim-benefit__text">Briefings mais ricos. Menos feedbacks negativos. Mais liberdade dentro dos guardrails definidos.</div></div>
+      <div class="card"><div class="sim-benefit__for">Para a Rentabilidade</div><div class="sim-benefit__text">Menor custo de revis&otilde;es. SIM como servi&ccedil;o fatur&aacute;vel. Fideliza&ccedil;&atilde;o pelo valor percebido.</div></div>
+      <div class="card"><div class="sim-benefit__for">Para a Escala</div><div class="sim-benefit__text">Crescer em contas sem perder consist&ecirc;ncia &mdash; o sistema escala com o portf&oacute;lio.</div></div>
+    </div>
+    <div class="context-box fade-in" style="margin-top: 32px;">
+      <p><strong>Piloto recomendado: Harman.</strong> A conta j&aacute; possui brand guides complet&iacute;ssimos (refer&ecirc;ncia para toda a ag&ecirc;ncia), tem 32 contas em m&uacute;ltiplos idiomas e pa&iacute;ses, e &eacute; o caso de maior complexidade. O ROI seria imediatamente percept&iacute;vel. O processo primitivo j&aacute; adotado por Carol no Social Media &eacute; o ponto de partida natural para a formaliza&ccedil;&atilde;o.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AREA DIAGNOSTICS -->
+<section id="diagnostico">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Se&ccedil;&atilde;o 04</div>
+      <h2 class="section-title">Diagn&oacute;stico por &Aacute;rea</h2>
+      <p class="section-subtitle">9 &aacute;reas mapeadas. Clique em cada card para expandir.</p>
+    </div>
+
+    <div class="area-cards">
+      <!-- PLANEJAMENTO -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">01</span>
+            <div class="area-card__info"><h3>Planejamento</h3><p>Tiago Mendes &mdash; Planejamento Estrat&eacute;gico</p></div>
+            <div class="area-card__tools"><span class="tool-tag">GPT</span><span class="tool-tag">Midjourney</span><span class="tool-tag">ElevenLabs</span><span class="tool-tag">Suno</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores &amp; Gargalos</div>
+              <ul class="area-col__list">
+                <li>Sem experi&ecirc;ncia com IAs de fronteira (Claude, agentes de c&oacute;digo, Codex)</li>
+                <li>Teto artificial por n&atilde;o conhecer o estado da arte da IA</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li>Ferramentas de fronteira (Claude, Claude Code, agentes de IA)</li>
+                <li>An&aacute;lise competitiva e benchmarking automatizado</li>
+                <li>Potencial l&iacute;der interno de IA &mdash; disseminar para outras &aacute;reas</li>
+                <li>Frameworks de prompt engineering padronizados</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ATENDIMENTO -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">02</span>
+            <div class="area-card__info"><h3>Atendimento</h3><p>Maristela &mdash; S&ecirc;nior &bull; Harman (32 contas, m&uacute;ltiplos pa&iacute;ses)</p></div>
+            <div class="area-card__tools"><span class="tool-tag">Nano Banana</span><span class="tool-tag">Sprout Social</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores &amp; Gargalos</div>
+              <ul class="area-col__list">
+                <li>Relat&oacute;rios de redes: depura&ccedil;&atilde;o manual do Sprout consome uma tarde</li>
+                <li>Relat&oacute;rios de campanhas: totalmente manual, outra tarde</li>
+                <li>Desdobramento de pe&ccedil;as: Nano Banana ajuda mas longe do ideal</li>
+                <li>Gera&ccedil;&atilde;o de imagens n&atilde;o entrega fidelidade aos brand guides</li>
+                <li>Planejamentos repetitivos pelo volume de contas e redes</li>
+                <li>Drive sem espa&ccedil;o &mdash; problema cr&ocirc;nico</li>
+                <li>Tradu&ccedil;&atilde;o de textos aplicados sobre imagens</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li>Brand guides Harman como template para todas as marcas</li>
+                <li>Automa&ccedil;&atilde;o de relat&oacute;rios: Sprout &rarr; apresenta&ccedil;&atilde;o final com IA</li>
+                <li>Desdobramentos padronizados com IA para multiplicar capacidade</li>
+                <li>Gera&ccedil;&atilde;o de imagem treinada nas personas visuais das marcas</li>
+                <li>Tradu&ccedil;&otilde;es com inpainting + OCR</li>
+                <li>Processo cont&iacute;nuo de ado&ccedil;&atilde;o de IA no atendimento</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GESTÃO -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">03</span>
+            <div class="area-card__info"><h3>Gest&atilde;o &amp; Prospec&ccedil;&atilde;o</h3><p>Gabriel Daudt &bull; Beto Noronha &bull; Afonso</p></div>
+            <div class="area-card__tools"><span class="tool-tag">Inner</span><span class="tool-tag">Perplexity</span><span class="tool-tag">NotebookLM</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores &amp; Necessidades</div>
+              <ul class="area-col__list">
+                <li>Sem rotina organizada de prospec&ccedil;&atilde;o ativa</li>
+                <li>Aus&ecirc;ncia de pulso de mercado: concorrentes e licita&ccedil;&otilde;es</li>
+                <li>Sem listas automatizadas de prospects com enriquecimento</li>
+                <li>Falta de processo de aquecimento de leads</li>
+                <li>BV caiu com digital &mdash; modelo em modo sobreviv&ecirc;ncia</li>
+                <li>Desdobramentos criativos quase manuais (Beto)</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li>Pipeline de prospec&ccedil;&atilde;o: listas + enriquecimento + sequ&ecirc;ncias</li>
+                <li>Agente de monitoramento de mercado com alertas</li>
+                <li>Automa&ccedil;&atilde;o de e-mail/LinkedIn para aquecimento</li>
+                <li>Conte&uacute;do da ag&ecirc;ncia com IA (thought leadership)</li>
+                <li>CRM Inteligente como servi&ccedil;o fatur&aacute;vel para clientes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÍDIA -->
+      <div class="area-card area-card--urgent fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num" style="color: var(--danger)">04</span>
+            <div class="area-card__info"><h3>M&iacute;dia</h3><p>Diciane &amp; Natali &bull; BI: Kevi &amp; Lorenzo</p></div>
+            <div class="area-card__tools"><span class="tool-tag">PUBLI</span><span class="tool-tag">Locker Studio</span><span class="tool-tag">Power BI</span><span class="tool-tag tool-tag--danger">Risco financeiro</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-note"><strong>&#9888; Risco Financeiro Cr&iacute;tico:</strong> Verba mensal configurada como di&aacute;ria consumiu todo o or&ccedil;amento em um dia. Sem valida&ccedil;&atilde;o autom&aacute;tica. Preju&iacute;zo &eacute; da ag&ecirc;ncia. A&ccedil;&atilde;o urgente recomendada.</div>
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores &amp; Gargalos</div>
+              <ul class="area-col__list">
+                <li>Double-check manual de verbas &mdash; risco de erro e preju&iacute;zo</li>
+                <li>2 inst&acirc;ncias PUBLI (BRA e RBA) &mdash; dificulta integra&ccedil;&atilde;o</li>
+                <li>Sem vis&atilde;o unificada: PUBLI + GA + Meta em sistemas separados</li>
+                <li>Relat&oacute;rios parcialmente manuais mesmo com REPORTEI e Power BI</li>
+                <li>IA do REPORTEI percebida como limitada pela equipe</li>
+                <li>READ AI apenas na vers&atilde;o gratuita</li>
+                <li>Sem IA para otimiza&ccedil;&atilde;o de performance de campanhas</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li><strong>Valida&ccedil;&atilde;o autom&aacute;tica de verbas</strong> antes do disparo (urgente)</li>
+                <li>Mission Control: painel unificado PUBLI + GA + Meta em tempo real</li>
+                <li>Automa&ccedil;&atilde;o do plano de m&iacute;dia: planilha &rarr; PUBLI direto</li>
+                <li>Relat&oacute;rios din&acirc;micos com narrativa por IA (adaptado ao perfil de cada cliente)</li>
+                <li>IA para otimiza&ccedil;&atilde;o e sugest&atilde;o de ajustes de campanha</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CRIAÇÃO -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">05</span>
+            <div class="area-card__info"><h3>Cria&ccedil;&atilde;o</h3><p>Rafael P. &amp; Samuel &bull; Douglas (v&iacute;deo)</p></div>
+            <div class="area-card__tools"><span class="tool-tag">Midjourney</span><span class="tool-tag">Nano Banana</span><span class="tool-tag">Suno</span><span class="tool-tag">Google Flow</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores &amp; Gargalos</div>
+              <ul class="area-col__list">
+                <li>Replicação de peças com IA frustrante: arquitetura de info ruim, mais tempo corrigindo do que fazendo manual</li>
+                <li>Dificuldade com IA que permita ajustes iterativos do cliente</li>
+                <li>Uso de IA individual e fragmentado &mdash; n&atilde;o compartilham aprendizados</li>
+                <li>Entusiasmo sem produtividade &mdash; a lacuna de ado&ccedil;&atilde;o</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li>Mapear e padronizar fluxos de desdobramento por tipo de pe&ccedil;a</li>
+                <li>Testar ferramentas com maior controle (Adobe Firefly, Leonardo.AI)</li>
+                <li>Sess&otilde;es de compartilhamento de pr&aacute;ticas e prompts entre criadores</li>
+                <li>Treinamento focado em prompt engineering pr&aacute;tico</li>
+                <li>Integrar SIM para alimentar prompts visuais com perfil da marca</li>
+                <li>Douglas como refer&ecirc;ncia de v&iacute;deo com IA para a equipe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">06</span>
+            <div class="area-card__info"><h3>Social Media</h3><p>Carol &mdash; J&aacute; criou sistema primitivo de mem&oacute;ria de marca</p></div>
+            <div class="area-card__tools"><span class="tool-tag">Claude</span><span class="tool-tag">GPT</span><span class="tool-tag">Prompt mestre</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores &amp; Gargalos</div>
+              <ul class="area-col__list">
+                <li>Processo de geração de conteúdo diferente por marca &mdash; sem padr&atilde;o</li>
+                <li>Algumas redatoras usam IA, outras n&atilde;o &mdash; qualidade vari&aacute;vel</li>
+                <li>Sistema de prompt mestre n&atilde;o formalizado nem compartilhado</li>
+                <li>Aus&ecirc;ncia de ferramentas de diagn&oacute;stico de SEO (SEMrush)</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li>Formalizar e escalar o prompt mestre como pilar inicial do SIM</li>
+                <li>Padronizar processo de conte&uacute;do entre marcas mantendo flexibilidade</li>
+                <li>Acesso a SEMrush ou similar para embas ar planejamento em dados</li>
+                <li>Biblioteca centralizada de prompts aprovados por marca</li>
+                <li>Automatizar fluxo de agendamento e postagem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESTRATÉGIA -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">07</span>
+            <div class="area-card__info"><h3>Estrat&eacute;gia</h3><p>Vera &mdash; Usa Claude e GPT para pesquisa e estrat&eacute;gia</p></div>
+            <div class="area-card__tools"><span class="tool-tag">Claude</span><span class="tool-tag">GPT</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores Relatadas</div>
+              <ul class="area-col__list">
+                <li>Clientes sem objetivos claros e sem cultura de marketing</li>
+                <li>Dificuldade de explicar linguagem e modernidades da &aacute;rea</li>
+                <li>Fase educacional com cliente precede a fase estrat&eacute;gica</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li>Aprofundar uso do Claude com modo Projects e contexto do SIM</li>
+                <li>Materiais de educa&ccedil;&atilde;o e onboarding para clientes de baixa maturidade</li>
+                <li>Douglas como refer&ecirc;ncia de v&iacute;deo IA para compartilhar com Cria&ccedil;&atilde;o</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FINANCEIRO -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">08</span>
+            <div class="area-card__info"><h3>Financeiro</h3><p>Clever &mdash; Agenda offline para renova&ccedil;&otilde;es</p></div>
+            <div class="area-card__tools"><span class="tool-tag">ChatGPT</span></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Dores &amp; Gargalos</div>
+              <ul class="area-col__list">
+                <li>Renova&ccedil;&otilde;es de contratos por agenda f&iacute;sica &mdash; risco de perda de prazo</li>
+                <li>Leitura de editais &eacute; manual e demorada</li>
+                <li>Uso de ChatGPT apenas para revis&atilde;o de redação &mdash; uso subutilizado</li>
+                <li>Confirma &aacute;rea altamente anal&oacute;gica (pasta de folhas, controle manual)</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Oportunidades</div>
+              <ul class="area-col__list">
+                <li>Sistema de alertas de renova&ccedil;&atilde;o: substituir agenda offline (Google Calendar, Notion)</li>
+                <li>IA para revis&atilde;o de editais: identificar requisitos, prazos, exig&ecirc;ncias e riscos</li>
+                <li>Estruturar revis&atilde;o e aprimoramento de contratos com templates</li>
+                <li>Controle financeiro digital com hist&oacute;rico e alertas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIRETORIA -->
+      <div class="area-card fade-in">
+        <div class="area-card__header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="area-card__left">
+            <span class="area-card__num">09</span>
+            <div class="area-card__info"><h3>Diretoria &mdash; Vis&atilde;o Estrat&eacute;gica</h3><p>Afonso &mdash; Diretor Majorit&aacute;rio</p></div>
+          </div>
+          <button class="area-card__toggle">+</button>
+        </div>
+        <div class="area-card__body">
+          <div class="area-card__content">
+            <div class="area-col area-col--pain">
+              <div class="area-col__title area-col__title--pain">Diagn&oacute;stico</div>
+              <ul class="area-col__list">
+                <li>BV era o colch&atilde;o financeiro &mdash; transi&ccedil;&atilde;o digital n&atilde;o compensou</li>
+                <li>Taxa de gest&atilde;o digital menor que comiss&atilde;o tradicional, sem BV</li>
+                <li>Modelo de neg&oacute;cio em modo sobreviv&ecirc;ncia</li>
+              </ul>
+            </div>
+            <div class="area-col area-col--opp">
+              <div class="area-col__title area-col__title--opp">Implica&ccedil;&otilde;es para IA</div>
+              <ul class="area-col__list">
+                <li>IA deve gerar valor econ&ocirc;mico mensur&aacute;vel &mdash; ROI demonstr&aacute;vel</li>
+                <li><strong>P1:</strong> Efici&ecirc;ncia &mdash; reduzir custos operacionais via automa&ccedil;&atilde;o</li>
+                <li><strong>P2:</strong> Crescimento &mdash; prospec&ccedil;&atilde;o + novos servi&ccedil;os (SIM, CRM)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATTERNS -->
+<section id="padroes">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Se&ccedil;&atilde;o 05</div>
+      <h2 class="section-title">Padr&otilde;es Transversais</h2>
+      <p class="section-subtitle">7 temas recorrentes que indicam desafios estruturais &mdash; n&atilde;o pontuais.</p>
+    </div>
+
+    <div class="card pattern-list fade-in" style="padding: 0;">
+      <div class="pattern-item pattern-item--urgent">
+        <div class="pattern-item__num">!</div>
+        <div><div class="pattern-item__title">Risco financeiro operacional n&atilde;o mitigado</div><div class="pattern-item__desc">O double-check de verbas em M&iacute;dia (verba mensal configurada como di&aacute;ria) &eacute; o &uacute;nico ponto de risco de preju&iacute;zo direto &agrave; ag&ecirc;ncia identificado na imers&atilde;o. Sem valida&ccedil;&atilde;o autom&aacute;tica. Exige aten&ccedil;&atilde;o urgente.</div></div>
+      </div>
+      <div class="pattern-item">
+        <div class="pattern-item__num">01</div>
+        <div><div class="pattern-item__title">Uso fragmentado e pessoal de IA</div><div class="pattern-item__desc">Confirmado em todas as 9 &aacute;reas: cada profissional usa ferramentas diferentes, por iniciativa pr&oacute;pria, sem padroniza&ccedil;&atilde;o ou compartilhamento de aprendizados.</div></div>
+      </div>
+      <div class="pattern-item">
+        <div class="pattern-item__num">02</div>
+        <div><div class="pattern-item__title">Entusiasmo sem produtividade &mdash; a lacuna de ado&ccedil;&atilde;o</div><div class="pattern-item__desc">Criação identifica: profissionais entusiastas da IA que ainda n&atilde;o encontraram o fluxo que converte uso em ganho real. Gastam mais tempo corrigindo outputs de IA do que fariam manual.</div></div>
+      </div>
+      <div class="pattern-item">
+        <div class="pattern-item__num">03</div>
+        <div><div class="pattern-item__title">Alto volume de trabalho manual repetitivo</div><div class="pattern-item__desc">Relat&oacute;rios (M&iacute;dia e Atendimento), desdobramentos (Cria&ccedil;&atilde;o), planejamentos de conte&uacute;do (Social Media), controle de contratos (Financeiro) &mdash; todos processos de alto volume realizados manualmente.</div></div>
+      </div>
+      <div class="pattern-item">
+        <div class="pattern-item__num">04</div>
+        <div><div class="pattern-item__title">Restri&ccedil;&atilde;o de escopo por marca / HUB</div><div class="pattern-item__desc">Redatores e criadores s&atilde;o restritos &agrave;s suas marcas. Sem coordenador central. O processo de conte&uacute;do varia completamente por marca (Carol confirma). Boas pr&aacute;ticas n&atilde;o chegam a outras contas.</div></div>
+      </div>
+      <div class="pattern-item">
+        <div class="pattern-item__num">05</div>
+        <div><div class="pattern-item__title">Relat&oacute;rios como gargalo estrat&eacute;gico</div><div class="pattern-item__desc">Confirmado em M&iacute;dia (Power BI, Locker Studio, REPORTEI) e Atendimento (Sprout Social): relat&oacute;rios parcialmente ou totalmente manuais, consumindo tardes inteiras de profissionais.</div></div>
+      </div>
+      <div class="pattern-item">
+        <div class="pattern-item__num">06</div>
+        <div><div class="pattern-item__title">Inova&ccedil;&atilde;o intuitiva sem sistematiza&ccedil;&atilde;o</div><div class="pattern-item__desc">Carol criou um SIM primitivo. Equipe de cria&ccedil;&atilde;o testa ferramentas individualmente. Vera usa Claude avan&ccedil;ado. H&aacute; intelig&ecirc;ncia e iniciativa na equipe &mdash; falta estrutura para escalar e compartilhar.</div></div>
+      </div>
+      <div class="pattern-item">
+        <div class="pattern-item__num">07</div>
+        <div><div class="pattern-item__title">Press&atilde;o financeira como acelerador de ado&ccedil;&atilde;o</div><div class="pattern-item__desc">O &ldquo;modo sobreviv&ecirc;ncia&rdquo; &eacute;, paradoxalmente, um catalisador: a necessidade de efici&ecirc;ncia operacional e de novos servi&ccedil;os cria urg&ecirc;ncia real para a transforma&ccedil;&atilde;o. O ROI de cada iniciativa precisa ser mensur&aacute;vel.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIORITIES -->
+<section id="prioridades">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Se&ccedil;&atilde;o 06</div>
+      <h2 class="section-title">Matriz de Prioridades</h2>
+      <p class="section-subtitle">Consolidada dos Dias 1 e 2. Ordenada por prioridade &mdash; combina&ccedil;&atilde;o de impacto, urg&ecirc;ncia e risco.</p>
+    </div>
+
+    <div class="fade-in" style="overflow-x: auto;">
+      <table class="priority-table">
+        <thead>
+          <tr>
+            <th style="width:38%">Iniciativa</th>
+            <th style="width:13%">Prioridade</th>
+            <th style="width:14%">Impacto</th>
+            <th style="width:35%">&Aacute;rea</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-urgent"><td>&#9888; Valida&ccedil;&atilde;o autom&aacute;tica de verbas em campanhas (double-check)</td><td><span class="priority-badge priority-badge--urgente">Urgente</span></td><td><span class="impact-badge impact-badge--critico">Cr&iacute;tico</span></td><td>M&iacute;dia</td></tr>
+          <tr><td>Sistema de Intelig&ecirc;ncia de Marca &mdash; SIM</td><td><span class="priority-badge priority-badge--alta">Alta</span></td><td><span class="impact-badge impact-badge--transform">Transformador</span></td><td>Toda a ag&ecirc;ncia</td></tr>
+          <tr><td>Automa&ccedil;&atilde;o de relat&oacute;rios de m&iacute;dia e redes</td><td><span class="priority-badge priority-badge--alta">Alta</span></td><td><span class="impact-badge">Alto</span></td><td>M&iacute;dia / Atendimento</td></tr>
+          <tr><td>Pipeline de prospec&ccedil;&atilde;o com IA (listas + aquecimento)</td><td><span class="priority-badge priority-badge--alta">Alta</span></td><td><span class="impact-badge">Alto</span></td><td>Gest&atilde;o / Comercial</td></tr>
+          <tr><td>Desdobramento de pe&ccedil;as com IA &mdash; fluxo controlado</td><td><span class="priority-badge priority-badge--alta">Alta</span></td><td><span class="impact-badge">Alto</span></td><td>Cria&ccedil;&atilde;o / Atendimento</td></tr>
+          <tr><td>Mission Control de M&iacute;dia (painel unificado PUBLI + GA + Meta)</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">Alto</span></td><td>M&iacute;dia</td></tr>
+          <tr><td>SIM Piloto &mdash; formalizar prompt mestre de Social Media</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">Alto</span></td><td>Social Media / Cria&ccedil;&atilde;o</td></tr>
+          <tr><td>Agente de monitoramento de mercado (licita&ccedil;&otilde;es, concorrentes)</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">Alto</span></td><td>Gest&atilde;o / Planejamento</td></tr>
+          <tr><td>CRM Inteligente como produto/servi&ccedil;o</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">Alto</span></td><td>Diretoria / Atendimento</td></tr>
+          <tr><td>Programa de treinamento e cultura de IA</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">Alto</span></td><td>Toda a ag&ecirc;ncia</td></tr>
+          <tr><td>Revis&atilde;o de editais e contratos com IA</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">M&eacute;dio</span></td><td>Financeiro</td></tr>
+          <tr><td>Digitaliza&ccedil;&atilde;o do Financeiro (alertas, controle digital)</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">M&eacute;dio</span></td><td>Financeiro</td></tr>
+          <tr><td>Ferramenta de SEO/diagn&oacute;stico para Social Media</td><td><span class="priority-badge priority-badge--media">M&eacute;dia</span></td><td><span class="impact-badge">M&eacute;dio</span></td><td>Social Media</td></tr>
+          <tr><td>Padroniza&ccedil;&atilde;o de brand guides &mdash; todas as marcas</td><td><span class="priority-badge priority-badge--baixa">Baixa</span></td><td><span class="impact-badge">M&eacute;dio</span></td><td>Atendimento / Cria&ccedil;&atilde;o</td></tr>
+          <tr><td>Solu&ccedil;&atilde;o PDV: sketch &rarr; 2D &rarr; 3D manipul&aacute;vel</td><td><span class="priority-badge priority-badge--baixa">Baixa</span></td><td><span class="impact-badge">M&eacute;dio</span></td><td>Cria&ccedil;&atilde;o / PDV</td></tr>
+          <tr><td>Tradu&ccedil;&atilde;o de textos aplicados sobre imagens</td><td><span class="priority-badge priority-badge--baixa">Baixa</span></td><td><span class="impact-badge">Baixo</span></td><td>Atendimento</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="divider fade-in"><div class="divider__dot"></div></div>
+
+    <div class="section-header fade-in"><div class="section-label">Ferramentas Mapeadas &mdash; 24 no total</div></div>
+
+    <div class="tools-cloud fade-in">
+      <div class="tool-bubble">GPT (ChatGPT)<span class="tool-bubble__user">Tiago, Vera, Carol, Clever, Cria&ccedil;&atilde;o</span></div>
+      <div class="tool-bubble">Claude<span class="tool-bubble__user">Vera, Carol</span></div>
+      <div class="tool-bubble">Midjourney<span class="tool-bubble__user">Tiago, Cria&ccedil;&atilde;o</span></div>
+      <div class="tool-bubble">Nano Banana<span class="tool-bubble__user">Maristela, Gabriel, Cria&ccedil;&atilde;o</span></div>
+      <div class="tool-bubble">ElevenLabs<span class="tool-bubble__user">Tiago, alguns de Cria&ccedil;&atilde;o</span></div>
+      <div class="tool-bubble">Suno<span class="tool-bubble__user">Tiago, Cria&ccedil;&atilde;o</span></div>
+      <div class="tool-bubble">Inner (Gemini/Gemma)<span class="tool-bubble__user">Gabriel Daudt</span></div>
+      <div class="tool-bubble">Perplexity<span class="tool-bubble__user">Beto Noronha</span></div>
+      <div class="tool-bubble">NotebookLM<span class="tool-bubble__user">Beto Noronha</span></div>
+      <div class="tool-bubble">Sprout Social<span class="tool-bubble__user">Atendimento</span></div>
+      <div class="tool-bubble">PUBLI (x2)<span class="tool-bubble__user">M&iacute;dia &mdash; BRA e RBA</span></div>
+      <div class="tool-bubble">REPORTEI<span class="tool-bubble__user">M&iacute;dia &mdash; relat&oacute;rios mensais</span></div>
+      <div class="tool-bubble">Locker Studio<span class="tool-bubble__user">M&iacute;dia &mdash; orgânico Stihl</span></div>
+      <div class="tool-bubble">Power BI + Big Carry<span class="tool-bubble__user">M&iacute;dia &mdash; verbas mensais</span></div>
+      <div class="tool-bubble">GA4<span class="tool-bubble__user">M&iacute;dia / BI &mdash; Lorenzo semanal</span></div>
+      <div class="tool-bubble">READ AI<span class="tool-bubble__user">M&iacute;dia &mdash; resum. reuni&otilde;es (free)</span></div>
+      <div class="tool-bubble">Freepik IA<span class="tool-bubble__user">Cria&ccedil;&atilde;o (em teste)</span></div>
+      <div class="tool-bubble">CapCut IA<span class="tool-bubble__user">Cria&ccedil;&atilde;o (em teste)</span></div>
+      <div class="tool-bubble">Google Flow<span class="tool-bubble__user">Douglas &mdash; produ&ccedil;&atilde;o de v&iacute;deo</span></div>
+      <div class="tool-bubble">Moises<span class="tool-bubble__user">Cria&ccedil;&atilde;o &mdash; separa&ccedil;&atilde;o de &aacute;udio</span></div>
+      <div class="tool-bubble">Gemini (imagens)<span class="tool-bubble__user">Cria&ccedil;&atilde;o</span></div>
+      <div class="tool-bubble">Banco de imagem c/ IA<span class="tool-bubble__user">A confirmar &mdash; assinatura ativa</span></div>
+      <div class="tool-bubble">SEMrush<span class="tool-bubble__user">Social Media &mdash; desejado, n&atilde;o contratado</span></div>
+      <div class="tool-bubble">Prompt mestre .MD<span class="tool-bubble__user">Carol &mdash; SIM primitivo por marca</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section id="proximos">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Se&ccedil;&atilde;o 07</div>
+      <h2 class="section-title">Pr&oacute;ximos Passos</h2>
+      <p class="section-subtitle">Pend&ecirc;ncias operacionais e entregas para o relat&oacute;rio final.</p>
+    </div>
+
+    <div class="next-steps-grid fade-in">
+      <div class="card">
+        <div class="next-col__title">Pend&ecirc;ncias &mdash; Coletar com a Equipe</div>
+        <ul class="next-col__list">
+          <li><span class="step-check checked" onclick="this.classList.toggle('checked')">&#10003;</span>Social Media usa IA? &mdash; Respondido: Carol usa Claude e GPT</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Solicitar exemplos de relat&oacute;rios (Via Marte e Stihl)</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Solicitar exemplo de plano de m&iacute;dia atual</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Confirmar banco de imagens com IA (qual plataforma)</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Aprofundar BI: Kevi e Lorenzo &mdash; volume, fontes e tempo de gera&ccedil;&atilde;o</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="next-col__title">Relat&oacute;rio Final &mdash; Entregas</div>
+        <ul class="next-col__list">
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Atualizar resumo executivo com s&iacute;ntese definitiva</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Finalizar Matriz de Prioridades com estimativas de esfor&ccedil;o</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Mapa de Oportunidades por fase (curto / m&eacute;dio / longo prazo)</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Plano de A&ccedil;&atilde;o: fases, respons&aacute;veis, ferramentas e crit&eacute;rios de sucesso</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Roadmap do SIM com arquitetura e piloto Harman</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Estimar ROI das iniciativas de maior prioridade</li>
+          <li><span class="step-check" onclick="this.classList.toggle('checked')"></span>Vers&atilde;o executiva para apresenta&ccedil;&atilde;o &agrave; diretoria</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer">
+    <div class="footer__left">Grupo <span>RBA</span> &mdash; Diagn&oacute;stico Estrat&eacute;gico de IA</div>
+    <div class="footer__right">v0.2 &bull; Dias 1 &amp; 2 &bull; Abril 2026 &bull; Documento Vivo</div>
+  </div>
+  <div class="container footer-zn-block">
+    <a class="footer-zn-mark" href="https://thiagozeni.com" target="_blank" rel="noopener" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+    <div class="footer-zn-tagline">
+      Constru&iacute;do por Thiago Zeni &middot; Consultoria de IA &amp; Inova&ccedil;&atilde;o &middot;
+      <a href="https://thiagozeni.com" target="_blank" rel="noopener">thiagozeni.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+
+const counters = document.querySelectorAll('[data-count]');
+const cObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const t = parseInt(e.target.dataset.count);
+    let c = 0;
+    const inc = Math.ceil(t / 30);
+    const timer = setInterval(() => {
+      c += inc;
+      if (c >= t) { c = t; clearInterval(timer); }
+      e.target.textContent = c;
+    }, 40);
+    cObserver.unobserve(e.target);
+  });
+}, { threshold: 0.5 });
+counters.forEach(el => cObserver.observe(el));
+
+const pBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  pBar.style.width = p + '%';
+});
+
+const nav = document.getElementById('nav');
+const backLink = document.querySelector('.back-link');
+window.addEventListener('scroll', () => {
+  const showNav = window.scrollY > window.innerHeight * 0.4;
+  nav.classList.toggle('scrolled', showNav);
+  backLink.classList.toggle('hidden', showNav);
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

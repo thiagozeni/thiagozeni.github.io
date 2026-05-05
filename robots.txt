@@ -8,5 +8,14 @@ Disallow: /concorrenciars
 Disallow: /concorrenciars.html
 Disallow: /dossie
 Disallow: /dossie.html
+Disallow: /rba
+Disallow: /rba.html
+Disallow: /diagnostico
+Disallow: /diagnostico.html
+Disallow: /sim
+Disallow: /sim.html
+Disallow: /gantt
+Disallow: /gantt.html
+Disallow: /rba-docs/
 
 Sitemap: https://thiagozeni.com/sitemap.xml

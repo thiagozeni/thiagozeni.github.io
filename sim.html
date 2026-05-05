@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>SIM · Sistema de Inteligência de Marca · Grupo RBA</title>
+<meta name="description" content="Visualização do Sistema de Inteligência de Marca — vault centralizado de personalidade, voz, tom e guardrails para cada marca gerenciada pelo Grupo RBA.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="SIM · Sistema de Inteligência de Marca">
+<meta property="og:description" content="Vault de marca + IA guardiã. Iniciativa principal do diagnóstico estratégico do Grupo RBA.">
+<meta property="og:locale" content="pt_BR">
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-F44T3HG5PZ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0a0d1a;
+    --bg2: #0f1225;
+    --bg3: #0c1020;
+    --bg-card: #141829;
+    --bg-card-hover: #1a1f36;
+    --bg-elevated: #1a1f36;
+    --bg-recessed: #0d111f;
+    --border: #1e2340;
+    --border-strong: #2a3055;
+    --text: #e2e8f0;
+    --text-muted: #8892b0;
+    --text-dim: #4a5270;
+    --accent: #38bdf8;          /* cyan — RBA */
+    --accent2: #818cf8;          /* violet */
+    --accent3: #34d399;          /* green */
+    --accent4: #f472b6;          /* pink */
+    --accent5: #fb923c;          /* orange */
+    --accent6: #facc15;          /* yellow */
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --success: #22c55e;
+
+    /* Camadas */
+    --l1: #38bdf8;  /* L1 Doutrina — cyan */
+    --l2: #818cf8;  /* L2 Estratégia — violet */
+    --l3: #f472b6;  /* L3 Output — pink */
+    --l4: #fb923c;  /* L4 Performance — orange */
+    --l5: #34d399;  /* L5 Loop — green */
+
+    /* Casos de uso */
+    --uc1: #38bdf8;  /* Operacional — cyan */
+    --uc2: #f472b6;  /* Consultivo — pink */
+    --uc3: #facc15;  /* Analítico — yellow */
+
+    /* ZN brand layer (autoria — header + footer) */
+    --zn-lime: #C6FF00;
+    --zn-display: 'Unbounded', sans-serif;
+    --zn-body-zn: 'DM Sans', sans-serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .container { max-width:1280px; margin:0 auto; padding:0 28px; }
+  .container-wide { max-width:1440px; margin:0 auto; padding:0 28px; }
+
+  /* Background atmosphere */
+  body::before {
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background:
+      radial-gradient(ellipse at 10% 0%, rgba(56,189,248,.04) 0%, transparent 40%),
+      radial-gradient(ellipse at 90% 30%, rgba(244,114,182,.03) 0%, transparent 40%),
+      radial-gradient(ellipse at 50% 100%, rgba(129,140,248,.03) 0%, transparent 50%);
+  }
+  body > * { position:relative; z-index:1; }
+
+  /* Animations */
+  .fade-in { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+  .fade-in.visible { opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in { opacity:1; transform:none; transition:none; }
+  }
+
+  /* NAV */
+  .nav {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(10,13,26,.88); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); padding:0 28px;
+    transform:translateY(-100%); transition:transform .3s ease;
+  }
+  .nav.visible { transform:translateY(0); }
+  .nav-inner { max-width:1440px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:54px; }
+  .nav-brand { font-weight:700; font-size:1rem; letter-spacing:-0.02em; color:#fff; }
+  .nav-brand .brand-rba {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+  .nav-brand .brand-caption {
+    color: var(--text-muted); font-weight: 500; font-size: .9rem;
+    margin-left: 4px; letter-spacing: 0;
+  }
+  .nav-links { display:flex; gap:18px; }
+  .nav-links a { font-size:.7rem; color:var(--text-muted); text-decoration:none; text-transform:uppercase; letter-spacing:.08em; font-weight:500; transition:color .2s; }
+  .nav-links a:hover { color:var(--accent); }
+  @media(max-width:900px) { .nav-links { display:none; } }
+  .nav-right-cluster { display:flex; align-items:center; gap:22px; }
+  .nav-zn-corner {
+    display: inline-flex; align-items: center;
+    font-family: var(--zn-display); font-weight: 900;
+    font-size: 1.05rem; letter-spacing: -0.04em; color: var(--zn-lime);
+    text-decoration: none; line-height: 1;
+    text-shadow: 0 0 24px rgba(198,255,0,0.35);
+    transition: opacity 0.2s;
+  }
+  .nav-zn-corner:hover { opacity: 0.75; color: var(--zn-lime); }
+  .nav-zn-corner .dot { color: var(--zn-lime); }
+
+  .back-link {
+    position: fixed; top: 18px; left: 28px; z-index: 60;
+    font-size: 0.72rem; color: var(--text-muted); text-decoration: none;
+    text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;
+    padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px;
+    background: rgba(10,13,26,0.6); backdrop-filter: blur(8px);
+    transition: opacity 0.25s, color 0.2s, border-color 0.2s;
+  }
+  .back-link:hover { color: var(--accent); border-color: var(--accent); }
+  .back-link.hidden { opacity: 0; pointer-events: none; }
+
+  /* HERO */
+  .hero {
+    min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center;
+    position:relative; overflow:hidden;
+    background:radial-gradient(ellipse at 50% 0%,#151d45 0%,var(--bg) 70%);
+    padding:120px 28px 100px;
+  }
+  .hero-canvas {
+    position:absolute; inset:0; width:100%; height:100%;
+    pointer-events:none; z-index:0; opacity:.5;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-canvas { display:none; }
+  }
+  .hero::before {
+    content:''; position:absolute; inset:0; z-index:1;
+    background:
+      radial-gradient(circle at 15% 25%,rgba(244,114,182,.06) 0%,transparent 45%),
+      radial-gradient(circle at 85% 75%,rgba(56,189,248,.06) 0%,transparent 45%);
+    pointer-events:none;
+  }
+  /* Subtle text-readability scrim only behind the central content (small ellipse, not full vignette) */
+  .hero-scrim {
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:min(880px, 90%); height:min(580px, 90%); z-index:1; pointer-events:none;
+    background:radial-gradient(ellipse at center, rgba(10,13,26,.62) 0%, rgba(10,13,26,.32) 45%, transparent 75%);
+  }
+  .hero-content { position:relative; z-index:2; max-width:960px; }
+  .hero-badge {
+    display:inline-block; padding:6px 18px;
+    background:rgba(56,189,248,.08); border:1px solid rgba(56,189,248,.25);
+    border-radius:999px; font-size:.72rem; font-weight:600; color:var(--accent);
+    letter-spacing:.08em; margin-bottom:32px; text-transform:uppercase;
+  }
+  .hero h1 {
+    font-size:clamp(2.4rem,6.5vw,4.6rem); font-weight:900; letter-spacing:-.035em; line-height:1.05; margin-bottom:24px;
+    background:linear-gradient(135deg,#fff 0%,var(--accent) 50%,var(--accent2) 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  .hero .subtitle {
+    font-size:1.4rem; font-weight:500; color:var(--accent4); margin-bottom:20px; letter-spacing:-.01em;
+  }
+  .hero p.lead {
+    font-size:1.1rem; color:var(--text-muted); max-width:760px; margin:0 auto 50px; line-height:1.65;
+  }
+  .hero-metrics { display:flex; justify-content:center; gap:48px; flex-wrap:wrap; }
+  .hero-metric { text-align:center; }
+  .hero-metric .hm-num { font-size:2.4rem; font-weight:900; display:block; line-height:1; margin-bottom:8px; }
+  .hero-metric .hm-label { font-size:.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:.12em; font-weight:600; }
+  .hero-meta {
+    margin-top:60px; padding-top:32px; border-top:1px solid var(--border);
+    display:flex; justify-content:center; gap:32px; font-size:.78rem; color:var(--text-dim);
+    flex-wrap:wrap;
+  }
+  .hero-meta span strong { color:var(--text-muted); font-weight:600; }
+
+  /* SECTIONS */
+  section { padding:100px 0; position:relative; }
+  .section-header { margin-bottom:56px; }
+  .section-header.center { text-align:center; }
+  .section-label {
+    display:inline-block; font-family:'JetBrains Mono',monospace;
+    font-size:.7rem; font-weight:500; text-transform:uppercase; letter-spacing:.18em;
+    color:var(--accent); margin-bottom:14px;
+  }
+  .section-label::before { content:'◆ '; color:var(--accent); }
+  .section-title {
+    font-size:clamp(1.8rem,4vw,2.6rem); font-weight:800; letter-spacing:-.025em;
+    color:#fff; margin-bottom:14px; line-height:1.15;
+  }
+  .section-sub { font-size:1.02rem; color:var(--text-muted); max-width:680px; line-height:1.7; }
+  .section-header.center .section-sub { margin:0 auto; }
+  .divider { height:1px; background:linear-gradient(90deg,transparent,var(--border),transparent); }
+  .bg-alt { background:var(--bg2); }
+  .bg-recessed { background:var(--bg3); }
+
+  /* CARDS */
+  .card {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px;
+    transition:all .25s ease;
+  }
+  .card-elevated {
+    background:var(--bg-elevated); border:1px solid var(--border-strong);
+    box-shadow: 0 8px 32px -12px rgba(0,0,0,.4);
+  }
+  .card-recessed {
+    background:var(--bg-recessed); border:1px solid var(--border);
+  }
+
+  /* ============================== */
+  /* §1 — BLUEPRINT                */
+  /* ============================== */
+  .blueprint-wrap {
+    background:var(--bg2); border:1px solid var(--border); border-radius:18px;
+    padding:48px 32px; position:relative; overflow:hidden;
+  }
+  .blueprint-wrap::before {
+    content:''; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(56,189,248,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(56,189,248,.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events:none;
+  }
+  .bp-grid {
+    display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap:24px;
+    align-items:stretch; position:relative;
+  }
+  @media(max-width:900px) {
+    .bp-grid { grid-template-columns: 1fr; }
+    .bp-arrow { display:none !important; }
+  }
+  .bp-zone {
+    background:var(--bg-card); border:1px solid var(--border-strong); border-radius:14px;
+    padding:24px; display:flex; flex-direction:column;
+  }
+  .bp-zone-header {
+    display:flex; align-items:center; gap:10px; margin-bottom:18px;
+    padding-bottom:14px; border-bottom:1px solid var(--border);
+  }
+  .bp-zone-num {
+    width:30px; height:30px; border-radius:9px; display:flex; align-items:center; justify-content:center;
+    font-family:'JetBrains Mono',monospace; font-size:.78rem; font-weight:700;
+  }
+  .bp-zone.entrada .bp-zone-num { background:rgba(56,189,248,.12); color:var(--accent); }
+  .bp-zone.processo .bp-zone-num { background:rgba(129,140,248,.12); color:var(--accent2); }
+  .bp-zone.saida .bp-zone-num { background:rgba(244,114,182,.12); color:var(--accent4); }
+  .bp-zone-title { font-size:.95rem; font-weight:700; color:#fff; letter-spacing:-.01em; }
+  .bp-zone-sub { font-size:.7rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:.08em; margin-top:2px; font-family:'JetBrains Mono',monospace; }
+  .bp-items { display:flex; flex-direction:column; gap:8px; flex:1; }
+  .bp-item {
+    padding:10px 12px; background:var(--bg-recessed); border:1px solid var(--border);
+    border-radius:8px; font-size:.78rem; color:var(--text); display:flex; align-items:center; gap:8px;
+    transition:all .2s;
+  }
+  .bp-item:hover { border-color:var(--border-strong); background:var(--bg-card-hover); transform:translateX(2px); }
+  .bp-item-tag {
+    font-family:'JetBrains Mono',monospace; font-size:.62rem; font-weight:600;
+    padding:2px 6px; border-radius:4px; flex-shrink:0;
+  }
+  .bp-item-tag.l1 { background:rgba(56,189,248,.1); color:var(--l1); }
+  .bp-item-tag.l2 { background:rgba(129,140,248,.1); color:var(--l2); }
+  .bp-item-tag.l3 { background:rgba(244,114,182,.1); color:var(--l3); }
+  .bp-item-tag.l4 { background:rgba(251,146,60,.1); color:var(--l4); }
+  .bp-item-tag.l5 { background:rgba(52,211,153,.1); color:var(--l5); }
+  .bp-item-tag.uc1 { background:rgba(56,189,248,.1); color:var(--uc1); }
+  .bp-item-tag.uc2 { background:rgba(244,114,182,.1); color:var(--uc2); }
+  .bp-item-tag.uc3 { background:rgba(250,204,21,.1); color:var(--uc3); }
+  .bp-item-tag.proc { background:rgba(129,140,248,.1); color:var(--accent2); }
+
+  .bp-arrow {
+    display:flex; align-items:center; justify-content:center;
+    color:var(--accent2); opacity:.6;
+  }
+  .bp-arrow svg { width:32px; height:32px; }
+
+  .bp-foot {
+    margin-top:32px; padding:20px 24px; background:var(--bg-recessed); border:1px solid var(--border);
+    border-radius:12px; display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .bp-foot-item { display:flex; align-items:center; gap:10px; font-size:.78rem; color:var(--text-muted); }
+  .bp-foot-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+
+  /* ============================== */
+  /* §1.5 — TECHNICAL BLUEPRINT    */
+  /* ============================== */
+  .tech-bp-wrap {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px;
+    padding:24px;
+  }
+  .tech-bp-frame {
+    position:relative; border-radius:10px; overflow:hidden;
+    background:#0a0d1a; cursor:zoom-in;
+    border:1px solid var(--border-strong);
+  }
+  .tech-bp-frame img { display:block; width:100%; height:auto; }
+  .tech-bp-frame::after {
+    content:'⤢  Ampliar'; position:absolute; bottom:14px; right:16px;
+    background:rgba(10,13,26,.85); color:var(--accent);
+    padding:6px 12px; border-radius:6px;
+    font-family:'JetBrains Mono',monospace; font-size:.7rem; font-weight:600;
+    letter-spacing:.04em; pointer-events:none;
+    opacity:0; transition:opacity .2s;
+  }
+  .tech-bp-frame:hover::after { opacity:1; }
+  .tech-bp-caption {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-top:18px; padding-top:16px; border-top:1px solid var(--border);
+    font-size:.78rem; color:var(--text-dim); flex-wrap:wrap; gap:12px;
+    font-family:'JetBrains Mono',monospace;
+  }
+  .tech-bp-caption a {
+    color:var(--accent); text-decoration:none; font-weight:600; font-size:.72rem;
+  }
+  .tech-bp-caption a:hover { color:#fff; }
+
+  .lightbox {
+    position:fixed; inset:0; z-index:1000;
+    background:rgba(5,7,16,.94); backdrop-filter:blur(8px);
+    display:flex; align-items:center; justify-content:center;
+    padding:32px; cursor:zoom-out;
+    opacity:0; pointer-events:none; transition:opacity .25s ease;
+  }
+  .lightbox.visible { opacity:1; pointer-events:auto; }
+  .lightbox img {
+    max-width:100%; max-height:100%;
+    border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .lightbox-close {
+    position:absolute; top:24px; right:32px;
+    font-family:'JetBrains Mono',monospace; font-size:.75rem; font-weight:600;
+    letter-spacing:.06em;
+    color:var(--text-muted); cursor:pointer;
+    padding:8px 14px; border:1px solid var(--border-strong); border-radius:6px;
+    background:rgba(20,24,41,.7); transition:all .2s;
+  }
+  .lightbox-close:hover { color:#fff; border-color:var(--accent); }
+
+  /* ============================== */
+  /* §2 — CAMADAS L1-L5            */
+  /* ============================== */
+  .layers-grid {
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:16px;
+  }
+  @media(max-width:1100px) { .layers-grid { grid-template-columns:repeat(2, 1fr); } }
+  @media(max-width:600px) { .layers-grid { grid-template-columns:1fr; } }
+
+  .layer-card {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px;
+    padding:24px 22px; position:relative; overflow:hidden; transition:all .25s ease;
+    display:flex; flex-direction:column;
+  }
+  .layer-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  }
+  .layer-card.l1::before { background:var(--l1); }
+  .layer-card.l2::before { background:var(--l2); }
+  .layer-card.l3::before { background:var(--l3); }
+  .layer-card.l4::before { background:var(--l4); }
+  .layer-card.l5::before { background:var(--l5); }
+  .layer-card:hover { transform:translateY(-3px); border-color:var(--border-strong); }
+
+  .layer-tag {
+    font-family:'JetBrains Mono',monospace; font-size:.7rem; font-weight:700;
+    padding:3px 9px; border-radius:5px; display:inline-block; margin-bottom:14px;
+  }
+  .layer-card.l1 .layer-tag { background:rgba(56,189,248,.12); color:var(--l1); }
+  .layer-card.l2 .layer-tag { background:rgba(129,140,248,.12); color:var(--l2); }
+  .layer-card.l3 .layer-tag { background:rgba(244,114,182,.12); color:var(--l3); }
+  .layer-card.l4 .layer-tag { background:rgba(251,146,60,.12); color:var(--l4); }
+  .layer-card.l5 .layer-tag { background:rgba(52,211,153,.12); color:var(--l5); }
+
+  .layer-name { font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:6px; letter-spacing:-.01em; }
+  .layer-desc { font-size:.82rem; color:var(--text-muted); margin-bottom:18px; line-height:1.55; }
+  .layer-examples { font-size:.74rem; color:var(--text-dim); margin-bottom:18px; line-height:1.55; padding:10px 12px; background:var(--bg-recessed); border-radius:8px; border-left:2px solid var(--border-strong); }
+  .layer-meta { margin-top:auto; padding-top:14px; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:6px; }
+  .layer-meta-row { display:flex; justify-content:space-between; align-items:center; font-size:.7rem; }
+  .layer-meta-key { color:var(--text-dim); text-transform:uppercase; letter-spacing:.08em; font-weight:500; font-family:'JetBrains Mono',monospace; }
+  .layer-meta-val { color:var(--text); font-weight:600; text-align:right; }
+
+  /* ============================== */
+  /* §3 — CASOS DE USO + MCI HEATMAP */
+  /* ============================== */
+  .cases-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-bottom:60px; }
+  @media(max-width:900px) { .cases-grid { grid-template-columns:1fr; } }
+
+  .case-card {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px;
+    padding:28px; position:relative; overflow:hidden;
+  }
+  .case-card::after {
+    content:''; position:absolute; top:0; right:0; width:100%; height:100%;
+    background:radial-gradient(circle at 100% 0%, var(--glow) 0%, transparent 50%);
+    opacity:.08; pointer-events:none;
+  }
+  .case-card.uc1 { --glow:var(--uc1); }
+  .case-card.uc2 { --glow:var(--uc2); }
+  .case-card.uc3 { --glow:var(--uc3); }
+  .case-num {
+    font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--text-dim);
+    margin-bottom:10px; letter-spacing:.1em;
+  }
+  .case-title {
+    font-size:1.4rem; font-weight:800; margin-bottom:8px; letter-spacing:-.02em;
+  }
+  .case-card.uc1 .case-title { color:var(--uc1); }
+  .case-card.uc2 .case-title { color:var(--uc2); }
+  .case-card.uc3 .case-title { color:var(--uc3); }
+  .case-summary { font-size:.88rem; color:var(--text); margin-bottom:18px; line-height:1.6; }
+  .case-stats { display:flex; flex-direction:column; gap:8px; padding-top:16px; border-top:1px solid var(--border); }
+  .case-stat { display:flex; justify-content:space-between; font-size:.78rem; }
+  .case-stat-key { color:var(--text-dim); text-transform:uppercase; font-size:.68rem; letter-spacing:.08em; font-weight:500; font-family:'JetBrains Mono',monospace; }
+  .case-stat-val { color:var(--text); font-weight:600; }
+  .conf-pill { display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:6px; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+  .conf-pill.alta { background:rgba(34,197,94,.12); color:var(--success); }
+  .conf-pill.media { background:rgba(245,158,11,.12); color:var(--warning); }
+  .conf-pill.limitada { background:rgba(251,146,60,.12); color:var(--accent5); }
+  .conf-pill.insuf { background:rgba(239,68,68,.12); color:var(--danger); }
+
+  /* MCI HEATMAP */
+  .mci-wrap {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px;
+    padding:0; overflow:hidden;
+  }
+  .mci-table { width:100%; border-collapse:collapse; }
+  .mci-table th, .mci-table td { padding:12px 14px; text-align:center; vertical-align:middle; }
+  .mci-table thead th {
+    background:var(--bg-recessed); font-size:.72rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.08em; color:var(--text-muted); border-bottom:2px solid var(--border-strong);
+    position:sticky; top:0;
+  }
+  .mci-table thead th:first-child { text-align:left; padding-left:24px; color:var(--text-dim); }
+  .mci-table thead th.uc1 { color:var(--uc1); }
+  .mci-table thead th.uc2 { color:var(--uc2); }
+  .mci-table thead th.uc3 { color:var(--uc3); }
+  .mci-table tbody tr { transition:background .15s; }
+  .mci-table tbody tr:hover { background:rgba(56,189,248,.04); }
+  .mci-table tbody tr:not(:last-child) td { border-bottom:1px solid var(--border); }
+  .mci-input-cell {
+    text-align:left !important; padding-left:24px !important;
+    font-size:.85rem; font-weight:600; color:var(--text);
+  }
+  .mci-layer-tag {
+    font-family:'JetBrains Mono',monospace; font-size:.62rem; font-weight:700;
+    padding:2px 6px; border-radius:4px; margin-right:8px;
+  }
+  .mci-layer-tag.l1 { background:rgba(56,189,248,.12); color:var(--l1); }
+  .mci-layer-tag.l2 { background:rgba(129,140,248,.12); color:var(--l2); }
+  .mci-layer-tag.l3 { background:rgba(244,114,182,.12); color:var(--l3); }
+  .mci-layer-tag.l4 { background:rgba(251,146,60,.12); color:var(--l4); }
+  .mci-layer-tag.l5 { background:rgba(52,211,153,.12); color:var(--l5); }
+  .mci-cell {
+    display:inline-flex; align-items:center; justify-content:center;
+    width:48px; height:32px; border-radius:7px;
+    font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:700;
+    transition:transform .15s;
+  }
+  .mci-cell:hover { transform:scale(1.08); }
+  .mci-must { background:rgba(56,189,248,.18); color:var(--accent); border:1px solid rgba(56,189,248,.35); }
+  .mci-must.uc2 { background:rgba(244,114,182,.18); color:var(--uc2); border:1px solid rgba(244,114,182,.35); }
+  .mci-must.uc3 { background:rgba(250,204,21,.18); color:var(--uc3); border:1px solid rgba(250,204,21,.35); }
+  .mci-nice { background:rgba(129,140,248,.08); color:var(--accent2); border:1px solid rgba(129,140,248,.18); }
+  .mci-none { background:rgba(74,82,112,.06); color:var(--text-dim); border:1px solid var(--border); }
+
+  .mci-legend { padding:18px 24px; background:var(--bg-recessed); border-top:1px solid var(--border); display:flex; gap:24px; align-items:center; flex-wrap:wrap; font-size:.78rem; color:var(--text-muted); }
+  .mci-legend-item { display:inline-flex; align-items:center; gap:8px; }
+
+  /* Substitutas drawer */
+  .subst-section {
+    margin-top:32px; background:linear-gradient(135deg, rgba(56,189,248,.04), rgba(129,140,248,.04));
+    border:1px solid var(--border); border-left:4px solid var(--accent2);
+    border-radius:12px; padding:24px 28px;
+  }
+  .subst-title { font-size:.95rem; font-weight:700; color:#fff; margin-bottom:6px; }
+  .subst-sub { font-size:.82rem; color:var(--text-muted); margin-bottom:18px; }
+  .subst-table { width:100%; border-collapse:collapse; font-size:.82rem; }
+  .subst-table th { text-align:left; padding:10px 12px; font-size:.65rem; text-transform:uppercase; letter-spacing:.1em; color:var(--text-dim); border-bottom:1px solid var(--border); font-family:'JetBrains Mono',monospace; }
+  .subst-table td { padding:14px 12px; border-bottom:1px solid var(--border); vertical-align:top; color:var(--text-muted); }
+  .subst-table td:first-child { color:var(--text); font-weight:600; }
+  .subst-table tr:last-child td { border-bottom:none; }
+  .weight-pill {
+    display:inline-block; font-family:'JetBrains Mono',monospace; font-size:.68rem; font-weight:700;
+    padding:2px 7px; border-radius:5px; margin-left:6px;
+  }
+  .weight-100 { background:rgba(34,197,94,.14); color:var(--success); }
+  .weight-90 { background:rgba(56,189,248,.14); color:var(--accent); }
+  .weight-80 { background:rgba(129,140,248,.14); color:var(--accent2); }
+  .weight-70 { background:rgba(245,158,11,.14); color:var(--warning); }
+  .weight-60 { background:rgba(251,146,60,.14); color:var(--accent5); }
+  .weight-50 { background:rgba(239,68,68,.14); color:var(--danger); }
+
+  /* ============================== */
+  /* §4 — DECAIMENTO TEMPORAL      */
+  /* ============================== */
+  .decay-wrap { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:32px; }
+  .decay-toggle { display:flex; gap:8px; margin-bottom:24px; flex-wrap:wrap; }
+  .decay-btn {
+    padding:8px 18px; background:var(--bg-recessed); border:1px solid var(--border);
+    border-radius:8px; font-family:'Inter',sans-serif; font-size:.78rem; font-weight:600;
+    color:var(--text-muted); cursor:pointer; transition:all .2s;
+  }
+  .decay-btn:hover { color:var(--text); border-color:var(--border-strong); }
+  .decay-btn.active { background:var(--bg-elevated); color:#fff; border-color:var(--accent); }
+  .decay-btn.uc1.active { border-color:var(--uc1); box-shadow:0 0 0 1px var(--uc1); }
+  .decay-btn.uc2.active { border-color:var(--uc2); box-shadow:0 0 0 1px var(--uc2); }
+  .decay-btn.uc3.active { border-color:var(--uc3); box-shadow:0 0 0 1px var(--uc3); }
+  .decay-chart-container { position:relative; height:380px; }
+  .decay-foot { margin-top:24px; padding:16px 20px; background:var(--bg-recessed); border:1px solid var(--border); border-left:3px solid var(--accent2); border-radius:8px; font-size:.82rem; color:var(--text-muted); }
+  .decay-foot strong { color:var(--text); }
+
+  /* ============================== */
+  /* §5 — CAPABILITY DISCLOSURE UX */
+  /* ============================== */
+  .disclosure-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+  @media(max-width:1000px) { .disclosure-grid { grid-template-columns:1fr; } }
+
+  .disc-card {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px;
+    overflow:hidden; display:flex; flex-direction:column;
+  }
+  .disc-header {
+    padding:18px 22px; border-bottom:1px solid var(--border);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .disc-header.alta { background:linear-gradient(135deg, rgba(34,197,94,.08), transparent); }
+  .disc-header.media { background:linear-gradient(135deg, rgba(245,158,11,.08), transparent); }
+  .disc-header.insuf { background:linear-gradient(135deg, rgba(239,68,68,.08), transparent); }
+  .disc-scenario { font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; color:var(--text-dim); font-family:'JetBrains Mono',monospace; }
+  .disc-score { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:.95rem; }
+  .disc-score.alta { color:var(--success); }
+  .disc-score.media { color:var(--warning); }
+  .disc-score.insuf { color:var(--danger); }
+
+  .disc-body { padding:22px; flex:1; display:flex; flex-direction:column; }
+  .disc-prompt {
+    background:var(--bg-recessed); border:1px solid var(--border); border-radius:10px;
+    padding:14px 16px; margin-bottom:18px; font-size:.85rem; color:var(--text);
+    border-left:3px solid var(--accent);
+  }
+  .disc-prompt-label { font-size:.62rem; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); font-weight:700; margin-bottom:6px; font-family:'JetBrains Mono',monospace; }
+
+  .disc-response {
+    background:var(--bg-recessed); border:1px solid var(--border); border-radius:10px;
+    padding:18px; font-family:'JetBrains Mono',monospace; font-size:.78rem; color:var(--text);
+    line-height:1.65; flex:1;
+  }
+  .disc-response-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+  .disc-status-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+  .disc-status-dot.alta { background:var(--success); box-shadow:0 0 8px var(--success); }
+  .disc-status-dot.media { background:var(--warning); box-shadow:0 0 8px var(--warning); }
+  .disc-status-dot.insuf { background:var(--danger); box-shadow:0 0 8px var(--danger); }
+  .disc-status-text { font-family:'Inter',sans-serif; font-size:.82rem; font-weight:700; color:#fff; }
+  .disc-cov-line { padding:4px 0; display:flex; gap:8px; }
+  .disc-cov-line .ok { color:var(--success); flex-shrink:0; }
+  .disc-cov-line .miss { color:var(--danger); flex-shrink:0; }
+  .disc-cov-line .warn { color:var(--warning); flex-shrink:0; }
+  .disc-cov-text { color:var(--text-muted); }
+  .disc-cov-line.ok-line .disc-cov-text { color:var(--text); }
+
+  .disc-cta { margin-top:16px; padding-top:14px; border-top:1px solid var(--border); display:flex; gap:8px; flex-wrap:wrap; }
+  .disc-cta-btn {
+    padding:6px 14px; border-radius:6px; font-family:'Inter',sans-serif; font-size:.72rem;
+    font-weight:600; border:1px solid var(--border-strong); background:transparent;
+    color:var(--text-muted); cursor:pointer; transition:all .2s;
+  }
+  .disc-cta-btn.primary { background:var(--accent); color:#0a0d1a; border-color:var(--accent); }
+  .disc-cta-btn.primary.disabled { background:var(--text-dim); color:var(--bg); border-color:var(--text-dim); cursor:not-allowed; opacity:.6; }
+  .disc-cta-btn.secondary { color:var(--text); }
+
+  /* ============================== */
+  /* §6 — GOVERNANÇA RACI          */
+  /* ============================== */
+  .raci-wrap {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:14px;
+    padding:0; overflow-x:auto;
+  }
+  .raci-table { width:100%; border-collapse:collapse; min-width:880px; }
+  .raci-table th, .raci-table td { padding:14px 12px; text-align:center; vertical-align:middle; }
+  .raci-table thead th {
+    background:var(--bg-recessed); font-size:.7rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--text-muted); border-bottom:2px solid var(--border-strong);
+  }
+  .raci-table thead th:first-child {
+    text-align:left; padding-left:24px; color:var(--accent);
+    width:240px;
+  }
+  .raci-table thead th:last-child {
+    background:rgba(56,189,248,.06); color:var(--accent);
+    text-align:left; padding-left:18px;
+  }
+  .raci-table tbody tr:not(:last-child) td { border-bottom:1px solid var(--border); }
+  .raci-table tbody tr:hover { background:rgba(56,189,248,.03); }
+  .raci-role-cell {
+    text-align:left !important; padding-left:24px !important;
+  }
+  .raci-role { font-family:'JetBrains Mono',monospace; font-size:.78rem; font-weight:700; color:#fff; display:block; margin-bottom:2px; }
+  .raci-role-desc { font-family:'Inter',sans-serif; font-size:.72rem; color:var(--text-dim); font-weight:400; }
+  .raci-pill {
+    display:inline-flex; align-items:center; justify-content:center;
+    width:28px; height:28px; border-radius:7px;
+    font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:800;
+  }
+  .raci-r { background:rgba(56,189,248,.18); color:var(--accent); }
+  .raci-a { background:rgba(244,114,182,.18); color:var(--accent4); }
+  .raci-c { background:rgba(129,140,248,.18); color:var(--accent2); }
+  .raci-i { background:rgba(74,82,112,.18); color:var(--text-muted); }
+  .raci-empty { color:var(--text-dim); font-size:1.2rem; }
+  .raci-default-cell {
+    text-align:left !important; padding-left:18px !important;
+    background:rgba(56,189,248,.04);
+    font-size:.82rem; color:var(--text); font-weight:500;
+  }
+  .raci-default-cell em { color:var(--text-dim); font-size:.74rem; font-style:normal; font-weight:400; display:block; margin-top:2px; }
+
+  .raci-legend { padding:18px 24px; background:var(--bg-recessed); border-top:1px solid var(--border); display:flex; gap:20px; align-items:center; flex-wrap:wrap; font-size:.76rem; color:var(--text-muted); }
+  .raci-legend strong { color:var(--text); margin-right:4px; }
+
+  .raci-callout {
+    margin-top:32px; padding:24px 28px;
+    background:linear-gradient(135deg, rgba(244,114,182,.06), rgba(56,189,248,.04));
+    border:1px solid var(--border); border-left:4px solid var(--accent4);
+    border-radius:12px;
+  }
+  .raci-callout-title { font-size:.95rem; font-weight:700; color:#fff; margin-bottom:6px; }
+  .raci-callout-text { font-size:.85rem; color:var(--text-muted); line-height:1.65; }
+
+  /* ============================== */
+  /* §7 — ROADMAP TIMELINE         */
+  /* ============================== */
+  .roadmap-wrap { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:32px 28px; overflow-x:auto; }
+  .roadmap-table {
+    width:100%; min-width:880px; border-collapse:separate; border-spacing:0;
+    font-family:'Inter',sans-serif;
+  }
+  .roadmap-table th { padding:0 4px 14px; font-family:'JetBrains Mono',monospace; font-size:.65rem; color:var(--text-dim); text-align:center; font-weight:500; }
+  .roadmap-table th:first-child { text-align:left; padding-left:0; width:160px; }
+  .roadmap-table tbody td { padding:6px 0; vertical-align:middle; }
+  .roadmap-table tbody td:first-child {
+    font-size:.84rem; font-weight:600; color:var(--text); padding-right:18px;
+  }
+  .roadmap-ws-tag {
+    font-family:'JetBrains Mono',monospace; font-size:.62rem; padding:1px 6px; border-radius:4px;
+    margin-right:8px; font-weight:700;
+  }
+  .ws-A { background:rgba(56,189,248,.12); color:var(--l1); }
+  .ws-B { background:rgba(129,140,248,.12); color:var(--l2); }
+  .ws-C { background:rgba(244,114,182,.12); color:var(--l3); }
+  .ws-D { background:rgba(251,146,60,.12); color:var(--l4); }
+  .ws-E { background:rgba(52,211,153,.12); color:var(--l5); }
+  .ws-F { background:rgba(250,204,21,.12); color:var(--accent6); }
+
+  .rm-bar-cell { position:relative; height:28px; }
+  .rm-bar {
+    position:absolute; top:6px; height:16px; border-radius:4px;
+  }
+  .rm-bar.ws-A { background:linear-gradient(90deg, var(--l1), rgba(56,189,248,.5)); }
+  .rm-bar.ws-B { background:linear-gradient(90deg, var(--l2), rgba(129,140,248,.5)); }
+  .rm-bar.ws-C { background:linear-gradient(90deg, var(--l3), rgba(244,114,182,.5)); }
+  .rm-bar.ws-D { background:linear-gradient(90deg, var(--l4), rgba(251,146,60,.5)); }
+  .rm-bar.ws-E { background:linear-gradient(90deg, var(--l5), rgba(52,211,153,.5)); }
+  .rm-bar.ws-F { background:linear-gradient(90deg, var(--accent6), rgba(250,204,21,.5)); }
+
+  .gate-row { padding-top:16px !important; }
+  .gate-marker {
+    position:absolute; top:0; bottom:0; width:1px; background:var(--accent4); opacity:.4;
+  }
+  .gate-marker::before {
+    content:attr(data-gate); position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+    background:var(--accent4); color:#0a0d1a; font-family:'JetBrains Mono',monospace;
+    font-size:.65rem; font-weight:800; padding:2px 6px; border-radius:4px; white-space:nowrap;
+  }
+
+  /* ============================== */
+  /* §8 — CALL TO ACTION FOOTER    */
+  /* ============================== */
+  .cta-section {
+    background:radial-gradient(ellipse at 50% 100%, #151d45 0%, var(--bg) 70%);
+    text-align:center; padding:100px 28px 80px;
+  }
+  .cta-content { max-width:720px; margin:0 auto; }
+  .cta-title {
+    font-size:clamp(1.6rem, 3.5vw, 2.4rem); font-weight:800; color:#fff; letter-spacing:-.025em;
+    margin-bottom:16px; line-height:1.2;
+  }
+  .cta-text { font-size:1rem; color:var(--text-muted); margin-bottom:32px; line-height:1.65; }
+  .cta-meta { display:flex; justify-content:center; gap:28px; font-size:.8rem; color:var(--text-dim); flex-wrap:wrap; }
+  .cta-meta strong { color:var(--text-muted); font-weight:600; }
+
+  /* FOOTER */
+  footer {
+    padding:36px 0; border-top:1px solid var(--border); text-align:center;
+    font-size:.72rem; color:var(--text-dim);
+  }
+  footer .container { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  footer .ft-left { font-family:'JetBrains Mono',monospace; }
+  footer .ft-right { font-family:'JetBrains Mono',monospace; }
+
+  /* ZN signature block */
+  .footer-zn-block {
+    margin-top: 0; padding: 36px 0 12px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    max-width: 1440px; margin-left: auto; margin-right: auto;
+  }
+  .footer-zn-mark {
+    display: inline-block;
+    font-family: var(--zn-display); font-weight: 900;
+    font-size: 2.6rem; letter-spacing: -0.06em; color: var(--zn-lime);
+    line-height: 1; text-decoration: none;
+    text-shadow: 0 0 50px rgba(198,255,0,0.3);
+    transition: opacity 0.2s;
+  }
+  .footer-zn-mark:hover { opacity: 0.75; }
+  .footer-zn-tagline {
+    font-family: var(--zn-body-zn); font-size: 0.78rem;
+    color: var(--text-muted); margin-top: 12px; letter-spacing: 0.02em;
+  }
+  .footer-zn-tagline a { color: var(--zn-lime); text-decoration: none; }
+  .footer-zn-tagline a:hover { opacity: 0.75; }
+
+  /* RESPONSIVE */
+  @media(max-width:768px) {
+    section { padding:70px 0; }
+    .hero { padding:100px 24px 70px; min-height:auto; }
+    .hero-metric .hm-num { font-size:1.8rem; }
+    .hero-metrics { gap:28px; }
+    .container { padding:0 20px; }
+    .blueprint-wrap { padding:28px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="/rba" class="back-link">← Hub RBA</a>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">Grupo <span class="brand-rba">RBA</span> <span class="brand-caption">· SIM</span></div>
+    <div class="nav-right-cluster">
+      <div class="nav-links">
+        <a href="#blueprint">Blueprint</a>
+        <a href="#esquema">Esquema</a>
+        <a href="#camadas">Camadas</a>
+        <a href="#casos">Casos de Uso</a>
+        <a href="#decaimento">Frescor</a>
+        <a href="#disclosure">Disclosure</a>
+        <a href="#governanca">Governança</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+      <a class="nav-zn-corner" href="https://thiagozeni.com" target="_blank" rel="noopener" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <canvas id="ragCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge">RBA Consultoria · MVP Ondas 1+2 · Versão 1.2</div>
+    <h1>SIM</h1>
+    <div class="subtitle">Sistema de Inteligência de Marca</div>
+    <p class="lead">
+      Um vault consultável por IA que unifica voz, tom, visual e estratégia de cada marca,
+      servindo a três casos de uso complementares — operacional, consultivo e analítico —
+      com declaração honesta de confiabilidade baseada nos inputs disponíveis para cada cliente.
+    </p>
+    <div class="hero-metrics">
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent)">3</span>
+        <span class="hm-label">Casos de Uso</span>
+      </div>
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent2)">5</span>
+        <span class="hm-label">Camadas de Input</span>
+      </div>
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent4)">6</span>
+        <span class="hm-label">Workstreams</span>
+      </div>
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent3)">4</span>
+        <span class="hm-label">Gates · 20 sem</span>
+      </div>
+      <div class="hero-metric">
+        <span class="hm-num" style="color:var(--accent5)">5</span>
+        <span class="hm-label">Papéis Abstratos</span>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <span><strong>Janela:</strong> 27/abr → 13/set/2026</span>
+      <span><strong>Marca-piloto:</strong> Harman/Samsung</span>
+      <span><strong>Fallback:</strong> Via Marte → Stihl</span>
+    </div>
+  </div>
+</header>
+
+<!-- §1 — BLUEPRINT -->
+<section id="blueprint">
+  <div class="container-wide">
+    <div class="section-header center fade-in">
+      <div class="section-label">01 · Visão Macro</div>
+      <h2 class="section-title">Blueprint do Sistema</h2>
+      <p class="section-sub">
+        Três zonas funcionais. Inputs alimentam o vault em camadas; o motor de processamento aplica
+        retrieval ponderado, governança e eval; outputs saem em três níveis com Capability Disclosure.
+      </p>
+    </div>
+
+    <div class="blueprint-wrap fade-in">
+      <div class="bp-grid">
+        <!-- ZONA 1: ENTRADA -->
+        <div class="bp-zone entrada">
+          <div class="bp-zone-header">
+            <div class="bp-zone-num">01</div>
+            <div>
+              <div class="bp-zone-title">Entrada</div>
+              <div class="bp-zone-sub">5 camadas · ingestão recorrente</div>
+            </div>
+          </div>
+          <div class="bp-items">
+            <div class="bp-item"><span class="bp-item-tag l1">L1</span>Brand guide, claims, guardrails</div>
+            <div class="bp-item"><span class="bp-item-tag l2">L2</span>Planejamentos, planos de mídia</div>
+            <div class="bp-item"><span class="bp-item-tag l3">L3</span>Peças aprovadas/rejeitadas + posts</div>
+            <div class="bp-item"><span class="bp-item-tag l4">L4</span>Relatórios de performance, GA4</div>
+            <div class="bp-item"><span class="bp-item-tag l5">L5</span>Briefings + feedbacks do cliente</div>
+          </div>
+        </div>
+
+        <!-- ARROW -->
+        <div class="bp-arrow">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 16h22m0 0l-7-7m7 7l-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- ZONA 2: PROCESSAMENTO -->
+        <div class="bp-zone processo">
+          <div class="bp-zone-header">
+            <div class="bp-zone-num">02</div>
+            <div>
+              <div class="bp-zone-title">Processamento</div>
+              <div class="bp-zone-sub">vault + retrieval + governança</div>
+            </div>
+          </div>
+          <div class="bp-items">
+            <div class="bp-item"><span class="bp-item-tag proc">PII</span>Filtragem + sample 20% humano</div>
+            <div class="bp-item"><span class="bp-item-tag proc">META</span>Metadados temporais por chunk</div>
+            <div class="bp-item"><span class="bp-item-tag proc">RAG</span>Retrieval ponderado por recency × qualidade</div>
+            <div class="bp-item"><span class="bp-item-tag proc">GOV</span>Cliffs, evergreen, audit trail</div>
+            <div class="bp-item"><span class="bp-item-tag proc">EVAL</span>LLM-as-judge + threshold duplo</div>
+            <div class="bp-item"><span class="bp-item-tag proc">WALL</span>Isolamento entre marcas concorrentes</div>
+          </div>
+        </div>
+
+        <!-- ARROW -->
+        <div class="bp-arrow">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 16h22m0 0l-7-7m7 7l-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- ZONA 3: SAÍDA -->
+        <div class="bp-zone saida">
+          <div class="bp-zone-header">
+            <div class="bp-zone-num">03</div>
+            <div>
+              <div class="bp-zone-title">Saída</div>
+              <div class="bp-zone-sub">3 casos de uso · disclosure</div>
+            </div>
+          </div>
+          <div class="bp-items">
+            <div class="bp-item"><span class="bp-item-tag uc1">UC1</span>Operacional — gerar/validar peças</div>
+            <div class="bp-item"><span class="bp-item-tag uc2">UC2</span>Consultivo — avaliar propostas</div>
+            <div class="bp-item"><span class="bp-item-tag uc3">UC3</span>Analítico — consultar histórico</div>
+            <div class="bp-item"><span class="bp-item-tag proc">∴</span>Capability Disclosure (cobertura+frescor)</div>
+            <div class="bp-item"><span class="bp-item-tag proc">⊙</span>Human-in-the-loop não-negociável</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-foot">
+        <div class="bp-foot-item"><span class="bp-foot-dot" style="background:var(--accent)"></span>Stack opaca ao cliente — RBA contrata resultado, não tecnologia</div>
+        <div class="bp-foot-item"><span class="bp-foot-dot" style="background:var(--accent2)"></span>IP perpétua da RBA via cláusulas 7.2/7.3</div>
+        <div class="bp-foot-item"><span class="bp-foot-dot" style="background:var(--accent3)"></span>Reversibilidade: markdown canônico</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §1.5 — TECHNICAL BLUEPRINT IMAGE -->
+<section id="esquema" class="bg-recessed">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-label">01.5 · Esquema de Engenharia</div>
+      <h2 class="section-title">Blueprint Técnico Definitivo</h2>
+      <p class="section-sub">
+        Vista única do sistema em estilo drafting. Todos os componentes — entrada, processamento (PII filter, metadata, RAG, governance, eval harness, wall ético) e saída com Capability Disclosure — em uma só composição. Útil como referência consolidada.
+      </p>
+    </div>
+    <div class="tech-bp-wrap fade-in">
+      <div class="tech-bp-frame" onclick="openLightbox()">
+        <img src="assets/sim-blueprint-tecnico.png" alt="Blueprint técnico do Sistema de Inteligência de Marca — vista esquemática completa em estilo de engenharia">
+      </div>
+      <div class="tech-bp-caption">
+        <span>Engineering blueprint · DWG-001 · escala N.T.S. · revisão 1.2 · mai/2026</span>
+        <a href="assets/sim-blueprint-tecnico.png" download="sim-blueprint-tecnico.png">↓ Download alta resolução</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §2 — CAMADAS L1-L5 -->
+<section id="camadas" class="bg-alt">
+  <div class="container-wide">
+    <div class="section-header center fade-in">
+      <div class="section-label">02 · Anatomia da Entrada</div>
+      <h2 class="section-title">Cinco Camadas de Input</h2>
+      <p class="section-sub">
+        Cada camada tem cadência de ingestão, curador e função distintas. L1 é doutrina (raramente muda);
+        L5 é loop com cliente (ingestão recorrente). A combinação L1–L5 determina a confiabilidade que o sistema declara.
+      </p>
+    </div>
+
+    <div class="layers-grid fade-in">
+      <div class="layer-card l1">
+        <div class="layer-tag">L1 · Doutrina</div>
+        <div class="layer-name">Brand Guide & Guardrails</div>
+        <div class="layer-desc">Identidade, claims regulados e termos proibidos da marca. A "constituição" do SIM.</div>
+        <div class="layer-examples">Brand guide PDF · manual de identidade · claims regulatórios · valores fundadores · termos proibidos</div>
+        <div class="layer-meta">
+          <div class="layer-meta-row"><span class="layer-meta-key">Cadência</span><span class="layer-meta-val">One-shot + refresh</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Half-life</span><span class="layer-meta-val">18–24 meses</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Curador</span><span class="layer-meta-val">Estratégico</span></div>
+        </div>
+      </div>
+
+      <div class="layer-card l2">
+        <div class="layer-tag">L2 · Estratégia</div>
+        <div class="layer-name">Planejamentos & Mídia</div>
+        <div class="layer-desc">Planejamentos de marketing, planos de mídia e estratégias de comunicação — atuais e históricos.</div>
+        <div class="layer-examples">Planejamento anual · plano de mídia · estratégia de comunicação · briefings estratégicos · matriz de posicionamento</div>
+        <div class="layer-meta">
+          <div class="layer-meta-row"><span class="layer-meta-key">Cadência</span><span class="layer-meta-val">Por ciclo (ano/temporada)</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Half-life</span><span class="layer-meta-val">9–12 meses</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Curador</span><span class="layer-meta-val">Estratégico</span></div>
+        </div>
+      </div>
+
+      <div class="layer-card l3">
+        <div class="layer-tag">L3 · Output</div>
+        <div class="layer-name">Peças & Corpus Publicado</div>
+        <div class="layer-desc">Peças aprovadas e rejeitadas + corpus de posts publicados nas redes sociais (linguagem corrente).</div>
+        <div class="layer-examples">Peças aprovadas · peças rejeitadas (negativos) · posts orgânicos · KVs · roteiros · copies de mídia</div>
+        <div class="layer-meta">
+          <div class="layer-meta-row"><span class="layer-meta-key">Cadência</span><span class="layer-meta-val">Recorrente (semanal)</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Half-life</span><span class="layer-meta-val">4–6 meses</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Curador</span><span class="layer-meta-val">Operacional</span></div>
+        </div>
+      </div>
+
+      <div class="layer-card l4">
+        <div class="layer-tag">L4 · Performance</div>
+        <div class="layer-name">Relatórios & KPIs</div>
+        <div class="layer-desc">Métricas de mídia paga e orgânica, GA4, social listening e KPIs por campanha.</div>
+        <div class="layer-examples">Meta Ads · Google Ads · GA4 · social listening · benchmarks competitivos · análise de sentimento</div>
+        <div class="layer-meta">
+          <div class="layer-meta-row"><span class="layer-meta-key">Cadência</span><span class="layer-meta-val">Mensal</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Half-life</span><span class="layer-meta-val">6 meses</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Curador</span><span class="layer-meta-val">Operacional</span></div>
+        </div>
+      </div>
+
+      <div class="layer-card l5">
+        <div class="layer-tag">L5 · Loop Cliente</div>
+        <div class="layer-name">Briefings & Feedbacks</div>
+        <div class="layer-desc">Briefings recebidos e feedbacks de aprovação/ajuste/reprovação — preferencialmente via API do sistema de gestão.</div>
+        <div class="layer-examples">Briefings cliente · feedbacks de aprovação · ajustes solicitados · reprovações · preferências do interlocutor</div>
+        <div class="layer-meta">
+          <div class="layer-meta-row"><span class="layer-meta-key">Cadência</span><span class="layer-meta-val">Por evento (recorrente)</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Half-life</span><span class="layer-meta-val">3–4 meses</span></div>
+          <div class="layer-meta-row"><span class="layer-meta-key">Curador</span><span class="layer-meta-val">Operacional + Estratégico</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §3 — CASOS DE USO + MCI HEATMAP -->
+<section id="casos">
+  <div class="container-wide">
+    <div class="section-header center fade-in">
+      <div class="section-label">03 · Outputs do Sistema</div>
+      <h2 class="section-title">Três Casos de Uso · Matriz de Cobertura</h2>
+      <p class="section-sub">
+        O SIM serve a três níveis de output, com inputs requeridos diferentes. A matriz abaixo mostra
+        quais inputs cada caso de uso considera <strong>obrigatórios</strong> ou apenas <em>desejáveis</em>,
+        determinando a confiabilidade declarada para cada cliente.
+      </p>
+    </div>
+
+    <!-- CASOS DE USO -->
+    <div class="cases-grid fade-in">
+      <div class="case-card uc1">
+        <div class="case-num">UC1 ◦ NÍVEL 1</div>
+        <div class="case-title">Operacional</div>
+        <p class="case-summary">Geração e validação de peças/textos. Output passa por revisão humana antes de qualquer envio externo.</p>
+        <div class="case-stats">
+          <div class="case-stat"><span class="case-stat-key">Output</span><span class="case-stat-val">Peça pronta + flags</span></div>
+          <div class="case-stat"><span class="case-stat-key">Inputs Must</span><span class="case-stat-val">L1 + L3</span></div>
+          <div class="case-stat"><span class="case-stat-key">Confiabilidade típica</span><span class="conf-pill alta">Alta</span></div>
+        </div>
+      </div>
+
+      <div class="case-card uc2">
+        <div class="case-num">UC2 ◦ NÍVEL 2</div>
+        <div class="case-title">Consultivo</div>
+        <p class="case-summary">Avaliação de propostas estratégicas — planejamentos, campanhas, planos de mídia, pitches. Insumo para debate.</p>
+        <div class="case-stats">
+          <div class="case-stat"><span class="case-stat-key">Output</span><span class="case-stat-val">Parecer estruturado</span></div>
+          <div class="case-stat"><span class="case-stat-key">Inputs Must</span><span class="case-stat-val">L1 + L2 + L4</span></div>
+          <div class="case-stat"><span class="case-stat-key">Confiabilidade típica</span><span class="conf-pill media">Média</span></div>
+        </div>
+      </div>
+
+      <div class="case-card uc3">
+        <div class="case-num">UC3 ◦ NÍVEL 3</div>
+        <div class="case-title">Analítico</div>
+        <p class="case-summary">Consulta exploratória sobre o histórico — padrões, sazonalidade, lições, gaps. Insumo para discussão estratégica.</p>
+        <div class="case-stats">
+          <div class="case-stat"><span class="case-stat-key">Output</span><span class="case-stat-val">Padrões + hipóteses</span></div>
+          <div class="case-stat"><span class="case-stat-key">Inputs Must</span><span class="case-stat-val">L3 + L4 + L5</span></div>
+          <div class="case-stat"><span class="case-stat-key">Confiabilidade típica</span><span class="conf-pill limitada">Limitada</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MCI HEATMAP -->
+    <div class="mci-wrap fade-in">
+      <table class="mci-table">
+        <thead>
+          <tr>
+            <th>Input</th>
+            <th class="uc1">UC1 · Operacional</th>
+            <th class="uc2">UC2 · Consultivo</th>
+            <th class="uc3">UC3 · Analítico</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l1">L1</span>Brand guide</td>
+              <td><span class="mci-cell mci-must">MUST</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l1">L1</span>Claims regulados / guardrails</td>
+              <td><span class="mci-cell mci-must">MUST</span></td>
+              <td><span class="mci-cell mci-must uc2">MUST</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l2">L2</span>Planejamento atual</td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-must uc2">MUST</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l2">L2</span>Planejamentos históricos</td>
+              <td><span class="mci-cell mci-none">—</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-must uc3">MUST</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l2">L2</span>Plano de mídia atual</td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-must uc2">MUST</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l2">L2</span>Plano de mídia histórico</td>
+              <td><span class="mci-cell mci-none">—</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-must uc3">MUST</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l3">L3</span>Peças aprovadas</td>
+              <td><span class="mci-cell mci-must">MUST</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l3">L3</span>Peças rejeitadas</td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l3">L3</span>Posts publicados (corpus)</td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-must uc3">MUST</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l4">L4</span>Relatórios social media</td>
+              <td><span class="mci-cell mci-none">—</span></td>
+              <td><span class="mci-cell mci-must uc2">MUST</span></td>
+              <td><span class="mci-cell mci-must uc3">MUST</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l4">L4</span>GA4 / KPIs de funil</td>
+              <td><span class="mci-cell mci-none">—</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l5">L5</span>Briefings cliente</td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td></tr>
+          <tr><td class="mci-input-cell"><span class="mci-layer-tag l5">L5</span>Feedbacks aprovação/reprovação</td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-nice">nice</span></td>
+              <td><span class="mci-cell mci-must uc3">MUST</span></td></tr>
+        </tbody>
+      </table>
+      <div class="mci-legend">
+        <span class="mci-legend-item"><span class="mci-cell mci-must" style="width:32px;height:22px;font-size:.6rem">MUST</span> Obrigatório para o caso de uso</span>
+        <span class="mci-legend-item"><span class="mci-cell mci-nice" style="width:32px;height:22px;font-size:.6rem">nice</span> Aumenta confiabilidade</span>
+        <span class="mci-legend-item"><span class="mci-cell mci-none" style="width:32px;height:22px;font-size:.6rem">—</span> Não impacta significativamente</span>
+      </div>
+    </div>
+
+    <!-- FONTES SUBSTITUTAS -->
+    <div class="subst-section fade-in">
+      <div class="subst-title">Fontes substitutas — quando o ideal não está disponível</div>
+      <p class="subst-sub">Se a fonte preferencial falha (ex: cliente sem API de gestão), o sistema aceita substitutas com peso reduzido.</p>
+      <table class="subst-table">
+        <thead>
+          <tr>
+            <th>Input</th>
+            <th>Fonte preferencial</th>
+            <th>Substitutas aceitáveis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Briefings cliente</td>
+            <td>API do sistema de gestão<span class="weight-pill weight-100">100%</span></td>
+            <td>Extração mensal manual<span class="weight-pill weight-70">70%</span> · email anexado<span class="weight-pill weight-60">60%</span> · ata de reunião<span class="weight-pill weight-50">50%</span></td>
+          </tr>
+          <tr>
+            <td>Feedbacks aprovação/reprovação</td>
+            <td>API do sistema de gestão<span class="weight-pill weight-100">100%</span></td>
+            <td>Planilha estruturada<span class="weight-pill weight-70">70%</span> · debrief quinzenal<span class="weight-pill weight-60">60%</span> · thread email<span class="weight-pill weight-50">50%</span></td>
+          </tr>
+          <tr>
+            <td>Performance social</td>
+            <td>API Meta + GA4<span class="weight-pill weight-100">100%</span></td>
+            <td>Relatório mensal RBA<span class="weight-pill weight-80">80%</span> · screenshots Looker<span class="weight-pill weight-60">60%</span></td>
+          </tr>
+          <tr>
+            <td>Posts publicados</td>
+            <td>Meta Graph API<span class="weight-pill weight-100">100%</span></td>
+            <td>Export CSV mensal<span class="weight-pill weight-90">90%</span> · scrape público<span class="weight-pill weight-60">60%</span></td>
+          </tr>
+          <tr>
+            <td>Brand guide</td>
+            <td>PDF oficial assinado<span class="weight-pill weight-100">100%</span></td>
+            <td>Versão de trabalho recente<span class="weight-pill weight-90">90%</span> · reconstituição via entrevista<span class="weight-pill weight-50">50%</span></td>
+          </tr>
+          <tr>
+            <td>Planejamentos</td>
+            <td>Documento oficial<span class="weight-pill weight-100">100%</span></td>
+            <td>Deck de apresentação<span class="weight-pill weight-80">80%</span> · ata de aprovação<span class="weight-pill weight-60">60%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §4 — DECAIMENTO TEMPORAL -->
+<section id="decaimento" class="bg-alt">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-label">04 · Recency-Weighted Retrieval</div>
+      <h2 class="section-title">Material Recente Vale Mais</h2>
+      <p class="section-sub">
+        Cada tipo de ativo tem uma half-life própria. Brand guides decaem em ~2 anos; social media em ~5 meses;
+        valores fundadores nunca decaem. O caso de uso modula o decaimento — operação privilegia o atual,
+        análise olha pra trás.
+      </p>
+    </div>
+
+    <div class="decay-wrap fade-in">
+      <div class="decay-toggle">
+        <button class="decay-btn uc1 active" data-mode="operacional">UC1 · Operacional</button>
+        <button class="decay-btn uc2" data-mode="consultivo">UC2 · Consultivo</button>
+        <button class="decay-btn uc3" data-mode="analitico">UC3 · Analítico</button>
+      </div>
+      <div class="decay-chart-container">
+        <canvas id="decayChart"></canvas>
+      </div>
+      <div class="decay-foot" id="decayFoot">
+        <strong>UC1 · Operacional:</strong> decaimento agressivo. A linguagem da marca em produção é a de hoje, não a de 2 anos atrás. Material antigo permanece como referência mas perde peso na geração de peças.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §5 — CAPABILITY DISCLOSURE UX -->
+<section id="disclosure">
+  <div class="container-wide">
+    <div class="section-header center fade-in">
+      <div class="section-label">05 · UX da Honestidade Epistêmica</div>
+      <h2 class="section-title">Capability Disclosure</h2>
+      <p class="section-sub">
+        Antes de gerar qualquer output dos níveis Consultivo ou Analítico, o sistema declara o que sabe e o que falta.
+        Honestidade epistêmica vira propriedade do produto — três cenários abaixo mostram o comportamento.
+      </p>
+    </div>
+
+    <div class="disclosure-grid fade-in">
+      <!-- CENÁRIO ALTA -->
+      <div class="disc-card">
+        <div class="disc-header alta">
+          <span class="disc-scenario">Cenário 1 · Cobertura plena</span>
+          <span class="disc-score alta">95%</span>
+        </div>
+        <div class="disc-body">
+          <div class="disc-prompt">
+            <div class="disc-prompt-label">Pergunta do usuário · UC2</div>
+            Avalie a proposta de campanha "Verão Conectado" para Harman.
+          </div>
+          <div class="disc-response">
+            <div class="disc-response-header">
+              <span class="disc-status-dot alta"></span>
+              <span class="disc-status-text">Confiabilidade ALTA</span>
+            </div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Brand guide v3 (set/2026)</span></div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Planejamento 2026 atual</span></div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Plano de mídia atual + 2 históricos</span></div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Relatórios social últimos 6 meses</span></div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Feedbacks estruturados via API</span></div>
+            <div class="disc-cta">
+              <button class="disc-cta-btn primary">Gerar parecer</button>
+              <button class="disc-cta-btn">Ajustar escopo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENÁRIO MÉDIA -->
+      <div class="disc-card">
+        <div class="disc-header media">
+          <span class="disc-scenario">Cenário 2 · Lacunas conhecidas</span>
+          <span class="disc-score media">72%</span>
+        </div>
+        <div class="disc-body">
+          <div class="disc-prompt">
+            <div class="disc-prompt-label">Pergunta do usuário · UC2</div>
+            Esta proposta de campanha está alinhada com o posicionamento atual?
+          </div>
+          <div class="disc-response">
+            <div class="disc-response-header">
+              <span class="disc-status-dot media"></span>
+              <span class="disc-status-text">Confiabilidade MÉDIA</span>
+            </div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Brand guide v3 (ago/2026)</span></div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Planejamento 2026 atual</span></div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">6 meses de posts publicados</span></div>
+            <div class="disc-cov-line"><span class="warn">⚠</span><span class="disc-cov-text">Sem planejamentos pré-2025 — pode subestimar ciclos sazonais</span></div>
+            <div class="disc-cov-line"><span class="miss">✗</span><span class="disc-cov-text">Sem feedbacks estruturados — recomendação não calibrada</span></div>
+            <div class="disc-cov-line"><span class="miss">✗</span><span class="disc-cov-text">Sem GA4 — sem visão de funil downstream</span></div>
+            <div class="disc-cta">
+              <button class="disc-cta-btn primary">Prosseguir</button>
+              <button class="disc-cta-btn">Subir confiabilidade</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENÁRIO INSUFICIENTE -->
+      <div class="disc-card">
+        <div class="disc-header insuf">
+          <span class="disc-scenario">Cenário 3 · Recusa transparente</span>
+          <span class="disc-score insuf">38%</span>
+        </div>
+        <div class="disc-body">
+          <div class="disc-prompt">
+            <div class="disc-prompt-label">Pergunta do usuário · UC3</div>
+            Quais padrões de campanha funcionaram melhor nos últimos 3 anos?
+          </div>
+          <div class="disc-response">
+            <div class="disc-response-header">
+              <span class="disc-status-dot insuf"></span>
+              <span class="disc-status-text">Cobertura INSUFICIENTE</span>
+            </div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">Brand guide v1 (cliente novo)</span></div>
+            <div class="disc-cov-line ok-line"><span class="ok">✓</span><span class="disc-cov-text">3 meses de peças aprovadas</span></div>
+            <div class="disc-cov-line"><span class="miss">✗</span><span class="disc-cov-text">Sem histórico — onboarding em mar/2026</span></div>
+            <div class="disc-cov-line"><span class="miss">✗</span><span class="disc-cov-text">Sem corpus social anterior</span></div>
+            <div class="disc-cov-line"><span class="miss">✗</span><span class="disc-cov-text">Sem feedbacks históricos</span></div>
+            <div class="disc-cov-line ok-line" style="margin-top:10px;"><span class="warn">→</span><span class="disc-cov-text" style="color:var(--warning);font-weight:600">Caminho de subida: ingerir 12 meses de social + planejamento 2025 → projeção MÉDIA em ~3 sem</span></div>
+            <div class="disc-cta">
+              <button class="disc-cta-btn primary disabled">Recusar análise</button>
+              <button class="disc-cta-btn">Ver plano de subida</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §6 — GOVERNANÇA RACI -->
+<section id="governanca" class="bg-alt">
+  <div class="container-wide">
+    <div class="section-header center fade-in">
+      <div class="section-label">06 · Framework, Não Alocação</div>
+      <h2 class="section-title">Governança Configurável por Cliente</h2>
+      <p class="section-sub">
+        O SIM define mecanismos com <strong>papéis abstratos</strong>; cada cliente preenche a alocação em workshop
+        de onboarding, conforme seu organograma. A coluna lateral mostra a sugestão default para o piloto Harman.
+      </p>
+    </div>
+
+    <div class="raci-wrap fade-in">
+      <table class="raci-table">
+        <thead>
+          <tr>
+            <th>Papel abstrato</th>
+            <th>Declarar<br>cliff</th>
+            <th>Marcar<br>evergreen</th>
+            <th>Ingerir L1<br>(doutrina)</th>
+            <th>Ingerir L3<br>(peças)</th>
+            <th>Anotar<br>golden set</th>
+            <th>Mudar<br>pesos MCI</th>
+            <th>Aprovar<br>expansão</th>
+            <th>Default · Piloto Harman</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="raci-role-cell">
+              <span class="raci-role">aprovador_governança</span>
+              <span class="raci-role-desc">Decisões estruturais</span>
+            </td>
+            <td><span class="raci-pill raci-a">A</span></td>
+            <td><span class="raci-pill raci-a">A</span></td>
+            <td><span class="raci-pill raci-i">I</span></td>
+            <td><span class="raci-pill raci-i">I</span></td>
+            <td><span class="raci-pill raci-i">I</span></td>
+            <td><span class="raci-pill raci-a">A</span></td>
+            <td><span class="raci-pill raci-a">A</span></td>
+            <td class="raci-default-cell">Gabriel Daudt<em>Head Planejamento RBA</em></td>
+          </tr>
+          <tr>
+            <td class="raci-role-cell">
+              <span class="raci-role">curador_estratégico</span>
+              <span class="raci-role-desc">Cliffs, evergreen, L2/L5</span>
+            </td>
+            <td><span class="raci-pill raci-r">R</span></td>
+            <td><span class="raci-pill raci-r">R</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td class="raci-default-cell">A definir<em>Workshop com cliente</em></td>
+          </tr>
+          <tr>
+            <td class="raci-role-cell">
+              <span class="raci-role">curador_operacional</span>
+              <span class="raci-role-desc">L3, season, campaign</span>
+            </td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-pill raci-r">R</span></td>
+            <td><span class="raci-pill raci-r">R</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-pill raci-i">I</span></td>
+            <td class="raci-default-cell">Carol<em>Redação/Criação</em></td>
+          </tr>
+          <tr>
+            <td class="raci-role-cell">
+              <span class="raci-role">validador_marca</span>
+              <span class="raci-role-desc">Anotação + calibração</span>
+            </td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-pill raci-r">R</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td class="raci-default-cell">Maristela + Roberta<em>Atendimento Harman ON/OFF</em></td>
+          </tr>
+          <tr>
+            <td class="raci-role-cell">
+              <span class="raci-role">interlocutor_cliente</span>
+              <span class="raci-role-desc">Ponte com cliente final</span>
+            </td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-pill raci-c">C</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-empty">—</span></td>
+            <td><span class="raci-pill raci-i">I</span></td>
+            <td class="raci-default-cell">A definir<em>Workshop com cliente</em></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="raci-legend">
+        <span><strong>R</strong> Responsável</span>
+        <span><strong>A</strong> Aprovador</span>
+        <span><strong>C</strong> Consultado</span>
+        <span><strong>I</strong> Informado</span>
+        <span style="color:var(--text-dim);">— não envolvido</span>
+      </div>
+    </div>
+
+    <div class="raci-callout fade-in">
+      <div class="raci-callout-title">Por que papéis abstratos?</div>
+      <p class="raci-callout-text">
+        Clientes têm organogramas diferentes. O que numa marca é "head de marketing" em outra é "diretor de comunicação"
+        ou "gerente de marca". Definir o framework de governança e deixar a alocação por cliente preserva a integridade
+        do sistema sem impor estrutura. Toda declaração (cliff, evergreen, mudança de papel) registra autor, timestamp e
+        justificativa em audit trail rastreável.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §7 — ROADMAP TIMELINE -->
+<section id="roadmap">
+  <div class="container-wide">
+    <div class="section-header center fade-in">
+      <div class="section-label">07 · MVP Ondas 1+2</div>
+      <h2 class="section-title">Roadmap das 20 Semanas</h2>
+      <p class="section-sub">
+        Seis workstreams paralelos · quatro gates de decisão (M1–M4) · janela 27/abr → 13/set/2026.
+        Outcome esperado em M4: SIM operacional na marca-piloto, ≥1 análise consultiva aceita, dashboard de calibração rodando.
+      </p>
+    </div>
+
+    <div class="roadmap-wrap fade-in">
+      <table class="roadmap-table">
+        <thead>
+          <tr>
+            <th>Workstream</th>
+            <th>s1</th><th>s2</th><th>s3</th><th>s4</th><th>s5</th><th>s6</th><th>s7</th><th>s8</th>
+            <th>s9</th><th>s10</th><th>s11</th><th>s12</th><th>s13</th><th>s14</th>
+            <th>s15</th><th>s16</th><th>s17</th><th>s18</th><th>s19</th><th>s20</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="roadmap-ws-tag ws-A">A</span>Procurement &amp; Jurídico</td>
+            <td colspan="20" class="rm-bar-cell"><div class="rm-bar ws-A" style="left:0%; width:40%"></div></td>
+          </tr>
+          <tr>
+            <td><span class="roadmap-ws-tag ws-B">B</span>Coleta &amp; Curadoria (5 cam.)</td>
+            <td colspan="20" class="rm-bar-cell"><div class="rm-bar ws-B" style="left:10%; width:60%"></div></td>
+          </tr>
+          <tr>
+            <td><span class="roadmap-ws-tag ws-C">C</span>Arquitetura Técnica</td>
+            <td colspan="20" class="rm-bar-cell"><div class="rm-bar ws-C" style="left:10%; width:60%"></div></td>
+          </tr>
+          <tr>
+            <td><span class="roadmap-ws-tag ws-D">D</span>Eval Harness &amp; Calibração</td>
+            <td colspan="20" class="rm-bar-cell"><div class="rm-bar ws-D" style="left:35%; width:55%"></div></td>
+          </tr>
+          <tr>
+            <td><span class="roadmap-ws-tag ws-E">E</span>Comercial &amp; Adoção</td>
+            <td colspan="20" class="rm-bar-cell"><div class="rm-bar ws-E" style="left:15%; width:85%"></div></td>
+          </tr>
+          <tr>
+            <td><span class="roadmap-ws-tag ws-F">F</span>Ingestão Recorrente <em style="color:var(--accent6);font-style:normal;font-size:.7rem;font-weight:600;margin-left:4px">novo</em></td>
+            <td colspan="20" class="rm-bar-cell"><div class="rm-bar ws-F" style="left:5%; width:65%"></div></td>
+          </tr>
+          <tr class="gate-row">
+            <td style="color:var(--accent4);font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:700">Gates · M1–M4</td>
+            <td colspan="20" class="rm-bar-cell" style="height:36px">
+              <div class="gate-marker" data-gate="M1" style="left:25%"></div>
+              <div class="gate-marker" data-gate="M2" style="left:40%"></div>
+              <div class="gate-marker" data-gate="M3" style="left:70%"></div>
+              <div class="gate-marker" data-gate="M4" style="left:100%"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-content fade-in">
+    <h2 class="cta-title">Documento canônico</h2>
+    <p class="cta-text">
+      Esta visualização sintetiza a v1.2 do plano. O documento completo, com riscos detalhados,
+      auto-crítica e arquivos referenciados, vive no repositório da consultoria.
+    </p>
+    <div class="cta-meta">
+      <span><strong>Plano:</strong> _info/sim/plano-mvp-ondas-1-2.md · v1.2</span>
+      <span><strong>Template:</strong> procurement-autorizacao-sim-template.md · v1.1</span>
+      <span><strong>Atualizado:</strong> 03/mai/2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-left">RBA Consultoria · Sistema de Inteligência de Marca</div>
+    <div class="ft-right">v1.2 · maio 2026</div>
+  </div>
+  <div class="footer-zn-block">
+    <a class="footer-zn-mark" href="https://thiagozeni.com" target="_blank" rel="noopener" aria-label="Thiago Zeni — consultoria de IA">ZN<span class="dot">.</span></a>
+    <div class="footer-zn-tagline">
+      Construído por Thiago Zeni · Consultoria de IA &amp; Inovação ·
+      <a href="https://thiagozeni.com" target="_blank" rel="noopener">thiagozeni.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox para o blueprint técnico -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">ESC · fechar</button>
+  <img src="assets/sim-blueprint-tecnico.png" alt="Blueprint técnico ampliado">
+</div>
+
+<script>
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Nav on scroll
+  const nav = document.getElementById('nav');
+  const backLink = document.querySelector('.back-link');
+  window.addEventListener('scroll', () => {
+    const showNav = window.scrollY > window.innerHeight * 0.4;
+    nav.classList.toggle('visible', showNav);
+    if (backLink) backLink.classList.toggle('hidden', showNav);
+  });
+
+  // Lightbox para o blueprint técnico
+  function openLightbox() {
+    document.getElementById('lightbox').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+  window.openLightbox = openLightbox;
+  window.closeLightbox = closeLightbox;
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // ===========================
+  // DECAIMENTO TEMPORAL CHART
+  // ===========================
+  const ctx = document.getElementById('decayChart').getContext('2d');
+
+  // Half-lives in months by asset type (v1)
+  const halfLives = {
+    'Brand guide / claims':       21,    // 18-24
+    'Posicionamento estratégico': 15,    // 12-18
+    'Plano de mídia':              7.5,  // 6-9
+    'Social media (linguagem)':    5,    // 4-6
+    'Peças aprovadas':             5,
+    'Feedbacks cliente':           3.5,  // 3-4
+    'Valores fundadores':          0,    // evergreen — pseudo
+  };
+
+  const colors = {
+    'Brand guide / claims':       '#38bdf8',
+    'Posicionamento estratégico': '#818cf8',
+    'Plano de mídia':              '#fb923c',
+    'Social media (linguagem)':    '#f472b6',
+    'Peças aprovadas':             '#facc15',
+    'Feedbacks cliente':           '#34d399',
+    'Valores fundadores':          '#94a3b8',
+  };
+
+  // X axis: 0 to 36 months
+  const months = Array.from({length: 37}, (_, i) => i);
+
+  // Decay function modified by use case
+  function decay(halfLife, mode, monthsArr) {
+    if (halfLife === 0) return monthsArr.map(() => 1.0); // evergreen
+    let multiplier = 1;
+    if (mode === 'consultivo') multiplier = 1.6;  // moderate decay (effective half-life longer)
+    if (mode === 'analitico')  multiplier = 4.5;  // near-flat decay
+    const effective = halfLife * multiplier;
+    return monthsArr.map(m => Math.pow(0.5, m / effective));
+  }
+
+  function buildDatasets(mode) {
+    return Object.entries(halfLives).map(([label, hl]) => ({
+      label: label,
+      data: decay(hl, mode, months),
+      borderColor: colors[label],
+      backgroundColor: colors[label] + '15',
+      borderWidth: hl === 0 ? 2 : 2,
+      borderDash: hl === 0 ? [4, 4] : [],
+      tension: 0.3,
+      pointRadius: 0,
+      pointHoverRadius: 5,
+    }));
+  }
+
+  const decayChart = new Chart(ctx, {
+    type: 'line',
+    data: { labels: months, datasets: buildDatasets('operacional') },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            color: '#8892b0',
+            font: { family: 'Inter', size: 12, weight: 500 },
+            padding: 14,
+            usePointStyle: true,
+            pointStyle: 'line',
+          }
+        },
+        tooltip: {
+          backgroundColor: '#0f1225',
+          titleColor: '#fff',
+          bodyColor: '#e2e8f0',
+          borderColor: '#1e2340',
+          borderWidth: 1,
+          titleFont: { family: 'JetBrains Mono', size: 11, weight: 600 },
+          bodyFont: { family: 'Inter', size: 12 },
+          padding: 12,
+          callbacks: {
+            title: items => `Idade: ${items[0].label} mês${items[0].label==='1'?'':'es'}`,
+            label: ctx => `${ctx.dataset.label}: peso ${(ctx.parsed.y * 100).toFixed(0)}%`,
+          }
+        }
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'Idade do ativo (meses)', color: '#8892b0', font: { family: 'Inter', size: 12, weight: 600 } },
+          grid: { color: 'rgba(30, 35, 64, 0.5)' },
+          ticks: { color: '#4a5270', font: { family: 'JetBrains Mono', size: 11 } }
+        },
+        y: {
+          title: { display: true, text: 'Peso na retrieval', color: '#8892b0', font: { family: 'Inter', size: 12, weight: 600 } },
+          min: 0, max: 1.05,
+          grid: { color: 'rgba(30, 35, 64, 0.5)' },
+          ticks: {
+            color: '#4a5270',
+            font: { family: 'JetBrains Mono', size: 11 },
+            callback: v => (v*100).toFixed(0) + '%'
+          }
+        }
+      }
+    }
+  });
+
+  const decayCopy = {
+    operacional: '<strong>UC1 · Operacional:</strong> decaimento agressivo. A linguagem da marca em produção é a de hoje, não a de 2 anos atrás. Material antigo permanece como referência mas perde peso na geração de peças.',
+    consultivo: '<strong>UC2 · Consultivo:</strong> decaimento moderado + janela histórica obrigatória. Sistema busca alinhamento com o atual mas olha 12–24 meses pra detectar repetição de ideia já testada ou saturação.',
+    analitico: '<strong>UC3 · Analítico:</strong> decaimento quase plano (default v1, configurável por marca). O passado tem aprendizados — Black Friday de 3 anos atrás é tão valiosa quanto a do ano passado para entender ciclo.',
+  };
+
+  document.querySelectorAll('.decay-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.decay-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const mode = btn.dataset.mode;
+      decayChart.data.datasets = buildDatasets(mode);
+      decayChart.update();
+      document.getElementById('decayFoot').innerHTML = decayCopy[mode];
+    });
+  });
+
+  // ===========================
+  // RAG SYSTEM — CANVAS ANIMATION
+  // ===========================
+  // Visual metaphor: vault as a dense constellation of chunks (colored by
+  // layer L1-L5). Multiple query origins emit concentric pulses; chunks the
+  // wavefronts pass through activate, halo, and a fraction send response
+  // particles streaming back to the central "vault core" (LLM). Continuous
+  // organic drift + breathing keeps the system feeling alive.
+
+  (function ragAnimation() {
+    const canvas = document.getElementById('ragCanvas');
+    if (!canvas) return;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    const ctx = canvas.getContext('2d');
+    const layerColors = [
+      { r: 56,  g: 189, b: 248 },  // L1 cyan
+      { r: 129, g: 140, b: 248 },  // L2 violet
+      { r: 244, g: 114, b: 182 },  // L3 pink
+      { r: 251, g: 146, b: 60  },  // L4 orange
+      { r: 52,  g: 211, b: 153 },  // L5 green
+    ];
+    const queryColor    = { r: 56,  g: 189, b: 248 };  // accent cyan
+    const responseColor = { r: 244, g: 114, b: 182 };  // accent4 pink
+    const coreColor     = { r: 255, g: 255, b: 255 };
+
+    // Tunable params — calibrated for "ambient and meditative, not active"
+    const SETTINGS = {
+      densityDivisor: 9500,        // lower = more nodes
+      minNodes: 120,
+      maxNodes: 220,
+      connectDist: 165,            // px
+      connectAlphaBase: 0.10,
+      driftSpeed: 0.18,
+      tetherStrength: 0.0006,
+      friction: 0.994,
+      breatheSpeed: 0.0055,
+      pulseDecay: 0.987,
+      queryInterval: 4200,         // ms between queries
+      multiQueryChance: 0.08,      // chance of 2nd query soon after (rare)
+      ringSpeedMin: 0.55,
+      ringSpeedMax: 0.85,
+      ringThickness: 1.0,
+      ringActivationBand: 7,
+      responseChance: 0.22,
+      responseSpeed: 0.85,
+      responseTrailLen: 10,
+      largeNodeChance: 0.15,
+      coreRadius: 75,
+    };
+
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let nodes = [];
+    let queries = [];
+    let responses = [];
+    let centerX, centerY, viewW, viewH;
+    let lastQueryTime = 0;
+    let lastResponseTime = 0;
+
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      viewW = rect.width;
+      viewH = rect.height;
+      canvas.width = viewW * dpr;
+      canvas.height = viewH * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      centerX = viewW / 2;
+      centerY = viewH / 2;
+      initNodes();
+    }
+
+    function initNodes() {
+      const target = Math.max(
+        SETTINGS.minNodes,
+        Math.min(SETTINGS.maxNodes, Math.floor((viewW * viewH) / SETTINGS.densityDivisor))
+      );
+      nodes = [];
+      for (let i = 0; i < target; i++) {
+        // Distribute mostly across the whole hero, with mild bias away from extreme corners
+        const margin = 40;
+        const x = margin + Math.random() * (viewW - margin * 2);
+        const y = margin + Math.random() * (viewH - margin * 2);
+        const isLarge = Math.random() < SETTINGS.largeNodeChance;
+
+        nodes.push({
+          x, y,
+          baseX: x, baseY: y,
+          vx: (Math.random() - 0.5) * SETTINGS.driftSpeed,
+          vy: (Math.random() - 0.5) * SETTINGS.driftSpeed,
+          layer: Math.floor(Math.random() * 5),
+          radius: isLarge ? (3.2 + Math.random() * 1.8) : (1.4 + Math.random() * 1.4),
+          baseAlpha: isLarge ? (0.55 + Math.random() * 0.25) : (0.32 + Math.random() * 0.3),
+          isLarge,
+          pulse: 0,
+          phase: Math.random() * Math.PI * 2,
+          breatheAmp: 0.018 + Math.random() * 0.028,
+        });
+      }
+    }
+
+    function spawnQuery(originType) {
+      // originType: 'center' | 'edge' | 'random'
+      let ox = centerX, oy = centerY, maxR;
+      if (originType === 'edge') {
+        // Random point on viewport edge
+        const side = Math.floor(Math.random() * 4);
+        if (side === 0)      { ox = Math.random() * viewW; oy = 0; }
+        else if (side === 1) { ox = viewW; oy = Math.random() * viewH; }
+        else if (side === 2) { ox = Math.random() * viewW; oy = viewH; }
+        else                 { ox = 0; oy = Math.random() * viewH; }
+      } else if (originType === 'random') {
+        ox = viewW * (0.15 + Math.random() * 0.7);
+        oy = viewH * (0.2 + Math.random() * 0.6);
+      }
+      // Max radius covers the whole viewport from this origin
+      maxR = Math.max(
+        Math.hypot(ox, oy),
+        Math.hypot(viewW - ox, oy),
+        Math.hypot(ox, viewH - oy),
+        Math.hypot(viewW - ox, viewH - oy)
+      ) + 40;
+
+      queries.push({
+        x: ox, y: oy,
+        originType,
+        radius: 0,
+        maxRadius: maxR,
+        speed: SETTINGS.ringSpeedMin + Math.random() * (SETTINGS.ringSpeedMax - SETTINGS.ringSpeedMin),
+        alpha: 1,
+      });
+    }
+
+    function spawnResponse(originNode) {
+      const dx = centerX - originNode.x;
+      const dy = centerY - originNode.y;
+      const dist = Math.hypot(dx, dy);
+      if (dist < 4) return;  // already at center
+      const speed = SETTINGS.responseSpeed;
+      responses.push({
+        x: originNode.x,
+        y: originNode.y,
+        targetX: centerX,
+        targetY: centerY,
+        vx: (dx / dist) * speed,
+        vy: (dy / dist) * speed,
+        layer: originNode.layer,
+        alpha: 1,
+        radius: originNode.isLarge ? 2.6 : 1.8,
+        trail: [],
+      });
+    }
+
+    function frame(now) {
+      ctx.clearRect(0, 0, viewW, viewH);
+
+      // -------- Spawn queries --------
+      if (now - lastQueryTime > SETTINGS.queryInterval) {
+        // Mix origins: 50% center, 30% random interior, 20% edge
+        const r = Math.random();
+        if (r < 0.5)      spawnQuery('center');
+        else if (r < 0.8) spawnQuery('random');
+        else              spawnQuery('edge');
+        lastQueryTime = now;
+
+        // Rare 2nd query, well-spaced
+        if (Math.random() < SETTINGS.multiQueryChance) {
+          setTimeout(() => spawnQuery(Math.random() < 0.5 ? 'random' : 'edge'),
+                     900 + Math.random() * 800);
+        }
+      }
+
+      // -------- Connections (drawn first, behind nodes) --------
+      const cd = SETTINGS.connectDist;
+      const cd2 = cd * cd;
+      ctx.lineWidth = 0.7;
+      for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+        for (let j = i + 1; j < nodes.length; j++) {
+          const b = nodes[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const d2 = dx*dx + dy*dy;
+          if (d2 < cd2) {
+            const dist = Math.sqrt(d2);
+            const fade = 1 - dist / cd;
+            const pulseBoost = Math.max(a.pulse, b.pulse);
+            const alpha = fade * (SETTINGS.connectAlphaBase + pulseBoost * 0.55);
+            // Use the more pulsed node's color (or blend toward it)
+            const c = a.pulse >= b.pulse ? layerColors[a.layer] : layerColors[b.layer];
+            ctx.strokeStyle = `rgba(${c.r},${c.g},${c.b},${alpha})`;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // -------- Update + draw nodes --------
+      for (const n of nodes) {
+        // Drift
+        n.x += n.vx;
+        n.y += n.vy;
+        // Tether back to base
+        n.vx += (n.baseX - n.x) * SETTINGS.tetherStrength;
+        n.vy += (n.baseY - n.y) * SETTINGS.tetherStrength;
+        // Friction
+        n.vx *= SETTINGS.friction;
+        n.vy *= SETTINGS.friction;
+        // Decay pulse
+        n.pulse *= SETTINGS.pulseDecay;
+        // Breathing
+        n.phase += SETTINGS.breatheSpeed;
+
+        const c = layerColors[n.layer];
+        const breathe = 1 + Math.sin(n.phase) * n.breatheAmp;
+        const glow = n.pulse;
+        const radius = n.radius * breathe * (1 + glow * 0.45);
+        const alpha = Math.min(1, n.baseAlpha + glow * 0.22);
+
+        // Halo (when pulsed or large) — very soft
+        if (glow > 0.06 || n.isLarge) {
+          const haloIntensity = glow * 0.14 + (n.isLarge ? 0.04 : 0);
+          if (haloIntensity > 0.02) {
+            const haloRadius = radius * (n.isLarge ? 3.2 : 4.5);
+            const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, haloRadius);
+            grad.addColorStop(0, `rgba(${c.r},${c.g},${c.b},${haloIntensity})`);
+            grad.addColorStop(1, `rgba(${c.r},${c.g},${c.b},0)`);
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, haloRadius, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        // Core dot
+        ctx.fillStyle = `rgba(${c.r},${c.g},${c.b},${alpha})`;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Bright center for large nodes
+        if (n.isLarge) {
+          ctx.fillStyle = `rgba(255,255,255,${0.5 + glow * 0.4})`;
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, radius * 0.45, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // -------- Query rings --------
+      for (let i = queries.length - 1; i >= 0; i--) {
+        const q = queries[i];
+        q.radius += q.speed;
+        q.alpha = Math.max(0, 1 - q.radius / q.maxRadius);
+
+        if (q.radius > q.maxRadius) {
+          queries.splice(i, 1);
+          continue;
+        }
+
+        // Activate nodes the wavefront passes through (softer pulse)
+        const band = SETTINGS.ringActivationBand;
+        for (const n of nodes) {
+          const d = Math.hypot(n.x - q.x, n.y - q.y);
+          if (Math.abs(d - q.radius) < band) {
+            const wasIdle = n.pulse < 0.15;
+            n.pulse = Math.min(1, n.pulse + 0.26);
+            if (wasIdle && Math.random() < SETTINGS.responseChance && now - lastResponseTime > 40) {
+              spawnResponse(n);
+              lastResponseTime = now;
+            }
+          }
+        }
+
+        // Wide soft ring — gradient feathered ±16px around the wavefront
+        const feather = 16;
+        const inner = Math.max(0, q.radius - feather);
+        const outer = q.radius + feather;
+        const ringGrad = ctx.createRadialGradient(q.x, q.y, inner, q.x, q.y, outer);
+        ringGrad.addColorStop(0,   `rgba(${queryColor.r},${queryColor.g},${queryColor.b},0)`);
+        ringGrad.addColorStop(0.5, `rgba(${queryColor.r},${queryColor.g},${queryColor.b},${q.alpha * 0.30})`);
+        ringGrad.addColorStop(1,   `rgba(${queryColor.r},${queryColor.g},${queryColor.b},0)`);
+        ctx.strokeStyle = ringGrad;
+        ctx.lineWidth = SETTINGS.ringThickness;
+        ctx.beginPath();
+        ctx.arc(q.x, q.y, q.radius, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Subtle origin glow (only first ~70px)
+        if (q.radius < 70) {
+          const og = ctx.createRadialGradient(q.x, q.y, 0, q.x, q.y, 32);
+          og.addColorStop(0, `rgba(${queryColor.r},${queryColor.g},${queryColor.b},${q.alpha * 0.18})`);
+          og.addColorStop(1, `rgba(${queryColor.r},${queryColor.g},${queryColor.b},0)`);
+          ctx.fillStyle = og;
+          ctx.beginPath();
+          ctx.arc(q.x, q.y, 32, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // -------- Response particles (chunks → core) --------
+      for (let i = responses.length - 1; i >= 0; i--) {
+        const r = responses[i];
+        r.trail.push({ x: r.x, y: r.y });
+        if (r.trail.length > SETTINGS.responseTrailLen) r.trail.shift();
+
+        r.x += r.vx;
+        r.y += r.vy;
+
+        const distToTarget = Math.hypot(r.targetX - r.x, r.targetY - r.y);
+        if (distToTarget < 6) {
+          // Reached center — feed core a small flash
+          coreFlashes.push({ start: now, intensity: 0.7 });
+          responses.splice(i, 1);
+          continue;
+        }
+
+        const c = layerColors[r.layer];
+
+        // Trail
+        for (let t = 0; t < r.trail.length; t++) {
+          const pt = r.trail[t];
+          const tProg = t / r.trail.length;
+          const fade = tProg * 0.6;
+          ctx.fillStyle = `rgba(${c.r},${c.g},${c.b},${fade})`;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, r.radius * tProg * 1.1, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // Head
+        ctx.fillStyle = `rgba(${c.r},${c.g},${c.b},${r.alpha})`;
+        ctx.beginPath();
+        ctx.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Bright tip
+        ctx.fillStyle = `rgba(255,255,255,${r.alpha * 0.6})`;
+        ctx.beginPath();
+        ctx.arc(r.x, r.y, r.radius * 0.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // -------- Vault core --------
+      const corePulse = (Math.sin(now * 0.0015) + 1) * 0.5;
+      // Prune old flashes
+      while (coreFlashes.length && now - coreFlashes[0].start > 800) coreFlashes.shift();
+      // Sum flash intensity
+      let flashBoost = 0;
+      for (const f of coreFlashes) {
+        const age = (now - f.start) / 800;
+        flashBoost += f.intensity * (1 - age);
+      }
+      flashBoost = Math.min(1.2, flashBoost);
+
+      const coreR = SETTINGS.coreRadius;
+      const cg = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, coreR);
+      cg.addColorStop(0, `rgba(${responseColor.r},${responseColor.g},${responseColor.b},${0.22 + corePulse * 0.08 + flashBoost * 0.18})`);
+      cg.addColorStop(0.4, `rgba(${responseColor.r},${responseColor.g},${responseColor.b},${0.08 + flashBoost * 0.08})`);
+      cg.addColorStop(1, `rgba(${responseColor.r},${responseColor.g},${responseColor.b},0)`);
+      ctx.fillStyle = cg;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, coreR, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Core inner bright disc
+      const innerR = 4 + flashBoost * 3;
+      ctx.fillStyle = `rgba(255,255,255,${0.55 + corePulse * 0.25 + flashBoost * 0.3})`;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, innerR, 0, Math.PI * 2);
+      ctx.fill();
+
+      requestAnimationFrame(frame);
+    }
+
+    const coreFlashes = [];
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(resize, 200);
+    });
+
+    let rafId;
+    function start() { rafId = requestAnimationFrame(frame); }
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cancelAnimationFrame(rafId);
+      } else {
+        lastQueryTime = performance.now();
+        start();
+      }
+    });
+
+    resize();
+    // Gentle opening — single query well after page settles
+    setTimeout(() => spawnQuery('center'), 800);
+    start();
+  })();
+</script>
+
+</body>
+</html>
