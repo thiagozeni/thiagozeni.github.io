@@ -1,0 +1,3176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EAT+KITCHEN · Mapeamento Estratégico · ZN.</title>
+<meta name="description" content="Apresentação interna · Mapeamento estratégico da marca EAT+KITCHEN · por Thiago Zeni · sócio investidor" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   EAT+KITCHEN · APRESENTAÇÃO INTERNA
+   Identidade real: brutalismo editorial preto puro
+   Tipografia: Sora (display heavy) · Manrope (body)
+   Marca pessoal ZN.: header e signature final (lime accent)
+   ============================================================ */
+
+:root{
+  /* PALETA EAT+KITCHEN (oficial: PB puro) */
+  --black:        #000000;     /* preto puro · fundo dominante */
+  --ink:          #0A0A0A;     /* near black · cards e elevações */
+  --ink-2:        #141414;
+  --ink-3:        #1F1F1F;     /* hover dark */
+  --white:        #FFFFFF;     /* branco puro · títulos, elementos */
+  --paper:        #F5F5F5;     /* off-white para slides claros raros */
+  --g1:           #DADADA;     /* cinza claro */
+  --g2:           #9A9A9A;     /* cinza médio */
+  --g3:           #5A5A5A;     /* cinza escuro */
+  --g4:           #2A2A2A;     /* cinza muito escuro */
+  --line:         rgba(255,255,255,0.10);   /* linhas em fundo preto */
+  --line-soft:    rgba(255,255,255,0.06);
+  --line-dark:    rgba(0,0,0,0.12);          /* linhas em fundo claro */
+  --rust:         #FF4D2E;     /* alerta vermelho */
+
+  /* ZN. (marca pessoal · header + footer) */
+  --zn-lime:      #C6FF00;
+  --zn-text:      #F2F2F2;
+
+  /* Tipografia */
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-body:    'Manrope', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --font-zn:      'Unbounded', sans-serif;
+
+  /* Escalas */
+  --display-xl:  clamp(3rem, 12vw, 14rem);    /* logo EAT+KITCHEN gigante */
+  --display-lg:  clamp(2.4rem, 8vw, 7rem);
+  --display-md:  clamp(1.6rem, 4.6vw, 4rem);
+  --title:       clamp(1.5rem, 4vw, 3.4rem);
+  --h2:          clamp(1.2rem, 2.6vw, 2.2rem);
+  --h3:          clamp(1rem, 1.6vw, 1.35rem);
+  --body:        clamp(.85rem, 1.1vw, 1rem);
+  --small:       clamp(.7rem, .85vw, .8rem);
+  --label:       clamp(.6rem, .72vw, .72rem);
+
+  --pad:         clamp(1.4rem, 3.6vw, 3.6rem);
+  --gap:         clamp(.8rem, 1.8vw, 1.6rem);
+
+  --ease:        cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+html, body{
+  height:100%;
+  overflow-x:hidden;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: var(--body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+a{ color:inherit; text-decoration:none; }
+img,video{ max-width:100%; display:block; }
+button{ font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+/* utilidades */
+.upper{ text-transform: uppercase; }
+.mono{ font-family: var(--font-mono); }
+.tab{ font-feature-settings: "tnum"; }
+.serif{ font-family: var(--font-body); }
+
+/* Logo "EAT+KITCHEN" reusable */
+.brand{
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  display: inline;
+  white-space: nowrap;
+}
+.brand .plus{
+  display: inline-block;
+  margin: 0 0.04em;
+  font-weight: 700;
+  transform: translateY(-0.04em);
+}
+
+/* Tagline reusable "PESSOAS. COMIDA. VERDADE." */
+.tagline{
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .26em;
+  color: var(--white);
+}
+
+/* ===========================================================
+   HEADER FIXO — logo ZN. (assinatura do autor)
+   =========================================================== */
+.app-header{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 1rem clamp(1.2rem, 3vw, 2.4rem);
+  pointer-events:none;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+}
+.app-header > *{ pointer-events:auto; }
+
+.zn-logo{
+  display:inline-flex;
+  align-items:baseline;
+  gap: .12rem;
+  font-family: var(--font-zn);
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -0.08em;
+  color: var(--zn-text);
+  line-height: 1;
+  transition: opacity .3s var(--ease);
+}
+.zn-logo .zn-dot{
+  color: var(--zn-lime);
+  text-shadow: 0 0 14px rgba(198,255,0,.6);
+  animation: lime-pulse 3.4s ease-in-out infinite;
+}
+.zn-logo:hover{ opacity: .75; }
+@keyframes lime-pulse{
+  0%,100%{ text-shadow: 0 0 12px rgba(198,255,0,.5); }
+  50%    { text-shadow: 0 0 24px rgba(198,255,0,.9); }
+}
+
+/* slide-meta no header (right) */
+.deck-meta{
+  display:flex;
+  align-items:center;
+  gap:.85rem;
+  font-family: var(--font-display);
+  font-size: .58rem;
+  color: var(--g2);
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.deck-meta .pulse{
+  width:6px; height:6px;
+  background: var(--zn-lime);
+  border-radius:50%;
+  box-shadow: 0 0 0 4px rgba(198,255,0,.16);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ box-shadow: 0 0 0 4px rgba(198,255,0,.16); }
+  50%    { box-shadow: 0 0 0 9px rgba(198,255,0,.04); }
+}
+
+/* light header sobre slides claros */
+.app-header.on-light{ background: linear-gradient(180deg, rgba(245,245,245,0.85) 0%, rgba(245,245,245,0) 100%); }
+.app-header.on-light .zn-logo{ color: var(--black); }
+.app-header.on-light .deck-meta{ color: var(--g3); }
+
+/* ===========================================================
+   PROGRESS RAIL (right side · vertical pips)
+   =========================================================== */
+.progress-rail{
+  position:fixed;
+  top:50%; right: clamp(.6rem, 1.4vw, 1.2rem);
+  transform: translateY(-50%);
+  z-index:100;
+  display:flex; flex-direction:column; gap: 6px;
+}
+.progress-rail .pip{
+  width: 18px; height: 1px;
+  background: rgba(255,255,255,.18);
+  transition: all .35s var(--ease);
+  cursor:pointer;
+  padding: 0;
+}
+.progress-rail .pip.active{
+  width: 32px; height: 2px;
+  background: var(--white);
+}
+.progress-rail .pip:hover{ background: var(--white); }
+.app-header.on-light ~ * .progress-rail{ /* unused alias */ }
+.on-light-active .progress-rail .pip{ background: rgba(0,0,0,.18); }
+.on-light-active .progress-rail .pip.active{ background: var(--black); }
+
+/* ===========================================================
+   SLIDE BASE
+   =========================================================== */
+.slide{
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  scroll-snap-align: start;
+  display:flex;
+  flex-direction:column;
+  position: relative;
+  padding: var(--pad);
+  padding-top: calc(var(--pad) + 2.4rem);
+  padding-bottom: calc(var(--pad) + 2.6rem);
+  background: var(--black);
+  color: var(--white);
+}
+.slide.light{
+  background: var(--paper);
+  color: var(--black);
+}
+
+/* footer dentro do slide */
+.slide-footer{
+  position:absolute;
+  bottom: clamp(.8rem, 1.8vw, 1.4rem);
+  left: var(--pad);
+  right: var(--pad);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--g3);
+  font-weight: 500;
+  padding-top: .8rem;
+  border-top: 1px solid var(--line);
+  z-index: 5;
+}
+.slide.light .slide-footer{
+  color: var(--g2);
+  border-top-color: var(--line-dark);
+}
+.slide-footer .num{ color: var(--white); font-weight: 600; }
+.slide.light .slide-footer .num{ color: var(--black); }
+
+/* === Pill "Section Name" no canto superior direito (estilo PDF EAT) === */
+.section-pill{
+  position: absolute;
+  top: calc(var(--pad) + 1.4rem);
+  right: var(--pad);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .72rem;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 999px;
+  padding: .55rem 1.4rem;
+  letter-spacing: .04em;
+  z-index: 5;
+}
+.slide.light .section-pill{
+  color: var(--black);
+  border-color: rgba(0,0,0,.4);
+}
+
+/* === Footer giant word (assinatura visual EAT) ===
+   Palavra GIGANTE cortada pela borda inferior */
+.cut-word{
+  position: absolute;
+  left: var(--pad);
+  right: var(--pad);
+  bottom: -.12em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(4rem, 14vw, 16rem);
+  line-height: .82;
+  letter-spacing: -.045em;
+  color: var(--white);
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.slide.light .cut-word{ color: var(--black); }
+
+/* === fix: títulos h2 em slides com pill ganham padding-right
+   para nunca colidirem com o .section-pill (top-right) === */
+.slide h2[style*="--display-md"],
+.slide .h-title,
+.slide .h-display{
+  padding-right: clamp(0rem, 14vw, 15rem);
+}
+@media (max-width: 600px){
+  .slide h2[style*="--display-md"],
+  .slide .h-title,
+  .slide .h-display{ padding-right: 0; }
+}
+
+/* ===========================================================
+   SLIDE 01 — CAPA com vídeo
+   =========================================================== */
+.cover{
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+.cover-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+}
+.cover-bg video{
+  width:100%; height:100%;
+  object-fit: cover;
+  filter: grayscale(35%) brightness(.55) contrast(1.05);
+  transition: opacity 1.2s var(--ease);
+}
+.cover-bg::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,0,0,0.25), rgba(0,0,0,0.65) 80%),
+    linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 25%, transparent 75%, rgba(0,0,0,0.65) 100%);
+}
+.cover-content{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1700px;
+  padding: 0 var(--pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+}
+.cover-eyebrow{
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .68rem;
+  letter-spacing: .35em;
+  color: var(--g1);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cover-eyebrow::before, .cover-eyebrow::after{
+  content:''; display:inline-block;
+  width: 36px; height: 1px;
+  background: var(--g3);
+}
+.cover-brand{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--display-xl);
+  letter-spacing: -.035em;
+  color: var(--white);
+  line-height: .85;
+  font-feature-settings: "ss01";
+}
+.cover-brand .plus{
+  font-weight: 600;
+  display: inline-block;
+  transform: translateY(-0.05em);
+  margin: 0 0.02em;
+}
+.cover-tagline{
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(.85rem, 1.4vw, 1.05rem);
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  color: var(--g1);
+}
+.cover-subtitle{
+  margin-top: .8rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
+  color: var(--g1);
+  letter-spacing: .02em;
+  max-width: 32ch;
+  line-height: 1.4;
+}
+.cover-subtitle strong{ color: var(--white); font-weight: 500; }
+
+.cover-meta{
+  position: absolute;
+  bottom: clamp(1.6rem, 3vw, 2.6rem);
+  left: var(--pad);
+  right: var(--pad);
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 2rem;
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 500;
+}
+.cover-meta strong{ color: var(--white); font-weight: 600; }
+.cover-meta .center{
+  text-align: center;
+}
+.cover-meta .right{
+  text-align: right;
+}
+
+/* ===========================================================
+   SLIDE 02 — SOBRE A APRESENTAÇÃO (preto, 4 cards)
+   =========================================================== */
+.about-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  flex:1;
+  margin-top: clamp(1rem, 2vw, 1.6rem);
+  align-content: stretch;
+}
+.about-card{
+  background: var(--black);
+  padding: clamp(1.2rem, 2vw, 1.8rem);
+  display:flex;
+  flex-direction:column;
+  gap: .9rem;
+  position: relative;
+  transition: background .3s var(--ease);
+}
+.about-card:hover{ background: var(--ink-2); }
+.about-card .ix{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  letter-spacing: -.045em;
+  color: var(--white);
+  line-height: 1;
+}
+.about-card .ix small{
+  display: block;
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 500;
+  margin-top: .6rem;
+}
+.about-card h3{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  letter-spacing: -.018em;
+  color: var(--white);
+}
+.about-card p{
+  font-size: var(--body);
+  color: var(--g1);
+  line-height: 1.55;
+}
+
+/* ===========================================================
+   SLIDE 03 — MANIFESTO (split editorial puro PB)
+   =========================================================== */
+.manifesto{
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+.manifesto .left{
+  padding: var(--pad);
+  padding-top: calc(var(--pad) + 2.4rem);
+  padding-bottom: calc(var(--pad) + 3rem);
+  display:flex; flex-direction:column; justify-content:space-between;
+  position:relative;
+  border-right: 1px solid var(--line);
+}
+.manifesto .left .title{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 7.6vw, 7.6rem);
+  line-height: .9;
+  letter-spacing: -.05em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.manifesto .left .title .word{ display: block; }
+.manifesto .left .title .word:nth-child(2){ color: var(--g2); font-weight: 500; }
+.manifesto .left .title .word:nth-child(3){ color: var(--white); }
+.manifesto .left .signature{
+  font-family: var(--font-display);
+  font-size: .62rem;
+  color: var(--g3);
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.manifesto .right{
+  padding: var(--pad);
+  padding-top: calc(var(--pad) + 2.4rem);
+  padding-bottom: calc(var(--pad) + 3rem);
+  display:flex; flex-direction:column; justify-content:space-between; gap:1.6rem;
+}
+.manifesto .right .label{
+  font-family: var(--font-display);
+  font-size: .62rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+}
+.three-pillars{
+  display:flex; flex-direction:column;
+  border-top: 1px solid var(--line);
+}
+.pillar{
+  padding: clamp(.9rem, 1.7vw, 1.3rem) 0;
+  border-bottom: 1px solid var(--line);
+  display:grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  transition: padding-left .3s var(--ease);
+}
+.pillar:hover{ padding-left: .6rem; }
+.pillar .word{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  letter-spacing:-.03em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.pillar p{
+  font-family: var(--font-body);
+  font-size: .9rem;
+  color: var(--g1);
+  line-height:1.55;
+}
+.manifesto .quote-block{
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: var(--white);
+  line-height: 1.45;
+  letter-spacing: -.005em;
+  border-left: 2px solid var(--white);
+  padding-left: 1.2rem;
+  max-width: 50ch;
+}
+.manifesto .quote-block cite{
+  display:block;
+  margin-top:.7rem;
+  font-style:normal;
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 500;
+}
+
+/* ===========================================================
+   SLIDE 04 — QUEM É (números)
+   =========================================================== */
+.who{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  flex:1;
+  align-items: center;
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+.who-text .display{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--display-md);
+  line-height: .96;
+  letter-spacing: -.04em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.who-text .display .accent{ color: var(--g2); font-weight: 500; }
+.who-text .lead{
+  margin-top: 1.4rem;
+  font-family: var(--font-body);
+  color: var(--g1);
+  line-height: 1.6;
+  max-width: 52ch;
+}
+.who-text .lead strong{ color: var(--white); font-weight: 600; }
+
+.who-stats{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.stat{
+  background: var(--black);
+  padding: clamp(1rem, 1.8vw, 1.4rem);
+  display:flex; flex-direction:column; gap:.4rem;
+  transition: background .3s var(--ease);
+}
+.stat:hover{ background: var(--ink-2); }
+.stat .num{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: -.045em;
+  color: var(--white);
+  line-height:1;
+}
+.stat .num small{
+  font-weight: 400;
+  font-size: .42em;
+  color: var(--g2);
+  letter-spacing: -.01em;
+}
+.stat .label{
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+  margin-top: .3rem;
+}
+.stat .sub{
+  font-family: var(--font-body);
+  font-size: .82rem;
+  color: var(--g1);
+}
+
+/* ===========================================================
+   SLIDE 05 — SÓCIOS
+   =========================================================== */
+.partners{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  flex:1;
+  margin-top: 1.5rem;
+}
+.partner{
+  background: var(--black);
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+  display:flex; flex-direction:column; justify-content: space-between;
+  gap: 1rem;
+  position:relative;
+  transition: background .3s var(--ease);
+}
+.partner:hover{ background: var(--ink-2); }
+.partner .photo{
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: linear-gradient(180deg, var(--g4), var(--ink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.partner .photo .initial{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 5vw, 5rem);
+  color: var(--white);
+  letter-spacing: -.05em;
+  line-height: 1;
+}
+.partner .photo::after{
+  content:'';
+  position:absolute;
+  bottom: 0; left: 0; right: 0; height: 35%;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.5));
+}
+.partner .name{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(.95rem, 1.3vw, 1.15rem);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+}
+.partner .role{
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--g2);
+}
+.partner .bio{
+  font-family: var(--font-body);
+  font-size: .78rem;
+  color: var(--g1);
+  line-height: 1.5;
+  border-top: 1px solid var(--line);
+  padding-top: .7rem;
+}
+.partner.zn-spot .photo .initial{
+  color: var(--zn-lime);
+  text-shadow: 0 0 16px rgba(198,255,0,.4);
+}
+
+/* ===========================================================
+   SLIDE 06 — TIMELINE horizontal
+   =========================================================== */
+.timeline-wrap{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin-top: 1rem;
+}
+.timeline{
+  position:relative;
+  padding: 4rem 0 2rem;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:0; right:0; top: 4rem;
+  height: 1px;
+  background: var(--white);
+}
+.tl-row{
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: clamp(.4rem, .8vw, .8rem);
+  position:relative;
+}
+.tl-node{
+  position:relative;
+  text-align:left;
+  padding-top: 1rem;
+}
+.tl-node::before{
+  content:'';
+  position:absolute;
+  top: -3.55rem;
+  left: 0;
+  width: 1px; height: 1.2rem;
+  background: var(--white);
+}
+.tl-node .yr{
+  position:absolute;
+  top: -3rem;
+  left: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(.95rem, 1.4vw, 1.2rem);
+  color: var(--white);
+  letter-spacing: -.02em;
+}
+.tl-node .label{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .78rem;
+  color: var(--white);
+  line-height: 1.25;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+}
+.tl-node .label small{
+  display: block;
+  font-family: var(--font-display);
+  font-size: .62rem;
+  font-weight: 400;
+  color: var(--g2);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-top: .25rem;
+}
+.tl-node.event::before{ background: var(--rust); }
+.tl-node.event .label{ color: var(--rust); }
+.tl-node.future .yr{ color: var(--g2); }
+.tl-node.future .label{ color: var(--g2); font-weight: 500; }
+.tl-node.future::before{ background: var(--g3); }
+
+/* ===========================================================
+   SLIDE 07 — UNIDADES (5 fotos com tag central)
+   =========================================================== */
+.units-grid{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  flex:1;
+  margin-top: 1.5rem;
+}
+.unit-card{
+  position: relative;
+  background: var(--ink);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s var(--ease);
+}
+.unit-card:hover{ opacity: .92; }
+.unit-card .img{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.55) contrast(1.1) saturate(.8);
+  transition: filter .5s var(--ease), transform .9s var(--ease);
+}
+.unit-card:hover .img{ filter: brightness(.7) contrast(1.05); transform: scale(1.05); }
+.unit-card .tag{
+  position: relative;
+  z-index: 2;
+  background: var(--black);
+  padding: .85rem 1rem .9rem;
+  text-align: center;
+  margin: 0 1rem;
+}
+.unit-card .tag .name{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(.85rem, 1.3vw, 1.15rem);
+  color: var(--white);
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+.unit-card .tag .meta{
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .56rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--g2);
+  margin-top: .35rem;
+}
+.unit-card .yr{
+  position: absolute;
+  top: 1rem; left: 1rem;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--white);
+  letter-spacing: -.02em;
+}
+.unit-card .rating{
+  position: absolute;
+  bottom: 1rem; right: 1rem;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--white);
+  letter-spacing: -.02em;
+}
+.unit-card .rating::before{
+  content: '★ ';
+  color: var(--white);
+  margin-right: .15rem;
+}
+
+/* ===========================================================
+   SLIDE 08 — FATURAMENTO (massivo)
+   =========================================================== */
+.revenue{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.revenue-eyebrow{
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--g1);
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+}
+.revenue-massive{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 11vw, 11rem);
+  line-height: .9;
+  letter-spacing: -.05em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.revenue-massive .arrow{
+  display: inline-block;
+  margin: 0 .15em;
+  font-weight: 400;
+  color: var(--g2);
+}
+.revenue-stats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.revenue-stats .rs{
+  display: flex; flex-direction: column; gap: .4rem;
+  padding-right: 1.5rem;
+}
+.revenue-stats .rs:not(:last-child){ border-right: 1px solid var(--line); padding-right: 1.5rem; }
+.revenue-stats .rs:not(:first-child){ padding-left: 1.5rem; }
+.revenue-stats .v{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  color: var(--white);
+  letter-spacing: -.025em;
+  line-height: 1;
+}
+.revenue-stats .l{
+  font-family: var(--font-body);
+  font-size: .82rem;
+  color: var(--g2);
+  line-height: 1.4;
+}
+
+/* ===========================================================
+   SLIDE 09 — REACH / IMPACTO (split com foto)
+   =========================================================== */
+.reach{
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 0;
+  flex: 1;
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.reach-photo{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.reach-photo::after{
+  content:'';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 50%, var(--black) 100%);
+}
+.reach-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1rem, 2.5vw, 2.5rem);
+  gap: clamp(.7rem, 1.4vw, 1.2rem);
+}
+.reach-row{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding-bottom: clamp(.6rem, 1.2vw, 1rem);
+  border-bottom: 1px solid var(--line);
+}
+.reach-row:last-child{ border-bottom: 0; }
+.reach-row .v{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+  color: var(--white);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.reach-row .v small{
+  font-weight: 400;
+  font-size: .55em;
+  color: var(--g2);
+  letter-spacing: 0;
+}
+.reach-row .desc{
+  font-family: var(--font-body);
+  font-size: .92rem;
+  color: var(--g1);
+  line-height: 1.4;
+}
+.reach-row .desc strong{ color: var(--white); font-weight: 600; }
+
+/* ===========================================================
+   SLIDE 10 — REVIEWS & PRÊMIOS
+   =========================================================== */
+.review-layout{
+  flex:1;
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: 1.4rem;
+}
+.review-units{
+  display:flex; flex-direction:column;
+  border-top: 1px solid var(--line);
+  justify-content: center;
+}
+.review-row{
+  display:grid;
+  grid-template-columns: 1.4fr 4fr auto;
+  align-items: center;
+  gap: 1.2rem;
+  padding: clamp(.5rem, 1vw, .9rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+.review-row .uname{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing:-.018em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.review-row .uname small{
+  display:block;
+  font-family: var(--font-display);
+  font-size: .56rem;
+  letter-spacing: .26em;
+  text-transform:uppercase;
+  color: var(--g2);
+  font-weight: 500;
+  margin-top: 3px;
+}
+.review-row .meter{
+  height: 2px;
+  background: rgba(255,255,255,.1);
+  position: relative;
+  overflow: hidden;
+}
+.review-row .meter span{
+  position:absolute; left:0; top:0; bottom:0;
+  background: var(--white);
+  transition: width 1.4s var(--ease);
+}
+.review-row .score{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--white);
+  letter-spacing: -.025em;
+}
+.review-row .score::before{ content: '★ '; color: var(--white); margin-right: .15rem; font-size: .8em; }
+
+.awards{
+  display: flex; flex-direction: column; gap: 1rem;
+  justify-content: center;
+}
+.awards .lead-num{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  color: var(--white);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.awards .lead-num small{
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .58rem;
+  color: var(--g2);
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  margin-top: .5rem;
+}
+.awards-list{
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line);
+  margin-top: .5rem;
+}
+.award{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.award:last-child{ border-bottom: 0; }
+.award .yr{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--white);
+  letter-spacing: -.02em;
+}
+.award .name{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .92rem;
+  color: var(--white);
+  letter-spacing: -.005em;
+  text-transform: uppercase;
+}
+.award .name small{
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: .72rem;
+  color: var(--g2);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: .15rem;
+}
+
+/* ===========================================================
+   SLIDE 11 — MAPA DE CANAIS (heatmap PB)
+   =========================================================== */
+.heatmap-wrap{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+.heatmap{
+  display:grid;
+  grid-template-columns: 1.7fr repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.heatmap .h-row{ display: contents; }
+.heatmap .cell{
+  background: var(--black);
+  padding: .8rem 1rem;
+  display:flex;
+  align-items:center;
+  gap: .5rem;
+  font-size: .78rem;
+  color: var(--white);
+  transition: background .3s var(--ease);
+}
+.heatmap .h-row:hover .cell{ background: var(--ink-2); }
+.heatmap .cell.hd{
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-size: .56rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  justify-content: center;
+}
+.heatmap .cell.hd.row-hd{ justify-content: flex-start; }
+.heatmap .cell.dot{ justify-content:center; }
+.dot-mark{
+  width: 14px; height: 14px;
+  border-radius:50%;
+  display:inline-block;
+  background: var(--g3);
+}
+.dot-mark.full{ background: var(--white); box-shadow: 0 0 0 4px rgba(255,255,255,.08); }
+.dot-mark.half{ background: var(--g2); box-shadow: 0 0 0 4px rgba(154,154,154,.08); }
+.dot-mark.gap{ background: var(--rust); box-shadow: 0 0 0 4px rgba(255,77,46,.16); }
+.dot-mark.empty{ background: transparent; border: 1.5px dashed var(--g3); }
+.heatmap .cell.label{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: -.018em;
+  color: var(--white);
+  text-transform: uppercase;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.heatmap .cell.label small{
+  display:block;
+  font-family: var(--font-body);
+  font-size:.7rem;
+  color: var(--g2);
+  letter-spacing:0;
+  text-transform:none;
+  margin-top: .15rem;
+  font-weight: 400;
+}
+.legend-row{
+  display:flex;
+  gap: 1.4rem;
+  flex-wrap:wrap;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: .56rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+}
+.legend-row span{ display:inline-flex; align-items:center; gap:.5rem; }
+
+/* ===========================================================
+   SLIDE 12 — CANAIS PRÓPRIOS (status site)
+   =========================================================== */
+.routes{
+  flex:1;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 1.4rem;
+}
+.routes-card{
+  background: var(--black);
+  padding: clamp(1.2rem, 2vw, 1.8rem);
+  display:flex; flex-direction:column; gap: 1rem;
+}
+.routes-card.bad{ background: var(--ink-2); }
+.routes-card .head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .7rem;
+}
+.routes-card .head h3{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -.02em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.routes-card .head .count{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.4rem;
+  letter-spacing: -.045em;
+  line-height: 1;
+  color: var(--white);
+}
+.routes-card.bad .head .count{ color: var(--rust); }
+.routes-card .list{
+  display:flex; flex-direction:column;
+}
+.routes-card .row{
+  display:flex; justify-content:space-between; align-items:center;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  padding: .42rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+.routes-card .row:last-child{ border-bottom: 0; }
+.routes-card .row code{
+  font-family: var(--font-mono);
+  color: var(--white);
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+.routes-card .badge{
+  font-family: var(--font-display);
+  font-size: .55rem;
+  letter-spacing: .26em;
+  text-transform:uppercase;
+  font-weight:600;
+  padding: .18rem .5rem;
+  border: 1px solid var(--line);
+  background: var(--black);
+  color: var(--g1);
+}
+.badge.bad{
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+.routes-card .note{
+  margin-top: auto;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  color: var(--rust);
+  border-top: 1px solid var(--line);
+  padding-top: .8rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ===========================================================
+   SLIDE 13 — REDES SOCIAIS (bento)
+   =========================================================== */
+.socials{
+  flex:1;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 1.4rem;
+}
+.social{
+  background: var(--black);
+  padding: clamp(.95rem, 1.6vw, 1.3rem);
+  display:flex; flex-direction:column; justify-content:space-between;
+  gap: .6rem;
+  position:relative;
+  min-height: 0;
+  transition: background .3s var(--ease);
+}
+.social:hover{ background: var(--ink-2); }
+.social.lg{
+  grid-column: span 2; grid-row: span 2;
+  background: var(--white); color: var(--black);
+}
+.social.lg:hover{ background: var(--paper); }
+.social .net{
+  font-family: var(--font-display);
+  font-size: .54rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--g2);
+}
+.social.lg .net{ color: var(--g3); }
+.social .handle{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(.95rem, 1.3vw, 1.15rem);
+  color: var(--white);
+  letter-spacing: -.018em;
+  text-transform: uppercase;
+}
+.social.lg .handle{ color: var(--black); font-size: clamp(1.2rem, 1.8vw, 1.6rem); }
+.social .num{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  letter-spacing: -.045em;
+  color: var(--white);
+  line-height: .95;
+}
+.social.lg .num{
+  color: var(--black);
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+}
+.social .num small{
+  display: block;
+  font-size: .3em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--g2);
+  margin-top: .4rem;
+}
+.social.lg .num small{ color: var(--g3); }
+.social .gap-mark{
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--rust);
+  line-height: 1;
+}
+.social .gap-text{
+  font-size: .58rem;
+  font-family: var(--font-display);
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 700;
+}
+.social .desc{
+  font-family: var(--font-body);
+  font-size: .76rem;
+  color: var(--g1);
+  line-height: 1.45;
+}
+.social.lg .desc{ color: var(--g3); }
+
+/* mini stats no card grande Instagram */
+.social.lg .reach-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--line-dark);
+  padding-top: 1rem;
+  margin-top: .6rem;
+}
+.social.lg .rs{ display: flex; flex-direction: column; gap: .15rem; }
+.social.lg .rs .v{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--black);
+  letter-spacing: -.025em;
+  line-height: 1;
+}
+.social.lg .rs .l{
+  font-family: var(--font-display);
+  font-size: .54rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--g3);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ===========================================================
+   SLIDE 14 — MARKETPLACES
+   =========================================================== */
+.marketplaces{
+  flex:1;
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 1.4rem;
+}
+.tripadvisor-card{
+  background: var(--white);
+  color: var(--black);
+  padding: clamp(1.2rem, 2.2vw, 1.8rem);
+  display:flex; flex-direction:column; gap: 1rem;
+  position:relative;
+  overflow:hidden;
+  justify-content: space-between;
+}
+.tripadvisor-card .net{
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--g3);
+  font-weight: 700;
+}
+.tripadvisor-card .big{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  letter-spacing: -.045em;
+  color: var(--black);
+  line-height:.95;
+}
+.tripadvisor-card .label{
+  font-family: var(--font-body);
+  font-size: .9rem;
+  color: var(--g3);
+  line-height: 1.4;
+}
+.ta-stats{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  border-top: 1px solid rgba(0,0,0,.16);
+  padding-top: 1.2rem;
+}
+.ta-stats .ts{ display:flex; flex-direction:column; gap:.3rem; }
+.ta-stats .ts .v{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  color: var(--black);
+  letter-spacing: -.025em;
+}
+.ta-stats .ts .l{
+  font-family: var(--font-display);
+  font-size: .54rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--g3);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.other-channels{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  align-content: stretch;
+}
+.oc{
+  background: var(--black);
+  padding: clamp(.85rem, 1.4vw, 1.15rem);
+  display:flex; flex-direction:column; gap: .35rem;
+  transition: background .3s var(--ease);
+}
+.oc:hover{ background: var(--ink-2); }
+.oc .net{
+  font-family: var(--font-display);
+  font-size: .54rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+}
+.oc .name{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -.018em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.oc .status{
+  font-family: var(--font-body);
+  font-size: .76rem;
+  color: var(--g1);
+  line-height: 1.4;
+}
+.oc.warn .status{ color: var(--rust); font-weight: 500; }
+
+/* ===========================================================
+   SLIDE 15 — IMPRENSA
+   =========================================================== */
+.press-grid{
+  flex:1;
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 1.4rem;
+}
+.press-tier{
+  background: var(--black);
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+  display:flex; flex-direction:column; gap: .8rem;
+}
+.press-tier.gap-tier{ background: var(--ink-2); }
+.press-tier .head{
+  display:flex; align-items:baseline; gap: .8rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .7rem;
+}
+.press-tier .head .yr{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -.025em;
+  color: var(--white);
+  line-height: 1;
+}
+.press-tier.gap-tier .head .yr{ color: var(--rust); }
+.press-tier .head h3{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -.02em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.press-list{ display:flex; flex-direction:column; }
+.press-row{
+  display:flex; justify-content:space-between; align-items:baseline;
+  padding: .42rem 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: .82rem;
+  gap: 1rem;
+}
+.press-row:last-child{ border-bottom: 0; }
+.press-row .src{
+  color: var(--white);
+  font-weight: 600;
+  font-family: var(--font-display);
+  letter-spacing: -.005em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+.press-row .typ{
+  font-family: var(--font-display);
+  font-size: .54rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.press-tier .note{
+  margin-top: auto;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  color: var(--rust);
+  border-top: 1px solid var(--line);
+  padding-top: .8rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* ===========================================================
+   SLIDE 16 — CORPORATE
+   =========================================================== */
+.corp{
+  flex:1;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 1.4rem;
+}
+.cnpj-card{
+  background: var(--black);
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+  display:flex; flex-direction:column; gap: .55rem;
+  position:relative;
+}
+.cnpj-card .num{
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--white);
+  letter-spacing: -.02em;
+  margin-bottom: .15rem;
+}
+.cnpj-card .corp-name{
+  font-family: var(--font-display);
+  font-size: .62rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .8rem;
+  margin-bottom: .3rem;
+  line-height: 1.5;
+}
+.cnpj-card .row{
+  display:grid;
+  grid-template-columns: 110px 1fr;
+  gap: .8rem;
+  font-size: .82rem;
+  padding: .35rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+.cnpj-card .row:last-of-type{ border-bottom: 0; }
+.cnpj-card .row .k{
+  font-family: var(--font-display);
+  font-size: .54rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+  padding-top: 2px;
+}
+.cnpj-card .row .v{ color: var(--white); font-weight: 500; }
+.cnpj-card .alert{
+  margin-top: auto;
+  background: var(--white);
+  color: var(--black);
+  padding: .85rem 1rem;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.cnpj-card .alert strong{ color: var(--black); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .78rem; }
+
+/* ===========================================================
+   SLIDE 17 — 5 ALERTAS
+   =========================================================== */
+.alerts-grid{
+  flex:1;
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 1.4rem;
+}
+.alert-card{
+  background: var(--black);
+  padding: clamp(.95rem, 1.6vw, 1.3rem);
+  display:flex; flex-direction:column; gap: .7rem;
+  position:relative;
+  transition: background .3s var(--ease);
+}
+.alert-card:hover{ background: var(--ink-2); }
+.alert-card .ix{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  letter-spacing:-.045em;
+  color: var(--white);
+  line-height:1;
+}
+.alert-card h4{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(.95rem, 1.4vw, 1.1rem);
+  letter-spacing: -.02em;
+  color: var(--white);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.alert-card p{
+  font-family: var(--font-body);
+  font-size: .76rem;
+  color: var(--g1);
+  line-height: 1.5;
+}
+.alert-card .imp{
+  margin-top: auto;
+  font-family: var(--font-display);
+  font-size: .55rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 700;
+  padding-top: .55rem;
+  border-top: 2px solid var(--white);
+}
+
+/* ===========================================================
+   SLIDE 18 — ROADMAP / 10 RODADAS
+   =========================================================== */
+.roadmap{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.rd-grid{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  flex: 1;
+}
+.rd-card{
+  background: var(--black);
+  padding: clamp(.7rem, 1.3vw, 1rem);
+  display:flex; flex-direction:column; gap: .45rem;
+  position:relative;
+  transition: background .3s var(--ease);
+}
+.rd-card:hover{ background: var(--ink-2); }
+.rd-card.priority{ background: var(--white); color: var(--black); }
+.rd-card.priority:hover{ background: var(--paper); }
+.rd-card .nx{
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  letter-spacing:-.04em;
+  color: var(--white);
+  line-height: 1;
+}
+.rd-card.priority .nx{ font-weight: 800; color: var(--black); }
+.rd-card h5{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing:-.018em;
+  color: var(--white);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.rd-card.priority h5{ color: var(--black); }
+.rd-card .meta{
+  display:flex;
+  gap: .35rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+.rd-card .tag{
+  font-family: var(--font-display);
+  font-size: .5rem;
+  letter-spacing: .22em;
+  text-transform:uppercase;
+  font-weight: 700;
+  padding: .2rem .42rem;
+  border: 1px solid var(--line);
+  color: var(--g1);
+}
+.rd-card.priority .tag{ border-color: var(--line-dark); color: var(--g3); }
+.rd-card .tag.pub{ }
+.rd-card .tag.int{ background: var(--white); color: var(--black); border-color: var(--white); }
+.rd-card.priority .tag.int{ background: var(--black); color: var(--white); border-color: var(--black); }
+.rd-card .tag.hib{ background: rgba(255,255,255,.08); }
+.rd-card .tag.t{ opacity: .7; }
+
+/* ===========================================================
+   SLIDE 19 — ENCERRAMENTO + ZN. SIGNATURE
+   =========================================================== */
+.signoff{
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.signoff .top{
+  padding: var(--pad);
+  padding-top: calc(var(--pad) + 2.4rem);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap: clamp(.8rem, 1.4vw, 1.2rem);
+  position:relative;
+  overflow:hidden;
+}
+.signoff .top::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(198,255,0,.10), transparent 45%),
+    radial-gradient(circle at 5% 100%, rgba(198,255,0,.04), transparent 50%);
+  pointer-events:none;
+}
+.signoff .top > *{ position:relative; z-index:1; }
+.signoff .kicker{
+  font-family: var(--font-display);
+  font-size: .68rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--g2);
+  font-weight: 600;
+}
+.signoff h2{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 4.6vw, 4rem);
+  line-height: .98;
+  letter-spacing: -.04em;
+  color: var(--white);
+  max-width: 28ch;
+  text-transform: uppercase;
+  padding-right: clamp(0rem, 14vw, 15rem);
+}
+.signoff h2 strong{ color: var(--zn-lime); font-weight: 800; }
+.signoff h2 .light{ font-weight: 500; color: var(--g2); display: block; }
+.signoff .lead{
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: var(--g1);
+  max-width: 50ch;
+  line-height: 1.55;
+}
+.signoff .lead em{ color: var(--zn-lime); font-style: normal; font-weight: 600; }
+.signoff .next-steps{
+  margin-top: .6rem;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  max-width: 1100px;
+}
+.signoff .ns{
+  display:flex; flex-direction:column; gap: .4rem;
+  border-top: 1px solid rgba(198,255,0,.4);
+  padding-top: .9rem;
+}
+.signoff .ns .num{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--zn-lime);
+  letter-spacing: -.025em;
+}
+.signoff .ns .lbl{
+  font-family: var(--font-body);
+  font-size: .85rem;
+  color: var(--g1);
+  line-height:1.5;
+}
+
+/* ZN. signature block — assinatura final */
+.zn-signature{
+  background: var(--black);
+  color: var(--zn-text);
+  padding: clamp(1.4rem, 3vw, 2rem) var(--pad);
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  border-top: 1px solid rgba(198,255,0,.35);
+  position:relative;
+}
+.zn-signature::before{
+  content:'';
+  position:absolute;
+  left: var(--pad); top: -1px;
+  width: 64px; height: 1px;
+  background: var(--zn-lime);
+  box-shadow: 0 0 14px rgba(198,255,0,.6);
+}
+.zn-signature .zn-block{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.zn-signature .zn-big{
+  font-family: var(--font-zn);
+  font-weight: 900;
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.08em;
+  color: var(--zn-text);
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+}
+.zn-signature .zn-big .zn-dot{
+  color: var(--zn-lime);
+  text-shadow: 0 0 24px rgba(198,255,0,.7);
+}
+.zn-signature .zn-meta{
+  font-family: var(--font-display);
+  display:flex; flex-direction:column; gap: 2px;
+}
+.zn-signature .zn-meta strong{
+  color: var(--zn-text);
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+}
+.zn-signature .zn-meta span{
+  color: rgba(242,242,242,.55);
+  font-size: .65rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.zn-signature .center-line{
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(242,242,242,.4);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.zn-signature .center-line strong{
+  color: var(--zn-text);
+  font-weight: 700;
+}
+.zn-signature .right-info{
+  text-align: right;
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: rgba(242,242,242,.4);
+  line-height: 1.7;
+  font-weight: 500;
+}
+.zn-signature .right-info strong{ color: var(--zn-text); font-weight: 700; }
+
+/* ===========================================================
+   ANIMAÇÕES — reveal on scroll/snap
+   =========================================================== */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .85s var(--ease), transform .85s var(--ease);
+}
+.reveal.in{
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal[data-delay="1"]{ transition-delay: .08s; }
+.reveal[data-delay="2"]{ transition-delay: .16s; }
+.reveal[data-delay="3"]{ transition-delay: .24s; }
+.reveal[data-delay="4"]{ transition-delay: .32s; }
+.reveal[data-delay="5"]{ transition-delay: .40s; }
+.reveal[data-delay="6"]{ transition-delay: .48s; }
+.reveal[data-delay="7"]{ transition-delay: .56s; }
+.reveal[data-delay="8"]{ transition-delay: .64s; }
+
+/* fade in big numbers */
+.reveal-num{
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 1s var(--ease), filter 1s var(--ease);
+}
+.reveal-num.in{
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* ===========================================================
+   RESPONSIVO
+   =========================================================== */
+@media (max-height: 800px){
+  :root{
+    --display-xl: clamp(2.4rem, 9vw, 8rem);
+    --display-lg: clamp(2rem, 6.4vw, 5rem);
+    --display-md: clamp(1.4rem, 4vw, 3.2rem);
+    --title: clamp(1.3rem, 3.4vw, 2.6rem);
+    --pad: clamp(1.1rem, 2.6vw, 2.2rem);
+  }
+  .slide{ padding-top: 3.4rem; padding-bottom: 3.4rem; }
+}
+@media (max-height: 640px){
+  :root{
+    --display-xl: clamp(1.8rem, 7vw, 5rem);
+    --display-md: clamp(1.2rem, 3.6vw, 2.4rem);
+    --title: clamp(1.1rem, 3vw, 2rem);
+    --body: clamp(.74rem, 1.1vw, .92rem);
+    --pad: .9rem;
+  }
+}
+
+@media (max-width: 980px){
+  .who, .marketplaces, .corp, .press-grid, .routes, .reach{
+    grid-template-columns: 1fr;
+  }
+  .reach{ grid-template-rows: auto auto; }
+  .reach-photo{ aspect-ratio: 16/8; }
+  .manifesto{ grid-template-columns: 1fr; }
+  .manifesto .left{ border-right: 0; border-bottom: 1px solid var(--line); }
+  .pillar{ grid-template-columns: 1fr; }
+  .about-grid, .alerts-grid, .rd-grid, .partners, .units-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .socials{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .social.lg{ grid-column: span 2; grid-row: auto; }
+  .heatmap{
+    grid-template-columns: 2fr repeat(4, 1fr);
+    font-size: .62rem;
+  }
+  .timeline .tl-row{ grid-template-columns: repeat(4, 1fr); row-gap: 3rem; }
+  .revenue-stats{ grid-template-columns: 1fr; gap: 1rem; }
+  .revenue-stats .rs{ border-right: 0 !important; padding-right: 0 !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+}
+
+@media (max-width: 600px){
+  .deck-meta{ display:none; }
+  .alerts-grid, .rd-grid, .units-grid{ grid-template-columns: 1fr 1fr; }
+  .who-stats{ grid-template-columns: 1fr 1fr; }
+  .partners{ grid-template-columns: 1fr 1fr; }
+  .ta-stats{ grid-template-columns: 1fr 1fr; }
+  .signoff .next-steps{ grid-template-columns: 1fr; }
+  .zn-signature{ grid-template-columns: 1fr; text-align:left; }
+  .zn-signature .right-info, .zn-signature .center-line{ text-align:left; }
+  .cover-meta{ grid-template-columns: 1fr; }
+  .cover-meta .center, .cover-meta .right{ text-align: left; }
+  .section-pill{ display: none; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    transition-duration:.2s!important;
+  }
+  .reveal, .reveal-num{ opacity:1; transform:none; filter: none; }
+  html{ scroll-behavior: auto; }
+  .cover-bg video{ display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="app-header">
+  <a class="zn-logo" href="#cover" aria-label="ZN. — Thiago Zeni">
+    <span>ZN</span><span class="zn-dot">.</span>
+  </a>
+  <div class="deck-meta">
+    <span class="pulse" aria-hidden="true"></span>
+    <span><span class="brand"><strong>EAT<span class="plus">+</span>KITCHEN</strong></span> · MAPEAMENTO ESTRATÉGICO · V1 · 2026</span>
+  </div>
+</header>
+
+<!-- ========== PROGRESS RAIL ========== -->
+<nav class="progress-rail" aria-label="Navegação de slides"></nav>
+
+<main>
+
+  <!-- ============== SLIDE 01 — CAPA com vídeo ============== -->
+  <section class="slide cover" id="cover" data-name="Capa" data-theme="dark">
+    <div class="cover-bg">
+      <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/video/cover.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="cover-content">
+      <div class="cover-eyebrow reveal">Apresentação interna · 2026</div>
+
+      <h1 class="cover-brand reveal" data-delay="1">
+        EAT<span class="plus">+</span>KITCHEN
+      </h1>
+
+      <div class="cover-tagline reveal" data-delay="2">PESSOAS. COMIDA. VERDADE.</div>
+
+      <p class="cover-subtitle reveal" data-delay="3">
+        <strong>Mapeamento estratégico</strong><br/>
+        da nossa marca · canais · estrutura.
+      </p>
+    </div>
+
+    <div class="cover-meta">
+      <div class="reveal" data-delay="4">Por <strong>Thiago Zeni</strong> · Sócio investidor</div>
+      <div class="center reveal" data-delay="5">v1.0</div>
+      <div class="right reveal" data-delay="5">Maio · 2026</div>
+    </div>
+  </section>
+
+  <!-- ============== SLIDE 02 — SOBRE A APRESENTAÇÃO ============== -->
+  <section class="slide" id="sobre" data-name="Sobre" data-theme="dark">
+    <div class="section-pill reveal">Sobre</div>
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Uma fotografia da marca<br/>
+        para apoiar decisões<br/>
+        nos próximos <span style="color: var(--g2); font-weight: 500;">12 meses</span>.
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card reveal" data-delay="2">
+        <span class="ix">01<small>Propósito</small></span>
+        <h3>Para quê serve</h3>
+        <p>Consolidar tudo que existe publicamente sobre a EAT+KITCHEN — quem somos, onde estamos, o que falam de nós e onde há lacunas para fechar antes da próxima fase.</p>
+      </div>
+      <div class="about-card reveal" data-delay="3">
+        <span class="ix">02<small>Escopo</small></span>
+        <h3>O que cobre</h3>
+        <p>Identidade, sócios, 5 unidades, métricas (R$73M acumulado, 917k atendidos), 1.000+ reviews, mapa completo de canais e estrutura corporativa.</p>
+      </div>
+      <div class="about-card reveal" data-delay="4">
+        <span class="ix">03<small>Método</small></span>
+        <h3>Como foi feito</h3>
+        <p>Pesquisa em fontes públicas, materiais oficiais da empresa e documentos cedidos. Sem dados financeiros internos confidenciais.</p>
+      </div>
+      <div class="about-card reveal" data-delay="5">
+        <span class="ix">04<small>Próximo</small></span>
+        <h3>Próximo passo</h3>
+        <p>5 alertas que merecem atenção imediata + 10 frentes priorizadas para aprofundar — incluindo o que precisamos pedir internamente para fechar o quadro.</p>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">02 / 19</span><span>Escopo &amp; método</span></div>
+  </section>
+
+  <!-- ============== SLIDE 03 — MANIFESTO ============== -->
+  <section class="slide manifesto" id="manifesto" data-name="Manifesto" data-theme="dark">
+    <div class="section-pill reveal">Manifesto</div>
+
+    <div class="left">
+      <div>
+        <span class="kicker reveal" style="font-family: var(--font-display); font-weight: 600; font-size: .62rem; letter-spacing: .3em; text-transform: uppercase; color: var(--g2);">Nossa essência</span>
+        <h2 class="title" style="margin-top: 1.2rem;">
+          <span class="word reveal" data-delay="1">Pessoas.</span>
+          <span class="word reveal" data-delay="2">Comida.</span>
+          <span class="word reveal" data-delay="3">Verdade.</span>
+        </h2>
+      </div>
+      <div class="signature reveal" data-delay="5">EAT+KITCHEN · desde 2019</div>
+    </div>
+
+    <div class="right">
+      <span class="label reveal">Os três pilares que sustentam tudo</span>
+
+      <div class="three-pillars">
+        <div class="pillar reveal" data-delay="1">
+          <span class="word">Pessoas</span>
+          <p>Família que virou marca. Time que virou família estendida. Cliente que vira parte da história.</p>
+        </div>
+        <div class="pillar reveal" data-delay="2">
+          <span class="word">Comida</span>
+          <p>Limpa, sem aditivos, com produtos orgânicos sempre que possível. Inspiração mediterrânea com alma brasileira.</p>
+        </div>
+        <div class="pillar reveal" data-delay="3">
+          <span class="word">Verdade</span>
+          <p>Servimos só o que ofereceríamos à nossa família. Sem sabores artificiais. Sem atalhos.</p>
+        </div>
+      </div>
+
+      <blockquote class="quote-block reveal" data-delay="4">
+        “Para nós, comida é transformação, é cura. Sem sabores artificiais, conservantes ou algo que você não serviria para sua família.”
+        <cite>— Manifesto EAT+KITCHEN</cite>
+      </blockquote>
+    </div>
+
+    <div class="slide-footer"><span class="num">03 / 19</span><span>Manifesto</span></div>
+  </section>
+
+  <!-- ============== SLIDE 04 — QUEM É ============== -->
+  <section class="slide" id="quem" data-name="Quem somos" data-theme="dark">
+    <div class="section-pill reveal">Quem somos</div>
+
+    <div class="who">
+      <div class="who-text">
+        <h2 class="display reveal" data-delay="1">
+          Uma rede gaúcha<br/>
+          de restaurantes <span class="accent">saudáveis</span><br/>
+          construída como <strong>família</strong>.
+        </h2>
+        <p class="lead reveal" data-delay="2">
+          Fundada em 2019 em Novo Hamburgo pelos irmãos <strong>Nico, Melina e Dami Ventre</strong>. Hoje opera <strong>5 unidades no RS</strong>, atendeu mais de <strong>917 mil pessoas</strong> entre 2019 e 2024, e cresceu de R$ 1,7 milhão para R$ 22,6 milhões em receita anual.
+        </p>
+      </div>
+
+      <div class="who-stats">
+        <div class="stat reveal" data-delay="3">
+          <span class="num"><span data-counter="917">917</span><small>mil</small></span>
+          <span class="label">Pessoas atendidas</span>
+          <span class="sub">2019 → 2024</span>
+        </div>
+        <div class="stat reveal" data-delay="4">
+          <span class="num"><span data-counter="73">73</span><small>M</small></span>
+          <span class="label">Receita acumulada</span>
+          <span class="sub">2019 → 2024 · em R$</span>
+        </div>
+        <div class="stat reveal" data-delay="5">
+          <span class="num"><span data-counter="5">5</span></span>
+          <span class="label">Unidades</span>
+          <span class="sub">Todas no Rio Grande do Sul</span>
+        </div>
+        <div class="stat reveal" data-delay="6">
+          <span class="num"><span data-counter="13">13</span><small>×</small></span>
+          <span class="label">Melhor cozinha saudável</span>
+          <span class="sub">Sabores do Sul · 2019–2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">04 / 19</span><span>Visão geral</span></div>
+  </section>
+
+  <!-- ============== SLIDE 05 — SÓCIOS ============== -->
+  <section class="slide" id="socios" data-name="Sócios" data-theme="dark">
+    <div class="section-pill reveal">Nossos sócios</div>
+
+    <div>
+      <h2 class="h-title reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Três irmãos <span style="color: var(--g2); font-weight: 500;">e um amigo investidor</span><br/>
+        em volta de uma <strong>narrativa familiar</strong>.
+      </h2>
+    </div>
+
+    <div class="partners">
+      <article class="partner reveal" data-delay="2">
+        <div class="photo"><span class="initial">N</span></div>
+        <div>
+          <div class="name">Nico Ventre</div>
+          <div class="role">Co-fundador · CEO</div>
+        </div>
+        <p class="bio">Empreendedor serial, atleta, ex-baterista. A marca nasceu do desejo de “restaurar o espírito familiar” após a perda dos pais.</p>
+      </article>
+      <article class="partner reveal" data-delay="3">
+        <div class="photo"><span class="initial">M</span></div>
+        <div>
+          <div class="name">Melina Ventre</div>
+          <div class="role">Co-fundadora · CIO</div>
+        </div>
+        <p class="bio">Designer. Sócia-administradora do CNPJ matriz desde 2018. Curadora visual da marca — uniformes, ambientes, comunicação.</p>
+      </article>
+      <article class="partner reveal" data-delay="4">
+        <div class="photo"><span class="initial">D</span></div>
+        <div>
+          <div class="name">Dami Ventre</div>
+          <div class="role">Co-fundador</div>
+        </div>
+        <p class="bio">Reside na Califórnia. Aporta a perspectiva de fora — mercado internacional, tendências globais, conexões.</p>
+      </article>
+      <article class="partner zn-spot reveal" data-delay="5">
+        <div class="photo"><span class="initial">Z</span></div>
+        <div>
+          <div class="name">Thiago Zeni</div>
+          <div class="role">Sócio investidor</div>
+        </div>
+        <p class="bio">Conselheiro estratégico — negócio, expansão, tecnologia e marketing. Autor desta apresentação.</p>
+      </article>
+    </div>
+
+    <div class="slide-footer"><span class="num">05 / 19</span><span>Sociedade</span></div>
+  </section>
+
+  <!-- ============== SLIDE 06 — TIMELINE ============== -->
+  <section class="slide" id="timeline" data-name="Linha do tempo" data-theme="dark">
+    <div class="section-pill reveal">Linha do tempo</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Sete anos <span style="color: var(--g2); font-weight: 500;">de história</span><br/>
+        marcados por <strong>crescimento</strong> e <strong>resiliência</strong>.
+      </h2>
+    </div>
+
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-node reveal" data-delay="1">
+            <span class="yr">2019</span>
+            <p class="label">Novo Hamburgo<small>Centro · 1ª unidade</small></p>
+          </div>
+          <div class="tl-node reveal" data-delay="2">
+            <span class="yr">2020</span>
+            <p class="label">Moinhos de Vento<small>Porto Alegre</small></p>
+          </div>
+          <div class="tl-node event reveal" data-delay="3">
+            <span class="yr">2020</span>
+            <p class="label">Pandemia<small>COVID-19</small></p>
+          </div>
+          <div class="tl-node reveal" data-delay="4">
+            <span class="yr">2021</span>
+            <p class="label">Cais Embarcadero<small>Porto Alegre</small></p>
+          </div>
+          <div class="tl-node reveal" data-delay="5">
+            <span class="yr">2022</span>
+            <p class="label">Canela<small>Jangal das Araucárias</small></p>
+          </div>
+          <div class="tl-node event reveal" data-delay="6">
+            <span class="yr">2024</span>
+            <p class="label">Grande enchente<small>Rio Grande do Sul</small></p>
+          </div>
+          <div class="tl-node reveal" data-delay="7">
+            <span class="yr">2025</span>
+            <p class="label">Barra Shopping<small>Porto Alegre</small></p>
+          </div>
+          <div class="tl-node future reveal" data-delay="8">
+            <span class="yr">2026 →</span>
+            <p class="label">Expansão<small>SP · SC · PR</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">06 / 19</span><span>Cronologia</span></div>
+  </section>
+
+  <!-- ============== SLIDE 07 — UNIDADES ============== -->
+  <section class="slide" id="unidades" data-name="Unidades" data-theme="dark">
+    <div class="section-pill reveal">Nossas casas</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Cinco casas. <span style="color: var(--g2); font-weight: 500;">Capacidade total</span><br/>
+        de <strong>567+ pessoas</strong> simultâneas.
+      </h2>
+    </div>
+
+    <div class="units-grid">
+      <article class="unit-card reveal" data-delay="1">
+        <div class="img" style="background-image: url('assets/img/amb-7790.jpg')"></div>
+        <span class="yr">2019</span>
+        <div class="tag">
+          <div class="name">Novo Hamburgo</div>
+          <div class="meta">Cap. 114 · Matriz</div>
+        </div>
+        <span class="rating">4.7</span>
+      </article>
+      <article class="unit-card reveal" data-delay="2">
+        <div class="img" style="background-image: url('assets/img/amb-7818.jpg')"></div>
+        <span class="yr">2020</span>
+        <div class="tag">
+          <div class="name">Moinhos de Vento</div>
+          <div class="meta">Cap. 140 · POA</div>
+        </div>
+        <span class="rating">4.8</span>
+      </article>
+      <article class="unit-card reveal" data-delay="3">
+        <div class="img" style="background-image: url('assets/img/amb-7886.jpg')"></div>
+        <span class="yr">2021</span>
+        <div class="tag">
+          <div class="name">Cais Embarcadero</div>
+          <div class="meta">Cap. 223 · POA</div>
+        </div>
+        <span class="rating">4.7</span>
+      </article>
+      <article class="unit-card reveal" data-delay="4">
+        <div class="img" style="background-image: url('assets/img/amb-7843.jpg')"></div>
+        <span class="yr">2022</span>
+        <div class="tag">
+          <div class="name">Canela</div>
+          <div class="meta">Jângal Hotel</div>
+        </div>
+        <span class="rating">4.9</span>
+      </article>
+      <article class="unit-card reveal" data-delay="5">
+        <div class="img" style="background-image: url('assets/img/amb-7906.jpg')"></div>
+        <span class="yr">2025</span>
+        <div class="tag">
+          <div class="name">Barra Shopping</div>
+          <div class="meta">Cap. 90 · POA</div>
+        </div>
+        <span class="rating">4.9</span>
+      </article>
+    </div>
+
+    <div class="slide-footer"><span class="num">07 / 19</span><span>Geografia &amp; modelos</span></div>
+  </section>
+
+  <!-- ============== SLIDE 08 — FATURAMENTO ============== -->
+  <section class="slide" id="faturamento" data-name="Faturamento" data-theme="dark">
+    <div class="section-pill reveal">Faturamento</div>
+
+    <div class="revenue">
+      <div class="revenue-eyebrow reveal" data-delay="1">Receita bruta · 2019 a 2022</div>
+
+      <div class="revenue-massive reveal-num" data-delay="2">
+        DE <strong style="color: var(--white);">R$ 1,7M</strong> <span class="arrow">→</span> <strong style="color: var(--white);">R$ 22,6M</strong>
+      </div>
+
+      <div class="revenue-stats">
+        <div class="rs reveal" data-delay="3">
+          <span class="v"><span data-counter="13">13</span>×</span>
+          <span class="l">Crescimento no faturamento</span>
+        </div>
+        <div class="rs reveal" data-delay="4">
+          <span class="v">1.194<span style="color: var(--g2);">%</span></span>
+          <span class="l">De crescimento em 4 anos</span>
+        </div>
+        <div class="rs reveal" data-delay="5">
+          <span class="v">R$ <span data-counter="73">73</span>M</span>
+          <span class="l">Faturamento acumulado · 2019–2024</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">08 / 19</span><span>Performance financeira</span></div>
+  </section>
+
+  <!-- ============== SLIDE 09 — REACH / IMPACTO ============== -->
+  <section class="slide" id="impacto" data-name="Impacto" data-theme="dark">
+    <div class="section-pill reveal">Impacto &amp; alcance</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Alcance que <span style="color: var(--g2); font-weight: 500;">cresceu junto</span><br/>
+        com a operação.
+      </h2>
+    </div>
+
+    <div class="reach">
+      <div class="reach-photo reveal" data-delay="2" style="background-image: url('assets/img/amb-7898.jpg')"></div>
+
+      <div class="reach-list">
+        <div class="reach-row reveal" data-delay="3">
+          <span class="v"><span data-counter="917">917</span><small>k</small></span>
+          <span class="desc"><strong>Pessoas atendidas</strong> entre 2019 e 2024.</span>
+        </div>
+        <div class="reach-row reveal" data-delay="4">
+          <span class="v"><span data-counter="20">20</span><small>k</small></span>
+          <span class="desc"><strong>Clientes atendidos</strong> em média por mês.</span>
+        </div>
+        <div class="reach-row reveal" data-delay="5">
+          <span class="v"><span data-counter="93">93</span><small>k</small></span>
+          <span class="desc"><strong>Seguidores no Instagram</strong> @eatkitchengram.</span>
+        </div>
+        <div class="reach-row reveal" data-delay="6">
+          <span class="v"><span data-counter="685">685</span><small>k</small></span>
+          <span class="desc"><strong>De alcance mensal</strong> nas redes sociais.</span>
+        </div>
+        <div class="reach-row reveal" data-delay="7">
+          <span class="v"><span data-counter="15">15</span><small>M+</small></span>
+          <span class="desc"><strong>Visualizações em Reels</strong> acumuladas.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">09 / 19</span><span>Reach &amp; engajamento</span></div>
+  </section>
+
+  <!-- ============== SLIDE 10 — REVIEWS & PRÊMIOS ============== -->
+  <section class="slide" id="reviews" data-name="Reviews &amp; prêmios" data-theme="dark">
+    <div class="section-pill reveal">Prêmios</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Mais de mil <span style="color: var(--g2); font-weight: 500;">avaliações</span> com<br/>
+        <strong>4.7 ⭐ a 4.9 ⭐</strong> de média.
+      </h2>
+    </div>
+
+    <div class="review-layout">
+      <div class="review-units">
+        <div class="review-row reveal" data-delay="2">
+          <div class="uname">Novo Hamburgo<small>93 reviews</small></div>
+          <div class="meter"><span style="width: 94%;"></span></div>
+          <div class="score">4.7</div>
+        </div>
+        <div class="review-row reveal" data-delay="3">
+          <div class="uname">Moinhos de Vento<small>548 reviews</small></div>
+          <div class="meter"><span style="width: 96%;"></span></div>
+          <div class="score">4.8</div>
+        </div>
+        <div class="review-row reveal" data-delay="4">
+          <div class="uname">Cais Embarcadero<small>POA</small></div>
+          <div class="meter"><span style="width: 94%;"></span></div>
+          <div class="score">4.7</div>
+        </div>
+        <div class="review-row reveal" data-delay="5">
+          <div class="uname">Canela · Jângal<small>308 reviews</small></div>
+          <div class="meter"><span style="width: 98%;"></span></div>
+          <div class="score">4.9</div>
+        </div>
+        <div class="review-row reveal" data-delay="6">
+          <div class="uname">Barra Shopping<small>#9 entre 2.106 em POA</small></div>
+          <div class="meter"><span style="width: 98%;"></span></div>
+          <div class="score">4.9</div>
+        </div>
+      </div>
+
+      <aside class="awards">
+        <div class="lead-num reveal" data-delay="3">
+          <span data-counter="13">13</span>×
+          <small>Vezes campeão · Sabores do Sul</small>
+        </div>
+        <div class="awards-list">
+          <div class="award reveal" data-delay="4">
+            <span class="yr">19–25</span>
+            <span class="name">Novo Hamburgo<small>Melhor cozinha saudável · 7 anos</small></span>
+          </div>
+          <div class="award reveal" data-delay="5">
+            <span class="yr">20–25</span>
+            <span class="name">Porto Alegre<small>Melhor cozinha saudável · 6 anos</small></span>
+          </div>
+          <div class="award reveal" data-delay="6">
+            <span class="yr">23</span>
+            <span class="name">Travellers' Choice<small>TripAdvisor · top 10% mundial</small></span>
+          </div>
+          <div class="award reveal" data-delay="7">
+            <span class="yr">25</span>
+            <span class="name">Top 30 RS<small>Os 30 melhores restaurantes do RS</small></span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="slide-footer"><span class="num">10 / 19</span><span>Voz do cliente &amp; reconhecimento</span></div>
+  </section>
+
+  <!-- ============== SLIDE 11 — MAPA DE CANAIS ============== -->
+  <section class="slide" id="canais-mapa" data-name="Mapa de canais" data-theme="dark">
+    <div class="section-pill reveal">Canais</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Onde a marca <span style="color: var(--g2); font-weight: 500;">aparece hoje</span><br/>
+        — e onde ela <strong>controla</strong> a conversa.
+      </h2>
+    </div>
+
+    <div class="heatmap-wrap">
+      <div class="heatmap">
+        <div class="h-row">
+          <div class="cell hd row-hd">Canal</div>
+          <div class="cell hd">Volume</div>
+          <div class="cell hd">Engajamento</div>
+          <div class="cell hd">Controle</div>
+          <div class="cell hd">Risco</div>
+        </div>
+        <div class="h-row">
+          <div class="cell label">Instagram <small>~93 mil seguidores</small></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+        </div>
+        <div class="h-row">
+          <div class="cell label">TripAdvisor <small>1.000+ reviews · 4.7–4.9 ⭐</small></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+          <div class="cell dot"><span class="dot-mark gap"></span></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+        </div>
+        <div class="h-row">
+          <div class="cell label">Site oficial <small>5 de 11 rotas com 404</small></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+          <div class="cell dot"><span class="dot-mark gap"></span></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+        </div>
+        <div class="h-row">
+          <div class="cell label">Reservas (LeadsFood) <small>4 unidades · Canela ausente</small></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+        </div>
+        <div class="h-row">
+          <div class="cell label">Delivery (iFood + Neemo) <small>3 plataformas confirmadas</small></div>
+          <div class="cell dot"><span class="dot-mark full"></span></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+          <div class="cell dot"><span class="dot-mark half"></span></div>
+        </div>
+        <div class="h-row">
+          <div class="cell label">LinkedIn empresa <small>página oficial não identificada</small></div>
+          <div class="cell dot"><span class="dot-mark empty"></span></div>
+          <div class="cell dot"><span class="dot-mark empty"></span></div>
+          <div class="cell dot"><span class="dot-mark empty"></span></div>
+          <div class="cell dot"><span class="dot-mark gap"></span></div>
+        </div>
+        <div class="h-row">
+          <div class="cell label">TikTok <small>conta oficial não identificada</small></div>
+          <div class="cell dot"><span class="dot-mark empty"></span></div>
+          <div class="cell dot"><span class="dot-mark empty"></span></div>
+          <div class="cell dot"><span class="dot-mark empty"></span></div>
+          <div class="cell dot"><span class="dot-mark gap"></span></div>
+        </div>
+      </div>
+
+      <div class="legend-row reveal" data-delay="6">
+        <span><span class="dot-mark full" style="width:10px;height:10px;"></span> Forte / próprio</span>
+        <span><span class="dot-mark half" style="width:10px;height:10px;"></span> Médio / atenção</span>
+        <span><span class="dot-mark gap" style="width:10px;height:10px;"></span> Risco / lacuna</span>
+        <span><span class="dot-mark empty" style="width:10px;height:10px;"></span> Inexistente</span>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">11 / 19</span><span>Heatmap geral</span></div>
+  </section>
+
+  <!-- ============== SLIDE 12 — CANAIS PRÓPRIOS ============== -->
+  <section class="slide" id="canais-proprios" data-name="Canais próprios" data-theme="dark">
+    <div class="section-pill reveal">Canais próprios</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Site oficial: <span style="color: var(--rust); font-weight: 800;">5 de 11 rotas</span><br/>
+        retornando <strong>404</strong> hoje.
+      </h2>
+    </div>
+
+    <div class="routes">
+      <div class="routes-card reveal" data-delay="2">
+        <div class="head">
+          <h3>Rotas ativas</h3>
+          <div class="count">06</div>
+        </div>
+        <div class="list">
+          <div class="row"><code>/</code><span class="badge">Home</span></div>
+          <div class="row"><code>/menu</code><span class="badge">Redirect LeadsFood</span></div>
+          <div class="row"><code>/reservas</code><span class="badge">Hub de unidades</span></div>
+          <div class="row"><code>/eventos</code><span class="badge">WhatsApp</span></div>
+          <div class="row"><code>/contato-1</code><span class="badge">URL anômala</span></div>
+          <div class="row"><code>/trabalhe-conosco</code><span class="badge">Redirect Notion</span></div>
+        </div>
+      </div>
+
+      <div class="routes-card bad reveal" data-delay="3">
+        <div class="head">
+          <h3>Rotas com 404</h3>
+          <div class="count">05</div>
+        </div>
+        <div class="list">
+          <div class="row"><code>/sobre</code><span class="badge bad">Nossa história</span></div>
+          <div class="row"><code>/pessoas</code><span class="badge bad">O time</span></div>
+          <div class="row"><code>/blog</code><span class="badge bad">Conteúdo editorial</span></div>
+          <div class="row"><code>/loja</code><span class="badge bad">Produtos</span></div>
+          <div class="row"><code>/expansao</code><span class="badge bad">Franquia / parcerias</span></div>
+        </div>
+        <p class="note">Impacta SEO, conversão e percepção de marca <strong>agora</strong>. Quick win prioritário.</p>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">12 / 19</span><span>Site institucional</span></div>
+  </section>
+
+  <!-- ============== SLIDE 13 — REDES SOCIAIS ============== -->
+  <section class="slide" id="redes" data-name="Redes sociais" data-theme="dark">
+    <div class="section-pill reveal">Redes sociais</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Forte no <strong>Instagram</strong>.<br/>
+        Ausente em <strong style="color: var(--rust);">TikTok</strong> e <strong style="color: var(--rust);">LinkedIn</strong>.
+      </h2>
+    </div>
+
+    <div class="socials">
+      <div class="social lg reveal" data-delay="2">
+        <span class="net">Instagram · principal</span>
+        <div>
+          <div class="handle">@eatkitchengram</div>
+          <div class="num"><span data-counter="93">93</span>k<small>Seguidores</small></div>
+        </div>
+        <p class="desc">Bio: “11× Melhor Cozinha Saudável · 13º Melhor Restaurante do RS”.</p>
+        <div class="reach-grid">
+          <div class="rs"><span class="v">685k</span><span class="l">Alcance / mês</span></div>
+          <div class="rs"><span class="v">2M</span><span class="l">Impressões / mês</span></div>
+          <div class="rs"><span class="v">15M+</span><span class="l">Reels acumulado</span></div>
+        </div>
+      </div>
+
+      <div class="social reveal" data-delay="3">
+        <span class="net">Facebook</span>
+        <div class="handle">/eatkitchengram</div>
+        <p class="desc">Espelho do Instagram + página legacy a consolidar.</p>
+      </div>
+      <div class="social reveal" data-delay="4">
+        <span class="net">X · Twitter</span>
+        <div class="handle">@EatKitchen</div>
+        <p class="desc">Existe, mas atividade não verificada.</p>
+      </div>
+
+      <div class="social reveal" data-delay="5">
+        <span class="net">TikTok</span>
+        <div class="handle"><span class="gap-mark">⌀</span> não identificado</div>
+        <span class="gap-text">Lacuna estratégica</span>
+      </div>
+      <div class="social reveal" data-delay="6">
+        <span class="net">LinkedIn empresa</span>
+        <div class="handle"><span class="gap-mark">⌀</span> não identificado</div>
+        <span class="gap-text">Lacuna estratégica</span>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">13 / 19</span><span>Social media audit</span></div>
+  </section>
+
+  <!-- ============== SLIDE 14 — MARKETPLACES ============== -->
+  <section class="slide" id="marketplaces" data-name="Marketplaces" data-theme="dark">
+    <div class="section-pill reveal">Marketplaces</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Maior ativo público:<br/>
+        <strong>prova social distribuída</strong>.
+      </h2>
+    </div>
+
+    <div class="marketplaces">
+      <div class="tripadvisor-card reveal" data-delay="2">
+        <span class="net">TripAdvisor · destaque</span>
+        <div>
+          <div class="big">4.7 — 4.9 <span style="font-size:.5em;font-weight:300;">★</span></div>
+          <p class="label">Médias entre as 5 unidades · 1.000+ reviews agregados</p>
+        </div>
+        <div class="ta-stats">
+          <div class="ts"><span class="v">5</span><span class="l">Fichas oficiais</span></div>
+          <div class="ts"><span class="v">#9</span><span class="l">Em POA · Barra Shopping</span></div>
+          <div class="ts"><span class="v">Top 10%</span><span class="l">Travellers' Choice</span></div>
+        </div>
+      </div>
+
+      <div class="other-channels">
+        <div class="oc reveal" data-delay="3">
+          <span class="net">Delivery</span>
+          <div class="name">iFood</div>
+          <div class="status">Pelo menos a unidade Moinhos confirmada.</div>
+        </div>
+        <div class="oc warn reveal" data-delay="4">
+          <span class="net">Delivery próprio</span>
+          <div class="name">Neemo</div>
+          <div class="status">2 subdomínios ativos · margem cheia.</div>
+        </div>
+        <div class="oc reveal" data-delay="5">
+          <span class="net">Reservas</span>
+          <div class="name">LeadsFood</div>
+          <div class="status">4 subdomínios — Canela ausente.</div>
+        </div>
+        <div class="oc warn reveal" data-delay="6">
+          <span class="net">Reservas internacionais</span>
+          <div class="name">OpenTable / TheFork</div>
+          <div class="status">Ausência impacta turistas em Canela &amp; Cais.</div>
+        </div>
+        <div class="oc reveal" data-delay="7">
+          <span class="net">Diretórios</span>
+          <div class="name">Wanderlog · Mindtrip · Atly</div>
+          <div class="status">Inclusão automática · sem gestão.</div>
+        </div>
+        <div class="oc reveal" data-delay="8">
+          <span class="net">Google</span>
+          <div class="name">Google Maps · GBP</div>
+          <div class="status">Reivindicação das 5 fichas a confirmar.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">14 / 19</span><span>Plataformas de terceiros</span></div>
+  </section>
+
+  <!-- ============== SLIDE 15 — IMPRENSA ============== -->
+  <section class="slide" id="imprensa" data-name="Imprensa" data-theme="dark">
+    <div class="section-pill reveal">Imprensa &amp; conteúdo</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Cobertura regional <span style="color: var(--g2); font-weight: 500;">consolidada</span>,<br/>
+        lacuna em <strong>imprensa nacional</strong>.
+      </h2>
+    </div>
+
+    <div class="press-grid">
+      <div class="press-tier reveal" data-delay="2">
+        <div class="head">
+          <span class="yr">23–25</span>
+          <h3>Cobertura confirmada</h3>
+        </div>
+        <div class="press-list">
+          <div class="press-row"><span class="src">Gazeta do Povo</span><span class="typ">Publi-editorial</span></div>
+          <div class="press-row"><span class="src">Pluminews</span><span class="typ">Matéria · Expansão</span></div>
+          <div class="press-row"><span class="src">Revista Sabores do Sul</span><span class="typ">Prêmio · 2 anos</span></div>
+          <div class="press-row"><span class="src">Bom Gourmet · Festival POA</span><span class="typ">Festival</span></div>
+          <div class="press-row"><span class="src">Cultura Alternativa</span><span class="typ">Review editorial</span></div>
+          <div class="press-row"><span class="src">Mesacast (YouTube)</span><span class="typ">Entrevista vídeo</span></div>
+          <div class="press-row"><span class="src">Cafezinho podcast #82</span><span class="typ">Podcast</span></div>
+          <div class="press-row"><span class="src">Wine Locals · Destino POA</span><span class="typ">Diretórios turismo</span></div>
+        </div>
+      </div>
+
+      <div class="press-tier gap-tier reveal" data-delay="3">
+        <div class="head">
+          <span class="yr">⌀</span>
+          <h3>Lacunas relevantes</h3>
+        </div>
+        <div class="press-list">
+          <div class="press-row"><span class="src">Folha SP / Estadão / G1</span><span class="typ">Mídia nacional</span></div>
+          <div class="press-row"><span class="src">Veja · Exame</span><span class="typ">Negócios</span></div>
+          <div class="press-row"><span class="src">PEGN · Forbes Brasil</span><span class="typ">Empreendedorismo</span></div>
+          <div class="press-row"><span class="src">Casa Vogue · Casa &amp; Jardim</span><span class="typ">Lifestyle / design</span></div>
+          <div class="press-row"><span class="src">GQ · Glamurama</span><span class="typ">Lifestyle SP</span></div>
+          <div class="press-row"><span class="src">GZH · Grupo RBS</span><span class="typ">Mídia regional T1</span></div>
+        </div>
+        <p class="note">Pré-aquecimento de imprensa para a expansão SP/SC/PR é uma frente clara.</p>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">15 / 19</span><span>PR &amp; conteúdo</span></div>
+  </section>
+
+  <!-- ============== SLIDE 16 — CORPORATE ============== -->
+  <section class="slide" id="corporate" data-name="Estrutura corporativa" data-theme="dark">
+    <div class="section-pill reveal">Corporate</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Pelo menos <strong>2 CNPJs</strong> identificados<br/>
+        — estrutura merece <span style="color: var(--g2); font-weight: 500;">auditoria</span>.
+      </h2>
+    </div>
+
+    <div class="corp">
+      <div class="cnpj-card reveal" data-delay="2">
+        <div class="num">26.993.942/0001-01</div>
+        <div class="corp-name">EAT KITCHEN COMÉRCIO DE ALIMENTOS LTDA · matriz</div>
+        <div class="row"><span class="k">Abertura</span><span class="v">31 / 01 / 2017</span></div>
+        <div class="row"><span class="k">Capital</span><span class="v">R$ 95.400,00</span></div>
+        <div class="row"><span class="k">Porte</span><span class="v">Microempresa (ME)</span></div>
+        <div class="row"><span class="k">Endereço</span><span class="v">R. João A. da Silveira, 504 — Novo Hamburgo</span></div>
+        <div class="row"><span class="k">Sócia adm.</span><span class="v">Melina Ventre · desde 12/2018</span></div>
+        <div class="alert">
+          <strong>Atenção</strong> ME tem teto de R$ 360k/ano. A receita real da rede é múltiplas vezes maior — outros CNPJs absorvem o faturamento. Estrutura precisa ser auditada antes de captação ou expansão.
+        </div>
+      </div>
+
+      <div class="cnpj-card reveal" data-delay="3">
+        <div class="num">35.047.915/0001-37</div>
+        <div class="corp-name">EAT KITCHEN EKT COMÉRCIO DE ALIMENTOS LTDA · 2ª empresa do grupo</div>
+        <div class="row"><span class="k">Sede</span><span class="v">Rio Grande do Sul</span></div>
+        <div class="row"><span class="k">Detalhes</span><span class="v">Acesso público parcial · paywall</span></div>
+        <div class="row"><span class="k">Marca INPI</span><span class="v">Status não confirmado</span></div>
+        <div class="row"><span class="k">Domínios</span><span class="v">eatkitchen.com.br · eat-kitchen.com</span></div>
+        <div class="row"><span class="k">Recomendação</span><span class="v">Mapear todas as CNPJs do grupo</span></div>
+        <div class="alert">
+          <strong>Marca INPI</strong> Não confirmada. Antes da expansão fora do RS, registrar nas classes 43, 30, 35 e 41 é proteção essencial.
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">16 / 19</span><span>Pessoas jurídicas</span></div>
+  </section>
+
+  <!-- ============== SLIDE 17 — 5 ALERTAS ============== -->
+  <section class="slide" id="alertas" data-name="5 alertas críticos" data-theme="dark">
+    <div class="section-pill reveal">Alertas</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        Cinco pontos que <strong>merecem ação</strong><br/>
+        antes da próxima fase de crescimento.
+      </h2>
+    </div>
+
+    <div class="alerts-grid">
+      <div class="alert-card reveal" data-delay="2">
+        <span class="ix">01</span>
+        <h4>Site com 5 rotas em 404</h4>
+        <p>/sobre, /pessoas, /blog, /loja, /expansao retornam 404. Afeta SEO, conversão e narrativa de marca.</p>
+        <span class="imp">Quick win · 30 dias</span>
+      </div>
+      <div class="alert-card reveal" data-delay="3">
+        <span class="ix">02</span>
+        <h4>CNPJ matriz é ME</h4>
+        <p>Microempresa tem teto R$ 360k/ano. Estrutura societária real precisa ser mapeada e auditada.</p>
+        <span class="imp">Auditoria contábil</span>
+      </div>
+      <div class="alert-card reveal" data-delay="4">
+        <span class="ix">03</span>
+        <h4>Marca não registrada no INPI</h4>
+        <p>Sem registro confirmado, marca fica vulnerável. Crítico antes de expandir para SP/SC/PR.</p>
+        <span class="imp">Risco jurídico</span>
+      </div>
+      <div class="alert-card reveal" data-delay="5">
+        <span class="ix">04</span>
+        <h4>Sem TikTok &amp; LinkedIn empresa</h4>
+        <p>Duas lacunas em canais críticos para alcance jovem (TikTok) e B2B/recrutamento (LinkedIn).</p>
+        <span class="imp">Pré-expansão SP</span>
+      </div>
+      <div class="alert-card reveal" data-delay="6">
+        <span class="ix">05</span>
+        <h4>Sem CRM nem fidelidade</h4>
+        <p>~917k pessoas atendidas sem captura sistemática. Cada nova unidade começa do zero em CRM.</p>
+        <span class="imp">Tech &amp; LTV</span>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">17 / 19</span><span>Atenção imediata</span></div>
+  </section>
+
+  <!-- ============== SLIDE 18 — ROADMAP ============== -->
+  <section class="slide" id="roadmap" data-name="Próximos passos" data-theme="dark">
+    <div class="section-pill reveal">Próximos passos</div>
+
+    <div>
+      <h2 class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: var(--display-md); line-height: .96; letter-spacing: -.04em; color: var(--white); text-transform: uppercase;" data-delay="1">
+        <strong>Dez frentes</strong> de aprofundamento<br/>
+        para fechar o quadro <span style="color: var(--g2); font-weight: 500;">completo</span>.
+      </h2>
+    </div>
+
+    <div class="roadmap">
+      <div class="rd-grid">
+        <div class="rd-card priority reveal" data-delay="2">
+          <span class="nx">01</span>
+          <h5>INPI &amp; WHOIS</h5>
+          <div class="meta"><span class="tag pub">Pública</span><span class="tag t">~1h</span></div>
+        </div>
+        <div class="rd-card priority reveal" data-delay="3">
+          <span class="nx">02</span>
+          <h5>Análise competitiva direta</h5>
+          <div class="meta"><span class="tag pub">Pública</span><span class="tag t">3–4h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="4">
+          <span class="nx">03</span>
+          <h5>NLP dos reviews TripAdvisor</h5>
+          <div class="meta"><span class="tag pub">Pública</span><span class="tag t">~2h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="5">
+          <span class="nx">04</span>
+          <h5>Mercado saudável BR · TAM/SAM/SOM</h5>
+          <div class="meta"><span class="tag pub">Pública</span><span class="tag t">4–5h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="6">
+          <span class="nx">05</span>
+          <h5>Tech stack atual da empresa</h5>
+          <div class="meta"><span class="tag hib">Híbrido</span><span class="tag t">~3h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="3">
+          <span class="nx">06</span>
+          <h5>Briefing dados internos · Nico</h5>
+          <div class="meta"><span class="tag int">Interna</span><span class="tag t">~1h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="4">
+          <span class="nx">07</span>
+          <h5>Identidade visual &amp; manual</h5>
+          <div class="meta"><span class="tag hib">Híbrido</span><span class="tag t">~2h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="5">
+          <span class="nx">08</span>
+          <h5>Influenciadores &amp; UGC</h5>
+          <div class="meta"><span class="tag pub">Pública</span><span class="tag t">~2h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="6">
+          <span class="nx">09</span>
+          <h5>Tráfego web · Similarweb</h5>
+          <div class="meta"><span class="tag pub">Pública</span><span class="tag t">~1h</span></div>
+        </div>
+        <div class="rd-card reveal" data-delay="7">
+          <span class="nx">10</span>
+          <h5>Fornecedores &amp; supply chain</h5>
+          <div class="meta"><span class="tag hib">Híbrido</span><span class="tag t">a definir</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">18 / 19</span><span>Roadmap de pesquisa</span></div>
+  </section>
+
+  <!-- ============== SLIDE 19 — ENCERRAMENTO + ZN. ============== -->
+  <section class="slide signoff" id="encerramento" data-name="Encerramento" data-theme="dark">
+    <div class="section-pill reveal">Encerramento</div>
+
+    <div class="top">
+      <h2 class="reveal" data-delay="1">
+        Esta marca tem <strong>história</strong>,<br/>
+        tem <strong>público</strong> e tem <strong>direção</strong>.<br/>
+        <span class="light">O resto é execução.</span>
+      </h2>
+
+      <p class="lead reveal" data-delay="2">
+        Falta fechar a estrutura — site, INPI, CRM, canais — para que a expansão chegue ao mesmo nível de cuidado que cada prato já tem. <em>Pessoas. Comida. Verdade.</em>
+      </p>
+
+      <div class="next-steps">
+        <div class="ns reveal" data-delay="3">
+          <span class="num">A.</span>
+          <span class="lbl">Endereçar os 5 alertas em ciclos de 30 / 60 / 90 dias.</span>
+        </div>
+        <div class="ns reveal" data-delay="4">
+          <span class="num">B.</span>
+          <span class="lbl">Preparar briefing interno para Nico &amp; equipe (rodada #06).</span>
+        </div>
+        <div class="ns reveal" data-delay="5">
+          <span class="num">C.</span>
+          <span class="lbl">Avançar análise competitiva e mercado nacional (rodadas #02 e #04).</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="zn-signature">
+      <div class="zn-block">
+        <span class="zn-big">ZN<span class="zn-dot">.</span></span>
+        <div class="zn-meta">
+          <strong>Thiago Zeni</strong>
+          <span>Sócio investidor · conselheiro estratégico</span>
+        </div>
+      </div>
+      <div class="center-line">
+        Apresentação interna · uso restrito · v1.0 · maio 2026
+      </div>
+      <div class="right-info">
+        Mapeamento estratégico<br/>
+        Próxima revisão · após dados internos
+      </div>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const rail = document.querySelector('.progress-rail');
+  const header = document.querySelector('.app-header');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* progress rail */
+  slides.forEach((slide, i) => {
+    const pip = document.createElement('button');
+    pip.className = 'pip';
+    pip.setAttribute('aria-label', `Slide ${i+1}: ${slide.dataset.name || ''}`);
+    pip.addEventListener('click', () => slide.scrollIntoView({behavior:'smooth', block:'start'}));
+    rail.appendChild(pip);
+  });
+  const pips = Array.from(rail.querySelectorAll('.pip'));
+
+  /* reveal */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-num');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  /* active slide tracking */
+  let activeIndex = 0;
+  const animatedSlides = new WeakSet();
+  const activeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.intersectionRatio >= 0.55) {
+        const idx = slides.indexOf(e.target);
+        if (idx !== -1) {
+          activeIndex = idx;
+          pips.forEach((p,i) => p.classList.toggle('active', i === idx));
+          const theme = e.target.dataset.theme || 'dark';
+          if (theme === 'light') {
+            header.classList.add('on-light');
+            document.body.classList.add('on-light-active');
+          } else {
+            header.classList.remove('on-light');
+            document.body.classList.remove('on-light-active');
+          }
+          animateCounters(e.target);
+        }
+      }
+    });
+  }, { threshold: [0.55] });
+  slides.forEach(s => activeObserver.observe(s));
+
+  function animateCounters(slide){
+    if (animatedSlides.has(slide)) return;
+    animatedSlides.add(slide);
+    const counters = slide.querySelectorAll('[data-counter]');
+    counters.forEach(el => {
+      const target = parseFloat(el.dataset.counter);
+      if (isNaN(target)) return;
+      if (reduceMotion) { el.textContent = formatNumber(target); return; }
+      const duration = 1100;
+      const start = performance.now();
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      function tick(now){
+        const elapsed = Math.min((now - start) / duration, 1);
+        const v = Math.round(target * ease(elapsed));
+        el.textContent = formatNumber(v);
+        if (elapsed < 1) requestAnimationFrame(tick);
+        else el.textContent = formatNumber(target);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  function formatNumber(n){
+    if (n >= 1000) return n.toLocaleString('pt-BR');
+    return String(n);
+  }
+
+  /* keyboard nav */
+  document.addEventListener('keydown', (e) => {
+    const k = e.key;
+    if (['ArrowDown','PageDown',' '].includes(k)) { e.preventDefault(); goTo(activeIndex + 1); }
+    else if (['ArrowUp','PageUp'].includes(k)) { e.preventDefault(); goTo(activeIndex - 1); }
+    else if (k === 'Home') { e.preventDefault(); goTo(0); }
+    else if (k === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+  });
+  function goTo(idx){
+    idx = Math.max(0, Math.min(slides.length - 1, idx));
+    slides[idx].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
+  }
+
+  /* swipe */
+  let touchStartY = null;
+  document.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    if (touchStartY === null) return;
+    const endY = (e.changedTouches[0] || {}).clientY ?? touchStartY;
+    const dy = touchStartY - endY;
+    if (Math.abs(dy) > 60) { if (dy > 0) goTo(activeIndex + 1); else goTo(activeIndex - 1); }
+    touchStartY = null;
+  }, { passive: true });
+
+  /* initial reveal */
+  setTimeout(() => {
+    const first = slides[0];
+    if (first) {
+      first.querySelectorAll('.reveal, .reveal-num').forEach(el => el.classList.add('in'));
+      animateCounters(first);
+    }
+  }, 60);
+})();
+</script>
+</body>
+</html>

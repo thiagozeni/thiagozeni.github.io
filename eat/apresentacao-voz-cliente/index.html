@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EAT+VOICE · Voz do Cliente · ZN.</title>
+<meta name="description" content="Apresentação interna · diagnóstico operacional baseado em 75 reviews TripAdvisor · por Thiago Zeni" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   EAT+VOICE · DECK #2 — VOZ DO CLIENTE
+   Mesma identidade do Deck #1 (preto puro · Sora display · Manrope body)
+   Tom: diagnóstico operacional. Audiência: conselho + gerência.
+   ============================================================ */
+
+:root{
+  --black:#000000; --ink:#0A0A0A; --ink-2:#141414; --ink-3:#1F1F1F;
+  --white:#FFFFFF; --paper:#F5F5F5;
+  --g1:#DADADA; --g2:#9A9A9A; --g3:#5A5A5A; --g4:#2A2A2A;
+  --line:rgba(255,255,255,0.10); --line-soft:rgba(255,255,255,0.06);
+  --rust:#FF4D2E; --warn:#FFB534; --good:#9DFF7A;
+
+  --zn-lime:#C6FF00; --zn-text:#F2F2F2; --zn-bg:#050505;
+
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-body:'Manrope',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --font-zn:'Unbounded',sans-serif;
+
+  --display-xl:clamp(3rem,12vw,14rem);
+  --display-lg:clamp(2.4rem,8vw,7rem);
+  --display-md:clamp(1.6rem,4.6vw,4rem);
+  --title:clamp(1.5rem,4vw,3.4rem);
+  --h2:clamp(1.2rem,2.6vw,2.2rem);
+  --body:clamp(.85rem,1.1vw,1rem);
+  --label:clamp(.6rem,.72vw,.72rem);
+
+  --pad:clamp(1.4rem,3.6vw,3.6rem);
+  --gap:clamp(.8rem,1.8vw,1.6rem);
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow-x:hidden;background:var(--black);color:var(--white);font-family:var(--font-body);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+.brand{font-family:var(--font-display);font-weight:800;letter-spacing:-0.025em;display:inline;white-space:nowrap}
+.brand .plus{display:inline-block;margin:0 0.04em;font-weight:700;transform:translateY(-0.04em)}
+
+/* ============ HEADER ============ */
+.app-header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,3vw,2.4rem);pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,0.7),rgba(0,0,0,0))}
+.app-header>*{pointer-events:auto}
+.zn-logo{display:inline-flex;align-items:baseline;gap:.12rem;font-family:var(--font-zn);font-weight:900;font-size:1.25rem;letter-spacing:-.08em;color:var(--zn-text);line-height:1;transition:opacity .3s var(--ease)}
+.zn-logo .zn-dot{color:var(--zn-lime);text-shadow:0 0 14px rgba(198,255,0,.6);animation:lime-pulse 3.4s ease-in-out infinite}
+.zn-logo:hover{opacity:.75}
+@keyframes lime-pulse{0%,100%{text-shadow:0 0 12px rgba(198,255,0,.5)}50%{text-shadow:0 0 24px rgba(198,255,0,.9)}}
+
+.deck-meta{display:flex;align-items:center;gap:.85rem;font-family:var(--font-display);font-size:.58rem;color:var(--g2);letter-spacing:.26em;text-transform:uppercase;font-weight:500}
+.deck-meta .pulse{width:6px;height:6px;background:var(--zn-lime);border-radius:50%;box-shadow:0 0 0 4px rgba(198,255,0,.16);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(198,255,0,.16)}50%{box-shadow:0 0 0 9px rgba(198,255,0,.04)}}
+
+/* ============ PROGRESS RAIL ============ */
+.progress-rail{position:fixed;top:50%;right:clamp(.6rem,1.4vw,1.2rem);transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:6px}
+.progress-rail .pip{width:18px;height:1px;background:rgba(255,255,255,.18);transition:all .35s var(--ease);cursor:pointer;padding:0}
+.progress-rail .pip.active{width:32px;height:2px;background:var(--white)}
+.progress-rail .pip:hover{background:var(--white)}
+
+/* ============ SLIDE BASE ============ */
+.slide{width:100vw;height:100vh;height:100dvh;overflow:hidden;scroll-snap-align:start;display:flex;flex-direction:column;position:relative;padding:var(--pad);padding-top:calc(var(--pad) + 2.4rem);padding-bottom:calc(var(--pad) + 2.6rem);background:var(--black);color:var(--white)}
+
+.slide-footer{position:absolute;bottom:clamp(.8rem,1.8vw,1.4rem);left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;align-items:center;font-family:var(--font-display);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g3);font-weight:500;padding-top:.8rem;border-top:1px solid var(--line);z-index:5}
+.slide-footer .num{color:var(--white);font-weight:600}
+
+.section-pill{position:absolute;top:calc(var(--pad) + 1.4rem);right:var(--pad);font-family:var(--font-display);font-weight:500;font-size:.72rem;color:var(--white);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:.55rem 1.4rem;letter-spacing:.04em;z-index:5}
+.section-pill.warn{color:var(--warn);border-color:rgba(255,181,52,.5)}
+.section-pill.bad{color:var(--rust);border-color:rgba(255,77,46,.5)}
+
+/* ============ TIPOGRAFIA UTILS ============ */
+.h-display{font-family:var(--font-display);font-weight:800;font-size:var(--display-md);line-height:.96;letter-spacing:-.04em;color:var(--white);text-transform:uppercase;padding-right:clamp(0rem,14vw,15rem)}
+.h-display .accent{color:var(--g2);font-weight:500}
+.h-display .rust{color:var(--rust)}
+.h-display .lime{color:var(--zn-lime)}
+.lead{font-family:var(--font-body);color:var(--g1);line-height:1.6;max-width:60ch}
+.lead strong{color:var(--white);font-weight:600}
+
+/* ============ SLIDE 01 — CAPA ============ */
+.cover{padding:0;align-items:center;justify-content:center}
+.cover-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.cover-bg .bg-photo{width:100%;height:100%;background-size:cover;background-position:center;filter:grayscale(60%) brightness(.35) contrast(1.1)}
+.cover-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,0,0,.2),rgba(0,0,0,.7) 80%),linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 30%,transparent 70%,rgba(0,0,0,.7) 100%)}
+.cover-content{position:relative;z-index:2;width:100%;max-width:1700px;padding:0 var(--pad);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(1.4rem,3vw,2.4rem)}
+.cover-eyebrow{font-family:var(--font-display);font-weight:500;font-size:.68rem;letter-spacing:.35em;color:var(--g1);text-transform:uppercase;display:inline-flex;align-items:center;gap:1rem}
+.cover-eyebrow::before,.cover-eyebrow::after{content:'';display:inline-block;width:36px;height:1px;background:var(--g3)}
+.cover-brand{font-family:var(--font-display);font-weight:800;font-size:var(--display-xl);letter-spacing:-.035em;color:var(--white);line-height:.85}
+.cover-brand .plus{font-weight:600;display:inline-block;transform:translateY(-0.05em);margin:0 .02em}
+.cover-tagline{font-family:var(--font-display);font-weight:400;font-size:clamp(.85rem,1.4vw,1.05rem);letter-spacing:.42em;text-transform:uppercase;color:var(--g1)}
+.cover-subtitle{margin-top:.8rem;font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.6vw,1.4rem);color:var(--g1);letter-spacing:.02em;max-width:34ch;line-height:1.4}
+.cover-subtitle strong{color:var(--white);font-weight:500}
+.cover-meta{position:absolute;bottom:clamp(1.6rem,3vw,2.6rem);left:var(--pad);right:var(--pad);z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:2rem;font-family:var(--font-display);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g2);font-weight:500}
+.cover-meta strong{color:var(--white);font-weight:600}
+.cover-meta .center{text-align:center}
+.cover-meta .right{text-align:right}
+
+/* ============ SLIDE 02 — MÉTODO / AMOSTRA ============ */
+.method{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(1rem,2vw,1.6rem)}
+.method-card{background:var(--black);padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;gap:.9rem}
+.method-card .ix{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,3.4vw,2.8rem);letter-spacing:-.045em;color:var(--white);line-height:1}
+.method-card .ix small{display:block;font-family:var(--font-display);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:500;margin-top:.6rem}
+.method-card h3{font-family:var(--font-display);font-weight:700;font-size:clamp(1rem,1.4vw,1.2rem);letter-spacing:-.018em;color:var(--white)}
+.method-card p{font-size:var(--body);color:var(--g1);line-height:1.55}
+
+/* ============ SLIDE 03 — BIG PICTURE (sentimento por unidade) ============ */
+.bp-grid{flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.bp-card{background:var(--black);padding:clamp(.95rem,1.6vw,1.3rem);display:flex;flex-direction:column;justify-content:space-between;gap:.6rem;position:relative}
+.bp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--good)}
+.bp-card.warn::before{background:var(--warn)}
+.bp-card.bad::before{background:var(--rust)}
+.bp-card .name{font-family:var(--font-display);font-weight:800;font-size:clamp(.92rem,1.3vw,1.1rem);color:var(--white);text-transform:uppercase;letter-spacing:-.018em;line-height:1.1}
+.bp-card .nota{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,4.4vw,3.6rem);color:var(--white);letter-spacing:-.045em;line-height:1}
+.bp-card .nota small{font-size:.32em;color:var(--g2);font-weight:500;letter-spacing:0;display:block;margin-top:.4rem}
+.bp-card .desc{font-size:.78rem;color:var(--g1);line-height:1.45}
+.bp-card .status{font-family:var(--font-display);font-size:.55rem;letter-spacing:.26em;text-transform:uppercase;color:var(--good);font-weight:700;padding-top:.5rem;border-top:1px solid var(--line)}
+.bp-card.warn .status{color:var(--warn)}
+.bp-card.bad .status{color:var(--rust)}
+
+/* ============ SLIDE 04 — INSIGHT MARCA (3 ativos) ============ */
+.assets-grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.asset-card{background:var(--black);padding:clamp(1.2rem,2vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between;gap:1rem;position:relative;transition:background .3s var(--ease)}
+.asset-card:hover{background:var(--ink-2)}
+.asset-card .ix{font-family:var(--font-display);font-weight:300;font-size:clamp(3rem,5vw,5rem);letter-spacing:-.05em;color:var(--white);line-height:1}
+.asset-card h4{font-family:var(--font-display);font-weight:800;font-size:clamp(1.1rem,1.6vw,1.4rem);letter-spacing:-.02em;color:var(--white);text-transform:uppercase;line-height:1.15}
+.asset-card .quote{font-family:var(--font-body);font-size:.88rem;color:var(--g1);line-height:1.55;border-left:2px solid var(--white);padding-left:.9rem}
+.asset-card .takeaway{font-family:var(--font-display);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--zn-lime);font-weight:700;padding-top:.7rem;border-top:1px solid var(--line)}
+
+/* ============ SLIDE 05 — EMBAIXADORES NOMINAIS ============ */
+.amb-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:1rem;gap:1rem}
+.amb-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.amb-col{background:var(--black);padding:clamp(.9rem,1.5vw,1.3rem);display:flex;flex-direction:column;gap:.6rem;min-height:0}
+.amb-col .head{font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--white);text-transform:uppercase;letter-spacing:-.01em;border-bottom:1px solid var(--line);padding-bottom:.55rem}
+.amb-col .head small{display:block;font-family:var(--font-display);font-size:.54rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g2);font-weight:500;margin-top:.2rem}
+.amb-col .name{font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--white);letter-spacing:-.02em;display:flex;justify-content:space-between;align-items:center;padding:.3rem 0}
+.amb-col .name.star{color:var(--zn-lime);font-weight:800}
+.amb-col .name .dot{width:6px;height:6px;background:var(--white);border-radius:50%}
+.amb-col .name.star .dot{background:var(--zn-lime);box-shadow:0 0 8px rgba(198,255,0,.6)}
+.amb-col .star-tag{margin-top:auto;font-family:var(--font-display);font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--zn-lime);font-weight:700;padding-top:.5rem;border-top:1px solid var(--line)}
+
+/* ============ SLIDE 06 — NHOQUE ASSINATURA ============ */
+.nhoque-hero{flex:1;display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-top:clamp(.8rem,1.6vw,1.4rem)}
+.nhoque-text .massive{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,7vw,7rem);letter-spacing:-.05em;line-height:.92;color:var(--white);text-transform:uppercase}
+.nhoque-text .massive em{font-style:italic;font-weight:600;color:var(--g2)}
+.nhoque-text .lead{margin-top:1.2rem}
+.nhoque-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.nhoque-list .item{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.nhoque-list .item .un{font-family:var(--font-display);font-weight:700;font-size:.85rem;color:var(--white);letter-spacing:-.01em;text-transform:uppercase}
+.nhoque-list .item .var{font-family:var(--font-body);font-size:.82rem;color:var(--g1);line-height:1.4}
+.nhoque-list .item .cite{font-family:var(--font-display);font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g2);font-weight:600}
+
+/* ============ SLIDE 07 — PRATOS-ASSINATURA + DRINKS ============ */
+.dish-grid{flex:1;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.dish-card{background:var(--black);padding:clamp(.85rem,1.4vw,1.15rem);display:flex;flex-direction:column;gap:.4rem;position:relative;transition:background .3s var(--ease)}
+.dish-card:hover{background:var(--ink-2)}
+.dish-card.span2{grid-column:span 2}
+.dish-card .cat{font-family:var(--font-display);font-size:.54rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:600}
+.dish-card .name{font-family:var(--font-display);font-weight:700;font-size:clamp(1rem,1.4vw,1.25rem);color:var(--white);letter-spacing:-.02em;text-transform:uppercase;line-height:1.1}
+.dish-card .var{font-family:var(--font-body);font-size:.78rem;color:var(--g1);line-height:1.4}
+.dish-card .units{margin-top:auto;font-family:var(--font-display);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--white);font-weight:600;padding-top:.5rem;border-top:1px solid var(--line)}
+
+/* ============ SLIDE 08 — INCLUSIVIDADE + REPEAT ============ */
+.dual-stat{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.dual-stat .col{background:var(--black);padding:clamp(1.4rem,2.6vw,2.2rem);display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem}
+.dual-stat .col .label{font-family:var(--font-display);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:600}
+.dual-stat .col .big{font-family:var(--font-display);font-weight:800;font-size:clamp(3rem,8vw,7rem);letter-spacing:-.045em;line-height:.9;color:var(--white)}
+.dual-stat .col .big .unit{font-size:.4em;color:var(--g2);font-weight:500}
+.dual-stat .col h3{font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.5vw,1.3rem);color:var(--white);text-transform:uppercase;letter-spacing:-.02em}
+.dual-stat .col p{font-size:.88rem;color:var(--g1);line-height:1.55}
+.dual-stat .col blockquote{font-family:var(--font-body);font-size:.84rem;color:var(--white);line-height:1.5;border-left:2px solid var(--white);padding-left:.85rem;font-style:italic}
+.dual-stat .col cite{display:block;margin-top:.5rem;font-style:normal;font-family:var(--font-display);font-size:.55rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g2);font-weight:500}
+
+/* ============ SLIDE 09 — DIAGNÓSTICO POR UNIDADE (overview) ============ */
+.diag-overview{flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.diag-card{background:var(--black);padding:clamp(.9rem,1.5vw,1.3rem);display:flex;flex-direction:column;gap:.55rem;position:relative;border-top:3px solid transparent}
+.diag-card.good{border-top-color:var(--good)}
+.diag-card.warn{border-top-color:var(--warn)}
+.diag-card.bad{border-top-color:var(--rust)}
+.diag-card .name{font-family:var(--font-display);font-weight:800;font-size:clamp(.95rem,1.3vw,1.15rem);color:var(--white);text-transform:uppercase;letter-spacing:-.018em;line-height:1.1}
+.diag-card .name small{display:block;font-family:var(--font-display);font-weight:500;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g2);margin-top:.2rem}
+.diag-card h5{font-family:var(--font-display);font-weight:700;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g1);margin-top:.5rem}
+.diag-card ul{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.diag-card li{font-family:var(--font-body);font-size:.78rem;color:var(--g1);line-height:1.45;display:grid;grid-template-columns:auto 1fr;gap:.5rem;align-items:baseline}
+.diag-card li::before{content:'';width:5px;height:5px;background:var(--white);border-radius:50%;display:inline-block;transform:translateY(-2px)}
+.diag-card li.bad::before{background:var(--rust)}
+
+/* ============ SLIDE 10 — CAIS CRISIS (highlight vermelho) ============ */
+.crisis{padding:0;background:var(--ink);display:grid;grid-template-rows:auto 1fr auto}
+.crisis-top{padding:var(--pad);padding-top:calc(var(--pad) + 2.4rem);padding-bottom:.8rem;display:flex;flex-direction:column;gap:.8rem}
+.crisis-tag{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rust);font-weight:700}
+.crisis-tag::before{content:'';width:8px;height:8px;background:var(--rust);border-radius:50%;box-shadow:0 0 0 4px rgba(255,77,46,.16);animation:pulse-r 2.4s ease-in-out infinite}
+@keyframes pulse-r{0%,100%{box-shadow:0 0 0 4px rgba(255,77,46,.16)}50%{box-shadow:0 0 0 9px rgba(255,77,46,.04)}}
+.crisis-title{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,5vw,4rem);line-height:.96;letter-spacing:-.04em;color:var(--white);text-transform:uppercase;padding-right:clamp(0rem,14vw,15rem)}
+.crisis-title strong{color:var(--rust)}
+.crisis-body{padding:0 var(--pad);display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(1.5rem,3vw,2.5rem);overflow:hidden}
+.crisis-stats{display:flex;flex-direction:column;justify-content:center;gap:1rem;border-right:1px solid var(--line);padding-right:clamp(1rem,2vw,2rem)}
+.crisis-stats .row{display:flex;flex-direction:column;gap:.2rem;border-bottom:1px solid var(--line);padding-bottom:.7rem}
+.crisis-stats .row:last-child{border-bottom:0}
+.crisis-stats .v{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,2.6vw,2.4rem);letter-spacing:-.04em;color:var(--rust);line-height:1}
+.crisis-stats .l{font-family:var(--font-display);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g1);font-weight:600}
+
+.crisis-cases{display:flex;flex-direction:column;gap:.5rem;overflow-y:auto;padding-right:.4rem}
+.case-row{display:grid;grid-template-columns:auto auto 1fr;gap:.85rem;padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.78rem;align-items:baseline}
+.case-row:last-child{border-bottom:0}
+.case-row .who{font-family:var(--font-display);font-weight:700;color:var(--white);font-size:.78rem;letter-spacing:-.005em}
+.case-row .when{font-family:var(--font-mono);color:var(--rust);font-weight:600;font-size:.7rem;letter-spacing:-.01em;min-width:4.6rem}
+.case-row .what{color:var(--g1);line-height:1.4}
+.crisis-bottom{padding:1rem var(--pad) calc(var(--pad) + 1.6rem);background:var(--black);border-top:1px solid var(--line)}
+.crisis-bottom .actions{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.crisis-bottom .act{display:flex;flex-direction:column;gap:.3rem;border-left:2px solid var(--rust);padding-left:.85rem}
+.crisis-bottom .act .num{font-family:var(--font-display);font-weight:800;font-size:1.1rem;color:var(--rust);letter-spacing:-.02em}
+.crisis-bottom .act .txt{font-family:var(--font-body);font-size:.78rem;color:var(--g1);line-height:1.4}
+.crisis-bottom .label{font-family:var(--font-display);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--white);font-weight:700;margin-bottom:.6rem}
+
+/* ============ SLIDE — DIAGNÓSTICO CANELA (Guerlin) ============ */
+.guerlin{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-top:clamp(1rem,2vw,1.6rem)}
+.guerlin-text .display{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,6vw,5.4rem);letter-spacing:-.045em;line-height:.92;color:var(--white);text-transform:uppercase}
+.guerlin-text .display .accent{color:var(--zn-lime)}
+.guerlin-text .lead{margin-top:1rem}
+.guerlin-quotes{display:flex;flex-direction:column;gap:1rem;border-left:1px solid var(--line);padding-left:clamp(1rem,2vw,2rem)}
+.gq{display:flex;flex-direction:column;gap:.4rem;padding-bottom:1rem;border-bottom:1px dashed var(--line)}
+.gq:last-child{border-bottom:0;padding-bottom:0}
+.gq blockquote{font-family:var(--font-body);font-style:italic;color:var(--white);font-size:.92rem;line-height:1.5}
+.gq cite{display:block;font-style:normal;font-family:var(--font-display);font-size:.54rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g2);font-weight:500}
+
+/* ============ SLIDE — NEGATIVOS TRANSVERSAIS ============ */
+.neg-grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.neg-card{background:var(--black);padding:clamp(.95rem,1.6vw,1.3rem);display:flex;flex-direction:column;gap:.55rem;position:relative}
+.neg-card .ix{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,3.6vw,3rem);letter-spacing:-.045em;color:var(--rust);line-height:1}
+.neg-card h4{font-family:var(--font-display);font-weight:700;font-size:clamp(.95rem,1.3vw,1.1rem);letter-spacing:-.02em;color:var(--white);text-transform:uppercase;line-height:1.15}
+.neg-card .frequency{font-family:var(--font-display);font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--warn);font-weight:700}
+.neg-card .frequency.high{color:var(--rust)}
+.neg-card p{font-family:var(--font-body);font-size:.76rem;color:var(--g1);line-height:1.5}
+.neg-card blockquote{font-family:var(--font-body);font-size:.74rem;font-style:italic;color:var(--white);border-left:2px solid var(--rust);padding-left:.7rem;line-height:1.4;margin-top:auto}
+
+/* ============ SLIDE — REPLY GAP (service recovery) ============ */
+.recovery{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-top:clamp(1rem,2vw,1.6rem)}
+.recovery .left .display{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,5.6vw,4.8rem);letter-spacing:-.045em;line-height:.92;color:var(--white);text-transform:uppercase}
+.recovery .left .display .rust{color:var(--rust)}
+.recovery .left .lead{margin-top:1rem}
+.recovery-quotes{display:flex;flex-direction:column;gap:.7rem}
+.rq{padding:.8rem 1rem;background:var(--ink-2);border-left:2px solid var(--rust);font-family:var(--font-body);font-size:.84rem;color:var(--white);font-style:italic;line-height:1.4}
+.rq cite{display:block;font-style:normal;font-family:var(--font-display);font-size:.55rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g2);font-weight:500;margin-top:.5rem}
+.recovery-playbook{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.recovery-playbook .pb{display:flex;flex-direction:column;gap:.2rem}
+.recovery-playbook .pb .step{font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:var(--zn-lime);letter-spacing:-.025em}
+.recovery-playbook .pb .label{font-family:var(--font-display);font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g1);font-weight:600;line-height:1.4}
+
+/* ============ ROADMAP 30/60/90 ============ */
+.roadmap{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.rm-col{background:var(--black);padding:clamp(1.1rem,2vw,1.7rem);display:flex;flex-direction:column;gap:1rem}
+.rm-col .head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:.7rem;gap:1rem}
+.rm-col .head h3{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,2.6vw,2.2rem);letter-spacing:-.045em;color:var(--white);line-height:1}
+.rm-col .head h3 small{display:block;font-family:var(--font-display);font-size:.6rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--g2);margin-top:.2rem}
+.rm-col .head .badge{font-family:var(--font-display);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;padding:.2rem .55rem;border:1px solid var(--white);color:var(--white)}
+.rm-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.rm-col li{font-family:var(--font-body);font-size:.85rem;color:var(--g1);line-height:1.45;display:grid;grid-template-columns:auto 1fr;gap:.55rem;align-items:baseline}
+.rm-col li::before{content:'→';font-family:var(--font-display);color:var(--white);font-weight:700;font-size:.9rem}
+.rm-col li strong{color:var(--white);font-weight:600}
+
+/* ============ SIGNOFF + ZN ============ */
+.signoff{padding:0;display:grid;grid-template-rows:1fr auto;background:var(--zn-bg);color:var(--zn-text)}
+.signoff .top{padding:var(--pad);padding-top:calc(var(--pad) + 2.4rem);display:flex;flex-direction:column;justify-content:center;gap:clamp(.8rem,1.4vw,1.2rem);position:relative;overflow:hidden}
+.signoff .top::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(198,255,0,.10),transparent 45%),radial-gradient(circle at 5% 100%,rgba(198,255,0,.04),transparent 50%);pointer-events:none}
+.signoff .top>*{position:relative;z-index:1}
+.signoff .kicker{font-family:var(--font-display);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:600}
+.signoff h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,4.6vw,4rem);line-height:.98;letter-spacing:-.04em;color:var(--zn-text);max-width:28ch;text-transform:uppercase;padding-right:clamp(0rem,14vw,15rem)}
+.signoff h2 strong{color:var(--zn-lime);font-weight:800}
+.signoff h2 .light{font-weight:500;color:var(--g2);display:block}
+.signoff .lead{font-family:var(--font-body);font-size:clamp(1rem,1.4vw,1.2rem);color:var(--g1);max-width:50ch;line-height:1.55}
+.signoff .lead em{color:var(--zn-lime);font-style:normal;font-weight:600}
+.signoff .closing{margin-top:1rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:1100px}
+.signoff .ns{display:flex;flex-direction:column;gap:.4rem;border-top:1px solid rgba(198,255,0,.4);padding-top:.9rem}
+.signoff .ns .num{font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--zn-lime);letter-spacing:-.025em}
+.signoff .ns .lbl{font-family:var(--font-body);font-size:.85rem;color:var(--g1);line-height:1.5}
+
+.zn-signature{background:var(--zn-bg);color:var(--zn-text);padding:clamp(1.4rem,3vw,2rem) var(--pad);display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.5rem,3vw,2.5rem);align-items:center;border-top:1px solid rgba(198,255,0,.35);position:relative}
+.zn-signature::before{content:'';position:absolute;left:var(--pad);top:-1px;width:64px;height:1px;background:var(--zn-lime);box-shadow:0 0 14px rgba(198,255,0,.6)}
+.zn-signature .zn-block{display:flex;flex-direction:column;gap:.5rem}
+.zn-signature .zn-big{font-family:var(--font-zn);font-weight:900;font-size:clamp(2rem,3vw,3rem);letter-spacing:-.08em;color:var(--zn-text);line-height:1;display:inline-flex;align-items:baseline}
+.zn-signature .zn-big .zn-dot{color:var(--zn-lime);text-shadow:0 0 24px rgba(198,255,0,.7)}
+.zn-signature .zn-meta{font-family:var(--font-display);display:flex;flex-direction:column;gap:2px}
+.zn-signature .zn-meta strong{color:var(--zn-text);font-weight:600;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase}
+.zn-signature .zn-meta span{color:rgba(242,242,242,.55);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.zn-signature .center-line{font-family:var(--font-display);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(242,242,242,.4);text-align:center;font-weight:500;line-height:1.7}
+.zn-signature .center-line strong{color:var(--zn-text);font-weight:700}
+.zn-signature .right-info{text-align:right;font-family:var(--font-display);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(242,242,242,.4);line-height:1.7;font-weight:500}
+.zn-signature .right-info strong{color:var(--zn-text);font-weight:700}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal[data-delay="1"]{transition-delay:.08s}
+.reveal[data-delay="2"]{transition-delay:.16s}
+.reveal[data-delay="3"]{transition-delay:.24s}
+.reveal[data-delay="4"]{transition-delay:.32s}
+.reveal[data-delay="5"]{transition-delay:.40s}
+.reveal[data-delay="6"]{transition-delay:.48s}
+.reveal[data-delay="7"]{transition-delay:.56s}
+.reveal[data-delay="8"]{transition-delay:.64s}
+
+/* ============ RESPONSIVO ============ */
+@media (max-height:800px){
+  :root{--display-xl:clamp(2.4rem,9vw,8rem);--display-md:clamp(1.4rem,4vw,3.2rem);--pad:clamp(1.1rem,2.6vw,2.2rem)}
+  .slide{padding-top:3.4rem;padding-bottom:3.4rem}
+}
+@media (max-height:640px){
+  :root{--display-xl:clamp(1.8rem,7vw,5rem);--display-md:clamp(1.2rem,3.6vw,2.4rem);--body:clamp(.74rem,1.1vw,.92rem);--pad:.9rem}
+}
+@media (max-width:980px){
+  .nhoque-hero,.guerlin,.recovery{grid-template-columns:1fr}
+  .crisis-body{grid-template-columns:1fr;gap:1rem}
+  .crisis-stats{border-right:0;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:1rem}
+  .method,.bp-grid,.amb-grid,.diag-overview{grid-template-columns:repeat(2,1fr)}
+  .assets-grid,.neg-grid,.roadmap{grid-template-columns:1fr}
+  .dish-grid{grid-template-columns:repeat(2,1fr)}
+  .dish-card.span2{grid-column:span 2}
+  .dual-stat{grid-template-columns:1fr}
+  .crisis-bottom .actions{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .deck-meta{display:none}
+  .method,.bp-grid,.amb-grid,.diag-overview{grid-template-columns:1fr}
+  .crisis-bottom .actions{grid-template-columns:1fr}
+  .recovery-playbook{grid-template-columns:1fr 1fr}
+  .signoff .closing{grid-template-columns:1fr}
+  .zn-signature{grid-template-columns:1fr;text-align:left}
+  .zn-signature .right-info,.zn-signature .center-line{text-align:left}
+  .cover-meta{grid-template-columns:1fr}
+  .cover-meta .center,.cover-meta .right{text-align:left}
+  .section-pill{display:none}
+  .h-display,.crisis-title{padding-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <a class="zn-logo" href="#cover" aria-label="ZN. — Thiago Zeni"><span>ZN</span><span class="zn-dot">.</span></a>
+  <div class="deck-meta"><span class="pulse"></span><span><span class="brand"><strong>EAT<span class="plus">+</span>VOICE</strong></span> · VOZ DO CLIENTE · DECK #2 · 2026</span></div>
+</header>
+
+<nav class="progress-rail" aria-label="Navegação"></nav>
+
+<main>
+
+  <!-- ===== SLIDE 01 — CAPA ===== -->
+  <section class="slide cover" id="cover" data-name="Capa">
+    <div class="cover-bg"><div class="bg-photo" style="background-image:url('assets/img/amb-7886.jpg')"></div></div>
+    <div class="cover-content">
+      <div class="cover-eyebrow reveal">Apresentação interna · deck #2 · 2026</div>
+      <h1 class="cover-brand reveal" data-delay="1">EAT<span class="plus">+</span>VOICE</h1>
+      <div class="cover-tagline reveal" data-delay="2">VOZ DO CLIENTE · DIAGNÓSTICO OPERACIONAL</div>
+      <p class="cover-subtitle reveal" data-delay="3"><strong>O que 1.000+ reviews</strong> revelam<br/>sobre nossas 5 unidades.</p>
+    </div>
+    <div class="cover-meta">
+      <div class="reveal" data-delay="4">Por <strong>Thiago Zeni</strong> · Sócio investidor</div>
+      <div class="center reveal" data-delay="5">v1.0</div>
+      <div class="right reveal" data-delay="5">Maio · 2026</div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 02 — MÉTODO ===== -->
+  <section class="slide" id="metodo" data-name="Método">
+    <div class="section-pill reveal">Método</div>
+    <h2 class="h-display reveal" data-delay="1">Análise temática<br/>de <span class="accent">75 reviews</span> nas <strong>5 unidades</strong>.</h2>
+
+    <div class="method">
+      <div class="method-card reveal" data-delay="2">
+        <span class="ix">1.000<small>Universo</small></span>
+        <h3>Reviews totais</h3>
+        <p>O total agregado entre as 5 unidades, com notas entre 4.7 ⭐ e 4.9 ⭐.</p>
+      </div>
+      <div class="method-card reveal" data-delay="3">
+        <span class="ix">75<small>Amostra</small></span>
+        <h3>Reviews lidos</h3>
+        <p>15 reviews por unidade · priorizando os mais recentes (2023–2026) e diversidade de notas.</p>
+      </div>
+      <div class="method-card reveal" data-delay="4">
+        <span class="ix">7<small>Padrões</small></span>
+        <h3>Temas recorrentes</h3>
+        <p>5 padrões positivos universais + 7 padrões negativos transversais identificados em leitura cruzada.</p>
+      </div>
+      <div class="method-card reveal" data-delay="5">
+        <span class="ix">14<small>Ações</small></span>
+        <h3>Recomendações</h3>
+        <p>Distribuídas em ciclos de <strong>30 / 60 / 90 dias</strong>, com prioridades operacionais definidas.</p>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">02 / 14</span><span>Escopo &amp; método</span></div>
+  </section>
+
+  <!-- ===== SLIDE 03 — BIG PICTURE (sentimento por unidade) ===== -->
+  <section class="slide" id="bigpicture" data-name="Big picture">
+    <div class="section-pill reveal">Sentimento</div>
+    <h2 class="h-display reveal" data-delay="1">Quatro unidades <span class="accent">saudáveis</span>.<br/>Uma com <span class="rust">cluster crítico</span>.</h2>
+
+    <div class="bp-grid">
+      <div class="bp-card reveal" data-delay="2">
+        <div class="name">Novo Hamburgo</div>
+        <div class="nota">4.7<small>⭐ · 95 reviews</small></div>
+        <div class="desc">Base de fãs leais · atendimento em destaque · 1 review viral isolado.</div>
+        <div class="status">Estável-positivo</div>
+      </div>
+      <div class="bp-card warn reveal" data-delay="3">
+        <div class="name">Moinhos de Vento</div>
+        <div class="nota">4.8<small>⭐ · 548 reviews</small></div>
+        <div class="desc">Maior volume · cliente assíduo manifestando fadiga · cardápio anos sem mudar.</div>
+        <div class="status">Atenção · cardápio</div>
+      </div>
+      <div class="bp-card bad reveal" data-delay="4">
+        <div class="name">Cais Embarcadero</div>
+        <div class="nota">4.7<small>⭐ · 448 reviews</small></div>
+        <div class="desc">Cluster recente de 1★ · falhas sistêmicas em reservas e execução.</div>
+        <div class="status">Crítico · ação urgente</div>
+      </div>
+      <div class="bp-card reveal" data-delay="5">
+        <div class="name">Canela</div>
+        <div class="nota">4.9<small>⭐ · 308 reviews</small></div>
+        <div class="desc">Maior NPS da rede · concentrado em uma pessoa-chave (Guerlin).</div>
+        <div class="status">Excelente · risco humano</div>
+      </div>
+      <div class="bp-card reveal" data-delay="6">
+        <div class="name">Barra Shopping</div>
+        <div class="nota">4.9<small>⭐ · 82 reviews</small></div>
+        <div class="desc">Estreia muito forte · acusação isolada de "comida pré-preparada".</div>
+        <div class="status">Estreia forte</div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">03 / 14</span><span>Visão consolidada</span></div>
+  </section>
+
+  <!-- ===== SLIDE 04 — 3 ATIVOS COMPETITIVOS ===== -->
+  <section class="slide" id="ativos" data-name="Ativos competitivos">
+    <div class="section-pill reveal">Insights de marca</div>
+    <h2 class="h-display reveal" data-delay="1">Três <span class="accent">ativos</span> que apareceram<br/>repetidos nos <strong>75 reviews</strong>.</h2>
+
+    <div class="assets-grid">
+      <div class="asset-card reveal" data-delay="2">
+        <span class="ix">01</span>
+        <h4>Atendimento<br/>relacional</h4>
+        <p class="quote">Clientes citam o nome dos garçons. Acontece em todas as 5 unidades. É raríssimo.</p>
+        <span class="takeaway">Vantagem competitiva real</span>
+      </div>
+      <div class="asset-card reveal" data-delay="3">
+        <span class="ix">02</span>
+        <h4>Inclusividade<br/>alimentar</h4>
+        <p class="quote">Vegano, sem glúten, sem lactose, bariátrico — público de nicho recomenda ativamente.</p>
+        <span class="takeaway">Gatilho de NPS</span>
+      </div>
+      <div class="asset-card reveal" data-delay="4">
+        <span class="ix">03</span>
+        <h4>Repeat<br/>intent</h4>
+        <p class="quote">"Voltaremos" / "I will be back" aparece em ~50% dos reviews 5★. Base perfeita para fidelização.</p>
+        <span class="takeaway">Capital ainda não explorado</span>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">04 / 14</span><span>O que sustenta a marca</span></div>
+  </section>
+
+  <!-- ===== SLIDE 05 — EMBAIXADORES NOMINAIS ===== -->
+  <section class="slide" id="embaixadores" data-name="Embaixadores">
+    <div class="section-pill reveal">Embaixadores</div>
+    <h2 class="h-display reveal" data-delay="1">Os garçons viraram <span class="lime">marca</span>.<br/>Cada saída é perda de NPS.</h2>
+
+    <div class="amb-wrap">
+      <div class="amb-grid">
+        <div class="amb-col reveal" data-delay="2">
+          <div class="head">Novo Hamburgo<small>1 nome</small></div>
+          <div class="name star"><span>Anderson</span><span class="dot"></span></div>
+          <span class="star-tag">Único citado</span>
+        </div>
+        <div class="amb-col reveal" data-delay="3">
+          <div class="head">Moinhos<small>4 nomes</small></div>
+          <div class="name star"><span>Rafa / Rafael</span><span class="dot"></span></div>
+          <div class="name"><span>Marcela</span><span class="dot"></span></div>
+          <div class="name"><span>Matheus</span><span class="dot"></span></div>
+          <div class="name"><span>Lutf Rahman</span><span class="dot"></span></div>
+          <span class="star-tag">Rafa lidera eventos privados</span>
+        </div>
+        <div class="amb-col reveal" data-delay="4">
+          <div class="head">Cais<small>4 nomes</small></div>
+          <div class="name"><span>Carlos</span><span class="dot"></span></div>
+          <div class="name"><span>Marcela</span><span class="dot"></span></div>
+          <div class="name"><span>Lauro</span><span class="dot"></span></div>
+          <div class="name"><span>Andrew</span><span class="dot"></span></div>
+          <span class="star-tag">Distribuído</span>
+        </div>
+        <div class="amb-col reveal" data-delay="5">
+          <div class="head">Canela<small>3 nomes</small></div>
+          <div class="name star"><span>Guerlin</span><span class="dot"></span></div>
+          <div class="name"><span>Evandro</span><span class="dot"></span></div>
+          <div class="name"><span>Bruno</span><span class="dot"></span></div>
+          <span class="star-tag">~80% dos 5★ citam Guerlin</span>
+        </div>
+        <div class="amb-col reveal" data-delay="6">
+          <div class="head">Barra<small>4 nomes</small></div>
+          <div class="name star"><span>Alexandre</span><span class="dot"></span></div>
+          <div class="name"><span>Davenir</span><span class="dot"></span></div>
+          <div class="name"><span>Gabriel</span><span class="dot"></span></div>
+          <div class="name"><span>Davionor</span><span class="dot"></span></div>
+          <span class="star-tag">Cultura distribuída</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">05 / 14</span><span>Mapa de ativos humanos</span></div>
+  </section>
+
+  <!-- ===== SLIDE 06 — NHOQUE ASSINATURA ===== -->
+  <section class="slide" id="nhoque" data-name="Nhoque">
+    <div class="section-pill reveal">Prato-assinatura</div>
+    <div class="nhoque-hero">
+      <div class="nhoque-text">
+        <div class="massive reveal">O <em>nhoque</em><br/>que viajou<br/>pelo RS.</div>
+        <p class="lead reveal" data-delay="1">Mencionado em <strong>4 das 5 unidades</strong>, em variações que mudam mas mantêm a alma. Um asset de marca esperando para virar campanha.</p>
+      </div>
+      <div class="nhoque-list">
+        <div class="item reveal" data-delay="2"><span class="un">Moinhos</span><span class="var">Bechamel + cogumelo</span><span class="cite">5★ · 2025</span></div>
+        <div class="item reveal" data-delay="3"><span class="un">Moinhos</span><span class="var">Sweet potato + carne de panela</span><span class="cite">5★ · 2024</span></div>
+        <div class="item reveal" data-delay="4"><span class="un">Cais</span><span class="var">Pesto · "best I have ever eaten"</span><span class="cite">5★ · 2025</span></div>
+        <div class="item reveal" data-delay="5"><span class="un">Cais</span><span class="var">Carne de panela · "one of the best"</span><span class="cite">5★ · 2025</span></div>
+        <div class="item reveal" data-delay="6"><span class="un">Canela</span><span class="var">Tradicional · breakfast highlight</span><span class="cite">5★ · 2024</span></div>
+        <div class="item reveal" data-delay="7"><span class="un">Barra</span><span class="var">Bechamel + cogumelos salgados</span><span class="cite">5★ · 2025</span></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">06 / 14</span><span>Brand asset · campanha em potencial</span></div>
+  </section>
+
+  <!-- ===== SLIDE 07 — PRATOS / DRINKS ===== -->
+  <section class="slide" id="pratos" data-name="Pratos & drinks">
+    <div class="section-pill reveal">Cardápio · top of mind</div>
+    <h2 class="h-display reveal" data-delay="1">Os pratos e drinks que <span class="accent">aparecem</span> repetidos.</h2>
+
+    <div class="dish-grid">
+      <div class="dish-card span2 reveal" data-delay="2">
+        <span class="cat">Risotos</span>
+        <div class="name">Risoto Negro · Risoto Beet</div>
+        <p class="var">"Beet risotto with salmon — slightly sweet, unforgettable flavor." Mencionados em Cais e Canela. Versão Beet em queda em Cais (over-cooked).</p>
+        <span class="units">CAIS · CANELA · MOINHOS</span>
+      </div>
+      <div class="dish-card reveal" data-delay="3">
+        <span class="cat">Principal</span>
+        <div class="name">MAR / SEA</div>
+        <p class="var">Filé grelhado, purê de mandioquinha, brócolis, banana crocante.</p>
+        <span class="units">NH · CAIS</span>
+      </div>
+      <div class="dish-card reveal" data-delay="4">
+        <span class="cat">Strogonoff</span>
+        <div class="name">NOFF</div>
+        <p class="var">Castanhas + arroz integral orgânico + brócolis + batata-doce frita.</p>
+        <span class="units">MOINHOS</span>
+      </div>
+      <div class="dish-card reveal" data-delay="5">
+        <span class="cat">Entrada</span>
+        <div class="name">Honey Fig Burrata</div>
+        <p class="var">"Left us with our mouths open" — entrada celebrada em duas unidades.</p>
+        <span class="units">NH · MOINHOS</span>
+      </div>
+      <div class="dish-card reveal" data-delay="6">
+        <span class="cat">Exótico</span>
+        <div class="name">Thai Pasta</div>
+        <p class="var">Bifum + legumes salteados, agridoce — destaque em Canela.</p>
+        <span class="units">CANELA</span>
+      </div>
+      <div class="dish-card reveal" data-delay="7">
+        <span class="cat">Drinks</span>
+        <div class="name">Aurora · Negroni · Aperol</div>
+        <p class="var">Aurora virou referência em Cais. Drinks clássicos elogiados consistentemente.</p>
+        <span class="units">CAIS · MOINHOS</span>
+      </div>
+      <div class="dish-card reveal" data-delay="8">
+        <span class="cat">Sobremesa</span>
+        <div class="name">Brownie + sorvete</div>
+        <p class="var">Sobremesa hero em Cais e Barra. Salted caramel teve falha pontual reportada.</p>
+        <span class="units">CAIS · BARRA</span>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">07 / 14</span><span>Brand assets do cardápio</span></div>
+  </section>
+
+  <!-- ===== SLIDE 08 — INCLUSIVIDADE + REPEAT INTENT ===== -->
+  <section class="slide" id="inclusivo" data-name="Inclusividade &amp; Repeat">
+    <div class="section-pill reveal">Diferenciais transversais</div>
+
+    <div class="dual-stat">
+      <div class="col reveal" data-delay="1">
+        <span class="label">Inclusividade alimentar</span>
+        <div class="big">~25%<span class="unit"> dos reviews</span></div>
+        <h3>O nicho que recomenda ativamente</h3>
+        <p>Clientes vegetarianos, veganos, sem glúten, sem lactose e até bariátricos não só elogiam — eles transformam isso em <strong>review proativo</strong>. É um nicho que fala alto.</p>
+        <blockquote>"I'm a strict vegetarian. The waiter Mr. Lutf Rahman gave personal attention to my needs. I felt so thankful."<cite>— Anantharamakris · Moinhos · 5★</cite></blockquote>
+      </div>
+      <div class="col reveal" data-delay="2">
+        <span class="label">Repeat intent</span>
+        <div class="big">~50%<span class="unit"> dos 5★</span></div>
+        <h3>Voltaremos · I will be back</h3>
+        <p>Metade dos reviews positivos contém intenção explícita de retorno. É o sinal mais forte de uma base perfeita para programa de fidelidade próprio — hoje <strong>não capturado sistematicamente</strong>.</p>
+        <blockquote>"When we are in NH we will definitely be back."<cite>— Família · NH · 5★</cite></blockquote>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">08 / 14</span><span>Vantagens estruturais</span></div>
+  </section>
+
+  <!-- ===== SLIDE 09 — DIAGNÓSTICO POR UNIDADE (overview) ===== -->
+  <section class="slide" id="diagnostico" data-name="Diagnósticos">
+    <div class="section-pill reveal">Diagnóstico operacional</div>
+    <h2 class="h-display reveal" data-delay="1">Cinco unidades, <span class="accent">cinco prioridades</span>.</h2>
+
+    <div class="diag-overview">
+      <div class="diag-card good reveal" data-delay="2">
+        <div class="name">Novo Hamburgo<small>4.7 ⭐ · matriz</small></div>
+        <h5>Forças</h5>
+        <ul><li>Anderson · embaixador</li><li>Inclusividade</li><li>Base local fiel</li></ul>
+        <h5>Atenção</h5>
+        <ul><li class="bad">1 review viral 2★ delivery R$75/300g</li></ul>
+      </div>
+      <div class="diag-card warn reveal" data-delay="3">
+        <div class="name">Moinhos<small>4.8 ⭐ · maior volume</small></div>
+        <h5>Forças</h5>
+        <ul><li>Rafa · eventos privados</li><li>Nhoque, drinks</li></ul>
+        <h5>Atenção</h5>
+        <ul><li class="bad">Cardápio "anos sem mudar"</li><li class="bad">Som alto</li><li class="bad">Service recovery</li></ul>
+      </div>
+      <div class="diag-card bad reveal" data-delay="4">
+        <div class="name">Cais<small>4.7 ⭐ · 223 lugares</small></div>
+        <h5>Forças</h5>
+        <ul><li>Vista, drinks, escala</li></ul>
+        <h5>Crítico</h5>
+        <ul><li class="bad">Reservas em crise</li><li class="bad">Execução inconsistente</li><li class="bad">Postura defensiva</li></ul>
+      </div>
+      <div class="diag-card good reveal" data-delay="5">
+        <div class="name">Canela<small>4.9 ⭐ · Jângal</small></div>
+        <h5>Forças</h5>
+        <ul><li>Guerlin · NPS estrutural</li><li>Café da manhã artesanal</li></ul>
+        <h5>Atenção</h5>
+        <ul><li class="bad">Concentração humana</li><li class="bad">Café variedade</li></ul>
+      </div>
+      <div class="diag-card good reveal" data-delay="6">
+        <div class="name">Barra<small>4.9 ⭐ · novo</small></div>
+        <h5>Forças</h5>
+        <ul><li>Cultura distribuída</li><li>Atendimento ágil</li></ul>
+        <h5>Atenção</h5>
+        <ul><li class="bad">"Comida pré-preparada" 1×</li><li class="bad">Cobranças extras</li></ul>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">09 / 14</span><span>Visão consolidada</span></div>
+  </section>
+
+  <!-- ===== SLIDE 10 — CAIS CRISE ===== -->
+  <section class="slide crisis" id="cais" data-name="Cais · cluster crítico">
+    <div class="section-pill bad reveal">Alerta crítico</div>
+
+    <div class="crisis-top">
+      <div class="crisis-tag reveal">Cais Embarcadero · zoom</div>
+      <h2 class="crisis-title reveal" data-delay="1">A <strong>maior unidade</strong> da rede está em<br/>deterioração silenciosa.</h2>
+    </div>
+
+    <div class="crisis-body">
+      <div class="crisis-stats">
+        <div class="row reveal" data-delay="2"><span class="v">6+</span><span class="l">Reviews 1–2★ em 12 meses</span></div>
+        <div class="row reveal" data-delay="3"><span class="v">223</span><span class="l">Lugares · maior unidade</span></div>
+        <div class="row reveal" data-delay="4"><span class="v">100%</span><span class="l">Tema comum: reservas / execução</span></div>
+        <div class="row reveal" data-delay="5"><span class="v">0</span><span class="l">Pedidos de desculpa nos casos</span></div>
+      </div>
+
+      <div class="crisis-cases">
+        <div class="case-row reveal" data-delay="2"><span class="when">Abr/26</span><span class="who">Marcelo C.</span><span class="what">Site indica fechamento 22h. Atendente fechou 21h, irredutível.</span></div>
+        <div class="case-row reveal" data-delay="3"><span class="when">Mar/26</span><span class="who">Pamela H.</span><span class="what">Convite cortesia de aniversário virou taxa R$20. Supervisora "áspera".</span></div>
+        <div class="case-row reveal" data-delay="4"><span class="when">Dez/25</span><span class="who">Sandra N.</span><span class="what">Reserva cancelada sem aviso. "Não estava na agenda".</span></div>
+        <div class="case-row reveal" data-delay="5"><span class="when">Dez/25</span><span class="who">Priscila A.</span><span class="what">Reserva 20 pessoas climatizada → 5 pessoas área externa 35°C.</span></div>
+        <div class="case-row reveal" data-delay="6"><span class="when">Set/25</span><span class="who">Amanda N.</span><span class="what">WhatsApp não-oficial. Rooftop fechado no dia. Mesa em brita. Sem cardápio.</span></div>
+        <div class="case-row reveal" data-delay="7"><span class="when">Jan/25</span><span class="who">Leandro F.</span><span class="what">Bolo de aniversário prometido nunca chegou. Sem retorno.</span></div>
+        <div class="case-row reveal" data-delay="8"><span class="when">2025+</span><span class="who">Diversos</span><span class="what">Salmão cru · risoto fora do ponto · prato congelado · sobremesa sem ingrediente.</span></div>
+      </div>
+    </div>
+
+    <div class="crisis-bottom">
+      <div class="label reveal" data-delay="6">Ação 30 dias</div>
+      <div class="actions">
+        <div class="act reveal" data-delay="6"><span class="num">01</span><span class="txt">Auditoria operacional in loco · gerência local</span></div>
+        <div class="act reveal" data-delay="7"><span class="num">02</span><span class="txt">Unificar canal de reserva · só LeadsFood</span></div>
+        <div class="act reveal" data-delay="7"><span class="num">03</span><span class="txt">SOPs de service recovery · treinamento 3h</span></div>
+        <div class="act reveal" data-delay="8"><span class="num">04</span><span class="txt">Resposta pública aos reviews 1★ · 12 últimos meses</span></div>
+      </div>
+    </div>
+
+    <div class="slide-footer" style="color:rgba(255,77,46,.6);border-top-color:rgba(255,77,46,.3)"><span class="num" style="color:var(--rust)">10 / 14</span><span>Cais Embarcadero · cluster crítico</span></div>
+  </section>
+
+  <!-- ===== SLIDE 11 — CANELA / GUERLIN ===== -->
+  <section class="slide" id="canela" data-name="Canela · Guerlin">
+    <div class="section-pill reveal">Canela · zoom</div>
+
+    <div class="guerlin">
+      <div class="guerlin-text">
+        <div class="display reveal"><span class="accent">~80%</span><br/>dos 5★ citam<br/><strong>Guerlin</strong>.</div>
+        <p class="lead reveal" data-delay="1">Um único nome aparece em quase todo review positivo da unidade Canela. É a maior força da unidade — e a maior concentração de risco humano da rede. Sucessão precisa começar agora.</p>
+      </div>
+
+      <div class="guerlin-quotes">
+        <div class="gq reveal" data-delay="2">
+          <blockquote>"Excellent service, very friendly and helpful guy, Guerlin!"</blockquote>
+          <cite>— Casal · Jun/2024 · 5★</cite>
+        </div>
+        <div class="gq reveal" data-delay="3">
+          <blockquote>"Very attentive staff, especially Guerlain, always friendly and very helpful."</blockquote>
+          <cite>— Casal · Abr/2024 · 5★</cite>
+        </div>
+        <div class="gq reveal" data-delay="4">
+          <blockquote>"Guerlin and Evandro served us, super attentive and friendly. We had a fantastic experience."</blockquote>
+          <cite>— Casal · Out/2023 · 5★</cite>
+        </div>
+        <div class="gq reveal" data-delay="5">
+          <blockquote>"Highlight is Guerlin, completely attentive and dedicated to what he does."</blockquote>
+          <cite>— Casal · Out/2023 · 4★</cite>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">11 / 14</span><span>Risco humano · plano de sucessão</span></div>
+  </section>
+
+  <!-- ===== SLIDE 12 — NEGATIVOS TRANSVERSAIS ===== -->
+  <section class="slide" id="negativos" data-name="Padrões negativos">
+    <div class="section-pill reveal">Padrões negativos</div>
+    <h2 class="h-display reveal" data-delay="1">Sete padrões <span class="rust">transversais</span><br/>identificados em leitura cruzada.</h2>
+
+    <div class="neg-grid">
+      <div class="neg-card reveal" data-delay="2">
+        <span class="ix">01</span>
+        <h4>Gestão de reservas</h4>
+        <span class="frequency high">Cais · 6+ casos</span>
+        <p>Canal ambíguo (WhatsApp informal vs LeadsFood vs Instagram bio). Reservas violadas, canceladas, ou tratadas como exceção.</p>
+      </div>
+      <div class="neg-card reveal" data-delay="3">
+        <span class="ix">02</span>
+        <h4>Service recovery falho</h4>
+        <span class="frequency high">Transversal</span>
+        <p>Sem pedido de desculpa, compensação ou follow-up. "Delegated the blame to the supplier".</p>
+      </div>
+      <div class="neg-card reveal" data-delay="4">
+        <span class="ix">03</span>
+        <h4>Cardápio estagnado</h4>
+        <span class="frequency">Moinhos</span>
+        <blockquote>"as they have been the same dishes for years."</blockquote>
+      </div>
+      <div class="neg-card reveal" data-delay="5">
+        <span class="ix">04</span>
+        <h4>Porção × preço</h4>
+        <span class="frequency">Recorrente</span>
+        <p>R$ 75 / 300g delivery NH (review viral). R$ 71,50 executivo "principalmente carrots".</p>
+      </div>
+      <div class="neg-card reveal" data-delay="6">
+        <span class="ix">05</span>
+        <h4>Inconsistência de execução</h4>
+        <span class="frequency">Cais</span>
+        <p>Salmão cru · risoto over-cooked · prato congelado · sobremesa sem ingrediente principal.</p>
+      </div>
+      <div class="neg-card reveal" data-delay="7">
+        <span class="ix">06</span>
+        <h4>Som alto</h4>
+        <span class="frequency">Moinhos</span>
+        <blockquote>"the sound is annoying and tb too high, especially at the entrance tables."</blockquote>
+      </div>
+      <div class="neg-card reveal" data-delay="8">
+        <span class="ix">07</span>
+        <h4>Temperatura como ferramenta</h4>
+        <span class="frequency">Moinhos · Cais</span>
+        <p>Ar condicionado desligado para forçar saída. Mesa interna substituída por externa 35°C.</p>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">12 / 14</span><span>O que precisa de SOPs</span></div>
+  </section>
+
+  <!-- ===== SLIDE 13 — ROADMAP 30/60/90 ===== -->
+  <section class="slide" id="roadmap" data-name="Roadmap 30/60/90">
+    <div class="section-pill reveal">Plano de ação</div>
+    <h2 class="h-display reveal" data-delay="1">Catorze ações <span class="accent">priorizadas</span> em<br/><strong>30 / 60 / 90 dias</strong>.</h2>
+
+    <div class="roadmap">
+      <div class="rm-col reveal" data-delay="2">
+        <div class="head">
+          <h3>30<small>Dias · urgente</small></h3>
+          <span class="badge">Crítico</span>
+        </div>
+        <ul>
+          <li><strong>Auditoria operacional Cais</strong> com foco em reservas</li>
+          <li><strong>Resposta pública</strong> a reviews 1–2★ últimos 12 meses</li>
+          <li><strong>Unificar canal</strong> de reservas (só LeadsFood)</li>
+          <li><strong>Treinamento</strong> de service recovery (3h gerência)</li>
+        </ul>
+      </div>
+      <div class="rm-col reveal" data-delay="3">
+        <div class="head">
+          <h3>60<small>Dias · importante</small></h3>
+          <span class="badge">Alta</span>
+        </div>
+        <ul>
+          <li><strong>Renovação parcial</strong> cardápio Moinhos (4–6 pratos)</li>
+          <li><strong>Diagnóstico acústico</strong> Moinhos + ajuste técnico</li>
+          <li><strong>Plano sucessão Guerlin</strong> (formar 2 multiplicadores)</li>
+          <li><strong>Auditoria porção × preço</strong> dos pratos críticos</li>
+          <li><strong>Política transparente</strong> de cobranças adicionais</li>
+        </ul>
+      </div>
+      <div class="rm-col reveal" data-delay="4">
+        <div class="head">
+          <h3>90<small>Dias · estrutural</small></h3>
+          <span class="badge">Estratégica</span>
+        </div>
+        <ul>
+          <li><strong>EAT Academy</strong> piloto · formação contínua salão</li>
+          <li><strong>NPS interno</strong> · captura pré-publicação TripAdvisor</li>
+          <li><strong>Programa de fidelidade</strong> próprio · captura email/WhatsApp</li>
+          <li><strong>Sazonalização</strong> do cardápio · 4 trocas/ano</li>
+          <li><strong>Plano de retenção</strong> dos garçons-embaixadores</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide-footer"><span class="num">13 / 14</span><span>Plano operacional</span></div>
+  </section>
+
+  <!-- ===== SLIDE 14 — ENCERRAMENTO ===== -->
+  <section class="slide signoff" id="encerramento" data-name="Encerramento">
+    <div class="section-pill reveal">Encerramento</div>
+
+    <div class="top">
+      <h2 class="reveal" data-delay="1">A vantagem real é <strong>relacional</strong>.<br/><span class="light">A operação precisa estar à altura.</span></h2>
+
+      <p class="lead reveal" data-delay="2">A marca é forte porque pessoas se lembram de outras pessoas. Mas crescer 13× exige que <em>cada unidade</em> consiga reproduzir esse cuidado mesmo quando a hospitalidade não é mais 1-pra-1.</p>
+
+      <div class="closing">
+        <div class="ns reveal" data-delay="3"><span class="num">A.</span><span class="lbl">Cais Embarcadero é a prioridade número um · auditoria nos próximos 30 dias.</span></div>
+        <div class="ns reveal" data-delay="4"><span class="num">B.</span><span class="lbl">Service recovery deve ser playbook em todas as unidades · treinamento 3h.</span></div>
+        <div class="ns reveal" data-delay="5"><span class="num">C.</span><span class="lbl">Embaixadores nominais são ativo crítico · plano de retenção em 90 dias.</span></div>
+      </div>
+    </div>
+
+    <footer class="zn-signature">
+      <div class="zn-block">
+        <span class="zn-big">ZN<span class="zn-dot">.</span></span>
+        <div class="zn-meta">
+          <strong>Thiago Zeni</strong>
+          <span>Sócio investidor · conselheiro estratégico</span>
+        </div>
+      </div>
+      <div class="center-line"><strong>EAT+VOICE · Voz do cliente · Deck #2</strong><br/>Apresentação interna · uso restrito · v1.0 · maio 2026</div>
+      <div class="right-info">Diagnóstico operacional<br/>Próxima revisão · após dados internos</div>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const rail = document.querySelector('.progress-rail');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  slides.forEach((slide, i) => {
+    const pip = document.createElement('button');
+    pip.className = 'pip';
+    pip.setAttribute('aria-label', `Slide ${i+1}: ${slide.dataset.name || ''}`);
+    pip.addEventListener('click', () => slide.scrollIntoView({behavior:'smooth', block:'start'}));
+    rail.appendChild(pip);
+  });
+  const pips = Array.from(rail.querySelectorAll('.pip'));
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  let activeIndex = 0;
+  const activeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.intersectionRatio >= 0.55) {
+        const idx = slides.indexOf(e.target);
+        if (idx !== -1) {
+          activeIndex = idx;
+          pips.forEach((p,i) => p.classList.toggle('active', i === idx));
+        }
+      }
+    });
+  }, { threshold: [0.55] });
+  slides.forEach(s => activeObserver.observe(s));
+
+  document.addEventListener('keydown', (e) => {
+    const k = e.key;
+    if (['ArrowDown','PageDown',' '].includes(k)) { e.preventDefault(); goTo(activeIndex + 1); }
+    else if (['ArrowUp','PageUp'].includes(k)) { e.preventDefault(); goTo(activeIndex - 1); }
+    else if (k === 'Home') { e.preventDefault(); goTo(0); }
+    else if (k === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+  });
+  function goTo(idx){ idx = Math.max(0, Math.min(slides.length - 1, idx)); slides[idx].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'}); }
+
+  let touchStartY = null;
+  document.addEventListener('touchstart', (e) => { if (e.touches.length === 1) touchStartY = e.touches[0].clientY; }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    if (touchStartY === null) return;
+    const endY = (e.changedTouches[0] || {}).clientY ?? touchStartY;
+    const dy = touchStartY - endY;
+    if (Math.abs(dy) > 60) { if (dy > 0) goTo(activeIndex + 1); else goTo(activeIndex - 1); }
+    touchStartY = null;
+  }, { passive: true });
+
+  setTimeout(() => {
+    const first = slides[0];
+    if (first) first.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }, 60);
+})();
+</script>
+</body>
+</html>

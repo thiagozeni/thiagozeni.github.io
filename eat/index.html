@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EAT+KITCHEN · Cockpit de iniciativas · ZN.</title>
+<meta name="description" content="Hub interno de iniciativas estratégicas EAT+KITCHEN · por Thiago Zeni · sócio investidor" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   EAT+KITCHEN · COCKPIT (HUB)
+   Mesma identidade dos decks · landing page com scroll natural
+   ============================================================ */
+
+:root{
+  --black:#000000; --ink:#0A0A0A; --ink-2:#141414; --ink-3:#1F1F1F;
+  --white:#FFFFFF; --paper:#F5F5F5;
+  --g1:#DADADA; --g2:#9A9A9A; --g3:#5A5A5A; --g4:#2A2A2A;
+  --line:rgba(255,255,255,0.10); --line-soft:rgba(255,255,255,0.06);
+  --rust:#FF4D2E; --warn:#FFB534; --good:#9DFF7A;
+
+  --zn-lime:#C6FF00; --zn-text:#F2F2F2; --zn-bg:#050505;
+
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-body:'Manrope',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --font-zn:'Unbounded',sans-serif;
+
+  --pad:clamp(1.4rem,4vw,4rem);
+  --gap:clamp(1rem,2vw,1.6rem);
+
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--black);color:var(--white);font-family:var(--font-body);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+html{scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+.brand{font-family:var(--font-display);font-weight:800;letter-spacing:-0.025em;display:inline;white-space:nowrap}
+.brand .plus{display:inline-block;margin:0 0.04em;font-weight:700;transform:translateY(-0.04em)}
+
+/* ============ HEADER ============ */
+.app-header{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem clamp(1.2rem,3vw,2.4rem);
+  pointer-events:none;
+  background:linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.app-header > *{ pointer-events:auto }
+
+.zn-logo{
+  display:inline-flex;
+  align-items:baseline;
+  gap:.12rem;
+  font-family:var(--font-zn);
+  font-weight:900;
+  font-size:1.25rem;
+  letter-spacing:-.08em;
+  color:var(--zn-text);
+  line-height:1;
+  transition:opacity .3s var(--ease);
+}
+.zn-logo .zn-dot{
+  color:var(--zn-lime);
+  text-shadow:0 0 14px rgba(198,255,0,.6);
+  animation:lime-pulse 3.4s ease-in-out infinite;
+}
+.zn-logo:hover{ opacity:.75 }
+@keyframes lime-pulse{
+  0%,100%{ text-shadow:0 0 12px rgba(198,255,0,.5) }
+  50%{ text-shadow:0 0 24px rgba(198,255,0,.9) }
+}
+
+.deck-meta{
+  display:flex;
+  align-items:center;
+  gap:.85rem;
+  font-family:var(--font-display);
+  font-size:.58rem;
+  color:var(--g2);
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.deck-meta .pulse{
+  width:6px;height:6px;
+  background:var(--zn-lime);
+  border-radius:50%;
+  box-shadow:0 0 0 4px rgba(198,255,0,.16);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ box-shadow:0 0 0 4px rgba(198,255,0,.16) }
+  50%{ box-shadow:0 0 0 9px rgba(198,255,0,.04) }
+}
+
+/* ============ HERO ============ */
+.hero{
+  min-height: 100vh;
+  min-height: 100dvh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:var(--pad);
+  padding-top:calc(var(--pad) + 4rem);
+  padding-bottom:calc(var(--pad) + 2rem);
+  position:relative;
+  border-bottom:1px solid var(--line);
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 80% 30%, rgba(198,255,0,.06), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 10% 90%, rgba(255,77,46,.04), transparent 70%);
+  pointer-events:none;
+}
+.hero > *{ position:relative; z-index:1 }
+
+.hero-eyebrow{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:.7rem;
+  letter-spacing:.35em;
+  color:var(--g1);
+  text-transform:uppercase;
+  display:inline-flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:2rem;
+}
+.hero-eyebrow::before{
+  content:'';display:inline-block;
+  width:36px;height:1px;background:var(--g3);
+}
+.hero-brand{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(3rem, 11vw, 13rem);
+  letter-spacing:-.04em;
+  color:var(--white);
+  line-height:.85;
+  text-transform:uppercase;
+}
+.hero-brand .plus{
+  font-weight:600;
+  display:inline-block;
+  transform:translateY(-0.05em);
+  margin:0 0.02em;
+}
+.hero-tagline{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:clamp(.85rem,1.4vw,1.05rem);
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--g1);
+  margin-top:1.6rem;
+}
+.hero-subtitle{
+  margin-top:2rem;
+  font-family:var(--font-body);
+  font-weight:300;
+  font-size:clamp(1.05rem,1.7vw,1.6rem);
+  color:var(--g1);
+  letter-spacing:0;
+  max-width:48ch;
+  line-height:1.45;
+}
+.hero-subtitle strong{ color:var(--white); font-weight:500 }
+
+.hero-cta-row{
+  margin-top: 3rem;
+  display:flex; gap:1.5rem;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.hero-cta{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:.65rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--black);
+  background:var(--zn-lime);
+  padding:.85rem 1.5rem;
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  transition:all .3s var(--ease);
+  box-shadow:0 0 0 0 rgba(198,255,0,0);
+}
+.hero-cta:hover{
+  background:#dbff4f;
+  box-shadow:0 0 24px rgba(198,255,0,.35);
+  transform:translateY(-1px);
+}
+.hero-cta::after{ content:'→'; font-size:1.05rem; transform:translateX(0); transition:transform .3s var(--ease) }
+.hero-cta:hover::after{ transform:translateX(4px) }
+
+.hero-stats{
+  position:absolute;
+  bottom: clamp(1.6rem, 3vw, 2.6rem);
+  left: var(--pad);
+  right: var(--pad);
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  font-family:var(--font-display);
+  font-size:.6rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--g2);
+  font-weight:500;
+  border-top:1px solid var(--line);
+  padding-top:1.4rem;
+}
+.hero-stats .hs strong{
+  display:block;
+  font-family:var(--font-display);
+  font-size:1.4rem;
+  font-weight:800;
+  color:var(--white);
+  letter-spacing:-.025em;
+  margin-bottom:.3rem;
+}
+
+/* ============ INTRO ============ */
+.intro{
+  padding: clamp(3rem, 6vw, 6rem) var(--pad);
+  border-bottom: 1px solid var(--line);
+  display:grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items:start;
+}
+.intro h2{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(1.6rem,3.4vw,2.6rem);
+  letter-spacing:-.035em;
+  line-height:.96;
+  color:var(--white);
+  text-transform:uppercase;
+}
+.intro h2 .accent{ color:var(--g2); font-weight:500 }
+.intro p{
+  font-family:var(--font-body);
+  font-size:clamp(.95rem,1.2vw,1.1rem);
+  color:var(--g1);
+  line-height:1.65;
+  max-width:60ch;
+}
+.intro p strong{ color:var(--white); font-weight:600 }
+.intro p + p{ margin-top: 1rem }
+
+/* ============ SEÇÕES DE INICIATIVAS ============ */
+.section{
+  padding: clamp(3rem, 6vw, 6rem) var(--pad);
+  border-bottom: 1px solid var(--line);
+}
+.section-head{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.6rem);
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.section-num{
+  font-family:var(--font-display);
+  font-size:.6rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--g2);
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  margin-bottom:.8rem;
+}
+.section-num::before{
+  content:''; width:24px; height:1px; background:var(--g3);
+}
+.section-title{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(1.6rem,3.6vw,3rem);
+  letter-spacing:-.035em;
+  line-height:.95;
+  color:var(--white);
+  text-transform:uppercase;
+}
+.section-title .accent{ color:var(--g2); font-weight:500 }
+.section-meta{
+  font-family:var(--font-display);
+  font-size:.58rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--g2);
+  font-weight:500;
+  text-align:right;
+  line-height:1.6;
+  white-space:nowrap;
+}
+.section-meta strong{ color:var(--white); font-weight:600; font-size:1.1rem; letter-spacing:-.02em; display:block }
+
+/* ============ CARDS GRID ============ */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.card{
+  background: var(--ink);
+  padding: clamp(1.4rem, 2.4vw, 2rem);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap: 1.2rem;
+  position:relative;
+  min-height: 280px;
+  transition: background .35s var(--ease), transform .35s var(--ease);
+  cursor:default;
+}
+.card.live{ cursor:pointer }
+.card.live:hover{
+  background: var(--ink-3);
+  transform: translateY(-2px);
+}
+.card.live::before{
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height: 2px;
+  background: var(--zn-lime);
+  box-shadow: 0 0 12px rgba(198,255,0,.4);
+  transform: scaleX(.18);
+  transform-origin: left;
+  transition: transform .5s var(--ease);
+}
+.card.live:hover::before{ transform: scaleX(1) }
+
+.card.dev{ background: var(--ink) }
+.card.dev::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background: var(--warn);
+  transform: scaleX(.1);
+  transform-origin: left;
+  transition: transform .5s var(--ease);
+}
+.card.dev:hover::before{ transform: scaleX(.4) }
+.card.dev:hover{ background: var(--ink-2); transform: translateY(-2px) }
+
+.card.backlog{ background: var(--ink) }
+.card.backlog::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background: var(--g4);
+}
+
+.card .top{ display:flex; flex-direction:column; gap:.95rem }
+.card .status{
+  font-family:var(--font-display);
+  font-size:.55rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  width:fit-content;
+}
+.card .status .dot{
+  width:6px; height:6px; border-radius:50%;
+  background:var(--g3);
+}
+.card.live .status{ color: var(--zn-lime) }
+.card.live .status .dot{
+  background: var(--zn-lime);
+  box-shadow: 0 0 8px rgba(198,255,0,.6);
+}
+.card.dev .status{ color: var(--warn) }
+.card.dev .status .dot{ background: var(--warn) }
+.card.backlog .status{ color: var(--g2) }
+.card.backlog .status .dot{ background: var(--g3) }
+
+.card .ix{
+  font-family:var(--font-display);
+  font-weight:300;
+  font-size:clamp(2.4rem,3.6vw,3.2rem);
+  letter-spacing:-.04em;
+  color:var(--white);
+  line-height:1;
+  opacity:.55;
+}
+.card.live .ix{ opacity:1 }
+
+.card h3{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(1.05rem,1.5vw,1.3rem);
+  letter-spacing:-.022em;
+  color:var(--white);
+  text-transform:uppercase;
+  line-height:1.18;
+}
+.card .desc{
+  font-family:var(--font-body);
+  font-size:.85rem;
+  color:var(--g1);
+  line-height:1.55;
+}
+.card .meta{
+  display:flex;
+  gap:1.5rem;
+  margin-top:auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  flex-wrap:wrap;
+}
+.card .meta .m{
+  display:flex;
+  flex-direction:column;
+  gap:.15rem;
+  flex:1;
+  min-width:7rem;
+}
+.card .meta .m .l{
+  font-family:var(--font-display);
+  font-size:.5rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--g3);
+  font-weight:600;
+}
+.card .meta .m .v{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:.78rem;
+  color:var(--white);
+  letter-spacing:-.005em;
+}
+.card.backlog .meta .m .v{ color: var(--g1) }
+
+.card .open{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:.6rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--zn-lime);
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  margin-top: 1rem;
+  padding-top:1rem;
+  border-top:1px solid var(--line);
+  transition: gap .3s var(--ease);
+}
+.card.live:hover .open{ gap:.85rem }
+.card .open::after{ content:'→'; font-size:1rem; transform:translateY(-1px) }
+
+/* ============ FOOTER · ZN. SIGNATURE ============ */
+.zn-signature{
+  background:var(--zn-bg);
+  color:var(--zn-text);
+  padding:clamp(1.6rem,3vw,2.4rem) var(--pad);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:clamp(1.5rem,3vw,2.5rem);
+  align-items:center;
+  border-top:1px solid rgba(198,255,0,.35);
+  position:relative;
+}
+.zn-signature::before{
+  content:'';
+  position:absolute;
+  left:var(--pad); top:-1px;
+  width:64px; height:1px;
+  background:var(--zn-lime);
+  box-shadow:0 0 14px rgba(198,255,0,.6);
+}
+.zn-signature .zn-block{ display:flex; flex-direction:column; gap:.5rem }
+.zn-signature .zn-big{
+  font-family:var(--font-zn);
+  font-weight:900;
+  font-size:clamp(2rem,3vw,3rem);
+  letter-spacing:-.08em;
+  color:var(--zn-text);
+  line-height:1;
+  display:inline-flex;
+  align-items:baseline;
+}
+.zn-signature .zn-big .zn-dot{
+  color:var(--zn-lime);
+  text-shadow:0 0 24px rgba(198,255,0,.7);
+}
+.zn-signature .zn-meta{ display:flex; flex-direction:column; gap:2px }
+.zn-signature .zn-meta strong{
+  color:var(--zn-text);
+  font-weight:600;
+  font-size:.72rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+}
+.zn-signature .zn-meta span{
+  color:rgba(242,242,242,.55);
+  font-size:.65rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.zn-signature .center-line{
+  font-family:var(--font-display);
+  font-size:.58rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:rgba(242,242,242,.4);
+  text-align:center;
+  font-weight:500;
+  line-height:1.7;
+}
+.zn-signature .center-line strong{ color:var(--zn-text); font-weight:700 }
+.zn-signature .right-info{
+  text-align:right;
+  font-family:var(--font-display);
+  font-size:.58rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:rgba(242,242,242,.4);
+  line-height:1.7;
+  font-weight:500;
+}
+.zn-signature .right-info strong{ color:var(--zn-text); font-weight:700 }
+
+/* ============ REVEAL ============ */
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .85s var(--ease), transform .85s var(--ease);
+}
+.reveal.in{ opacity:1; transform:translateY(0) }
+.reveal[data-delay="1"]{ transition-delay:.06s }
+.reveal[data-delay="2"]{ transition-delay:.12s }
+.reveal[data-delay="3"]{ transition-delay:.18s }
+.reveal[data-delay="4"]{ transition-delay:.24s }
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 980px){
+  .grid{ grid-template-columns: repeat(2, 1fr) }
+  .intro{ grid-template-columns: 1fr }
+  .hero-stats{ grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1rem }
+  .section-head{ grid-template-columns: 1fr; gap: 1rem }
+  .section-meta{ text-align: left }
+}
+@media (max-width: 640px){
+  .deck-meta{ display: none }
+  .grid{ grid-template-columns: 1fr }
+  .hero-stats{ grid-template-columns: 1fr 1fr }
+  .zn-signature{ grid-template-columns: 1fr; text-align: left }
+  .zn-signature .right-info, .zn-signature .center-line{ text-align: left }
+  .hero-cta-row{ flex-direction: column; align-items: stretch }
+  .hero-cta{ justify-content: space-between }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    transition-duration:.2s!important;
+  }
+  .reveal{ opacity:1; transform:none }
+  html{ scroll-behavior: auto }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="app-header">
+  <a class="zn-logo" href="#hero" aria-label="ZN. — Thiago Zeni">
+    <span>ZN</span><span class="zn-dot">.</span>
+  </a>
+  <div class="deck-meta">
+    <span class="pulse" aria-hidden="true"></span>
+    <span><span class="brand"><strong>EAT<span class="plus">+</span>KITCHEN</strong></span> · COCKPIT INTERNO · 2026</span>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero-eyebrow reveal">Cockpit interno · iniciativas estratégicas</div>
+
+  <h1 class="hero-brand reveal" data-delay="1">EAT<span class="plus">+</span>KITCHEN</h1>
+
+  <div class="hero-tagline reveal" data-delay="2">PESSOAS. COMIDA. VERDADE.</div>
+
+  <p class="hero-subtitle reveal" data-delay="3">
+    <strong>Hub de iniciativas em curso e pipeline.</strong><br/>
+    Decks estratégicos, novos produtos e frentes de pesquisa — tudo num só lugar.
+  </p>
+
+  <div class="hero-cta-row reveal" data-delay="4">
+    <a class="hero-cta" href="#apresentacoes">Ver decks ativos</a>
+    <a class="hero-cta" href="#pipeline" style="background:transparent;color:var(--white);outline:1px solid var(--white);outline-offset:-1px;box-shadow:none">Ver pipeline</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hs reveal"><strong>02</strong>Apresentações ativas</div>
+    <div class="hs reveal" data-delay="1"><strong>03</strong>Frentes em desenvolvimento</div>
+    <div class="hs reveal" data-delay="2"><strong>09</strong>Iniciativas em pipeline</div>
+    <div class="hs reveal" data-delay="3"><strong>v1.0</strong>Maio · 2026</div>
+  </div>
+</section>
+
+<!-- ========== INTRO ========== -->
+<section class="intro">
+  <h2 class="reveal">Onde estamos<br/><span class="accent">e para onde vamos</span>.</h2>
+  <div>
+    <p class="reveal">
+      Este cockpit organiza, num só lugar, <strong>tudo o que está em curso ou em pipeline</strong> nas frentes estratégicas que cobrem o conselho da EAT+KITCHEN — comunicação, tecnologia, estratégia e inteligência.
+    </p>
+    <p class="reveal" data-delay="1">
+      Decks marcados como <strong style="color:var(--zn-lime)">ativos</strong> já estão prontos para uso e podem ser abertos a qualquer momento. Iniciativas <strong style="color:var(--warn)">em desenvolvimento</strong> têm trabalho em andamento. Iniciativas <strong style="color:var(--g1)">em pipeline</strong> estão priorizadas mas ainda não iniciadas.
+    </p>
+  </div>
+</section>
+
+<!-- ========== APRESENTAÇÕES & COMUNICAÇÃO ========== -->
+<section class="section" id="apresentacoes">
+  <div class="section-head">
+    <div>
+      <div class="section-num">01 · Comunicação</div>
+      <h2 class="section-title">Apresentações &amp;<br/><span class="accent">comunicação institucional</span></h2>
+    </div>
+    <div class="section-meta">
+      <strong>05 frentes</strong>
+      02 ativas · 03 pipeline
+    </div>
+  </div>
+
+  <div class="grid">
+    <a class="card live reveal" href="apresentacao/index.html" data-delay="1">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Ativo</span>
+        <span class="ix">01</span>
+        <h3>Mapeamento estratégico</h3>
+        <p class="desc">Fotografia institucional da marca · 5 unidades, métricas reais (R$ 73M / 917k pessoas), mapa de canais e 5 alertas críticos.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Deck institucional</span></div>
+        <div class="m"><span class="l">Slides</span><span class="v">19</span></div>
+      </div>
+      <span class="open">Abrir deck</span>
+    </a>
+
+    <a class="card live reveal" href="apresentacao-voz-cliente/index.html" data-delay="2">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Ativo</span>
+        <span class="ix">02</span>
+        <h3>EAT+VOICE · Voz do cliente</h3>
+        <p class="desc">Diagnóstico operacional baseado em 1.000+ reviews TripAdvisor · cluster crítico Cais · 14 ações 30/60/90 dias.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Deck operacional</span></div>
+        <div class="m"><span class="l">Slides</span><span class="v">14</span></div>
+      </div>
+      <span class="open">Abrir deck</span>
+    </a>
+
+    <div class="card backlog reveal" data-delay="3">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">03</span>
+        <h3>Brand guide · sistema de identidade</h3>
+        <p class="desc">Manual normativo da marca · paleta, tipografia, logo EAT+, sufixos (EAT+EVENTOS, EAT+BOX), aplicações físicas e digitais. Codifica o sistema que hoje vive em PDFs internos.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Manual de marca</span></div>
+        <div class="m"><span class="l">Formato</span><span class="v">Doc + biblioteca</span></div>
+      </div>
+    </div>
+
+    <div class="card backlog reveal" data-delay="4">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">04</span>
+        <h3>Apresentação de expansão · interessados</h3>
+        <p class="desc">Vertical externa para investidores e parceiros interessados em integrar a expansão SP/SC/PR. Material público com narrativa, números e oportunidade.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Deck externo</span></div>
+        <div class="m"><span class="l">Slides</span><span class="v">28</span></div>
+      </div>
+    </div>
+
+    <div class="card backlog reveal" data-delay="4">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">05</span>
+        <h3>Novo site institucional</h3>
+        <p class="desc">Refresh do eatkitchen.com.br · corrige as 5 rotas em 404, captura email, prepara expansão e deixa o site à altura do Instagram.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Web institucional</span></div>
+        <div class="m"><span class="l">Domínio</span><span class="v">eatkitchen.com.br</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TECNOLOGIA & PRODUTO ========== -->
+<section class="section" id="pipeline">
+  <div class="section-head">
+    <div>
+      <div class="section-num">02 · Tecnologia</div>
+      <h2 class="section-title">Tecnologia &amp;<br/><span class="accent">produtos próprios</span></h2>
+    </div>
+    <div class="section-meta">
+      <strong>03 frentes</strong>
+      03 pipeline
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card backlog reveal">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">06</span>
+        <h3>App próprio · pedidos &amp; fidelidade</h3>
+        <p class="desc">iOS/Android com pedidos na mesa, take away, delivery e programa de fidelidade integrados. Captura ~917k clientes que hoje circulam sem CRM.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Stack</span><span class="v">Mobile nativo</span></div>
+        <div class="m"><span class="l">Impacto</span><span class="v">CRM + LTV</span></div>
+      </div>
+    </div>
+
+    <div class="card backlog reveal" data-delay="1">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">07</span>
+        <h3>Sistema de pedidos por tablet</h3>
+        <p class="desc">Auto-atendimento nas mesas · POS-integrado · reduz fricção do garçom em horários de pico e libera tempo para hospitalidade relacional.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Stack</span><span class="v">Web/PWA tablet</span></div>
+        <div class="m"><span class="l">Impacto</span><span class="v">Operação</span></div>
+      </div>
+    </div>
+
+    <div class="card backlog reveal" data-delay="2">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">08</span>
+        <h3>Control-center de gestão</h3>
+        <p class="desc">Painel executivo unificando vendas, ocupação, NPS, ticket médio e P&amp;L das 5 unidades. Base de decisão semanal do conselho.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Stack</span><span class="v">BI / dashboard web</span></div>
+        <div class="m"><span class="l">Audiência</span><span class="v">Conselho + diretoria</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ESTRATÉGIA & INTELIGÊNCIA ========== -->
+<section class="section" id="estrategia">
+  <div class="section-head">
+    <div>
+      <div class="section-num">03 · Estratégia</div>
+      <h2 class="section-title">Estratégia &amp;<br/><span class="accent">inteligência de mercado</span></h2>
+    </div>
+    <div class="section-meta">
+      <strong>03 frentes</strong>
+      03 pipeline
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card backlog reveal">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">09</span>
+        <h3>EAT+WELLNESS · expansão</h3>
+        <p class="desc">Ampliação das iniciativas do clube · conteúdo, eventos, parceiros de saúde. Transforma o EAT+WELLNESS de selo para vertical com receita própria.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Vertical de produto</span></div>
+        <div class="m"><span class="l">Status</span><span class="v">A planejar</span></div>
+      </div>
+    </div>
+
+    <div class="card backlog reveal" data-delay="1">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">10</span>
+        <h3>Análise de competitividade</h3>
+        <p class="desc">Posição competitiva interna · benchmarks de margem, ticket médio, ocupação e eficiência operacional. Diagnóstico antes de captação.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Estudo interno</span></div>
+        <div class="m"><span class="l">Status</span><span class="v">A planejar</span></div>
+      </div>
+    </div>
+
+    <div class="card backlog reveal" data-delay="2">
+      <div class="top">
+        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="ix">11</span>
+        <h3>Análise competitiva regional</h3>
+        <p class="desc">Mapeamento de players em <strong>RS · SC · PR · SP</strong> · landscape pré-expansão. Lista de concorrentes definida pelos sócios — sem inferência.</p>
+      </div>
+      <div class="meta">
+        <div class="m"><span class="l">Tipo</span><span class="v">Pesquisa de mercado</span></div>
+        <div class="m"><span class="l">Estados</span><span class="v">RS · SC · PR · SP</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER · ZN. SIGNATURE ========== -->
+<footer class="zn-signature">
+  <div class="zn-block">
+    <span class="zn-big">ZN<span class="zn-dot">.</span></span>
+    <div class="zn-meta">
+      <strong>Thiago Zeni</strong>
+      <span>Sócio investidor · conselheiro estratégico</span>
+    </div>
+  </div>
+  <div class="center-line">
+    <strong>EAT+KITCHEN · Cockpit interno · v1.0</strong><br/>
+    Uso restrito · maio 2026
+  </div>
+  <div class="right-info">
+    Próximas iniciativas<br/>
+    Adicionadas ao hub conforme priorização
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  reveals.forEach(el => obs.observe(el));
+
+  // first paint reveal
+  setTimeout(() => {
+    document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'));
+  }, 60);
+})();
+</script>
+</body>
+</html>
