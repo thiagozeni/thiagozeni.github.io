@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Kick-off RBA × IA — 08/05/2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&display=swap" rel="stylesheet" />
+
+<!-- Reusa o sistema visual do diagnóstico -->
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="animations.css" />
+
+<style>
+  /* ----- Layout helpers — espelham o deck do diagnóstico ----- */
+  .frame {
+    padding: 110px 120px 96px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .sec-label {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-fg-mute);
+  }
+  .slide--cream .sec-label { color: rgba(10, 37, 95, 0.55); }
+
+  /* ----- Capa ----- */
+  .cover {
+    background: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-arcs {
+    position: absolute;
+    right: -4%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 140%;
+    width: auto;
+    opacity: 0.08;
+    pointer-events: none;
+    user-select: none;
+  }
+  .cover-content {
+    position: relative;
+    padding: 120px 120px 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-fg-dim);
+  }
+  .cover-logo { display: flex; align-items: center; gap: 28px; }
+  .cover-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-orange);
+    margin-bottom: 48px;
+  }
+  .cover-title {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-size: 168px;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--color-cream-warm);
+    margin: 0;
+  }
+  .cover-title em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--color-orange);
+  }
+  .cover-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 60px;
+    color: var(--color-fg-dim);
+    font-size: 24px;
+  }
+  .cover-meta strong { color: var(--color-fg); font-weight: 500; }
+
+  /* ----- Slide title padrão ----- */
+  .slide-title {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-size: 100px;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 64px;
+    max-width: 1560px;
+  }
+  .slide-title em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--color-orange);
+  }
+
+  /* ----- Linha do tempo (Slide 2) ----- */
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 32px;
+    flex: 1;
+    align-items: stretch;
+    min-height: 0;
+  }
+  .era-card {
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+  .era-card--now {
+    background: rgba(249, 99, 59, 0.08);
+    border-color: var(--color-orange);
+  }
+  .era-tag {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-fg-mute);
+  }
+  .era-card--now .era-tag { color: var(--color-orange); }
+  .era-title {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-size: 64px;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .era-title em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--color-orange);
+  }
+  .era-body {
+    font-size: 26px;
+    line-height: 1.4;
+    color: var(--color-fg-dim);
+    margin: 0;
+  }
+  .era-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-orange);
+    font-size: 64px;
+  }
+
+  /* ----- Agenda 4 frentes (Slide 3) ----- */
+  .agenda-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: agenda;
+  }
+  .agenda-list li {
+    counter-increment: agenda;
+    display: grid;
+    grid-template-columns: 120px 1fr 320px;
+    gap: 40px;
+    align-items: baseline;
+    padding: 32px 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .agenda-list li:last-child { border-bottom: 1px solid var(--color-line); }
+  .agenda-list li::before {
+    content: "0" counter(agenda);
+    font-family: var(--font-mono);
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    color: var(--color-orange);
+  }
+  .agenda-item-title {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-size: 52px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .agenda-item-title em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--color-orange);
+  }
+  .agenda-item-meta {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-fg-mute);
+    text-align: right;
+  }
+
+  /* ----- Three-up cards (Slides 4 e 5) ----- */
+  .three-up {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    flex: 1;
+    min-height: 0;
+  }
+  .myth-card, .promise-card {
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .slide--cream .myth-card {
+    border-color: rgba(10, 37, 95, 0.18);
+    background: rgba(10, 37, 95, 0.025);
+  }
+  .myth-mark, .promise-mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .myth-mark {
+    background: rgba(249, 99, 59, 0.12);
+    color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+  }
+  .slide--cream .myth-mark {
+    background: rgba(249, 99, 59, 0.08);
+  }
+  .promise-mark {
+    background: var(--color-orange);
+    color: #0a0a0a;
+  }
+  .card-title {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-size: 44px;
+    line-height: 1.05;
+    margin: 0;
+  }
+  .card-title em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--color-orange);
+  }
+  .card-body {
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--color-fg-dim);
+  }
+  .slide--cream .card-body { color: rgba(10, 37, 95, 0.72); }
+
+  /* ----- Como vocês participam (Slide 6) ----- */
+  .participate-list {
+    list-style: none;
+    margin: 0 0 40px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .participate-list li {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 28px;
+    align-items: baseline;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .participate-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .participate-marker {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-orange);
+  }
+  .participate-text {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-size: 36px;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  .participate-text em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--color-orange);
+  }
+  .participate-text small {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.35;
+    color: var(--color-fg-dim);
+    font-style: normal;
+  }
+
+  .closing-quote {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-cream-warm);
+    margin: 0;
+    max-width: 1500px;
+  }
+  .closing-quote em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--color-orange);
+  }
+
+  /* ----- Estado inicial dos elementos animados via custom WAAPI ----- */
+  .era-arrow,
+  .participate-list li,
+  .closing-quote,
+  .myth-mark,
+  .promise-mark {
+    opacity: 0;
+    will-change: opacity, transform, filter;
+  }
+
+  /* Quando o slide é exportado para print/PDF, restaura visibilidade */
+  @media print {
+    .era-arrow,
+    .participate-list li,
+    .closing-quote,
+    .myth-mark,
+    .promise-mark { opacity: 1 !important; transform: none !important; }
+  }
+
+  /* Glow sutil de fundo nos slides escuros — drift contínuo via opacidade */
+  .slide:not(.cover):not(.slide--cream)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(45% 55% at 88% 35%, rgba(249,99,59,0.10), transparent 70%),
+      radial-gradient(40% 50% at 12% 75%, rgba(187,180,240,0.08), transparent 70%);
+    opacity: 0;
+    transition: opacity 1200ms var(--anim-ease-out);
+  }
+  .slide:not(.cover):not(.slide--cream)[data-deck-active]::before {
+    opacity: 1;
+    animation: rba-kickoff-breathe 12s ease-in-out infinite;
+  }
+  @keyframes rba-kickoff-breathe {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50%      { transform: translate3d(-30px, 20px, 0) scale(1.06); }
+  }
+  .slide > .frame { position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+  <!-- ==================================================================
+       SLIDE 1 — CAPA
+       ================================================================== -->
+  <section data-label="Capa" class="slide cover">
+    <div class="cover-content">
+      <div class="cover-top">
+        <div class="cover-logo">
+          <img src="assets/rba-plus-logo.webp" alt="RBA+" style="height: 34px;" />
+          <img src="assets/selo-50anos.webp" alt="50 anos" style="height: 44px; opacity: 0.85;" />
+        </div>
+        <div>Equipe RBA · 08 mai 2026</div>
+      </div>
+
+      <div class="cover-main">
+        <div class="cover-eyebrow">Kick-off</div>
+        <h1 class="cover-title">RBA <em>×</em> IA<br/>começa <em>agora</em>.</h1>
+      </div>
+
+      <div></div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       SLIDE 2 — LINHA DO TEMPO
+       Era das conversas (até 2024) → Era do harness (final 2025+)
+       ================================================================== -->
+  <section data-label="Linha do tempo" class="slide">
+    <div class="frame">
+      <div class="sec-label" style="margin-bottom: 40px;">Onde estamos no mundo da IA</div>
+      <h2 class="slide-title">A IA mudou de <em>era</em> em poucos meses.</h2>
+
+      <div class="timeline">
+        <div class="era-card card">
+          <div class="era-tag">Até 2024</div>
+          <h3 class="era-title">Era das <em>conversas</em></h3>
+          <p class="era-body">
+            ChatGPT escreve texto. Midjourney faz imagem. Modelos de vídeo, modelos de áudio. Tudo isolado — você precisa pedir, copiar, colar, juntar.
+          </p>
+        </div>
+
+        <div class="era-arrow">→</div>
+
+        <div class="era-card card era-card--now">
+          <div class="era-tag">Final de 2025 em diante</div>
+          <h3 class="era-title">Era do <em>harness</em></h3>
+          <p class="era-body">
+            Os modelos pararam de competir em "quem é mais inteligente". Começaram a competir em <strong style="color:var(--color-fg)">quem entrega trabalho real, do começo ao fim</strong>. A diferença entre saber muito e resolver coisa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       SLIDE 3 — O QUE VAMOS FAZER JUNTOS
+       4 frentes em alto nível
+       ================================================================== -->
+  <section data-label="O que vamos fazer juntos" class="slide">
+    <div class="frame">
+      <div class="sec-label" style="margin-bottom: 40px;">O trabalho que começa agora</div>
+      <h2 class="slide-title" style="margin-bottom: 56px;">O que vamos <em>fazer juntos</em>.</h2>
+
+      <ol class="agenda-list">
+        <li>
+          <div class="agenda-item-title"><em>Mapear</em> o cotidiano de cada setor</div>
+          <div class="agenda-item-meta">Mídia · Atendimento · Criação · Planejamento</div>
+        </li>
+        <li>
+          <div class="agenda-item-title"><em>Testar</em> ferramentas com quem faz</div>
+          <div class="agenda-item-meta">Sem cobrança · Sem afobação</div>
+        </li>
+        <li>
+          <div class="agenda-item-title"><em>Documentar</em> o que funciona</div>
+          <div class="agenda-item-meta">Descartar o que não · Sem apego</div>
+        </li>
+        <li>
+          <div class="agenda-item-title"><em>Construir</em> o repertório RBA</div>
+          <div class="agenda-item-meta">Aos poucos · Próprio · Não é pacote pronto</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       SLIDE 4 — NÃO É ISSO
+       Desmistificar receios — fundo cream para mudar tom
+       ================================================================== -->
+  <section data-label="Não é isso" class="slide slide--cream">
+    <div class="frame">
+      <div class="sec-label" style="margin-bottom: 40px;">Antes de falar do que É — o que NÃO é</div>
+      <h2 class="slide-title" style="color: var(--color-ink); margin-bottom: 56px;">Esse trabalho <em>não é</em>...</h2>
+
+      <div class="three-up">
+        <div class="myth-card">
+          <div class="myth-mark">×</div>
+          <h3 class="card-title">Substituir <em>pessoas</em></h3>
+          <p class="card-body">
+            Não é demitir três e deixar o GPT fazer. Quem fala isso não entendeu o que IA é hoje.
+          </p>
+        </div>
+
+        <div class="myth-card">
+          <div class="myth-mark">×</div>
+          <h3 class="card-title">Delegar <em>tudo</em></h3>
+          <p class="card-body">
+            Os modelos erram, alucinam, dependem de contexto que só vocês têm. IA sem humano por perto vira máquina de gerar lixo bonito.
+          </p>
+        </div>
+
+        <div class="myth-card">
+          <div class="myth-mark">×</div>
+          <h3 class="card-title">Mágica da <em>noite pro dia</em></h3>
+          <p class="card-body">
+            Não vai resolver tudo na sexta-feira que vem. É construção lenta, com tentativa e erro. Quem promete revolução em 30 dias está vendendo curso.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       SLIDE 5 — É ISSO
+       Reposicionar com energia positiva
+       ================================================================== -->
+  <section data-label="É isso" class="slide">
+    <div class="frame">
+      <div class="sec-label" style="margin-bottom: 40px;">O que É, então</div>
+      <h2 class="slide-title">Esse trabalho <em>é</em>...</h2>
+
+      <div class="three-up">
+        <div class="myth-card promise-card">
+          <div class="promise-mark">✓</div>
+          <h3 class="card-title">Tirar <em>tarefa cansativa</em> de cima</h3>
+          <p class="card-body">
+            Relatório braçal, copia-e-cola, formatação, busca em PDF, transcrição, organização de pasta. Aquela parte que ninguém escolheria fazer se pudesse evitar.
+          </p>
+        </div>
+
+        <div class="myth-card promise-card">
+          <div class="promise-mark">✓</div>
+          <h3 class="card-title">Liberar <em>tempo</em> para o que importa</h3>
+          <p class="card-body">
+            Criatividade, julgamento, relação com cliente, estratégia. A parte do trabalho onde o seu olhar e o seu repertório fazem diferença — essa fica com você. Sempre.
+          </p>
+        </div>
+
+        <div class="myth-card promise-card">
+          <div class="promise-mark">✓</div>
+          <h3 class="card-title">Humano sempre <em>no comando</em></h3>
+          <p class="card-body">
+            A IA propõe, vocês decidem. A IA rascunha, vocês refinam. A IA encontra, vocês validam. Esse é o pacto. O objetivo é trabalhar menos cansado, não trabalhar mais.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       SLIDE 6 — COMO VOCÊS PARTICIPAM
+       Convite + chamada para protagonismo
+       ================================================================== -->
+  <section data-label="Como vocês participam" class="slide">
+    <div class="frame">
+      <div class="sec-label" style="margin-bottom: 32px;">A parte mais importante</div>
+      <h2 class="slide-title" style="font-size: 80px; margin-bottom: 48px;">Como <em>vocês</em> entram nessa.</h2>
+
+      <ul class="participate-list">
+        <li>
+          <div class="participate-marker">01</div>
+          <div class="participate-text">
+            <em>Conversas por setor</em>
+            <small>Em pequenos grupos, vocês contam o que cansa no dia-a-dia. Não é entrevista — é bate-papo.</small>
+          </div>
+        </li>
+        <li>
+          <div class="participate-marker">02</div>
+          <div class="participate-text">
+            <em>Testes guiados</em>
+            <small>Sem cobrança, sem "tem que dar certo de primeira". Experimentação no ritmo do trabalho.</small>
+          </div>
+        </li>
+        <li>
+          <div class="participate-marker">03</div>
+          <div class="participate-text">
+            <em>Canais abertos</em>
+            <small>Dúvida, sugestão, reclamação. Tudo conta. Inclusive "isso aqui não funcionou porque…"</small>
+          </div>
+        </li>
+        <li>
+          <div class="participate-marker">04</div>
+          <div class="participate-text">
+            <em>Curiosidade reconhecida</em>
+            <small>Quem experimenta ajuda a moldar como a RBA usa IA daqui pra frente.</small>
+          </div>
+        </li>
+      </ul>
+
+      <p class="closing-quote">
+        A gente não vai fazer isso <em>para</em> vocês.<br/>
+        A gente vai fazer <em>com</em> vocês.
+      </p>
+    </div>
+  </section>
+
+</deck-stage>
+
+<!-- Speaker notes (lidas pelo deck-stage e propagadas para o painel pai, se houver) -->
+<script type="application/json" id="speaker-notes">
+{
+  "0": "CAPA — Afonso abre. 3-4 min. Legitima o trabalho: prioridade da RBA, não moda. Apresenta Thiago como parceiro. Reforça: time todo é parte disso.",
+  "1": "LINHA DO TEMPO — Thiago. 3-4 min. Capítulo 1 (até 2024): conversas isoladas. Capítulo 2 (final 2025+): harness, IA executa de verdade. 'Em janeiro a gente conversava com a IA. Hoje a IA executa para a gente.' Fecha com: 'mas executa não significa sozinha — já já volto nisso.'",
+  "2": "O QUE VAMOS FAZER JUNTOS — Thiago. 4-5 min. Visão alta, sem listar projetos. 'A pergunta não é qual ferramenta a gente compra. A pergunta é o que cansa vocês no dia-a-dia que pode deixar de cansar.' Reforço: nada acontece sem vocês. Construção em ondas, sem afobação.",
+  "3": "NÃO É ISSO — Thiago. 3 min. Endereçar receios de frente. Tom firme, direto. 'IA sem humano vira máquina de gerar lixo bonito.' 'Quem promete revolução em 30 dias está vendendo curso.'",
+  "4": "É ISSO — Thiago. 3-4 min. Energia positiva, pintar o depois. 'Sabe aquela parte do seu trabalho que ninguém escolheria fazer? É aí que a IA entra. Sabe a parte que dá orgulho? Essa fica com você. Sempre.' 'Trabalhar menos cansado, não trabalhar mais.'",
+  "5": "COMO VOCÊS PARTICIPAM — Thiago. 3-4 min. Mover de ouvinte para participante. 'Vocês não são plateia. Vocês decidem o que entra e o que sai.' Fechamento com a frase grande, depois abrir Q&A. Antecipar: 'Vou perder meu emprego?' / 'Quanto tempo dura?' / 'Vai ter treinamento formal?' / 'E se eu não tiver tempo?'"
+}
+</script>
+
+<script src="animations.js"></script>
+<script src="deck-stage.js"></script>
+
+<!-- Animações custom para elementos não cobertos pelo sistema base -->
+<script>
+(() => {
+  const EASE_SPRING = 'cubic-bezier(0.34, 1.56, 0.44, 1)';
+  const EASE_SOFT   = 'cubic-bezier(0.16, 1, 0.3, 1)';
+  const EASE_OUT    = 'cubic-bezier(0.2, 0.8, 0.2, 1)';
+
+  function animateLinhaTempo(slide) {
+    const arrow = slide.querySelector('.era-arrow');
+    if (arrow) {
+      arrow.animate(
+        [
+          { opacity: 0, transform: 'scale(0.3) translateX(-30px)', filter: 'blur(8px)' },
+          { opacity: 1, transform: 'scale(1.35) translateX(10px)', filter: 'blur(0)', offset: 0.6 },
+          { opacity: 1, transform: 'scale(1)', filter: 'blur(0)' },
+        ],
+        { duration: 850, delay: 1400, easing: EASE_SPRING, fill: 'both' }
+      );
+    }
+  }
+
+  function animateNaoEisso(slide) {
+    const marks = slide.querySelectorAll('.myth-mark');
+    marks.forEach((m, i) => {
+      m.animate(
+        [
+          { opacity: 0, transform: 'rotate(-180deg) scale(0)', filter: 'blur(6px)' },
+          { opacity: 1, transform: 'rotate(15deg) scale(1.25)', filter: 'blur(0)', offset: 0.55 },
+          { opacity: 1, transform: 'rotate(-8deg) scale(0.95)', offset: 0.78 },
+          { opacity: 1, transform: 'rotate(0deg) scale(1)' },
+        ],
+        { duration: 820, delay: 900 + i * 180, easing: EASE_SPRING, fill: 'both' }
+      );
+    });
+  }
+
+  function animateEisso(slide) {
+    const marks = slide.querySelectorAll('.promise-mark');
+    marks.forEach((m, i) => {
+      m.animate(
+        [
+          { opacity: 0, transform: 'scale(0) rotate(-30deg)', filter: 'blur(6px)' },
+          { opacity: 1, transform: 'scale(1.3) rotate(5deg)', filter: 'blur(0)', offset: 0.6 },
+          { opacity: 1, transform: 'scale(1) rotate(0deg)' },
+        ],
+        { duration: 780, delay: 900 + i * 180, easing: EASE_SPRING, fill: 'both' }
+      );
+    });
+  }
+
+  function animateParticipam(slide) {
+    const items = slide.querySelectorAll('.participate-list li');
+    items.forEach((li, i) => {
+      li.animate(
+        [
+          { opacity: 0, transform: 'translate3d(-100px, 0, 0)', filter: 'blur(6px)' },
+          { opacity: 1, transform: 'none', filter: 'blur(0)' },
+        ],
+        { duration: 820, delay: 600 + i * 140, easing: EASE_SOFT, fill: 'both' }
+      );
+      // o marker numérico tem um pequeno delay extra pra "ligar" depois
+      const marker = li.querySelector('.participate-marker');
+      if (marker) {
+        marker.animate(
+          [{ color: 'rgba(255,255,255,0.0)' }, { color: 'rgba(249,99,59,1)' }],
+          { duration: 480, delay: 800 + i * 140, easing: EASE_OUT, fill: 'both' }
+        );
+      }
+    });
+    const quote = slide.querySelector('.closing-quote');
+    if (quote) {
+      quote.animate(
+        [
+          { opacity: 0, transform: 'translate3d(0, 40px, 0)', filter: 'blur(10px)' },
+          { opacity: 1, transform: 'none', filter: 'blur(0)' },
+        ],
+        { duration: 1100, delay: 1450, easing: EASE_SOFT, fill: 'both' }
+      );
+    }
+  }
+
+  function animateCapa(slide) {
+    // Pulso sutil no eyebrow "Kick-off"
+    const eyebrow = slide.querySelector('.cover-eyebrow');
+    if (eyebrow) {
+      eyebrow.animate(
+        [
+          { letterSpacing: '0.5em', opacity: 0 },
+          { letterSpacing: '0.2em', opacity: 1 },
+        ],
+        { duration: 1100, delay: 200, easing: EASE_SOFT, fill: 'both' }
+      );
+    }
+  }
+
+  const HANDLERS = {
+    'Capa':                    animateCapa,
+    'Linha do tempo':          animateLinhaTempo,
+    'Não é isso':              animateNaoEisso,
+    'É isso':                  animateEisso,
+    'Como vocês participam':   animateParticipam,
+  };
+
+  function runFor(slide) {
+    if (!slide) return;
+    const fn = HANDLERS[slide.dataset.label];
+    if (!fn) return;
+    try { fn(slide); } catch (err) { console.warn('[kickoff anim]', err); }
+  }
+
+  function ready() {
+    const deck = document.querySelector('deck-stage');
+    if (!deck) return setTimeout(ready, 30);
+
+    deck.addEventListener('slidechange', (e) => {
+      runFor(e.detail && e.detail.slide);
+    });
+
+    // Caso o slide ativo já esteja montado antes do listener (refresh persistido
+    // via localStorage do deck-stage), dispara manualmente.
+    requestAnimationFrame(() => {
+      const active = deck.querySelector('section[data-deck-active]');
+      if (active) runFor(active);
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready);
+  } else {
+    ready();
+  }
+})();
+</script>
+
+</body>
+</html>

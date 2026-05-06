@@ -1,0 +1,256 @@
+/* ===================================================================
+   Motion design — Diagnóstico Estratégico RBA+
+   CSS aqui é mínimo: apenas (1) estado inicial seguro dos elementos
+   animáveis, (2) UI chrome fora do canvas, (3) ambiente contínuo que
+   independe do JS, (4) microinterações hover, (5) keyframes decorativos.
+   As coreografias de entrada/saída ficam no animations.js (WAAPI).
+   =================================================================== */
+
+:root {
+  --anim-ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --anim-ease-spring: cubic-bezier(0.34, 1.56, 0.44, 1);
+}
+
+/* ------------------------------------------------------------------
+   (1) Pré-esconder sincronizado
+   Assim que o JS marca um elemento com .rba-anim, ele já está com
+   opacity: 0 ANTES do deck-stage trocar de slide. Sem race-condition,
+   sem flash.
+   ------------------------------------------------------------------ */
+.rba-anim {
+  opacity: 0;
+  will-change: opacity, transform, filter, clip-path;
+}
+
+/* Chars/words de título: cada pedaço começa abaixo + em blur */
+.rba-split-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 0.55em, 0) rotate(3deg);
+  filter: blur(6px);
+  will-change: opacity, transform, filter;
+}
+.rba-split-word--space {
+  width: 0.28em;
+  display: inline-block;
+}
+/* Mantém itálico/accent wrappers em fluxo */
+.rba-split-em {
+  display: inline-block;
+  position: relative;
+}
+.rba-split-em::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.06em;
+  height: 0.08em;
+  background: currentColor;
+  opacity: 0.22;
+  transform: scaleX(0);
+  transform-origin: left center;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.rba-split-em.is-underlined::after {
+  animation: rba-underline-wipe 720ms var(--anim-ease-out) forwards;
+}
+
+@keyframes rba-underline-wipe {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ------------------------------------------------------------------
+   (2) Chrome fora do canvas
+   ------------------------------------------------------------------ */
+.deck-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.05);
+  z-index: 2147483001;
+  pointer-events: none;
+}
+.deck-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f9633b 0%, #ff7b56 45%, #bbb4f0 100%);
+  box-shadow: 0 0 18px rgba(249,99,59,0.55);
+  transition: width 720ms var(--anim-ease-out);
+}
+
+.deck-slide-dot-rail {
+  position: fixed;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 2147483001;
+  pointer-events: none;
+  opacity: 0.45;
+  transition: opacity 280ms ease;
+}
+body:hover .deck-slide-dot-rail { opacity: 0.9; }
+.deck-slide-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.28);
+  transition: background 320ms ease,
+              width 320ms var(--anim-ease-spring),
+              height 320ms var(--anim-ease-spring);
+}
+.deck-slide-dot.is-active {
+  background: #f9633b;
+  width: 18px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(249,99,59,0.65);
+}
+
+/* ------------------------------------------------------------------
+   (3) Ambiente — arcos decorativos girando devagar + glow
+   Usa CSS custom props (--px/--py) alimentadas pelo parallax do JS.
+   ------------------------------------------------------------------ */
+.slide[data-deck-active] .arc-right,
+.slide[data-deck-active] .arc-left,
+.slide[data-deck-active] .cover-arcs {
+  transition: translate 900ms var(--anim-ease-out);
+}
+
+@keyframes rba-arc-orbit {
+  0%   { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+@keyframes rba-arc-orbit-rev {
+  0%   { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(-360deg); }
+}
+.slide[data-deck-active] .arc-right {
+  animation: rba-arc-orbit 120s linear infinite;
+}
+.slide[data-deck-active] .arc-left {
+  animation: rba-arc-orbit-rev 140s linear infinite;
+}
+
+@keyframes rba-cover-breathe {
+  0%, 100% { opacity: 0.08; transform: scale(1) rotate(0deg); }
+  50%      { opacity: 0.16; transform: scale(1.06) rotate(2deg); }
+}
+.slide[data-deck-active].cover .cover-arcs {
+  animation: rba-cover-breathe 10s ease-in-out infinite;
+  transform-origin: 70% 50%;
+}
+
+/* Bullet laranja: pulso contínuo */
+@keyframes rba-pulse-dot {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249,99,59,0.55); }
+  50%      { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(249,99,59,0); }
+}
+.slide[data-deck-active] .bullet-dot {
+  animation: rba-pulse-dot 2.4s ease-out infinite;
+}
+
+/* Accent em: brilho sutil respirando */
+@keyframes rba-accent-breath {
+  0%, 100% { filter: brightness(1); text-shadow: 0 0 0 rgba(249,99,59,0); }
+  50%      { filter: brightness(1.12); text-shadow: 0 0 22px rgba(249,99,59,0.18); }
+}
+.slide[data-deck-active] em.accent,
+.slide[data-deck-active] .accent-em {
+  animation: rba-accent-breath 5.5s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------
+   (4) Microinterações — hover
+   ------------------------------------------------------------------ */
+.axis-card, .card, .person, .agenda-list li,
+.dx-table tbody tr, .matrix tbody tr, .chip {
+  transition: transform 420ms var(--anim-ease-out),
+              border-color 280ms ease,
+              background 280ms ease,
+              box-shadow 420ms var(--anim-ease-out),
+              color 240ms ease;
+}
+.axis-card:hover, .card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(249,99,59,0.45);
+  box-shadow: 0 28px 70px -24px rgba(249,99,59,0.45);
+}
+.slide--cream .axis-card:hover,
+.slide--cream .card:hover {
+  box-shadow: 0 28px 70px -24px rgba(10,37,95,0.28);
+  border-color: rgba(249,99,59,0.55);
+}
+.person:hover {
+  transform: translateY(-3px);
+  border-top-color: #f9633b;
+}
+.agenda-list li::before {
+  transition: color 320ms ease, transform 420ms var(--anim-ease-spring);
+  display: inline-block;
+}
+.agenda-list li:hover::before {
+  transform: translateX(10px) scale(1.12);
+  color: #ff7b56;
+}
+.agenda-list li:hover .agenda-item-title em {
+  color: #ff7b56;
+}
+.dx-table tbody tr:hover,
+.matrix tbody tr:hover {
+  background: rgba(249,99,59,0.08);
+}
+.slide--cream .dx-table tbody tr:hover,
+.slide--cream .matrix tbody tr:hover {
+  background: rgba(249,99,59,0.10);
+}
+.chip:hover {
+  transform: translateY(-2px) scale(1.05);
+  filter: brightness(1.08);
+}
+
+/* ------------------------------------------------------------------
+   (5) Cover arcs glow halo — camada extra de luz ao fundo
+   ------------------------------------------------------------------ */
+.slide.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 70% at 85% 45%, rgba(249,99,59,0.22), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1400ms var(--anim-ease-out);
+  z-index: 0;
+}
+.slide.cover[data-deck-active]::before {
+  opacity: 1;
+}
+.slide.cover .cover-content { position: relative; z-index: 1; }
+
+/* ------------------------------------------------------------------
+   Print + reduced motion
+   ------------------------------------------------------------------ */
+@media print {
+  .deck-progress, .deck-slide-dot-rail { display: none !important; }
+  .rba-anim, .rba-split-word {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .rba-anim, .rba-split-word {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
