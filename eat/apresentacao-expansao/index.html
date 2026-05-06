@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EAT+KITCHEN · Expansão · Versão Novos Interessados</title>
+<meta name="description" content="Apresentação de expansão · convite para integrar a próxima fase da rede EAT+KITCHEN" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   EAT+KITCHEN · APRESENTAÇÃO DE EXPANSÃO
+   Material institucional · uso interno · prospecção de novos interessados
+   Reproduz o PDF oficial em formato web
+   ============================================================ */
+
+:root{
+  --black:#000000; --ink:#0A0A0A; --ink-2:#141414; --ink-3:#1F1F1F;
+  --white:#FFFFFF; --paper:#F5F5F5;
+  --g1:#DADADA; --g2:#9A9A9A; --g3:#5A5A5A; --g4:#2A2A2A;
+  --line:rgba(255,255,255,0.10); --line-soft:rgba(255,255,255,0.06);
+  --rust:#FF4D2E; --warn:#FFB534; --good:#9DFF7A;
+
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-body:'Manrope',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+
+  --display-xl:clamp(3rem,12vw,14rem);
+  --display-lg:clamp(2.4rem,8vw,7rem);
+  --display-md:clamp(1.6rem,4.6vw,4rem);
+  --title:clamp(1.5rem,4vw,3.4rem);
+  --h2:clamp(1.2rem,2.6vw,2.2rem);
+  --body:clamp(.85rem,1.1vw,1rem);
+  --label:clamp(.6rem,.72vw,.72rem);
+
+  --pad:clamp(1.4rem,3.6vw,3.6rem);
+  --gap:clamp(.8rem,1.8vw,1.6rem);
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow-x:hidden;background:var(--black);color:var(--white);font-family:var(--font-body);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+.brand{font-family:var(--font-display);font-weight:800;letter-spacing:-0.025em;display:inline;white-space:nowrap}
+.brand .plus{display:inline-block;margin:0 0.04em;font-weight:700;transform:translateY(-0.04em)}
+
+/* ===== HEADER ===== */
+.app-header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,3vw,2.4rem);pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,0.7),rgba(0,0,0,0))}
+.app-header>*{pointer-events:auto}
+.eat-logo{display:inline-flex;font-family:var(--font-display);font-weight:800;font-size:.92rem;letter-spacing:-.025em;color:var(--white);line-height:1;text-transform:uppercase;transition:opacity .3s var(--ease)}
+.eat-logo .plus{display:inline-block;margin:0 .04em;font-weight:600;transform:translateY(-0.04em)}
+.eat-logo:hover{opacity:.75}
+
+.deck-meta{display:flex;align-items:center;gap:.85rem;font-family:var(--font-display);font-size:.58rem;color:var(--g2);letter-spacing:.26em;text-transform:uppercase;font-weight:500}
+.deck-meta .pulse{width:6px;height:6px;background:var(--white);border-radius:50%;box-shadow:0 0 0 4px rgba(255,255,255,.16);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(255,255,255,.16)}50%{box-shadow:0 0 0 9px rgba(255,255,255,.04)}}
+
+/* ===== PROGRESS RAIL ===== */
+.progress-rail{position:fixed;top:50%;right:clamp(.6rem,1.4vw,1.2rem);transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:5px}
+.progress-rail .pip{width:14px;height:1px;background:rgba(255,255,255,.18);transition:all .35s var(--ease);cursor:pointer;padding:0}
+.progress-rail .pip.active{width:28px;height:2px;background:var(--white)}
+.progress-rail .pip:hover{background:var(--white)}
+
+/* ===== SLIDE BASE ===== */
+.slide{width:100vw;height:100vh;height:100dvh;overflow:hidden;scroll-snap-align:start;display:flex;flex-direction:column;position:relative;padding:var(--pad);padding-top:calc(var(--pad) + 2.4rem);padding-bottom:calc(var(--pad) + 2.6rem);background:var(--black);color:var(--white)}
+
+.slide-footer{position:absolute;bottom:clamp(.8rem,1.8vw,1.4rem);left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;align-items:center;font-family:var(--font-display);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g3);font-weight:500;padding-top:.8rem;border-top:1px solid var(--line);z-index:5}
+.slide-footer .num{color:var(--white);font-weight:600}
+
+.section-pill{position:absolute;top:calc(var(--pad) + 1.4rem);right:var(--pad);font-family:var(--font-display);font-weight:500;font-size:.72rem;color:var(--white);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:.55rem 1.4rem;letter-spacing:.04em;z-index:5}
+
+/* === Footer assinatura visual EAT+ (palavra-âncora gigante, ajustada via JS para caber 100% da largura) === */
+.cut-word{
+  position:absolute;
+  left:var(--pad);
+  right:var(--pad);
+  bottom:calc(var(--pad) + 2.8rem);
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:8vw; /* placeholder · JS sobrescreve com fit-to-width */
+  line-height:.92;
+  letter-spacing:-.045em;
+  color:var(--white);
+  text-transform:uppercase;
+  pointer-events:none;
+  user-select:none;
+  z-index:1;
+  white-space:nowrap;
+}
+
+/* tipografia utils */
+.h-display{font-family:var(--font-display);font-weight:800;font-size:var(--display-md);line-height:.96;letter-spacing:-.04em;color:var(--white);text-transform:uppercase;padding-right:clamp(0rem,14vw,15rem)}
+.h-display .accent{color:var(--g2);font-weight:500}
+.lead{font-family:var(--font-body);color:var(--g1);line-height:1.6;max-width:60ch}
+.lead strong{color:var(--white);font-weight:600}
+
+/* ============== SLIDE 01 — CAPA ============== */
+.cover{padding:0;align-items:center;justify-content:center}
+.cover-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.cover-bg video{width:100%;height:100%;object-fit:cover;filter:grayscale(35%) brightness(.5) contrast(1.05)}
+.cover-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,0,0,.25),rgba(0,0,0,.7) 80%),linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 30%,transparent 70%,rgba(0,0,0,.7) 100%)}
+.cover-content{position:relative;z-index:2;width:100%;max-width:1700px;padding:0 var(--pad);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(1.4rem,3vw,2.4rem)}
+.cover-eyebrow{font-family:var(--font-display);font-weight:500;font-size:.68rem;letter-spacing:.35em;color:var(--g1);text-transform:uppercase;display:inline-flex;align-items:center;gap:1rem}
+.cover-eyebrow::before,.cover-eyebrow::after{content:'';display:inline-block;width:36px;height:1px;background:var(--g3)}
+.cover-brand{font-family:var(--font-display);font-weight:800;font-size:var(--display-xl);letter-spacing:-.035em;color:var(--white);line-height:.85}
+.cover-brand .plus{font-weight:600;display:inline-block;transform:translateY(-0.05em);margin:0 .02em}
+.cover-tagline{font-family:var(--font-display);font-weight:400;font-size:clamp(.85rem,1.4vw,1.05rem);letter-spacing:.42em;text-transform:uppercase;color:var(--g1)}
+.cover-subtitle{margin-top:.8rem;font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.6vw,1.4rem);color:var(--g1);letter-spacing:.02em;max-width:36ch;line-height:1.4}
+.cover-subtitle strong{color:var(--white);font-weight:500}
+.cover-meta{position:absolute;bottom:clamp(1.6rem,3vw,2.6rem);left:var(--pad);right:var(--pad);z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:2rem;font-family:var(--font-display);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--g2);font-weight:500}
+.cover-meta strong{color:var(--white);font-weight:600}
+.cover-meta .center{text-align:center}
+.cover-meta .right{text-align:right}
+
+/* ============== SLIDE 02 — WELLNESS CULTURE ============== */
+.wellness{padding:0;display:flex;align-items:center;justify-content:center}
+.wellness-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:1px;background:var(--ink);z-index:0}
+.wellness-grid .cell{background-size:cover;background-position:center;filter:brightness(.4) grayscale(15%)}
+.wellness-overlay{position:relative;z-index:2;text-align:center;padding:0 var(--pad)}
+.wellness-overlay h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,7vw,7rem);letter-spacing:-.04em;line-height:.92;color:var(--white);text-transform:uppercase;text-shadow:0 4px 30px rgba(0,0,0,.7)}
+
+/* ============== SLIDE 03 — ACREDITAMOS ============== */
+.belief{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-top:clamp(1rem,2vw,1.6rem);min-height:0}
+.belief .text h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.2rem,3vw,2.2rem);line-height:1.08;letter-spacing:-.025em;color:var(--white);text-transform:uppercase}
+.belief .text h2 .word{display:block}
+.belief .text h2 .word.dim{color:var(--g3)}
+.belief .text h2 .word.repeat{color:var(--g2);font-weight:500}
+.belief .visual{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,1fr);gap:1px;background:var(--ink);aspect-ratio:1;max-height:75vh;min-height:0}
+.belief .visual .photo{background-size:cover;background-position:center;filter:grayscale(20%) brightness(.85)}
+.belief .visual .tag{background:var(--black);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:clamp(.85rem,1.2vw,1.05rem);letter-spacing:-.01em;text-transform:uppercase;text-align:center;padding:.5rem;line-height:1.15}
+
+/* ============== SLIDE 04/05/07/08 — TEXT MANIFESTO COM CUT-WORD ============== */
+.manifesto-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:clamp(5rem,18vh,14rem);position:relative;z-index:2}
+.manifesto-text .label{font-family:var(--font-display);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:600;margin-bottom:1.2rem}
+.manifesto-text p{font-family:var(--font-body);font-size:clamp(1rem,1.4vw,1.2rem);line-height:1.7;color:var(--g1);max-width:70ch}
+.manifesto-text p strong{color:var(--white);font-weight:600}
+.manifesto-text p + p{margin-top:1.1rem}
+
+/* ============== SLIDE 06 — SÓCIOS ============== */
+.partners{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--black);border:1px solid var(--line);flex:1;margin-top:1.2rem;min-height:0}
+.partner{background:var(--black);padding:0 clamp(.85rem,1.5vw,1.2rem) clamp(.85rem,1.5vw,1.2rem);display:grid;grid-template-rows:1fr auto auto;gap:.65rem;position:relative;transition:background .3s var(--ease);min-height:0;overflow:hidden}
+.partner:hover{background:var(--ink-2)}
+.partner .photo{width:auto;min-height:0;background:linear-gradient(180deg,var(--g4),var(--ink));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin:0 calc(-1 * clamp(.85rem,1.5vw,1.2rem)) .55rem}
+.partner .photo .initial{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,4vw,3.4rem);color:var(--white);letter-spacing:-.05em;line-height:1}
+.partner .photo::after{content:'';position:absolute;bottom:0;left:0;right:0;height:30%;background:linear-gradient(180deg,transparent,rgba(0,0,0,.4));pointer-events:none}
+.partner .name-block{display:flex;flex-direction:column;gap:.15rem}
+.partner .name{font-family:var(--font-display);font-weight:800;font-size:clamp(.85rem,1.15vw,1.05rem);color:var(--white);text-transform:uppercase;letter-spacing:-.005em;line-height:1.05}
+.partner .role{font-family:var(--font-display);font-weight:400;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g2)}
+.partner .bio{font-family:var(--font-body);font-size:.7rem;color:var(--g1);line-height:1.45;border-top:1px solid var(--line);padding-top:.55rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ============== SLIDE 09 — NOSSAS CASAS (título standalone) ============== */
+.standalone{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 var(--pad)}
+.standalone h2{font-family:var(--font-display);font-weight:800;font-size:clamp(3rem,11vw,12rem);letter-spacing:-.045em;line-height:.9;color:var(--white);text-transform:uppercase}
+.standalone .subtitle{font-family:var(--font-display);font-weight:400;letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--g2);margin-top:1.4rem}
+
+/* ============== SLIDE 10 — SUSTENTABILIDADE ============== */
+.sustain{flex:1;display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-top:clamp(1rem,2vw,1.6rem)}
+.sustain .text h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,4.4vw,3.6rem);line-height:1.04;letter-spacing:-.035em;color:var(--white);text-transform:uppercase}
+.sustain .text h2 strong{color:var(--white)}
+.sustain .text .lead{margin-top:1.4rem}
+.sustain .photo{aspect-ratio:4/5;background-size:cover;background-position:center;filter:grayscale(15%) brightness(.85)}
+
+/* ============== SLIDES 11-15 — CASAS individuais ============== */
+.casa{padding:0;align-items:stretch;justify-content:flex-start;display:flex;flex-direction:column}
+.casa-photo{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;filter:brightness(.55) contrast(1.05) saturate(.85)}
+.casa-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 65%,rgba(0,0,0,.65) 100%)}
+.casa-content{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--pad);padding-top:calc(var(--pad) + 4rem);padding-bottom:calc(var(--pad) + 4rem)}
+.casa-tag{background:var(--black);color:var(--white);padding:.85rem 1.4rem;display:inline-flex;flex-direction:column;align-self:flex-start;max-width:fit-content;gap:.2rem}
+.casa-tag .yr{font-family:var(--font-display);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--g2)}
+.casa-tag .name{font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,3vw,2.4rem);letter-spacing:-.02em;text-transform:uppercase;line-height:1}
+.casa-tag .cap{font-family:var(--font-display);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--g1);margin-top:.4rem;border-top:1px solid var(--line);padding-top:.5rem}
+
+/* ============== SLIDE 16 — TIMELINE ============== */
+.timeline-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:1rem}
+.timeline{position:relative;padding:4rem 0 2rem}
+.timeline::before{content:'';position:absolute;left:0;right:0;top:4rem;height:1px;background:var(--white)}
+.tl-row{display:grid;grid-template-columns:repeat(8,1fr);gap:clamp(.4rem,.8vw,.8rem);position:relative}
+.tl-node{position:relative;text-align:left;padding-top:1rem}
+.tl-node::before{content:'';position:absolute;top:-3.55rem;left:0;width:1px;height:1.2rem;background:var(--white)}
+.tl-node .yr{position:absolute;top:-3rem;left:0;font-family:var(--font-display);font-weight:700;font-size:clamp(.95rem,1.4vw,1.2rem);color:var(--white);letter-spacing:-.02em}
+.tl-node .label{font-family:var(--font-display);font-weight:700;font-size:.78rem;color:var(--white);line-height:1.25;letter-spacing:-.01em;text-transform:uppercase}
+.tl-node .label small{display:block;font-family:var(--font-display);font-size:.62rem;font-weight:400;color:var(--g2);letter-spacing:.1em;text-transform:uppercase;margin-top:.25rem}
+.tl-node.event::before{background:var(--rust)}
+.tl-node.event .label{color:var(--rust)}
+.tl-node.future .yr,.tl-node.future .label{color:var(--g2)}
+.tl-node.future .label{font-weight:500}
+.tl-node.future::before{background:var(--g3)}
+
+/* ============== SLIDE 17 — NOSSO TIME ============== */
+.time-text{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:clamp(5rem,18vh,14rem)}
+.time-text .label{font-family:var(--font-display);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:600;margin-bottom:1.2rem}
+.time-text h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,5vw,4.6rem);line-height:1;letter-spacing:-.045em;color:var(--white);text-transform:uppercase;max-width:24ch}
+.time-text h2 .accent{color:var(--g2);font-weight:500}
+.time-text .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,3rem);margin-top:2rem;max-width:1100px}
+.time-text .stat{display:flex;flex-direction:column;gap:.3rem;border-top:1px solid var(--line);padding-top:.9rem}
+.time-text .stat .v{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,2.8vw,2.4rem);color:var(--white);letter-spacing:-.04em;line-height:1}
+.time-text .stat .l{font-family:var(--font-body);font-size:.85rem;color:var(--g1);line-height:1.4}
+
+/* ============== SLIDE 17 — COMIDA DE VERDADE (cinema sequence) ============== */
+.food-cinema{padding:0;overflow:hidden;background:#000}
+.cinema-stage{position:absolute;inset:0;z-index:0;background:#000}
+.cinema-img{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.95) contrast(1.05) saturate(1.05);opacity:0;transform:scale(1.05);transition:opacity .35s var(--ease),transform 6s linear,filter .6s var(--ease)}
+.cinema-img.is-visible{opacity:1}
+.cinema-img.is-active{opacity:1;transform:scale(1.12)}
+.cinema-flash{position:absolute;inset:0;z-index:3;background:#fff;opacity:0;pointer-events:none;mix-blend-mode:screen}
+.cinema-flash.flashing{animation:cinema-flash-anim .42s var(--ease) both}
+@keyframes cinema-flash-anim{0%{opacity:0}30%{opacity:.95}55%{opacity:.4}100%{opacity:0}}
+.cinema-vignette{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(0,0,0,.05),rgba(0,0,0,.55) 90%),linear-gradient(180deg,rgba(0,0,0,.3) 0%,transparent 25%,transparent 75%,rgba(0,0,0,.45) 100%)}
+.cinema-text{position:relative;z-index:4;flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 var(--pad);opacity:0;transition:opacity 1.1s var(--ease),transform 1.1s var(--ease);transform:translateY(8px)}
+.cinema-text.is-visible{opacity:1;transform:translateY(0)}
+.cinema-text.is-fading{opacity:0;transform:translateY(-12px) scale(.97);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.cinema-text h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,9vw,9rem);letter-spacing:-.045em;line-height:.92;color:var(--white);text-transform:uppercase;text-shadow:0 6px 40px rgba(0,0,0,.7),0 2px 12px rgba(0,0,0,.5);max-width:18ch}
+
+/* fallback / legacy: food-hero (caso algum slide ainda use) */
+.food-hero{padding:0}
+.food-hero .photo{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;filter:brightness(.55)}
+.food-hero .overlay{position:relative;z-index:2;flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 var(--pad)}
+.food-hero h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,9vw,9rem);letter-spacing:-.045em;line-height:.92;color:var(--white);text-transform:uppercase;text-shadow:0 6px 36px rgba(0,0,0,.6)}
+
+/* ============== SLIDES 19+ — IMPACTO ============== */
+.impact-revenue{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:1.6rem}
+.impact-revenue .eyebrow{font-family:var(--font-body);font-size:1rem;color:var(--g1);font-weight:400}
+.impact-revenue .massive{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,7.5vw,7.6rem);line-height:.95;letter-spacing:-.045em;color:var(--white);text-transform:uppercase;max-width:100%}
+.impact-revenue .massive .arrow{display:inline-block;margin:0 .15em;font-weight:400;color:var(--g2)}
+.impact-revenue .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;width:100%;margin-top:1rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.impact-revenue .rs{display:flex;flex-direction:column;gap:.4rem;padding-right:1.5rem}
+.impact-revenue .rs:not(:last-child){border-right:1px solid var(--line)}
+.impact-revenue .rs:not(:first-child){padding-left:1.5rem}
+.impact-revenue .rs .v{font-family:var(--font-display);font-weight:700;font-size:clamp(1.4rem,2.4vw,2.2rem);color:var(--white);letter-spacing:-.025em;line-height:1}
+.impact-revenue .rs .l{font-family:var(--font-body);font-size:.82rem;color:var(--g2);line-height:1.4}
+
+/* ===== Prêmios ===== */
+.awards-grid{flex:1;display:grid;grid-template-columns:repeat(4,1fr) 1.1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.award-cell{background:var(--black);padding:clamp(1.4rem,2.4vw,2rem);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:.6rem;min-height:0}
+.award-cell .name{font-family:var(--font-display);font-weight:800;font-size:clamp(.85rem,1.2vw,1rem);color:var(--white);text-transform:uppercase;letter-spacing:-.005em;line-height:1.1}
+.award-cell .tag{font-family:var(--font-display);font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:500}
+.award-cell .ico{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.6vw,3rem);letter-spacing:-.04em;color:var(--white);line-height:1}
+.award-summary{background:var(--white);color:var(--black);text-align:left;align-items:flex-start}
+.award-summary .big{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.6vw,3rem);letter-spacing:-.04em;line-height:1}
+.award-summary .label{font-family:var(--font-display);font-weight:700;font-size:.6rem;letter-spacing:.26em;text-transform:uppercase}
+.award-summary .years{font-family:var(--font-mono);font-size:.78rem;color:var(--g3);line-height:1.6}
+.award-summary .years strong{color:var(--black);font-weight:600}
+
+/* ===== Alcance ===== */
+.reach{display:grid;grid-template-columns:1fr 1.1fr;gap:0;flex:1;margin-top:1rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reach-photo{background-size:cover;background-position:center;position:relative}
+.reach-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 50%,var(--black) 100%)}
+.reach-list{display:flex;flex-direction:column;justify-content:center;padding:clamp(1rem,2.5vw,2.5rem);gap:clamp(.7rem,1.4vw,1.2rem)}
+.reach-row{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:baseline;padding-bottom:clamp(.6rem,1.2vw,1rem);border-bottom:1px solid var(--line)}
+.reach-row:last-child{border-bottom:0}
+.reach-row .v{font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,2.6vw,2.4rem);color:var(--white);letter-spacing:-.04em;line-height:1}
+.reach-row .v small{font-weight:400;font-size:.55em;color:var(--g2);letter-spacing:0}
+.reach-row .desc{font-family:var(--font-body);font-size:.92rem;color:var(--g1);line-height:1.4}
+.reach-row .desc strong{color:var(--white);font-weight:600}
+
+/* ===== EAT+EVENTOS ===== */
+.eventos-text{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1.6rem;padding-bottom:clamp(2rem,4vw,4rem)}
+.eventos-text h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2.6rem,9vw,9rem);letter-spacing:-.045em;line-height:.9;color:var(--white);text-transform:uppercase}
+.eventos-text h2 .plus{font-weight:600;display:inline-block;transform:translateY(-.05em);margin:0 .02em}
+.eventos-text p{font-family:var(--font-body);font-size:clamp(1rem,1.4vw,1.2rem);color:var(--g1);line-height:1.55;max-width:46ch}
+.eventos-text p strong{color:var(--white);font-weight:500}
+
+/* ===== Eventos memoráveis (grid de fotos) ===== */
+.eventos-grid{padding:0;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(3,1fr);gap:1px;background:var(--ink)}
+.eventos-grid .ev-cell{background-size:cover;background-position:center;filter:grayscale(15%) brightness(.6) contrast(1.05)}
+.eventos-grid .ev-overlay{grid-column:2 / 5;grid-row:2;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,3.4vw,3rem);letter-spacing:-.035em;color:var(--white);text-transform:uppercase;line-height:1;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:2;filter:none}
+
+/* ===== Convite (CTA) ===== */
+.invite{padding:0;display:grid;grid-template-rows:1fr auto;background:var(--black)}
+.invite-top{padding:var(--pad);padding-top:calc(var(--pad) + 2.4rem);display:flex;flex-direction:column;justify-content:center;gap:clamp(.7rem,1.2vw,1rem);position:relative;overflow:hidden;min-height:0}
+.invite-top::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 25%,rgba(255,255,255,.05),transparent 55%),radial-gradient(circle at 10% 100%,rgba(255,255,255,.03),transparent 55%)}
+.invite-top>*{position:relative;z-index:1}
+.invite-top .label{font-family:var(--font-display);font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--g1);font-weight:600}
+.invite-top h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,3.6vw,3rem);line-height:1.04;letter-spacing:-.035em;color:var(--white);text-transform:uppercase;max-width:30ch;padding-right:clamp(0rem,12vw,12rem)}
+.invite-top h2 strong{color:var(--white)}
+.invite-top .lead{font-family:var(--font-body);font-size:clamp(.88rem,1.1vw,1.05rem);color:var(--g1);max-width:64ch;line-height:1.5}
+.invite-top .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:1100px}
+.invite-renders{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.7rem 0}
+.invite-renders .rd{aspect-ratio:16/9;background-size:cover;background-position:center;filter:brightness(.85) saturate(.95);position:relative;overflow:hidden;transition:filter .4s var(--ease)}
+.invite-renders .rd:hover{filter:brightness(1.05) saturate(1.05)}
+.invite-renders .rd::after{content:attr(data-label);position:absolute;bottom:.5rem;left:.6rem;font-family:var(--font-display);font-size:.5rem;letter-spacing:.26em;text-transform:uppercase;color:var(--white);font-weight:700;padding:.2rem .45rem;background:rgba(0,0,0,.6);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.invite-top .pillar{display:flex;flex-direction:column;gap:.4rem;border-top:1px solid rgba(255,255,255,.3);padding-top:1rem}
+.invite-top .pillar .num{font-family:var(--font-display);font-weight:800;font-size:1.2rem;color:var(--white);letter-spacing:-.025em}
+.invite-top .pillar .h{font-family:var(--font-display);font-weight:700;font-size:.85rem;color:var(--white);text-transform:uppercase;letter-spacing:-.005em}
+.invite-top .pillar .d{font-family:var(--font-body);font-size:.75rem;color:var(--g1);line-height:1.4}
+.invite-bottom{background:var(--ink);padding:clamp(1.6rem,3vw,2.4rem) var(--pad);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.invite-bottom .cta-text{font-family:var(--font-display);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:600}
+.invite-bottom .cta-text strong{display:block;font-size:1.6rem;letter-spacing:-.025em;color:var(--white);font-weight:800;margin-top:.4rem;text-transform:none}
+.invite-bottom .contact{text-align:right;font-family:var(--font-display);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g1);line-height:1.7;font-weight:500}
+.invite-bottom .contact strong{color:var(--white);font-weight:700}
+
+/* ===== Encerramento + assinatura institucional ===== */
+.signoff{padding:0;display:grid;grid-template-rows:1fr auto;background:var(--black);color:var(--white)}
+.signoff .top{padding:var(--pad);padding-top:calc(var(--pad) + 2.4rem);display:flex;flex-direction:column;justify-content:center;gap:clamp(.8rem,1.4vw,1.2rem);position:relative;overflow:hidden}
+.signoff .top::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.06),transparent 50%)}
+.signoff .top>*{position:relative;z-index:1}
+.signoff .kicker{font-family:var(--font-display);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g2);font-weight:600}
+.signoff h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,4.6vw,4rem);line-height:.98;letter-spacing:-.04em;color:var(--white);max-width:28ch;text-transform:uppercase;padding-right:clamp(0rem,14vw,15rem)}
+.signoff h2 strong{color:var(--white);font-weight:800}
+.signoff .lead{font-family:var(--font-body);font-size:clamp(1rem,1.4vw,1.2rem);color:var(--g1);max-width:54ch;line-height:1.55}
+
+.eat-footer{background:var(--black);color:var(--white);padding:clamp(1.4rem,3vw,2rem) var(--pad);display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.5rem,3vw,2.5rem);align-items:center;border-top:1px solid var(--line);position:relative}
+.eat-footer::before{content:'';position:absolute;left:var(--pad);top:-1px;width:64px;height:1px;background:var(--white)}
+.eat-footer .brand-block{display:flex;flex-direction:column;gap:.55rem}
+.eat-footer .brand-mark{font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,2.2vw,2rem);letter-spacing:-.025em;color:var(--white);line-height:1;text-transform:uppercase;display:inline-flex;align-items:baseline}
+.eat-footer .brand-mark .plus{font-weight:600;display:inline-block;transform:translateY(-.04em);margin:0 .04em}
+.eat-footer .brand-meta{font-family:var(--font-display);display:flex;flex-direction:column;gap:2px}
+.eat-footer .brand-meta strong{color:var(--white);font-weight:600;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase}
+.eat-footer .brand-meta span{color:rgba(255,255,255,.5);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.eat-footer .center-line{font-family:var(--font-display);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.4);text-align:center;font-weight:500;line-height:1.7}
+.eat-footer .right-info{text-align:right;font-family:var(--font-display);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.4);line-height:1.7;font-weight:500}
+.eat-footer .right-info strong{color:var(--white);font-weight:700}
+
+/* ===== Reveal (default) ===== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease),filter .85s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}.reveal[data-delay="5"]{transition-delay:.40s}.reveal[data-delay="6"]{transition-delay:.48s}.reveal[data-delay="7"]{transition-delay:.56s}.reveal[data-delay="8"]{transition-delay:.64s}
+
+/* Variante: blur-in (texto institucional grande) */
+.reveal-blur{opacity:0;filter:blur(12px);transform:translateY(16px);transition:opacity 1.1s var(--ease),filter 1.1s var(--ease),transform 1.1s var(--ease)}
+.reveal-blur.in{opacity:1;filter:blur(0);transform:translateY(0)}
+
+/* Variante: scale-in (logo, números massivos) */
+.reveal-scale{opacity:0;transform:scale(.92);transition:opacity .9s var(--ease),transform 1.1s var(--ease)}
+.reveal-scale.in{opacity:1;transform:scale(1)}
+
+/* Mask reveal (clip-path bottom-up) — usado em títulos display */
+.reveal-mask{display:inline-block;clip-path:inset(0 0 100% 0);transform:translateY(20%);transition:clip-path 1.2s var(--ease),transform 1.2s var(--ease)}
+.reveal-mask.in{clip-path:inset(0 0 0 0);transform:translateY(0)}
+
+/* Cut-word: animação CSS pura disparada quando o slide vira ativo (rise + fade) */
+@keyframes cutword-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.cut-word{opacity:1;animation:cutword-rise 1.2s var(--ease) both}
+
+/* Letter stagger (capa) */
+.split-letters{display:inline-flex;align-items:baseline;line-height:.85}
+.split-letters .ch{display:inline-block;opacity:0;transform:translateY(.5em);transition:opacity .9s var(--ease),transform 1s var(--ease)}
+.split-letters.in .ch{opacity:1;transform:translateY(0)}
+
+/* Word stagger (slide acreditamos) */
+.belief .text h2 .word{opacity:0;transform:translateY(14px);filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease)}
+.belief .text h2.in .word{opacity:1;transform:translateY(0);filter:blur(0)}
+.belief .text h2.in .word:nth-child(1){transition-delay:.05s}
+.belief .text h2.in .word:nth-child(2){transition-delay:.18s}
+.belief .text h2.in .word:nth-child(3){transition-delay:.31s}
+.belief .text h2.in .word:nth-child(4){transition-delay:.44s}
+.belief .text h2.in .word:nth-child(5){transition-delay:.57s}
+.belief .text h2.in .word:nth-child(6){transition-delay:.70s}
+.belief .text h2.in .word:nth-child(7){transition-delay:.83s}
+.belief .text h2.in .word:nth-child(8){transition-delay:.96s}
+
+/* Ken Burns lento nas casas + cover */
+@keyframes kenburns-zoom{0%{transform:scale(1.04)}50%{transform:scale(1.12) translate(-1%,1%)}100%{transform:scale(1.04)}}
+.casa.is-active .casa-photo{animation:kenburns-zoom 22s ease-in-out infinite}
+.cover.is-active .cover-bg video{transform:scale(1.04);transition:transform 6s linear}
+
+/* Parallax sutil nas fotos de fundo (controlado por JS via --shift) */
+.casa-photo,.food-hero .photo,.reach-photo{will-change:transform}
+.casa-photo{transform:translate3d(0,calc(var(--shift,0px) * 1),0) scale(1.04)}
+
+/* Cover meta: barra de progresso lateral elegante */
+.progress-rail{gap:7px}
+.progress-rail .pip{position:relative}
+.progress-rail .pip::after{content:attr(data-tip);position:absolute;right:calc(100% + 14px);top:50%;transform:translate(8px,-50%);background:var(--white);color:var(--black);font-family:var(--font-display);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:.4rem .7rem;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .25s var(--ease),transform .25s var(--ease);border-radius:1px}
+.progress-rail .pip:hover::after{opacity:1;transform:translate(0,-50%)}
+
+/* Header autohide */
+.app-header{transition:transform .35s var(--ease),background .35s var(--ease)}
+.app-header.is-hidden{transform:translateY(-110%)}
+
+/* Hover lift nos cards de sócios */
+.partner{transition:background .35s var(--ease),transform .5s var(--ease)}
+.partner:hover{transform:translateY(-4px)}
+.partner .photo{transition:transform .9s var(--ease),filter .9s var(--ease)}
+.partner:hover .photo{transform:scale(1.05);filter:contrast(1.05) brightness(1.05)}
+
+/* Casa-tag entra com slide horizontal */
+.casa .casa-tag{transform:translateX(-32px);opacity:0;transition:transform 1s var(--ease),opacity 1s var(--ease)}
+.casa.in-view .casa-tag{transform:translateX(0);opacity:1}
+
+/* Timeline: linha desenhando + nodes pop */
+.timeline::before{transform-origin:left center;transform:scaleX(0);transition:transform 1.6s var(--ease) .1s}
+.timeline.in-view::before{transform:scaleX(1)}
+.tl-node{opacity:0;transform:translateY(12px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.timeline.in-view .tl-node{opacity:1;transform:translateY(0)}
+.timeline.in-view .tl-node:nth-child(1){transition-delay:.20s}
+.timeline.in-view .tl-node:nth-child(2){transition-delay:.40s}
+.timeline.in-view .tl-node:nth-child(3){transition-delay:.60s}
+.timeline.in-view .tl-node:nth-child(4){transition-delay:.80s}
+.timeline.in-view .tl-node:nth-child(5){transition-delay:1.00s}
+.timeline.in-view .tl-node:nth-child(6){transition-delay:1.20s}
+.timeline.in-view .tl-node:nth-child(7){transition-delay:1.40s}
+.timeline.in-view .tl-node:nth-child(8){transition-delay:1.60s}
+.tl-node::before{transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease) .3s}
+.timeline.in-view .tl-node::before{transform:scaleY(1)}
+
+/* Eventos memoráveis: cascade reveal */
+.eventos-grid .ev-cell{opacity:0;transform:scale(.96);transition:opacity 1s var(--ease),transform 1s var(--ease),filter .6s var(--ease)}
+.eventos-grid.in-view .ev-cell{opacity:1;transform:scale(1)}
+.eventos-grid.in-view .ev-cell:nth-child(1){transition-delay:.05s}
+.eventos-grid.in-view .ev-cell:nth-child(2){transition-delay:.10s}
+.eventos-grid.in-view .ev-cell:nth-child(3){transition-delay:.15s}
+.eventos-grid.in-view .ev-cell:nth-child(4){transition-delay:.20s}
+.eventos-grid.in-view .ev-cell:nth-child(5){transition-delay:.25s}
+.eventos-grid.in-view .ev-cell:nth-child(6){transition-delay:.30s}
+.eventos-grid.in-view .ev-cell:nth-child(8){transition-delay:.40s}
+.eventos-grid.in-view .ev-cell:nth-child(9){transition-delay:.45s}
+.eventos-grid.in-view .ev-cell:nth-child(10){transition-delay:.50s}
+.eventos-grid.in-view .ev-cell:nth-child(11){transition-delay:.55s}
+.eventos-grid.in-view .ev-cell:nth-child(12){transition-delay:.60s}
+.eventos-grid.in-view .ev-cell:nth-child(13){transition-delay:.65s}
+.eventos-grid.in-view .ev-cell:nth-child(14){transition-delay:.70s}
+.eventos-grid.in-view .ev-cell:nth-child(15){transition-delay:.75s}
+.eventos-grid .ev-cell:hover{filter:grayscale(0%) brightness(.85) contrast(1.05);z-index:1}
+.eventos-grid .ev-overlay{opacity:0;transform:scale(.92);transition:opacity 1s var(--ease) .9s,transform 1s var(--ease) .9s}
+.eventos-grid.in-view .ev-overlay{opacity:1;transform:scale(1)}
+
+/* Renders do convite com hover staggered + reveal */
+.invite-renders .rd{opacity:0;transform:translateY(20px) scale(.97);transition:opacity 1s var(--ease),transform 1s var(--ease),filter .4s var(--ease)}
+.invite.in-view .invite-renders .rd{opacity:1;transform:translateY(0) scale(1)}
+.invite.in-view .invite-renders .rd:nth-child(1){transition-delay:.10s}
+.invite.in-view .invite-renders .rd:nth-child(2){transition-delay:.22s}
+.invite.in-view .invite-renders .rd:nth-child(3){transition-delay:.34s}
+.invite.in-view .invite-renders .rd:nth-child(4){transition-delay:.46s}
+
+/* Awards: pop in + ico spin no hover */
+.award-cell{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease),background .35s var(--ease)}
+.award-cell.in{opacity:1;transform:translateY(0)}
+.award-cell:not(.award-summary):hover{background:var(--ink-2)}
+.award-cell .ico{transition:transform .8s var(--ease)}
+.award-cell:hover .ico{transform:scale(1.15) rotate(-4deg)}
+
+/* Pip ativo com glow */
+.progress-rail .pip.active{box-shadow:0 0 0 1px rgba(255,255,255,.0),0 0 12px rgba(255,255,255,.6)}
+
+/* Cursor magnético em links principais */
+.invite-bottom .contact a,.eat-footer .center-line a{position:relative;display:inline-block;transition:color .25s var(--ease)}
+.invite-bottom .contact a::after,.eat-footer .center-line a::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.invite-bottom .contact a:hover::after,.eat-footer .center-line a:hover::after{transform:scaleX(1)}
+
+/* Massive number flicker on count-up start */
+@keyframes num-pop{0%{transform:translateY(8px) scale(.98);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+[data-count].counting{display:inline-block;animation:num-pop .5s var(--ease) both}
+
+/* ===== RESPONSIVO ===== */
+@media (max-height:800px){
+  :root{--display-xl:clamp(2.4rem,9vw,8rem);--display-md:clamp(1.4rem,4vw,3.2rem);--pad:clamp(1.1rem,2.6vw,2.2rem)}
+  .slide{padding-top:3.4rem;padding-bottom:3.4rem}
+}
+@media (max-height:640px){
+  :root{--display-xl:clamp(1.8rem,7vw,5rem);--display-md:clamp(1.2rem,3.6vw,2.4rem);--body:clamp(.74rem,1.1vw,.92rem);--pad:.9rem}
+}
+@media (max-width:980px){
+  .belief,.sustain,.reach{grid-template-columns:1fr}
+  .reach-photo{aspect-ratio:16/8}
+  .partners{grid-template-columns:repeat(2,1fr)}
+  .invite-top .pillars,.time-text .stats{grid-template-columns:1fr}
+  .timeline .tl-row{grid-template-columns:repeat(4,1fr);row-gap:3rem}
+  .impact-revenue .stats{grid-template-columns:1fr;gap:1rem}
+  .impact-revenue .rs{border-right:0!important;padding-right:0!important;padding-left:0!important;border-bottom:1px solid var(--line);padding-bottom:1rem}
+  .awards-grid{grid-template-columns:repeat(2,1fr)}
+  .invite-bottom{grid-template-columns:1fr;text-align:left}
+  .invite-bottom .contact{text-align:left}
+  .eventos-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr)}
+  .eventos-grid .ev-overlay{grid-column:1 / 4;grid-row:2}
+}
+@media (max-width:600px){
+  .deck-meta{display:none}
+  .partners{grid-template-columns:1fr 1fr}
+  .belief .visual{grid-template-columns:1fr;grid-template-rows:repeat(3,1fr);max-height:50vh}
+  .eat-footer{grid-template-columns:1fr;text-align:left}
+  .eat-footer .right-info,.eat-footer .center-line{text-align:left}
+  .cover-meta{grid-template-columns:1fr}
+  .cover-meta .center,.cover-meta .right{text-align:left}
+  .section-pill{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important}
+  .reveal,.reveal-blur,.reveal-scale,.reveal-mask{opacity:1;transform:none;filter:none;clip-path:none}
+  .split-letters .ch{opacity:1;transform:none}
+  .belief .text h2 .word{opacity:1;transform:none;filter:none}
+  .timeline::before,.tl-node,.tl-node::before{transform:none;opacity:1}
+  .eventos-grid .ev-cell,.eventos-grid .ev-overlay,.invite-renders .rd,.award-cell{opacity:1;transform:none}
+  .casa.is-active .casa-photo,.cover.is-active .cover-bg video{animation:none;transform:none}
+  .casa .casa-tag{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+  .cover-bg video,.casa-photo,.food-hero .photo{display:block}
+}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <a class="eat-logo" href="#cover" aria-label="EAT+KITCHEN"><span>EAT</span><span class="plus">+</span><span>KITCHEN</span></a>
+  <div class="deck-meta"><span class="pulse"></span><span>EXPANSÃO · NOVOS INTERESSADOS · 2026</span></div>
+</header>
+
+<nav class="progress-rail" aria-label="Navegação"></nav>
+
+<main>
+
+  <!-- ===== 01 — CAPA ===== -->
+  <section class="slide cover" id="cover" data-name="Capa">
+    <div class="cover-bg"><video autoplay muted loop playsinline preload="metadata"><source src="assets/video/cover.mp4" type="video/mp4" /></video></div>
+    <div class="cover-content">
+      <div class="cover-eyebrow reveal">Apresentação · novos interessados · 2026</div>
+      <h1 class="cover-brand"><span class="split-letters" data-stagger>EAT<span class="plus">+</span>KITCHEN</span></h1>
+      <div class="cover-tagline reveal-mask" data-delay="3">PESSOAS. COMIDA. VERDADE.</div>
+      <p class="cover-subtitle reveal" data-delay="3"><strong>Convite à expansão.</strong><br/>Conheça a marca, os números e a oportunidade.</p>
+    </div>
+    <div class="cover-meta">
+      <div class="reveal" data-delay="4">EAT+KITCHEN · <strong>Sociedade em conta de participação</strong></div>
+      <div class="center reveal" data-delay="5">v1.0</div>
+      <div class="right reveal" data-delay="5">Maio · 2026</div>
+    </div>
+  </section>
+
+  <!-- ===== 02 — WELLNESS CULTURE ===== -->
+  <section class="slide wellness" data-name="Wellness culture">
+    <div class="wellness-bg" aria-hidden="true" style="position:absolute;inset:0;background-image:url('assets/img/wellness-grid.jpg');background-size:cover;background-position:center;filter:brightness(.55) contrast(1.05);z-index:0"></div>
+    <div class="wellness-bg" aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4) 0%,rgba(0,0,0,.55) 100%);z-index:1"></div>
+    <div class="wellness-overlay" style="z-index:2">
+      <h2 class="reveal">The wellness<br/>culture.</h2>
+    </div>
+    <div class="slide-footer" style="z-index:3"><span class="num">02 / 28</span><span>Movimento de bem-estar</span></div>
+  </section>
+
+  <!-- ===== 03 — ACREDITAMOS ===== -->
+  <section class="slide" data-name="Acreditamos">
+    <div class="belief">
+      <div class="text">
+        <h2 data-belief>
+          <span class="word">Acreditamos na</span>
+          <span class="word"><strong>comida de verdade</strong></span>
+          <span class="word">saudável e deliciosa</span>
+          <span class="word repeat">sem ser chata</span>
+          <span class="word repeat">sem ser óbvia</span>
+          <span class="word">com <strong>design</strong></span>
+          <span class="word">com <strong>branding</strong></span>
+          <span class="word">como <strong>estilo de vida</strong></span>
+        </h2>
+      </div>
+      <div class="visual reveal" data-delay="2">
+        <div class="photo" style="background-image:url('assets/img/wellness-grid.jpg');background-size:300% auto;background-position:0% 0%"></div>
+        <div class="tag">Good food. Good mood.</div>
+        <div class="photo" style="background-image:url('assets/img/dish-salad.jpg');background-size:cover"></div>
+        <div class="photo" style="background-image:url('assets/img/wellness-grid.jpg');background-size:300% auto;background-position:50% 100%"></div>
+        <div class="tag">Pessoas. Comida. Verdade.</div>
+        <div class="photo" style="background-image:url('assets/img/dish-gnocchi.jpg');background-size:cover"></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">03 / 28</span><span>O que defendemos</span></div>
+  </section>
+
+  <!-- ===== 04 — NOSSA VERDADE ===== -->
+  <section class="slide" data-name="Nossa verdade">
+    <div class="manifesto-text">
+      <span class="label reveal">Manifesto · 01</span>
+      <p class="reveal" data-delay="1">Somos um <strong>movimento para melhorar a vida das pessoas</strong> com comida de verdade, saudável e deliciosa, promovendo um estilo de vida equilibrado, humano e inspirador.</p>
+    </div>
+    <div class="cut-word" aria-hidden="true">NOSSA VERDADE.</div>
+    <div class="slide-footer"><span class="num">04 / 28</span><span>Manifesto · nossa verdade</span></div>
+  </section>
+
+  <!-- ===== 05 — NOSSA HISTÓRIA ===== -->
+  <section class="slide" data-name="Nossa história">
+    <div class="manifesto-text">
+      <span class="label reveal">Manifesto · 02</span>
+      <p class="reveal" data-delay="1">O Eat Kitchen nasceu da história dos irmãos de origem italiana <strong>Nico, Melina e Dami Ventre</strong>, que têm a gastronomia como forma de amor presente em suas vidas desde a infância.</p>
+      <p class="reveal" data-delay="2">Juntos, decidem criar um lugar onde o alimento é sinônimo de saúde, conforto e lembranças, onde o espaço é sinônimo de acolhimento e <strong>as pessoas vêm em primeiro lugar</strong>.</p>
+      <p class="reveal" data-delay="3">Nosso processo de criação foi natural e verdadeiro, onde cada um contribuiu com suas experiências e sua essência. <strong>Construímos um lugar onde gostaríamos de estar.</strong></p>
+    </div>
+    <div class="cut-word" aria-hidden="true">NOSSA HISTÓRIA.</div>
+    <div class="slide-footer"><span class="num">05 / 28</span><span>Como começamos</span></div>
+  </section>
+
+  <!-- ===== 06 — NOSSOS SÓCIOS ===== -->
+  <section class="slide" data-name="Sócios">
+    <div class="section-pill reveal">Nossos sócios</div>
+    <div>
+      <h2 class="reveal" style="font-family:var(--font-display);font-weight:800;font-size:clamp(1.3rem,3.4vw,2.6rem);line-height:1;letter-spacing:-.035em;color:var(--white);text-transform:uppercase;padding-right:clamp(0rem,14vw,15rem);max-width:32ch" data-delay="1">
+        Três irmãos <span style="color:var(--g2);font-weight:500">e um amigo investidor</span> em volta de uma <strong>narrativa familiar</strong>.
+      </h2>
+    </div>
+    <div class="partners">
+      <article class="partner reveal" data-delay="2">
+        <div class="photo" style="background-image:url('assets/img/partner-nico.jpg');background-size:cover;background-position:center top"></div>
+        <div class="name-block">
+          <div class="name">Nico Ventre</div>
+          <div class="role">Co-fundador · CEO</div>
+        </div>
+        <p class="bio">Empreendedor serial. Lidera operação, expansão e cultura.</p>
+      </article>
+      <article class="partner reveal" data-delay="3">
+        <div class="photo" style="background-image:url('assets/img/partner-melina.jpg');background-size:cover;background-position:center top"></div>
+        <div class="name-block">
+          <div class="name">Melina Ventre</div>
+          <div class="role">Co-fundadora · CIO</div>
+        </div>
+        <p class="bio">Direção criativa e inovação. Curadora visual da marca.</p>
+      </article>
+      <article class="partner reveal" data-delay="4">
+        <div class="photo" style="background-image:url('assets/img/partner-dami.jpg');background-size:cover;background-position:center top"></div>
+        <div class="name-block">
+          <div class="name">Dami Ventre</div>
+          <div class="role">Co-fundador</div>
+        </div>
+        <p class="bio">Visão internacional. Conexões e tendências globais.</p>
+      </article>
+      <article class="partner reveal" data-delay="5">
+        <div class="photo" style="background-image:url('assets/img/partner-thiago.jpg');background-size:cover;background-position:center top"></div>
+        <div class="name-block">
+          <div class="name">Thiago Zeni</div>
+          <div class="role">Sócio investidor</div>
+        </div>
+        <p class="bio">Investidor com experiência em tecnologia e marketing.</p>
+      </article>
+    </div>
+    <div class="slide-footer"><span class="num">06 / 28</span><span>Sociedade</span></div>
+  </section>
+
+  <!-- ===== 07 — NOSSO MANIFESTO ===== -->
+  <section class="slide" data-name="Manifesto">
+    <div class="manifesto-text">
+      <span class="label reveal">Manifesto · 03</span>
+      <p class="reveal" data-delay="1">Para nós, <strong>comida é transformação, é cura</strong>. Sem sabores artificiais, conservantes ou algo que você não serviria para sua família.</p>
+      <p class="reveal" data-delay="2">Priorizamos <strong>produtores locais e insumos orgânicos</strong>, sempre que possível.</p>
+      <p class="reveal" data-delay="3">Quando nos alimentamos com comida de verdade, feita com ingredientes reais, <strong>tudo ao nosso redor é afetado de forma positiva.</strong></p>
+    </div>
+    <div class="cut-word" aria-hidden="true">NOSSO MANIFESTO.</div>
+    <div class="slide-footer"><span class="num">07 / 28</span><span>O que servimos</span></div>
+  </section>
+
+  <!-- ===== 08 — NOSSO SONHO GRANDE ===== -->
+  <section class="slide" data-name="Sonho grande">
+    <div class="manifesto-text">
+      <span class="label reveal">Visão · sonho grande</span>
+      <p class="reveal" data-delay="1">Ser uma <strong>rede global de restaurantes</strong> que inspire as pessoas a se alimentar melhor e a viver de forma mais equilibrada e feliz, para deixar um <strong>legado positivo e duradouro</strong> e fazer a diferença no mundo.</p>
+    </div>
+    <div class="cut-word" aria-hidden="true">NOSSO SONHO GRANDE.</div>
+    <div class="slide-footer"><span class="num">08 / 28</span><span>Para onde vamos</span></div>
+  </section>
+
+  <!-- ===== 09 — NOSSAS CASAS ===== -->
+  <section class="slide" data-name="Nossas casas">
+    <div class="standalone">
+      <div>
+        <div class="subtitle reveal">Capítulo II</div>
+        <h2 class="reveal" data-delay="1">Nossas<br/>casas.</h2>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">09 / 28</span><span>Onde recebemos</span></div>
+  </section>
+
+  <!-- ===== 10 — SUSTENTABILIDADE ===== -->
+  <section class="slide" data-name="Sustentabilidade">
+    <div class="section-pill reveal">Sustentabilidade</div>
+    <div class="sustain">
+      <div class="text">
+        <h2 class="reveal" data-delay="1">Criamos um lugar onde<br/><strong>gostaríamos de estar</strong>.<br/>Com pouco, fizemos muito.</h2>
+        <p class="lead reveal" data-delay="2">Ressignificamos materiais de descarte para construir nossas casas de forma <strong>criativa, econômica e sustentável</strong>. Cada espaço carrega marcas da história da cidade onde está plantado.</p>
+      </div>
+      <div class="photo reveal" data-delay="3" style="background-image:url('assets/img/sustain-grid.jpg')"></div>
+    </div>
+    <div class="slide-footer"><span class="num">10 / 28</span><span>Materiais ressignificados</span></div>
+  </section>
+
+  <!-- ===== 11 — NOVO HAMBURGO ===== -->
+  <section class="slide casa" data-name="Novo Hamburgo">
+    <div class="casa-photo" style="background-image:url('assets/img/casa-nh.jpg')"></div>
+    <div class="casa-content">
+      <div class="casa-tag reveal">
+        <span class="yr">Casa 01 · 2019</span>
+        <span class="name">Novo Hamburgo</span>
+        <span class="cap">Centro · Capacidade para 114 pessoas</span>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">11 / 28</span><span>Matriz · Rio Grande do Sul</span></div>
+  </section>
+
+  <!-- ===== 12 — MOINHOS DE VENTO ===== -->
+  <section class="slide casa" data-name="Moinhos">
+    <div class="casa-photo" style="background-image:url('assets/img/casa-moinhos.jpg')"></div>
+    <div class="casa-content">
+      <div class="casa-tag reveal">
+        <span class="yr">Casa 02 · 2020</span>
+        <span class="name">Moinhos de Vento</span>
+        <span class="cap">Porto Alegre · Capacidade para 140 pessoas</span>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">12 / 28</span><span>Bairro nobre · POA</span></div>
+  </section>
+
+  <!-- ===== 13 — CAIS EMBARCADERO ===== -->
+  <section class="slide casa" data-name="Cais">
+    <div class="casa-photo" style="background-image:url('assets/img/casa-cais.jpg')"></div>
+    <div class="casa-content">
+      <div class="casa-tag reveal">
+        <span class="yr">Casa 03 · 2021</span>
+        <span class="name">Cais Embarcadero</span>
+        <span class="cap">Porto Alegre · Capacidade para 223 pessoas</span>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">13 / 28</span><span>Vista do Guaíba · maior unidade</span></div>
+  </section>
+
+  <!-- ===== 14 — BARRA SHOPPING ===== -->
+  <section class="slide casa" data-name="Barra Shopping">
+    <div class="casa-photo" style="background-image:url('assets/img/casa-barra.jpg')"></div>
+    <div class="casa-content">
+      <div class="casa-tag reveal">
+        <span class="yr">Casa 04 · 2025</span>
+        <span class="name">Barra Shopping</span>
+        <span class="cap">Porto Alegre · Capacidade para 90 pessoas</span>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">14 / 28</span><span>Operação shopping · novo formato</span></div>
+  </section>
+
+  <!-- ===== 16 — LINHA DO TEMPO ===== -->
+  <section class="slide" data-name="Linha do tempo">
+    <div class="section-pill reveal">Linha do tempo</div>
+    <div>
+      <h2 class="h-display reveal" data-delay="1">Sete anos de história<br/>marcados por <strong>crescimento</strong> e <strong>resiliência</strong>.</h2>
+    </div>
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-node reveal" data-delay="1"><span class="yr">2019</span><p class="label">Novo Hamburgo<small>Centro · 1ª unidade</small></p></div>
+          <div class="tl-node reveal" data-delay="2"><span class="yr">2020</span><p class="label">Moinhos de Vento<small>Porto Alegre</small></p></div>
+          <div class="tl-node event reveal" data-delay="3"><span class="yr">2020</span><p class="label">Pandemia<small>COVID-19</small></p></div>
+          <div class="tl-node reveal" data-delay="4"><span class="yr">2021</span><p class="label">Cais Embarcadero<small>Porto Alegre</small></p></div>
+          <div class="tl-node reveal" data-delay="5"><span class="yr">2022</span><p class="label">Canela<small>Jângal das Araucárias</small></p></div>
+          <div class="tl-node event reveal" data-delay="6"><span class="yr">2024</span><p class="label">Grande enchente<small>Rio Grande do Sul</small></p></div>
+          <div class="tl-node reveal" data-delay="7"><span class="yr">2025</span><p class="label">Barra Shopping<small>Porto Alegre</small></p></div>
+          <div class="tl-node future reveal" data-delay="8"><span class="yr">2026 →</span><p class="label">Expansão<small>SP · SC · PR</small></p></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">15 / 28</span><span>Cronologia</span></div>
+  </section>
+
+  <!-- ===== 16 — NOSSO TIME (com foto da equipe) ===== -->
+  <section class="slide casa" data-name="Nosso time">
+    <div class="casa-photo" style="background-image:url('assets/img/team-photo.jpg');filter:brightness(.55) contrast(1.05) saturate(.9)"></div>
+    <div class="casa-content" style="justify-content:center;padding-top:calc(var(--pad) + 4rem)">
+      <span class="label reveal" style="font-family:var(--font-display);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:600;margin-bottom:1.2rem">Nosso time</span>
+      <h2 class="reveal-blur" data-delay="1" style="font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,5.4vw,5rem);line-height:1;letter-spacing:-.045em;color:var(--white);text-transform:uppercase;max-width:24ch;text-shadow:0 4px 30px rgba(0,0,0,.6)">Mais de <strong><span data-count="150">150</span> pessoas</strong><br/>em torno do mesmo propósito.</h2>
+    </div>
+    <div class="slide-footer"><span class="num">16 / 28</span><span>Quem faz acontecer</span></div>
+  </section>
+
+  <!-- ===== 17 — COMIDA DE VERDADE (visual hero) ===== -->
+  <section class="slide food-cinema" data-name="Comida de verdade">
+    <div class="cinema-stage">
+      <div class="cinema-img" data-cinema-img style="background-image:url('assets/img/food-table.jpg')"></div>
+      <div class="cinema-img" data-cinema-img style="background-image:url('assets/img/dish-salad.jpg')"></div>
+      <div class="cinema-img" data-cinema-img style="background-image:url('assets/img/dish-meat.jpg')"></div>
+      <div class="cinema-img" data-cinema-img style="background-image:url('assets/img/dish-gnocchi.jpg')"></div>
+      <div class="cinema-img" data-cinema-img style="background-image:url('assets/img/food-table.jpg')"></div>
+    </div>
+    <div class="cinema-flash" data-cinema-flash></div>
+    <div class="cinema-vignette"></div>
+    <div class="cinema-text" data-cinema-text>
+      <h2>Comida<br/>de verdade.</h2>
+    </div>
+    <div class="slide-footer" style="color:rgba(255,255,255,.55);border-top-color:rgba(255,255,255,.18);z-index:6"><span class="num" style="color:white">17 / 25</span><span>O que servimos · todo dia</span></div>
+  </section>
+
+  <!-- ===== 19 — IMPACTO (título) ===== -->
+  <section class="slide" data-name="Impacto">
+    <div class="standalone">
+      <div>
+        <div class="subtitle reveal">Capítulo III</div>
+        <h2 class="reveal" data-delay="1">Impacto<br/>EAT<span class="plus" style="font-weight:600;display:inline-block;transform:translateY(-.05em);margin:0 .02em">+</span>Kitchen.</h2>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">21 / 28</span><span>Os números que sustentam a tese</span></div>
+  </section>
+
+  <!-- ===== 20 — FATURAMENTO ===== -->
+  <section class="slide" data-name="Faturamento">
+    <div class="section-pill reveal">Faturamento</div>
+    <div class="impact-revenue">
+      <div class="eyebrow reveal" data-delay="1">Receita bruta · 2019 a 2022</div>
+      <div class="massive reveal-blur" data-delay="2">DE <strong><span data-count="1.7" data-decimals="1" data-prefix="R$ " data-suffix="M">R$ 1,7M</span></strong> <span class="arrow">→</span> <strong><span data-count="22.6" data-decimals="1" data-prefix="R$ " data-suffix="M">R$ 22,6M</span></strong></div>
+      <div class="stats">
+        <div class="rs reveal" data-delay="3"><span class="v"><span data-count="13" data-suffix="×">13×</span></span><span class="l">Crescimento no faturamento</span></div>
+        <div class="rs reveal" data-delay="4"><span class="v"><span data-count="1194" data-thousand="." data-suffix="%">1.194%</span></span><span class="l">De crescimento em 4 anos</span></div>
+        <div class="rs reveal" data-delay="5"><span class="v"><span data-count="73" data-prefix="R$ " data-suffix="M">R$ 73M</span></span><span class="l">Faturamento acumulado · 2019–2024</span></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">22 / 28</span><span>Performance financeira</span></div>
+  </section>
+
+  <!-- ===== 21 — PRÊMIOS ===== -->
+  <section class="slide" data-name="Prêmios">
+    <div class="section-pill reveal">Prêmios</div>
+    <div>
+      <h2 class="h-display reveal" data-delay="1">Reconhecimento <span class="accent">consistente</span><br/>em <strong>13 títulos</strong> de melhor cozinha saudável.</h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-cell reveal" data-delay="2">
+        <span class="ico">★</span>
+        <div class="name">Prêmio iFood<br/>Super Restaurantes</div>
+        <span class="tag">Plataforma</span>
+      </div>
+      <div class="award-cell reveal" data-delay="3">
+        <span class="ico">◎</span>
+        <div class="name">Tripadvisor<br/>Travelers' Choice</div>
+        <span class="tag">Top 10% mundial</span>
+      </div>
+      <div class="award-cell reveal" data-delay="4">
+        <span class="ico">30</span>
+        <div class="name">Os 30 melhores<br/>restaurantes do RS</div>
+        <span class="tag">Sabores do Sul · 2025</span>
+      </div>
+      <div class="award-cell reveal" data-delay="5">
+        <span class="ico">▲</span>
+        <div class="name">Melhor cozinha<br/>saudável</div>
+        <span class="tag">Sabores do Sul</span>
+      </div>
+      <div class="award-cell award-summary reveal" data-delay="6">
+        <span class="label">13× Campeão</span>
+        <span class="big"><span data-count="13" data-suffix="×">13×</span></span>
+        <div class="years">
+          <strong>Novo Hamburgo</strong><br/>2019 · 2020 · 2021 · 2022 · 2023 · 2024 · 2025
+        </div>
+        <div class="years" style="margin-top:.5rem">
+          <strong>Porto Alegre</strong><br/>2020 · 2021 · 2022 · 2023 · 2024 · 2025
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">23 / 28</span><span>Reconhecimento formal</span></div>
+  </section>
+
+  <!-- ===== 22 — ALCANCE ===== -->
+  <section class="slide" data-name="Alcance">
+    <div class="section-pill reveal">Alcance</div>
+    <div>
+      <h2 class="h-display reveal" data-delay="1">Alcance que <span class="accent">cresceu junto</span><br/>com a operação.</h2>
+    </div>
+    <div class="reach">
+      <div class="reach-photo reveal" data-delay="2" style="background-image:url('assets/img/team-photo.jpg')"></div>
+      <div class="reach-list">
+        <div class="reach-row reveal" data-delay="3"><span class="v"><span data-count="917">917</span><small>k</small></span><span class="desc"><strong>Pessoas atendidas</strong> entre 2019 e 2024</span></div>
+        <div class="reach-row reveal" data-delay="4"><span class="v"><span data-count="20">20</span><small>k</small></span><span class="desc"><strong>Clientes</strong> atendidos · média mensal</span></div>
+        <div class="reach-row reveal" data-delay="5"><span class="v"><span data-count="93">93</span><small>k</small></span><span class="desc"><strong>Seguidores</strong> · @eatkitchengram</span></div>
+        <div class="reach-row reveal" data-delay="6"><span class="v"><span data-count="685">685</span><small>k</small></span><span class="desc"><strong>Alcance mensal</strong> nas redes sociais</span></div>
+        <div class="reach-row reveal" data-delay="7"><span class="v"><span data-count="15">15</span><small>M+</small></span><span class="desc"><strong>Visualizações em Reels</strong> acumuladas</span></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">24 / 28</span><span>Reach &amp; engajamento</span></div>
+  </section>
+
+  <!-- ===== 23 — EAT+EVENTOS (título + texto) ===== -->
+  <section class="slide" data-name="EAT+Eventos">
+    <div class="eventos-text">
+      <h2 class="reveal">EAT<span class="plus">+</span>Eventos.</h2>
+      <p class="reveal" data-delay="1">Cocriamos e produzimos eventos desenhados de <strong>forma única e especial</strong> para nossos clientes.<br/><br/>Sempre aliando <strong>saúde × comida × música</strong>, resultando em experiências memoráveis.</p>
+    </div>
+    <div class="slide-footer"><span class="num">25 / 28</span><span>Vertical de experiências</span></div>
+  </section>
+
+  <!-- ===== 26 — EVENTOS MEMORÁVEIS ===== -->
+  <section class="slide eventos-grid" data-name="Eventos memoráveis">
+    <div class="ev-cell" style="background-image:url('assets/img/casa-cais.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/wedding-bride.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/casa-moinhos.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/casa-nh.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/dish-salad.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/wellness-grid.jpg');background-size:300% auto;background-position:0% 0%"></div>
+    <div class="ev-overlay">Eventos<br/>memoráveis.</div>
+    <div class="ev-cell" style="background-image:url('assets/img/casa-barra.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/wedding-bride.jpg');background-position:50% 30%"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/dish-meat.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/dish-gnocchi.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/wellness-grid.jpg');background-size:300% auto;background-position:50% 100%"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/team-photo.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/sustain-grid.jpg')"></div>
+    <div class="ev-cell" style="background-image:url('assets/img/food-table.jpg')"></div>
+    <div class="slide-footer" style="color:rgba(255,255,255,.6);border-top-color:rgba(255,255,255,.18);background:rgba(0,0,0,.5);padding:.8rem var(--pad)"><span class="num" style="color:white">26 / 28</span><span>Bodas · jantares · workshops · ativações</span></div>
+  </section>
+
+  <!-- ===== 25 — CONVITE ===== -->
+  <section class="slide invite" data-name="Convite">
+    <div class="invite-top">
+      <span class="label reveal">Convite · novos interessados</span>
+      <h2 class="reveal" data-delay="1">Vamos construir <strong>juntos</strong><br/>a próxima fase da rede.</h2>
+      <p class="lead reveal" data-delay="2">Estamos abrindo participação para <strong>investidores e parceiros</strong> que queiram integrar a expansão para <strong>SP · SC · PR</strong>. Marca consolidada, números sólidos e cultura testada por sete anos.</p>
+
+      <div class="invite-renders reveal" data-delay="3">
+        <div class="rd" data-label="Fachada" style="background-image:url('assets/img/render-facade.jpg')"></div>
+        <div class="rd" data-label="Sinalização" style="background-image:url('assets/img/render-eat-sign.jpg')"></div>
+        <div class="rd" data-label="Interior" style="background-image:url('assets/img/render-interior.jpg')"></div>
+        <div class="rd" data-label="Manifesto" style="background-image:url('assets/img/render-manifesto.jpg')"></div>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar reveal" data-delay="4">
+          <span class="num">01</span>
+          <span class="h">Marca consolidada</span>
+          <span class="d">13× campeã regional · 917k pessoas atendidas · 1.000+ reviews 4.7–4.9 ⭐</span>
+        </div>
+        <div class="pillar reveal" data-delay="5">
+          <span class="num">02</span>
+          <span class="h">Números sólidos</span>
+          <span class="d">Crescimento 13× em 4 anos · R$ 73M acumulados · operação testada</span>
+        </div>
+        <div class="pillar reveal" data-delay="6">
+          <span class="num">03</span>
+          <span class="h">Cultura testada</span>
+          <span class="d">Time formado · 5 unidades operando · playbook replicável</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="invite-bottom">
+      <div class="cta-text">Próximo passo<strong>Conversa exploratória</strong></div>
+      <div class="contact">
+        <strong>contato@eatkitchen.com.br</strong><br/>
+        adm@eatkitchen.com.br · (51) 3593·7244
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 28 — ENCERRAMENTO ===== -->
+  <section class="slide signoff" data-name="Encerramento">
+    <div class="section-pill reveal">Obrigado</div>
+    <div class="top">
+      <span class="kicker reveal">Encerramento</span>
+      <h2 class="reveal" data-delay="1">Pessoas. <strong>Comida.</strong> Verdade.</h2>
+      <p class="lead reveal" data-delay="2">Esta é a marca que construímos em sete anos. <strong>Estamos prontos para a próxima fase</strong> — e queremos conhecer quem topa caminhar com a gente.</p>
+    </div>
+
+    <footer class="eat-footer">
+      <div class="brand-block">
+        <span class="brand-mark">EAT<span class="plus">+</span>KITCHEN</span>
+        <div class="brand-meta">
+          <strong>Pessoas. Comida. Verdade.</strong>
+          <span>Apresentação institucional · uso restrito</span>
+        </div>
+      </div>
+      <div class="center-line">contato@eatkitchen.com.br · adm@eatkitchen.com.br<br/>(51) 3593·7244 · eatkitchen.com.br</div>
+      <div class="right-info">Próxima conversa<br/><strong>Sob agendamento</strong></div>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const rail = document.querySelector('.progress-rail');
+  const header = document.querySelector('.app-header');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ===== Letter splitter (capa) ===== */
+  document.querySelectorAll('[data-stagger]').forEach(el => {
+    const html = el.innerHTML;
+    // preserve elements like <span class="plus">+</span> as a single chunk
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    const chunks = [];
+    tmp.childNodes.forEach(node => {
+      if (node.nodeType === 3) { // text
+        node.textContent.split('').forEach(c => chunks.push({ type:'char', value:c }));
+      } else if (node.nodeType === 1) {
+        chunks.push({ type:'el', html: node.outerHTML });
+      }
+    });
+    el.innerHTML = chunks.map((c, i) => {
+      const delay = (i * 0.045).toFixed(3);
+      if (c.type === 'char') return `<span class="ch" style="transition-delay:${delay}s">${c.value === ' ' ? '&nbsp;' : c.value}</span>`;
+      return `<span class="ch" style="transition-delay:${delay}s">${c.html}</span>`;
+    }).join('');
+  });
+
+  /* ===== Pips com tooltip ===== */
+  slides.forEach((slide, i) => {
+    const pip = document.createElement('button');
+    pip.className = 'pip';
+    const name = slide.dataset.name || `Slide ${i+1}`;
+    pip.setAttribute('aria-label', `Slide ${i+1}: ${name}`);
+    pip.setAttribute('data-tip', `${String(i+1).padStart(2,'0')} · ${name}`);
+    pip.addEventListener('click', () => slide.scrollIntoView({behavior:'smooth', block:'start'}));
+    rail.appendChild(pip);
+  });
+  const pips = Array.from(rail.querySelectorAll('.pip'));
+
+  /* ===== Reveal generic (.reveal, .reveal-blur, .reveal-scale, .reveal-mask) ===== */
+  const revealSelector = '.reveal, .reveal-blur, .reveal-scale, .reveal-mask, [data-stagger], [data-belief]';
+  const revealEls = document.querySelectorAll(revealSelector);
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  revealEls.forEach(el => obs.observe(el));
+
+  /* ===== In-view por slide (timeline, eventos-grid, casa, invite) ===== */
+  const slideViewObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      const slide = e.target;
+      if (e.isIntersecting && e.intersectionRatio >= 0.45) {
+        slide.classList.add('in-view');
+        // marca timeline / eventos-grid filhos
+        slide.querySelectorAll('.timeline, .eventos-grid').forEach(el => el.classList.add('in-view'));
+      }
+    });
+  }, { threshold: [0.45] });
+  slides.forEach(s => slideViewObs.observe(s));
+  // garantir tambem para .timeline e .eventos-grid (caso slide pai não dispare)
+  document.querySelectorAll('.timeline').forEach(el => slideViewObs.observe(el));
+  document.querySelectorAll('.eventos-grid').forEach(el => slideViewObs.observe(el));
+
+  /* ===== Active slide tracking + Ken Burns trigger ===== */
+  let activeIndex = 0;
+  const activeObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.intersectionRatio >= 0.55) {
+        const idx = slides.indexOf(e.target);
+        if (idx !== -1) {
+          activeIndex = idx;
+          pips.forEach((p,i) => p.classList.toggle('active', i === idx));
+          slides.forEach((s,i) => s.classList.toggle('is-active', i === idx));
+        }
+      }
+    });
+  }, { threshold: [0.55] });
+  slides.forEach(s => activeObs.observe(s));
+
+  /* ===== Keyboard / touch navigation ===== */
+  document.addEventListener('keydown', (e) => {
+    const k = e.key;
+    if (['ArrowDown','PageDown',' '].includes(k)) { e.preventDefault(); goTo(activeIndex + 1); }
+    else if (['ArrowUp','PageUp'].includes(k)) { e.preventDefault(); goTo(activeIndex - 1); }
+    else if (k === 'Home') { e.preventDefault(); goTo(0); }
+    else if (k === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+  });
+  function goTo(idx){ idx = Math.max(0, Math.min(slides.length - 1, idx)); slides[idx].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'}); }
+
+  let touchStartY = null;
+  document.addEventListener('touchstart', (e) => { if (e.touches.length === 1) touchStartY = e.touches[0].clientY; }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    if (touchStartY === null) return;
+    const endY = (e.changedTouches[0] || {}).clientY ?? touchStartY;
+    const dy = touchStartY - endY;
+    if (Math.abs(dy) > 60) { if (dy > 0) goTo(activeIndex + 1); else goTo(activeIndex - 1); }
+    touchStartY = null;
+  }, { passive: true });
+
+  /* ===== Header autohide on scroll down ===== */
+  let lastScroll = 0, scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(() => {
+      const cur = window.scrollY;
+      const delta = cur - lastScroll;
+      if (cur > 80 && delta > 6) header.classList.add('is-hidden');
+      else if (delta < -4) header.classList.remove('is-hidden');
+      lastScroll = cur;
+      scrollTicking = false;
+    });
+  }, { passive: true });
+
+  /* ===== Parallax sutil em fotos de casa ===== */
+  const parallaxEls = document.querySelectorAll('.casa');
+  let parallaxTicking = false;
+  function updateParallax(){
+    parallaxEls.forEach(slide => {
+      const rect = slide.getBoundingClientRect();
+      const photo = slide.querySelector('.casa-photo');
+      if (!photo) return;
+      const vh = window.innerHeight;
+      const center = rect.top + rect.height/2;
+      const offset = (center - vh/2) / vh; // -1..1 quando o slide cruza
+      const shift = Math.max(-30, Math.min(30, offset * -28));
+      photo.style.setProperty('--shift', shift.toFixed(1) + 'px');
+    });
+  }
+  if (!reduceMotion) {
+    window.addEventListener('scroll', () => {
+      if (parallaxTicking) return;
+      parallaxTicking = true;
+      requestAnimationFrame(() => { updateParallax(); parallaxTicking = false; });
+    }, { passive: true });
+    updateParallax();
+  }
+
+  /* ===== Casa-tag entrance via in-view ===== */
+  const casaTagObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.casa').forEach(c => casaTagObs.observe(c));
+
+  /* ===== Award cells entrance (sem usar .reveal pra ter delay próprio do CSS) ===== */
+  const awardObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const cells = Array.from(e.target.querySelectorAll('.award-cell'));
+        cells.forEach((c, i) => {
+          setTimeout(() => c.classList.add('in'), i * 90);
+        });
+        awardObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.awards-grid').forEach(g => awardObs.observe(g));
+
+  /* ===== Number count-up ===== */
+  function animateNumber(el){
+    if (el.dataset.counted === '1') return;
+    el.dataset.counted = '1';
+    const target = parseFloat(el.dataset.count);
+    if (isNaN(target)) return;
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const thousand = el.dataset.thousand || '';
+    const dur = parseInt(el.dataset.duration || '1400', 10);
+    const start = performance.now();
+    const startVal = 0;
+    el.classList.add('counting');
+    function format(n){
+      let s = n.toFixed(decimals);
+      // troca ponto decimal por vírgula em pt-BR
+      if (decimals > 0) s = s.replace('.', ',');
+      // separador de milhar
+      if (thousand) {
+        const parts = s.split(',');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, thousand);
+        s = parts.join(',');
+      }
+      return prefix + s + suffix;
+    }
+    function tick(now){
+      const t = Math.min(1, (now - start) / dur);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - t, 3);
+      const cur = startVal + (target - startVal) * eased;
+      el.textContent = format(cur);
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = format(target);
+    }
+    requestAnimationFrame(tick);
+  }
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateNumber(e.target);
+        countObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => {
+    if (reduceMotion) {
+      el.dataset.counted = '1';
+    } else {
+      countObs.observe(el);
+    }
+  });
+
+  /* ===== First slide reveal ===== */
+  setTimeout(() => {
+    const first = slides[0];
+    if (first) first.querySelectorAll('.reveal, .reveal-blur, .reveal-scale, .reveal-mask, [data-stagger]').forEach(el => el.classList.add('in'));
+  }, 60);
+
+  /* === Fit cut-word: cada palavra-âncora cresce até bater na borda === */
+  function fitCutWords(){
+    document.querySelectorAll('.cut-word').forEach(el => {
+      const slide = el.closest('.slide');
+      if (!slide) return;
+      const padLeft = parseFloat(getComputedStyle(el).left) || 0;
+      const padRight = parseFloat(getComputedStyle(el).right) || 0;
+      const available = slide.clientWidth - padLeft - padRight;
+
+      // mede tirando o clip-path (display:inline-block ainda mede)
+      const wasIn = el.classList.contains('in');
+      el.classList.add('in'); // garante medição correta
+      let size = Math.min(slide.clientHeight * 0.45, 320);
+      el.style.fontSize = size + 'px';
+      let guard = 80;
+      while (el.scrollWidth > available && size > 16 && guard-- > 0) {
+        size -= 4;
+        el.style.fontSize = size + 'px';
+      }
+      guard = 20;
+      while (el.scrollWidth <= available - 4 && size < 600 && guard-- > 0) {
+        size += 2;
+        el.style.fontSize = size + 'px';
+      }
+      while (el.scrollWidth > available && size > 16) {
+        size -= 1;
+        el.style.fontSize = size + 'px';
+      }
+      if (!wasIn) el.classList.remove('in');
+    });
+  }
+  fitCutWords();
+  window.addEventListener('resize', () => {
+    requestAnimationFrame(fitCutWords);
+  });
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fitCutWords);
+  }
+})();
+</script>
+</body>
+</html>
