@@ -80,7 +80,7 @@
       position: relative;
       transform-origin: center center;
       flex-shrink: 0;
-      background: #fff;
+      background: transparent;
       will-change: transform;
     }
 

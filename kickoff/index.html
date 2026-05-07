@@ -4,739 +4,1713 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
-<title>Kick-off RBA × IA — 08/05/2026</title>
+<title>Kick-off RBA · De Volta para o Futuro · 08/05/2026</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&display=swap" rel="stylesheet" />
-
-<!-- Reusa o sistema visual do diagnóstico -->
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="animations.css" />
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee&family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
 
 <style>
-  /* ----- Layout helpers — espelham o deck do diagnóstico ----- */
-  .frame {
-    padding: 110px 120px 96px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
+/* =====================================================================
+   KICK-OFF RBA · CINEMATIC EDITION
+   Higgsfield-rendered hero assets + BTTF logo em camadas + atmosfera
+   ===================================================================== */
 
-  .sec-label {
-    font-family: var(--font-mono);
-    font-size: 18px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-fg-mute);
-  }
-  .slide--cream .sec-label { color: rgba(10, 37, 95, 0.55); }
 
-  /* ----- Capa ----- */
-  .cover {
-    background: var(--color-bg);
-    position: relative;
-    overflow: hidden;
-  }
-  .cover-arcs {
-    position: absolute;
-    right: -4%;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 140%;
-    width: auto;
-    opacity: 0.08;
-    pointer-events: none;
-    user-select: none;
-  }
-  .cover-content {
-    position: relative;
-    padding: 120px 120px 100px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .cover-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-fg-dim);
-  }
-  .cover-logo { display: flex; align-items: center; gap: 28px; }
-  .cover-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 22px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-orange);
-    margin-bottom: 48px;
-  }
-  .cover-title {
-    font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 1;
-    font-size: 168px;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
-    color: var(--color-cream-warm);
-    margin: 0;
-  }
-  .cover-title em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-orange);
-  }
-  .cover-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 60px;
-    color: var(--color-fg-dim);
-    font-size: 24px;
-  }
-  .cover-meta strong { color: var(--color-fg); font-weight: 500; }
+:root {
+  --navy-deep:    #050A1F;
+  --navy:         #0A1F4D;
+  --navy-mid:     #15265A;
+  --fire-cream:   #FFF6DC;       /* topo do gradient — quase branco luminoso */
+  --fire-yellow:  #FFE800;       /* gold puro saturado */
+  --fire-gold:    #FFC700;       /* dourado intermediário */
+  --fire-orange:  #FFA500;       /* laranja vibrante */
+  --fire-red:     #FF8800;       /* laranja-fogo claro, não vermelho */
+  --fire-deep:    #FF7000;       /* fundo do gradient, ainda claro */
+  --brick-1:      #3D1500;       /* sombra escura warm — shadow de verdade, não cor */
+  --brick-2:      #1F0800;       /* quase preto warm */
+  --brick-3:      #0A0300;       /* preto com leve warmth */
+  --green-led:    #39FF14;
+  --green-glow:   rgba(57, 255, 20, 0.6);
+  --red-led:      #FF2D2D;
+  --red-glow:     rgba(255, 45, 45, 0.6);
+  --amber-led:    #FFB000;
+  --amber-glow:   rgba(255, 176, 0, 0.6);
+  --cyan-spark:   #4DA8FF;
+  --white:        #ffffff;
+  --white-dim:    rgba(255, 255, 255, 0.82);
+  --white-mute:   rgba(255, 255, 255, 0.55);
 
-  /* ----- Slide title padrão ----- */
-  .slide-title {
-    font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 1;
-    font-size: 100px;
-    line-height: 1.02;
-    letter-spacing: -0.02em;
-    margin: 0 0 64px;
-    max-width: 1560px;
-  }
-  .slide-title em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-orange);
-  }
+  --font-bttf:    'Bungee Inline', cursive;
+  --font-bttf-solid: 'Bungee', cursive;
+  --font-display: 'Orbitron', sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* ----- Linha do tempo (Slide 2) ----- */
-  .timeline {
-    display: grid;
-    grid-template-columns: 1fr 80px 1fr;
-    gap: 32px;
-    flex: 1;
-    align-items: stretch;
-    min-height: 0;
-  }
-  .era-card {
-    border: 1px solid var(--color-line);
-    border-radius: 14px;
-    padding: 56px 48px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    background: rgba(255, 255, 255, 0.025);
-  }
-  .era-card--now {
-    background: rgba(249, 99, 59, 0.08);
-    border-color: var(--color-orange);
-  }
-  .era-tag {
-    font-family: var(--font-mono);
-    font-size: 16px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-fg-mute);
-  }
-  .era-card--now .era-tag { color: var(--color-orange); }
-  .era-title {
-    font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 1;
-    font-size: 64px;
-    line-height: 1.02;
-    letter-spacing: -0.02em;
-    margin: 0;
-  }
-  .era-title em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-orange);
-  }
-  .era-body {
-    font-size: 26px;
-    line-height: 1.4;
-    color: var(--color-fg-dim);
-    margin: 0;
-  }
-  .era-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-orange);
-    font-size: 64px;
-  }
+  --ease-out:    cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.44, 1);
+  --ease-soft:   cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-  /* ----- Agenda 4 frentes (Slide 3) ----- */
-  .agenda-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    counter-reset: agenda;
-  }
-  .agenda-list li {
-    counter-increment: agenda;
-    display: grid;
-    grid-template-columns: 120px 1fr 320px;
-    gap: 40px;
-    align-items: baseline;
-    padding: 32px 0;
-    border-top: 1px solid var(--color-line);
-  }
-  .agenda-list li:last-child { border-bottom: 1px solid var(--color-line); }
-  .agenda-list li::before {
-    content: "0" counter(agenda);
-    font-family: var(--font-mono);
-    font-size: 22px;
-    letter-spacing: 0.1em;
-    color: var(--color-orange);
-  }
-  .agenda-item-title {
-    font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 1;
-    font-size: 52px;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-  }
-  .agenda-item-title em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-orange);
-  }
-  .agenda-item-meta {
-    font-family: var(--font-mono);
-    font-size: 16px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-fg-mute);
-    text-align: right;
-  }
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: var(--white);
+  font-family: var(--font-body);
+}
 
-  /* ----- Three-up cards (Slides 4 e 5) ----- */
-  .three-up {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    flex: 1;
-    min-height: 0;
-  }
-  .myth-card, .promise-card {
-    border: 1px solid var(--color-line);
-    border-radius: 14px;
-    padding: 48px 44px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
-  .slide--cream .myth-card {
-    border-color: rgba(10, 37, 95, 0.18);
-    background: rgba(10, 37, 95, 0.025);
-  }
-  .myth-mark, .promise-mark {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: 500;
-  }
-  .myth-mark {
-    background: rgba(249, 99, 59, 0.12);
-    color: var(--color-orange);
-    border: 1px solid var(--color-orange);
-  }
-  .slide--cream .myth-mark {
-    background: rgba(249, 99, 59, 0.08);
-  }
-  .promise-mark {
-    background: var(--color-orange);
-    color: #0a0a0a;
-  }
-  .card-title {
-    font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 1;
-    font-size: 44px;
-    line-height: 1.05;
-    margin: 0;
-  }
-  .card-title em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-orange);
-  }
-  .card-body {
-    font-size: 22px;
-    line-height: 1.4;
-    color: var(--color-fg-dim);
-  }
-  .slide--cream .card-body { color: rgba(10, 37, 95, 0.72); }
+/* Atmosphere persistente — fica inicialmente oculto no body; o JS move pra
+   dentro do canvas do deck-stage assim que ele monta, então escala junto
+   com os slides e não vaza no letterbox */
+.bg-persistent-atmosphere {
+  position: fixed;
+  inset: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
 
-  /* ----- Como vocês participam (Slide 6) ----- */
-  .participate-list {
-    list-style: none;
-    margin: 0 0 40px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-  .participate-list li {
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    gap: 28px;
-    align-items: baseline;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--color-line);
-  }
-  .participate-list li:last-child { border-bottom: none; padding-bottom: 0; }
-  .participate-marker {
-    font-family: var(--font-mono);
-    font-size: 15px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-orange);
-  }
-  .participate-text {
-    font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 1;
-    font-size: 36px;
-    line-height: 1.08;
-    letter-spacing: -0.01em;
-  }
-  .participate-text em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-orange);
-  }
-  .participate-text small {
-    display: block;
-    margin-top: 8px;
-    font-family: var(--font-sans);
-    font-size: 20px;
-    line-height: 1.35;
-    color: var(--color-fg-dim);
-    font-style: normal;
-  }
+/* =====================================================================
+   SLIDE 7 — ENCERRAMENTO · vídeo do mentor + frase final em destaque
+   ===================================================================== */
+.slide.closing {
+  background: #000;               /* opaco — vídeo cobre tudo */
+}
+.closing .slide-bg--mentor {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% center;       /* mentor desloca para a direita */
+  background-image: none;
+  display: block;
+  filter: brightness(0.88) saturate(1.08);
+}
+/* Vinheta em gradient lateral — escurece a esquerda pra contraste do texto,
+   deixa a direita mais clara onde o mentor aparece */
+.closing-vignette {
+  background:
+    linear-gradient(90deg, rgba(5, 10, 31, 0.92) 0%, rgba(5, 10, 31, 0.75) 22%, rgba(5, 10, 31, 0.3) 38%, transparent 55%),
+    radial-gradient(ellipse at 70% 40%, transparent 0%, rgba(5, 10, 31, 0.0) 30%, rgba(5, 10, 31, 0.4) 70%, rgba(5, 10, 31, 0.9) 100%),
+    linear-gradient(180deg, rgba(5, 10, 31, 0.4) 0%, transparent 35%, rgba(5, 10, 31, 0.6) 100%);
+}
+.slide.closing > .frame {
+  display: flex;
+  flex-direction: row;            /* override column do .slide > .frame base */
+  align-items: center;            /* centraliza VERTICALMENTE */
+  justify-content: flex-start;    /* alinha à ESQUERDA */
+  padding: 80px 100px;
+}
+.closing-text-block {
+  width: 28%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.closing-logo-block {
+  flex: 1;
+  display: flex;
+  align-items: center;       /* centro vertical */
+  justify-content: flex-end; /* logo na direita */
+  padding-right: 60px;
+}
+.closing-rba-logo {
+  height: 76px;                /* -10% (era 84px) */
+  width: auto;
+  display: block;
+  margin-top: 20px;            /* desce 20px no Y */
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.85));
+}
+.closing-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--fire-orange);
+  text-shadow: 0 0 16px rgba(255, 160, 0, 0.6);
+  margin-bottom: 24px;
+}
+.closing-eyebrow::before {
+  content: "▸ ";
+  color: var(--fire-yellow);
+}
+.closing-quote-final {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 53px;                 /* +20% (era 44px) */
+  line-height: 1.18;
+  letter-spacing: 0.005em;
+  color: var(--white);
+  margin: 0;
+  text-shadow:
+    2px 2px 0 var(--brick-1),
+    4px 4px 0 var(--brick-2),
+    6px 6px 0 var(--brick-3),
+    0 8px 32px rgba(0, 0, 0, 0.85);
+  transform: skewX(-3deg);
+}
+.closing-quote-final em {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.06em 0.18em 0 0;
+  margin-right: 0.05em;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  background-size: 100% 110%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(2px 2px 0 var(--brick-1))
+    drop-shadow(4px 4px 0 var(--brick-2))
+    drop-shadow(0 0 22px rgba(255, 140, 0, 0.7));
+}
 
-  .closing-quote {
-    font-family: var(--font-display);
-    font-variation-settings: "SOFT" 50, "WONK" 1;
-    font-size: 48px;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    color: var(--color-cream-warm);
-    margin: 0;
-    max-width: 1500px;
-  }
-  .closing-quote em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    color: var(--color-orange);
-  }
+/* Flash de relâmpago — dispara na transição capa → slide 2 (e em outras
+   transições se ativado). Camada mais alta de tudo. */
+.transition-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  background: #ffffff;
+  opacity: 0;
+  mix-blend-mode: screen;
+  will-change: opacity;
+}
+.transition-flash.flash-burst {
+  animation: flash-burst 750ms cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+}
+@keyframes flash-burst {
+  0%   { opacity: 0;    background: #ffffff; }
+  4%   { opacity: 1;    background: #ffffff; }      /* peak white */
+  10%  { opacity: 0.95; background: #E8F4FF; }      /* shift to cool blue */
+  20%  { opacity: 0.7;  background: #B3D9FF; }      /* electric cyan */
+  40%  { opacity: 0.35; background: #7DC0FF; }
+  100% { opacity: 0;    background: #4DA8FF; }      /* fade out */
+}
 
-  /* ----- Estado inicial dos elementos animados via custom WAAPI ----- */
-  .era-arrow,
-  .participate-list li,
-  .closing-quote,
-  .myth-mark,
-  .promise-mark {
-    opacity: 0;
-    will-change: opacity, transform, filter;
-  }
+/* Fade-to-black para transição slide 6 → 7 (suave, ~700ms total) */
+.transition-fade {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  background: #000;               /* preto — ponte entre slides */
+  opacity: 0;
+}
+.transition-fade.fade-active {
+  animation: fade-bridge 750ms ease forwards;
+}
+@keyframes fade-bridge {
+  0%   { opacity: 0; }
+  35%  { opacity: 1; }              /* peak na metade da transição */
+  60%  { opacity: 1; }              /* sustenta opacidade pra slide trocar */
+  100% { opacity: 0; }              /* revela slide 7 */
+}
 
-  /* Quando o slide é exportado para print/PDF, restaura visibilidade */
-  @media print {
-    .era-arrow,
-    .participate-list li,
-    .closing-quote,
-    .myth-mark,
-    .promise-mark { opacity: 1 !important; transform: none !important; }
-  }
+/* =====================================================================
+   SLIDE BASE
+   ===================================================================== */
+.slide {
+  font-family: var(--font-body);
+  background: transparent;          /* default transparente — atmosphere persistente aparece */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+/* Cover é o único slide opaco — seus próprios videos cobrem o atmosphere */
+.slide.cover {
+  background: #000;
+}
 
-  /* Glow sutil de fundo nos slides escuros — drift contínuo via opacidade */
-  .slide:not(.cover):not(.slide--cream)::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background:
-      radial-gradient(45% 55% at 88% 35%, rgba(249,99,59,0.10), transparent 70%),
-      radial-gradient(40% 50% at 12% 75%, rgba(187,180,240,0.08), transparent 70%);
-    opacity: 0;
-    transition: opacity 1200ms var(--anim-ease-out);
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Vinheta padrão sobre backgrounds para garantir contraste de texto */
+.slide-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at center, transparent 30%, rgba(5, 10, 31, 0.5) 70%, rgba(5, 10, 31, 0.92) 100%),
+    linear-gradient(180deg, rgba(5, 10, 31, 0.4) 0%, transparent 25%, transparent 75%, rgba(5, 10, 31, 0.7) 100%);
+}
+
+.slide > .frame {
+  position: relative;
+  z-index: 2;
+  padding: 100px 110px 90px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================================================================
+   BTTF LOGO (recriação em 6 camadas HTML)
+   Permite gradiente + chrome highlight + 3 níveis de sombra brick + outline
+   ===================================================================== */
+.bttf-logo {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  letter-spacing: 0.005em;
+  transform: skewX(-8deg);
+  line-height: 0.92;
+  overflow: visible;
+}
+.bttf-logo .layer {
+  display: block;
+  position: relative;
+}
+.bttf-logo .layer + .layer {
+  position: absolute;
+  inset: 0;
+}
+
+/* layer 1: deepest shadow (back) */
+.bttf-logo .layer-shadow-3 {
+  color: var(--brick-3);
+  transform: translate(11px, 11px);
+}
+/* layer 2: mid shadow */
+.bttf-logo .layer-shadow-2 {
+  color: var(--brick-2);
+  transform: translate(7px, 7px);
+}
+/* layer 3: light shadow */
+.bttf-logo .layer-shadow-1 {
+  color: var(--brick-1);
+  transform: translate(3px, 3px);
+}
+/* layer 4: outline white — fino, evita ghosting em curvas como o "O" */
+.bttf-logo .layer-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.85);
+}
+/* O hack do right: -0.22em foi removido — o &nbsp; no fim do texto FUTURO
+   resolve o clipping do italic O ao estender o advance natural do span. */
+/* layer 5: gradient fill (main color) — orange-dominant, sem brick red */
+.bttf-logo .layer-fill {
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 18%, var(--fire-gold) 42%, var(--fire-orange) 72%, var(--fire-red) 92%, var(--fire-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 28px rgba(255, 149, 0, 0.5));
+}
+/* layer 6: chrome highlight (top half) */
+.bttf-logo .layer-highlight {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 45%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+}
+
+/* Variação para títulos menores (em corpo de slides 3-6) */
+.bttf-mini {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  letter-spacing: 0.005em;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 25%, var(--fire-gold) 55%, var(--fire-orange) 80%, var(--fire-red) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(2px 2px 0 var(--brick-1))
+    drop-shadow(4px 4px 0 var(--brick-2))
+    drop-shadow(0 0 18px rgba(255, 160, 0, 0.35));
+  transform: skewX(-5deg);
+}
+
+/* Texto branco com 3D shadow leve (titulos sem gradient) */
+.title-white {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  color: var(--white);
+  text-shadow:
+    2px 2px 0 var(--brick-1),
+    4px 4px 0 var(--brick-2),
+    6px 6px 0 var(--brick-3);
+  transform: skewX(-5deg);
+  display: inline-block;
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--fire-orange);
+  text-shadow: 0 0 14px rgba(255, 160, 0, 0.5);
+  margin-bottom: 28px;
+  position: relative;
+}
+.eyebrow::before {
+  content: "▸ ";
+  color: var(--fire-yellow);
+}
+
+/* =====================================================================
+   SLIDE 1 — CAPA · DE VOLTA PARA O FUTURO
+   ===================================================================== */
+.cover .slide-bg {
+  background-image: url('assets/delorean-hero.webp');
+  filter: brightness(0.95) saturate(1.15);
+}
+/* Vídeos do DeLorean — idle (loop) e departure (acelera quando avança) */
+.cover .slide-bg--video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-image: none;
+  display: block;
+  transition: opacity 280ms ease;
+}
+.cover .slide-bg--idle      { opacity: 1; z-index: 0; }
+.cover .slide-bg--departure { opacity: 0; z-index: 1; }
+.cover.is-departing .slide-bg--idle      { opacity: 0; }
+.cover.is-departing .slide-bg--departure { opacity: 1; }
+.cover .slide-vignette {
+  background:
+    radial-gradient(ellipse at 50% 70%, transparent 0%, rgba(5, 10, 31, 0.0) 30%, rgba(5, 10, 31, 0.35) 65%, rgba(5, 10, 31, 0.85) 100%),
+    linear-gradient(180deg, rgba(5, 10, 31, 0.55) 0%, rgba(5, 10, 31, 0.05) 30%, transparent 50%, rgba(5, 10, 31, 0.65) 95%);
+}
+
+.cover-frame {
+  padding: 70px 90px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+}
+.cover-rba {
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+}
+.cover-rba img {
+  height: 47px;                  /* -10% (era 52px) */
+  width: auto;
+  display: block;
+}
+.cover-date {
+  text-align: right;
+  line-height: 0.95;
+  font-size: 38px;
+  color: var(--white);
+  text-shadow:
+    1px 1px 0 var(--brick-2),
+    2px 2px 0 var(--brick-3),
+    0 4px 18px rgba(0, 0, 0, 0.85);
+}
+.cover-date .day { color: var(--white); font-size: 1.4em; display: block; line-height: 1; }
+
+.cover-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: -590px;            /* -30px (era -620) */
+}
+
+.cover-small {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 70px;
+  line-height: 0.85;             /* aperta vertical */
+  letter-spacing: 0.01em;
+  color: var(--fire-orange);
+  text-shadow:
+    3px 3px 0 var(--brick-1),
+    6px 6px 0 var(--brick-2),
+    9px 9px 0 var(--brick-3),
+    0 0 30px rgba(255, 160, 0, 0.55);
+  transform: skewX(-8deg);
+  display: inline-block;
+  margin-bottom: 12px;           /* +20px de espaço entre as linhas (era -8) */
+}
+
+.cover-big {
+  font-size: 216px;              /* -10% (era 240) */
+  line-height: 0.85;
+}
+
+.cover-tagline {
+  font-family: var(--font-display);    /* Orbitron, igual a agenda-meta */
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--white);
+  margin: 0;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.85);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* =====================================================================
+   SLIDE 2 — TIME CIRCUITS (with 4K hero panel image)
+   ===================================================================== */
+.time-circuits .slide-bg {
+  background-image: url('assets/time-circuits.webp');
+  filter: brightness(0.55) saturate(1.05) blur(6px);
+  transform: scale(1.05);
+}
+.time-circuits .slide-vignette {
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(5, 10, 31, 0.3) 30%, rgba(5, 10, 31, 0.92) 90%),
+    linear-gradient(180deg, rgba(5, 10, 31, 0.55) 0%, transparent 50%, rgba(5, 10, 31, 0.7) 100%);
+}
+
+.tc-frame {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  flex: 1;
+}
+
+.tc-hero {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.25),
+    0 24px 80px rgba(0, 0, 0, 0.6),
+    0 0 80px rgba(255, 160, 0, 0.18);
+}
+.tc-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.tc-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+}
+
+.tc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.tc-title {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 96px;
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: 0.005em;
+  color: var(--white);
+  text-shadow:
+    2px 2px 0 var(--brick-1),
+    4px 4px 0 var(--brick-2),
+    6px 6px 0 var(--brick-3);
+  transform: skewX(-5deg);
+  transform-origin: left center;
+}
+.tc-title em {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.06em 0.18em 0 0;
+  margin-right: 0.05em;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  background-size: 100% 110%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 0 var(--brick-1)) drop-shadow(4px 4px 0 var(--brick-2));
+}
+
+.tc-readings {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.tc-reading {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.tc-reading:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+.tc-reading-tag {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.tc-reading-tag--past    { color: var(--amber-led); text-shadow: 0 0 10px var(--amber-glow); }
+.tc-reading-tag--present { color: var(--green-led); text-shadow: 0 0 10px var(--green-glow); }
+.tc-reading-tag--future  { color: var(--red-led);   text-shadow: 0 0 10px var(--red-glow); }
+
+.tc-reading-text {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--white-dim);
+}
+.tc-reading-text strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.tc-caption {
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 1.45;
+  color: var(--white-dim);
+  margin: 0;
+  font-style: italic;
+}
+
+/* =====================================================================
+   SLIDES 3-6 — Conteúdo com atmosphere.webp como background
+   ===================================================================== */
+.atmosphere .slide-bg {
+  background-image: url('assets/atmosphere.webp');
+  filter: brightness(0.85) saturate(1.05);
+}
+/* Vídeo loop ambient — substitui background estático com fog + raios + estrelas */
+.atmosphere .slide-bg--atmos {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-image: none;
+  filter: brightness(0.82) saturate(1.05);
+  display: block;
+}
+.atmosphere .slide-vignette {
+  background:
+    radial-gradient(ellipse at 60% 70%, transparent 0%, rgba(5, 10, 31, 0.4) 60%, rgba(5, 10, 31, 0.9) 100%),
+    linear-gradient(180deg, rgba(5, 10, 31, 0.55) 0%, rgba(5, 10, 31, 0.1) 30%, rgba(5, 10, 31, 0.7) 100%);
+}
+
+/* Variação de framing entre slides para sensação de "viagem" */
+.atmosphere--alt-1 .slide-bg { background-position: 30% 50%; transform: scale(1.05); }
+.atmosphere--alt-2 .slide-bg { background-position: 70% 40%; transform: scale(1.08); }
+.atmosphere--alt-3 .slide-bg { background-position: 50% 60%; transform: scale(1.1); }
+.atmosphere--alt-1 .slide-bg--atmos { object-position: 30% 50%; transform: scale(1.05); }
+.atmosphere--alt-2 .slide-bg--atmos { object-position: 70% 40%; transform: scale(1.08); }
+.atmosphere--alt-3 .slide-bg--atmos { object-position: 50% 60%; transform: scale(1.1); }
+
+/* Slide title padrão para slides 3-6 */
+.slide-title {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 92px;
+  line-height: 0.98;
+  letter-spacing: 0.005em;
+  color: var(--white);
+  margin: 0 0 56px;
+  text-shadow:
+    2px 2px 0 var(--brick-1),
+    4px 4px 0 var(--brick-2),
+    6px 6px 0 var(--brick-3);
+  transform: skewX(-5deg);
+  transform-origin: left center;
+}
+.slide-title em {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.06em 0.18em 0 0;
+  margin-right: 0.05em;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  background-size: 100% 110%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(2px 2px 0 var(--brick-1))
+    drop-shadow(4px 4px 0 var(--brick-2))
+    drop-shadow(6px 6px 0 var(--brick-3))
+    drop-shadow(0 0 22px rgba(255, 140, 0, 0.6));
+}
+
+/* =====================================================================
+   SLIDE 3 — AGENDA LIST
+   ===================================================================== */
+.agenda {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+.agenda-item {
+  display: grid;
+  grid-template-columns: 130px 1fr 320px;
+  gap: 40px;
+  align-items: baseline;
+  padding: 28px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+.agenda-item:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+
+.agenda-num {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 64px;
+  line-height: 1;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(2px 2px 0 var(--brick-1))
+    drop-shadow(4px 4px 0 var(--brick-2))
+    drop-shadow(6px 6px 0 var(--brick-3))
+    drop-shadow(0 0 22px rgba(255, 140, 0, 0.6));
+  transform: skewX(-6deg);
+  display: inline-block;
+}
+.agenda-title {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 52px;
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  color: var(--white);
+  text-shadow: 1px 1px 0 var(--brick-1), 2px 2px 0 var(--brick-2);
+  transform: skewX(-4deg);
+  transform-origin: left center;
+}
+.agenda-title em {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.06em 0.18em 0 0;
+  margin-right: 0.05em;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  background-size: 100% 110%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 0 var(--brick-1)) drop-shadow(2px 2px 0 var(--brick-2)) drop-shadow(0 0 12px rgba(255, 140, 0, 0.55));
+}
+.agenda-meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white-mute);
+  text-align: right;
+  line-height: 1.3;
+}
+
+.callout {
+  margin-top: 36px;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--fire-orange);
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 14px rgba(255, 160, 0, 0.4);
+  display: inline-block;
+}
+.callout::before {
+  content: "▸ ";
+  color: var(--fire-yellow);
+  font-style: normal;
+}
+
+/* =====================================================================
+   SLIDES 4 & 5 — THREE-UP CARDS
+   ===================================================================== */
+.three-up {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  flex: 1;
+  min-height: 0;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(21, 38, 90, 0.65) 0%, rgba(5, 10, 31, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 12px 40px rgba(0, 0, 0, 0.45);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at top right, rgba(255, 160, 0, 0.12) 0%, transparent 50%);
+}
+
+.card-mark-x {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 61, 0, 0.7);
+  background: rgba(255, 61, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(255, 61, 0, 0.3), inset 0 0 12px rgba(255, 61, 0, 0.2);
+}
+.card-mark-x svg { width: 24px; height: 24px; }
+
+.card-mark-bolt {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 80%, var(--fire-red) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow:
+    0 0 24px rgba(255, 160, 0, 0.65),
+    0 0 48px rgba(255, 61, 0, 0.4),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.25),
+    inset 0 2px 0 rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+.card-mark-bolt::before {
+  content: "⚡";
+  font-size: 30px;
+  color: #1a1a1a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 200, 0.6));
+}
+
+.card-title {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--white);
+  text-shadow: 1px 1px 0 var(--brick-1), 2px 2px 0 var(--brick-2);
+  transform: skewX(-3deg);
+  transform-origin: left center;
+}
+.card-title em {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.06em 0.18em 0 0;
+  margin-right: 0.05em;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  background-size: 100% 110%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 0 var(--brick-1)) drop-shadow(2px 2px 0 var(--brick-2)) drop-shadow(0 0 12px rgba(255, 140, 0, 0.55));
+}
+.card-body {
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.45;
+  color: var(--white-dim);
+  margin: 0;
+}
+
+/* =====================================================================
+   SLIDE 6 — PARTICIPATE LIST + CLOSING QUOTE
+   ===================================================================== */
+.participate {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;                       /* ocupa vertical disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* distribui itens verticalmente uniforme */
+  gap: 0;
+}
+.participate li {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 32px;
+  align-items: baseline;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+.participate li:last-child { border-bottom: none; padding-bottom: 0; }
+
+.participate-num {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 44px;
+  line-height: 1;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 0 var(--brick-1)) drop-shadow(4px 4px 0 var(--brick-2)) drop-shadow(0 0 18px rgba(255, 140, 0, 0.55));
+  transform: skewX(-6deg);
+  display: inline-block;
+}
+
+.participate-text {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.08;
+  letter-spacing: 0.005em;
+  color: var(--white);
+  text-shadow: 1px 1px 0 var(--brick-1), 2px 2px 0 var(--brick-2);
+  transform: skewX(-3deg);
+  transform-origin: left center;
+}
+.participate-text em {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.06em 0.18em 0 0;
+  margin-right: 0.05em;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  background-size: 100% 110%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 0 var(--brick-1)) drop-shadow(2px 2px 0 var(--brick-2)) drop-shadow(0 0 12px rgba(255, 140, 0, 0.55));
+}
+.participate-text small {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--white-dim);
+  font-style: normal;
+  text-shadow: none;
+  transform: skewX(3deg);
+  letter-spacing: 0;
+}
+
+.closing-quote {
+  font-family: var(--font-bttf-solid);
+  font-style: italic;
+  font-size: 50px;
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+  color: var(--white);
+  margin: 0;
+  max-width: 1500px;
+  text-shadow: 2px 2px 0 var(--brick-1), 4px 4px 0 var(--brick-2);
+  transform: skewX(-3deg);
+  transform-origin: left center;
+}
+.closing-quote em {
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.06em 0.18em 0 0;
+  margin-right: 0.05em;
+  text-shadow: none;
+  background: linear-gradient(180deg, var(--fire-cream) 0%, var(--fire-yellow) 22%, var(--fire-gold) 50%, var(--fire-orange) 78%, var(--fire-red) 100%);
+  background-size: 100% 110%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 0 var(--brick-1)) drop-shadow(4px 4px 0 var(--brick-2)) drop-shadow(0 0 22px rgba(255, 140, 0, 0.6));
+}
+
+/* =====================================================================
+   FX — Sparks, scanlines (sutil)
+   ===================================================================== */
+.scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 2px,
+    rgba(255, 255, 255, 0.018) 2px,
+    rgba(255, 255, 255, 0.018) 3px
+  );
+  animation: scanline-move 10s linear infinite;
+}
+@keyframes scanline-move {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0 6px; }
+}
+
+/* =====================================================================
+   ANIMAÇÕES BASE
+   ===================================================================== */
+.bttf-anim {
+  opacity: 0;
+  will-change: opacity, transform, filter;
+}
+
+@media print {
+  .bttf-anim { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .scanline { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-  .slide:not(.cover):not(.slide--cream)[data-deck-active]::before {
-    opacity: 1;
-    animation: rba-kickoff-breathe 12s ease-in-out infinite;
-  }
-  @keyframes rba-kickoff-breathe {
-    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-    50%      { transform: translate3d(-30px, 20px, 0) scale(1.06); }
-  }
-  .slide > .frame { position: relative; z-index: 1; }
+  .bttf-anim { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .scanline { display: none; }
+}
 </style>
 </head>
 <body>
 
+<!-- Atmosphere video persistente — único loop contínuo atrás de todos os slides não-cover -->
+<video class="bg-persistent-atmosphere" autoplay muted loop playsinline disablepictureinpicture poster="assets/atmosphere.webp">
+  <source src="assets/atmosphere-loop.mp4" type="video/mp4" />
+</video>
+
 <deck-stage width="1920" height="1080">
 
-  <!-- ==================================================================
-       SLIDE 1 — CAPA
-       ================================================================== -->
-  <section data-label="Capa" class="slide cover">
-    <div class="cover-content">
-      <div class="cover-top">
-        <div class="cover-logo">
-          <img src="assets/rba-plus-logo.webp" alt="RBA+" style="height: 34px;" />
-          <img src="assets/selo-50anos.webp" alt="50 anos" style="height: 44px; opacity: 0.85;" />
-        </div>
-        <div>Equipe RBA · 08 mai 2026</div>
-      </div>
+<!-- =====================================================================
+     SLIDE 1 — CAPA · DE VOLTA PARA O FUTURO
+     ===================================================================== -->
+<section data-label="Capa" class="slide cover">
+  <video class="slide-bg slide-bg--video slide-bg--idle" autoplay muted loop playsinline disablepictureinpicture preload="auto" poster="assets/delorean-poster.webp">
+    <source src="assets/delorean-idle.mp4" type="video/mp4" />
+  </video>
+  <video class="slide-bg slide-bg--video slide-bg--departure" muted playsinline disablepictureinpicture preload="auto" poster="assets/delorean-poster.webp">
+    <source src="assets/delorean.mp4" type="video/mp4" />
+  </video>
+  <div class="slide-vignette"></div>
+  <div class="scanline"></div>
 
-      <div class="cover-main">
-        <div class="cover-eyebrow">Kick-off</div>
-        <h1 class="cover-title">RBA <em>×</em> IA<br/>começa <em>agora</em>.</h1>
+  <div class="cover-frame">
+    <div class="cover-top">
+      <div class="cover-rba bttf-anim" data-anim="cover-side">
+        <img src="assets/rba-plus-logo.webp" alt="RBA+" />
       </div>
-
-      <div></div>
+      <div class="cover-date bttf-anim" data-anim="cover-side">SEXTA<span class="day">8/5</span>14H</div>
     </div>
-  </section>
 
-  <!-- ==================================================================
-       SLIDE 2 — LINHA DO TEMPO
-       Era das conversas (até 2024) → Era do harness (final 2025+)
-       ================================================================== -->
-  <section data-label="Linha do tempo" class="slide">
-    <div class="frame">
-      <div class="sec-label" style="margin-bottom: 40px;">Onde estamos no mundo da IA</div>
-      <h2 class="slide-title">A IA mudou de <em>era</em> em poucos meses.</h2>
-
-      <div class="timeline">
-        <div class="era-card card">
-          <div class="era-tag">Até 2024</div>
-          <h3 class="era-title">Era das <em>conversas</em></h3>
-          <p class="era-body">
-            ChatGPT escreve texto. Midjourney faz imagem. Modelos de vídeo, modelos de áudio. Tudo isolado — você precisa pedir, copiar, colar, juntar.
-          </p>
-        </div>
-
-        <div class="era-arrow">→</div>
-
-        <div class="era-card card era-card--now">
-          <div class="era-tag">Final de 2025 em diante</div>
-          <h3 class="era-title">Era do <em>harness</em></h3>
-          <p class="era-body">
-            Os modelos pararam de competir em "quem é mais inteligente". Começaram a competir em <strong style="color:var(--color-fg)">quem entrega trabalho real, do começo ao fim</strong>. A diferença entre saber muito e resolver coisa.
-          </p>
-        </div>
+    <div class="cover-center">
+      <div class="cover-small bttf-anim" data-anim="cover-small">DE VOLTA PARA O</div>
+      <div class="bttf-logo cover-big bttf-anim" data-anim="cover-big">
+        <span class="layer layer-shadow-3">FUTURO&nbsp;</span>
+        <span class="layer layer-shadow-2">FUTURO&nbsp;</span>
+        <span class="layer layer-shadow-1">FUTURO&nbsp;</span>
+        <span class="layer layer-stroke">FUTURO&nbsp;</span>
+        <span class="layer layer-fill">FUTURO&nbsp;</span>
+        <span class="layer layer-highlight">FUTURO&nbsp;</span>
       </div>
     </div>
-  </section>
 
-  <!-- ==================================================================
-       SLIDE 3 — O QUE VAMOS FAZER JUNTOS
-       4 frentes em alto nível
-       ================================================================== -->
-  <section data-label="O que vamos fazer juntos" class="slide">
-    <div class="frame">
-      <div class="sec-label" style="margin-bottom: 40px;">O trabalho que começa agora</div>
-      <h2 class="slide-title" style="margin-bottom: 56px;">O que vamos <em>fazer juntos</em>.</h2>
+    <p class="cover-tagline bttf-anim" data-anim="cover-tag">A nova jornada começa agora</p>
+  </div>
+</section>
 
-      <ol class="agenda-list">
-        <li>
-          <div class="agenda-item-title"><em>Mapear</em> o cotidiano de cada setor</div>
-          <div class="agenda-item-meta">Mídia · Atendimento · Criação · Planejamento</div>
-        </li>
-        <li>
-          <div class="agenda-item-title"><em>Testar</em> ferramentas com quem faz</div>
-          <div class="agenda-item-meta">Sem cobrança · Sem afobação</div>
-        </li>
-        <li>
-          <div class="agenda-item-title"><em>Documentar</em> o que funciona</div>
-          <div class="agenda-item-meta">Descartar o que não · Sem apego</div>
-        </li>
-        <li>
-          <div class="agenda-item-title"><em>Construir</em> o repertório RBA</div>
-          <div class="agenda-item-meta">Aos poucos · Próprio · Não é pacote pronto</div>
-        </li>
-      </ol>
-    </div>
-  </section>
+<!-- =====================================================================
+     SLIDE 2 — TIME CIRCUITS (com painel real renderizado)
+     ===================================================================== -->
+<section data-label="Time Circuits" class="slide time-circuits">
+  <div class="slide-vignette"></div>
+  <div class="scanline"></div>
 
-  <!-- ==================================================================
-       SLIDE 4 — NÃO É ISSO
-       Desmistificar receios — fundo cream para mudar tom
-       ================================================================== -->
-  <section data-label="Não é isso" class="slide slide--cream">
-    <div class="frame">
-      <div class="sec-label" style="margin-bottom: 40px;">Antes de falar do que É — o que NÃO é</div>
-      <h2 class="slide-title" style="color: var(--color-ink); margin-bottom: 56px;">Esse trabalho <em>não é</em>...</h2>
+  <div class="frame">
+    <div class="eyebrow bttf-anim" data-anim="fade-up">Onde estamos no mundo da IA</div>
 
-      <div class="three-up">
-        <div class="myth-card">
-          <div class="myth-mark">×</div>
-          <h3 class="card-title">Substituir <em>pessoas</em></h3>
-          <p class="card-body">
-            Não é demitir três e deixar o GPT fazer. Quem fala isso não entendeu o que IA é hoje.
-          </p>
-        </div>
-
-        <div class="myth-card">
-          <div class="myth-mark">×</div>
-          <h3 class="card-title">Delegar <em>tudo</em></h3>
-          <p class="card-body">
-            Os modelos erram, alucinam, dependem de contexto que só vocês têm. IA sem humano por perto vira máquina de gerar lixo bonito.
-          </p>
-        </div>
-
-        <div class="myth-card">
-          <div class="myth-mark">×</div>
-          <h3 class="card-title">Mágica da <em>noite pro dia</em></h3>
-          <p class="card-body">
-            Não vai resolver tudo na sexta-feira que vem. É construção lenta, com tentativa e erro. Quem promete revolução em 30 dias está vendendo curso.
-          </p>
-        </div>
+    <div class="tc-frame">
+      <div class="tc-hero bttf-anim" data-anim="tc-hero">
+        <img src="assets/time-circuits.webp" alt="Time Circuits Panel" />
       </div>
-    </div>
-  </section>
 
-  <!-- ==================================================================
-       SLIDE 5 — É ISSO
-       Reposicionar com energia positiva
-       ================================================================== -->
-  <section data-label="É isso" class="slide">
-    <div class="frame">
-      <div class="sec-label" style="margin-bottom: 40px;">O que É, então</div>
-      <h2 class="slide-title">Esse trabalho <em>é</em>...</h2>
+      <div class="tc-text">
+        <h2 class="tc-title bttf-anim" data-anim="title">A IA mudou de <em>era</em>.</h2>
 
-      <div class="three-up">
-        <div class="myth-card promise-card">
-          <div class="promise-mark">✓</div>
-          <h3 class="card-title">Tirar <em>tarefa cansativa</em> de cima</h3>
-          <p class="card-body">
-            Relatório braçal, copia-e-cola, formatação, busca em PDF, transcrição, organização de pasta. Aquela parte que ninguém escolheria fazer se pudesse evitar.
-          </p>
-        </div>
-
-        <div class="myth-card promise-card">
-          <div class="promise-mark">✓</div>
-          <h3 class="card-title">Liberar <em>tempo</em> para o que importa</h3>
-          <p class="card-body">
-            Criatividade, julgamento, relação com cliente, estratégia. A parte do trabalho onde o seu olhar e o seu repertório fazem diferença — essa fica com você. Sempre.
-          </p>
-        </div>
-
-        <div class="myth-card promise-card">
-          <div class="promise-mark">✓</div>
-          <h3 class="card-title">Humano sempre <em>no comando</em></h3>
-          <p class="card-body">
-            A IA propõe, vocês decidem. A IA rascunha, vocês refinam. A IA encontra, vocês validam. Esse é o pacto. O objetivo é trabalhar menos cansado, não trabalhar mais.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================================================================
-       SLIDE 6 — COMO VOCÊS PARTICIPAM
-       Convite + chamada para protagonismo
-       ================================================================== -->
-  <section data-label="Como vocês participam" class="slide">
-    <div class="frame">
-      <div class="sec-label" style="margin-bottom: 32px;">A parte mais importante</div>
-      <h2 class="slide-title" style="font-size: 80px; margin-bottom: 48px;">Como <em>vocês</em> entram nessa.</h2>
-
-      <ul class="participate-list">
-        <li>
-          <div class="participate-marker">01</div>
-          <div class="participate-text">
-            <em>Conversas por setor</em>
-            <small>Em pequenos grupos, vocês contam o que cansa no dia-a-dia. Não é entrevista — é bate-papo.</small>
+        <div class="tc-readings">
+          <div class="tc-reading bttf-anim" data-anim="reading">
+            <div class="tc-reading-tag tc-reading-tag--past">Last Time Departed</div>
+            <div class="tc-reading-text"><strong>2022 — 2024</strong> · Era das conversas. Modelos isolados respondendo perguntas.</div>
           </div>
-        </li>
-        <li>
-          <div class="participate-marker">02</div>
-          <div class="participate-text">
-            <em>Testes guiados</em>
-            <small>Sem cobrança, sem "tem que dar certo de primeira". Experimentação no ritmo do trabalho.</small>
+          <div class="tc-reading bttf-anim" data-anim="reading">
+            <div class="tc-reading-tag tc-reading-tag--present">Present Time</div>
+            <div class="tc-reading-text"><strong>2026 · agora</strong> · Era do harness. IA executa do começo ao fim.</div>
           </div>
-        </li>
-        <li>
-          <div class="participate-marker">03</div>
-          <div class="participate-text">
-            <em>Canais abertos</em>
-            <small>Dúvida, sugestão, reclamação. Tudo conta. Inclusive "isso aqui não funcionou porque…"</small>
+          <div class="tc-reading bttf-anim" data-anim="reading">
+            <div class="tc-reading-tag tc-reading-tag--future">Destination Time</div>
+            <div class="tc-reading-text"><strong>2028 · ?</strong> · O que a RBA vai construir junto.</div>
           </div>
-        </li>
-        <li>
-          <div class="participate-marker">04</div>
-          <div class="participate-text">
-            <em>Curiosidade reconhecida</em>
-            <small>Quem experimenta ajuda a moldar como a RBA usa IA daqui pra frente.</small>
-          </div>
-        </li>
-      </ul>
+        </div>
 
-      <p class="closing-quote">
-        A gente não vai fazer isso <em>para</em> vocês.<br/>
-        A gente vai fazer <em>com</em> vocês.
+        <p class="tc-caption bttf-anim" data-anim="fade-up">A virada foi rápida. O jeito é caminhar junto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SLIDE 3 — O QUE VAMOS FAZER JUNTOS
+     ===================================================================== -->
+<section data-label="O que vamos fazer juntos" class="slide atmosphere atmosphere--alt-1">
+  <div class="slide-vignette"></div>
+  <div class="scanline"></div>
+
+  <div class="frame">
+    <div class="eyebrow bttf-anim" data-anim="fade-up">O trabalho que começa agora</div>
+    <h2 class="slide-title bttf-anim" data-anim="title">O que vamos <em>fazer juntos</em>.</h2>
+
+    <ol class="agenda">
+      <li class="agenda-item bttf-anim" data-anim="agenda">
+        <div class="agenda-num">01</div>
+        <div class="agenda-title"><em>Mapear</em> o cotidiano de cada setor</div>
+        <div class="agenda-meta">Mídia · Atendimento<br/>Criação · Planejamento</div>
+      </li>
+      <li class="agenda-item bttf-anim" data-anim="agenda">
+        <div class="agenda-num">02</div>
+        <div class="agenda-title"><em>Testar</em> ferramentas com quem faz</div>
+        <div class="agenda-meta">Sem cobrança<br/>Sem afobação</div>
+      </li>
+      <li class="agenda-item bttf-anim" data-anim="agenda">
+        <div class="agenda-num">03</div>
+        <div class="agenda-title"><em>Documentar</em> o que funciona</div>
+        <div class="agenda-meta">Descartar o que não<br/>Sem apego</div>
+      </li>
+      <li class="agenda-item bttf-anim" data-anim="agenda">
+        <div class="agenda-num">04</div>
+        <div class="agenda-title"><em>Construir</em> o repertório RBA</div>
+        <div class="agenda-meta">Aos poucos · Próprio<br/>Não é pacote pronto</div>
+      </li>
+    </ol>
+
+    <p class="callout bttf-anim" data-anim="fade-up">Nada disso acontece sem vocês.</p>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SLIDE 4 — NÃO É ISSO
+     ===================================================================== -->
+<section data-label="Não é isso" class="slide atmosphere atmosphere--alt-2">
+  <div class="slide-vignette"></div>
+  <div class="scanline"></div>
+
+  <div class="frame">
+    <div class="eyebrow bttf-anim" data-anim="fade-up" style="color: var(--red-led); text-shadow: 0 0 14px var(--red-glow);">⚠ Antes de falar do que É</div>
+    <h2 class="slide-title bttf-anim" data-anim="title">Esse trabalho <em>não é</em>...</h2>
+
+    <div class="three-up">
+      <div class="card bttf-anim" data-anim="card">
+        <div class="card-mark-x"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19" stroke="#FF3D00" stroke-width="3" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="#FF3D00" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3 class="card-title">Substituir <em>pessoas</em></h3>
+        <p class="card-body">Não é demitir três e deixar o GPT fazer. Quem fala isso não entendeu o que IA é hoje.</p>
+      </div>
+
+      <div class="card bttf-anim" data-anim="card">
+        <div class="card-mark-x"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19" stroke="#FF3D00" stroke-width="3" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="#FF3D00" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3 class="card-title">Delegar <em>tudo</em></h3>
+        <p class="card-body">Os modelos erram, alucinam, dependem de contexto que só vocês têm. IA sem humano por perto vira máquina de gerar lixo bonito.</p>
+      </div>
+
+      <div class="card bttf-anim" data-anim="card">
+        <div class="card-mark-x"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19" stroke="#FF3D00" stroke-width="3" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="#FF3D00" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3 class="card-title">Mágica da <em>noite pro dia</em></h3>
+        <p class="card-body">Não vai resolver tudo na sexta-feira que vem. É construção lenta, com tentativa e erro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SLIDE 5 — É ISSO (com ⚡)
+     ===================================================================== -->
+<section data-label="É isso" class="slide atmosphere atmosphere--alt-3">
+  <div class="slide-vignette"></div>
+  <div class="scanline"></div>
+
+  <div class="frame">
+    <div class="eyebrow bttf-anim" data-anim="fade-up">O que ELE É</div>
+    <h2 class="slide-title bttf-anim" data-anim="title">Esse trabalho <em>é</em>...</h2>
+
+    <div class="three-up">
+      <div class="card bttf-anim" data-anim="card">
+        <div class="card-mark-bolt"></div>
+        <h3 class="card-title">Tirar <em>tarefa cansativa</em> de cima</h3>
+        <p class="card-body">Relatório braçal, copia-e-cola, formatação, busca em PDF, transcrição, organização de pasta. Aquela parte que ninguém escolheria fazer se pudesse evitar.</p>
+      </div>
+
+      <div class="card bttf-anim" data-anim="card">
+        <div class="card-mark-bolt"></div>
+        <h3 class="card-title">Liberar <em>tempo</em> para o que importa</h3>
+        <p class="card-body">Criatividade, julgamento, relação com cliente, estratégia. A parte do trabalho onde o seu olhar e o seu repertório fazem diferença.</p>
+      </div>
+
+      <div class="card bttf-anim" data-anim="card">
+        <div class="card-mark-bolt"></div>
+        <h3 class="card-title">Humano sempre <em>no comando</em></h3>
+        <p class="card-body">A IA propõe, vocês decidem. A IA rascunha, vocês refinam. A IA encontra, vocês validam. Esse é o pacto.</p>
+      </div>
+    </div>
+
+    <p class="callout bttf-anim" data-anim="fade-up">O objetivo é trabalhar menos cansado, não trabalhar mais.</p>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SLIDE 6 — COMO VOCÊS PARTICIPAM
+     ===================================================================== -->
+<section data-label="Como vocês participam" class="slide atmosphere">
+  <div class="slide-vignette"></div>
+  <div class="scanline"></div>
+
+  <div class="frame">
+    <div class="eyebrow bttf-anim" data-anim="fade-up">A parte mais importante</div>
+    <h2 class="slide-title bttf-anim" data-anim="title">Como <em>vocês</em> entram nessa.</h2>
+
+    <ul class="participate">
+      <li class="bttf-anim" data-anim="participate">
+        <div class="participate-num">01</div>
+        <div class="participate-text">
+          <em>Conversas por setor</em>
+          <small>Em pequenos grupos, vocês contam o que cansa no dia-a-dia. Não é entrevista — é bate-papo.</small>
+        </div>
+      </li>
+      <li class="bttf-anim" data-anim="participate">
+        <div class="participate-num">02</div>
+        <div class="participate-text">
+          <em>Testes guiados</em>
+          <small>Sem cobrança, sem "tem que dar certo de primeira". Experimentação no ritmo do trabalho.</small>
+        </div>
+      </li>
+      <li class="bttf-anim" data-anim="participate">
+        <div class="participate-num">03</div>
+        <div class="participate-text">
+          <em>Canais abertos</em>
+          <small>Dúvida, sugestão, reclamação. Tudo conta. Inclusive "isso aqui não funcionou porque…"</small>
+        </div>
+      </li>
+      <li class="bttf-anim" data-anim="participate">
+        <div class="participate-num">04</div>
+        <div class="participate-text">
+          <em>Curiosidade reconhecida</em>
+          <small>Quem experimenta ajuda a moldar como a RBA usa IA daqui pra frente.</small>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SLIDE 7 — ENCERRAMENTO · A gente vai junto
+     ===================================================================== -->
+<section data-label="Encerramento" class="slide closing">
+  <video class="slide-bg slide-bg--video slide-bg--mentor" autoplay muted loop playsinline disablepictureinpicture poster="assets/mentor-poster.webp">
+    <source src="assets/mentor-loop.mp4" type="video/mp4" />
+  </video>
+  <div class="slide-vignette closing-vignette"></div>
+  <div class="scanline"></div>
+
+  <div class="frame">
+    <div class="closing-text-block">
+      <p class="closing-quote-final bttf-anim" data-anim="closing-final">
+        A gente não<br/>
+        vai fazer isso<br/>
+        <em>para</em> vocês.<br/><br/>
+        A gente<br/>
+        vai fazer<br/>
+        <em>com</em> vocês.
       </p>
     </div>
-  </section>
+    <div class="closing-logo-block bttf-anim" data-anim="closing-logo">
+      <img src="assets/rba-plus-logo.webp" alt="RBA+" class="closing-rba-logo" />
+    </div>
+  </div>
+</section>
 
 </deck-stage>
 
-<!-- Speaker notes (lidas pelo deck-stage e propagadas para o painel pai, se houver) -->
+<!-- Flash overlay para transição capa → slide 2 (relâmpago elétrico) -->
+<div class="transition-flash" aria-hidden="true"></div>
+
+<!-- Fade overlay para transição slide 6 → 7 (fade out/in suave) -->
+<div class="transition-fade" aria-hidden="true"></div>
+
+<script src="deck-stage.js"></script>
+
 <script type="application/json" id="speaker-notes">
 {
-  "0": "CAPA — Afonso abre. 3-4 min. Legitima o trabalho: prioridade da RBA, não moda. Apresenta Thiago como parceiro. Reforça: time todo é parte disso.",
-  "1": "LINHA DO TEMPO — Thiago. 3-4 min. Capítulo 1 (até 2024): conversas isoladas. Capítulo 2 (final 2025+): harness, IA executa de verdade. 'Em janeiro a gente conversava com a IA. Hoje a IA executa para a gente.' Fecha com: 'mas executa não significa sozinha — já já volto nisso.'",
-  "2": "O QUE VAMOS FAZER JUNTOS — Thiago. 4-5 min. Visão alta, sem listar projetos. 'A pergunta não é qual ferramenta a gente compra. A pergunta é o que cansa vocês no dia-a-dia que pode deixar de cansar.' Reforço: nada acontece sem vocês. Construção em ondas, sem afobação.",
-  "3": "NÃO É ISSO — Thiago. 3 min. Endereçar receios de frente. Tom firme, direto. 'IA sem humano vira máquina de gerar lixo bonito.' 'Quem promete revolução em 30 dias está vendendo curso.'",
-  "4": "É ISSO — Thiago. 3-4 min. Energia positiva, pintar o depois. 'Sabe aquela parte do seu trabalho que ninguém escolheria fazer? É aí que a IA entra. Sabe a parte que dá orgulho? Essa fica com você. Sempre.' 'Trabalhar menos cansado, não trabalhar mais.'",
-  "5": "COMO VOCÊS PARTICIPAM — Thiago. 3-4 min. Mover de ouvinte para participante. 'Vocês não são plateia. Vocês decidem o que entra e o que sai.' Fechamento com a frase grande, depois abrir Q&A. Antecipar: 'Vou perder meu emprego?' / 'Quanto tempo dura?' / 'Vai ter treinamento formal?' / 'E se eu não tiver tempo?'"
+  "0": "CAPA — Afonso abre. 3-4 min. Tema 'De Volta para o Futuro' é o frame. Reforça: prioridade da RBA, time todo é parte, Thiago é parceiro.",
+  "1": "TIME CIRCUITS — Thiago. 3-4 min. Painel do DeLorean: passado (era das conversas), agora (era do harness, piscando), futuro (a definir junto).",
+  "2": "O QUE VAMOS FAZER JUNTOS — Thiago. 4-5 min. 4 frentes. 'A pergunta é o que cansa vocês no dia-a-dia.'",
+  "3": "NÃO É ISSO — Thiago. 3 min. Receios endereçados. Tom firme.",
+  "4": "É ISSO — Thiago. 3-4 min. Reposicionar com energia. ⚡ marca o tom.",
+  "5": "COMO PARTICIPAM — Thiago. 3-4 min. Convite. Frase final: 'COM vocês.'"
 }
 </script>
 
-<script src="animations.js"></script>
-<script src="deck-stage.js"></script>
-
-<!-- Animações custom para elementos não cobertos pelo sistema base -->
+<!-- Animações WAAPI -->
 <script>
 (() => {
-  const EASE_SPRING = 'cubic-bezier(0.34, 1.56, 0.44, 1)';
-  const EASE_SOFT   = 'cubic-bezier(0.16, 1, 0.3, 1)';
-  const EASE_OUT    = 'cubic-bezier(0.2, 0.8, 0.2, 1)';
+  const E_OUT    = 'cubic-bezier(0.2, 0.8, 0.2, 1)';
+  const E_SOFT   = 'cubic-bezier(0.16, 1, 0.3, 1)';
+  const E_SPRING = 'cubic-bezier(0.34, 1.56, 0.44, 1)';
 
-  function animateLinhaTempo(slide) {
-    const arrow = slide.querySelector('.era-arrow');
-    if (arrow) {
-      arrow.animate(
-        [
-          { opacity: 0, transform: 'scale(0.3) translateX(-30px)', filter: 'blur(8px)' },
-          { opacity: 1, transform: 'scale(1.35) translateX(10px)', filter: 'blur(0)', offset: 0.6 },
-          { opacity: 1, transform: 'scale(1)', filter: 'blur(0)' },
-        ],
-        { duration: 850, delay: 1400, easing: EASE_SPRING, fill: 'both' }
-      );
-    }
+  const safe = (fn) => { try { fn(); } catch (e) { console.warn('[bttf]', e); } };
+
+  function fadeUp(el, delay, dist = 28, dur = 720) {
+    return el.animate(
+      [
+        { opacity: 0, transform: `translate3d(0, ${dist}px, 0)`, filter: 'blur(6px)' },
+        { opacity: 1, transform: 'none', filter: 'blur(0)' },
+      ],
+      { duration: dur, delay, easing: E_SOFT, fill: 'both' }
+    );
   }
 
-  function animateNaoEisso(slide) {
-    const marks = slide.querySelectorAll('.myth-mark');
-    marks.forEach((m, i) => {
-      m.animate(
-        [
-          { opacity: 0, transform: 'rotate(-180deg) scale(0)', filter: 'blur(6px)' },
-          { opacity: 1, transform: 'rotate(15deg) scale(1.25)', filter: 'blur(0)', offset: 0.55 },
-          { opacity: 1, transform: 'rotate(-8deg) scale(0.95)', offset: 0.78 },
-          { opacity: 1, transform: 'rotate(0deg) scale(1)' },
-        ],
-        { duration: 820, delay: 900 + i * 180, easing: EASE_SPRING, fill: 'both' }
-      );
-    });
+  function springScale(el, delay) {
+    return el.animate(
+      [
+        { opacity: 0, transform: 'translate3d(0, 50px, 0) scale(0.88)', filter: 'blur(6px)' },
+        { opacity: 1, transform: 'translate3d(0, -6px, 0) scale(1.015)', offset: 0.7 },
+        { opacity: 1, transform: 'none', filter: 'blur(0)' },
+      ],
+      { duration: 850, delay, easing: E_SPRING, fill: 'both' }
+    );
   }
 
-  function animateEisso(slide) {
-    const marks = slide.querySelectorAll('.promise-mark');
-    marks.forEach((m, i) => {
-      m.animate(
-        [
-          { opacity: 0, transform: 'scale(0) rotate(-30deg)', filter: 'blur(6px)' },
-          { opacity: 1, transform: 'scale(1.3) rotate(5deg)', filter: 'blur(0)', offset: 0.6 },
-          { opacity: 1, transform: 'scale(1) rotate(0deg)' },
-        ],
-        { duration: 780, delay: 900 + i * 180, easing: EASE_SPRING, fill: 'both' }
-      );
-    });
+  function slideRight(el, delay, dist = 70) {
+    return el.animate(
+      [
+        { opacity: 0, transform: `translate3d(${-dist}px, 0, 0)`, filter: 'blur(4px)' },
+        { opacity: 1, transform: 'none', filter: 'blur(0)' },
+      ],
+      { duration: 720, delay, easing: E_SOFT, fill: 'both' }
+    );
   }
 
-  function animateParticipam(slide) {
-    const items = slide.querySelectorAll('.participate-list li');
-    items.forEach((li, i) => {
-      li.animate(
-        [
-          { opacity: 0, transform: 'translate3d(-100px, 0, 0)', filter: 'blur(6px)' },
-          { opacity: 1, transform: 'none', filter: 'blur(0)' },
-        ],
-        { duration: 820, delay: 600 + i * 140, easing: EASE_SOFT, fill: 'both' }
-      );
-      // o marker numérico tem um pequeno delay extra pra "ligar" depois
-      const marker = li.querySelector('.participate-marker');
-      if (marker) {
-        marker.animate(
-          [{ color: 'rgba(255,255,255,0.0)' }, { color: 'rgba(249,99,59,1)' }],
-          { duration: 480, delay: 800 + i * 140, easing: EASE_OUT, fill: 'both' }
-        );
-      }
-    });
-    const quote = slide.querySelector('.closing-quote');
-    if (quote) {
-      quote.animate(
-        [
-          { opacity: 0, transform: 'translate3d(0, 40px, 0)', filter: 'blur(10px)' },
-          { opacity: 1, transform: 'none', filter: 'blur(0)' },
-        ],
-        { duration: 1100, delay: 1450, easing: EASE_SOFT, fill: 'both' }
-      );
-    }
+  function tcHero(el, delay) {
+    return el.animate(
+      [
+        { opacity: 0, transform: 'scale(0.92) translate3d(-30px, 0, 0)', filter: 'blur(10px) brightness(0.4)' },
+        { opacity: 1, transform: 'none', filter: 'blur(0) brightness(1)' },
+      ],
+      { duration: 1200, delay, easing: E_OUT, fill: 'both' }
+    );
   }
 
-  function animateCapa(slide) {
-    // Pulso sutil no eyebrow "Kick-off"
-    const eyebrow = slide.querySelector('.cover-eyebrow');
-    if (eyebrow) {
-      eyebrow.animate(
-        [
-          { letterSpacing: '0.5em', opacity: 0 },
-          { letterSpacing: '0.2em', opacity: 1 },
-        ],
-        { duration: 1100, delay: 200, easing: EASE_SOFT, fill: 'both' }
-      );
-    }
+  function coverBig(el, delay) {
+    return el.animate(
+      [
+        { opacity: 0, transform: 'skewX(-8deg) scale(0.78)', filter: 'drop-shadow(0 0 80px rgba(255,160,0,1)) blur(20px) brightness(2.2)' },
+        { opacity: 1, transform: 'skewX(-8deg) scale(1.05)', filter: 'drop-shadow(0 0 70px rgba(255,160,0,0.7)) blur(0) brightness(1.5)', offset: 0.55 },
+        { opacity: 1, transform: 'skewX(-8deg) scale(1)', filter: 'brightness(1)' },
+      ],
+      { duration: 1500, delay, easing: E_SPRING, fill: 'both' }
+    );
   }
 
+  function coverSmall(el, delay) {
+    return el.animate(
+      [
+        { opacity: 0, transform: 'skewX(-8deg) translateY(-30px)', filter: 'blur(8px)' },
+        { opacity: 1, transform: 'skewX(-8deg) translateY(0)', filter: 'blur(0)' },
+      ],
+      { duration: 800, delay, easing: E_OUT, fill: 'both' }
+    );
+  }
+
+  function coverSide(el, delay) {
+    return el.animate(
+      [
+        { opacity: 0, transform: 'translateY(-12px)', filter: 'blur(4px)' },
+        { opacity: 1, transform: 'none', filter: 'blur(0)' },
+      ],
+      { duration: 700, delay, easing: E_OUT, fill: 'both' }
+    );
+  }
+
+  // Slide handlers
   const HANDLERS = {
-    'Capa':                    animateCapa,
-    'Linha do tempo':          animateLinhaTempo,
-    'Não é isso':              animateNaoEisso,
-    'É isso':                  animateEisso,
-    'Como vocês participam':   animateParticipam,
+    'Capa': (slide) => {
+      const idle      = slide.querySelector('.slide-bg--idle');
+      const departure = slide.querySelector('.slide-bg--departure');
+
+      // Reset estado: idle plays, departure pausado e oculto
+      slide.classList.remove('is-departing');
+      if (idle) {
+        try { idle.currentTime = 0; idle.play(); } catch (e) {}
+      }
+      if (departure) {
+        try { departure.pause(); departure.currentTime = 0; } catch (e) {}
+      }
+
+      // Animações de texto (idênticas às anteriores)
+      const sides = slide.querySelectorAll('[data-anim="cover-side"]');
+      sides.forEach((el, i) => safe(() => coverSide(el, 200 + i * 80)));
+      const small = slide.querySelector('[data-anim="cover-small"]');
+      if (small) safe(() => coverSmall(small, 500));
+      const big = slide.querySelector('[data-anim="cover-big"]');
+      if (big) safe(() => coverBig(big, 800));
+      const tag = slide.querySelector('[data-anim="cover-tag"]');
+      if (tag) safe(() => fadeUp(tag, 2100, 18, 900));
+
+      // ----------- Narrativa: ao tentar avançar, toca departure antes de navegar
+      let departing = false;
+      const NEXT_KEYS = new Set(['ArrowRight', 'PageDown', 'Enter', ' ', 'Spacebar']);
+
+      function startDeparture() {
+        if (departing || !departure) return;
+        departing = true;
+        slide.classList.add('is-departing');
+        try { departure.currentTime = 0; departure.play(); } catch (e) {}
+        // Pausa idle suavemente após o crossfade
+        setTimeout(() => { try { idle && idle.pause(); } catch (e) {} }, 320);
+
+        // advance() só pode disparar UMA vez (guard contra ended + fallback duplicarem)
+        let advanced = false;
+        let fallbackId = null;
+        const advance = () => {
+          if (advanced) return;
+          advanced = true;
+          if (fallbackId) clearTimeout(fallbackId);
+          departure.removeEventListener('ended', advance);
+          // Dispara flash de relâmpago + navega ao mesmo tempo (slide muda atrás
+          // do flash, que então fade-out revelando o novo slide)
+          const flash = document.querySelector('.transition-flash');
+          if (flash) {
+            flash.classList.remove('flash-burst');
+            void flash.offsetWidth;            // força reflow pra animação reiniciar
+            flash.classList.add('flash-burst');
+            // Limpa a classe após a animação acabar
+            setTimeout(() => flash.classList.remove('flash-burst'), 800);
+          }
+          window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+        };
+        departure.addEventListener('ended', advance);
+        // Fallback caso 'ended' não dispare (ex.: erro carregando video)
+        const dur = (departure.duration && isFinite(departure.duration)) ? departure.duration : 4;
+        fallbackId = setTimeout(advance, (dur + 0.5) * 1000);
+      }
+
+      function onKeydownCapture(e) {
+        // Garante que ainda estamos na capa
+        const active = document.querySelector('section[data-deck-active]');
+        if (!active || active.dataset.label !== 'Capa') {
+          window.removeEventListener('keydown', onKeydownCapture, true);
+          slide.removeEventListener('click', onClickCapture, true);
+          return;
+        }
+        if (departing) return; // já em departure — deixa keydown passar pro deck-stage
+        if (NEXT_KEYS.has(e.key)) {
+          e.preventDefault();
+          e.stopPropagation();
+          startDeparture();
+        }
+      }
+
+      function onClickCapture(e) {
+        if (departing) return;
+        // Detecta clique livre no slide (deck-stage avança em tap/click)
+        e.preventDefault();
+        e.stopPropagation();
+        startDeparture();
+      }
+
+      // Capture phase pra interceptar antes do deck-stage handler
+      window.addEventListener('keydown', onKeydownCapture, true);
+      slide.addEventListener('click', onClickCapture, true);
+    },
+
+    'Time Circuits': (slide) => {
+      const eyebrow = slide.querySelector('[data-anim="fade-up"]');
+      if (eyebrow) safe(() => fadeUp(eyebrow, 200));
+      const hero = slide.querySelector('[data-anim="tc-hero"]');
+      if (hero) safe(() => tcHero(hero, 400));
+      const title = slide.querySelector('[data-anim="title"]');
+      if (title) safe(() => fadeUp(title, 700, 22, 800));
+      slide.querySelectorAll('[data-anim="reading"]').forEach((el, i) => {
+        safe(() => slideRight(el, 1100 + i * 220));
+      });
+      const allFadeUps = slide.querySelectorAll('[data-anim="fade-up"]');
+      if (allFadeUps.length > 1) {
+        // último fade-up é o caption no final
+        const caption = allFadeUps[allFadeUps.length - 1];
+        safe(() => fadeUp(caption, 1900, 18, 900));
+      }
+    },
+
+    'O que vamos fazer juntos': (slide) => {
+      let cursor = 200;
+      slide.querySelectorAll('[data-anim="fade-up"]').forEach(el => {
+        if (el.classList.contains('callout')) return;
+        safe(() => fadeUp(el, cursor));
+        cursor += 200;
+      });
+      const title = slide.querySelector('[data-anim="title"]');
+      if (title) safe(() => fadeUp(title, 250, 22, 800));
+      slide.querySelectorAll('[data-anim="agenda"]').forEach((el, i) => {
+        safe(() => slideRight(el, 700 + i * 160));
+      });
+      const callout = slide.querySelector('.callout');
+      if (callout) safe(() => fadeUp(callout, 1700, 14, 900));
+    },
+
+    'Não é isso': (slide) => {
+      let cursor = 200;
+      slide.querySelectorAll('[data-anim="fade-up"]').forEach(el => {
+        safe(() => fadeUp(el, cursor));
+        cursor += 200;
+      });
+      const title = slide.querySelector('[data-anim="title"]');
+      if (title) safe(() => fadeUp(title, 250, 22, 800));
+      slide.querySelectorAll('[data-anim="card"]').forEach((el, i) => {
+        safe(() => springScale(el, 750 + i * 200));
+      });
+    },
+
+    'É isso': (slide) => {
+      let cursor = 200;
+      slide.querySelectorAll('[data-anim="fade-up"]').forEach(el => {
+        if (el.classList.contains('callout')) return;
+        safe(() => fadeUp(el, cursor));
+        cursor += 200;
+      });
+      const title = slide.querySelector('[data-anim="title"]');
+      if (title) safe(() => fadeUp(title, 250, 22, 800));
+      slide.querySelectorAll('[data-anim="card"]').forEach((el, i) => {
+        safe(() => springScale(el, 750 + i * 200));
+      });
+      slide.querySelectorAll('.card-mark-bolt').forEach((bolt, i) => {
+        bolt.animate(
+          [
+            { transform: 'scale(0) rotate(-30deg)', filter: 'brightness(2.8)' },
+            { transform: 'scale(1.35) rotate(10deg)', filter: 'brightness(1.5)', offset: 0.6 },
+            { transform: 'scale(1) rotate(0deg)', filter: 'brightness(1)' },
+          ],
+          { duration: 700, delay: 1100 + i * 200, easing: E_SPRING, fill: 'both' }
+        );
+      });
+      const callout = slide.querySelector('.callout');
+      if (callout) safe(() => fadeUp(callout, 1900, 14, 900));
+    },
+
+    'Como vocês participam': (slide) => {
+      let cursor = 200;
+      slide.querySelectorAll('[data-anim="fade-up"]').forEach(el => {
+        safe(() => fadeUp(el, cursor));
+        cursor += 200;
+      });
+      const title = slide.querySelector('[data-anim="title"]');
+      if (title) safe(() => fadeUp(title, 250, 22, 800));
+      slide.querySelectorAll('[data-anim="participate"]').forEach((el, i) => {
+        safe(() => slideRight(el, 700 + i * 160, 80));
+      });
+
+      // Intercepta avanço pra slide 7 com transição fade-to-black
+      let advancing = false;
+      const NEXT_KEYS = new Set(['ArrowRight', 'PageDown', 'Enter', ' ', 'Spacebar']);
+
+      function startFadeAdvance() {
+        if (advancing) return;
+        advancing = true;
+        // Usa o efeito de relâmpago (mesmo da capa → slide 2) pra continuidade temática
+        const flash = document.querySelector('.transition-flash');
+        if (flash) {
+          flash.classList.remove('flash-burst');
+          void flash.offsetWidth;
+          flash.classList.add('flash-burst');
+          setTimeout(() => flash.classList.remove('flash-burst'), 800);
+        }
+        // Dispatch ArrowRight em paralelo — slide muda atrás do peak do flash
+        window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+      }
+
+      function onKeydownCapture(e) {
+        const active = document.querySelector('section[data-deck-active]');
+        if (!active || active.dataset.label !== 'Como vocês participam') {
+          window.removeEventListener('keydown', onKeydownCapture, true);
+          slide.removeEventListener('click', onClickCapture, true);
+          return;
+        }
+        if (advancing) return;
+        if (NEXT_KEYS.has(e.key)) {
+          e.preventDefault();
+          e.stopPropagation();
+          startFadeAdvance();
+        }
+      }
+      function onClickCapture(e) {
+        if (advancing) return;
+        e.preventDefault();
+        e.stopPropagation();
+        startFadeAdvance();
+      }
+      window.addEventListener('keydown', onKeydownCapture, true);
+      slide.addEventListener('click', onClickCapture, true);
+    },
+
+    'Encerramento': (slide) => {
+      // Reinicia o video do mentor a cada vez que o slide fica ativo
+      const video = slide.querySelector('.slide-bg--mentor');
+      if (video) {
+        try { video.currentTime = 0; video.play(); } catch (e) {}
+      }
+      const closing = slide.querySelector('[data-anim="closing-final"]');
+      if (closing) safe(() => fadeUp(closing, 500, 30, 1100));
+      const logo = slide.querySelector('[data-anim="closing-logo"]');
+      if (logo) safe(() => fadeUp(logo, 1200, 24, 1000));
+    },
   };
 
   function runFor(slide) {
     if (!slide) return;
     const fn = HANDLERS[slide.dataset.label];
-    if (!fn) return;
-    try { fn(slide); } catch (err) { console.warn('[kickoff anim]', err); }
+    if (fn) safe(() => fn(slide));
+  }
+
+  function moveAtmosphereIntoCanvas(deck) {
+    // Move o video atmosphere persistente do body pra dentro do canvas (shadow DOM)
+    // e configura cross-dissolve real entre 2 instâncias alternadas — A toca, próximo
+    // ao fim B inicia + crossfade de 1s, A pausa, B toca, e assim por diante.
+    try {
+      const videoA = document.querySelector('.bg-persistent-atmosphere');
+      const canvas = deck.shadowRoot && deck.shadowRoot.querySelector('.canvas');
+      if (!videoA || !canvas) return setTimeout(() => moveAtmosphereIntoCanvas(deck), 50);
+
+      // Clona para a 2ª instância
+      const videoB = videoA.cloneNode(true);
+
+      // Remove loop nativo — o crossfade gerencia
+      videoA.removeAttribute('loop');
+      videoB.removeAttribute('loop');
+
+      // CRÍTICO: remover autoplay do B pra ele NÃO tocar junto com A.
+      // Sem isso, ambos rodam simultaneamente desde T=0 e a checagem
+      // inactive.paused falha — swap nunca dispara → vídeo trava no fim.
+      videoB.removeAttribute('autoplay');
+
+      const baseStyles = [
+        'position: absolute',
+        'inset: 0',
+        'width: 100%',
+        'height: 100%',
+        'object-fit: cover',
+        'object-position: center',
+        'z-index: 0',
+        'pointer-events: none',
+        'filter: brightness(0.82) saturate(1.05)',
+        'transition: opacity 1000ms linear',
+      ].join('; ');
+
+      videoA.style.cssText = baseStyles + '; opacity: 1';
+      videoB.style.cssText = baseStyles + '; opacity: 0';
+
+      canvas.insertBefore(videoB, canvas.firstChild);
+      canvas.insertBefore(videoA, canvas.firstChild);
+
+      let active = videoA;
+      let inactive = videoB;
+      const FADE_BEFORE_END = 1.0;     // segundos antes do fim — começa o crossfade
+      const FADE_DURATION_MS = 1000;   // duração do fade
+
+      const onTime = (e) => {
+        const v = e.target;
+        if (v !== active) return;
+        const dur = v.duration;
+        if (!isFinite(dur) || dur <= 0) return;
+        const remaining = dur - v.currentTime;
+        if (remaining <= FADE_BEFORE_END && inactive.paused) {
+          // Dispara o cross-dissolve: inactive entra do zero + opacity 1, active fade-out
+          try { inactive.currentTime = 0; inactive.play(); } catch (err) {}
+          inactive.style.opacity = '1';
+          active.style.opacity = '0';
+          // Após o fade, pausa o que era ativo (libera CPU)
+          const oldActive = active;
+          setTimeout(() => { try { oldActive.pause(); } catch (err) {} }, FADE_DURATION_MS + 50);
+          // Swap roles
+          [active, inactive] = [inactive, active];
+        }
+      };
+
+      videoA.addEventListener('timeupdate', onTime);
+      videoB.addEventListener('timeupdate', onTime);
+
+      // Inicia o A
+      try { videoA.play(); } catch (e) {}
+    } catch (e) { console.warn('[atmosphere crossfade]', e); }
   }
 
   function ready() {
     const deck = document.querySelector('deck-stage');
     if (!deck) return setTimeout(ready, 30);
-
+    moveAtmosphereIntoCanvas(deck);
     deck.addEventListener('slidechange', (e) => {
       runFor(e.detail && e.detail.slide);
     });
-
-    // Caso o slide ativo já esteja montado antes do listener (refresh persistido
-    // via localStorage do deck-stage), dispara manualmente.
     requestAnimationFrame(() => {
       const active = deck.querySelector('section[data-deck-active]');
       if (active) runFor(active);
     });
   }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready);
   } else {
