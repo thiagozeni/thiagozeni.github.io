@@ -370,19 +370,11 @@ button{ font: inherit; color: inherit; background: none; border: 0; cursor: poin
   background: var(--g3);
 }
 .cover-brand{
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: var(--display-xl);
-  letter-spacing: -.035em;
+  width: clamp(18rem, 80vw, 88rem);
+  max-width: 100%;
+  height: auto;
+  display: block;
   color: var(--white);
-  line-height: .85;
-  font-feature-settings: "ss01";
-}
-.cover-brand .plus{
-  font-weight: 600;
-  display: inline-block;
-  transform: translateY(-0.05em);
-  margin: 0 0.02em;
 }
 .cover-tagline{
   font-family: var(--font-display);
@@ -2110,9 +2102,7 @@ button{ font: inherit; color: inherit; background: none; border: 0; cursor: poin
     <div class="cover-content">
       <div class="cover-eyebrow reveal">Apresentação interna · 2026</div>
 
-      <h1 class="cover-brand reveal" data-delay="1">
-        EAT<span class="plus">+</span>KITCHEN
-      </h1>
+      <img class="cover-brand reveal" data-delay="1" src="../brand-guide/img/logo/eat-kitchen-logo.svg" alt="EAT+KITCHEN" />
 
       <div class="cover-tagline reveal" data-delay="2">PESSOAS. COMIDA. VERDADE.</div>
 

@@ -109,8 +109,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cover-content{position:relative;z-index:2;width:100%;max-width:1700px;padding:0 var(--pad);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(1.4rem,3vw,2.4rem)}
 .cover-eyebrow{font-family:var(--font-display);font-weight:500;font-size:.68rem;letter-spacing:.35em;color:var(--g1);text-transform:uppercase;display:inline-flex;align-items:center;gap:1rem}
 .cover-eyebrow::before,.cover-eyebrow::after{content:'';display:inline-block;width:36px;height:1px;background:var(--g3)}
-.cover-brand{font-family:var(--font-display);font-weight:800;font-size:var(--display-xl);letter-spacing:-.035em;color:var(--white);line-height:.85}
-.cover-brand .plus{font-weight:600;display:inline-block;transform:translateY(-0.05em);margin:0 .02em}
+.cover-brand{width:clamp(18rem,80vw,88rem);max-width:100%;height:auto;display:block;color:var(--white)}
 .cover-tagline{font-family:var(--font-display);font-weight:400;font-size:clamp(.85rem,1.4vw,1.05rem);letter-spacing:.42em;text-transform:uppercase;color:var(--g1)}
 .cover-subtitle{margin-top:.8rem;font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.6vw,1.4rem);color:var(--g1);letter-spacing:.02em;max-width:36ch;line-height:1.4}
 .cover-subtitle strong{color:var(--white);font-weight:500}
@@ -511,7 +510,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <div class="cover-bg"><video autoplay muted loop playsinline preload="metadata"><source src="assets/video/cover.mp4" type="video/mp4" /></video></div>
     <div class="cover-content">
       <div class="cover-eyebrow reveal">Apresentação · novos interessados · 2026</div>
-      <h1 class="cover-brand"><span class="split-letters" data-stagger>EAT<span class="plus">+</span>KITCHEN</span></h1>
+      <img class="cover-brand reveal" data-delay="1" src="../brand-guide/img/logo/eat-kitchen-logo.svg" alt="EAT+KITCHEN" />
       <div class="cover-tagline reveal-mask" data-delay="3">PESSOAS. COMIDA. VERDADE.</div>
       <p class="cover-subtitle reveal" data-delay="3"><strong>Convite à expansão.</strong><br/>Conheça a marca, os números e a oportunidade.</p>
     </div>
