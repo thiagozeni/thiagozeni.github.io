@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="brand-guide/img/favicon.svg" />
+<link rel="alternate icon" type="image/x-icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="brand-guide/img/favicon.svg" />
 <title>EAT+KITCHEN · Cockpit de iniciativas · ZN.</title>
 <meta name="description" content="Hub interno de iniciativas estratégicas EAT+KITCHEN · por Thiago Zeni · sócio investidor" />
-<link rel="icon" type="image/svg+xml" href="brand-guide/img/favicon.svg" />
-<link rel="apple-touch-icon" href="brand-guide/img/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -479,6 +480,33 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .card.live:hover .open{ gap:.85rem }
 .card .open::after{ content:'→'; font-size:1rem; transform:translateY(-1px) }
 
+/* Card com múltiplos links (mesma estética do .open, empilhados) */
+.card-links{
+  display:flex;
+  flex-direction:column;
+  margin-top:1rem;
+  padding-top:1rem;
+  border-top:1px solid var(--line);
+}
+.card-link{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:.6rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--zn-lime);
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.55rem 0;
+  transition: gap .3s var(--ease);
+}
+.card-link + .card-link{
+  border-top:1px solid var(--line-soft);
+}
+.card-link:hover{ gap:.85rem }
+.card-link::after{ content:'→'; font-size:1rem; transform:translateY(-1px) }
+
 /* ============ FOOTER · ZN. SIGNATURE ============ */
 .zn-signature{
   background:var(--zn-bg);
@@ -624,9 +652,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 
   <div class="hero-stats">
-    <div class="hs reveal"><strong>02</strong>Apresentações ativas</div>
-    <div class="hs reveal" data-delay="1"><strong>03</strong>Frentes em desenvolvimento</div>
-    <div class="hs reveal" data-delay="2"><strong>09</strong>Iniciativas em pipeline</div>
+    <div class="hs reveal"><strong>07</strong>Frentes ativas</div>
+    <div class="hs reveal" data-delay="1"><strong>05</strong>Em pipeline</div>
+    <div class="hs reveal" data-delay="2"><strong>12</strong>Iniciativas no cockpit</div>
     <div class="hs reveal" data-delay="3"><strong>v1.0</strong>Maio · 2026</div>
   </div>
 </section>
@@ -653,7 +681,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <div class="section-meta">
       <strong>05 frentes</strong>
-      03 ativas · 02 pipeline
+      05 ativas
     </div>
   </div>
 
@@ -686,18 +714,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span class="open">Abrir deck</span>
     </a>
 
-    <div class="card backlog reveal" data-delay="3">
+    <a class="card live reveal" href="brand-guide/index.html" data-delay="3">
       <div class="top">
-        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="status"><span class="dot"></span>Ativo</span>
         <span class="ix">03</span>
         <h3>Brand guide · sistema de identidade</h3>
-        <p class="desc">Manual normativo da marca · paleta, tipografia, logo EAT+, sufixos (EAT+EVENTOS, EAT+BOX), aplicações físicas e digitais. Codifica o sistema que hoje vive em PDFs internos.</p>
+        <p class="desc">Versão digital do brand manual oficial Bodega · filosofia, logotipia, sistema tipográfico GT Pressura, paleta institucional + 9 cores &amp; sabores, cardápios, tom de voz e claims.</p>
       </div>
       <div class="meta">
         <div class="m"><span class="l">Tipo</span><span class="v">Manual de marca</span></div>
-        <div class="m"><span class="l">Formato</span><span class="v">Doc + biblioteca</span></div>
+        <div class="m"><span class="l">Seções</span><span class="v">09</span></div>
       </div>
-    </div>
+      <span class="open">Abrir guide</span>
+    </a>
 
     <a class="card live reveal" href="apresentacao-expansao/index.html" data-delay="4">
       <div class="top">
@@ -713,18 +742,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span class="open">Abrir deck</span>
     </a>
 
-    <div class="card backlog reveal" data-delay="4">
+    <a class="card live reveal" href="https://eat-kitchen-website.vercel.app" target="_blank" rel="noopener noreferrer" data-delay="4">
       <div class="top">
-        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="status"><span class="dot"></span>Ativo · em preview</span>
         <span class="ix">05</span>
         <h3>Novo site institucional</h3>
-        <p class="desc">Refresh do eatkitchen.com.br · corrige as 5 rotas em 404, captura email, prepara expansão e deixa o site à altura do Instagram.</p>
+        <p class="desc">Refundação editorial cinematográfica · Next.js 16, Sanity CMS, vídeos Vercel Blob, parallax + estampas vivas, form de eventos. 5 rotas no ar — aguarda cutover de DNS.</p>
       </div>
       <div class="meta">
         <div class="m"><span class="l">Tipo</span><span class="v">Web institucional</span></div>
-        <div class="m"><span class="l">Domínio</span><span class="v">eatkitchen.com.br</span></div>
+        <div class="m"><span class="l">Status</span><span class="v">Preview · pronto</span></div>
       </div>
-    </div>
+      <span class="open">Abrir preview</span>
+    </a>
   </div>
 </section>
 
@@ -737,7 +767,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <div class="section-meta">
       <strong>04 frentes</strong>
-      01 ativa · 03 pipeline
+      02 ativas · 02 pipeline
     </div>
   </div>
 
@@ -756,16 +786,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span class="open">Abrir deck</span>
     </a>
 
-    <div class="card backlog reveal" data-delay="1">
+    <div class="card live reveal" data-delay="1">
       <div class="top">
-        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="status"><span class="dot"></span>Ativo · Fase 1</span>
         <span class="ix">07</span>
         <h3>App próprio · pedidos &amp; fidelidade</h3>
-        <p class="desc">iOS/Android com pedidos na mesa, take away, delivery e programa de fidelidade integrados. Captura ~917k clientes que hoje circulam sem CRM. Próxima etapa após a pesquisa benchmark.</p>
+        <p class="desc">Fase 1 entregue · pedidos na mesa, take away, delivery e admin de cozinha já no ar. PWA Next.js + Supabase, integrações TOTVS + Mercado Pago em andamento. Próximas fases: fidelidade, push e mobile nativo.</p>
       </div>
       <div class="meta">
-        <div class="m"><span class="l">Stack</span><span class="v">Mobile nativo</span></div>
-        <div class="m"><span class="l">Impacto</span><span class="v">CRM + LTV</span></div>
+        <div class="m"><span class="l">Stack</span><span class="v">Next.js + Supabase</span></div>
+        <div class="m"><span class="l">Fase</span><span class="v">1 · em uso</span></div>
+      </div>
+      <div class="card-links">
+        <a class="card-link" href="https://eat-kitchen-app.vercel.app" target="_blank" rel="noopener noreferrer">App mobile (mesa / take away)</a>
+        <a class="card-link" href="https://eat-kitchen-app.vercel.app/login" target="_blank" rel="noopener noreferrer">Painel admin (desktop)</a>
       </div>
     </div>
 
@@ -866,8 +900,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     Uso restrito · maio 2026
   </div>
   <div class="right-info">
-    Próximas iniciativas<br/>
-    Adicionadas ao hub conforme priorização
+    Acessos rápidos<br/>
+    <a href="brand-guide/index.html" style="color:var(--zn-lime);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px">Brand Guide →</a>
   </div>
 </footer>
 
