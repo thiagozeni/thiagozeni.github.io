@@ -479,11 +479,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .card.live:hover .open{ gap:.85rem }
 .card .open::after{ content:'→'; font-size:1rem; transform:translateY(-1px) }
 
-/* Card com múltiplos links (substitui .open quando há mais de 1 destino) */
+/* Card com múltiplos links (mesma estética do .open, empilhados) */
 .card-links{
   display:flex;
   flex-direction:column;
-  gap:.6rem;
   margin-top:1rem;
   padding-top:1rem;
   border-top:1px solid var(--line);
@@ -497,19 +496,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   color:var(--zn-lime);
   display:inline-flex;
   align-items:center;
-  justify-content:space-between;
   gap:.5rem;
-  padding:.55rem .8rem;
-  border:1px solid rgba(198,255,0,.18);
-  transition:all .3s var(--ease);
+  padding:.55rem 0;
+  transition: gap .3s var(--ease);
 }
-.card-link:hover{
-  background:rgba(198,255,0,.06);
-  border-color:rgba(198,255,0,.45);
-  gap:.85rem;
+.card-link + .card-link{
+  border-top:1px solid var(--line-soft);
 }
-.card-link::after{ content:'↗'; font-size:.9rem; opacity:.6; transition:opacity .3s var(--ease) }
-.card-link:hover::after{ opacity:1 }
+.card-link:hover{ gap:.85rem }
+.card-link::after{ content:'→'; font-size:1rem; transform:translateY(-1px) }
 
 /* ============ FOOTER · ZN. SIGNATURE ============ */
 .zn-signature{
