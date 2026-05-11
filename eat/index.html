@@ -479,6 +479,38 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .card.live:hover .open{ gap:.85rem }
 .card .open::after{ content:'→'; font-size:1rem; transform:translateY(-1px) }
 
+/* Card com múltiplos links (substitui .open quando há mais de 1 destino) */
+.card-links{
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+  margin-top:1rem;
+  padding-top:1rem;
+  border-top:1px solid var(--line);
+}
+.card-link{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:.6rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--zn-lime);
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.5rem;
+  padding:.55rem .8rem;
+  border:1px solid rgba(198,255,0,.18);
+  transition:all .3s var(--ease);
+}
+.card-link:hover{
+  background:rgba(198,255,0,.06);
+  border-color:rgba(198,255,0,.45);
+  gap:.85rem;
+}
+.card-link::after{ content:'↗'; font-size:.9rem; opacity:.6; transition:opacity .3s var(--ease) }
+.card-link:hover::after{ opacity:1 }
+
 /* ============ FOOTER · ZN. SIGNATURE ============ */
 .zn-signature{
   background:var(--zn-bg);
@@ -624,8 +656,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 
   <div class="hero-stats">
-    <div class="hs reveal"><strong>06</strong>Frentes ativas</div>
-    <div class="hs reveal" data-delay="1"><strong>06</strong>Em pipeline</div>
+    <div class="hs reveal"><strong>07</strong>Frentes ativas</div>
+    <div class="hs reveal" data-delay="1"><strong>05</strong>Em pipeline</div>
     <div class="hs reveal" data-delay="2"><strong>12</strong>Iniciativas no cockpit</div>
     <div class="hs reveal" data-delay="3"><strong>v1.0</strong>Maio · 2026</div>
   </div>
@@ -739,7 +771,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <div class="section-meta">
       <strong>04 frentes</strong>
-      01 ativa · 03 pipeline
+      02 ativas · 02 pipeline
     </div>
   </div>
 
@@ -758,16 +790,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span class="open">Abrir deck</span>
     </a>
 
-    <div class="card backlog reveal" data-delay="1">
+    <div class="card live reveal" data-delay="1">
       <div class="top">
-        <span class="status"><span class="dot"></span>Em pipeline</span>
+        <span class="status"><span class="dot"></span>Ativo · Fase 1</span>
         <span class="ix">07</span>
         <h3>App próprio · pedidos &amp; fidelidade</h3>
-        <p class="desc">iOS/Android com pedidos na mesa, take away, delivery e programa de fidelidade integrados. Captura ~917k clientes que hoje circulam sem CRM. Próxima etapa após a pesquisa benchmark.</p>
+        <p class="desc">Fase 1 entregue · pedidos na mesa, take away, delivery e admin de cozinha já no ar. PWA Next.js + Supabase, integrações TOTVS + Mercado Pago em andamento. Próximas fases: fidelidade, push e mobile nativo.</p>
       </div>
       <div class="meta">
-        <div class="m"><span class="l">Stack</span><span class="v">Mobile nativo</span></div>
-        <div class="m"><span class="l">Impacto</span><span class="v">CRM + LTV</span></div>
+        <div class="m"><span class="l">Stack</span><span class="v">Next.js + Supabase</span></div>
+        <div class="m"><span class="l">Fase</span><span class="v">1 · em uso</span></div>
+      </div>
+      <div class="card-links">
+        <a class="card-link" href="https://eat-kitchen-app.vercel.app" target="_blank" rel="noopener noreferrer">App mobile (mesa / take away)</a>
+        <a class="card-link" href="https://eat-kitchen-app.vercel.app/login" target="_blank" rel="noopener noreferrer">Painel admin (desktop)</a>
       </div>
     </div>
 
