@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Nosso · Xis &amp; Sportsbar — Jurerê, Florianópolis</title>
+<meta name="description" content="O Nosso · Xis & Sportsbar em Jurerê, Florianópolis. O xis original, burgers Angus, comida de boteco e o jogo na tela grande. Pra chamar de nosso.">
+<meta name="theme-color" content="#00AC6C">
+<link rel="icon" href="nglobe.png" type="image/png">
+<link rel="apple-touch-icon" href="nglobe.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="O Nosso · Xis & Sportsbar — Jurerê">
+<meta property="og:description" content="O xis original de Jurerê, burgers Angus e o jogo na tela grande. Pra chamar de nosso.">
+<meta property="og:image" content="hero-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"O Nosso · Xis & Sportsbar","servesCuisine":["Xis","Hambúrguer","Comida de boteco"],"priceRange":"$$","url":"https://thiagozeni.com/onosso/","image":"https://thiagozeni.com/onosso/hero-poster.jpg","telephone":"+554888715988","address":{"@type":"PostalAddress","streetAddress":"Av. dos Búzios, 277","addressLocality":"Florianópolis","addressRegion":"SC","postalCode":"88053-300","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-27.4413901,"longitude":-48.4863732},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"18:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"16:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"16:00","closes":"22:00"}],"sameAs":["https://instagram.com/onosso.jurere"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#00AC6C; --bright:#10C77E; --deep:#00623E;
+  --ink:#070a08; --black:#000; --white:#fff; --paper:#f3f1e9; --grey:#8d8d85;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{background:var(--ink);color:var(--white);font-family:'Archivo',sans-serif;overflow-x:hidden}
+.anton{font-family:'Anton',sans-serif;text-transform:uppercase;line-height:.84;letter-spacing:.01em}
+img{display:block;max-width:100%}
+
+/* grain overlay */
+.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:9000;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 7s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-4%)}60%{transform:translate(-3%,2%)}80%{transform:translate(4%,-2%)}100%{transform:translate(0,0)}}
+
+/* ============ NAV ============ */
+html{scroll-behavior:smooth}
+section[id],footer[id]{scroll-margin-top:76px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:9100;display:flex;align-items:center;gap:22px;
+  padding:12px clamp(16px,4vw,40px);background:linear-gradient(180deg,rgba(5,8,6,.8),rgba(5,8,6,0));transition:background .3s var(--ease)}
+.nav.solid{background:rgba(6,9,6,.93);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav .brand{display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none}
+.nav .brand img{height:clamp(20px,2.6vw,28px);width:auto;display:block}
+.nav .brand b{font-family:'Anton';text-transform:uppercase;letter-spacing:.02em;font-size:1.02rem;color:#fff}
+.nav .brand b span{color:var(--bright)}
+.nav .links{display:flex;gap:26px}
+.nav .links a{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:#cfcfc8;text-decoration:none;transition:color .2s}
+.nav .links a:hover{color:var(--bright)}
+.nav .actions{display:flex;align-items:center;gap:14px}
+.nav .ig{color:#cfcfc8;display:flex;transition:color .2s}
+.nav .ig:hover{color:var(--bright)}
+.nav .ig svg{width:22px;height:22px;display:block;fill:currentColor}
+.nav .delivery{display:inline-flex;align-items:center;gap:7px;background:var(--bright);color:#06281b;font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;padding:9px 16px;border-radius:40px;text-decoration:none;transition:transform .2s var(--ease),box-shadow .2s}
+.nav .delivery:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,199,126,.35)}
+.nav a:focus-visible{outline:3px solid #eafff5;outline-offset:3px;border-radius:4px}
+@media(max-width:820px){ .nav .links{display:none} }
+
+/* ============ FOOTER ============ */
+.footer{background:#050806;color:#cfcfc8;padding:clamp(60px,9vw,110px) clamp(20px,5vw,48px) 38px;border-top:1px solid rgba(255,255,255,.06)}
+.footer .fwrap{max-width:1180px;margin:0 auto}
+.footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(32px,5vw,56px);align-items:start}
+.footer .brandcol img{width:210px;max-width:60%;height:auto;margin-bottom:18px}
+.footer .blurb{max-width:34ch;font-size:.92rem;line-height:1.6;color:#8f8f88}
+.footer h4{font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.16em;font-size:.66rem;color:var(--bright);margin-bottom:14px}
+.footer a{color:#e7e7e0;text-decoration:none;transition:color .2s}
+.footer a:hover{color:var(--bright)}
+.footer .col p,.footer .col a{display:block;font-size:.95rem;line-height:1.7;color:#c7c7bf}
+.footer .col a:hover{color:var(--bright)}
+.footer .igrow{display:inline-flex;align-items:center;gap:8px;margin-top:4px}
+.footer .igrow svg{width:18px;height:18px;fill:currentColor}
+.footer .delivery{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:var(--bright);color:#06281b !important;font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;padding:11px 18px;border-radius:40px;transition:transform .2s var(--ease),box-shadow .2s}
+.footer .delivery:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(16,199,126,.3)}
+.footer .bottom{margin-top:clamp(40px,6vw,70px);padding-top:22px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.7rem;color:#6c7a72;font-family:'Archivo';font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.footer .bottom a{color:#8a988f}
+@media(max-width:760px){ .footer .top{grid-template-columns:1fr;gap:34px} }
+
+/* ============ HERO ============ */
+.hero{position:relative;height:100vh;height:100svh;min-height:600px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero .bg{position:absolute;left:-8%;top:-8%;width:116%;height:116%;object-fit:cover;object-position:50% 50%;filter:grayscale(.04) brightness(.66) contrast(1.04) saturate(1.06)}
+.hero .veil{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 28%,rgba(0,172,108,.1),transparent 55%),linear-gradient(180deg,rgba(7,10,8,.42),rgba(7,10,8,.2) 42%,rgba(7,10,8,.82))}
+.hero .inner{position:relative;z-index:3;padding:0 20px}
+.hero .herologo{display:block;margin:.1em auto .05em;width:min(62%,546px);height:auto;
+  filter:drop-shadow(0 16px 34px rgba(0,0,0,.5));
+  opacity:0;transform:translateY(26px) scale(.95);animation:logoin 1s var(--ease) .3s forwards}
+@keyframes logoin{0%{opacity:0;transform:translateY(26px) scale(.95)}60%{opacity:1;transform:translateY(0) scale(1.02)}100%{opacity:1;transform:translateY(0) scale(1)}}
+/* LED dot vignette (cantos, estático) */
+.hero .pixel{position:absolute;inset:0;z-index:5;pointer-events:none;
+  background:radial-gradient(circle,transparent 40%,rgba(5,8,6,.9) 47%);background-size:7px 7px;
+  -webkit-mask-image:radial-gradient(125% 125% at 50% 44%,transparent 46%,#000 100%);
+  mask-image:radial-gradient(125% 125% at 50% 44%,transparent 46%,#000 100%)}
+@keyframes up{to{opacity:1;transform:translateY(0)}}
+.cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:4;font-family:'Archivo';font-weight:800;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:up .8s var(--ease) 1.4s forwards}
+.cue .bar{width:1px;height:34px;background:linear-gradient(var(--bright),transparent);animation:cue 1.6s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============ MARQUEE ============ */
+.ribbon{position:relative;overflow:hidden;white-space:nowrap;padding:16px 0;background:#060906;
+  border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);
+  box-shadow:inset 0 9px 26px rgba(0,0,0,.75),inset 0 -9px 26px rgba(0,0,0,.75);
+  --led:#1fe98e;--leddim:rgba(31,233,142,.13);--ledglow:rgba(31,233,142,.55)}
+.ribbon.alt{--led:#ffb43a;--leddim:rgba(255,180,58,.14);--ledglow:rgba(255,180,58,.5)}
+/* LEDs apagados (fundo do painel) */
+.ribbon::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(circle,var(--leddim) 46%,transparent 54%);background-size:4px 4px}
+/* grade de pontos ESTÁTICA por cima -> recorta o texto em dots de LED */
+.ribbon::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(circle,transparent 46%,#060906 56%);background-size:4px 4px}
+.ribbon .track{display:inline-block;position:relative;z-index:1;color:var(--led);
+  filter:drop-shadow(0 0 2px var(--led)) drop-shadow(0 0 5px var(--ledglow));
+  animation:marq 24s linear infinite}
+.ribbon.alt .track{animation-direction:reverse;animation-duration:28s}
+.ribbon .track span{font-family:'Anton';text-transform:uppercase;font-size:2.2rem;letter-spacing:.06em;padding:0 .5em}
+.ribbon .track .s{opacity:.5}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ============ generic section ============ */
+section.round{position:relative;padding:clamp(80px,12vw,160px) 24px;overflow:hidden}
+.wrap{max-width:1180px;margin:0 auto}
+.roundtag{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.roundtag .n{font-family:'Anton';font-size:clamp(2.4rem,7vw,4.4rem);color:var(--green);line-height:1}
+.roundtag .lbl{font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--grey)}
+.roundtag .line{flex:1;height:1px;background:rgba(255,255,255,.14)}
+
+/* manifesto */
+.manifesto{background:var(--ink)}
+.manifesto .big{font-family:'Anton';text-transform:uppercase;font-size:clamp(1.9rem,6vw,4.6rem);line-height:.98;max-width:16ch}
+.manifesto .big w{display:inline-block;opacity:.12;transform:translateY(.18em);transition:opacity .5s var(--ease),transform .5s var(--ease);will-change:opacity,transform}
+.manifesto .big w.on{opacity:1;transform:translateY(0)}
+.manifesto .big em{color:var(--bright);font-style:normal}
+.manifesto .ten{position:absolute;right:-3%;top:50%;transform:translateY(-50%);font-family:'Anton';font-size:46vw;line-height:1;color:rgba(16,199,126,.05);z-index:0;pointer-events:none;user-select:none}
+.manifesto .wrap{position:relative;z-index:2}
+.manifesto p.body{margin-top:22px;max-width:46ch;color:#cfcfc8;font-size:1rem;line-height:1.6}
+.manifesto .origem{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,64px);align-items:center}
+.tribhead{font-family:'Anton';text-transform:uppercase;font-size:clamp(1.6rem,4vw,3rem);line-height:.95}
+.tribhead em{font-style:normal;color:var(--bright)}
+.origem-sep{height:1px;background:rgba(255,255,255,.14);margin:34px 0 24px;max-width:420px}
+.tribute{position:relative;border-radius:12px;overflow:hidden;border:5px solid #0a0d0b;box-shadow:12px 12px 0 var(--green);background:#000;justify-self:center;max-width:437px}
+.tribute video{width:100%;height:auto;display:block}
+.tribute-tag{position:absolute;top:14px;left:14px;background:var(--bright);color:#06281b;font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:.58rem;padding:6px 12px;border-radius:30px}
+@media(max-width:760px){ .manifesto .origem{grid-template-columns:1fr;gap:40px} .tribute{max-width:100%} }
+
+/* posters / paper flip */
+.posters{position:relative;background:var(--paper);color:#0a0d0b}
+.posters .paperbg{position:absolute;left:0;top:-24%;width:100%;height:148%;z-index:0;pointer-events:none;
+  background:url(paper.jpg) center center/cover no-repeat;
+  filter:grayscale(1) brightness(1.25) contrast(.85);opacity:.12;will-change:transform}
+.posters>.wrap{position:relative;z-index:1}
+.posters .head{font-family:'Anton';text-transform:uppercase;font-size:clamp(2.4rem,8vw,6rem);line-height:.86}
+.posters .head em{font-style:normal;-webkit-text-stroke:2px var(--green);color:transparent}
+.posters .wall{column-count:3;column-gap:22px;margin-top:54px}
+.poster{position:relative;display:block;break-inside:avoid;margin:0 0 22px;border-radius:10px;overflow:hidden;border:5px solid #0a0d0b;box-shadow:8px 8px 0 var(--green);transition:transform .5s var(--ease),box-shadow .5s var(--ease);will-change:transform}
+.poster img,.poster video{width:100%;height:auto;display:block;transition:transform .8s var(--ease)}
+.poster .cap{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.82));color:#fff;
+  font-family:'Anton';text-transform:uppercase;font-size:1.15rem;letter-spacing:.01em}
+.poster .tag{position:absolute;top:12px;left:12px;z-index:2;background:var(--bright);color:#06281b;font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:.56rem;padding:5px 10px;border-radius:30px}
+.poster:hover{transform:translateY(-8px) rotate(-1.2deg);box-shadow:14px 14px 0 var(--green)}
+.poster:hover img,.poster:hover video{transform:scale(1.07)}
+
+/* sports bar scoreboard */
+.sports{position:relative;background:#070a08}
+.sports .sbg{position:absolute;left:-8%;top:-8%;width:116%;height:116%;z-index:0}
+.sports .sbg video{width:100%;height:100%;object-fit:cover;filter:brightness(.32) grayscale(.12) contrast(1.05)}
+.sports .sbg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,10,8,.72),rgba(7,10,8,.4) 45%,#070a08)}
+.sports .wrap{position:relative;z-index:1}
+.scoreboard{margin-top:40px;border:1px solid rgba(16,199,126,.3);border-radius:16px;background:rgba(16,199,126,.04);padding:34px;position:relative;overflow:hidden}
+.scoreboard::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 38px,rgba(16,199,126,.05) 38px 40px)}
+.scoreboard .led{position:relative;display:flex;gap:30px;flex-wrap:wrap;font-family:'Anton';text-transform:uppercase}
+.scoreboard .game{flex:1;min-width:200px}
+.scoreboard .game .lg{font-family:'Archivo';font-weight:800;font-size:.6rem;letter-spacing:.18em;color:var(--bright);margin-bottom:8px}
+.scoreboard .game .vs{font-size:1.5rem;line-height:1.1}
+.scoreboard .game .tm{font-size:.62rem;font-family:'Archivo';font-weight:700;color:var(--grey);letter-spacing:.1em;margin-top:6px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;background:var(--bright);color:#06281b;font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.86rem;padding:15px 26px;border-radius:50px;transition:transform .3s var(--ease),box-shadow .3s var(--ease);box-shadow:0 0 0 0 rgba(16,199,126,.5)}
+.cta:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(16,199,126,.4)}
+.cta:focus-visible{outline:3px solid #eafff5;outline-offset:3px}
+
+/* reveal util */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:translateY(0)}
+
+/* end */
+.end{background:radial-gradient(120% 95% at 50% 8%,#0c1c14,#05080699),#050806;color:#fff;text-align:center;padding:clamp(100px,15vw,200px) 24px;position:relative;overflow:hidden}
+.end .huge{font-family:'Anton';text-transform:uppercase;font-size:clamp(3rem,12vw,9rem);line-height:.9;
+  color:transparent;-webkit-text-stroke:2px #eafff5;
+  filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 7px var(--bright)) drop-shadow(0 0 17px var(--bright)) drop-shadow(0 0 30px var(--green));
+  will-change:opacity;animation:neonpulse 3.4s ease-in-out infinite}
+@keyframes neonpulse{0%,100%{opacity:1}50%{opacity:.82}}
+/* reveal coordenado (cascata curta) da seção final */
+.end .er{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease) var(--ed,0s),transform .7s var(--ease) var(--ed,0s)}
+.end.go .er{opacity:1;transform:none}
+.end .emblem{height:clamp(74px,11vw,120px);width:auto;display:block;margin:0 auto 34px;
+  filter:drop-shadow(0 0 4px rgba(255,255,255,.35)) drop-shadow(0 0 18px var(--bright));
+  animation:emblemfloat 5s ease-in-out infinite}
+@keyframes emblemfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.end .scriptmark{margin-top:24px;line-height:0}
+.end .scriptmark img{height:clamp(56px,10vw,120px);width:auto;display:inline-block;
+  filter:drop-shadow(0 0 5px rgba(255,255,255,.5)) drop-shadow(0 0 16px var(--bright))}
+.end .loc{margin-top:32px;font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;color:#7c8b83}
+
+@media(max-width:1000px){ .posters .wall{column-count:2} }
+@media(max-width:600px){
+  .posters .wall{column-count:1}
+  .manifesto .ten{font-size:80vw}
+}
+
+/* fallback: sem mask, esconde a vinheta de LED (senão cobriria o hero) */
+@supports not ((-webkit-mask-image:radial-gradient(#000,#000)) or (mask-image:radial-gradient(#000,#000))){
+  .hero .pixel{display:none}
+}
+/* fallback: sem text-stroke, restaura o fill (senão o texto some) */
+@supports not (-webkit-text-stroke:1px #000){
+  .end .huge{color:#eafff5;text-shadow:0 0 18px var(--green)}
+  .posters .head em{color:var(--green)}
+}
+
+/* acessibilidade: respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .rv,.end .er{opacity:1!important;transform:none!important}
+  .manifesto .big w{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<nav class="nav" id="nav">
+  <a class="brand" href="#top"><img src="nav-logo.png" alt="O Nosso · Xis &amp; Sportsbar"></a>
+  <div class="links">
+    <a href="#origem">A Origem</a>
+    <a href="#produto">A Comida</a>
+    <a href="#jogo">O Jogo</a>
+    <a href="cardapio.pdf" target="_blank" rel="noopener">Cardápio</a>
+    <a href="#contato">Contato</a>
+  </div>
+  <div class="actions">
+    <a class="ig" href="https://instagram.com/onosso.jurere" target="_blank" rel="noopener" aria-label="Instagram @onosso.jurere"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.25-.07-1.65-.07-4.85s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2Zm0 1.95c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.7.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.8-.32 1.7-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.38.32 1.7.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.8.28 1.7.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.7-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.8.32-1.7.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.7a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.8-.28-1.7-.32-1.24-.06-1.59-.07-4.74-.07Zm0 3.32a4.53 4.53 0 1 1 0 9.06 4.53 4.53 0 0 1 0-9.06Zm0 1.95a2.58 2.58 0 1 0 0 5.16 2.58 2.58 0 0 0 0-5.16Zm5.77-2.17a1.06 1.06 0 1 1-2.12 0 1.06 1.06 0 0 1 2.12 0Z"/></svg></a>
+    <a class="delivery" href="https://wa.me/554888715988" target="_blank" rel="noopener">▸ Delivery</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <video class="bg" data-speed="0.15" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg">
+    <source src="hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="veil"></div>
+
+  <div class="inner">
+    <img class="herologo" src="hero-logo.png" alt="O Nosso · Rest. Xis Sportsbar">
+  </div>
+  <div class="cue"><span>role</span><span class="bar"></span></div>
+  <div class="pixel"></div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="ribbon rv"><div class="track" id="trk1"></div></div>
+
+<!-- ============ ROUND 01 — MANIFESTO ============ -->
+<section class="round manifesto" id="origem">
+  <div class="ten anton" data-speed="0.25">10</div>
+  <div class="wrap origem">
+    <div class="origem-text">
+      <div class="roundtag rv"><span class="n anton">01</span><span class="lbl">A Origem</span><span class="line"></span></div>
+      <h2 class="big" id="mani">Um grupo de amigos atrás de um xis <em>nota 10</em>.</h2>
+      <div class="origem-sep rv"></div>
+      <h3 class="tribhead rv">Um tributo ao <em>esporte</em></h3>
+      <p class="body rv">Futebol, luta, surf, F1 — uma parede de relíquias dos ídolos que a gente admira. Camisas, cinturões e memórias que embalam cada noite no Nosso.</p>
+    </div>
+    <div class="tribute rv">
+      <video class="lazyvid" autoplay muted loop playsinline preload="metadata" poster="tribute-poster.jpg" aria-label="Parede de tributo ao esporte: camisas, cinturões e relíquias"><source src="tribute-loop.mp4" type="video/mp4"></video>
+      <span class="tribute-tag">◉ Tributo ao esporte</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROUND 02 — POSTERS ============ -->
+<section class="round posters" id="produto">
+  <div class="paperbg" data-speed="0.6"></div>
+  <div class="wrap">
+    <div class="roundtag rv"><span class="n anton">02</span><span class="lbl" style="color:#0a0d0b">A Comida</span><span class="line" style="background:rgba(0,0,0,.18)"></span></div>
+    <h2 class="head rv">O xis <em>nota 10</em></h2>
+    <div class="wall">
+      <div class="poster rv"><span class="tag">Nº 1</span><img src="xis.jpg" alt="O xis original do Nosso, aberto ao meio" loading="lazy" decoding="async"><div class="cap">O xis original</div></div>
+      <div class="poster rv"><span class="tag">Na chapa</span><video class="lazyvid" autoplay muted loop playsinline preload="metadata" aria-label="Xis sendo feito na chapa"><source src="xis-loop.mp4" type="video/mp4"></video><div class="cap">Feito na hora</div></div>
+      <div class="poster rv"><img src="board.jpg" alt="Burger Angus com fritas na tábua" loading="lazy" decoding="async"><div class="cap">Burger + fritas</div></div>
+      <div class="poster rv"><img src="bowl.jpg" alt="Bowl de salmão com folhas e tomate" loading="lazy" decoding="async"><div class="cap">Bowl de Salmão ou Frango</div></div>
+      <div class="poster rv"><img src="hero.jpg" alt="O Nosso Burger com bandeira N" loading="lazy" decoding="async"><div class="cap">O Nosso Burger</div></div>
+      <div class="poster rv"><img src="xis2.jpg" alt="Xis Raíz no papel da casa" loading="lazy" decoding="async"><div class="cap">Xis Raíz</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon alt rv"><div class="track" id="trk2"></div></div>
+
+<!-- ============ ROUND 03 — SPORTS BAR ============ -->
+<section class="round sports" id="jogo">
+  <div class="sbg" data-speed="0.12"><video class="lazyvid" autoplay muted loop playsinline preload="metadata" poster="game.jpg" aria-label="Salão do bar cheio assistindo futebol"><source src="sports-loop.mp4" type="video/mp4"></video></div>
+  <div class="wrap">
+    <div class="roundtag rv"><span class="n anton">03</span><span class="lbl">O Jogo é Aqui</span><span class="line"></span></div>
+    <h2 class="anton rv" style="font-size:clamp(2rem,6vw,4.2rem);line-height:.98;max-width:18ch">Chopp na mão, <span style="color:var(--bright)">o jogo</span> na tela grande.</h2>
+    <div class="scoreboard rv">
+      <div class="led" id="games">
+        <div class="game"><div class="lg">◉ O Jogo é Aqui</div><div class="vs">Brasileirão · Champions · NBA · UFC · Grand Slam</div><div class="tm">Toda semana, ao vivo na tela grande</div></div>
+      </div>
+      <a class="cta" href="https://painel-esportivo-semanal.vercel.app" target="_blank" rel="noopener">Ver os jogos da semana →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ END ============ -->
+<section class="end">
+  <div class="emblem-wrap er"><img class="emblem" src="nglobe.png" alt="O Nosso"></div>
+  <div class="huge-wrap er" style="--ed:.08s"><div class="huge anton">PRA CHAMAR<br>DE NOSSO</div></div>
+  <div class="scriptmark er" style="--ed:.16s"><img src="jurere.png" alt="Jurerê"></div>
+  <div class="loc er" style="--ed:.24s">Jurerê · Florianópolis · @onosso.jurere</div>
+</section>
+
+<!-- ============ FOOTER / CONTATO ============ -->
+<footer class="footer" id="contato">
+  <div class="fwrap">
+    <div class="top">
+      <div class="brandcol col">
+        <div class="logo"><img src="hero-logo.png" alt="O Nosso · Rest. Xis Sportsbar"></div>
+        <p class="blurb">O xis original de Jurerê. Restaurante &amp; sports bar pra reunir os amigos, comer bem e ver o jogo na tela grande.</p>
+      </div>
+      <div class="col">
+        <h4>Onde estamos</h4>
+        <p>Av. dos Búzios, 277 - Jurerê<br>Florianópolis/SC · 88053-300</p>
+        <a href="https://maps.app.goo.gl/aXXEE3xxRNviffen7" target="_blank" rel="noopener">Como chegar ▸</a>
+        <h4 style="margin-top:26px">Horários</h4>
+        <p>Ter–Sex · 18h–23h<br>Sáb · 16h–23h<br>Dom · 16h–22h<br><span style="color:var(--bright)">Delivery</span> · 18h–22h</p>
+      </div>
+      <div class="col">
+        <h4>Contato &amp; Pedidos</h4>
+        <a class="igrow" href="https://instagram.com/onosso.jurere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.25-.07-1.65-.07-4.85s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2Zm0 1.95c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.7.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.8-.32 1.7-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.38.32 1.7.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.8.28 1.7.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.7-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.8.32-1.7.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.7a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.8-.28-1.7-.32-1.24-.06-1.59-.07-4.74-.07Zm0 3.32a4.53 4.53 0 1 1 0 9.06 4.53 4.53 0 0 1 0-9.06Zm0 1.95a2.58 2.58 0 1 0 0 5.16 2.58 2.58 0 0 0 0-5.16Zm5.77-2.17a1.06 1.06 0 1 1-2.12 0 1.06 1.06 0 0 1 2.12 0Z"/></svg> @onosso.jurere</a>
+        <a href="cardapio.pdf" target="_blank" rel="noopener">Ver cardápio (PDF)</a>
+        <a class="delivery" href="https://wa.me/554888715988" target="_blank" rel="noopener">▸ Pedir no WhatsApp</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© O Nosso · Xis &amp; Sportsbar</span>
+      <span><a href="#top">Voltar ao topo ▴</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasIO = 'IntersectionObserver' in window;
+
+  /* ---------- LED ticker (DOM seguro, sem innerHTML) ---------- */
+  function fillTrack(el, items){
+    if(!el) return;
+    for(let pass=0; pass<2; pass++){            // duplica p/ loop -50% sem emenda
+      items.forEach(t=>{
+        const s=document.createElement('span'); s.textContent=t; el.appendChild(s);
+        const sep=document.createElement('span'); sep.className='s'; sep.textContent='✦'; el.appendChild(sep);
+      });
+    }
+  }
+  fillTrack(document.getElementById('trk1'),['O XIS ORIGINAL','PRA CHAMAR DE NOSSO','FLN · BRA','BEST BURGERS','COLD BEER']);
+  fillTrack(document.getElementById('trk2'),['CHOPP GELADO','O JOGO É AQUI','REST · XIS · SPORTSBAR','BOLD & SEM FRESCURA']);
+
+  /* ---------- nav: fundo sólido ao rolar ---------- */
+  const nav=document.getElementById('nav');
+  if(nav){
+    const onNav=()=>nav.classList.toggle('solid', scrollY>40);
+    addEventListener('scroll',onNav,{passive:true}); onNav();
+  }
+
+  /* ---------- parallax (lerp); pausa oculto / reduced-motion ---------- */
+  const players=[...document.querySelectorAll('[data-speed]')].map(el=>({el,sp:parseFloat(el.dataset.speed)||0,cur:0}));
+  if(players.length && !reduce){
+    (function raf(){
+      if(!document.hidden){
+        const vh=innerHeight;
+        for(const p of players){
+          const r=p.el.getBoundingClientRect();
+          const dist=((r.top+r.height/2)-vh/2)/vh;
+          p.cur+=(-dist*p.sp*120 - p.cur)*.1;
+          p.el.style.transform='translate3d(0,'+p.cur.toFixed(2)+'px,0)';
+        }
+      }
+      requestAnimationFrame(raf);
+    })();
+  }
+
+  /* ---------- reveal on scroll (entrada + saída) ---------- */
+  const rvs=[...document.querySelectorAll('.rv')];
+  if(hasIO){
+    const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('in',e.isIntersecting)),{threshold:[0,0.15]});
+    rvs.forEach(el=>io.observe(el));
+  } else { rvs.forEach(el=>el.classList.add('in')); }
+
+  /* ---------- seção final: reveal coordenado ---------- */
+  const end=document.querySelector('.end');
+  if(end){
+    if(hasIO){ new IntersectionObserver(es=>es.forEach(e=>end.classList.toggle('go',e.isIntersecting)),{threshold:0.25}).observe(end); }
+    else end.classList.add('go');
+  }
+
+  /* ---------- jogos da semana: dados reais do painel-esportivo-semanal ---------- */
+  const SPORTS_API='https://painel-esportivo-semanal.vercel.app/api/eventos';
+  const TZ='America/Sao_Paulo';
+  function ymd(d){ return new Intl.DateTimeFormat('en-CA',{timeZone:TZ}).format(d); }
+  function fmtWhen(iso){
+    const d=new Date(iso); if(isNaN(d)) return '';
+    const now=new Date();
+    const todays=ymd(now), tmrws=ymd(new Date(now.getTime()+864e5)), ds=ymd(d);
+    let day = ds===todays?'HOJE' : ds===tmrws?'AMANHÃ'
+      : new Intl.DateTimeFormat('pt-BR',{timeZone:TZ,weekday:'short'}).format(d).replace('.','').toUpperCase();
+    const hm=new Intl.DateTimeFormat('pt-BR',{timeZone:TZ,hour:'2-digit',minute:'2-digit',hour12:false}).format(d);
+    const h = hm.slice(3)==='00' ? hm.slice(0,2)+'H' : hm.replace(':','H');
+    return day+' · '+h;
+  }
+  function appendMatch(vs, name){
+    const parts=String(name).split(/\s+(?:vs\.?|x|×)\s+/i);
+    if(parts.length>=2){
+      vs.appendChild(document.createTextNode(parts[0].trim()+' '));
+      const x=document.createElement('span'); x.style.color='var(--bright)'; x.textContent='×'; vs.appendChild(x);
+      vs.appendChild(document.createTextNode(' '+parts.slice(1).join(' ').trim()));
+    } else { vs.textContent=name; }
+  }
+  (function loadGames(){
+    const board=document.getElementById('games');
+    if(!board || !window.fetch) return;
+    fetch(SPORTS_API).then(r=>{ if(!r.ok) throw 0; return r.json(); }).then(d=>{
+      const now=Date.now();
+      let evs=(d&&d.events||[]).filter(e=>e&&e.dateTime && new Date(e.dateTime).getTime()>now-3*3600e3);
+      if(!evs.length) return;
+      // ordena por relevância (desempate: mais cedo primeiro) e pega os 3 — relevância manda
+      evs.sort((a,b)=>(b.relevance||0)-(a.relevance||0) || new Date(a.dateTime)-new Date(b.dateTime));
+      evs=evs.slice(0,3);
+      const frag=document.createDocumentFragment();
+      evs.forEach(e=>{
+        const g=document.createElement('div'); g.className='game';
+        const lg=document.createElement('div'); lg.className='lg';
+        lg.textContent='◉ '+[e.sportCategory,e.description].filter(Boolean).join(' · ');
+        const vs=document.createElement('div'); vs.className='vs'; appendMatch(vs, e.eventName||'');
+        const tm=document.createElement('div'); tm.className='tm';
+        const ch=(e.broadcastChannels&&e.broadcastChannels[0]&&e.broadcastChannels[0].name)||'';
+        tm.textContent=fmtWhen(e.dateTime)+(ch?' · '+ch:'');
+        g.appendChild(lg); g.appendChild(vs); g.appendChild(tm); frag.appendChild(g);
+      });
+      board.textContent=''; board.appendChild(frag);
+    }).catch(()=>{ /* mantém o teaser estático */ });
+  })();
+
+  /* ---------- vídeos decorativos: play/pause por viewport ---------- */
+  const vids=[...document.querySelectorAll('video.lazyvid')];
+  if(reduce){
+    document.querySelectorAll('video').forEach(v=>{ try{v.pause();}catch(e){} });
+  } else if(hasIO){
+    const vio=new IntersectionObserver(es=>es.forEach(e=>{
+      const v=e.target;
+      if(e.isIntersecting){ const p=v.play(); if(p&&p.catch) p.catch(()=>{}); } else { v.pause(); }
+    }),{threshold:0.1});
+    vids.forEach(v=>vio.observe(v));
+  }
+
+  /* ---------- manifesto: acende palavra por palavra (TreeWalker, sem innerHTML) ---------- */
+  const mani=document.getElementById('mani');
+  if(mani){
+    const walker=document.createTreeWalker(mani, NodeFilter.SHOW_TEXT);
+    const texts=[]; let tn; while(tn=walker.nextNode()) texts.push(tn);
+    texts.forEach(node=>{
+      const frag=document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(part=>{
+        if(part==='') return;
+        if(/^\s+$/.test(part)) frag.appendChild(document.createTextNode(part));
+        else { const w=document.createElement('w'); w.textContent=part; frag.appendChild(w); }
+      });
+      node.parentNode.replaceChild(frag,node);
+    });
+    const words=[...mani.querySelectorAll('w')];
+    const maniProgress=()=>{
+      const r=mani.getBoundingClientRect();
+      const start=innerHeight*0.85, end=innerHeight*0.35;
+      const p=Math.min(1,Math.max(0,(start-r.top)/(start-end)));
+      const n=Math.floor(p*words.length);
+      for(let i=0;i<words.length;i++) words[i].classList.toggle('on',i<n);
+    };
+    addEventListener('scroll',maniProgress,{passive:true}); maniProgress();
+  }
+})();
+</script>
+</body>
+</html>

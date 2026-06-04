@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Da carroça à máquina — Apresentação Executiva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow-x: hidden; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-y: auto;
+}
+
+:root {
+    --bg: #141416;
+    --bg-elev: #1d1d20;
+    --ink: #f4f1ec;
+    --ink-mute: #9a958d;
+    --ink-dim: #62605c;
+    --accent: #ff5b1f;
+    --accent-soft: #ffb88a;
+    --rule: #2a2a2e;
+    --card: #1a1a1d;
+    --green: #4ade80;
+    --red: #f87171;
+    --amber: #fbbf24;
+    --blue: #60a5fa;
+
+    --title-size: clamp(1.9rem, 5.2vw, 4.6rem);
+    --display-size: clamp(3rem, 9vw, 8.5rem);
+    --h2-size: clamp(1.4rem, 3.6vw, 2.6rem);
+    --h3-size: clamp(1rem, 2vw, 1.4rem);
+    --body-size: clamp(0.78rem, 1.3vw, 1.05rem);
+    --small-size: clamp(0.65rem, 1vw, 0.85rem);
+    --xs-size: clamp(0.6rem, 0.85vw, 0.78rem);
+    --num-size: clamp(5rem, 16vw, 14rem);
+    --mono-size: clamp(0.55rem, 0.9vw, 0.78rem);
+
+    --slide-padding: clamp(1.5rem, 5vw, 5rem);
+    --content-gap: clamp(0.75rem, 2vw, 2rem);
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: var(--slide-padding);
+}
+
+.slide-num { position: absolute; top: clamp(1rem, 2.5vw, 2rem); right: clamp(1rem, 3vw, 3rem); font-family: 'Archivo Black', sans-serif; font-size: var(--small-size); color: var(--ink-dim); letter-spacing: 0.2em; z-index: 10; }
+.slide-tag { position: absolute; top: clamp(1rem, 2.5vw, 2rem); left: clamp(1.5rem, 5vw, 5rem); font-family: 'Space Grotesk', sans-serif; font-size: var(--small-size); color: var(--accent); letter-spacing: 0.25em; text-transform: uppercase; font-weight: 500; z-index: 10; }
+.act-tag { position: absolute; top: clamp(1rem, 2.5vw, 2rem); left: clamp(1.5rem, 5vw, 5rem); font-family: 'Archivo Black', sans-serif; font-size: var(--small-size); color: var(--green); letter-spacing: 0.3em; text-transform: uppercase; z-index: 10; }
+
+h1, h2, h3 { font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+h1 { font-size: var(--title-size); }
+
+/* COVER MASTER */
+.cover { justify-content: space-between; background: radial-gradient(ellipse at top right, rgba(255,91,31,0.22), transparent 55%), radial-gradient(ellipse at bottom left, rgba(74,222,128,0.10), transparent 55%), var(--bg); }
+.cover-top { display: flex; justify-content: space-between; align-items: flex-start; font-size: var(--small-size); color: var(--ink-mute); letter-spacing: 0.2em; text-transform: uppercase; }
+.cover-mid { display: flex; flex-direction: column; gap: clamp(0.8rem, 2vw, 1.5rem); }
+.cover-eyebrow { font-family: 'Archivo Black', sans-serif; font-size: var(--small-size); letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); }
+.cover-title { font-family: 'Archivo Black', sans-serif; font-size: clamp(2.4rem, 8vw, 7rem); line-height: 0.92; letter-spacing: -0.04em; }
+.cover-title em { font-style: normal; color: var(--accent); }
+.cover-title .green { color: var(--green); }
+.cover-sub { font-size: var(--h3-size); color: var(--ink-mute); max-width: 65ch; line-height: 1.4; font-weight: 300; }
+.cover-bot { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
+.cover-meta { display: flex; gap: clamp(1.5rem, 4vw, 3.5rem); flex-wrap: wrap; }
+.cover-meta div span:first-child { display: block; font-size: var(--small-size); color: var(--ink-dim); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.cover-meta div span:last-child { display: block; font-family: 'Archivo Black', sans-serif; font-size: var(--h3-size); color: var(--ink); }
+
+/* ACT/SECTION SLIDE */
+.section-slide { justify-content: center; }
+.section-slide .act-num { font-family: 'Archivo Black', sans-serif; font-size: var(--num-size); line-height: 0.85; color: var(--accent); letter-spacing: -0.05em; }
+.section-slide .section-label { font-size: var(--small-size); color: var(--ink-dim); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: clamp(1rem, 3vw, 2rem); }
+.section-slide h2 { font-size: var(--title-size); max-width: 18ch; margin-top: clamp(0.5rem, 2vw, 1.5rem); line-height: 1.05; }
+.section-slide h2 em { font-style: normal; color: var(--accent); }
+
+/* CONTENT */
+.content-slide { justify-content: flex-start; padding-top: clamp(4rem, 8vw, 7rem); }
+.content-slide h2 { font-size: var(--title-size); margin-bottom: clamp(1rem, 2.5vw, 2rem); max-width: 28ch; }
+.content-slide h2 em { font-style: normal; color: var(--accent); }
+.subhead { font-size: var(--h3-size); color: var(--ink-mute); margin-top: -0.6rem; margin-bottom: clamp(1rem, 2vw, 1.5rem); max-width: 75ch; line-height: 1.4; font-weight: 300; }
+.subhead strong { color: var(--accent); font-weight: 600; }
+
+.bullets { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.3vw, 1rem); max-width: 84ch; }
+.bullet { display: grid; grid-template-columns: clamp(2.5rem, 4vw, 3.5rem) 1fr; gap: clamp(0.75rem, 1.5vw, 1.5rem); align-items: baseline; padding-bottom: clamp(0.5rem, 1.2vw, 1rem); border-bottom: 1px solid var(--rule); }
+.bullet-num { font-family: 'Archivo Black', sans-serif; font-size: var(--h3-size); color: var(--accent); }
+.bullet-text { font-size: var(--body-size); line-height: 1.5; color: var(--ink); }
+.bullet-text strong { color: var(--accent-soft); font-weight: 600; }
+
+.grid { display: grid; gap: clamp(0.6rem, 1.2vw, 1.2rem); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.card { background: var(--card); border: 1px solid var(--rule); padding: clamp(0.85rem, 1.7vw, 1.4rem); display: flex; flex-direction: column; gap: clamp(0.4rem, 1vw, 0.75rem); transition: border-color 0.3s ease, transform 0.3s ease; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card.featured { background: var(--accent); color: #1a0d05; border-color: var(--accent); }
+.card.featured .card-eyebrow { color: #1a0d05; opacity: 0.7; }
+.card.featured .card-meta { color: #1a0d05; opacity: 0.85; }
+.card.green { border-color: var(--green); }
+.card.green .card-eyebrow { color: var(--green); }
+.card.red { border-color: var(--red); }
+.card.red .card-eyebrow { color: var(--red); }
+.card.amber { border-color: var(--amber); }
+.card.amber .card-eyebrow { color: var(--amber); }
+.card-eyebrow { font-size: var(--small-size); color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.card-title { font-family: 'Archivo Black', sans-serif; font-size: clamp(0.95rem, 1.6vw, 1.25rem); line-height: 1.05; }
+.card-meta { font-size: var(--small-size); color: var(--ink-mute); line-height: 1.4; }
+.card-big { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.5rem, 2.8vw, 2.2rem); color: var(--accent); line-height: 1; }
+.card.green .card-big { color: var(--green); }
+.card.red .card-big { color: var(--red); }
+.card.amber .card-big { color: var(--amber); }
+
+/* === Filter stack === */
+.filter-stack { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.2vw, 0.9rem); max-width: 1200px; }
+.filter-row { display: grid; grid-template-columns: 1fr 0.3fr 2fr; align-items: center; gap: clamp(0.5rem, 1.5vw, 1.5rem); padding: clamp(0.6rem, 1.2vw, 1rem) clamp(0.8rem, 1.5vw, 1.5rem); background: var(--card); border-left: 4px solid var(--accent); }
+.filter-row.killed { opacity: 0.55; border-left-color: var(--red); background: linear-gradient(90deg, rgba(248, 113, 113, 0.08), var(--card) 60%); }
+.filter-row.passed { border-left-color: var(--green); background: linear-gradient(90deg, rgba(74, 222, 128, 0.08), var(--card) 60%); }
+.filter-name { font-family: 'Archivo Black', sans-serif; font-size: var(--h3-size); color: var(--ink); }
+.filter-row.killed .filter-name { text-decoration: line-through; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+.filter-status { font-family: 'Archivo Black', sans-serif; font-size: clamp(1rem, 1.8vw, 1.4rem); text-align: center; }
+.filter-row.killed .filter-status { color: var(--red); }
+.filter-row.passed .filter-status { color: var(--green); }
+.filter-reason { font-size: var(--small-size); color: var(--ink-mute); line-height: 1.4; }
+
+/* === Paths comparison === */
+.paths-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(0.4rem, 0.8vw, 0.7rem); flex: 1; min-height: 0; }
+.path-col { display: flex; flex-direction: column; background: var(--card); border-top: 4px solid var(--accent); padding: clamp(0.7rem, 1.3vw, 1rem); gap: clamp(0.3rem, 0.7vw, 0.5rem); min-height: 0; }
+.path-col.winner { border-top-color: var(--green); background: linear-gradient(180deg, rgba(74, 222, 128, 0.12), var(--card) 40%); }
+.path-col.winner .path-name { color: var(--green); }
+.path-col.runner-up { border-top-color: var(--amber); }
+.path-col.runner-up .path-name { color: var(--amber); }
+.path-name { font-family: 'Archivo Black', sans-serif; font-size: clamp(0.9rem, 1.5vw, 1.2rem); }
+.path-tag { font-size: var(--xs-size); color: var(--ink-dim); letter-spacing: 0.25em; text-transform: uppercase; }
+.path-rows { display: flex; flex-direction: column; gap: clamp(0.2rem, 0.5vw, 0.35rem); margin-top: 0.4rem; }
+.path-row { display: grid; grid-template-columns: 1fr auto; gap: 0.4rem; font-size: var(--xs-size); padding: 0.25rem 0; border-bottom: 1px solid var(--rule); }
+.path-row .label { color: var(--ink-mute); }
+.path-row .val { color: var(--ink); font-weight: 600; text-align: right; }
+.path-row .val.good { color: var(--green); }
+.path-row .val.bad { color: var(--red); }
+.path-row .val.med { color: var(--amber); }
+.path-score { margin-top: auto; padding-top: 0.5rem; }
+.path-score-num { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.3rem, 2.5vw, 2rem); color: var(--accent); }
+.path-col.winner .path-score-num { color: var(--green); }
+.path-col.runner-up .path-score-num { color: var(--amber); }
+.path-score-lbl { font-size: var(--xs-size); color: var(--ink-dim); letter-spacing: 0.2em; text-transform: uppercase; }
+
+/* === Two brands === */
+.brands { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 2.5rem); flex: 1; min-height: 0; }
+.brand-col { display: flex; flex-direction: column; background: var(--card); border-top: 4px solid; padding: clamp(1rem, 2.5vw, 2rem); gap: clamp(0.5rem, 1.2vw, 1rem); min-height: 0; }
+.brand-col.bra { border-top-color: var(--green); background: linear-gradient(180deg, rgba(74, 222, 128, 0.08), var(--card) 60%); }
+.brand-col.rba { border-top-color: var(--accent); background: linear-gradient(180deg, rgba(255, 91, 31, 0.08), var(--card) 60%); }
+.brand-tag { font-size: var(--small-size); letter-spacing: 0.3em; text-transform: uppercase; }
+.brand-col.bra .brand-tag { color: var(--green); }
+.brand-col.rba .brand-tag { color: var(--accent); }
+.brand-name { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.5rem, 3vw, 2.4rem); line-height: 1; }
+.brand-action { font-family: 'Archivo Black', sans-serif; font-size: var(--h3-size); margin-top: 0.5rem; }
+.brand-col.bra .brand-action { color: var(--green); }
+.brand-col.rba .brand-action { color: var(--accent); }
+.brand-list { display: flex; flex-direction: column; gap: clamp(0.3rem, 0.8vw, 0.6rem); margin-top: 0.5rem; }
+.brand-item { font-size: var(--small-size); color: var(--ink); line-height: 1.4; padding-left: 1.2rem; position: relative; }
+.brand-item::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 0.7rem; height: 1px; }
+.brand-col.bra .brand-item::before { background: var(--green); }
+.brand-col.rba .brand-item::before { background: var(--accent); }
+.brand-when { font-size: var(--xs-size); color: var(--ink-mute); letter-spacing: 0.2em; text-transform: uppercase; margin-top: auto; padding-top: 0.5rem; }
+
+/* === Mockup frame (iframe ao vivo do sistema v2) === */
+.mockup-frame {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    flex: 1;
+    min-height: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.06),
+        0 30px 80px rgba(0,0,0,0.55),
+        0 80px 160px rgba(0,0,0,0.35);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.mockup-chrome {
+    height: 32px;
+    background: #fafafa;
+    box-shadow: inset 0 -1px 0 #ebebeb;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 14px;
+    flex-shrink: 0;
+}
+.mockup-chrome .dot { width: 10px; height: 10px; border-radius: 50%; }
+.mockup-chrome .dot.r { background: #FF5F57; }
+.mockup-chrome .dot.y { background: #FEBC2E; }
+.mockup-chrome .dot.g { background: #28C840; }
+.mockup-chrome .url {
+    flex: 1;
+    margin: 0 80px 0 14px;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #ebebeb;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+    letter-spacing: -0.005em;
+}
+.mockup-frame iframe {
+    width: 100%;
+    flex: 1;
+    border: 0;
+    display: block;
+    background: #fff;
+}
+.mockup-caption {
+    margin-top: 0.8rem;
+    font-size: var(--small-size);
+    color: var(--ink-mute);
+    line-height: 1.5;
+    max-width: 86ch;
+}
+.mockup-caption strong { color: var(--accent); font-weight: 600; }
+
+/* Mobile-frame · iframe da showcase mobile */
+.mobile-frame {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0a0a0a;
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.06),
+        0 30px 80px rgba(0,0,0,0.55),
+        0 80px 160px rgba(0,0,0,0.35);
+    position: relative;
+}
+.mobile-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    background: #0a0a0a;
+}
+
+/* === Wireframe (mockup textual) === */
+.wireframe { background: #FAFAF9; color: #0A0A0B; padding: clamp(0.8rem, 1.5vw, 1.5rem); font-family: 'JetBrains Mono', monospace; font-size: var(--mono-size); line-height: 1.4; border-radius: 6px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); position: relative; overflow: hidden; max-width: 1100px; }
+.wireframe::before { content: '● ● ●'; position: absolute; top: 8px; left: 14px; color: #d4d2cd; letter-spacing: 4px; font-size: 11px; }
+.wireframe .wf-content { margin-top: 1.4rem; }
+.wireframe .wf-row { display: flex; gap: 1rem; align-items: flex-start; }
+.wireframe .wf-col { flex: 1; }
+.wireframe .wf-h { font-family: 'Archivo Black', sans-serif; font-size: clamp(0.9rem, 1.4vw, 1.15rem); color: #0A0A0B; margin-bottom: 0.5rem; }
+.wireframe .wf-sub { font-size: var(--xs-size); color: #6B6B6F; margin-bottom: 0.8rem; }
+.wireframe .wf-kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1rem; }
+.wireframe .wf-kpi { background: #fff; padding: 0.6rem; border: 1px solid #E8E6E1; border-radius: 4px; }
+.wireframe .wf-kpi .num { font-family: 'Archivo Black', sans-serif; font-size: clamp(1rem, 1.8vw, 1.4rem); color: #1A2E1F; }
+.wireframe .wf-kpi .lbl { font-size: 9px; color: #6B6B6F; text-transform: uppercase; letter-spacing: 0.1em; }
+.wireframe .wf-section { background: #fff; border: 1px solid #E8E6E1; border-radius: 4px; padding: 0.6rem; margin-bottom: 0.5rem; }
+.wireframe .wf-section-title { font-weight: 700; font-size: var(--xs-size); margin-bottom: 0.4rem; display: flex; justify-content: space-between; }
+.wireframe .wf-line { display: grid; grid-template-columns: auto 1fr auto; gap: 0.5rem; padding: 0.25rem 0; font-size: var(--xs-size); border-bottom: 1px solid #F2F0EB; }
+.wireframe .wf-line:last-child { border: 0; }
+.wireframe .wf-line .who { color: #6B6B6F; }
+.wireframe .wf-pill { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 999px; background: #1A2E1F; color: #fff; font-size: 9px; font-weight: 600; }
+.wireframe .wf-pill.warn { background: #FF7849; }
+.wireframe .wf-pill.ok { background: #16A34A; }
+.wireframe .wf-pill.muted { background: #E8E6E1; color: #0A0A0B; }
+.wireframe .wf-bar { height: 4px; background: #E8E6E1; border-radius: 2px; overflow: hidden; margin-top: 0.3rem; }
+.wireframe .wf-bar-fill { height: 100%; background: #FF7849; }
+.wireframe .wf-copilot { background: #1A2E1F; color: #FAFAF9; padding: 0.6rem; border-radius: 4px; margin-top: 0.5rem; font-size: var(--xs-size); }
+.wireframe .wf-copilot strong { color: #FF7849; }
+.wireframe .wf-timeline-grid { display: grid; grid-template-columns: 60px repeat(4, 1fr); gap: 1px; background: #E8E6E1; border: 1px solid #E8E6E1; border-radius: 4px; overflow: hidden; }
+.wireframe .wf-timeline-grid > div { background: #fff; padding: 0.4rem; font-size: 9px; }
+.wireframe .wf-timeline-grid .head { background: #f4f1ec; font-weight: 700; }
+.wireframe .wf-block { background: #1A2E1F; color: #fff; border-radius: 2px; padding: 2px 4px; font-size: 9px; margin: 1px; display: inline-block; }
+.wireframe .wf-block.warn { background: #FF7849; }
+.wireframe .wf-block.muted { background: #d4d2cd; color: #0A0A0B; }
+
+/* === Cost table === */
+.costs-table { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); font-size: var(--small-size); line-height: 1.4; max-width: 1200px; }
+.cost-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; background: var(--bg); }
+.cost-row.head { background: var(--accent); color: #1a0d05; font-weight: 600; }
+.cost-row > div { padding: clamp(0.5rem, 1vw, 0.85rem) clamp(0.6rem, 1.2vw, 1rem); }
+.cost-row .name { font-family: 'Archivo Black', sans-serif; color: var(--ink); }
+.cost-row.head .name { color: #1a0d05; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: var(--small-size); text-transform: uppercase; letter-spacing: 0.1em; }
+.cost-row .val { color: var(--accent-soft); font-family: 'Archivo Black', sans-serif; }
+.cost-row.head .val { color: #1a0d05; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: var(--small-size); }
+
+/* === Phases / sprints === */
+.phases-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.5rem, 1vw, 1rem); flex: 1; min-height: 0; }
+.phase-cell { display: flex; flex-direction: column; background: var(--card); padding: clamp(0.8rem, 1.6vw, 1.4rem); gap: 0.5rem; border-top: 4px solid var(--accent); min-height: 0; }
+.phase-cell.green { border-top-color: var(--green); }
+.phase-cell.amber { border-top-color: var(--amber); }
+.phase-num { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--accent); line-height: 1; }
+.phase-cell.green .phase-num { color: var(--green); }
+.phase-cell.amber .phase-num { color: var(--amber); }
+.phase-week { font-size: var(--xs-size); color: var(--ink-mute); letter-spacing: 0.2em; text-transform: uppercase; }
+.phase-name { font-family: 'Archivo Black', sans-serif; font-size: var(--h3-size); line-height: 1.1; }
+.phase-items { display: flex; flex-direction: column; gap: clamp(0.2rem, 0.5vw, 0.4rem); margin-top: 0.5rem; }
+.phase-item { font-size: var(--small-size); color: var(--ink); line-height: 1.4; padding-left: 1rem; position: relative; }
+.phase-item::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 0.6rem; height: 1px; background: var(--accent); }
+.phase-cell.green .phase-item::before { background: var(--green); }
+
+/* === Refs grid (8 produtos) === */
+.refs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(0.5rem, 1vw, 0.9rem); }
+.ref-card { background: var(--card); border: 1px solid var(--rule); padding: clamp(0.6rem, 1.2vw, 1rem); display: flex; flex-direction: column; gap: 0.3rem; transition: all 0.25s; }
+.ref-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.ref-name { font-family: 'Archivo Black', sans-serif; font-size: clamp(1rem, 1.6vw, 1.25rem); color: var(--ink); }
+.ref-tag { font-size: var(--xs-size); color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.ref-take { font-size: var(--xs-size); color: var(--ink-mute); line-height: 1.4; margin-top: 0.3rem; }
+
+/* === Patterns table === */
+.patterns-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(0.4rem, 0.8vw, 0.7rem); max-width: 1300px; }
+.pattern-row { display: grid; grid-template-columns: auto 1fr auto; gap: 0.7rem; align-items: baseline; background: var(--card); padding: clamp(0.5rem, 1.1vw, 0.8rem) clamp(0.6rem, 1.2vw, 1rem); border-left: 3px solid var(--accent); font-size: var(--small-size); }
+.pattern-num { font-family: 'Archivo Black', sans-serif; color: var(--accent); }
+.pattern-name { color: var(--ink); line-height: 1.4; }
+.pattern-name strong { color: var(--accent-soft); }
+.pattern-from { font-size: var(--xs-size); color: var(--ink-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* === Big takeaway === */
+.takeaway { background: linear-gradient(135deg, rgba(74,222,128,0.12), var(--card) 50%); border: 1px solid var(--green); padding: clamp(1.2rem, 2.5vw, 2rem); max-width: 900px; }
+.takeaway-tag { font-size: var(--small-size); color: var(--green); letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.7rem; }
+.takeaway-headline { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.4rem, 3vw, 2.2rem); line-height: 1.1; color: var(--ink); margin-bottom: 0.9rem; }
+.takeaway-body { font-size: var(--body-size); color: var(--ink); line-height: 1.5; }
+.takeaway-body strong { color: var(--green); }
+
+/* === IA spheres === */
+.ia-spheres { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.7rem, 1.5vw, 1.2rem); }
+.sphere { background: var(--card); border: 1px solid var(--rule); padding: clamp(0.9rem, 2vw, 1.5rem); display: flex; flex-direction: column; gap: 0.5rem; }
+.sphere-icon { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--accent); }
+.sphere-name { font-family: 'Archivo Black', sans-serif; font-size: var(--h3-size); }
+.sphere-desc { font-size: var(--small-size); color: var(--ink-mute); line-height: 1.4; }
+.sphere-list { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.5rem; font-size: var(--xs-size); color: var(--ink); }
+.sphere-list-item { padding-left: 0.8rem; position: relative; line-height: 1.4; }
+.sphere-list-item::before { content: '·'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+/* === Closing === */
+.closing { justify-content: center; text-align: left; }
+.closing-eye { font-size: var(--small-size); color: var(--accent); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: clamp(1rem, 2vw, 1.5rem); }
+.closing-statement { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.6rem, 4.2vw, 3.4rem); line-height: 1.05; max-width: 26ch; letter-spacing: -0.02em; }
+.closing-statement em { color: var(--accent); font-style: normal; }
+.closing-statement .green { color: var(--green); font-style: normal; }
+.closing-meta { margin-top: clamp(1.5rem, 3vw, 2.5rem); font-size: var(--body-size); color: var(--ink-mute); max-width: 70ch; line-height: 1.5; }
+
+/* NAV */
+.nav-dots { position: fixed; right: clamp(0.75rem, 2vw, 1.5rem); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 0.35rem; z-index: 100; max-height: 80vh; overflow-y: auto; }
+.nav-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-dim); cursor: pointer; transition: all 0.25s ease; border: none; padding: 0; }
+.nav-dot:hover { background: var(--ink-mute); transform: scale(1.4); }
+.nav-dot.active { background: var(--accent); transform: scale(1.6); box-shadow: 0 0 0 4px rgba(255,91,31,0.18); }
+.kbd-hint { position: fixed; bottom: clamp(0.8rem, 2vw, 1.5rem); left: 50%; transform: translateX(-50%); font-size: var(--small-size); color: var(--ink-dim); letter-spacing: 0.2em; text-transform: uppercase; z-index: 100; pointer-events: none; opacity: 0.7; }
+.progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 200; transition: width 0.3s ease; width: 0; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; } .reveal-d2 { transition-delay: 0.2s; } .reveal-d3 { transition-delay: 0.3s; } .reveal-d4 { transition-delay: 0.4s; } .reveal-d5 { transition-delay: 0.5s; }
+
+@media (max-height: 700px) {
+    :root { --slide-padding: clamp(1rem, 3vw, 2.5rem); }
+    .content-slide { padding-top: clamp(3rem, 6vw, 5rem); }
+}
+@media (max-height: 600px) { .nav-dots, .kbd-hint { display: none; } .content-slide { padding-top: clamp(2.5rem, 5vw, 4rem); } }
+@media (max-width: 1100px) { .refs-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) {
+    .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .paths-grid { grid-template-columns: repeat(3, 1fr); }
+    .phases-row, .ia-spheres, .brands { grid-template-columns: 1fr; }
+    .filter-row { grid-template-columns: 1fr 0.3fr 1.5fr; }
+    .patterns-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+    .grid, .grid-2, .grid-3, .grid-4, .paths-grid, .refs-grid { grid-template-columns: 1fr; }
+    .cost-row { grid-template-columns: 1fr; gap: 0.2rem; }
+    .cost-row > div { padding: 0.4rem 0.7rem; }
+    .filter-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .nav-dots { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- 1 — COVER -->
+<section class="slide cover" data-slide="1">
+    <div class="cover-top reveal">
+        <div>Apresentação Executiva · Master Deck</div>
+        <div>30 Abr 2026</div>
+    </div>
+    <div class="cover-mid">
+        <div class="cover-eyebrow reveal reveal-d1">Avaliação Estratégica · Sistema de Gestão para Agência</div>
+        <div class="cover-title reveal reveal-d2">Da carroça<br>à <em>máquina.</em></div>
+        <div class="cover-sub reveal reveal-d3">Diagnóstico do Publi · análise de mercado · visão de design · referências modernas. Tudo em uma narrativa só, para decidir o caminho dos próximos 12 meses.</div>
+    </div>
+    <div class="cover-bot reveal reveal-d4">
+        <div class="cover-meta">
+            <div><span>Atos</span><span>05</span></div>
+            <div><span>Slides</span><span>31</span></div>
+            <div><span>Caminhos</span><span>05</span></div>
+            <div><span>Padrões</span><span>25</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ATO 1 — DIAGNÓSTICO
+     ============================================================ -->
+
+<!-- 2 — ATO 1 -->
+<section class="slide section-slide" data-slide="2">
+    <div class="act-tag">Ato 01</div>
+    <div class="slide-num">02</div>
+    <div class="reveal">
+        <div class="section-label">Diagnóstico</div>
+        <div class="act-num reveal reveal-d1">01</div>
+        <h2 class="reveal reveal-d2">Onde<br><em>estamos.</em></h2>
+    </div>
+</section>
+
+<!-- 3 — O grupo · 2 marcas -->
+<section class="slide content-slide" data-slide="3">
+    <div class="slide-tag">Diagnóstico · Cliente</div>
+    <div class="slide-num">03</div>
+    <h2 class="reveal">Um grupo · <em>duas marcas</em> · um mercado</h2>
+    <div class="brands">
+        <div class="brand-col bra reveal reveal-d1">
+            <div class="brand-tag">Marca digital</div>
+            <div class="brand-name">BRA Digital</div>
+            <div class="brand-action">Operação digital · stack mais flexível</div>
+            <div class="brand-list">
+                <div class="brand-item">Foco em performance, social, ads, content</div>
+                <div class="brand-item">Time mais permeável a ferramentas modernas</div>
+                <div class="brand-item">Caso de uso natural para IA + integrações</div>
+            </div>
+        </div>
+        <div class="brand-col rba reveal reveal-d2">
+            <div class="brand-tag">Marca tradicional</div>
+            <div class="brand-name">RBA Comunicação</div>
+            <div class="brand-action">Operação tradicional · profundidade fiscal/CENP</div>
+            <div class="brand-list">
+                <div class="brand-item">Mídia tradicional (TV, rádio, OOH) significativa</div>
+                <div class="brand-item">Atende governo · CENP é vinculante</div>
+                <div class="brand-item">Risco de mudar é maior por compliance</div>
+            </div>
+        </div>
+    </div>
+    <div class="subhead reveal reveal-d3" style="margin-top:1rem"><strong>Top 10 do RS · 50–100 funcionários · sistemas backstage distintos.</strong> O grupo já aceita rodar dois sistemas — fato que vai destravar caminhos depois.</div>
+</section>
+
+<!-- 4 — As 4 dores -->
+<section class="slide content-slide" data-slide="4">
+    <div class="slide-tag">Diagnóstico · Dores no Publi</div>
+    <div class="slide-num">04</div>
+    <h2 class="reveal">As <em>4 dores</em> que motivaram a reavaliação</h2>
+    <div class="grid grid-4 reveal reveal-d1">
+        <div class="card red"><div class="card-eyebrow">Dor 01</div><div class="card-big">UX</div><div class="card-meta">Estética 2010 · 11 abas em scroll horizontal · sem busca global · Kanban limitado a 200 itens · loading lento</div></div>
+        <div class="card red"><div class="card-eyebrow">Dor 02</div><div class="card-big">Preço</div><div class="card-meta">Percepção de relação valor/preço fraca · pouca transparência · sem opção self-service</div></div>
+        <div class="card red"><div class="card-eyebrow">Dor 03</div><div class="card-big">Sem IA</div><div class="card-meta">Zero IA visível · workflows manuais que concorrentes já automatizam</div></div>
+        <div class="card amber"><div class="card-eyebrow">Achado · raio-x</div><div class="card-big">Stack EOL</div><div class="card-meta">AngularJS EOL desde 2021 · ASP.NET 4.0 fim de linha · risco de segurança em 24+ meses</div></div>
+    </div>
+    <div class="subhead reveal reveal-d2" style="margin-top:1.2rem">Mas o Publi <strong>não está errado em tudo</strong>. Há razões objetivas pelas quais ele virou padrão BR. Próximo slide.</div>
+</section>
+
+<!-- 5 — Raio-x números reais -->
+<section class="slide content-slide" data-slide="5">
+    <div class="slide-tag">Diagnóstico · Raio-x do Publi</div>
+    <div class="slide-num">05</div>
+    <h2 class="reveal">O que o Publi <em>faz bem</em> (e seria caro reconstruir)</h2>
+    <div class="grid grid-4 reveal reveal-d1" style="margin-bottom:1rem">
+        <div class="card green"><div class="card-eyebrow">Volume real</div><div class="card-big">4.473</div><div class="card-meta">PIs (Pedidos de Inserção) processadas no cliente · sistema robusto em produção</div></div>
+        <div class="card green"><div class="card-eyebrow">Volume real</div><div class="card-big">654</div><div class="card-meta">projetos · 1.330+ timesheets · 141 clientes · 202 usuários · 80+ telas</div></div>
+        <div class="card green"><div class="card-eyebrow">Profundidade fiscal</div><div class="card-big">5×2</div><div class="card-meta">PIS · COFINS · CSLL · IR · ISS (cálculo + retenção independentes) + Simples + SPED</div></div>
+        <div class="card green"><div class="card-eyebrow">Compliance setorial</div><div class="card-big">CENP</div><div class="card-meta">Homologado CENP-Meios + Jovedata + Kantar IBOPE Media via API · NFS-e + NF-e</div></div>
+    </div>
+    <div class="grid grid-3 reveal reveal-d2">
+        <div class="card"><div class="card-eyebrow">Features ocultas</div><div class="card-title">DAM · multi-empresa · lock</div><div class="card-meta">Versionamento de arquivos nativo · multi-tenant via header · detecção de edição simultânea</div></div>
+        <div class="card"><div class="card-eyebrow">Integrações nativas</div><div class="card-title">RFB · ViaCEP · Prefeitura</div><div class="card-meta">Auto-preenchimento de empresa por CNPJ · endereço por CEP · NFS-e por município</div></div>
+        <div class="card"><div class="card-eyebrow">Maturidade</div><div class="card-title">30 anos · governo</div><div class="card-meta">Confiança de grandes anunciantes · aprovado para licitações · LGPD compliant</div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ATO 2 — MERCADO
+     ============================================================ -->
+
+<!-- 6 — ATO 2 -->
+<section class="slide section-slide" data-slide="6">
+    <div class="act-tag">Ato 02</div>
+    <div class="slide-num">06</div>
+    <div class="reveal">
+        <div class="section-label">Mercado</div>
+        <div class="act-num reveal reveal-d1">02</div>
+        <h2 class="reveal reveal-d2">Os <em>5 caminhos</em><br>possíveis.</h2>
+    </div>
+</section>
+
+<!-- 7 — Hard requirements + filtro -->
+<section class="slide content-slide" data-slide="7">
+    <div class="slide-tag">Mercado · Filtro CENP-Meios</div>
+    <div class="slide-num">07</div>
+    <h2 class="reveal">O filtro CENP-Meios <em>elimina muita gente</em></h2>
+    <div class="filter-stack">
+        <div class="filter-row passed reveal reveal-d1">
+            <div class="filter-name">Publi · Operand · iClips · AdSolutions · Microuniverso · VBS · SiGA</div>
+            <div class="filter-status">PASSAM</div>
+            <div class="filter-reason">Software houses CENP-Meios homologadas · todas atendem governo. Top 3 plausíveis para o porte: Operand, iClips, AdSolutions.</div>
+        </div>
+        <div class="filter-row killed reveal reveal-d2">
+            <div class="filter-name">eKyte</div>
+            <div class="filter-status">FORA</div>
+            <div class="filter-reason">UX e IA excelentes · NÃO está na lista CENP-Meios · strike-out automático. Seria a 1ª escolha se o grupo fosse digital-only.</div>
+        </div>
+        <div class="filter-row killed reveal reveal-d3">
+            <div class="filter-name">Workamajig · Deltek WorkBook · Scoro · Productive · Function Point · Teamwork</div>
+            <div class="filter-status">FORA</div>
+            <div class="filter-reason">Globais · sem CENP, Jovedata, Kantar nativos · sem operação BR para mídia tradicional.</div>
+        </div>
+        <div class="filter-row killed reveal reveal-d4">
+            <div class="filter-name">Mediaocean · Bionic · Skai · Asana · Monday · ClickUp · Notion</div>
+            <div class="filter-status">FORA</div>
+            <div class="filter-reason">Cobrem só uma fatia (mídia OU PM). Não substituem ERP. Podem entrar como camadas auxiliares.</div>
+        </div>
+    </div>
+</section>
+
+<!-- 8 — 5 caminhos -->
+<section class="slide content-slide" data-slide="8">
+    <div class="slide-tag">Mercado · Frame ponderado</div>
+    <div class="slide-num">08</div>
+    <h2 class="reveal">Os <em>5 caminhos</em> · scoring pós-confronto</h2>
+    <div class="paths-grid">
+        <div class="path-col reveal reveal-d1">
+            <div class="path-tag">01 · Stay</div>
+            <div class="path-name">STAY</div>
+            <div class="path-rows">
+                <div class="path-row"><span class="label">Tempo</span><span class="val good">Imediato</span></div>
+                <div class="path-row"><span class="label">Custo</span><span class="val good">R$ 60–150k</span></div>
+                <div class="path-row"><span class="label">Stack EOL</span><span class="val bad">Permanece</span></div>
+                <div class="path-row"><span class="label">UX/IA</span><span class="val bad">Não resolve</span></div>
+            </div>
+            <div class="path-score"><div class="path-score-num">583</div><div class="path-score-lbl">/ 1000</div></div>
+        </div>
+        <div class="path-col reveal reveal-d2">
+            <div class="path-tag">02 · Switch</div>
+            <div class="path-name">SWITCH</div>
+            <div class="path-rows">
+                <div class="path-row"><span class="label">Tempo</span><span class="val med">4–8 meses</span></div>
+                <div class="path-row"><span class="label">Custo</span><span class="val med">R$ 130–340k</span></div>
+                <div class="path-row"><span class="label">UX</span><span class="val med">Parcial</span></div>
+                <div class="path-row"><span class="label">IA</span><span class="val bad">Quase não</span></div>
+            </div>
+            <div class="path-score"><div class="path-score-num">656</div><div class="path-score-lbl">/ 1000</div></div>
+        </div>
+        <div class="path-col winner reveal reveal-d3">
+            <div class="path-tag">03 · Recomendado</div>
+            <div class="path-name">HÍBRIDO</div>
+            <div class="path-rows">
+                <div class="path-row"><span class="label">Tempo</span><span class="val good">6–8 meses</span></div>
+                <div class="path-row"><span class="label">Custo ano 1</span><span class="val med">R$ 350–800k</span></div>
+                <div class="path-row"><span class="label">UX/IA</span><span class="val good">Próprios</span></div>
+                <div class="path-row"><span class="label">Compliance</span><span class="val good">Mantido</span></div>
+            </div>
+            <div class="path-score"><div class="path-score-num">782</div><div class="path-score-lbl">/ 1000</div></div>
+        </div>
+        <div class="path-col reveal reveal-d4">
+            <div class="path-tag">04 · Build full</div>
+            <div class="path-name">BUILD</div>
+            <div class="path-rows">
+                <div class="path-row"><span class="label">Tempo</span><span class="val bad">12–24 meses</span></div>
+                <div class="path-row"><span class="label">Custo</span><span class="val bad">R$ 600k–2M</span></div>
+                <div class="path-row"><span class="label">Estoura</span><span class="val bad">52,7%</span></div>
+                <div class="path-row"><span class="label">SaaS</span><span class="val good">Possível</span></div>
+            </div>
+            <div class="path-score"><div class="path-score-num">610</div><div class="path-score-lbl">/ 1000</div></div>
+        </div>
+        <div class="path-col runner-up reveal reveal-d5">
+            <div class="path-tag">05 · Faseado</div>
+            <div class="path-name">POR MARCA</div>
+            <div class="path-rows">
+                <div class="path-row"><span class="label">BRA</span><span class="val good">6–8 meses</span></div>
+                <div class="path-row"><span class="label">RBA</span><span class="val good">+12m após</span></div>
+                <div class="path-row"><span class="label">Big bang</span><span class="val good">Eliminado</span></div>
+                <div class="path-row"><span class="label">Reversível</span><span class="val good">Sim</span></div>
+            </div>
+            <div class="path-score"><div class="path-score-num">★</div><div class="path-score-lbl">Habilitado</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- 9 — Caminho 5 destaque -->
+<section class="slide content-slide" data-slide="9">
+    <div class="slide-tag">Mercado · Caminho 5</div>
+    <div class="slide-num">09</div>
+    <h2 class="reveal">Faseado por marca: <em>BRA primeiro · RBA depois</em></h2>
+    <div class="subhead reveal reveal-d1">O grupo já opera multi-sistema backstage. Use isso a favor: implementa o Híbrido em uma marca, prova o valor, depois decide sobre a outra. <strong>Risco big-bang eliminado.</strong></div>
+    <div class="brands">
+        <div class="brand-col bra reveal reveal-d2">
+            <div class="brand-tag">Marca · Piloto</div>
+            <div class="brand-name">BRA Digital</div>
+            <div class="brand-action">→ Migra para Híbrido (Operand/iClips + camada AI/UX)</div>
+            <div class="brand-list">
+                <div class="brand-item">Cabe nos 8 meses · perfil mais permeável</div>
+                <div class="brand-item">Mídia digital + IA + integrações = caso natural</div>
+                <div class="brand-item">Vira laboratório do que pode virar SaaS</div>
+                <div class="brand-item">Time mais novo · curva de adoção menor</div>
+            </div>
+            <div class="brand-when">Sem 1–34</div>
+        </div>
+        <div class="brand-col rba reveal reveal-d3">
+            <div class="brand-tag">Marca · Aguarda</div>
+            <div class="brand-name">RBA Comunicação</div>
+            <div class="brand-action">→ Mantém Publi durante o piloto BRA</div>
+            <div class="brand-list">
+                <div class="brand-item">Profundidade fiscal/CENP/governo · risco de mudar é maior</div>
+                <div class="brand-item">Decisão no mês 12+ com KPIs reais do piloto</div>
+                <div class="brand-item">Pode permanecer no Publi indefinidamente</div>
+                <div class="brand-item">Estratégia híbrida permanente é opção válida</div>
+            </div>
+            <div class="brand-when">Decisão · mês 12+</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ATO 3 — A VISÃO DE DESIGN
+     ============================================================ -->
+
+<!-- 10 — ATO 3 -->
+<section class="slide section-slide" data-slide="10">
+    <div class="act-tag">Ato 03</div>
+    <div class="slide-num">10</div>
+    <div class="reveal">
+        <div class="section-label">A visão de design</div>
+        <div class="act-num reveal reveal-d1" style="color: var(--green);">03</div>
+        <h2 class="reveal reveal-d2">Como o sistema<br><em>deveria ser.</em></h2>
+    </div>
+</section>
+
+<!-- 11 — Tese central -->
+<section class="slide content-slide" data-slide="11">
+    <div class="slide-tag">Visão · Tese central</div>
+    <div class="slide-num">11</div>
+    <h2 class="reveal">A tensão a resolver</h2>
+    <div class="grid grid-2 reveal reveal-d1" style="margin-bottom:1.5rem">
+        <div class="card red">
+            <div class="card-eyebrow">Extremo A</div>
+            <div class="card-title">ERPs verticais</div>
+            <div class="card-meta">Publi · Operand · iClips · Workamajig. Profundos, fiscalmente corretos, completos. <strong style="color:var(--red)">Castigam o usuário</strong> com 80+ telas, formulários longos, sem IA.</div>
+        </div>
+        <div class="card amber">
+            <div class="card-eyebrow">Extremo B</div>
+            <div class="card-title">Tools horizontais</div>
+            <div class="card-meta">Notion · Asana · Monday · ClickUp. Leves, rápidos, agradáveis. <strong style="color:var(--amber)">Decepcionam o gestor</strong> com superficialidade fiscal e zero compliance.</div>
+        </div>
+    </div>
+    <div class="takeaway reveal reveal-d2">
+        <div class="takeaway-tag">A tese</div>
+        <div class="takeaway-headline">Combine profundidade vertical + leveza editorial.</div>
+        <div class="takeaway-body">O sistema deve <strong>sair do caminho</strong>. O trabalho não é navegar pelo software · é entregar o que o cliente pediu. A ousadia: <strong>ERP com a alma de Linear/Notion · não Notion com cara de ERP.</strong></div>
+    </div>
+</section>
+
+<!-- 12 — 7 princípios -->
+<section class="slide content-slide" data-slide="12">
+    <div class="slide-tag">Visão · 7 princípios fundadores</div>
+    <div class="slide-num">12</div>
+    <h2 class="reveal">Os <em>7 princípios</em> da próxima geração</h2>
+    <div class="grid grid-3 reveal reveal-d1" style="font-size: var(--small-size)">
+        <div class="card"><div class="card-eyebrow">01</div><div class="card-title">Pessoa-centric</div><div class="card-meta">Abre em "Hoje" · personalizada por usuário · módulos viram filtros</div></div>
+        <div class="card"><div class="card-eyebrow">02</div><div class="card-title">Comando antes de menu</div><div class="card-meta">Cmd+K como navegação primária · tudo é comando</div></div>
+        <div class="card"><div class="card-eyebrow">03</div><div class="card-title">Timeline &gt; Tabela</div><div class="card-meta">Mídia visual · Gantt · cards · formulário é último recurso</div></div>
+        <div class="card green"><div class="card-eyebrow">04 · ousadia</div><div class="card-title">IA é workspace, não chatbot</div><div class="card-meta">Copilot com lente própria · age com aprovação · memórias do cliente + audit trail</div></div>
+        <div class="card"><div class="card-eyebrow">05</div><div class="card-title">Salvar morreu</div><div class="card-meta">Auto-save + presence indicators + version log nativo</div></div>
+        <div class="card"><div class="card-eyebrow">06</div><div class="card-title">Status por relance</div><div class="card-meta">1 número grande + sparkline + 1 ação · em toda tela</div></div>
+        <div class="card" style="grid-column: span 3"><div class="card-eyebrow">07</div><div class="card-title">Mobile com escopo deliberado</div><div class="card-meta">PWA faz timesheet, aprovação e status. NÃO faz plano de mídia complexo, briefing longo ou config fiscal. Aceitar a limitação é o que torna o mobile útil.</div></div>
+    </div>
+</section>
+
+<!-- 13 — 80 telas -> 25 -->
+<section class="slide content-slide" data-slide="13">
+    <div class="slide-tag">Visão · 5 decisões arquitetônicas</div>
+    <div class="slide-num">13</div>
+    <h2 class="reveal">De <em>80+ telas</em> para <em>25</em></h2>
+    <div class="subhead reveal reveal-d1">Não cosmético. Estrutural. Cinco decisões eliminam dezenas de telas que o ERP tradicional acumularia.</div>
+    <div class="bullets">
+        <div class="bullet reveal reveal-d2">
+            <div class="bullet-num">01</div>
+            <div class="bullet-text"><strong>Pessoa é entidade de primeira classe.</strong> "Hoje" · "Minha semana" · "Meus clientes" são as views default · não navegação por módulo.</div>
+        </div>
+        <div class="bullet reveal reveal-d2">
+            <div class="bullet-num">02</div>
+            <div class="bullet-text"><strong>Projeto é canvas único · não 11 abas.</strong> Página vertical fluida com timeline + tarefas + briefing + arquivos + financeiro + comentários · seções colapsáveis.</div>
+        </div>
+        <div class="bullet reveal reveal-d3">
+            <div class="bullet-num">03</div>
+            <div class="bullet-text"><strong>Mídia é plano visual · não planilha.</strong> Plano de Mídia É a timeline com PIs como blocos clicáveis. Drag = reagendar · click = drawer.</div>
+        </div>
+        <div class="bullet reveal reveal-d4">
+            <div class="bullet-num">04</div>
+            <div class="bullet-text"><strong>Financeiro é dashboard live · não relatórios.</strong> 4 KPIs + fluxo de caixa projetado + tabela filtravel. Exportar PDF é botão secundário, não o produto.</div>
+        </div>
+        <div class="bullet reveal reveal-d5">
+            <div class="bullet-num">05</div>
+            <div class="bullet-text"><strong>Cadastros viram dados sob demanda.</strong> 17 sub-tabelas hoje (acabamentos, bancos, cidades…) · ViaCEP automático · autocomplete inteligente · cria silenciosamente.</div>
+        </div>
+    </div>
+</section>
+
+<!-- 14 — As 7 lentes -->
+<section class="slide content-slide" data-slide="14">
+    <div class="slide-tag">Visão · Arquitetura de informação</div>
+    <div class="slide-num">14</div>
+    <h2 class="reveal">As <em>7 lentes</em> + <em>Copilot</em> · substituem 13 módulos</h2>
+    <div class="grid grid-4 reveal reveal-d1">
+        <div class="card featured"><div class="card-eyebrow">01 · default</div><div class="card-title">Hoje</div><div class="card-meta">"o que precisa de mim agora?" · 4 KPIs pessoais · próximas tarefas · aprovações · timer + Meu Dia</div></div>
+        <div class="card"><div class="card-eyebrow">02</div><div class="card-title">Pipeline</div><div class="card-meta">Calendar/Gantt das minhas tarefas · indicador de carga · drag para repriorizar</div></div>
+        <div class="card"><div class="card-eyebrow">03</div><div class="card-title">Clientes</div><div class="card-meta">Grid de cards · drawer com timeline + projetos + financeiro consolidado</div></div>
+        <div class="card"><div class="card-eyebrow">04</div><div class="card-title">Projetos</div><div class="card-meta">Lista filtravel · click → canvas único · alternativas: kanban · Gantt · grid</div></div>
+        <div class="card"><div class="card-eyebrow">05</div><div class="card-title">Mídia</div><div class="card-meta">Timeline horizontal · blocos por inserção · filtros laterais · total live no topo</div></div>
+        <div class="card"><div class="card-eyebrow">06</div><div class="card-title">Financeiro</div><div class="card-meta">4 KPIs · fluxo projetado · transações filtraveis · "fechar mês" como wizard</div></div>
+        <div class="card"><div class="card-eyebrow">07</div><div class="card-title">Inbox</div><div class="card-meta">Mensagens + aprovações + comentários · IA pré-classifica · atalhos de uma letra</div></div>
+        <div class="card green"><div class="card-eyebrow">✦ especial</div><div class="card-title">Copilot</div><div class="card-meta">Lente da IA · histórico com undo · memórias por cliente · audit trail · acessível de qualquer tela</div></div>
+        <div class="card amber" style="grid-column: span 4"><div class="card-eyebrow">⚙ admin</div><div class="card-title">Configurações</div><div class="card-meta">Cadastros · integrações · relatórios avançados · usuário comum não precisa</div></div>
+    </div>
+</section>
+
+<!-- 15 — Mockup: Tela Hoje (sistema ao vivo) -->
+<section class="slide content-slide" data-slide="15">
+    <div class="slide-tag">Visão · Sistema · Lente "Hoje"</div>
+    <div class="slide-num">15</div>
+    <h2 class="reveal">Tela <em>"Hoje"</em> · default ao abrir o sistema</h2>
+    <div class="mockup-frame reveal reveal-d1">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / hoje</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#hoje" title="Sistema Agenc.ia · lente Hoje" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 16 — Mockup: Canvas de Projeto (sistema ao vivo) -->
+<section class="slide content-slide" data-slide="16">
+    <div class="slide-tag">Visão · Sistema · Canvas de projeto</div>
+    <div class="slide-num">16</div>
+    <h2 class="reveal">Projeto <em>como canvas único</em> · não 11 abas</h2>
+    <div class="mockup-frame reveal reveal-d1">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / projetos / AHR-2031</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#canvas" title="Sistema Agenc.ia · Canvas de projeto" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 17 — Mockup: Cliente como dossiê (drill-down) -->
+<section class="slide content-slide" data-slide="17">
+    <div class="slide-tag">Visão · Sistema · Drill-down Cliente</div>
+    <div class="slide-num">17</div>
+    <h2 class="reveal">Cliente <em>como dossiê único</em> · 8 lentes · memórias do Copilot</h2>
+    <div class="mockup-frame reveal reveal-d1">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / clientes / harman-brasil</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#cliente" title="Sistema Agenc.ia · drill-down Cliente HARMAN BRASIL" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 18 — Mockup: Mídia Timeline (sistema ao vivo) -->
+<section class="slide content-slide" data-slide="18">
+    <div class="slide-tag">Visão · Sistema · Lente "Mídia"</div>
+    <div class="slide-num">18</div>
+    <h2 class="reveal">Mídia <em>como timeline visual</em> · não tabela paginada</h2>
+    <div class="mockup-frame reveal reveal-d1">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / midia</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#midia" title="Sistema Agenc.ia · lente Mídia" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 19 — Mockup: Campanha como entidade viva (drill-down) -->
+<section class="slide content-slide" data-slide="19">
+    <div class="slide-tag">Visão · Sistema · Drill-down Campanha</div>
+    <div class="slide-num">19</div>
+    <h2 class="reveal">Campanha <em>como entidade viva</em> · criativos, veiculação e verba na mesma tela</h2>
+    <div class="mockup-frame reveal reveal-d1">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / midia / campanha-sao-joao-jbl-2026</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#campanha" title="Sistema Agenc.ia · drill-down Campanha São João JBL" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 20 — Mockup: Pipeline (sistema ao vivo) -->
+<section class="slide content-slide" data-slide="20">
+    <div class="slide-tag">Visão · Sistema · Lente "Pipeline"</div>
+    <div class="slide-num">20</div>
+    <h2 class="reveal">Pipeline <em>como heatmap</em> · capacidade da equipe semana</h2>
+    <div class="mockup-frame reveal reveal-d1">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / pipeline</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#pipeline" title="Sistema Agenc.ia · lente Pipeline" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 21 — Mockup: Timer + Meu Dia (sistema ao vivo) -->
+<section class="slide content-slide" data-slide="21">
+    <div class="slide-tag">Visão · Sistema · Tempo como primeira classe</div>
+    <div class="slide-num">21</div>
+    <h2 class="reveal">Tempo é <em>primeira classe</em> · não app paralelo</h2>
+    <div class="subhead reveal reveal-d1">A maior dor relatada — apontamento de horas em planilha à parte — vira <strong>doutrina cromática verde</strong> embutida em toda superfície: pill na topbar, CTA no task drawer, "Meu Dia" como timeline horizontal e Cmd+K com grupo dedicado (atalhos T · ⇧T · ⇧⌘T).</div>
+    <div class="mockup-frame reveal reveal-d2">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / hoje</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#hoje" title="Sistema Agenc.ia · Timer + Meu Dia" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 22 — Mockup: Mobile (3 telas) -->
+<section class="slide content-slide" data-slide="22">
+    <div class="slide-tag">Visão · Sistema · Mobile PWA</div>
+    <div class="slide-num">22</div>
+    <h2 class="reveal" style="font-size: clamp(1.3rem, 2.8vw, 2rem); margin-bottom: clamp(0.8rem, 1.5vw, 1.2rem)">Mobile <em>com escopo reduzido</em></h2>
+    <div class="mobile-frame reveal reveal-d1">
+        <iframe src="../sistema-agencia/mockup-mobile.html#embed" title="Sistema Agenc.ia · Mobile PWA" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 23 — Camada de IA -->
+<section class="slide content-slide" data-slide="23">
+    <div class="slide-tag">Visão · Camada de IA</div>
+    <div class="slide-num">23</div>
+    <h2 class="reveal">A IA mora em <em>3 superfícies</em></h2>
+    <div class="ia-spheres reveal reveal-d1">
+        <div class="sphere">
+            <div class="sphere-icon">✦</div>
+            <div class="sphere-name">Workspace Copilot</div>
+            <div class="sphere-desc">Lente dedicada · histórico de ações com undo · memórias do cliente · audit trail · FAB contextual em cada tela</div>
+            <div class="sphere-list">
+                <div class="sphere-list-item">Pedidos em linguagem natural</div>
+                <div class="sphere-list-item">Plano de ação visível antes da execução</div>
+                <div class="sphere-list-item">Aprovação humana em ações sensíveis</div>
+                <div class="sphere-list-item">Memórias por cliente · skills por categoria</div>
+            </div>
+        </div>
+        <div class="sphere">
+            <div class="sphere-icon">≋</div>
+            <div class="sphere-name">Inline suggestions</div>
+            <div class="sphere-desc">Sugestões no campo · em tempo real · aprende padrão do usuário</div>
+            <div class="sphere-list">
+                <div class="sphere-list-item">Auto-complete contextual em briefing</div>
+                <div class="sphere-list-item">"Agrupar por…" via ML</div>
+                <div class="sphere-list-item">Datas inteligentes</div>
+                <div class="sphere-list-item">Tom apropriado por cliente</div>
+            </div>
+        </div>
+        <div class="sphere">
+            <div class="sphere-icon">⌘K</div>
+            <div class="sphere-name">Comandos via paleta</div>
+            <div class="sphere-desc">Linguagem natural via Cmd+K · qualquer ação do sistema</div>
+            <div class="sphere-list">
+                <div class="sphere-list-item">"PIs Globo março não pagas"</div>
+                <div class="sphere-list-item">"Resumir reunião → briefing"</div>
+                <div class="sphere-list-item">"Plano de mídia base R$500k"</div>
+                <div class="sphere-list-item">"Fechar mês abril"</div>
+            </div>
+        </div>
+    </div>
+    <div class="takeaway reveal reveal-d2" style="margin-top:1.2rem; max-width:1200px">
+        <div class="takeaway-tag">Regras de ouro · o que a IA NÃO faz</div>
+        <div class="takeaway-body">Não decide aprovações · não emite NF · não envia ao cliente sem revisão · não altera dados de mídia/financeiro automaticamente · não usa dados de cliente A para sugerir ao cliente B · não responde com achismo (diz "não sei, posso pesquisar"). <strong>IA é assistente, não substituto.</strong></div>
+    </div>
+</section>
+
+<!-- 24 — Mockup: Copilot workspace (sistema ao vivo) -->
+<section class="slide content-slide" data-slide="24">
+    <div class="slide-tag">Visão · Sistema · Workspace IA</div>
+    <div class="slide-num">24</div>
+    <h2 class="reveal">Copilot <em>com workspace próprio</em> · prova viva, não promessa</h2>
+    <div class="mockup-frame reveal reveal-d1">
+        <div class="mockup-chrome">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">agenc.ia / copilot</span>
+        </div>
+        <iframe src="../sistema-agencia/mockup-lentes-v2.html#copilot" title="Sistema Agenc.ia · workspace Copilot" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- 25 — Sistema visual -->
+<section class="slide content-slide" data-slide="25">
+    <div class="slide-tag">Visão · Sistema visual</div>
+    <div class="slide-num">25</div>
+    <h2 class="reveal">Identidade <em>com personalidade</em></h2>
+    <div class="grid grid-3 reveal reveal-d1">
+        <div class="card">
+            <div class="card-eyebrow">Paleta</div>
+            <div class="card-title">3 modos</div>
+            <div class="card-meta">Cinza papel quente · não branco puro. <strong>Verde = tempo/timer</strong> · <strong>laranja = CTA principal de fluxo</strong> · não se misturam. Modo escuro nativo · high-contrast acessível. <strong style="color:var(--accent-soft)">Recusa o azul royal corporativo do Publi.</strong></div>
+        </div>
+        <div class="card">
+            <div class="card-eyebrow">Tipografia</div>
+            <div class="card-title">Inter ou Geist</div>
+            <div class="card-meta">Variável · suporta pt-br · hierarquia clara (Display · H1 · H2 · H3 · Body · Caption · Mono). JetBrains Mono para números. <strong style="color:var(--accent-soft)">40% do que faz software parecer cuidado.</strong></div>
+        </div>
+        <div class="card">
+            <div class="card-eyebrow">Densidade</div>
+            <div class="card-title">3 modos</div>
+            <div class="card-meta">Compacto 32px · padrão 44px · confortável 56px. Cmd+, alterna em tempo real. Power user fica em compact, novato em comfortable.</div>
+        </div>
+        <div class="card">
+            <div class="card-eyebrow">Motion</div>
+            <div class="card-title">5 timings</div>
+            <div class="card-meta">Instant 0ms · snap 150ms · smooth 300ms · narrative 500ms · dramatic 800ms. Skeleton loaders sempre · spinner full-screen <strong style="color:var(--red)">proibido</strong>.</div>
+        </div>
+        <div class="card">
+            <div class="card-eyebrow">Componentes</div>
+            <div class="card-title">Drawer &gt; modal</div>
+            <div class="card-meta">Drawer lateral 480px é default · modal full-screen é último recurso · podem se empilhar · Esc fecha o topo · Esc-Esc fecha tudo.</div>
+        </div>
+        <div class="card">
+            <div class="card-eyebrow">Acessibilidade</div>
+            <div class="card-title">A11y nativa</div>
+            <div class="card-meta">Contraste WCAG AA mínimo · prefers-reduced-motion respeitado · keyboard-only navegável · screen reader em todas as ações principais.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ATO 4 — INSPIRAÇÃO
+     ============================================================ -->
+
+<!-- 26 — ATO 4 -->
+<section class="slide section-slide" data-slide="26">
+    <div class="act-tag">Ato 04</div>
+    <div class="slide-num">26</div>
+    <div class="reveal">
+        <div class="section-label">Inspiração</div>
+        <div class="act-num reveal reveal-d1" style="color: var(--blue);">04</div>
+        <h2 class="reveal reveal-d2">8 produtos · <em>25 padrões</em><br>que vale aprender.</h2>
+    </div>
+</section>
+
+<!-- 27 — 8 referências -->
+<section class="slide content-slide" data-slide="27">
+    <div class="slide-tag">Inspiração · Os 8 referenciais</div>
+    <div class="slide-num">27</div>
+    <h2 class="reveal">As <em>8 escolas</em> que devem se misturar</h2>
+    <div class="refs-grid reveal reveal-d1">
+        <div class="ref-card">
+            <div class="ref-tag">PM moderno</div>
+            <div class="ref-name">Linear</div>
+            <div class="ref-take">Cmd+K · atalhos visíveis · motion crispy · density toggle · visões como URL</div>
+        </div>
+        <div class="ref-card">
+            <div class="ref-tag">Composição</div>
+            <div class="ref-name">Notion</div>
+            <div class="ref-take">Slash menu (/) · mention (@) · blocks · templates first-class · empty states</div>
+        </div>
+        <div class="ref-card">
+            <div class="ref-tag">Velocidade</div>
+            <div class="ref-name">Superhuman</div>
+            <div class="ref-take">Atalhos de uma letra · otimismo total · search-first · zero loading visível</div>
+        </div>
+        <div class="ref-card">
+            <div class="ref-tag">Multiplayer</div>
+            <div class="ref-name">Pitch</div>
+            <div class="ref-take">Presence indicators · comentário ancorado · brand kit propagado · multiplayer real</div>
+        </div>
+        <div class="ref-card">
+            <div class="ref-tag">Agency-native</div>
+            <div class="ref-name">Productive</div>
+            <div class="ref-take">Resource heatmap · profitability live · time tracker no header · forecasting</div>
+        </div>
+        <div class="ref-card">
+            <div class="ref-tag">AI-first</div>
+            <div class="ref-name">Height</div>
+            <div class="ref-take">Auto-fill que aprende · smart filters em NL · IA cria de qualquer texto</div>
+        </div>
+        <div class="ref-card">
+            <div class="ref-tag">Comando</div>
+            <div class="ref-name">Raycast</div>
+            <div class="ref-take">Quicklinks · extensions · snippets contextuais · quick capture flutuante</div>
+        </div>
+        <div class="ref-card">
+            <div class="ref-tag">Densidade</div>
+            <div class="ref-name">Vercel</div>
+            <div class="ref-take">1 KPI grande + 3 secundários · sparkline com gradiente · skeleton · logs filtraveis</div>
+        </div>
+    </div>
+    <div class="subhead reveal reveal-d2" style="margin-top:1rem"><strong>Meta-recomendação:</strong> sentir como Linear · funcionar como Productive · colaborar como Pitch · ter IA como Height · ser comandado como Raycast · denso como Vercel · flexível como Notion · veloz como Superhuman.</div>
+</section>
+
+<!-- 28 — Top 13 padrões -->
+<section class="slide content-slide" data-slide="28">
+    <div class="slide-tag">Inspiração · Top padrões que valem adotar</div>
+    <div class="slide-num">28</div>
+    <h2 class="reveal">Os <em>13 padrões</em> que mais movem o ponteiro</h2>
+    <div class="patterns-grid">
+        <div class="pattern-row reveal reveal-d1"><div class="pattern-num">01</div><div class="pattern-name"><strong>Cmd+K</strong> como navegação primária</div><div class="pattern-from">Linear · Raycast</div></div>
+        <div class="pattern-row reveal reveal-d1"><div class="pattern-num">02</div><div class="pattern-name"><strong>Auto-save</strong> com indicador discreto</div><div class="pattern-from">Notion · Pitch</div></div>
+        <div class="pattern-row reveal reveal-d2"><div class="pattern-num">03</div><div class="pattern-name"><strong>Presence indicators</strong> (substitui lock)</div><div class="pattern-from">Pitch · Linear</div></div>
+        <div class="pattern-row reveal reveal-d2"><div class="pattern-num">04</div><div class="pattern-name"><strong>Atalhos de teclado</strong> visíveis em todo botão</div><div class="pattern-from">Linear · Superhuman</div></div>
+        <div class="pattern-row reveal reveal-d3"><div class="pattern-num">05</div><div class="pattern-name"><strong>Inbox unificado</strong> com pré-classificação IA</div><div class="pattern-from">Superhuman · Height</div></div>
+        <div class="pattern-row reveal reveal-d3"><div class="pattern-num">06</div><div class="pattern-name"><strong>Resource heatmap</strong> de capacidade</div><div class="pattern-from">Productive</div></div>
+        <div class="pattern-row reveal reveal-d4"><div class="pattern-num">07</div><div class="pattern-name"><strong>Profitability live</strong> por projeto</div><div class="pattern-from">Productive</div></div>
+        <div class="pattern-row reveal reveal-d4"><div class="pattern-num">08</div><div class="pattern-name"><strong>Slash menu (/)</strong> em campos de texto</div><div class="pattern-from">Notion</div></div>
+        <div class="pattern-row reveal reveal-d5"><div class="pattern-num">09</div><div class="pattern-name"><strong>Mention (@)</strong> conectando entidades</div><div class="pattern-from">Notion · Linear</div></div>
+        <div class="pattern-row reveal reveal-d5"><div class="pattern-num">10</div><div class="pattern-name"><strong>Skeleton loaders</strong> + otimismo total</div><div class="pattern-from">Vercel · Superhuman</div></div>
+        <div class="pattern-row reveal reveal-d5"><div class="pattern-num">11</div><div class="pattern-name"><strong>Brand kit por cliente</strong> propagado em peças</div><div class="pattern-from">Pitch</div></div>
+        <div class="pattern-row reveal reveal-d5"><div class="pattern-num">12</div><div class="pattern-name"><strong>Push notification acionável</strong> (aprovar inline)</div><div class="pattern-from">Superhuman · Height</div></div>
+        <div class="pattern-row reveal reveal-d5"><div class="pattern-num">13</div><div class="pattern-name"><strong>Timer integrado</strong> · não app paralelo de apontamento</div><div class="pattern-from">Productive · Toggl</div></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ATO 5 — DECISÃO
+     ============================================================ -->
+
+<!-- 29 — ATO 5 -->
+<section class="slide section-slide" data-slide="29">
+    <div class="act-tag">Ato 05</div>
+    <div class="slide-num">29</div>
+    <div class="reveal">
+        <div class="section-label">Decisão</div>
+        <div class="act-num reveal reveal-d1" style="color: var(--green);">★</div>
+        <h2 class="reveal reveal-d2">O que fazer<br><em>nos próximos 90 dias.</em></h2>
+    </div>
+</section>
+
+<!-- 30 — Roadmap 90 dias -->
+<section class="slide content-slide" data-slide="30">
+    <div class="slide-tag">Decisão · Roadmap 90 dias</div>
+    <div class="slide-num">30</div>
+    <h2 class="reveal">90 dias para entregar <em>"sistema novo"</em> à BRA</h2>
+    <div class="subhead reveal reveal-d1">Após 90 dias = 80% do uso diário coberto · RBA permanece no Publi sem urgência. Sequência abaixo está calibrada para gerar percepção de qualidade o mais cedo possível.</div>
+    <div class="phases-row">
+        <div class="phase-cell reveal reveal-d2">
+            <div class="phase-num">01</div>
+            <div class="phase-week">Sem 1–4 · fundações invisíveis</div>
+            <div class="phase-name">Fundações</div>
+            <div class="phase-items">
+                <div class="phase-item">Cmd+K com 20 comandos</div>
+                <div class="phase-item">Auto-save em todos os campos</div>
+                <div class="phase-item">Skeleton loaders em todas as listas</div>
+                <div class="phase-item">Atalhos visíveis nos 10 botões + usados</div>
+                <div class="phase-item">Drawer lateral substitui modal</div>
+                <div class="phase-item">Density toggle</div>
+            </div>
+        </div>
+        <div class="phase-cell green reveal reveal-d3">
+            <div class="phase-num">02</div>
+            <div class="phase-week">Sem 5–8 · superfícies que impressionam</div>
+            <div class="phase-name">Superfícies</div>
+            <div class="phase-items">
+                <div class="phase-item">Tela "Hoje" com 4 KPIs</div>
+                <div class="phase-item">Timer + Meu Dia + timesheet integrado</div>
+                <div class="phase-item">Canvas de projeto · substitui 11 abas</div>
+                <div class="phase-item">Mídia timeline · substitui tabela</div>
+                <div class="phase-item">Inbox unificado</div>
+                <div class="phase-item">Brand kit do cliente</div>
+                <div class="phase-item">Visões salvas como URL</div>
+            </div>
+        </div>
+        <div class="phase-cell amber reveal reveal-d4">
+            <div class="phase-num">03</div>
+            <div class="phase-week">Sem 9–12 · a inteligência</div>
+            <div class="phase-name">Inteligência</div>
+            <div class="phase-items">
+                <div class="phase-item">Copilot sidebar contextual</div>
+                <div class="phase-item">Auto-timesheet com IA</div>
+                <div class="phase-item">Status report semi-gerado</div>
+                <div class="phase-item">Smart filters em linguagem natural</div>
+                <div class="phase-item">Mention (@) entre entidades</div>
+                <div class="phase-item">Slash menu (/) em campos de texto</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 31 — Próximos passos 8 semanas -->
+<section class="slide content-slide" data-slide="31">
+    <div class="slide-tag">Decisão · As primeiras 8 semanas</div>
+    <div class="slide-num">31</div>
+    <h2 class="reveal">As <em>primeiras 8 semanas</em> · da sala de reunião à execução</h2>
+    <div class="bullets">
+        <div class="bullet reveal reveal-d1">
+            <div class="bullet-num">01</div>
+            <div class="bullet-text"><strong>Sem 1.</strong> Validar com cliente o framing e os pesos do framework. Decidir entre Híbrido único ou Faseado por marca.</div>
+        </div>
+        <div class="bullet reveal reveal-d2">
+            <div class="bullet-num">02</div>
+            <div class="bullet-text"><strong>Sem 2–3.</strong> Demos comerciais com checklist de 16 perguntas (derivado do raio-x). Pedir docs de API + pricing transparente. Confrontar Publi sobre roadmap pós-AngularJS.</div>
+        </div>
+        <div class="bullet reveal reveal-d3">
+            <div class="bullet-num">03</div>
+            <div class="bullet-text"><strong>Sem 4–5.</strong> Coletar referências de agências similares. POC de Claude API + n8n integrando com 1 candidato. Migração simulada de 100 PIs reais.</div>
+        </div>
+        <div class="bullet reveal reveal-d4">
+            <div class="bullet-num">04</div>
+            <div class="bullet-text"><strong>Sem 6.</strong> Reunião de decisão. Escolher caminho (1 dos 5) e marca-piloto se for Faseado. Formalizar plano + investimento.</div>
+        </div>
+        <div class="bullet reveal reveal-d5">
+            <div class="bullet-num">05</div>
+            <div class="bullet-text"><strong>Sem 7–8.</strong> Iniciar Fase 1 (Sprint 1 do roadmap 90 dias). Contratar tech lead externo. Comunicar internamente nas duas marcas.</div>
+        </div>
+    </div>
+</section>
+
+<!-- 32 — Closing -->
+<section class="slide closing" data-slide="32">
+    <div class="slide-tag">Encerramento · Tese unificada</div>
+    <div class="slide-num">32</div>
+    <div class="closing-eye reveal">A tese consultiva</div>
+    <div class="closing-statement reveal reveal-d1">
+        Compliance é <em>caro de construir</em>.<br>UX e IA são <em>caras de comprar</em>.<br>Combine os dois. <span class="green">Faseie por marca.</span><br>E aprenda com <em>os melhores</em> que já testaram.
+    </div>
+    <div class="closing-meta reveal reveal-d2">
+        Operand ou iClips como núcleo CENP-compliant na BRA Digital · camada própria AI/UX construída com Claude API + Next.js + Supabase · padrões testados de Linear, Productive, Pitch, Notion, Superhuman, Height, Raycast e Vercel. Em 90 dias, percepção de "sistema novo" no BRA. Em 12 meses, decisão sobre RBA. Em 18 meses, candidato a SaaS competitivo no setor — se a ambição se confirmar.
+    </div>
+</section>
+
+<nav class="nav-dots" id="navDots" aria-label="Navegação"></nav>
+<div class="kbd-hint">↑ ↓ · scroll · click</div>
+
+<script>
+(function() {
+    const slides = document.querySelectorAll('.slide');
+    const navDots = document.getElementById('navDots');
+    const progressBar = document.getElementById('progressBar');
+    let current = 0;
+
+    slides.forEach((s, i) => {
+        const b = document.createElement('button');
+        b.className = 'nav-dot';
+        b.setAttribute('aria-label', 'Ir para slide ' + (i + 1));
+        b.addEventListener('click', () => goTo(i));
+        navDots.appendChild(b);
+    });
+
+    function goTo(i) {
+        i = Math.max(0, Math.min(slides.length - 1, i));
+        slides[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting && e.intersectionRatio > 0.6) {
+                const i = Array.from(slides).indexOf(e.target);
+                if (i >= 0) {
+                    current = i;
+                    updateActive();
+                    revealOn(e.target);
+                }
+            }
+        });
+    }, { threshold: [0, 0.3, 0.6, 0.9] });
+
+    slides.forEach(s => obs.observe(s));
+
+    function updateActive() {
+        document.querySelectorAll('.nav-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+        progressBar.style.width = ((current + 1) / slides.length * 100) + '%';
+    }
+    function revealOn(slide) { slide.querySelectorAll('.reveal').forEach(el => el.classList.add('in')); }
+
+    revealOn(slides[0]);
+    updateActive();
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
+        else if (e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); goTo(current - 1); }
+        else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+        else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+    });
+
+    let wheelLock = false;
+    window.addEventListener('wheel', (e) => {
+        if (wheelLock) return;
+        if (Math.abs(e.deltaY) < 30) return;
+        wheelLock = true;
+        goTo(current + (e.deltaY > 0 ? 1 : -1));
+        setTimeout(() => { wheelLock = false; }, 700);
+    }, { passive: true });
+
+    let touchY = null;
+    window.addEventListener('touchstart', (e) => { touchY = e.touches[0].clientY; }, { passive: true });
+    window.addEventListener('touchend', (e) => {
+        if (touchY === null) return;
+        const dy = touchY - e.changedTouches[0].clientY;
+        if (Math.abs(dy) > 50) goTo(current + (dy > 0 ? 1 : -1));
+        touchY = null;
+    }, { passive: true });
+})();
+</script>
+</body>
+</html>
