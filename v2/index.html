@@ -1668,6 +1668,63 @@
       }
     }
 
+    /* ─── LAB THUMBS ─────────────────────────────────────── */
+    .lab-thumb {
+      position: relative;
+      margin: -2.5rem -2.5rem 0;
+      aspect-ratio: 16 / 7;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      border-bottom: 1px solid var(--border2);
+      background:
+        radial-gradient(120% 130% at 78% 12%, rgba(198, 255, 0, 0.12), transparent 55%),
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0) 0 0 / 20px 20px,
+        linear-gradient(135deg, #101010, #060606);
+    }
+
+    .lab-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, var(--panel) 100%);
+      pointer-events: none;
+    }
+
+    .lab-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1.15) brightness(0.55);
+    }
+
+    /* lime tint sobre a foto real — coeso com as capas geométricas */
+    .lab-thumb--photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: radial-gradient(ellipse at 72% 28%, rgba(198, 255, 0, 0.22), transparent 60%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .lab-thumb-icon {
+      width: 58px;
+      height: 58px;
+      stroke: var(--lime);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.72;
+      filter: drop-shadow(0 0 14px rgba(198, 255, 0, 0.4));
+    }
+
+    .case-grid-card:hover .lab-thumb-icon {
+      opacity: 1;
+    }
+
     /* ─── GENERIC REVEAL ─────────────────────────────────── */
     .reveal {
       opacity: 0;
@@ -2615,6 +2672,7 @@
       <div class="cases-grid">
 
         <a href="https://werdumfight.com" target="_blank" rel="noopener" class="case-grid-card reveal">
+          <div class="lab-thumb lab-thumb--photo"><img src="/v2/img/lab/werdumfight.jpg" alt="Werdum Fight — gameplay" loading="lazy"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">app stores · web</span>
@@ -2631,6 +2689,7 @@
         </a>
 
         <div class="case-grid-card reveal">
+          <div class="lab-thumb"><svg class="lab-thumb-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><circle cx="24" cy="24" r="13"/><circle cx="24" cy="24" r="20"/><line x1="24" y1="24" x2="41" y2="13"/><circle cx="24" cy="24" r="2.5" fill="#C6FF00" stroke="none"/></svg></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">ferramenta própria</span>
@@ -2647,6 +2706,7 @@
         </div>
 
         <div class="case-grid-card reveal">
+          <div class="lab-thumb"><svg class="lab-thumb-icon" viewBox="0 0 48 48"><circle cx="10" cy="14" r="3.5"/><circle cx="38" cy="10" r="3.5"/><circle cx="24" cy="27" r="3.5"/><circle cx="12" cy="40" r="3.5"/><circle cx="39" cy="37" r="3.5"/><line x1="12" y1="16" x2="22" y2="25"/><line x1="36" y1="12" x2="26" y2="25"/><line x1="23" y1="30" x2="13" y2="37"/><line x1="26" y1="29" x2="37" y2="35"/></svg></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">infraestrutura própria</span>
@@ -2663,6 +2723,7 @@
         </div>
 
         <div class="case-grid-card reveal">
+          <div class="lab-thumb"><svg class="lab-thumb-icon" viewBox="0 0 48 48"><path d="M8 11h32a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H21l-9 8v-8H8a3 3 0 0 1-3-3V14a3 3 0 0 1 3-3z"/><circle cx="17" cy="21.5" r="1.7" fill="#C6FF00" stroke="none"/><circle cx="24" cy="21.5" r="1.7" fill="#C6FF00" stroke="none"/><circle cx="31" cy="21.5" r="1.7" fill="#C6FF00" stroke="none"/></svg></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">setor gastronômico</span>
@@ -2678,6 +2739,7 @@
         </div>
 
         <div class="case-grid-card reveal">
+          <div class="lab-thumb"><svg class="lab-thumb-icon" viewBox="0 0 48 48"><rect x="6" y="9" width="16" height="11" rx="2"/><rect x="26" y="9" width="16" height="11" rx="2"/><rect x="6" y="24" width="16" height="11" rx="2"/><rect x="26" y="24" width="16" height="11" rx="2"/><line x1="9" y1="40" x2="39" y2="40" stroke="#C6FF00"/></svg></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">sports bar</span>
@@ -2693,6 +2755,7 @@
         </div>
 
         <div class="case-grid-card reveal">
+          <div class="lab-thumb"><svg class="lab-thumb-icon" viewBox="0 0 48 48"><rect x="7" y="17" width="13" height="25" rx="1"/><rect x="25" y="9" width="13" height="33" rx="1"/><line x1="10.5" y1="23" x2="16.5" y2="23"/><line x1="10.5" y1="29" x2="16.5" y2="29"/><line x1="28.5" y1="16" x2="34.5" y2="16"/><line x1="28.5" y1="22" x2="34.5" y2="22"/><polyline points="6,40 17,32 27,36 43,23" stroke="#C6FF00"/></svg></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">gestão patrimonial</span>
