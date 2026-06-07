@@ -588,8 +588,6 @@
       padding: 10rem 3rem;
       position: relative;
       overflow: hidden;
-      /* transição curva orgânica entre dark e claro (estilo Lando) */
-      border-radius: 50% / 2.2vw;
     }
 
     /* ::before removido — substituído por .manifesto-deco para poder fazer parallax */
@@ -641,30 +639,26 @@
       max-width: 1100px;
     }
 
-    /* manifesto — revelação por "cortina": bloco lime cobre cada palavra e recua */
-    .manifesto-text .word {
+    /* manifesto — revelação por "cortina": UMA máscara por LINHA de texto (estilo Lando) */
+    #manifestoText {
       position: relative;
+    }
+
+    .manifesto-text .word {
       display: inline-block;
     }
 
-    .manifesto-text .word::after {
-      content: '';
+    .line-mask {
       position: absolute;
-      inset: -0.04em -0.05em;
       background: #d6d6d3;
-      /* palavras normais: bloco cinza claro */
       transform: scaleX(1);
       transform-origin: right;
-      transition: transform 0.55s var(--ease) var(--d, 0s);
+      transition: transform 0.6s var(--ease) var(--d, 0s);
       pointer-events: none;
+      z-index: 2;
     }
 
-    /* só as palavras-chave têm bloco lime */
-    .manifesto-text .key::after {
-      background: var(--lime);
-    }
-
-    .manifesto-text .word.visible::after {
+    #manifestoText.revealed .line-mask {
       transform: scaleX(0);
     }
 
@@ -678,7 +672,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .manifesto-text .word::after { display: none; }
+      .line-mask { display: none; }
     }
 
     /* ─── ABOUT ──────────────────────────────────────────── */
@@ -3061,24 +3055,57 @@
 
     const manifestoEl = document.getElementById('manifestoText');
     manifestoEl.innerHTML = '';
-    manifestoRaw.forEach((w, i) => {
+    manifestoRaw.forEach((w) => {
       const span = document.createElement('span');
       span.className = 'word' + (w.cls ? ' ' + w.cls : '');
-      span.style.setProperty('--d', (i * 0.05) + 's');
       span.textContent = w.text;
       manifestoEl.appendChild(span);
       manifestoEl.appendChild(document.createTextNode(' '));
     });
 
+    // cria UMA máscara por linha visual (mede onde o texto quebra; recalcula no resize)
+    function buildLineMasks() {
+      manifestoEl.querySelectorAll('.line-mask').forEach(n => n.remove());
+      const base = manifestoEl.getBoundingClientRect();
+      if (!base.width) return;
+      const range = document.createRange();
+      range.selectNodeContents(manifestoEl);
+      const rects = [...range.getClientRects()].filter(r => r.width > 1 && r.height > 1);
+      const lines = [];
+      rects.forEach(r => {
+        const g = lines.find(L => Math.abs(L.top - r.top) < r.height * 0.6);
+        if (!g) lines.push({ top: r.top, bottom: r.bottom, left: r.left, right: r.right });
+        else { g.top = Math.min(g.top, r.top); g.bottom = Math.max(g.bottom, r.bottom); g.left = Math.min(g.left, r.left); g.right = Math.max(g.right, r.right); }
+      });
+      lines.sort((a, b) => a.top - b.top);
+      lines.forEach((L, i) => {
+        const m = document.createElement('span');
+        m.className = 'line-mask';
+        m.style.left = (L.left - base.left - 4) + 'px';
+        m.style.top = (L.top - base.top - 3) + 'px';
+        m.style.width = (L.right - L.left + 8) + 'px';
+        m.style.height = (L.bottom - L.top + 6) + 'px';
+        m.style.setProperty('--d', (i * 0.09) + 's');
+        manifestoEl.appendChild(m);
+      });
+    }
+
     const manifestoObs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.querySelectorAll('.word').forEach(w => w.classList.add('visible'));
+          manifestoEl.classList.add('revealed');
           manifestoObs.unobserve(e.target);
         }
       });
     }, { threshold: 0.3 });
-    manifestoObs.observe(manifestoEl);
+
+    (function initManifestoMasks() {
+      const start = () => { buildLineMasks(); manifestoObs.observe(manifestoEl); };
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
+      else start();
+      let rsz;
+      window.addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(buildLineMasks, 200); });
+    })();
 
     // ── Contact form ───────────────────────────────────────
     document.getElementById('contactForm').addEventListener('submit', function (e) {
