@@ -3459,10 +3459,14 @@
 
     const vertex = `
       attribute vec3 position; attribute vec2 uv;
-      uniform mat4 modelViewMatrix; uniform mat4 projectionMatrix; uniform float uSpeed;
+      uniform mat4 modelViewMatrix; uniform mat4 projectionMatrix; uniform float uSpeed; uniform float uPW; uniform float uR;
       varying vec2 vUv;
       void main(){ vUv = uv; vec3 p = position;
-        p.z += sin(uv.x * 3.14159265) * uSpeed * 3.5;
+        float xw = position.x * uPW;       // x local escalado (largura do card)
+        float th = xw / uR;                // ângulo do vértice no arco
+        p.x = (uR * sin(th)) / uPW;        // curva o card acompanhando a circunferência (bend)
+        p.z = (uR * cos(th) - uR);
+        p.z += sin(uv.x * 3.14159265) * uSpeed * 3.0;
         gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
     const fragment = `
       precision highp float;
@@ -3482,22 +3486,26 @@
     const renderer = new Renderer({ alpha: true, dpr: Math.min(devicePixelRatio, 2) });
     const gl = renderer.gl;
     stage.appendChild(gl.canvas);
-    const camera = new Camera(gl, { fov: 40 });
-    camera.position.z = 4.3;
+    const camera = new Camera(gl, { fov: 50 });
+    camera.position.set(0, 0.85, 3.7);
+    camera.rotation.x = -0.17;   // leve perspectiva de cima → revela o fundo do anel sem deitar a frente
     const scene = new Transform();
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
-    // CILINDRO 360°: cards numa circunferência fechada que rotaciona no eixo central (como o apechain)
-    const PW = 3.8, PH = 2.1, OFFSET_X = 0.45;
-    const N = items.length;
-    const ANGLE = (2 * Math.PI) / N;            // ângulo entre cards no anel
-    const R = (PW / ANGLE) * 1.18;              // raio do cilindro (cards quase lado a lado)
+    // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
+    const PW = 3.6, PH = 2.0, OFFSET_X = 0.45;
+    const REP = 2;                               // cada projeto repetido no anel → curva suave por card + círculo cheio
+    const ring = [];
+    for (let r = 0; r < REP; r++) items.forEach((it, pi) => ring.push({ src: it.src, proj: pi }));
+    const N = ring.length;
+    const ANGLE = (2 * Math.PI) / N;            // ângulo (pequeno) de cada card no anel
+    const R = PW / ANGLE;                        // raio: a largura do card preenche o arco (círculo fechado)
     const smoothstep = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
-    const medias = items.map((it) => {
-      const program = new Program(gl, { vertex, fragment, transparent: true, uniforms: {
+    const medias = ring.map((it) => {
+      const program = new Program(gl, { vertex, fragment, transparent: true, cullFace: false, uniforms: {
         tMap: { value: new Texture(gl) }, uSpeed: { value: 0 }, uActive: { value: 0 }, uVis: { value: 1 },
-        uImg: { value: [1, 1] }, uPlane: { value: [PW, PH] }
+        uImg: { value: [1, 1] }, uPlane: { value: [PW, PH] }, uPW: { value: PW }, uR: { value: R }
       } });
       const img = new Image(); img.crossOrigin = 'anonymous'; img.src = it.src;
       img.onload = () => { program.uniforms.tMap.value.image = img; program.uniforms.uImg.value = [img.naturalWidth, img.naturalHeight]; };
@@ -3509,8 +3517,17 @@
 
     const scroll = { current: 0, target: 0, last: 0, ease: 0.09 };
     let speed = 0, centerIdx = -1;
-    // leva ao card i pelo caminho angular mais curto (cilindro fechado)
-    function nearestTarget(i) { const cur = ((scroll.target % N) + N) % N; let d = i - cur; if (d > N / 2) d -= N; if (d < -N / 2) d += N; return scroll.target + d; }
+    // leva o projeto pi à frente, escolhendo a cópia mais próxima no anel
+    function goProj(pi) {
+      const cur = ((scroll.target % N) + N) % N;
+      let best = scroll.target, bestAbs = Infinity;
+      for (let r = 0; r < REP; r++) {
+        const k = pi + r * items.length;
+        let d = k - cur; if (d > N / 2) d -= N; if (d < -N / 2) d += N;
+        if (Math.abs(d) < bestAbs) { bestAbs = Math.abs(d); best = scroll.target + d; }
+      }
+      scroll.target = Math.round(best);
+    }
 
     const mkBtn = (label, fn) => { const b = document.createElement('button'); b.textContent = label; b.addEventListener('click', fn); navWrap.appendChild(b); };
     mkBtn('‹', () => { scroll.target -= 1; });
@@ -3518,7 +3535,7 @@
     items.forEach((it, i) => {
       const t = document.createElement('button'); t.className = 'cf-gl-thumb';
       t.innerHTML = '<img src="' + it.src + '" alt="">';
-      t.addEventListener('click', () => { scroll.target = nearestTarget(i); });
+      t.addEventListener('click', () => goProj(i));
       thumbsWrap.appendChild(t);
     });
 
@@ -3552,12 +3569,13 @@
         m.mesh.position.x = R * Math.sin(an) + OFFSET_X; // posição no anel
         m.mesh.position.z = R * Math.cos(an) - R;        // frente do cilindro em z≈0
         m.mesh.rotation.y = an;                          // tangente ao círculo
-        m.program.uniforms.uActive.value = Math.max(0, 1 - ax / (ANGLE * 0.95));
-        m.program.uniforms.uVis.value = 1 - smoothstep(Math.PI * 0.42, Math.PI * 0.6, ax);
+        m.program.uniforms.uActive.value = (Math.cos(an) + 1) * 0.5;   // 1 na frente, escurece em direção ao fundo
+        m.program.uniforms.uVis.value = 1.0;                           // anel oco: os cards do fundo aparecem (verso espelhado)
         m.program.uniforms.uSpeed.value = speed;
       });
       const ci = ((Math.round(scroll.current) % N) + N) % N;
-      if (ci !== centerIdx) { centerIdx = ci; setInfo(ci); }
+      const proj = ring[ci].proj;
+      if (proj !== centerIdx) { centerIdx = proj; setInfo(proj); }
       renderer.render({ scene, camera });
       requestAnimationFrame(frame);
     }
