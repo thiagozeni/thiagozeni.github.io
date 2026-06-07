@@ -1,23 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /publi/
-Disallow: /publidemo/
-Disallow: /casebrivia
-Disallow: /casebrivia.html
-Disallow: /concorrenciars
-Disallow: /concorrenciars.html
-Disallow: /dossie
-Disallow: /dossie.html
 Disallow: /rba
-Disallow: /rba.html
-Disallow: /diagnostico
-Disallow: /diagnostico.html
-Disallow: /sim
-Disallow: /sim.html
-Disallow: /sim-status
-Disallow: /sim-status.html
-Disallow: /gantt
-Disallow: /gantt.html
-Disallow: /rba-docs/
 
 Sitemap: https://thiagozeni.com/sitemap.xml
