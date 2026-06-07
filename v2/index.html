@@ -1790,7 +1790,7 @@
     .cf-gl-stage {
       position: relative;
       width: 100%;
-      height: 580px;
+      height: 680px;
       cursor: grab;
     }
 
@@ -3487,19 +3487,21 @@
     const gl = renderer.gl;
     stage.appendChild(gl.canvas);
     const camera = new Camera(gl, { fov: 50 });
-    camera.position.set(0, 0.85, 3.7);
+    camera.position.set(0, 0.85, 3.5);
     camera.rotation.x = -0.17;   // leve perspectiva de cima → revela o fundo do anel sem deitar a frente
     const scene = new Transform();
+    scene.rotation.y = -Math.PI / 18;   // inclina a vitrine 10° para a esquerda (eixo Y)
+    scene.rotation.z = -Math.PI / 18;   // inclina a vitrine 10° para trás (eixo Z)
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
     // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
-    const PW = 3.6, PH = 2.0, OFFSET_X = 0.45;
+    const PW = 4.05, PH = 2.25, OFFSET_X = 0.45;
     const REP = 2;                               // cada projeto repetido no anel → curva suave por card + círculo cheio
     const ring = [];
     for (let r = 0; r < REP; r++) items.forEach((it, pi) => ring.push({ src: it.src, proj: pi }));
     const N = ring.length;
     const ANGLE = (2 * Math.PI) / N;            // ângulo (pequeno) de cada card no anel
-    const R = PW / ANGLE;                        // raio: a largura do card preenche o arco (círculo fechado)
+    const R = (PW / ANGLE) * 1.09;              // raio: leve folga → pequeno espaço entre os cards
     const smoothstep = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
     const medias = ring.map((it) => {
