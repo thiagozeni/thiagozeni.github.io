@@ -1755,6 +1755,36 @@
       transform: translateY(0);
     }
 
+    /* ─── FUNDO TOPOGRÁFICO POLIGONAL ────────────────────── */
+    .topo-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .topo-svg {
+      position: absolute;
+      inset: -8%;
+      width: 116%;
+      height: 116%;
+      will-change: transform;
+      animation: topo-drift 26s ease-in-out infinite;
+    }
+
+    @keyframes topo-drift {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-1.6%, 1.2%) scale(1.05); }
+    }
+
+    [data-topo] { position: relative; overflow: hidden; }
+    [data-topo] > :not(.topo-bg) { position: relative; z-index: 1; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .topo-svg { animation: none; }
+    }
+
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
       .skills-grid {
@@ -2068,7 +2098,7 @@
   <!-- ══════════════════════════════════════════════════════
        EXPERIENCE
   ══════════════════════════════════════════════════════════ -->
-  <section id="experience">
+  <section id="experience" data-topo>
     <div class="exp-inner">
       <div class="exp-header reveal">
         <div>
@@ -3285,6 +3315,29 @@
         const target = document.querySelector(a.getAttribute('href'));
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
+    });
+
+    // ── Fundo topográfico poligonal ────────────────────────
+    function topoSVG(seed, cx, cy) {
+      let s = seed; const rnd = () => { s = Math.sin(s * 99991) * 1e4; return s - Math.floor(s); };
+      const verts = 16, sig = [];
+      for (let v = 0; v < verts; v++) sig.push(0.5 + rnd() * 0.95);
+      let paths = '';
+      for (let i = 1; i <= 13; i++) {
+        const base = i * 36, pts = [];
+        for (let v = 0; v < verts; v++) {
+          const a = v / verts * Math.PI * 2, rad = base * sig[v];
+          pts.push((cx + Math.cos(a) * rad).toFixed(1) + ',' + (cy + Math.sin(a) * rad).toFixed(1));
+        }
+        paths += '<path d="M' + pts.join('L') + 'Z" fill="none" stroke="#C6FF00" stroke-width="1" stroke-opacity="' + (0.035 + i * 0.0035).toFixed(3) + '"/>';
+      }
+      return '<svg class="topo-svg" viewBox="0 0 1280 760" preserveAspectRatio="xMidYMid slice">' + paths + '</svg>';
+    }
+    document.querySelectorAll('[data-topo]').forEach((sec, idx) => {
+      const div = document.createElement('div');
+      div.className = 'topo-bg';
+      div.innerHTML = topoSVG(7 + idx * 3, 980, 300);
+      sec.insertBefore(div, sec.firstChild);
     });
   </script>
 </body>
