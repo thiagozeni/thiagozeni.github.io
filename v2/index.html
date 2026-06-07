@@ -1699,8 +1699,8 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
-      /* equaliza o tom entre as telas claras e dark */
-      filter: grayscale(0.45) contrast(1.05) brightness(0.95) saturate(0.92);
+      /* harmonização leve entre as telas claras e dark (sem escurecer) */
+      filter: grayscale(0.18) contrast(1.03) saturate(0.92);
       transition: transform 0.5s var(--ease);
     }
 
@@ -1708,13 +1708,13 @@
       transform: scale(1.03);
     }
 
-    /* camada multiply: puxa as áreas claras para o tom do site (equalização) */
+    /* camada multiply suave: só dá uma leve liga entre as telas, sem escurecer */
     .lab-thumb::before {
       content: '';
       position: absolute;
       inset: 0;
       z-index: 2;
-      background: #2b2b31;
+      background: #4c4c52;
       mix-blend-mode: multiply;
       pointer-events: none;
     }
