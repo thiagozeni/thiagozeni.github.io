@@ -3466,7 +3466,7 @@
         gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
     const fragment = `
       precision highp float;
-      uniform sampler2D tMap; uniform vec2 uImg; uniform vec2 uPlane; uniform float uActive;
+      uniform sampler2D tMap; uniform vec2 uImg; uniform vec2 uPlane; uniform float uActive; uniform float uVis;
       varying vec2 vUv;
       float sdRound(vec2 p, vec2 b, float r){ vec2 d = abs(p) - b + r; return min(max(d.x, d.y), 0.0) + length(max(d, 0.0)) - r; }
       void main(){
@@ -3476,7 +3476,7 @@
         col *= mix(0.4, 1.0, uActive);
         vec2 pp = (vUv - 0.5) * uPlane;
         float d = sdRound(pp, uPlane * 0.5, 0.16);
-        float alpha = 1.0 - smoothstep(0.0, 0.018, d);
+        float alpha = (1.0 - smoothstep(0.0, 0.018, d)) * uVis;
         gl_FragColor = vec4(col, alpha); }`;
 
     const renderer = new Renderer({ alpha: true, dpr: Math.min(devicePixelRatio, 2) });
@@ -3487,13 +3487,16 @@
     const scene = new Transform();
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
-    // tamanho/ângulo/formato calibrados para a referência (apechain)
-    const PW = 3.8, PH = 2.1, GAP = 4.2, OFFSET_X = 1.0, CURVE_Z = 0.7;
-    function rotY(x) { return -Math.sign(x) * Math.min(Math.abs(x) * 0.3, 1.02); }
+    // CILINDRO 360°: cards numa circunferência fechada que rotaciona no eixo central (como o apechain)
+    const PW = 3.8, PH = 2.1, OFFSET_X = 0.45;
+    const N = items.length;
+    const ANGLE = (2 * Math.PI) / N;            // ângulo entre cards no anel
+    const R = (PW / ANGLE) * 1.18;              // raio do cilindro (cards quase lado a lado)
+    const smoothstep = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
     const medias = items.map((it) => {
       const program = new Program(gl, { vertex, fragment, transparent: true, uniforms: {
-        tMap: { value: new Texture(gl) }, uSpeed: { value: 0 }, uActive: { value: 0 },
+        tMap: { value: new Texture(gl) }, uSpeed: { value: 0 }, uActive: { value: 0 }, uVis: { value: 1 },
         uImg: { value: [1, 1] }, uPlane: { value: [PW, PH] }
       } });
       const img = new Image(); img.crossOrigin = 'anonymous'; img.src = it.src;
@@ -3504,28 +3507,29 @@
       return { mesh, program };
     });
 
+    const scroll = { current: 0, target: 0, last: 0, ease: 0.09 };
+    let speed = 0, centerIdx = -1;
+    // leva ao card i pelo caminho angular mais curto (cilindro fechado)
+    function nearestTarget(i) { const cur = ((scroll.target % N) + N) % N; let d = i - cur; if (d > N / 2) d -= N; if (d < -N / 2) d += N; return scroll.target + d; }
+
     const mkBtn = (label, fn) => { const b = document.createElement('button'); b.textContent = label; b.addEventListener('click', fn); navWrap.appendChild(b); };
-    mkBtn('‹', () => { scroll.target -= GAP; });
-    mkBtn('›', () => { scroll.target += GAP; });
+    mkBtn('‹', () => { scroll.target -= 1; });
+    mkBtn('›', () => { scroll.target += 1; });
     items.forEach((it, i) => {
       const t = document.createElement('button'); t.className = 'cf-gl-thumb';
       t.innerHTML = '<img src="' + it.src + '" alt="">';
-      t.addEventListener('click', () => { scroll.target = i * GAP; });
+      t.addEventListener('click', () => { scroll.target = nearestTarget(i); });
       thumbsWrap.appendChild(t);
     });
-
-    const scroll = { current: 0, target: 0, last: 0, ease: 0.085 };
-    let speed = 0, centerIdx = -1;
-    const total = items.length * GAP;
 
     function resize() { const w = stage.clientWidth, h = stage.clientHeight; renderer.setSize(w, h); camera.perspective({ aspect: w / h }); }
     resize(); window.addEventListener('resize', resize);
 
-    stage.addEventListener('wheel', e => { scroll.target += (e.deltaY + e.deltaX) * 0.0025; }, { passive: true });
+    stage.addEventListener('wheel', e => { scroll.target += (e.deltaY + e.deltaX) * 0.0016; }, { passive: true });
     let down = false, sx = 0, ss = 0, moved = false;
     stage.addEventListener('pointerdown', e => { down = true; sx = e.clientX; ss = scroll.target; moved = false; stage.classList.add('grabbing'); });
-    window.addEventListener('pointermove', e => { if (!down) return; if (Math.abs(e.clientX - sx) > 4) moved = true; scroll.target = ss + (sx - e.clientX) * 0.007; });
-    window.addEventListener('pointerup', () => { if (!down) return; down = false; stage.classList.remove('grabbing'); scroll.target = Math.round(scroll.target / GAP) * GAP; });
+    window.addEventListener('pointermove', e => { if (!down) return; if (Math.abs(e.clientX - sx) > 4) moved = true; scroll.target = ss + (sx - e.clientX) * 0.0055; });
+    window.addEventListener('pointerup', () => { if (!down) return; down = false; stage.classList.remove('grabbing'); scroll.target = Math.round(scroll.target); });
 
     function setInfo(i) {
       const it = items[i];
@@ -3541,19 +3545,19 @@
       scroll.current += (scroll.target - scroll.current) * scroll.ease;
       speed += ((scroll.current - scroll.last) - speed) * 0.3;
       scroll.last = scroll.current;
-      let best = 0, bestD = 1e9;
       medias.forEach((m, i) => {
-        let x = i * GAP - scroll.current;
-        x = ((x % total) + total) % total; if (x > total / 2) x -= total;
-        const ax = Math.abs(x);
-        m.mesh.position.x = x + OFFSET_X;
-        m.mesh.position.z = -ax * CURVE_Z;
-        m.mesh.rotation.y = rotY(x);
-        m.program.uniforms.uActive.value = Math.max(0, 1 - ax / (GAP * 0.6));
+        let an = (i - scroll.current) * ANGLE;
+        an = Math.atan2(Math.sin(an), Math.cos(an));     // normaliza p/ [-π, π]
+        const ax = Math.abs(an);
+        m.mesh.position.x = R * Math.sin(an) + OFFSET_X; // posição no anel
+        m.mesh.position.z = R * Math.cos(an) - R;        // frente do cilindro em z≈0
+        m.mesh.rotation.y = an;                          // tangente ao círculo
+        m.program.uniforms.uActive.value = Math.max(0, 1 - ax / (ANGLE * 0.95));
+        m.program.uniforms.uVis.value = 1 - smoothstep(Math.PI * 0.42, Math.PI * 0.6, ax);
         m.program.uniforms.uSpeed.value = speed;
-        if (ax < bestD) { bestD = ax; best = i; }
       });
-      if (best !== centerIdx) { centerIdx = best; setInfo(best); }
+      const ci = ((Math.round(scroll.current) % N) + N) % N;
+      if (ci !== centerIdx) { centerIdx = ci; setInfo(ci); }
       renderer.render({ scene, camera });
       requestAnimationFrame(frame);
     }
