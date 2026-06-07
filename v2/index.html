@@ -649,11 +649,17 @@
       content: '';
       position: absolute;
       inset: -0.04em -0.05em;
-      background: var(--lime);
+      background: #d6d6d3;
+      /* palavras normais: bloco cinza claro */
       transform: scaleX(1);
       transform-origin: right;
       transition: transform 0.55s var(--ease) var(--d, 0s);
       pointer-events: none;
+    }
+
+    /* só as palavras-chave têm bloco lime */
+    .manifesto-text .key::after {
+      background: var(--lime);
     }
 
     .manifesto-text .word.visible::after {
