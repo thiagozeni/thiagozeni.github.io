@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Claude na prática — Aula 1 · RBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#001f63; --navy-soft:#1a3faa;
+    --orange:#f9633b; --orange-warm:#ff7b56;
+    --cream:#f1ede5; --fg:#ffffff; --fg-dim:#c4c4cc; --fg-mute:#7d7d86;
+    --line:rgba(255,255,255,.14); --line-strong:rgba(255,255,255,.30);
+    --sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --display:"Fraunces",Georgia,serif;
+    --mono:"DM Mono","JetBrains Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:#000;font-family:var(--sans);color:var(--fg);overflow:hidden}
+  .deck{position:fixed;inset:0}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6.5vh 8vw;
+    background:radial-gradient(120% 120% at 82% -10%,#0e1430 0%,#070707 55%,#000 100%);}
+  .slide.active{display:flex;animation:fade .5s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:1.3rem}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(3rem,7.4vw,6.6rem);line-height:.98;letter-spacing:-.02em;text-wrap:balance}
+  h2{font-family:var(--display);font-weight:600;font-size:clamp(2.1rem,4.6vw,3.7rem);line-height:1.02;letter-spacing:-.015em;margin-bottom:1.3rem;text-wrap:balance}
+  h2 em,h1 em{font-style:italic;color:var(--orange)}
+  p.lead{font-size:clamp(1.02rem,1.6vw,1.45rem);color:var(--fg-dim);max-width:52ch;line-height:1.5;text-wrap:pretty}
+  .pcard p,ul.points li{text-wrap:pretty}
+  .accent{color:var(--orange)}
+
+  ul.points{list-style:none;display:flex;flex-direction:column;gap:.95rem;max-width:62ch}
+  ul.points li{position:relative;padding-left:2.1rem;font-size:clamp(.98rem,1.5vw,1.32rem);line-height:1.38;color:#eee}
+  ul.points li::before{content:"";position:absolute;left:0;top:.55em;width:.8rem;height:.8rem;background:var(--orange);border-radius:3px;transform:rotate(45deg)}
+  ul.points li b{color:#fff;font-weight:600}
+  ul.points li small{display:block;color:var(--fg-mute);font-size:.8em;margin-top:.15rem}
+
+  code,.code{font-family:var(--mono);background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:6px;padding:.1em .42em;font-size:.85em;color:#cfe0ff}
+  .codeblock{font-family:var(--mono);background:#0c1226;border:1px solid var(--line-strong);border-radius:12px;padding:1.1rem 1.3rem;font-size:clamp(.8rem,1.08vw,1.02rem);color:#cfe0ff;line-height:1.7;white-space:pre-wrap;width:100%}
+  .codeblock .c{color:#6f7da6}.codeblock .o{color:var(--orange-warm)}
+  .codeblock .g{color:#86e0a8}
+
+  .pipe{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;margin-top:.6rem;max-width:92ch}
+  .pipe .step{font-family:var(--mono);font-size:clamp(.72rem,1vw,.98rem);background:rgba(249,99,59,.12);border:1px solid rgba(249,99,59,.4);color:#ffd9cd;padding:.55rem .85rem;border-radius:8px;white-space:nowrap}
+  .pipe .step b{color:var(--orange)}
+  .pipe .arr{color:var(--fg-mute);font-family:var(--mono)}
+
+  .cover{background:radial-gradient(120% 120% at 50% 120%,#10204f 0%,#05050a 60%,#000 100%)}
+  .selo{display:inline-block;font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:#9fb6ff;border:1px solid var(--line-strong);border-radius:100px;padding:.4rem 1rem;margin-bottom:1.8rem}
+  .photoslide{padding:0;justify-content:center;background:#05060f}
+  .photoslide .bg{position:absolute;inset:0;z-index:0}
+  .photoslide .bg img{width:100%;height:100%;object-fit:cover;display:block}
+  .photoslide .scrim2{position:absolute;inset:0;z-index:1;background:
+     linear-gradient(78deg, rgba(5,6,15,.94) 0%, rgba(5,6,15,.7) 34%, rgba(5,6,15,.2) 66%, rgba(5,6,15,.05) 100%),
+     linear-gradient(0deg, rgba(5,6,15,.7) 0%, transparent 42%)}
+  .photoslide .inner{position:relative;z-index:2;padding:7vh 8vw;width:100%}
+  .orangeslide{background:linear-gradient(135deg,#ff7a1a 0%,#ee3c23 52%,#c92d18 100%)}
+  .orangeslide .kicker{color:#3a1206}
+  .orangeslide h1,.orangeslide h2{color:#fff}
+  .orangeslide h1 em,.orangeslide h2 em{color:#2a0d04;font-style:italic}
+  .orangeslide .lead{color:#fff3ee}.orangeslide .lead b{color:#fff}.orangeslide .accent{color:#2a0d04}
+  .bignum2{font-family:var(--display);font-weight:600;font-size:clamp(5rem,16vw,12rem);line-height:.82;color:var(--orange);letter-spacing:-.04em}
+
+  .cards{display:grid;gap:1rem;width:100%;margin-top:.5rem}
+  .pcard{border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.15rem;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));display:flex;flex-direction:column;gap:.5rem}
+  .pcard .pn{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--orange)}
+  .pcard h3{font-family:var(--display);font-weight:600;font-size:1.18rem;color:#fff;line-height:1.05}
+  .pcard h3 code{font-size:.85rem}
+  .pcard p{font-size:.83rem;color:var(--fg-dim);line-height:1.38}
+
+  .split{display:grid;grid-template-columns:1fr 1.12fr;gap:3.2vw;align-items:center;width:100%}
+  .split .L{min-width:0}.split .R{min-width:0}
+  .split .L .kicker{margin-bottom:1.1rem}
+  @media (max-width:880px){.split{grid-template-columns:1fr;gap:1.3rem}.cards{grid-template-columns:1fr!important}}
+
+  .caseimg{width:100%;max-width:1040px;display:block;margin-top:1.1rem}
+
+  .topbar{position:fixed;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.06);z-index:10}
+  .topbar .fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-warm));transition:width .4s ease}
+  .brand{position:fixed;top:2.1vh;left:8vw;font-family:var(--display);font-weight:700;font-size:1rem;color:#fff;z-index:10;opacity:.85}
+  .brand .plus{color:var(--orange)}
+  .counter{position:fixed;bottom:2.3vh;right:8vw;font-family:var(--mono);font-size:.78rem;color:var(--fg-mute);z-index:10}
+  .hint{position:fixed;bottom:2.3vh;left:8vw;font-family:var(--mono);font-size:.72rem;color:var(--fg-mute);z-index:10}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="fill" id="fill"></div></div>
+<div class="brand">RBA<span class="plus">+</span></div>
+<div class="deck" id="deck">
+
+  <!-- 1 capa -->
+  <section class="slide photoslide active">
+    <div class="bg"><img src="assets/foto-surfista.jpg" alt=""></div>
+    <div class="scrim2"></div>
+    <div class="inner">
+      <span class="selo">Aula 1 de 2 · ao vivo · 2 horas</span>
+      <h1>Claude<br>na <em>prática</em></h1>
+      <p class="lead" style="margin-top:1.4rem;max-width:44ch">O jeito de trabalhar que leva você ao nível pro. A gente instala tudo ao vivo e aprende as práticas que fazem a diferença. <span style="color:var(--fg-mute)">Aula 2: vídeo com Higgsfield.</span></p>
+    </div>
+  </section>
+
+  <!-- 1b universo / pareto -->
+  <section class="slide">
+    <div class="split" style="grid-template-columns:1fr 2fr">
+      <div class="L">
+        <div class="kicker">O universo de capacidades</div>
+        <h2>Tem muita coisa. Domine os <em>20%</em>.</h2>
+        <p class="lead" style="font-size:.98rem">Dezenas de skills, MCPs e agentes disponíveis. Você não precisa de todos — <b style="color:#fff">20% resolvem 80%</b> do trabalho. É neles que esta aula foca.</p>
+      </div>
+      <div class="R">
+        <img src="assets/hub-skills.png" alt="Painel de skills do Claude" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 overview -->
+  <section class="slide">
+    <div class="kicker">O que você sai sabendo hoje</div>
+    <h2>Não é truque. É um <em>jeito de trabalhar</em>.</h2>
+    <div class="cards" style="grid-template-columns:repeat(3,1fr)">
+      <div class="pcard"><div class="pn">FUNDAÇÃO</div><h3>Ambiente</h3><p>Claude + plugins + conectores: o Claude que <b style="color:#fff">faz</b>, não só fala.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 1</div><h3>Memória</h3><p>Ele lembra cliente, voz e estado entre sessões.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 2</div><h3>Higiene de sessão</h3><p><code>/clear · /compact · /rewind</code> — Claude afiado.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 3</div><h3>Opus pensa, Sonnet faz</h3><p>Planeja/revisa no Opus, executa no Sonnet. + <code>/review</code>.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 4</div><h3>Versionar &amp; automatizar</h3><p>Commit constante + hooks e rotinas.</p></div>
+      <div class="pcard" style="border-color:rgba(249,99,59,.4);background:linear-gradient(180deg,rgba(249,99,59,.1),rgba(249,99,59,.02))"><div class="pn" style="color:#ffd9cd">A META</div><h3>Chegar no nível pro</h3><p>20% das práticas resolvem 80% do trabalho.</p></div>
+    </div>
+  </section>
+
+  <!-- 3 divisor instalar -->
+  <section class="slide photoslide">
+    <div class="bg"><img src="assets/foto-trem.jpg" alt=""></div>
+    <div class="scrim2"></div>
+    <div class="inner">
+      <div class="bignum2">01</div>
+      <h2 style="margin-top:.4rem;margin-bottom:.6rem">Instalar — ao vivo</h2>
+      <p class="lead">Copie os comandos do slide e cole no seu terminal.</p>
+    </div>
+  </section>
+
+  <!-- 4 instalar claude -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Passo 1 — instalar + entrar</div>
+        <h2>O Claude na sua <em>máquina</em></h2>
+        <p class="lead" style="font-size:.98rem">Cole o comando do seu sistema. Depois rode <code>claude</code> e faça <b style="color:#fff">login com a conta RBA</b> (seat Team).</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.9rem;color:var(--fg-mute)">Windows: use o <b>PowerShell</b> (não o CMD).</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># Mac — app "Terminal"</span>
+curl -fsSL https://claude.ai/install.sh | bash
+
+<span class="c"># Windows — app "PowerShell"</span>
+irm https://claude.ai/install.ps1 | iex
+
+<span class="c"># iniciar (e logar no navegador)</span>
+claude</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 plugins -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Passo 2 — plugins (dentro do Claude)</div>
+        <h2>As habilidades <em>essenciais</em></h2>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">document-skills</b> — Word/PPT/PDF/Excel + marca<br><b style="color:#fff">superpowers</b> — estruturar ideias<br><b style="color:#fff">firecrawl</b> — pesquisa na web</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># adicionar os marketplaces</span>
+/plugin marketplace add anthropics/skills
+/plugin marketplace add anthropics/claude-plugins-official
+
+<span class="c"># instalar</span>
+/plugin install document-skills<span class="o">@anthropic-agent-skills</span>
+/plugin install superpowers<span class="o">@claude-plugins-official</span>
+/plugin install firecrawl<span class="o">@claude-plugins-official</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 conectores -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Passo 3 — conectores (MCPs)</div>
+        <h2>O Claude que <em>faz</em></h2>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">MCPs</b> ligam o Claude às ferramentas que você já usa — Canva, Gmail, Drive, Figma, Supabase… São habilitados <b style="color:#fff">na conta</b> (claude.ai → Settings → Connectors); o admin da RBA já deixou prontos.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.95rem">Veja os ativos com <code>/mcp</code>. <span style="color:var(--fg-mute)">(à direita: o painel real de MCPs.)</span></p>
+      </div>
+      <div class="R">
+        <img src="assets/hub-mcps.png" alt="Painel de MCPs conectados" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 divisor práticas -->
+  <section class="slide orangeslide">
+    <div class="kicker">O coração da aula</div>
+    <h2 style="font-size:clamp(2.6rem,6.4vw,5.2rem);max-width:18ch">As 4 práticas que valem <em>80%</em>.</h2>
+    <p class="lead" style="margin-top:1rem;max-width:40ch;font-size:clamp(1.1rem,1.9vw,1.55rem)">Memória · Higiene de sessão · Opus &amp; Sonnet · Versionar &amp; automatizar.</p>
+  </section>
+
+  <!-- 8 memória -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Prática 1 — Memória · a meta-prática</div>
+        <h2>Não decore. <em>Dê instruções</em>.</h2>
+        <p class="lead" style="font-size:.98rem">Você <b style="color:#fff">não precisa decorar comando com barra</b>. Descreva em português o que precisa — o Claude <b style="color:#fff">pesquisa, instala e lembra</b> (entre sessões).</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">Resultado: você configura conversando. Nem precisa saber qual skill existe nem o comando.</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># 1 · mande pesquisar e resolver</span>
+<span class="g">"Pesquise a skill de criação de slides,
+ avalie se ajuda neste trabalho e
+ instale se fizer sentido."</span>
+
+<span class="c"># 2 · e mande lembrar o contexto do projeto</span>
+cat > CLAUDE.md << 'EOF'
+# Projeto: JBL — Boombox
+Voz: 1ª pessoa do plural, cena vivida.
+Evitar: 2ª pessoa genérica, "by Harman".
+EOF</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8b co-criação -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">O jeito de pedir — co-criação</div>
+        <h2>Construa <em>junto</em>, não mande e pronto</h2>
+        <p class="lead" style="font-size:.98rem">O Claude é parceiro, não máquina de comando. Deixe espaço pra ele <b style="color:#fff">avaliar, propor e melhorar</b> o caminho — você decide melhor com a segunda cabeça junto.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">Dica: nem sempre termine com ponto final. Termine com pergunta.</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># em vez de mandar e encerrar</span>
+"Faça um carrossel de 3 posts."
+
+<span class="c"># explique e peça o melhor caminho</span>
+<span class="g">"Quero divulgar o lançamento da Boombox.
+ Avalie a demanda e proponha o melhor
+ caminho de execução."</span>
+
+<span class="c"># ou feche pedindo a visão dele</span>
+<span class="g">"…esse é o plano. O que você acha?
+ Tem alguma sugestão de melhoria?"</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 higiene -->
+  <section class="slide">
+    <div class="kicker">Prática 2 — Higiene de sessão</div>
+    <h2>Sessão limpa = Claude <em>afiado</em></h2>
+    <div class="cards" style="grid-template-columns:repeat(3,1fr)">
+      <div class="pcard"><div class="pn">TROCOU DE TAREFA</div><h3><code>/clear</code></h3><p>Recomeça do zero. Mesa limpa pra próxima tarefa — respostas melhores.</p></div>
+      <div class="pcard"><div class="pn">SESSÃO LONGA</div><h3><code>/compact</code></h3><p>Resume a conversa mantendo o foco, sem perder o fio.</p></div>
+      <div class="pcard"><div class="pn">PEGOU O CAMINHO ERRADO</div><h3><code>/rewind</code></h3><p>Volta atrás sem perder o que ele já leu. Reinstrui com o que aprendeu.</p></div>
+    </div>
+    <p class="lead" style="margin-top:1.3rem;font-size:1rem">A atenção do Claude piora quando a conversa incha. Limpe cedo, com direção.</p>
+  </section>
+
+  <!-- 10 opus/sonnet -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Prática 3 — o time de modelos</div>
+        <h2>Opus <em>pensa</em>, Sonnet <em>faz</em></h2>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">Opus</b> planeja e revisa (raciocínio profundo); <b style="color:#fff">Sonnet</b> executa (rápido e capaz).</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.95rem">Você <b style="color:#fff">não fica trocando</b>: diga uma vez e <b style="color:#fff">salve na memória</b> — vira automático. Errou? <code>/code-review</code>.</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># peça uma vez e salve na memória ↓</span>
+<span class="g">"Lembre: planejar e revisar com Opus,
+ executar com Sonnet."</span>
+
+<span class="c"># (manual, se quiser trocar na hora)</span>
+/model opus   ·   /model sonnet
+
+<span class="c"># errou? review sistemático</span>
+/code-review</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 versionamento -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Prática 4a — Versionamento</div>
+        <h2>Cada passo bom é um <em>checkpoint</em></h2>
+        <p class="lead" style="font-size:.98rem">Commit constante = rede de segurança. Deu certo? Salve. Deu errado depois? Você volta pro último ponto bom — sem drama.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">Mensagens curtas e claras. O Claude pode commitar por você.</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># salve um checkpoint</span>
+git add -A
+git commit -m "feat: peça JBL boombox — capa v1"
+
+<span class="c"># ou peça ao Claude:</span>
+"commita isso com uma mensagem limpa"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 hooks e rotinas -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Prática 4b — Automação</div>
+        <h2>Automatize o <em>repetitivo</em></h2>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">Rotinas</b> — agende recorrentes com <code>/schedule</code> ou repita até terminar com <code>/loop</code>.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.98rem"><b style="color:#fff">Hooks</b> — ações automáticas a cada passo (no <code>settings.json</code>). <span style="color:var(--fg-mute)">Avançado — exemplos reais ao lado.</span></p>
+        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">💡 Nem precisa mexer no arquivo: descreva a rotina e peça pro Claude configurar. Ex.: <i>"quando eu disser 'vamos encerrar a sessão', atualize a memória do projeto, verifique o git e pergunte se faço push."</i></p>
+      </div>
+      <div class="R">
+        <img src="assets/hub-hooks.png" alt="Hooks ativos (exemplo)" style="width:100%;max-height:64vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 divisor mão na massa -->
+  <section class="slide orangeslide">
+    <div class="bignum2" style="color:#2a0d04">02</div>
+    <h2 style="margin-top:.4rem;margin-bottom:.6rem">Juntando tudo</h2>
+    <p class="lead" style="max-width:42ch;font-size:clamp(1.1rem,1.9vw,1.6rem)">As práticas não vivem soltas — elas viram um <b>loop</b> de trabalho.</p>
+  </section>
+
+  <!-- 14 o loop -->
+  <section class="slide">
+    <div class="kicker">O loop do dia a dia</div>
+    <h2>Como uma peça <em>nasce</em></h2>
+    <div class="pipe">
+      <span class="step"><b>plan</b> · Opus</span><span class="arr">→</span>
+      <span class="step"><b>exec</b> · Sonnet</span><span class="arr">→</span>
+      <span class="step"><b>review</b> · Opus + /code-review</span><span class="arr">→</span>
+      <span class="step"><b>ajusta</b></span><span class="arr">→</span>
+      <span class="step"><b>commit</b></span><span class="arr">→</span>
+      <span class="step"><b>/clear</b></span>
+    </div>
+    <p class="lead" style="margin-top:1.6rem">Tudo <b class="accent">dentro do contexto da memória</b> (CLAUDE.md). É esse loop, repetido com disciplina, que te leva ao nível pro.</p>
+  </section>
+
+  <!-- 14b exemplos produzidos -->
+  <section class="slide">
+    <div class="split" style="grid-template-columns:1fr 2fr">
+      <div class="L">
+        <div class="kicker">Produzido com esse processo</div>
+        <h2>O que sai<br>desse <em>loop</em></h2>
+        <p class="lead" style="font-size:.98rem">6 peças da <b style="color:#fff">JBL Boombox</b> — <b class="accent">type-led</b> + <b class="accent">image-led</b> — na voz e identidade reais da marca, saídas do mesmo loop.</p>
+      </div>
+      <div class="R">
+        <div style="display:flex;flex-direction:column;gap:.8rem">
+          <img src="assets/case-jbl-frames.png" alt="3 peças type-led JBL" style="width:100%;display:block">
+          <img src="assets/case-jbl-imageled.png" alt="3 peças image-led JBL" style="width:100%;display:block">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 exercício -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Mão na massa — agora você</div>
+        <h2>Rode o loop <em>completo</em></h2>
+        <p class="lead" style="font-size:.98rem">Produza uma peça simples de uma marca e passe por todas as etapas. O objetivo não é a peça — é <b style="color:#fff">praticar o fluxo</b>.</p>
+      </div>
+      <div class="R">
+        <ul class="points" style="font-size:1.05rem">
+          <li>Crie um <code>CLAUDE.md</code> com a voz da marca</li>
+          <li><b>Opus</b>: peça um plano de 3 conceitos</li>
+          <li><b>Sonnet</b>: execute uma legenda</li>
+          <li>Rode <code>/code-review</code> e ajuste</li>
+          <li><b>Commite</b> o resultado · depois <code>/clear</code></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 recap -->
+  <section class="slide cover">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Leve na cabeça</div>
+        <h2>Memória · Higiene · Opus&amp;Sonnet · <em>Versionar</em></h2>
+        <p class="lead" style="margin-top:1.1rem;font-family:var(--display);font-style:italic;font-size:clamp(1.2rem,2vw,1.7rem);color:#fff">20% das práticas, 80% do resultado.</p>
+      </div>
+      <div class="R">
+        <ul class="points">
+          <li>Folha de cola: <b>cheatsheet</b> com todos os comandos</li>
+          <li>Guia de instalação passo a passo (copy-paste)</li>
+          <li>Suporte interno: <b>Criar Grupo de WhatsApp</b></li>
+          <li>Próxima: <b>aula 2 — vídeo com Higgsfield</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="hint">← → navegar · F tela cheia</div>
+<div class="counter" id="counter">01 / 19</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const fill=document.getElementById('fill'), counter=document.getElementById('counter');
+  let i=0; const pad=n=>String(n).padStart(2,'0');
+  function show(n){i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    fill.style.width=((i+1)/slides.length*100)+'%';
+    counter.textContent=pad(i+1)+' / '+pad(slides.length);}
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')show(i+1);
+    else if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);
+    else if(e.key==='Home')show(0); else if(e.key==='End')show(slides.length-1);
+    else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}});
+  show(0);
+</script>
+</body>
+</html>
