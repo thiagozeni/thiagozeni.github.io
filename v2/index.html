@@ -3489,8 +3489,12 @@
     const camera = new Camera(gl, { fov: 50 });
     camera.position.z = 3.5;
     const scene = new Transform();
-    scene.rotation.x = Math.PI / 180 * 12;   // 12° fixo (eixo X) → inclina a vitrine e revela o fundo do anel
-    // scene.rotation.y é dinâmico (varia -10°..+10° com a rolagem vertical) — ver no frame()
+    // pivô do bambolê: posicionado NO CENTRO do anel (z = -R) para que as inclinações
+    // X/Y girem em torno do centro da "esfera", não da face frontal.
+    // rotation.x = 12° fixo; rotation.y dinâmico (-10°..+10° com a rolagem) — ver no frame()
+    const pivot = new Transform();
+    pivot.setParent(scene);
+    pivot.rotation.x = Math.PI / 180 * 12;
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
     // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
@@ -3501,6 +3505,7 @@
     const N = ring.length;
     const ANGLE = (2 * Math.PI) / N;            // ângulo (pequeno) de cada card no anel
     const R = (PW / ANGLE) * 1.09;              // raio: leve folga → pequeno espaço entre os cards
+    pivot.position.set(OFFSET_X, 0, -R);        // origem do pivô = centro do anel (a frente do anel volta para z≈0 em mundo)
     const smoothstep = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
     const medias = ring.map((it) => {
@@ -3512,7 +3517,7 @@
       img.onload = () => { program.uniforms.tMap.value.image = img; program.uniforms.uImg.value = [img.naturalWidth, img.naturalHeight]; };
       const mesh = new Mesh(gl, { geometry, program });
       mesh.scale.set(PW, PH, 1);
-      mesh.setParent(scene);
+      mesh.setParent(pivot);
       return { mesh, program };
     });
 
@@ -3567,8 +3572,8 @@
         let an = (i - scroll.current) * ANGLE;
         an = Math.atan2(Math.sin(an), Math.cos(an));     // normaliza p/ [-π, π]
         const ax = Math.abs(an);
-        m.mesh.position.x = R * Math.sin(an) + OFFSET_X; // posição no anel
-        m.mesh.position.z = R * Math.cos(an) - R;        // frente do cilindro em z≈0
+        m.mesh.position.x = R * Math.sin(an);            // posição no anel (relativa ao centro = origem do pivô)
+        m.mesh.position.z = R * Math.cos(an);            // centro do anel na origem do pivô
         m.mesh.rotation.y = an;                          // tangente ao círculo
         m.program.uniforms.uActive.value = (Math.cos(an) + 1) * 0.5;   // 1 na frente, escurece em direção ao fundo
         m.program.uniforms.uVis.value = 1.0;                           // anel oco: os cards do fundo aparecem (verso espelhado)
@@ -3581,7 +3586,7 @@
       const rc = root.getBoundingClientRect();
       let tt = ((rc.top + rc.height / 2) - window.innerHeight / 2) / (window.innerHeight / 2);
       tt = Math.max(-1, Math.min(1, tt));
-      scene.rotation.y = tt * (Math.PI / 18);
+      pivot.rotation.y = tt * (Math.PI / 18);
       renderer.render({ scene, camera });
       requestAnimationFrame(frame);
     }
