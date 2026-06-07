@@ -3489,8 +3489,8 @@
     const camera = new Camera(gl, { fov: 50 });
     camera.position.z = 3.5;
     const scene = new Transform();
-    scene.rotation.x = Math.PI / 180 * 7;   // 7° fixo (eixo X) → inclina a vitrine e revela o fundo do anel
-    // scene.rotation.y é dinâmico (varia -5°..+5° com a rolagem vertical) — ver no frame()
+    scene.rotation.x = Math.PI / 180 * 12;   // 12° fixo (eixo X) → inclina a vitrine e revela o fundo do anel
+    // scene.rotation.y é dinâmico (varia -10°..+10° com a rolagem vertical) — ver no frame()
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
     // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
@@ -3577,11 +3577,11 @@
       const ci = ((Math.round(scroll.current) % N) + N) % N;
       const proj = ring[ci].proj;
       if (proj !== centerIdx) { centerIdx = proj; setInfo(proj); }
-      // eixo Y dinâmico: varia -5°..+5° conforme a posição vertical da vitrine na tela (rolagem)
+      // eixo Y dinâmico: varia -10°..+10° conforme a posição vertical da vitrine na tela (rolagem)
       const rc = root.getBoundingClientRect();
       let tt = ((rc.top + rc.height / 2) - window.innerHeight / 2) / (window.innerHeight / 2);
       tt = Math.max(-1, Math.min(1, tt));
-      scene.rotation.y = tt * (Math.PI / 36);
+      scene.rotation.y = tt * (Math.PI / 18);
       renderer.render({ scene, camera });
       requestAnimationFrame(frame);
     }
