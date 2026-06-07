@@ -1687,7 +1687,10 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, transparent 50%, var(--panel) 100%);
+      z-index: 3;
+      background:
+        radial-gradient(130% 140% at 82% 8%, rgba(198, 255, 0, 0.05), transparent 52%),
+        linear-gradient(to bottom, transparent 55%, var(--panel) 100%);
       pointer-events: none;
     }
 
@@ -1696,11 +1699,24 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
+      /* equaliza o tom entre as telas claras e dark */
+      filter: grayscale(0.45) contrast(1.05) brightness(0.95) saturate(0.92);
       transition: transform 0.5s var(--ease);
     }
 
     .case-grid-card:hover .lab-thumb img {
       transform: scale(1.03);
+    }
+
+    /* camada multiply: puxa as áreas claras para o tom do site (equalização) */
+    .lab-thumb::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: #2b2b31;
+      mix-blend-mode: multiply;
+      pointer-events: none;
     }
 
     .lab-thumb-icon {
