@@ -3489,6 +3489,7 @@
     const camera = new Camera(gl, { fov: 50 });
     camera.position.z = 5.5;
     const scene = new Transform();
+    scene.rotation.z = Math.PI / 180 * 12;   // gira o componente inteiro 12° anti-horário no plano da tela
     // pivô do bambolê: posicionado NO CENTRO do anel (z = -R) para que as inclinações
     // X/Y girem em torno do centro da "esfera", não da face frontal.
     // rotation.y = 12° fixo; rotation.x dinâmico (-10°..+10° com a rolagem) — ver no frame()
