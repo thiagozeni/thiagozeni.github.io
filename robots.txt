@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /publi/
 Disallow: /rba
+Disallow: /v2
 
 Sitemap: https://thiagozeni.com/sitemap.xml
