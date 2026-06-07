@@ -1780,6 +1780,86 @@
     [data-topo] { position: relative; overflow: hidden; }
     [data-topo] > :not(.topo-bg) { position: relative; z-index: 1; }
 
+    /* ─── COVERFLOW 3D (Laboratório) ─────────────────────── */
+    .cases-grid.coverflow {
+      display: block;
+      position: relative;
+      height: 560px;
+      perspective: 1900px;
+      margin-top: 2.5rem;
+    }
+
+    .coverflow .cf-stage {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+    }
+
+    .coverflow .cf-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 460px;
+      max-width: 82vw;
+      transform-style: preserve-3d;
+      transition: transform 0.55s var(--ease), opacity 0.5s var(--ease);
+      will-change: transform, opacity;
+      cursor: pointer;
+      backface-visibility: hidden;
+    }
+
+    .coverflow .cf-card.cf-active {
+      cursor: default;
+      border-color: rgba(198, 255, 0, 0.35);
+    }
+
+    .cf-arrow {
+      position: absolute;
+      top: 46%;
+      transform: translateY(-50%);
+      z-index: 60;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(8, 8, 8, 0.62);
+      border: 1px solid var(--border);
+      color: var(--lime);
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .cf-arrow:hover { background: var(--lime-dim); border-color: var(--lime); }
+    .cf-prev { left: 0.5rem; }
+    .cf-next { right: 0.5rem; }
+
+    .cf-dots {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 9px;
+      z-index: 60;
+    }
+
+    .cf-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.18);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .cf-dot.on { background: var(--lime); transform: scale(1.3); }
+
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
       .skills-grid {
@@ -2712,7 +2792,7 @@
         autorais e públicos, sem nada de cliente. Confirme quais entram, saem ou faltam.
       </p>
 
-      <div class="cases-grid">
+      <div class="cases-grid" id="lab-coverflow">
 
         <a href="https://werdumfight.com" target="_blank" rel="noopener" class="case-grid-card reveal">
           <div class="lab-thumb"><img src="/v2/img/lab/werdumfight.jpg" alt="Werdum Fight" loading="lazy" style="object-position:center"></div>
@@ -3364,6 +3444,65 @@
       items.forEach(it => io.observe(it.sec));
       function loop(t) { for (const it of items) if (it.visible) it.frame(t); requestAnimationFrame(loop); }
       requestAnimationFrame(loop);
+    })();
+
+    // ── Coverflow 3D (Laboratório) ─────────────────────────
+    (function initLabCoverflow() {
+      const root = document.getElementById('lab-coverflow');
+      if (!root || window.innerWidth < 880) return;   // mobile/estreito: mantém o grid
+      const cards = [...root.querySelectorAll('.case-grid-card')];
+      if (cards.length < 2) return;
+
+      const stage = document.createElement('div');
+      stage.className = 'cf-stage';
+      cards.forEach(c => {
+        c.classList.add('cf-card');
+        c.classList.remove('reveal', 'visible');
+        c.style.transitionDelay = '0s';
+        stage.appendChild(c);
+      });
+      root.classList.add('coverflow');
+      root.appendChild(stage);
+
+      const prev = document.createElement('button'); prev.className = 'cf-arrow cf-prev'; prev.setAttribute('aria-label', 'Anterior'); prev.textContent = '‹';
+      const next = document.createElement('button'); next.className = 'cf-arrow cf-next'; next.setAttribute('aria-label', 'Próximo'); next.textContent = '›';
+      const dots = document.createElement('div'); dots.className = 'cf-dots';
+      root.appendChild(prev); root.appendChild(next); root.appendChild(dots);
+      cards.forEach((c, i) => {
+        const d = document.createElement('button');
+        d.className = 'cf-dot'; d.setAttribute('aria-label', 'Projeto ' + (i + 1));
+        d.addEventListener('click', () => go(i));
+        dots.appendChild(d);
+      });
+
+      let active = 0;
+      function layout() {
+        cards.forEach((c, i) => {
+          const off = i - active, ab = Math.abs(off), sg = Math.sign(off);
+          const x = off * 52, z = -ab * 250, ry = -sg * Math.min(ab, 2) * 40, sc = ab === 0 ? 1 : 0.84;
+          c.style.transform = 'translate(-50%,-50%) translateX(' + x + '%) translateZ(' + z + 'px) rotateY(' + ry + 'deg) scale(' + sc + ')';
+          c.style.zIndex = String(50 - ab);
+          c.style.opacity = ab > 3 ? '0' : (ab === 0 ? '1' : String(Math.max(0.22, 0.72 - ab * 0.16)));
+          c.style.pointerEvents = ab > 3 ? 'none' : 'auto';
+          c.classList.toggle('cf-active', ab === 0);
+        });
+        [...dots.children].forEach((d, i) => d.classList.toggle('on', i === active));
+      }
+      function go(n) { active = Math.max(0, Math.min(cards.length - 1, n)); layout(); }
+
+      prev.addEventListener('click', () => go(active - 1));
+      next.addEventListener('click', () => go(active + 1));
+
+      let sx = null, sa = 0, moved = false;
+      root.addEventListener('pointerdown', e => { sx = e.clientX; sa = active; moved = false; });
+      window.addEventListener('pointermove', e => { if (sx == null) return; if (Math.abs(e.clientX - sx) > 6) moved = true; go(sa + Math.round((sx - e.clientX) / 110)); });
+      window.addEventListener('pointerup', () => { sx = null; });
+      cards.forEach((c, i) => c.addEventListener('click', e => { if (moved) { e.preventDefault(); return; } if (i !== active) { e.preventDefault(); go(i); } }));
+
+      root.setAttribute('tabindex', '0');
+      root.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') go(active - 1); else if (e.key === 'ArrowRight') go(active + 1); });
+
+      layout();
     })();
   </script>
 </body>
