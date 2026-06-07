@@ -3491,10 +3491,10 @@
     const scene = new Transform();
     // pivô do bambolê: posicionado NO CENTRO do anel (z = -R) para que as inclinações
     // X/Y girem em torno do centro da "esfera", não da face frontal.
-    // rotation.x = 12° fixo; rotation.y dinâmico (-10°..+10° com a rolagem) — ver no frame()
+    // rotation.y = 12° fixo; rotation.x dinâmico (-10°..+10° com a rolagem) — ver no frame()
     const pivot = new Transform();
     pivot.setParent(scene);
-    pivot.rotation.x = Math.PI / 180 * 12;
+    pivot.rotation.y = Math.PI / 180 * 12;
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
     // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
@@ -3582,11 +3582,11 @@
       const ci = ((Math.round(scroll.current) % N) + N) % N;
       const proj = ring[ci].proj;
       if (proj !== centerIdx) { centerIdx = proj; setInfo(proj); }
-      // eixo Y dinâmico: varia -10°..+10° conforme a posição vertical da vitrine na tela (rolagem)
+      // eixo X dinâmico: varia -10°..+10° conforme a posição vertical da vitrine na tela (rolagem)
       const rc = root.getBoundingClientRect();
       let tt = ((rc.top + rc.height / 2) - window.innerHeight / 2) / (window.innerHeight / 2);
       tt = Math.max(-1, Math.min(1, tt));
-      pivot.rotation.y = tt * (Math.PI / 18);
+      pivot.rotation.x = tt * (Math.PI / 18);
       renderer.render({ scene, camera });
       requestAnimationFrame(frame);
     }
