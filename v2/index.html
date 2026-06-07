@@ -639,8 +639,10 @@
       max-width: 1100px;
     }
 
-    /* manifesto — revelação por "cortina": UMA máscara por LINHA de texto (estilo Lando) */
-    #manifestoText {
+    /* revelação por "cortina": UMA máscara por LINHA de texto (estilo Lando) — assinatura do site */
+    #manifestoText,
+    .section-title,
+    .contact-headline {
       position: relative;
     }
 
@@ -650,7 +652,7 @@
 
     .line-mask {
       position: absolute;
-      background: #d6d6d3;
+      background: #242424;          /* títulos em fundo escuro */
       transform: scaleX(1);
       transform-origin: right;
       transition: transform 0.6s var(--ease) var(--d, 0s);
@@ -658,7 +660,11 @@
       z-index: 2;
     }
 
-    #manifestoText.revealed .line-mask {
+    #manifestoText .line-mask {
+      background: #d6d6d3;          /* manifesto (fundo claro) */
+    }
+
+    .revealed .line-mask {
       transform: scaleX(0);
     }
 
@@ -3082,13 +3088,13 @@
       manifestoEl.appendChild(document.createTextNode(' '));
     });
 
-    // cria UMA máscara por linha visual (mede onde o texto quebra; recalcula no resize)
-    function buildLineMasks() {
-      manifestoEl.querySelectorAll('.line-mask').forEach(n => n.remove());
-      const base = manifestoEl.getBoundingClientRect();
+    // cria UMA máscara por linha visual em qualquer título (mede o wrap; recalcula no resize)
+    function buildLineMasks(el) {
+      el.querySelectorAll('.line-mask').forEach(n => n.remove());
+      const base = el.getBoundingClientRect();
       if (!base.width) return;
       const range = document.createRange();
-      range.selectNodeContents(manifestoEl);
+      range.selectNodeContents(el);
       const rects = [...range.getClientRects()].filter(r => r.width > 1 && r.height > 1);
       const lines = [];
       rects.forEach(r => {
@@ -3105,25 +3111,28 @@
         m.style.width = (L.right - L.left + 8) + 'px';
         m.style.height = (L.bottom - L.top + 6) + 'px';
         m.style.setProperty('--d', (i * 0.09) + 's');
-        manifestoEl.appendChild(m);
+        el.appendChild(m);
       });
     }
 
-    const manifestoObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          manifestoEl.classList.add('revealed');
-          manifestoObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.3 });
+    // alvos: manifesto + todos os títulos de seção + headline do contato
+    const revealTargets = [document.getElementById('manifestoText')]
+      .concat([...document.querySelectorAll('.section-title, .contact-headline')])
+      .filter(Boolean);
 
-    (function initManifestoMasks() {
-      const start = () => { buildLineMasks(); manifestoObs.observe(manifestoEl); };
+    const lineRevealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); lineRevealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.45 });
+
+    (function initLineReveal() {
+      const buildAll = () => revealTargets.forEach(buildLineMasks);
+      const start = () => { buildAll(); revealTargets.forEach(el => lineRevealObs.observe(el)); };
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
       else start();
       let rsz;
-      window.addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(buildLineMasks, 200); });
+      window.addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(buildAll, 200); });
     })();
 
     // ── Contact form ───────────────────────────────────────
