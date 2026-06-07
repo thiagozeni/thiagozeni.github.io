@@ -3589,6 +3589,133 @@
     requestAnimationFrame(frame);
   })();
   </script>
+
+  <!-- Efeito "líquido" no fim da página: distorção + aberração cromática seguindo o mouse sobre "conversar?" (inspirado no rodapé do apechain.com) -->
+  <script type="module">
+  (async () => {
+    const el = document.querySelector('.contact-headline .outline');
+    if (!el || matchMedia('(pointer: coarse)').matches) return;   // só em ponteiro fino (desktop)
+    let OGL;
+    try { OGL = await import('https://esm.sh/ogl@1.0.11'); } catch (e) { return; }
+    const { Renderer, Program, Mesh, Geometry, Texture } = OGL;
+    try { await (document.fonts ? document.fonts.ready : Promise.resolve()); } catch (e) {}
+    await new Promise(r => requestAnimationFrame(r));
+
+    const headline = el.closest('.contact-headline');
+    if (getComputedStyle(headline).position === 'static') headline.style.position = 'relative';
+    const txt = el.textContent.trim();
+
+    const vertex = `attribute vec2 position; attribute vec2 uv; varying vec2 vUv;
+      void main(){ vUv = uv; gl_Position = vec4(position, 0.0, 1.0); }`;
+    const fragment = `precision highp float;
+      uniform sampler2D uTex; uniform vec2 uMouse; uniform vec2 uVel; uniform float uAmp; uniform vec2 uRes;
+      varying vec2 vUv;
+      void main(){
+        vec2 uv = vUv;
+        vec2 d = uv - uMouse; d.x *= uRes.x/uRes.y;
+        float falloff = exp(-dot(d,d)*10.0);
+        vec2 disp = uVel * falloff * uAmp;
+        float vmag = length(uVel);
+        vec2 dir = normalize(uVel + vec2(1e-4));
+        vec2 ca = dir * falloff * uAmp * (0.6 + vmag*4.0);
+        vec2 base = uv - disp;
+        float aR = texture2D(uTex, base + ca).a;
+        float aG = texture2D(uTex, base).a;
+        float aB = texture2D(uTex, base - ca).a;
+        vec3 lime = vec3(0.776, 1.0, 0.0);
+        vec3 col = lime;
+        col.r += max(0.0, aR - aG);
+        col.b += max(0.0, aB - aG) * 0.9;
+        float alpha = max(aR, max(aG, aB));
+        gl_FragColor = vec4(col, alpha);
+      }`;
+
+    let renderer, gl, program, mesh, texture, fx;
+    let cw = 0, ch = 0;
+    let mx = 0.5, my = 0.5, pmx = 0.5, pmy = 0.5, vx = 0, vy = 0, amp = 0, inside = 0;
+
+    // desenha o texto vazado (stroke branco) como máscara, respeitando o letter-spacing do CSS
+    function strokeWithLS(ctx, text, cx, cy, lsPx) {
+      const widths = []; let total = 0;
+      for (const c of text) { const w = ctx.measureText(c).width; widths.push(w); total += w + lsPx; }
+      total -= lsPx;
+      let x = cx - total / 2;
+      for (let i = 0; i < text.length; i++) { ctx.strokeText(text[i], x + widths[i] / 2, cy); x += widths[i] + lsPx; }
+    }
+
+    function build() {
+      const cs = getComputedStyle(el);
+      const rect = el.getBoundingClientRect();
+      const hrect = headline.getBoundingClientRect();
+      const W = Math.ceil(rect.width), H = Math.ceil(rect.height);
+      if (W < 2 || H < 2) return;
+      const DPR = Math.min(devicePixelRatio || 1, 2);
+      const pad = Math.ceil(H * 0.55);
+      cw = W + pad * 2; ch = H + pad * 2;
+      const fontPx = parseFloat(cs.fontSize);
+      const weight = cs.fontWeight || '900';
+      const lsPx = (parseFloat(cs.letterSpacing) || (-0.05 * fontPx));
+
+      const mc = document.createElement('canvas');
+      mc.width = cw * DPR; mc.height = ch * DPR;
+      const ctx = mc.getContext('2d'); ctx.scale(DPR, DPR);
+      ctx.font = `${weight} ${fontPx}px Unbounded, sans-serif`;
+      ctx.textBaseline = 'middle'; ctx.textAlign = 'center';
+      ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.strokeStyle = '#fff';
+      strokeWithLS(ctx, txt, cw / 2, ch / 2, lsPx);
+
+      if (!fx) {
+        fx = document.createElement('canvas');
+        fx.setAttribute('aria-hidden', 'true');
+        fx.style.cssText = 'position:absolute;pointer-events:none;filter:drop-shadow(0 0 18px rgba(198,255,0,0.22));';
+        headline.appendChild(fx);
+      }
+      fx.style.left = (rect.left - hrect.left - pad) + 'px';
+      fx.style.top = (rect.top - hrect.top - pad) + 'px';
+      fx.style.width = cw + 'px'; fx.style.height = ch + 'px';
+
+      if (!renderer) {
+        renderer = new Renderer({ canvas: fx, alpha: true, dpr: DPR });
+        gl = renderer.gl;
+        texture = new Texture(gl, { image: mc, generateMipmaps: false, minFilter: gl.LINEAR, magFilter: gl.LINEAR, premultiplyAlpha: false });
+        const geometry = new Geometry(gl, { position: { size: 2, data: new Float32Array([-1,-1, 3,-1, -1,3]) }, uv: { size: 2, data: new Float32Array([0,0, 2,0, 0,2]) } });
+        program = new Program(gl, { vertex, fragment, transparent: true, uniforms: { uTex: { value: texture }, uMouse: { value: [.5,.5] }, uVel: { value: [0,0] }, uAmp: { value: 0 }, uRes: { value: [cw, ch] } } });
+        mesh = new Mesh(gl, { geometry, program });
+      } else {
+        texture.image = mc; texture.needsUpdate = true;
+        program.uniforms.uRes.value = [cw, ch];
+      }
+      renderer.setSize(cw, ch);
+      el.style.color = 'transparent';
+      el.style.opacity = '0';   // texto CSS some; o canvas assume (texto segue no DOM p/ acessibilidade)
+    }
+
+    build();
+    if (!renderer) { el.style.color = ''; el.style.opacity = ''; return; }
+
+    window.addEventListener('mousemove', (e) => {
+      const r = fx.getBoundingClientRect();
+      mx = (e.clientX - r.left) / r.width;
+      my = 1.0 - (e.clientY - r.top) / r.height;
+      inside = (mx > -0.15 && mx < 1.15 && my > -0.15 && my < 1.15) ? 1 : 0;
+    });
+
+    let rt = null;
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 180); });
+
+    function frame() {
+      const dvx = mx - pmx, dvy = my - pmy; pmx = mx; pmy = my;
+      vx += (dvx - vx) * 0.25; vy += (dvy - vy) * 0.25;
+      program.uniforms.uMouse.value = [mx, my];
+      program.uniforms.uVel.value = [vx * 1.8, vy * 1.8];
+      amp += ((inside ? 1 : 0) - amp) * 0.12;
+      program.uniforms.uAmp.value = amp;
+      renderer.render({ scene: mesh });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+  </script>
 </body>
 
 </html>
