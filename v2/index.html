@@ -3487,7 +3487,7 @@
     const gl = renderer.gl;
     stage.appendChild(gl.canvas);
     const camera = new Camera(gl, { fov: 50 });
-    camera.position.z = 3.5;
+    camera.position.z = 5.5;
     const scene = new Transform();
     // pivô do bambolê: posicionado NO CENTRO do anel (z = -R) para que as inclinações
     // X/Y girem em torno do centro da "esfera", não da face frontal.
@@ -3498,7 +3498,7 @@
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
     // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
-    const PW = 4.05, PH = 2.25, OFFSET_X = 0.45;
+    const PW = 4.05, PH = 2.25, OFFSET_X = 1.35;
     const REP = 2;                               // cada projeto repetido no anel → curva suave por card + círculo cheio
     const ring = [];
     for (let r = 0; r < REP; r++) items.forEach((it, pi) => ring.push({ src: it.src, proj: pi }));
