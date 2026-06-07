@@ -1766,24 +1766,13 @@
 
     .topo-svg {
       position: absolute;
-      inset: -8%;
-      width: 116%;
-      height: 116%;
-      will-change: transform;
-      animation: topo-drift 26s ease-in-out infinite;
-    }
-
-    @keyframes topo-drift {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(-1.6%, 1.2%) scale(1.05); }
+      inset: 0;
+      width: 100%;
+      height: 100%;
     }
 
     [data-topo] { position: relative; overflow: hidden; }
     [data-topo] > :not(.topo-bg) { position: relative; z-index: 1; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .topo-svg { animation: none; }
-    }
 
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -3317,28 +3306,56 @@
       });
     });
 
-    // ── Fundo topográfico poligonal ────────────────────────
-    function topoSVG(seed, cx, cy) {
+    // ── Fundo topográfico poligonal (morph orgânico) ───────
+    function buildTopo(container, seed, cx, cy) {
       let s = seed; const rnd = () => { s = Math.sin(s * 99991) * 1e4; return s - Math.floor(s); };
-      const verts = 16, sig = [];
-      for (let v = 0; v < verts; v++) sig.push(0.5 + rnd() * 0.95);
-      let paths = '';
-      for (let i = 1; i <= 13; i++) {
-        const base = i * 36, pts = [];
-        for (let v = 0; v < verts; v++) {
-          const a = v / verts * Math.PI * 2, rad = base * sig[v];
-          pts.push((cx + Math.cos(a) * rad).toFixed(1) + ',' + (cy + Math.sin(a) * rad).toFixed(1));
-        }
-        paths += '<path d="M' + pts.join('L') + 'Z" fill="none" stroke="#C6FF00" stroke-width="1" stroke-opacity="' + (0.035 + i * 0.0035).toFixed(3) + '"/>';
+      const verts = 16, sig = [], phase = [];
+      for (let v = 0; v < verts; v++) { sig.push(0.5 + rnd() * 0.95); phase.push(rnd() * 6.283); }
+      const NS = 'http://www.w3.org/2000/svg', rings = 13, paths = [];
+      const svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('class', 'topo-svg');
+      svg.setAttribute('viewBox', '0 0 1280 760');
+      svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+      for (let i = 1; i <= rings; i++) {
+        const pth = document.createElementNS(NS, 'path');
+        pth.setAttribute('fill', 'none');
+        pth.setAttribute('stroke', '#C6FF00');
+        pth.setAttribute('stroke-width', '1');
+        pth.setAttribute('stroke-opacity', (0.016 + i * 0.0016).toFixed(4));
+        svg.appendChild(pth); paths.push(pth);
       }
-      return '<svg class="topo-svg" viewBox="0 0 1280 760" preserveAspectRatio="xMidYMid slice">' + paths + '</svg>';
+      container.appendChild(svg);
+      return function (t) {
+        for (let i = 1; i <= rings; i++) {
+          const base = i * 36, pts = [];
+          for (let v = 0; v < verts; v++) {
+            const a = v / verts * 6.283;
+            const osc = 1 + 0.055 * Math.sin(t * 0.00035 + phase[v] + i * 0.13);
+            const rad = base * sig[v] * osc;
+            pts.push((cx + Math.cos(a) * rad).toFixed(1) + ',' + (cy + Math.sin(a) * rad).toFixed(1));
+          }
+          paths[i - 1].setAttribute('d', 'M' + pts.join('L') + 'Z');
+        }
+      };
     }
-    document.querySelectorAll('[data-topo]').forEach((sec, idx) => {
-      const div = document.createElement('div');
-      div.className = 'topo-bg';
-      div.innerHTML = topoSVG(7 + idx * 3, 980, 300);
-      sec.insertBefore(div, sec.firstChild);
-    });
+    (function initTopo() {
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const items = [];
+      document.querySelectorAll('[data-topo]').forEach((sec, idx) => {
+        const div = document.createElement('div'); div.className = 'topo-bg';
+        sec.insertBefore(div, sec.firstChild);
+        const frame = buildTopo(div, 7 + idx * 3, 980, 300);
+        frame(0);
+        items.push({ sec, frame, visible: false });
+      });
+      if (reduced || !items.length) return;
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        const it = items.find(x => x.sec === e.target); if (it) it.visible = e.isIntersecting;
+      }));
+      items.forEach(it => io.observe(it.sec));
+      function loop(t) { for (const it of items) if (it.visible) it.frame(t); requestAnimationFrame(loop); }
+      requestAnimationFrame(loop);
+    })();
   </script>
 </body>
 
