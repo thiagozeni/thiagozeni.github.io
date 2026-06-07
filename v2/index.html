@@ -1780,85 +1780,45 @@
     [data-topo] { position: relative; overflow: hidden; }
     [data-topo] > :not(.topo-bg) { position: relative; z-index: 1; }
 
-    /* ─── COVERFLOW 3D (Laboratório) ─────────────────────── */
-    .cases-grid.coverflow {
+    /* ─── COVERFLOW WEBGL (Laboratório) ──────────────────── */
+    .cases-grid.cf-gl {
       display: block;
       position: relative;
-      height: 560px;
-      perspective: 1900px;
       margin-top: 2.5rem;
     }
 
-    .coverflow .cf-stage {
-      position: absolute;
-      inset: 0;
-      transform-style: preserve-3d;
+    .cf-gl-stage {
+      position: relative;
+      width: 100%;
+      height: 470px;
+      cursor: grab;
+      touch-action: pan-y;
     }
 
-    .coverflow .cf-card {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 460px;
-      max-width: 82vw;
-      transform-style: preserve-3d;
-      transition: transform 0.55s var(--ease), opacity 0.5s var(--ease);
-      will-change: transform, opacity;
-      cursor: pointer;
-      backface-visibility: hidden;
+    .cf-gl-stage.grabbing { cursor: grabbing; }
+    .cf-gl-stage canvas { display: block; width: 100%; height: 100%; }
+
+    .cf-gl-info {
+      max-width: 620px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+      min-height: 150px;
     }
 
-    .coverflow .cf-card.cf-active {
-      cursor: default;
-      border-color: rgba(198, 255, 0, 0.35);
+    .cf-gl-info .cgc-top { justify-content: center; }
+    .cf-gl-info .case-tags { justify-content: center; }
+    .cf-gl-info .cgc-client { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0.6rem 0; }
+    .cf-gl-info .cgc-desc {
+      -webkit-line-clamp: unset; line-clamp: unset; display: block; max-width: 540px; margin: 0 auto;
     }
+    .cf-gl-info .cgc-cta { margin-top: 1.1rem; }
 
-    .cf-arrow {
-      position: absolute;
-      top: 46%;
-      transform: translateY(-50%);
-      z-index: 60;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: rgba(8, 8, 8, 0.62);
-      border: 1px solid var(--border);
-      color: var(--lime);
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      line-height: 1;
-      cursor: pointer;
-      transition: background 0.3s, border-color 0.3s;
+    .cf-gl-dots { display: flex; justify-content: center; gap: 9px; margin-top: 1.6rem; }
+    .cf-gl-dot {
+      width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0;
+      background: rgba(255, 255, 255, 0.18); cursor: pointer; transition: background 0.3s, transform 0.3s;
     }
-
-    .cf-arrow:hover { background: var(--lime-dim); border-color: var(--lime); }
-    .cf-prev { left: 0.5rem; }
-    .cf-next { right: 0.5rem; }
-
-    .cf-dots {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 9px;
-      z-index: 60;
-    }
-
-    .cf-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      border: none;
-      padding: 0;
-      background: rgba(255, 255, 255, 0.18);
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .cf-dot.on { background: var(--lime); transform: scale(1.3); }
+    .cf-gl-dot.on { background: var(--lime); transform: scale(1.3); }
 
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -3446,64 +3406,128 @@
       requestAnimationFrame(loop);
     })();
 
-    // ── Coverflow 3D (Laboratório) ─────────────────────────
-    (function initLabCoverflow() {
-      const root = document.getElementById('lab-coverflow');
-      if (!root || window.innerWidth < 880) return;   // mobile/estreito: mantém o grid
-      const cards = [...root.querySelectorAll('.case-grid-card')];
-      if (cards.length < 2) return;
+    // Coverflow do Laboratório: implementado em WebGL (OGL) no <script type="module"> ao fim do body.
+  </script>
 
-      const stage = document.createElement('div');
-      stage.className = 'cf-stage';
-      cards.forEach(c => {
-        c.classList.add('cf-card');
-        c.classList.remove('reveal', 'visible');
-        c.style.transitionDelay = '0s';
-        stage.appendChild(c);
+  <!-- ══════════════════════════════════════════════════════
+       COVERFLOW WEBGL (Laboratório) — OGL
+  ══════════════════════════════════════════════════════════ -->
+  <script type="module">
+  (async function () {
+    const root = document.getElementById('lab-coverflow');
+    if (!root || window.innerWidth < 880) return;
+    let OGL;
+    try { OGL = await import('https://esm.sh/ogl@1.0.11'); }
+    catch (e) { console.warn('OGL falhou ao carregar', e); return; }
+    const { Renderer, Camera, Transform, Plane, Mesh, Program, Texture } = OGL;
+
+    const cards = [...root.querySelectorAll('.case-grid-card')];
+    const items = cards.map(c => ({
+      src: c.querySelector('.lab-thumb img')?.getAttribute('src'),
+      title: c.querySelector('.cgc-client')?.textContent.trim(),
+      year: c.querySelector('.cgc-year')?.textContent.trim(),
+      agency: c.querySelector('.cgc-agency')?.textContent.trim(),
+      tags: [...c.querySelectorAll('.case-tag')].map(t => t.textContent.trim()),
+      desc: c.querySelector('.cgc-desc')?.textContent.trim(),
+      href: c.tagName === 'A' ? c.getAttribute('href') : null,
+      cta: c.querySelector('.cgc-cta')?.textContent.trim()
+    })).filter(it => it.src);
+    if (items.length < 2) return;
+
+    root.classList.add('cf-gl');
+    root.innerHTML = '<div class="cf-gl-stage"></div><div class="cf-gl-info"></div><div class="cf-gl-dots"></div>';
+    const stage = root.querySelector('.cf-gl-stage');
+    const info = root.querySelector('.cf-gl-info');
+    const dotsWrap = root.querySelector('.cf-gl-dots');
+
+    const vertex = `
+      attribute vec3 position; attribute vec2 uv;
+      uniform mat4 modelViewMatrix; uniform mat4 projectionMatrix; uniform float uSpeed;
+      varying vec2 vUv;
+      void main(){ vUv = uv; vec3 p = position;
+        p.z += sin(uv.x * 3.14159265) * uSpeed * 4.0;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
+    const fragment = `
+      precision highp float;
+      uniform sampler2D tMap; uniform vec2 uImg; uniform vec2 uPlane; uniform float uActive;
+      varying vec2 vUv;
+      void main(){
+        vec2 r = vec2(min((uPlane.x/uPlane.y)/(uImg.x/uImg.y),1.0), min((uPlane.y/uPlane.x)/(uImg.y/uImg.x),1.0));
+        vec2 uv = (vUv - 0.5) * r + 0.5;
+        vec3 col = texture2D(tMap, uv).rgb;
+        col *= mix(0.32, 1.0, uActive);
+        gl_FragColor = vec4(col, 1.0); }`;
+
+    const renderer = new Renderer({ alpha: true, dpr: Math.min(devicePixelRatio, 2) });
+    const gl = renderer.gl;
+    stage.appendChild(gl.canvas);
+    const camera = new Camera(gl, { fov: 45 });
+    camera.position.z = 5.2;
+    const scene = new Transform();
+    const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
+
+    const PW = 2.7, PH = 1.78, GAP = 3.05, CURVE_Z = 0.55, CURVE_RY = 0.18;
+
+    const medias = items.map((it) => {
+      const program = new Program(gl, { vertex, fragment, uniforms: {
+        tMap: { value: new Texture(gl) }, uSpeed: { value: 0 }, uActive: { value: 0 },
+        uImg: { value: [1, 1] }, uPlane: { value: [PW, PH] }
+      } });
+      const img = new Image(); img.crossOrigin = 'anonymous'; img.src = it.src;
+      img.onload = () => { program.uniforms.tMap.value.image = img; program.uniforms.uImg.value = [img.naturalWidth, img.naturalHeight]; };
+      const mesh = new Mesh(gl, { geometry, program });
+      mesh.scale.set(PW, PH, 1);
+      mesh.setParent(scene);
+      return { mesh, program };
+    });
+
+    items.forEach((it, i) => { const d = document.createElement('button'); d.className = 'cf-gl-dot'; d.addEventListener('click', () => { scroll.target = i * GAP; }); dotsWrap.appendChild(d); });
+
+    const scroll = { current: 0, target: 0, last: 0, ease: 0.08 };
+    let speed = 0, centerIdx = -1;
+    const total = items.length * GAP;
+
+    function resize() { const w = stage.clientWidth, h = stage.clientHeight; renderer.setSize(w, h); camera.perspective({ aspect: w / h }); }
+    resize(); window.addEventListener('resize', resize);
+
+    stage.addEventListener('wheel', e => { scroll.target += (e.deltaY + e.deltaX) * 0.0025; }, { passive: true });
+    let down = false, sx = 0, ss = 0, moved = false;
+    stage.addEventListener('pointerdown', e => { down = true; sx = e.clientX; ss = scroll.target; moved = false; stage.classList.add('grabbing'); });
+    window.addEventListener('pointermove', e => { if (!down) return; if (Math.abs(e.clientX - sx) > 4) moved = true; scroll.target = ss + (sx - e.clientX) * 0.006; });
+    window.addEventListener('pointerup', () => { if (!down) return; down = false; stage.classList.remove('grabbing'); scroll.target = Math.round(scroll.target / GAP) * GAP; });
+
+    function setInfo(i) {
+      const it = items[i];
+      info.innerHTML = '<div class="cgc-top"><span class="cgc-year">' + (it.year || 'Autoral') + '</span><span class="cgc-agency">' + (it.agency || '') + '</span></div>'
+        + '<h3 class="cgc-client">' + it.title + '</h3>'
+        + '<div class="case-tags">' + it.tags.map(t => '<span class="case-tag">' + t + '</span>').join('') + '</div>'
+        + '<p class="cgc-desc">' + (it.desc || '') + '</p>'
+        + (it.href ? '<a href="' + it.href + '" target="_blank" rel="noopener" class="cgc-cta">' + (it.cta || 'Ver projeto') + ' →</a>' : '');
+      [...dotsWrap.children].forEach((d, k) => d.classList.toggle('on', k === i));
+    }
+
+    function frame() {
+      scroll.current += (scroll.target - scroll.current) * scroll.ease;
+      speed += ((scroll.current - scroll.last) - speed) * 0.3;
+      scroll.last = scroll.current;
+      let best = 0, bestD = 1e9;
+      medias.forEach((m, i) => {
+        let x = i * GAP - scroll.current;
+        x = ((x % total) + total) % total; if (x > total / 2) x -= total;
+        const ax = Math.abs(x);
+        m.mesh.position.x = x;
+        m.mesh.position.z = -ax * CURVE_Z;
+        m.mesh.rotation.y = -x * CURVE_RY;
+        m.program.uniforms.uActive.value = Math.max(0, 1 - ax / (GAP * 0.62));
+        m.program.uniforms.uSpeed.value = speed;
+        if (ax < bestD) { bestD = ax; best = i; }
       });
-      root.classList.add('coverflow');
-      root.appendChild(stage);
-
-      const prev = document.createElement('button'); prev.className = 'cf-arrow cf-prev'; prev.setAttribute('aria-label', 'Anterior'); prev.textContent = '‹';
-      const next = document.createElement('button'); next.className = 'cf-arrow cf-next'; next.setAttribute('aria-label', 'Próximo'); next.textContent = '›';
-      const dots = document.createElement('div'); dots.className = 'cf-dots';
-      root.appendChild(prev); root.appendChild(next); root.appendChild(dots);
-      cards.forEach((c, i) => {
-        const d = document.createElement('button');
-        d.className = 'cf-dot'; d.setAttribute('aria-label', 'Projeto ' + (i + 1));
-        d.addEventListener('click', () => go(i));
-        dots.appendChild(d);
-      });
-
-      let active = 0;
-      function layout() {
-        cards.forEach((c, i) => {
-          const off = i - active, ab = Math.abs(off), sg = Math.sign(off);
-          const x = off * 52, z = -ab * 250, ry = -sg * Math.min(ab, 2) * 40, sc = ab === 0 ? 1 : 0.84;
-          c.style.transform = 'translate(-50%,-50%) translateX(' + x + '%) translateZ(' + z + 'px) rotateY(' + ry + 'deg) scale(' + sc + ')';
-          c.style.zIndex = String(50 - ab);
-          c.style.opacity = ab > 3 ? '0' : (ab === 0 ? '1' : String(Math.max(0.22, 0.72 - ab * 0.16)));
-          c.style.pointerEvents = ab > 3 ? 'none' : 'auto';
-          c.classList.toggle('cf-active', ab === 0);
-        });
-        [...dots.children].forEach((d, i) => d.classList.toggle('on', i === active));
-      }
-      function go(n) { active = Math.max(0, Math.min(cards.length - 1, n)); layout(); }
-
-      prev.addEventListener('click', () => go(active - 1));
-      next.addEventListener('click', () => go(active + 1));
-
-      let sx = null, sa = 0, moved = false;
-      root.addEventListener('pointerdown', e => { sx = e.clientX; sa = active; moved = false; });
-      window.addEventListener('pointermove', e => { if (sx == null) return; if (Math.abs(e.clientX - sx) > 6) moved = true; go(sa + Math.round((sx - e.clientX) / 110)); });
-      window.addEventListener('pointerup', () => { sx = null; });
-      cards.forEach((c, i) => c.addEventListener('click', e => { if (moved) { e.preventDefault(); return; } if (i !== active) { e.preventDefault(); go(i); } }));
-
-      root.setAttribute('tabindex', '0');
-      root.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') go(active - 1); else if (e.key === 'ArrowRight') go(active + 1); });
-
-      layout();
-    })();
+      if (best !== centerIdx) { centerIdx = best; setInfo(best); }
+      renderer.render({ scene, camera });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
   </script>
 </body>
 
