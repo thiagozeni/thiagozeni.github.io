@@ -1780,7 +1780,7 @@
     [data-topo] { position: relative; overflow: hidden; }
     [data-topo] > :not(.topo-bg) { position: relative; z-index: 1; }
 
-    /* ─── COVERFLOW WEBGL (Laboratório) ──────────────────── */
+    /* ─── VITRINE WEBGL estilo apechain (Laboratório) ────── */
     .cases-grid.cf-gl {
       display: block;
       position: relative;
@@ -1790,35 +1790,51 @@
     .cf-gl-stage {
       position: relative;
       width: 100%;
-      height: 470px;
+      height: 580px;
       cursor: grab;
-      touch-action: pan-y;
     }
 
     .cf-gl-stage.grabbing { cursor: grabbing; }
     .cf-gl-stage canvas { display: block; width: 100%; height: 100%; }
 
+    /* overlay de texto à esquerda (como o apechain) */
     .cf-gl-info {
-      max-width: 620px;
-      margin: 2.5rem auto 0;
-      text-align: center;
-      min-height: 150px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40%;
+      max-width: 470px;
+      z-index: 6;
+      text-align: left;
+      pointer-events: none;
     }
+    .cf-gl-info > * { pointer-events: auto; }
+    .cf-gl-info .cgc-client { font-size: clamp(2rem, 4.2vw, 3.6rem); line-height: 1; margin: 0.6rem 0 1rem; }
+    .cf-gl-info .case-tags { margin-bottom: 1.2rem; }
+    .cf-gl-info .cgc-desc { -webkit-line-clamp: unset; line-clamp: unset; display: block; }
+    .cf-gl-info .cgc-cta { margin-top: 1.4rem; }
 
-    .cf-gl-info .cgc-top { justify-content: center; }
-    .cf-gl-info .case-tags { justify-content: center; }
-    .cf-gl-info .cgc-client { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0.6rem 0; }
-    .cf-gl-info .cgc-desc {
-      -webkit-line-clamp: unset; line-clamp: unset; display: block; max-width: 540px; margin: 0 auto;
+    .cf-gl-nav {
+      position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%);
+      display: flex; flex-direction: column; gap: 12px; z-index: 6;
     }
-    .cf-gl-info .cgc-cta { margin-top: 1.1rem; }
+    .cf-gl-nav button {
+      width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+      background: rgba(5, 5, 5, 0.82); border: 1px solid rgba(198, 255, 0, 0.45); color: var(--lime);
+      font-family: var(--font-display); font-size: 1.1rem; line-height: 1; cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    }
+    .cf-gl-nav button:hover { background: var(--lime); color: var(--black); transform: scale(1.08); }
 
-    .cf-gl-dots { display: flex; justify-content: center; gap: 9px; margin-top: 1.6rem; }
-    .cf-gl-dot {
-      width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0;
-      background: rgba(255, 255, 255, 0.18); cursor: pointer; transition: background 0.3s, transform 0.3s;
+    .cf-gl-thumbs { position: absolute; bottom: 1rem; right: 1.2rem; display: flex; gap: 8px; z-index: 6; }
+    .cf-gl-thumb {
+      width: 50px; height: 28px; border-radius: 3px; overflow: hidden; padding: 0;
+      opacity: 0.4; cursor: pointer; border: 1px solid transparent; transition: opacity 0.3s, border-color 0.3s;
     }
-    .cf-gl-dot.on { background: var(--lime); transform: scale(1.3); }
+    .cf-gl-thumb.on { opacity: 1; border-color: var(--lime); }
+    .cf-gl-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -3435,41 +3451,48 @@
     if (items.length < 2) return;
 
     root.classList.add('cf-gl');
-    root.innerHTML = '<div class="cf-gl-stage"></div><div class="cf-gl-info"></div><div class="cf-gl-dots"></div>';
+    root.innerHTML = '<div class="cf-gl-stage"></div><div class="cf-gl-info"></div><div class="cf-gl-nav"></div><div class="cf-gl-thumbs"></div>';
     const stage = root.querySelector('.cf-gl-stage');
     const info = root.querySelector('.cf-gl-info');
-    const dotsWrap = root.querySelector('.cf-gl-dots');
+    const navWrap = root.querySelector('.cf-gl-nav');
+    const thumbsWrap = root.querySelector('.cf-gl-thumbs');
 
     const vertex = `
       attribute vec3 position; attribute vec2 uv;
       uniform mat4 modelViewMatrix; uniform mat4 projectionMatrix; uniform float uSpeed;
       varying vec2 vUv;
       void main(){ vUv = uv; vec3 p = position;
-        p.z += sin(uv.x * 3.14159265) * uSpeed * 4.0;
+        p.z += sin(uv.x * 3.14159265) * uSpeed * 3.5;
         gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
     const fragment = `
       precision highp float;
       uniform sampler2D tMap; uniform vec2 uImg; uniform vec2 uPlane; uniform float uActive;
       varying vec2 vUv;
+      float sdRound(vec2 p, vec2 b, float r){ vec2 d = abs(p) - b + r; return min(max(d.x, d.y), 0.0) + length(max(d, 0.0)) - r; }
       void main(){
         vec2 r = vec2(min((uPlane.x/uPlane.y)/(uImg.x/uImg.y),1.0), min((uPlane.y/uPlane.x)/(uImg.y/uImg.x),1.0));
         vec2 uv = (vUv - 0.5) * r + 0.5;
         vec3 col = texture2D(tMap, uv).rgb;
-        col *= mix(0.32, 1.0, uActive);
-        gl_FragColor = vec4(col, 1.0); }`;
+        col *= mix(0.4, 1.0, uActive);
+        vec2 pp = (vUv - 0.5) * uPlane;
+        float d = sdRound(pp, uPlane * 0.5, 0.16);
+        float alpha = 1.0 - smoothstep(0.0, 0.018, d);
+        gl_FragColor = vec4(col, alpha); }`;
 
     const renderer = new Renderer({ alpha: true, dpr: Math.min(devicePixelRatio, 2) });
     const gl = renderer.gl;
     stage.appendChild(gl.canvas);
-    const camera = new Camera(gl, { fov: 45 });
-    camera.position.z = 5.2;
+    const camera = new Camera(gl, { fov: 40 });
+    camera.position.z = 4.3;
     const scene = new Transform();
     const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
 
-    const PW = 2.7, PH = 1.78, GAP = 3.05, CURVE_Z = 0.55, CURVE_RY = 0.18;
+    // tamanho/ângulo/formato calibrados para a referência (apechain)
+    const PW = 3.8, PH = 2.1, GAP = 4.2, OFFSET_X = 1.0, CURVE_Z = 0.7;
+    function rotY(x) { return -Math.sign(x) * Math.min(Math.abs(x) * 0.3, 1.02); }
 
     const medias = items.map((it) => {
-      const program = new Program(gl, { vertex, fragment, uniforms: {
+      const program = new Program(gl, { vertex, fragment, transparent: true, uniforms: {
         tMap: { value: new Texture(gl) }, uSpeed: { value: 0 }, uActive: { value: 0 },
         uImg: { value: [1, 1] }, uPlane: { value: [PW, PH] }
       } });
@@ -3481,9 +3504,17 @@
       return { mesh, program };
     });
 
-    items.forEach((it, i) => { const d = document.createElement('button'); d.className = 'cf-gl-dot'; d.addEventListener('click', () => { scroll.target = i * GAP; }); dotsWrap.appendChild(d); });
+    const mkBtn = (label, fn) => { const b = document.createElement('button'); b.textContent = label; b.addEventListener('click', fn); navWrap.appendChild(b); };
+    mkBtn('‹', () => { scroll.target -= GAP; });
+    mkBtn('›', () => { scroll.target += GAP; });
+    items.forEach((it, i) => {
+      const t = document.createElement('button'); t.className = 'cf-gl-thumb';
+      t.innerHTML = '<img src="' + it.src + '" alt="">';
+      t.addEventListener('click', () => { scroll.target = i * GAP; });
+      thumbsWrap.appendChild(t);
+    });
 
-    const scroll = { current: 0, target: 0, last: 0, ease: 0.08 };
+    const scroll = { current: 0, target: 0, last: 0, ease: 0.085 };
     let speed = 0, centerIdx = -1;
     const total = items.length * GAP;
 
@@ -3493,7 +3524,7 @@
     stage.addEventListener('wheel', e => { scroll.target += (e.deltaY + e.deltaX) * 0.0025; }, { passive: true });
     let down = false, sx = 0, ss = 0, moved = false;
     stage.addEventListener('pointerdown', e => { down = true; sx = e.clientX; ss = scroll.target; moved = false; stage.classList.add('grabbing'); });
-    window.addEventListener('pointermove', e => { if (!down) return; if (Math.abs(e.clientX - sx) > 4) moved = true; scroll.target = ss + (sx - e.clientX) * 0.006; });
+    window.addEventListener('pointermove', e => { if (!down) return; if (Math.abs(e.clientX - sx) > 4) moved = true; scroll.target = ss + (sx - e.clientX) * 0.007; });
     window.addEventListener('pointerup', () => { if (!down) return; down = false; stage.classList.remove('grabbing'); scroll.target = Math.round(scroll.target / GAP) * GAP; });
 
     function setInfo(i) {
@@ -3503,7 +3534,7 @@
         + '<div class="case-tags">' + it.tags.map(t => '<span class="case-tag">' + t + '</span>').join('') + '</div>'
         + '<p class="cgc-desc">' + (it.desc || '') + '</p>'
         + (it.href ? '<a href="' + it.href + '" target="_blank" rel="noopener" class="cgc-cta">' + (it.cta || 'Ver projeto') + ' →</a>' : '');
-      [...dotsWrap.children].forEach((d, k) => d.classList.toggle('on', k === i));
+      [...thumbsWrap.children].forEach((t, k) => t.classList.toggle('on', k === i));
     }
 
     function frame() {
@@ -3515,10 +3546,10 @@
         let x = i * GAP - scroll.current;
         x = ((x % total) + total) % total; if (x > total / 2) x -= total;
         const ax = Math.abs(x);
-        m.mesh.position.x = x;
+        m.mesh.position.x = x + OFFSET_X;
         m.mesh.position.z = -ax * CURVE_Z;
-        m.mesh.rotation.y = -x * CURVE_RY;
-        m.program.uniforms.uActive.value = Math.max(0, 1 - ax / (GAP * 0.62));
+        m.mesh.rotation.y = rotY(x);
+        m.program.uniforms.uActive.value = Math.max(0, 1 - ax / (GAP * 0.6));
         m.program.uniforms.uSpeed.value = speed;
         if (ax < bestD) { bestD = ax; best = i; }
       });
