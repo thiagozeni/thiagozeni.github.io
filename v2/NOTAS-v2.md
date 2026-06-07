@@ -6,6 +6,24 @@
 
 ---
 
+## ⟳ Rodada 2 — seu feedback aplicado (2026-06-07)
+- **Hero:** tagline → *"Há quase 30 anos inovando através do marketing e da tecnologia."*
+- **Manifesto:** voltou ao texto antigo ajustado (*"Três décadas de inovação na comunicação..."*).
+- **Sobre:** voltou ao texto antigo ajustado (com sua lista rica de inovações + "aprendiz de italiano"). Destaques (highlights) restaurados na versão antiga.
+- **Trajetória:** revertida para a abordagem de cargos (não mais "Linha da Inovação"), com gancho de inovação reforçado no capítulo de Consultoria em IA.
+- **Competências:** removido o texto de apoio.
+- **Marcas:** +Gedore, Robust, Grupo K1 (Kappesberg · Idélli · UZ), Kildare, Freeway, Para-Evento. *(Saccaro já estava na lista como "Móveis Saccaro".)*
+- **Laboratório:** +Concierge Gastronômico, +Painel Esportivo, +Gestão Imobiliária (agora 6 cards). Descritos **sem nomear o cliente** — confirme se prefere nomear ou manter anônimo.
+
+### ⚠ Dois pontos que preciso te apontar
+1. **"Sócio de agência por mais de 20 anos"** voltou no Sobre (estava no texto que você colou). Ontem você apontou isso como **equívoco factual**. Se reconsiderou e é defensável, ótimo — mantenho. Se foi ao colar a versão antiga sem querer, me avisa.
+2. **Laboratório agora tem 6 cards** (3 autorais "puros" + 3 que você pediu, que são de clientes descritos de forma anônima). Pode ficar cheio — diga se quer enxugar ou se algum sai.
+
+### Ainda pendente (de rodadas anteriores)
+- **Números do hero:** 40 marcas / 20 prêmios ainda são chutes — me passa os reais.
+
+---
+
 ## Decisões que você já aprovou
 - **Eixo narrativo:** o fio da inovação (marketing é o palco; inovação é o papel; IA é o ápice).
 - **Prova de IA:** duas camadas — Oferta ("Como trabalho") + Laboratório (projetos autorais com IA).
