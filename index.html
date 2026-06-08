@@ -118,13 +118,18 @@
       color: var(--white);
       line-height: 1.65;
       overflow-x: hidden;
-      cursor: none;
     }
 
     a {
       color: inherit;
       text-decoration: none;
-      cursor: none;
+    }
+
+    /* Cursor custom só onde há ponteiro fino (mouse). Em touch o cursor nativo é preservado. */
+    #cursor-dot, #cursor-ring { display: none; }
+    @media (hover: hover) and (pointer: fine) {
+      body, a { cursor: none; }
+      #cursor-dot, #cursor-ring { display: block; }
     }
 
     img {
@@ -1412,6 +1417,18 @@
       z-index: 1;
     }
 
+    .form-status {
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      min-height: 1.2em;
+      opacity: 0;
+      transition: opacity 0.3s var(--ease);
+    }
+    .form-status.show { opacity: 1; }
+    .form-status.ok { color: var(--lime); }
+    .form-status.err { color: #ff6b6b; }
+
     .contact-links {
       display: flex;
       justify-content: center;
@@ -1971,6 +1988,19 @@
 
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
+
+  <!-- Smooth scroll (Lenis) — desligado sob prefers-reduced-motion; fallback = scroll nativo -->
+  <script type="module">
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      try {
+        const { default: Lenis } = await import('https://esm.sh/lenis');
+        const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        window.lenis = lenis;
+      } catch (err) { /* sem rede / falha de import: mantém scroll nativo */ }
+    }
+  </script>
 
   <!-- ── Preloader ── -->
   <div id="preloader">
@@ -2980,6 +3010,7 @@
           <span>Enviar mensagem</span>
           <span>→</span>
         </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
       <div class="contact-links reveal">
         <a href="mailto:thiagoazeni@gmail.com" class="contact-link">✉ thiagoazeni@gmail.com</a>
@@ -2993,6 +3024,9 @@
     <div class="footer-logo">ZN.</div>
     <div class="footer-copy">&copy; 2026 Thiago Zeni · Todos os direitos reservados</div>
   </footer>
+
+  <!-- Config pública (Web3Forms access key) — ver config.js -->
+  <script src="config.js"></script>
 
   <script>
     // ── Preloader ──────────────────────────────────────────
@@ -3017,29 +3051,31 @@
       progress.style.width = ((window.scrollY / max) * 100) + '%';
     }, { passive: true });
 
-    // ── Custom Cursor ──────────────────────────────────────
-    const dot = document.getElementById('cursor-dot');
-    const ring = document.getElementById('cursor-ring');
-    let mx = 0, my = 0, rx = 0, ry = 0;
+    // ── Custom Cursor (apenas em dispositivos com ponteiro fino) ──
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      const dot = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+      let mx = 0, my = 0, rx = 0, ry = 0;
 
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = mx + 'px';
-      dot.style.top = my + 'px';
-    });
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+      });
 
-    (function animRing() {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      ring.style.left = rx + 'px';
-      ring.style.top = ry + 'px';
-      requestAnimationFrame(animRing);
-    })();
+      (function animRing() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animRing);
+      })();
 
-    document.querySelectorAll('a, button, .skill-cell, .award-card, .brand-chip, .exp-item, .ab-item').forEach(el => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
+      document.querySelectorAll('a, button, .skill-cell, .award-card, .brand-chip, .exp-item, .ab-item').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+    }
 
     // ── Navbar scroll ──────────────────────────────────────
     // No desktop o hero fica pinned por 200vh de scrub — só muda o nav
@@ -3180,18 +3216,48 @@
       window.addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(buildAll, 200); });
     })();
 
-    // ── Contact form ───────────────────────────────────────
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
+    // ── Contact form (Web3Forms) ───────────────────────────
+    // A access key vem de config.js (window.WEB3FORMS_KEY). Edite lá, não aqui.
+    const WEB3FORMS_KEY = window.WEB3FORMS_KEY || 'COLE_SUA_ACCESS_KEY_AQUI';
+
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
       e.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      const subject = encodeURIComponent('Contato via site — ' + name);
-      const body = encodeURIComponent('Nome: ' + name + '\nE-mail: ' + email + '\n\n' + message);
-      window.location.href = 'mailto:thiagoazeni@gmail.com?subject=' + subject + '&body=' + body;
-      const btn = this.querySelector('.btn-submit span');
-      btn.textContent = 'Abrindo seu e-mail…';
-      setTimeout(() => { btn.textContent = 'Enviar mensagem'; this.reset(); }, 3000);
+      const form = this;
+      const btn = form.querySelector('.btn-submit span');
+      const status = document.getElementById('formStatus');
+      const original = btn.textContent;
+      const setStatus = (msg, kind) => {
+        status.textContent = msg;
+        status.className = 'form-status show' + (kind ? ' ' + kind : '');
+      };
+
+      btn.textContent = 'Enviando…';
+      status.className = 'form-status';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            subject: 'Contato via site — ' + document.getElementById('name').value,
+            from_name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+          }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          setStatus('Mensagem enviada — obrigado! Retorno em breve.', 'ok');
+          form.reset();
+        } else {
+          throw new Error(data.message || 'Falha no envio');
+        }
+      } catch (err) {
+        setStatus('Não consegui enviar agora. Tente novamente ou escreva direto para thiagoazeni@gmail.com.', 'err');
+      } finally {
+        btn.textContent = original;
+      }
     });
 
     // ── Parallax ───────────────────────────────────────────
@@ -3356,7 +3422,11 @@
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        if (target) {
+          e.preventDefault();
+          if (window.lenis) window.lenis.scrollTo(target);
+          else target.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
 
