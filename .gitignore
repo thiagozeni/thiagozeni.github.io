@@ -32,3 +32,10 @@ build/
 # Secrets
 service_account.json
 *.pem
+
+# Material de referência / backup local (não vai pra produção)
+_brand/
+_cases/
+_info/
+_old/
+img/perfil_thiago_zeni.mp4
