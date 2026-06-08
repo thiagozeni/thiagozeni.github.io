@@ -4,31 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiago Zeni — Inovação, Estratégia & Inteligência Artificial</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <title>Thiago Zeni — Marketing Digital & Liderança Executiva</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
   <!-- SEO -->
-  <!-- [REVISAR v2] metadados reposicionados para inovação-first -->
   <meta name="description"
-    content="Thiago Zeni — 28 anos inovando dentro do marketing, da web à Inteligência Artificial. Estrategista de negócios e consultor de Inovação & IA. Porto Alegre · Florianópolis · São Paulo." />
+    content="Thiago Zeni — 28 anos de experiência em Marketing Digital, Inovação e Inteligência Artificial. Especialista em liderança executiva e construção de marcas. Porto Alegre · Florianópolis · São Paulo." />
   <meta name="author" content="Thiago Zeni" />
   <link rel="canonical" href="https://thiagozeni.github.io/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thiagozeni.github.io/" />
-  <meta property="og:title" content="Thiago Zeni — Inovação, Estratégia & Inteligência Artificial" />
+  <meta property="og:title" content="Thiago Zeni — Marketing Digital & Liderança Executiva" />
   <meta property="og:description"
-    content="28 anos fazendo marcas inovarem — da web à Inteligência Artificial. Consultor de Inovação & IA com a ótica de quem dirige o negócio." />
+    content="28 anos construindo marcas que importam. Especialista em Marketing Digital, Inovação e Inteligência Artificial." />
   <meta property="og:image" content="https://thiagozeni.github.io/img/perfil_thiago_zeni.jpg" />
   <meta property="og:locale" content="pt_BR" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Thiago Zeni — Inovação, Estratégia & Inteligência Artificial" />
+  <meta name="twitter:title" content="Thiago Zeni — Marketing Digital & Liderança Executiva" />
   <meta name="twitter:description"
-    content="28 anos fazendo marcas inovarem — da web à Inteligência Artificial. Consultor de Inovação & IA com a ótica de quem dirige o negócio." />
+    content="28 anos construindo marcas que importam. Especialista em Marketing Digital, Inovação e Inteligência Artificial." />
   <meta name="twitter:image" content="https://thiagozeni.com/img/perfil_thiago_zeni.jpg" />
 
   <!-- Schema.org / JSON-LD -->
@@ -39,8 +37,8 @@
     "name": "Thiago Zeni",
     "url": "https://thiagozeni.com/",
     "image": "https://thiagozeni.com/img/perfil_thiago_zeni.jpg",
-    "jobTitle": "Consultor de Inovação & Inteligência Artificial",
-    "description": "28 anos inovando dentro do marketing, da web à Inteligência Artificial. Estrategista de negócios e consultor de Inovação & IA.",
+    "jobTitle": "Especialista em Marketing Digital, IA & Liderança Executiva",
+    "description": "28 anos de experiência em Marketing Digital, Inovação e Inteligência Artificial. Construindo marcas que importam.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Porto Alegre",
@@ -296,7 +294,7 @@
 
     .nav-links {
       display: flex;
-      gap: 1.7rem;
+      gap: 2.5rem;
       list-style: none;
     }
 
@@ -639,46 +637,32 @@
       max-width: 1100px;
     }
 
-    /* revelação por "cortina": UMA máscara por LINHA de texto (estilo Lando) — assinatura do site */
-    #manifestoText,
-    .section-title,
-    .contact-headline {
-      position: relative;
-    }
-
     .manifesto-text .word {
       display: inline-block;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
     }
 
-    .line-mask {
-      position: absolute;
-      background: #242424;          /* títulos em fundo escuro */
-      transform: scaleX(1);
-      transform-origin: right;
-      transition: transform 0.6s var(--ease) var(--d, 0s);
-      pointer-events: none;
-      z-index: 2;
+    .manifesto-text .word.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    #manifestoText .line-mask {
-      background: #d6d6d3;          /* manifesto (fundo claro) */
+    /* Lime highlight on manifesto (light bg) */
+    .manifesto-text .accent {
+      color: #050505;
+      background: var(--lime);
+      padding: 0 0.12em;
+      border-radius: 2px;
     }
 
-    .revealed .line-mask {
-      transform: scaleX(0);
-    }
-
-    /* palavras-chave: Cormorant itálico + traço lime (toque de cor legível no claro) */
-    .manifesto-text .key {
+    .manifesto-text .italic {
       font-family: var(--font-serif);
       font-style: italic;
-      font-weight: 500;
+      font-weight: 300;
       font-size: 1.1em;
-      box-shadow: inset 0 -0.09em 0 var(--lime);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .line-mask { display: none; }
+      color: #555;
     }
 
     /* ─── ABOUT ──────────────────────────────────────────── */
@@ -1682,73 +1666,6 @@
       }
     }
 
-    /* ─── LAB THUMBS ─────────────────────────────────────── */
-    .lab-thumb {
-      position: relative;
-      margin: -2.5rem -2.5rem 0;
-      aspect-ratio: 16 / 7;
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-      border-bottom: 1px solid var(--border2);
-      background:
-        radial-gradient(120% 130% at 78% 12%, rgba(198, 255, 0, 0.12), transparent 55%),
-        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0) 0 0 / 20px 20px,
-        linear-gradient(135deg, #101010, #060606);
-    }
-
-    .lab-thumb::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 3;
-      background:
-        radial-gradient(130% 140% at 82% 8%, rgba(198, 255, 0, 0.05), transparent 52%),
-        linear-gradient(to bottom, transparent 55%, var(--panel) 100%);
-      pointer-events: none;
-    }
-
-    .lab-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      /* harmonização leve entre as telas claras e dark (sem escurecer) */
-      filter: grayscale(0.18) contrast(1.03) saturate(0.92);
-      transition: transform 0.5s var(--ease);
-    }
-
-    .case-grid-card:hover .lab-thumb img {
-      transform: scale(1.03);
-    }
-
-    /* camada multiply suave: só dá uma leve liga entre as telas, sem escurecer */
-    .lab-thumb::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background: #4c4c52;
-      mix-blend-mode: multiply;
-      pointer-events: none;
-    }
-
-    .lab-thumb-icon {
-      width: 58px;
-      height: 58px;
-      stroke: var(--lime);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      opacity: 0.72;
-      filter: drop-shadow(0 0 14px rgba(198, 255, 0, 0.4));
-    }
-
-    .case-grid-card:hover .lab-thumb-icon {
-      opacity: 1;
-    }
-
     /* ─── GENERIC REVEAL ─────────────────────────────────── */
     .reveal {
       opacity: 0;
@@ -1760,82 +1677,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* ─── FUNDO TOPOGRÁFICO POLIGONAL ────────────────────── */
-    .topo-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .topo-svg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    [data-topo] { position: relative; overflow: hidden; }
-    [data-topo] > :not(.topo-bg) { position: relative; z-index: 1; }
-
-    /* ─── VITRINE WEBGL estilo apechain (Laboratório) ────── */
-    .cases-grid.cf-gl {
-      display: block;
-      position: relative;
-      margin-top: 2.5rem;
-    }
-
-    .cf-gl-stage {
-      position: relative;
-      width: 100%;
-      height: 680px;
-      cursor: grab;
-    }
-
-    .cf-gl-stage.grabbing { cursor: grabbing; }
-    .cf-gl-stage canvas { display: block; width: 100%; height: 100%; }
-
-    /* overlay de texto à esquerda (como o apechain) */
-    .cf-gl-info {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(calc(-50% - 200px));
-      width: 40%;
-      max-width: 470px;
-      z-index: 6;
-      text-align: left;
-      pointer-events: none;
-    }
-    .cf-gl-info > * { pointer-events: auto; }
-    .cf-gl-info .cgc-client { font-size: clamp(1.5rem, 3vw, 2.6rem); line-height: 1.05; margin: 0.6rem 0 1rem;
-      color: transparent; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #fff; }
-    .cf-gl-info .case-tags { margin-bottom: 1.2rem; }
-    .cf-gl-info .cgc-desc { -webkit-line-clamp: unset; line-clamp: unset; display: block; }
-    .cf-gl-info .cgc-cta { margin-top: 1.4rem; }
-
-    .cf-gl-nav {
-      position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%);
-      display: flex; flex-direction: column; gap: 12px; z-index: 6;
-    }
-    .cf-gl-nav button {
-      width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
-      background: rgba(5, 5, 5, 0.82); border: 1px solid rgba(198, 255, 0, 0.45); color: var(--lime);
-      font-family: var(--font-display); font-size: 1.1rem; line-height: 1; cursor: pointer;
-      backdrop-filter: blur(6px);
-      transition: background 0.3s, border-color 0.3s, transform 0.2s;
-    }
-    .cf-gl-nav button:hover { background: var(--lime); color: var(--black); transform: scale(1.08); }
-
-    .cf-gl-thumbs { position: absolute; bottom: calc(1rem + 100px); right: 1.2rem; display: flex; gap: 8px; z-index: 6; }
-    .cf-gl-thumb {
-      width: 50px; height: 28px; border-radius: 3px; overflow: hidden; padding: 0;
-      opacity: 0.4; cursor: pointer; border: 1px solid transparent; transition: opacity 0.3s, border-color 0.3s;
-    }
-    .cf-gl-thumb.on { opacity: 1; border-color: var(--lime); }
-    .cf-gl-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -1987,11 +1828,10 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">Sobre</a></li>
       <li><a href="#experience">Trajetória</a></li>
-      <li><a href="#skills">Competências</a></li>
-      <li><a href="#oferta">Como trabalho</a></li>
+      <li><a href="#brands">Marcas</a></li>
       <li><a href="#cases">Cases</a></li>
-      <li><a href="#lab">Laboratório</a></li>
       <li><a href="#awards">Prêmios</a></li>
+      <li><a href="#contact">Contato</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Fale comigo</a>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
@@ -2007,14 +1847,10 @@
       style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Sobre</a>
     <a href="#experience" onclick="closeMobile()"
       style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Trajetória</a>
-    <a href="#skills" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Competências</a>
-    <a href="#oferta" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Como trabalho</a>
+    <a href="#brands" onclick="closeMobile()"
+      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Marcas</a>
     <a href="#cases" onclick="closeMobile()"
       style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Cases</a>
-    <a href="#lab" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Laboratório</a>
     <a href="#awards" onclick="closeMobile()"
       style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Prêmios</a>
     <a href="#contact" onclick="closeMobile()"
@@ -2027,7 +1863,7 @@
   <div id="hero-pin">
     <section id="hero">
       <div class="hero-bg-photo">
-        <video id="hero-video" src="/videos/perfil-360.mp4" muted playsinline preload="auto"></video>
+        <video id="hero-video" src="videos/perfil-360.mp4" muted playsinline preload="auto"></video>
       </div>
 
       <div class="hero-scroll">
@@ -2043,22 +1879,21 @@
         </h1>
         <div class="hero-bottom">
           <p class="hero-tagline">
-            Inovação &middot; Estratégia de Negócio &middot; Inteligência Artificial<br>
-            <em>Há quase 30 anos inovando através do marketing e da tecnologia.</em>
+            Marketing Digital &middot; Inovação &middot; Inteligência Artificial<br>
+            <em>28 anos construindo marcas que importam.</em>
           </p>
           <div class="hero-stats">
             <div class="hero-stat">
               <span class="hero-stat-num" data-target="28">0</span>
-              <span class="hero-stat-label">Anos inovando</span>
+              <span class="hero-stat-label">Anos de experiência</span>
             </div>
-            <!-- [REVISAR v2] números a confirmar: 40 marcas (com submarcas) · 20 prêmios -->
             <div class="hero-stat">
               <span class="hero-stat-num" data-target="40">0</span>
-              <span class="hero-stat-label">Marcas atendidas</span>
+              <span class="hero-stat-label">Grandes marcas</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-num" data-target="20">0</span>
-              <span class="hero-stat-label">Prêmios &amp; distinções</span>
+              <span class="hero-stat-num" data-target="10">0</span>
+              <span class="hero-stat-label">Vezes premiado</span>
             </div>
           </div>
         </div>
@@ -2073,7 +1908,7 @@
     <span class="manifesto-deco" aria-hidden="true">"</span>
     <div class="manifesto-inner">
       <div class="manifesto-label">Manifesto</div>
-      <p class="manifesto-text" id="manifestoText">Três décadas de inovação na comunicação, e uma vida de entusiasmo tecnológico: conectando marcas às revoluções que transformam a sociedade.
+      <p class="manifesto-text" id="manifestoText">Três décadas de marketing digital, uma vida de entusiasmo tecnológico: conectando a inovação que diferencia marcas à revolução que transforma sociedades.
       </p>
     </div>
   </section>
@@ -2091,7 +1926,7 @@
           <div class="about-photo-frame2"></div>
           <div class="about-photo-corner"></div>
           <div class="about-photo-corner2"></div>
-          <img src="/img/perfil_thiago_zeni.jpg" alt="Thiago Zeni" />
+          <img src="img/perfil_thiago_zeni.jpg" alt="Thiago Zeni" />
         </div>
       </div>
 
@@ -2107,17 +1942,14 @@
             direção de arte, planejamento, gestão de contas, novos negócios e consultoria estratégica.
           </p>
           <p>
-            Sócio de agência digital por <strong>mais de 10 anos</strong>, construí e liderei
+            Sócio de agência digital por <strong>mais de 20 anos</strong>, construí e liderei
             estratégias de marketing digital para algumas das maiores marcas do Brasil e da
-            América Latina — da Stihl ao Grupo Harman, de Mormaii à Unicasa.
+            América Latina — da Stihl ao Grupo Harman, de Mormaii à Coca-Cola Clothing.
           </p>
           <p>
-            Mas o fio que costura tudo nunca foi o marketing — foi a <strong>inovação</strong>. Sempre
-            trouxe o próximo passo antes de virar tendência: motion, advergames, social-media, realidade
-            aumentada, realidade virtual, pesquisas (net)nográficas, e-commerce omnichannel, mídia de
-            performance, produções web-native, EADs, BI como motor de inteligência. Hoje dedico-me à
-            <strong>consultoria em Inovação e Inteligência Artificial</strong> — a mais transformadora
-            dessas ondas. Fluente em inglês, bom nível em espanhol e aprendiz de italiano.
+            Mais recentemente, dedico-me à <strong>consultoria em Inovação e Inteligência Artificial</strong>,
+            apoiando empresas de setores relevantes na implementação prática de IA. Fluente em inglês,
+            com bom nível em espanhol.
           </p>
         </div>
 
@@ -2135,7 +1967,7 @@
           <div class="ab-item">
             <div class="ab-icon">💼</div>
             <div class="ab-title">Sócio &amp; Investidor</div>
-            <div class="ab-desc">Mais de 10 anos como sócio de agência digital e investidor ativo.</div>
+            <div class="ab-desc">Mais de 20 anos como sócio de agência digital e investidor ativo.</div>
           </div>
           <div class="ab-item">
             <div class="ab-icon">🤖</div>
@@ -2158,9 +1990,8 @@
           <h2 class="section-title">Experiência<br>Profissional</h2>
         </div>
         <p
-          style="max-width:360px; font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.6;">
-          Quase três décadas no digital brasileiro — e, em cada capítulo, a mesma busca por trazer
-          o próximo passo antes de virar tendência.
+          style="max-width:340px; font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.6;">
+          Uma jornada de quase três décadas em empresas e projetos que moldaram o digital brasileiro.
         </p>
       </div>
 
@@ -2169,13 +2000,12 @@
         <div class="exp-item">
           <div class="exp-left">
             <div class="exp-date">Presente</div>
-            <div class="exp-company">Consultoria multi-setorial</div>
+            <div class="exp-company">Multi-setorial</div>
           </div>
           <div class="exp-right">
             <div class="exp-role">Consultor de Inovação &amp; IA</div>
-            <p class="exp-desc">Consultoria para empresas de relevância em diversos setores, atuando junto às áreas
-              de inovação na identificação de oportunidades e na implementação prática de inteligência artificial —
-              a mais transformadora das ondas que venho surfando há quase 30 anos.</p>
+            <p class="exp-desc">Consultoria para empresas de relevância em diversos setores, atuando junto às áreas de
+              inovação na identificação de oportunidades e implementação de soluções de inteligência artificial.</p>
             <div class="exp-tags">
               <span class="exp-tag">Inteligência Artificial</span>
               <span class="exp-tag">Inovação Corporativa</span>
@@ -2192,7 +2022,7 @@
           <div class="exp-right">
             <div class="exp-role">Investidor</div>
             <p class="exp-desc">Identificação e apoio a iniciativas com potencial de crescimento no ecossistema de
-              tecnologia e inovação digital.</p>
+              tecnologia e marketing digital.</p>
             <div class="exp-tags">
               <span class="exp-tag">Investimentos</span>
               <span class="exp-tag">Tecnologia</span>
@@ -2207,8 +2037,8 @@
           </div>
           <div class="exp-right">
             <div class="exp-role">CMO / CTO</div>
-            <p class="exp-desc">Liderança dupla de Marketing e Tecnologia — uma combinação rara que uniu visão
-              estratégica de comunicação à execução tecnológica para escalar a operação da empresa.</p>
+            <p class="exp-desc">Liderança dupla de Marketing e Tecnologia, unindo visão estratégica de comunicação à
+              execução tecnológica para escalar a operação da empresa.</p>
             <div class="exp-tags">
               <span class="exp-tag">CMO</span>
               <span class="exp-tag">CTO</span>
@@ -2277,8 +2107,8 @@
   <section id="skills">
     <div class="skills-inner">
       <div class="skills-header reveal">
-        <div class="section-num">03 — Competências</div>
-        <h2 class="section-title">Camadas que<br>se acumulam</h2>
+        <div class="section-num">03 — Habilidades</div>
+        <h2 class="section-title">Funções que<br>já desempenhei</h2>
       </div>
       <div class="skills-grid reveal">
         <div class="skill-cell" data-num="01">
@@ -2326,56 +2156,10 @@
   </section>
 
   <!-- ══════════════════════════════════════════════════════
-       OFERTA — "Como trabalho"  [SEÇÃO NOVA · rascunho a validar]
-       [REVISAR v2] Oferta proposta por mim — tom sóbrio, sem CTA marketeiro.
-       Revise os 4 modos, os nomes e os textos; é um ponto de partida, não a sua palavra final.
-  ══════════════════════════════════════════════════════════ -->
-  <section id="oferta" data-topo style="padding:9rem 3rem; background:var(--deep);">
-    <div style="max-width:1300px; margin:0 auto;">
-      <div class="reveal" style="margin-bottom:3.5rem;">
-        <div class="section-num">04 — Como trabalho</div>
-        <h2 class="section-title">Inovação que<br>vira decisão</h2>
-        <p style="max-width:640px; margin-top:1.5rem; font-family:var(--font-serif); font-style:italic;
-          font-size:1.15rem; color:var(--muted); line-height:1.65;">
-          Não vendo pacotes. Sento ao lado de quem dirige o negócio e traduzo inovação e IA em
-          decisão e operação — com a ótica de gestor, não de fornecedor. Quatro formas de fazer isso:
-        </p>
-      </div>
-
-      <div class="about-highlights reveal">
-        <div class="ab-item">
-          <div class="ab-icon">🧭</div>
-          <div class="ab-title">Diagnóstico de maturidade</div>
-          <div class="ab-desc">Onde a IA cabe — e onde não — no seu negócio. Leitura honesta de oportunidades,
-            riscos e prontidão real.</div>
-        </div>
-        <div class="ab-item">
-          <div class="ab-icon">🗺️</div>
-          <div class="ab-title">Roadmap de inovação</div>
-          <div class="ab-desc">Da oportunidade ao plano: prioridades, sequência e os ganhos que justificam
-            cada passo.</div>
-        </div>
-        <div class="ab-item">
-          <div class="ab-icon">🛠️</div>
-          <div class="ab-title">Implementação assistida</div>
-          <div class="ab-desc">Do conceito ao sistema rodando. Não paro no slide — acompanho até a inovação
-            virar operação.</div>
-        </div>
-        <div class="ab-item">
-          <div class="ab-icon">🤝</div>
-          <div class="ab-title">Advisory de board</div>
-          <div class="ab-desc">Conselho contínuo a lideranças que querem decidir sobre IA com quem entende de
-            tecnologia <em>e</em> de negócio.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════
        BRANDS MARQUEE
   ══════════════════════════════════════════════════════════ -->
   <section id="brands">
-    <p class="brands-label">05 — Marcas que confiaram no meu trabalho</p>
+    <p class="brands-label">04 — Marcas que confiaram no meu trabalho</p>
     <div class="marquee-wrapper">
       <div class="marquee-row">
         <div class="marquee-track">
@@ -2388,8 +2172,6 @@
           <div class="brand-chip"><span class="brand-chip-name">Móveis Saccaro</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Minelab</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Tri-Jóias</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Gedore</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Robust</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Stihl</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Grupo Harman AL</span><span class="brand-chip-sub">JBL · AKG · Harman Kardon</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Mormaii</span></div>
@@ -2399,8 +2181,6 @@
           <div class="brand-chip"><span class="brand-chip-name">Móveis Saccaro</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Minelab</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Tri-Jóias</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Gedore</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Robust</span></div>
         </div>
       </div>
       <div class="marquee-row">
@@ -2413,8 +2193,6 @@
           <div class="brand-chip"><span class="brand-chip-name">Lojas Colombo</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Lojas Lebes</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo K1</span><span class="brand-chip-sub">Kappesberg · Idélli · UZ</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Kildare</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Grupo Unicasa</span><span class="brand-chip-sub">Favorita · Dellano · New · Casa Brasileira</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Bontempo</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Florense</span></div>
@@ -2423,8 +2201,6 @@
           <div class="brand-chip"><span class="brand-chip-name">Lojas Colombo</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Lojas Lebes</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo K1</span><span class="brand-chip-sub">Kappesberg · Idélli · UZ</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Kildare</span></div>
         </div>
       </div>
       <div class="marquee-row">
@@ -2438,8 +2214,6 @@
           <div class="brand-chip"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Pamplona Alimentos</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Calçados Bibi</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Freeway</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Para-Evento</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Sicred</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Ford Motorcraft</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Shell</span></div>
@@ -2449,8 +2223,6 @@
           <div class="brand-chip"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Pamplona Alimentos</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Calçados Bibi</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Freeway</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Para-Evento</span></div>
         </div>
       </div>
     </div>
@@ -2463,19 +2235,19 @@
     <div class="cases-inner">
       <div class="cases-header reveal">
         <div>
-          <div class="section-num">06 — Cases</div>
-          <h2 class="section-title">Inovações que<br>viraram resultado</h2>
+          <div class="section-num">05 — Cases</div>
+          <h2 class="section-title">Cases de<br>Sucesso</h2>
         </div>
         <p
           style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
-          Cada um nasceu de uma aposta no que ainda não era padrão — e virou
-          impacto real em audiência, reputação e reconhecimento de mercado.
+          Projetos que geraram impacto real — em audiência, reputação
+          e reconhecimento de mercado.
         </p>
       </div>
       <div class="cases-grid">
 
         <!-- Case: Florense — IA & Inovação -->
-        <a href="/cases/florense.html" class="case-grid-card reveal" id="case-florense">
+        <a href="cases/florense.html" class="case-grid-card reveal" id="case-florense">
           <div class="cgc-top">
             <span class="cgc-year">2024–2025</span>
             <span class="cgc-agency">Consultoria independente</span>
@@ -2503,7 +2275,7 @@
         </a>
 
         <!-- Case: Programa 4 por 4 -->
-        <a href="/cases/programa-4por4.html" class="case-grid-card reveal" id="case-4por4">
+        <a href="cases/programa-4por4.html" class="case-grid-card reveal" id="case-4por4">
           <div class="cgc-top">
             <span class="cgc-year">2021–2024</span>
             <span class="cgc-agency">Brasil Media House</span>
@@ -2543,7 +2315,7 @@
         </a>
 
         <!-- Case: JBL Wind -->
-        <a href="/cases/jbl-wind.html" class="case-grid-card reveal" id="case-jbl">
+        <a href="cases/jbl-wind.html" class="case-grid-card reveal" id="case-jbl">
           <div class="cgc-top">
             <span class="cgc-year">2021</span>
             <span class="cgc-agency">via BRA Digital</span>
@@ -2584,7 +2356,7 @@
         </a>
 
         <!-- Case: Pró-Jardim STIHL -->
-        <a href="/cases/stihl-projardim.html" class="case-grid-card reveal" id="case-projardim">
+        <a href="cases/stihl-projardim.html" class="case-grid-card reveal" id="case-projardim">
           <div class="cgc-top">
             <span class="cgc-year">2020–2021</span>
             <span class="cgc-agency">via BRA Digital</span>
@@ -2623,7 +2395,7 @@
         </a>
 
         <!-- Case: STIHL VR Cafezais 360° -->
-        <a href="/cases/stihl-vr-cafezais.html" class="case-grid-card reveal" id="case-vr-cafezais">
+        <a href="cases/stihl-vr-cafezais.html" class="case-grid-card reveal" id="case-vr-cafezais">
           <div class="cgc-top">
             <span class="cgc-year">2020</span>
             <span class="cgc-agency">via BRA Digital</span>
@@ -2661,7 +2433,7 @@
         </a>
 
         <!-- Case: STIHL 50 Dias de Verde -->
-        <a href="/cases/stihl-50-dias.html" class="case-grid-card reveal" id="case-stihl">
+        <a href="cases/stihl-50-dias.html" class="case-grid-card reveal" id="case-stihl">
           <div class="cgc-top">
             <span class="cgc-year">2018</span>
             <span class="cgc-agency">via BRA Digital</span>
@@ -2702,7 +2474,7 @@
         </a>
 
         <!-- Case: Mormaii Omnichannel -->
-        <a href="/cases/mormaii-omnichannel.html" class="case-grid-card reveal" id="case-mormaii">
+        <a href="cases/mormaii-omnichannel.html" class="case-grid-card reveal" id="case-mormaii">
           <div class="cgc-top">
             <span class="cgc-year">2017</span>
             <span class="cgc-agency">via BRA Digital</span>
@@ -2745,137 +2517,13 @@
   </section>
 
   <!-- ══════════════════════════════════════════════════════
-       LABORATÓRIO  [SEÇÃO NOVA · curadoria conservadora a confirmar]
-       [REVISAR v2] Só projetos AUTORAIS e públicos — zero conteúdo de cliente.
-       Confirme/edite os cards; há mais candidatos na sua bagagem (NOTAS-v2.md).
-  ══════════════════════════════════════════════════════════ -->
-  <section id="lab" data-topo style="padding:9rem 3rem; background:var(--deep);">
-    <div class="cases-inner">
-      <div class="cases-header reveal">
-        <div>
-          <div class="section-num">07 — Laboratório</div>
-          <h2 class="section-title">Feito<br>com IA</h2>
-        </div>
-        <p
-          style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
-          Não basta falar de IA — eu construo com ela. Projetos autorais onde a inteligência
-          artificial não é o tema: é a ferramenta de produção.
-        </p>
-      </div>
-
-      <div class="cases-grid" id="lab-coverflow">
-
-        <a href="https://werdumfight.com" target="_blank" rel="noopener" class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/v2/img/lab/werdumfight.jpg" alt="Werdum Fight" loading="lazy" style="object-position:center"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">app stores · web</span>
-          </div>
-          <h3 class="cgc-client">Werdum Fight</h3>
-          <div class="case-tags">
-            <span class="case-tag">Game Dev</span>
-            <span class="case-tag">Phaser 3</span>
-            <span class="case-tag">Pipeline com IA</span>
-          </div>
-          <p class="cgc-desc">Um beat'em up próprio, publicado nas lojas Apple e Google e na web, com domínio
-            dedicado. Arte, código e produção acelerados por um pipeline assistido por IA.</p>
-          <span class="cgc-cta">Ver projeto →</span>
-        </a>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/v2/img/lab/radar.jpg" alt="Radar de IA" loading="lazy"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">ferramenta própria</span>
-          </div>
-          <h3 class="cgc-client">Radar de IA</h3>
-          <div class="case-tags">
-            <span class="case-tag">Pesquisa</span>
-            <span class="case-tag">Scoring</span>
-            <span class="case-tag">Clustering</span>
-          </div>
-          <p class="cgc-desc">Sistema próprio que monitora e cura os avanços em IA — pontuação dupla
-            (relevância × substância), agrupamento de temas e um ciclo de aprendizado que refina as
-            recomendações sozinho.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/v2/img/lab/ferramental.jpg" alt="Ferramental de IA" loading="lazy"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">infraestrutura própria</span>
-          </div>
-          <h3 class="cgc-client">Ferramental de IA</h3>
-          <div class="case-tags">
-            <span class="case-tag">Orquestração</span>
-            <span class="case-tag">Local + Nuvem</span>
-            <span class="case-tag">Automação</span>
-          </div>
-          <p class="cgc-desc">Construí meu próprio ambiente de trabalho com IA — roteamento entre modelos
-            locais e em nuvem, agentes e automações. Levo IA a sério a ponto de fabricar as ferramentas
-            que uso todo dia.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/v2/img/lab/concierge.jpg" alt="Concierge Gastronômico" loading="lazy" style="object-position:center"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">setor gastronômico</span>
-          </div>
-          <h3 class="cgc-client">Concierge Gastronômico</h3>
-          <div class="case-tags">
-            <span class="case-tag">IA Conversacional</span>
-            <span class="case-tag">Atendimento</span>
-            <span class="case-tag">Gastronomia</span>
-          </div>
-          <p class="cgc-desc">Concierge conversacional por IA para o setor gastronômico — recomenda pratos,
-            tira dúvidas e conduz o cliente, com a voz da marca, do cardápio à reserva.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/v2/img/lab/painel.jpg" alt="Painel Esportivo" loading="lazy" style="object-position:center 38%"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">sports bar</span>
-          </div>
-          <h3 class="cgc-client">Painel Esportivo</h3>
-          <div class="case-tags">
-            <span class="case-tag">Tempo Real</span>
-            <span class="case-tag">Dados</span>
-            <span class="case-tag">Automação</span>
-          </div>
-          <p class="cgc-desc">Painel esportivo dinâmico para sports bar — a agenda de jogos da semana montada e
-            atualizada automaticamente, pronta para o telão, sem curadoria manual.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/v2/img/lab/gestao.jpg" alt="Gestão Imobiliária" loading="lazy" style="object-position:top"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">gestão patrimonial</span>
-          </div>
-          <h3 class="cgc-client">Gestão Imobiliária</h3>
-          <div class="case-tags">
-            <span class="case-tag">Automação</span>
-            <span class="case-tag">Integração</span>
-            <span class="case-tag">Scraping</span>
-          </div>
-          <p class="cgc-desc">Gestão de aluguéis e patrimônio imobiliário ponta a ponta — extração automática
-            dos portais das imobiliárias, conciliação e relatórios, sem uma linha de digitação manual.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════
        AWARDS
   ══════════════════════════════════════════════════════════ -->
   <section id="awards">
     <div class="awards-inner">
       <div class="awards-header reveal">
         <div>
-          <div class="section-num">08 — Reconhecimento</div>
+          <div class="section-num">06 — Reconhecimento</div>
           <h2 class="section-title">Prêmios &amp;<br>Premiações</h2>
         </div>
         <p
@@ -2885,7 +2533,7 @@
         </p>
       </div>
       <div class="awards-photo reveal">
-        <video id="awards-video" src="/videos/premios-cinematic.mp4" muted playsinline preload="auto"></video>
+        <video id="awards-video" src="videos/premios-cinematic.mp4" muted playsinline preload="auto"></video>
       </div>
       <div class="awards-grid">
         <div class="award-card">
@@ -3110,81 +2758,46 @@
       { text: 'Três', cls: '' },
       { text: 'décadas', cls: '' },
       { text: 'de', cls: '' },
-      { text: 'inovação', cls: 'key' },
-      { text: 'na', cls: '' },
-      { text: 'comunicação,', cls: '' },
-      { text: 'e', cls: '' },
+      { text: 'marketing', cls: '' },
+      { text: 'digital,', cls: '' },
       { text: 'uma', cls: '' },
       { text: 'vida', cls: '' },
       { text: 'de', cls: '' },
       { text: 'entusiasmo', cls: '' },
       { text: 'tecnológico:', cls: '' },
       { text: 'conectando', cls: '' },
-      { text: 'marcas', cls: '' },
-      { text: 'às', cls: '' },
-      { text: 'revoluções', cls: 'key' },
-      { text: 'que', cls: '' },
-      { text: 'transformam', cls: '' },
       { text: 'a', cls: '' },
-      { text: 'sociedade.', cls: '' }
+      { text: 'inovação', cls: 'italic' },
+      { text: 'que', cls: '' },
+      { text: 'diferencia', cls: '' },
+      { text: 'marcas', cls: 'accent' },
+      { text: 'à', cls: '' },
+      { text: 'revolução', cls: '' },
+      { text: 'que', cls: '' },
+      { text: 'transforma', cls: '' },
+      { text: 'sociedades.', cls: '' }
     ];
 
     const manifestoEl = document.getElementById('manifestoText');
     manifestoEl.innerHTML = '';
-    manifestoRaw.forEach((w) => {
+    manifestoRaw.forEach((w, i) => {
       const span = document.createElement('span');
       span.className = 'word' + (w.cls ? ' ' + w.cls : '');
+      span.style.transitionDelay = (i * 0.09) + 's';
       span.textContent = w.text;
       manifestoEl.appendChild(span);
       manifestoEl.appendChild(document.createTextNode(' '));
     });
 
-    // cria UMA máscara por linha visual em qualquer título (mede o wrap; recalcula no resize)
-    function buildLineMasks(el) {
-      el.querySelectorAll('.line-mask').forEach(n => n.remove());
-      const base = el.getBoundingClientRect();
-      if (!base.width) return;
-      const range = document.createRange();
-      range.selectNodeContents(el);
-      const rects = [...range.getClientRects()].filter(r => r.width > 1 && r.height > 1);
-      const lines = [];
-      rects.forEach(r => {
-        const g = lines.find(L => Math.abs(L.top - r.top) < r.height * 0.6);
-        if (!g) lines.push({ top: r.top, bottom: r.bottom, left: r.left, right: r.right });
-        else { g.top = Math.min(g.top, r.top); g.bottom = Math.max(g.bottom, r.bottom); g.left = Math.min(g.left, r.left); g.right = Math.max(g.right, r.right); }
-      });
-      lines.sort((a, b) => a.top - b.top);
-      lines.forEach((L, i) => {
-        const m = document.createElement('span');
-        m.className = 'line-mask';
-        m.style.left = (L.left - base.left - 4) + 'px';
-        m.style.top = (L.top - base.top - 3) + 'px';
-        m.style.width = (L.right - L.left + 8) + 'px';
-        m.style.height = (L.bottom - L.top + 6) + 'px';
-        m.style.setProperty('--d', (i * 0.09) + 's');
-        el.appendChild(m);
-      });
-    }
-
-    // alvos: manifesto + todos os títulos de seção + headline do contato
-    const revealTargets = [document.getElementById('manifestoText')]
-      .concat([...document.querySelectorAll('.section-title, .contact-headline')])
-      .filter(Boolean);
-
-    const lineRevealObs = new IntersectionObserver((entries) => {
+    const manifestoObs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('revealed'); lineRevealObs.unobserve(e.target); }
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.word').forEach(w => w.classList.add('visible'));
+          manifestoObs.unobserve(e.target);
+        }
       });
-    }, { threshold: 0.45 });
-
-    (function initLineReveal() {
-      const buildAll = () => revealTargets.forEach(buildLineMasks);
-      const start = () => { buildAll(); revealTargets.forEach(el => lineRevealObs.observe(el)); };
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
-      else start();
-      let rsz;
-      window.addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(buildAll, 200); });
-    })();
+    }, { threshold: 0.3 });
+    manifestoObs.observe(manifestoEl);
 
     // ── Contact form ───────────────────────────────────────
     document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -3365,356 +2978,6 @@
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
-
-    // ── Fundo topográfico poligonal (morph orgânico) ───────
-    function buildTopo(container, seed, cx, cy) {
-      let s = seed; const rnd = () => { s = Math.sin(s * 99991) * 1e4; return s - Math.floor(s); };
-      const verts = 16, sig = [], phase = [];
-      for (let v = 0; v < verts; v++) { sig.push(0.5 + rnd() * 0.95); phase.push(rnd() * 6.283); }
-      const NS = 'http://www.w3.org/2000/svg', rings = 13, paths = [];
-      const svg = document.createElementNS(NS, 'svg');
-      svg.setAttribute('class', 'topo-svg');
-      svg.setAttribute('viewBox', '0 0 1280 760');
-      svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
-      for (let i = 1; i <= rings; i++) {
-        const pth = document.createElementNS(NS, 'path');
-        pth.setAttribute('fill', 'none');
-        pth.setAttribute('stroke', '#ffffff');
-        pth.setAttribute('stroke-width', '1');
-        pth.setAttribute('stroke-opacity', (0.022 + i * 0.002).toFixed(4));
-        svg.appendChild(pth); paths.push(pth);
-      }
-      container.appendChild(svg);
-      return function (t) {
-        for (let i = 1; i <= rings; i++) {
-          const base = i * 36, pts = [];
-          for (let v = 0; v < verts; v++) {
-            const a = v / verts * 6.283;
-            const osc = 1 + 0.055 * Math.sin(t * 0.00035 + phase[v] + i * 0.13);
-            const rad = base * sig[v] * osc;
-            pts.push((cx + Math.cos(a) * rad).toFixed(1) + ',' + (cy + Math.sin(a) * rad).toFixed(1));
-          }
-          paths[i - 1].setAttribute('d', 'M' + pts.join('L') + 'Z');
-        }
-      };
-    }
-    (function initTopo() {
-      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const items = [];
-      document.querySelectorAll('[data-topo]').forEach((sec, idx) => {
-        const div = document.createElement('div'); div.className = 'topo-bg';
-        sec.insertBefore(div, sec.firstChild);
-        const frame = buildTopo(div, 7 + idx * 3, 980, 300);
-        frame(0);
-        items.push({ sec, frame, visible: false });
-      });
-      if (reduced || !items.length) return;
-      const io = new IntersectionObserver(es => es.forEach(e => {
-        const it = items.find(x => x.sec === e.target); if (it) it.visible = e.isIntersecting;
-      }));
-      items.forEach(it => io.observe(it.sec));
-      function loop(t) { for (const it of items) if (it.visible) it.frame(t); requestAnimationFrame(loop); }
-      requestAnimationFrame(loop);
-    })();
-
-    // Coverflow do Laboratório: implementado em WebGL (OGL) no <script type="module"> ao fim do body.
-  </script>
-
-  <!-- ══════════════════════════════════════════════════════
-       COVERFLOW WEBGL (Laboratório) — OGL
-  ══════════════════════════════════════════════════════════ -->
-  <script type="module">
-  (async function () {
-    const root = document.getElementById('lab-coverflow');
-    if (!root || window.innerWidth < 880) return;
-    let OGL;
-    try { OGL = await import('https://esm.sh/ogl@1.0.11'); }
-    catch (e) { console.warn('OGL falhou ao carregar', e); return; }
-    const { Renderer, Camera, Transform, Plane, Mesh, Program, Texture } = OGL;
-
-    const cards = [...root.querySelectorAll('.case-grid-card')];
-    const items = cards.map(c => ({
-      src: c.querySelector('.lab-thumb img')?.getAttribute('src'),
-      title: c.querySelector('.cgc-client')?.textContent.trim(),
-      year: c.querySelector('.cgc-year')?.textContent.trim(),
-      agency: c.querySelector('.cgc-agency')?.textContent.trim(),
-      tags: [...c.querySelectorAll('.case-tag')].map(t => t.textContent.trim()),
-      desc: c.querySelector('.cgc-desc')?.textContent.trim(),
-      href: c.tagName === 'A' ? c.getAttribute('href') : null,
-      cta: c.querySelector('.cgc-cta')?.textContent.trim()
-    })).filter(it => it.src);
-    if (items.length < 2) return;
-
-    root.classList.add('cf-gl');
-    root.innerHTML = '<div class="cf-gl-stage"></div><div class="cf-gl-info"></div><div class="cf-gl-nav"></div><div class="cf-gl-thumbs"></div>';
-    const stage = root.querySelector('.cf-gl-stage');
-    const info = root.querySelector('.cf-gl-info');
-    const navWrap = root.querySelector('.cf-gl-nav');
-    const thumbsWrap = root.querySelector('.cf-gl-thumbs');
-
-    const vertex = `
-      attribute vec3 position; attribute vec2 uv;
-      uniform mat4 modelViewMatrix; uniform mat4 projectionMatrix; uniform float uSpeed; uniform float uPW; uniform float uR;
-      varying vec2 vUv;
-      void main(){ vUv = uv; vec3 p = position;
-        float xw = position.x * uPW;       // x local escalado (largura do card)
-        float th = xw / uR;                // ângulo do vértice no arco
-        p.x = (uR * sin(th)) / uPW;        // curva o card acompanhando a circunferência (bend)
-        p.z = (uR * cos(th) - uR);
-        p.z += sin(uv.x * 3.14159265) * uSpeed * 3.0;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
-    const fragment = `
-      precision highp float;
-      uniform sampler2D tMap; uniform vec2 uImg; uniform vec2 uPlane; uniform float uActive; uniform float uVis;
-      varying vec2 vUv;
-      float sdRound(vec2 p, vec2 b, float r){ vec2 d = abs(p) - b + r; return min(max(d.x, d.y), 0.0) + length(max(d, 0.0)) - r; }
-      void main(){
-        vec2 r = vec2(min((uPlane.x/uPlane.y)/(uImg.x/uImg.y),1.0), min((uPlane.y/uPlane.x)/(uImg.y/uImg.x),1.0));
-        vec2 uv = (vUv - 0.5) * r + 0.5;
-        vec3 col = texture2D(tMap, uv).rgb;
-        col *= mix(0.4, 1.0, uActive);
-        vec2 pp = (vUv - 0.5) * uPlane;
-        float d = sdRound(pp, uPlane * 0.5, 0.16);
-        float alpha = (1.0 - smoothstep(0.0, 0.018, d)) * uVis;
-        gl_FragColor = vec4(col, alpha); }`;
-
-    const renderer = new Renderer({ alpha: true, dpr: Math.min(devicePixelRatio, 2) });
-    const gl = renderer.gl;
-    stage.appendChild(gl.canvas);
-    const camera = new Camera(gl, { fov: 50 });
-    camera.position.z = 5.5;
-    const scene = new Transform();
-    scene.rotation.z = Math.PI / 180 * 12;   // gira o componente inteiro 12° anti-horário no plano da tela
-    // pivô do bambolê: posicionado NO CENTRO do anel (z = -R) para que as inclinações
-    // X/Y girem em torno do centro da "esfera", não da face frontal.
-    // rotation.y = 12° fixo; rotation.x dinâmico (-10°..+10° com a rolagem) — ver no frame()
-    const pivot = new Transform();
-    pivot.setParent(scene);
-    pivot.rotation.y = Math.PI / 180 * 12;
-    const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
-
-    // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
-    const PW = 4.05, PH = 2.25, OFFSET_X = 1.35;
-    const REP = 2;                               // cada projeto repetido no anel → curva suave por card + círculo cheio
-    const ring = [];
-    for (let r = 0; r < REP; r++) items.forEach((it, pi) => ring.push({ src: it.src, proj: pi }));
-    const N = ring.length;
-    const ANGLE = (2 * Math.PI) / N;            // ângulo (pequeno) de cada card no anel
-    const R = (PW / ANGLE) * 1.09;              // raio: leve folga → pequeno espaço entre os cards
-    pivot.position.set(OFFSET_X, 0, -R);        // origem do pivô = centro do anel (a frente do anel volta para z≈0 em mundo)
-    const smoothstep = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-
-    const medias = ring.map((it) => {
-      const program = new Program(gl, { vertex, fragment, transparent: true, cullFace: false, uniforms: {
-        tMap: { value: new Texture(gl) }, uSpeed: { value: 0 }, uActive: { value: 0 }, uVis: { value: 1 },
-        uImg: { value: [1, 1] }, uPlane: { value: [PW, PH] }, uPW: { value: PW }, uR: { value: R }
-      } });
-      const img = new Image(); img.crossOrigin = 'anonymous'; img.src = it.src;
-      img.onload = () => { program.uniforms.tMap.value.image = img; program.uniforms.uImg.value = [img.naturalWidth, img.naturalHeight]; };
-      const mesh = new Mesh(gl, { geometry, program });
-      mesh.scale.set(PW, PH, 1);
-      mesh.setParent(pivot);
-      return { mesh, program };
-    });
-
-    const scroll = { current: 0, target: 0, last: 0, ease: 0.09 };
-    let speed = 0, centerIdx = -1;
-    // leva o projeto pi à frente, escolhendo a cópia mais próxima no anel
-    function goProj(pi) {
-      const cur = ((scroll.target % N) + N) % N;
-      let best = scroll.target, bestAbs = Infinity;
-      for (let r = 0; r < REP; r++) {
-        const k = pi + r * items.length;
-        let d = k - cur; if (d > N / 2) d -= N; if (d < -N / 2) d += N;
-        if (Math.abs(d) < bestAbs) { bestAbs = Math.abs(d); best = scroll.target + d; }
-      }
-      scroll.target = Math.round(best);
-    }
-
-    const mkBtn = (label, fn) => { const b = document.createElement('button'); b.textContent = label; b.addEventListener('click', fn); navWrap.appendChild(b); };
-    mkBtn('‹', () => { scroll.target -= 1; });
-    mkBtn('›', () => { scroll.target += 1; });
-    items.forEach((it, i) => {
-      const t = document.createElement('button'); t.className = 'cf-gl-thumb';
-      t.innerHTML = '<img src="' + it.src + '" alt="">';
-      t.addEventListener('click', () => goProj(i));
-      thumbsWrap.appendChild(t);
-    });
-
-    function resize() { const w = stage.clientWidth, h = stage.clientHeight; renderer.setSize(w, h); camera.perspective({ aspect: w / h }); }
-    resize(); window.addEventListener('resize', resize);
-
-    stage.addEventListener('wheel', e => { scroll.target += (e.deltaY + e.deltaX) * 0.0016; }, { passive: true });
-    let down = false, sx = 0, ss = 0, moved = false;
-    stage.addEventListener('pointerdown', e => { down = true; sx = e.clientX; ss = scroll.target; moved = false; stage.classList.add('grabbing'); });
-    window.addEventListener('pointermove', e => { if (!down) return; if (Math.abs(e.clientX - sx) > 4) moved = true; scroll.target = ss + (sx - e.clientX) * 0.0055; });
-    window.addEventListener('pointerup', () => { if (!down) return; down = false; stage.classList.remove('grabbing'); scroll.target = Math.round(scroll.target); });
-
-    function setInfo(i) {
-      const it = items[i];
-      info.innerHTML = '<div class="cgc-top"><span class="cgc-year">' + (it.year || 'Autoral') + '</span><span class="cgc-agency">' + (it.agency || '') + '</span></div>'
-        + '<h3 class="cgc-client">' + it.title + '</h3>'
-        + '<div class="case-tags">' + it.tags.map(t => '<span class="case-tag">' + t + '</span>').join('') + '</div>'
-        + '<p class="cgc-desc">' + (it.desc || '') + '</p>'
-        + (it.href ? '<a href="' + it.href + '" target="_blank" rel="noopener" class="cgc-cta">' + (it.cta || 'Ver projeto') + ' →</a>' : '');
-      [...thumbsWrap.children].forEach((t, k) => t.classList.toggle('on', k === i));
-    }
-
-    function frame() {
-      scroll.current += (scroll.target - scroll.current) * scroll.ease;
-      speed += ((scroll.current - scroll.last) - speed) * 0.3;
-      scroll.last = scroll.current;
-      medias.forEach((m, i) => {
-        let an = (i - scroll.current) * ANGLE;
-        an = Math.atan2(Math.sin(an), Math.cos(an));     // normaliza p/ [-π, π]
-        const ax = Math.abs(an);
-        m.mesh.position.x = R * Math.sin(an);            // posição no anel (relativa ao centro = origem do pivô)
-        m.mesh.position.z = R * Math.cos(an);            // centro do anel na origem do pivô
-        m.mesh.rotation.y = an;                          // tangente ao círculo
-        m.program.uniforms.uActive.value = (Math.cos(an) + 1) * 0.5;   // 1 na frente, escurece em direção ao fundo
-        m.program.uniforms.uVis.value = 1.0;                           // anel oco: os cards do fundo aparecem (verso espelhado)
-        m.program.uniforms.uSpeed.value = speed;
-      });
-      const ci = ((Math.round(scroll.current) % N) + N) % N;
-      const proj = ring[ci].proj;
-      if (proj !== centerIdx) { centerIdx = proj; setInfo(proj); }
-      // eixo X dinâmico: varia -10°..+10° conforme a posição vertical da vitrine na tela (rolagem)
-      const rc = root.getBoundingClientRect();
-      let tt = ((rc.top + rc.height / 2) - window.innerHeight / 2) / (window.innerHeight / 2);
-      tt = Math.max(-1, Math.min(1, tt));
-      pivot.rotation.x = tt * (Math.PI / 18);
-      renderer.render({ scene, camera });
-      requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  })();
-  </script>
-
-  <!-- Efeito "líquido" no fim da página: distorção + aberração cromática seguindo o mouse sobre "conversar?" (inspirado no rodapé do apechain.com) -->
-  <script type="module">
-  (async () => {
-    const el = document.querySelector('.contact-headline .outline');
-    if (!el || matchMedia('(pointer: coarse)').matches) return;   // só em ponteiro fino (desktop)
-    let OGL;
-    try { OGL = await import('https://esm.sh/ogl@1.0.11'); } catch (e) { return; }
-    const { Renderer, Program, Mesh, Geometry, Texture } = OGL;
-    try { await (document.fonts ? document.fonts.ready : Promise.resolve()); } catch (e) {}
-    await new Promise(r => requestAnimationFrame(r));
-
-    const headline = el.closest('.contact-headline');
-    if (getComputedStyle(headline).position === 'static') headline.style.position = 'relative';
-    const txt = el.textContent.trim();
-
-    const vertex = `attribute vec2 position; attribute vec2 uv; varying vec2 vUv;
-      void main(){ vUv = uv; gl_Position = vec4(position, 0.0, 1.0); }`;
-    const fragment = `precision highp float;
-      uniform sampler2D uTex; uniform vec2 uMouse; uniform vec2 uVel; uniform float uAmp; uniform vec2 uRes;
-      varying vec2 vUv;
-      void main(){
-        vec2 uv = vUv;
-        vec2 d = uv - uMouse; d.x *= uRes.x/uRes.y;
-        float falloff = exp(-dot(d,d)*10.0);
-        vec2 disp = uVel * falloff * uAmp;
-        float vmag = length(uVel);
-        vec2 dir = normalize(uVel + vec2(1e-4));
-        vec2 ca = dir * falloff * uAmp * (0.6 + vmag*4.0);
-        vec2 base = uv - disp;
-        float aR = texture2D(uTex, base + ca).a;
-        float aG = texture2D(uTex, base).a;
-        float aB = texture2D(uTex, base - ca).a;
-        vec3 lime = vec3(0.776, 1.0, 0.0);
-        vec3 col = lime;
-        col.r += max(0.0, aR - aG);
-        col.b += max(0.0, aB - aG) * 0.9;
-        float alpha = max(aR, max(aG, aB));
-        gl_FragColor = vec4(col, alpha);
-      }`;
-
-    let renderer, gl, program, mesh, texture, fx;
-    let cw = 0, ch = 0;
-    let mx = 0.5, my = 0.5, pmx = 0.5, pmy = 0.5, vx = 0, vy = 0, amp = 0, inside = 0;
-
-    // desenha o texto vazado (stroke branco) como máscara, respeitando o letter-spacing do CSS
-    function strokeWithLS(ctx, text, cx, cy, lsPx) {
-      const widths = []; let total = 0;
-      for (const c of text) { const w = ctx.measureText(c).width; widths.push(w); total += w + lsPx; }
-      total -= lsPx;
-      let x = cx - total / 2;
-      for (let i = 0; i < text.length; i++) { ctx.strokeText(text[i], x + widths[i] / 2, cy); x += widths[i] + lsPx; }
-    }
-
-    function build() {
-      const cs = getComputedStyle(el);
-      const rect = el.getBoundingClientRect();
-      const hrect = headline.getBoundingClientRect();
-      const W = Math.ceil(rect.width), H = Math.ceil(rect.height);
-      if (W < 2 || H < 2) return;
-      const DPR = Math.min(devicePixelRatio || 1, 2);
-      const pad = Math.ceil(H * 0.55);
-      cw = W + pad * 2; ch = H + pad * 2;
-      const fontPx = parseFloat(cs.fontSize);
-      const weight = cs.fontWeight || '900';
-      const lsPx = (parseFloat(cs.letterSpacing) || (-0.05 * fontPx));
-
-      const mc = document.createElement('canvas');
-      mc.width = cw * DPR; mc.height = ch * DPR;
-      const ctx = mc.getContext('2d'); ctx.scale(DPR, DPR);
-      ctx.font = `${weight} ${fontPx}px Unbounded, sans-serif`;
-      ctx.textBaseline = 'middle'; ctx.textAlign = 'center';
-      ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.strokeStyle = '#fff';
-      strokeWithLS(ctx, txt, cw / 2, ch / 2, lsPx);
-
-      if (!fx) {
-        fx = document.createElement('canvas');
-        fx.setAttribute('aria-hidden', 'true');
-        fx.style.cssText = 'position:absolute;pointer-events:none;filter:drop-shadow(0 0 18px rgba(198,255,0,0.22));';
-        headline.appendChild(fx);
-      }
-      fx.style.left = (rect.left - hrect.left - pad) + 'px';
-      fx.style.top = (rect.top - hrect.top - pad) + 'px';
-      fx.style.width = cw + 'px'; fx.style.height = ch + 'px';
-
-      if (!renderer) {
-        renderer = new Renderer({ canvas: fx, alpha: true, dpr: DPR });
-        gl = renderer.gl;
-        texture = new Texture(gl, { image: mc, generateMipmaps: false, minFilter: gl.LINEAR, magFilter: gl.LINEAR, premultiplyAlpha: false });
-        const geometry = new Geometry(gl, { position: { size: 2, data: new Float32Array([-1,-1, 3,-1, -1,3]) }, uv: { size: 2, data: new Float32Array([0,0, 2,0, 0,2]) } });
-        program = new Program(gl, { vertex, fragment, transparent: true, uniforms: { uTex: { value: texture }, uMouse: { value: [.5,.5] }, uVel: { value: [0,0] }, uAmp: { value: 0 }, uRes: { value: [cw, ch] } } });
-        mesh = new Mesh(gl, { geometry, program });
-      } else {
-        texture.image = mc; texture.needsUpdate = true;
-        program.uniforms.uRes.value = [cw, ch];
-      }
-      renderer.setSize(cw, ch);
-      el.style.color = 'transparent';
-      el.style.opacity = '0';   // texto CSS some; o canvas assume (texto segue no DOM p/ acessibilidade)
-    }
-
-    build();
-    if (!renderer) { el.style.color = ''; el.style.opacity = ''; return; }
-
-    window.addEventListener('mousemove', (e) => {
-      const r = fx.getBoundingClientRect();
-      mx = (e.clientX - r.left) / r.width;
-      my = 1.0 - (e.clientY - r.top) / r.height;
-      inside = (mx > -0.15 && mx < 1.15 && my > -0.15 && my < 1.15) ? 1 : 0;
-    });
-
-    let rt = null;
-    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 180); });
-
-    function frame() {
-      const dvx = mx - pmx, dvy = my - pmy; pmx = mx; pmy = my;
-      vx += (dvx - vx) * 0.25; vy += (dvy - vy) * 0.25;
-      program.uniforms.uMouse.value = [mx, my];
-      program.uniforms.uVel.value = [vx * 1.8, vy * 1.8];
-      amp += ((inside ? 1 : 0) - amp) * 0.12;
-      program.uniforms.uAmp.value = amp;
-      renderer.render({ scene: mesh });
-      requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  })();
   </script>
 </body>
 
