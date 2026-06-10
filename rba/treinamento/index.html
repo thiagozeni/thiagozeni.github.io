@@ -110,7 +110,7 @@
       <div class="L">
         <div class="kicker">O universo de capacidades</div>
         <h2>Tem muita coisa. Domine os <em>20%</em>.</h2>
-        <p class="lead" style="font-size:.98rem">O Claude OS já instala <b style="color:#fff">300+ skills, MCPs e agentes</b>. Você não usa todos — <b style="color:#fff">20% resolvem 80%</b> do trabalho. O painel é o mapa; esta aula foca no que importa.</p>
+        <p class="lead" style="font-size:.98rem">O estúdio completo (<b style="color:#fff">Claude OS: 300+ skills, MCPs e agentes</b>) existe — é o que roda na tela do instrutor, e vem no próximo onboarding. Hoje você leva os <b style="color:#fff">20% que resolvem 80%</b>: o <b style="color:#fff">Pack RBA Design</b>, 12 skills curadas do ofício.</p>
       </div>
       <div class="R">
         <img src="assets/hub-skills.png" alt="Painel de skills do Claude" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
@@ -123,7 +123,7 @@
     <div class="kicker">O que você sai sabendo hoje</div>
     <h2>Não é truque. É um <em>jeito de trabalhar</em>.</h2>
     <div class="cards" style="grid-template-columns:repeat(3,1fr)">
-      <div class="pcard"><div class="pn">FUNDAÇÃO</div><h3>Claude OS</h3><p>1 instalador: 300+ skills, agentes e painel — o ambiente <b style="color:#fff">pro completo</b>.</p></div>
+      <div class="pcard"><div class="pn">FUNDAÇÃO</div><h3>Pack RBA Design</h3><p><b style="color:#fff">12 skills do ofício</b> — peça, deck, landing. Instala em segundos (só cópia de arquivos).</p></div>
       <div class="pcard"><div class="pn">PRÁTICA 1</div><h3>Memória</h3><p>Ele lembra cliente, voz e sistema entre sessões. Opus planeja, Sonnet faz — salvo uma vez.</p></div>
       <div class="pcard"><div class="pn">PRÁTICA 2</div><h3>Assets reais + referência</h3><p>Nunca aproximar logo nem cor. Referência ANTES de produzir.</p></div>
       <div class="pcard"><div class="pn">PRÁTICA 3</div><h3>Olhar renderizado + crítica de DA</h3><p>Nunca aprovar no escuro. Criticar como DA, iterar.</p></div>
@@ -139,7 +139,7 @@
     <ul class="points" style="font-size:1.05rem">
       <li><b>Conta Claude (seat Team RBA)</b> — login já feito<small>seu nome aparece no canto do Claude</small></li>
       <li><b>Mac</b> (app Terminal) <b>ou Windows 10/11</b> (app PowerShell — não o CMD)</li>
-      <li><b>Python 3</b> instalado<small>necessário para o painel local</small></li>
+      <li><b>rba-design-pack.zip baixado do Drive</b> e descompactado<small>drive.google.com/file/d/1EmeyA4ZpW2dR4BrUvNRV2y789JZHV5hM — vira a pasta rba-design-pack</small></li>
       <li><b>Conectores na conta</b> (Canva · Gmail · Drive) — o admin já habilitou</li>
       <li><b>Google Drive Desktop</b> instalado<small>sincroniza a pasta de projetos local → o Claude lê e atualiza o STATUS.md compartilhado</small></li>
     </ul>
@@ -179,45 +179,44 @@ claude</div>
     </div>
   </section>
 
-  <!-- 5 claude os -->
+  <!-- 5 pack rba design -->
   <section class="slide">
     <div class="split">
       <div class="L">
-        <div class="kicker">Passo 2 — seu estúdio pré-montado</div>
-        <h2>O <em>Claude OS</em></h2>
-        <p class="lead" style="font-size:.98rem">1 comando instala: <b style="color:#fff">300+ skills · agentes · rules · memória · painel</b>. Faz backup do que já existe e abre o hub automaticamente.</p>
+        <div class="kicker">Passo 2 — Pack RBA Design</div>
+        <h2>O arsenal do <em>ofício</em></h2>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">12 skills curadas</b>: peça (impeccable, design-systems-canon) · deck (frontend-slides) · landing (awwwards-playbook, scroll-motion, animejs, webgl) · copy (mkt-*). O instalador <b style="color:#fff">só copia arquivos</b> — termina em segundos.</p>
         <p class="lead" style="margin-top:.7rem;font-size:.9rem;color:var(--fg-mute)">Windows: se aparecer erro de política, rode antes: <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code></p>
       </div>
       <div class="R">
-        <div class="codeblock"><span class="c"># 1 · Baixe claude-os.zip do Drive:</span>
-<span class="o">https://drive.google.com/file/d/1dIUQTX7l4cuATJ6VqBVULXyowPUH1EdG/view</span>
+        <div class="codeblock"><span class="c"># zip do Drive (já baixado/descompactado nas premissas):</span>
+<span class="o">drive.google.com/file/d/1EmeyA4ZpW2dR4BrUvNRV2y789JZHV5hM</span>
 
-<span class="c"># 2 · Descompacte (clique duplo) — vira a pasta claude-os</span>
-
-<span class="c"># 3 · Rode o instalador</span>
 <span class="c"># Mac (Terminal)</span>
-cd ~/Downloads/claude-os
+cd ~/Downloads/rba-design-pack
 ./install.sh
 
 <span class="c"># Windows (PowerShell)</span>
-cd $HOME\Downloads\claude-os
-.\install.ps1</div>
+cd $HOME\Downloads\rba-design-pack
+.\install.ps1
+
+<span class="c"># verifique — reabra o claude e pergunte:</span>
+<span class="g">"quais skills você tem pra design?"</span></div>
       </div>
     </div>
   </section>
 
-  <!-- 6 painel -->
+  <!-- 6 conectores + vitrine -->
   <section class="slide">
     <div class="split">
       <div class="L">
-        <div class="kicker">Passo 3 — seu mapa</div>
-        <h2>O <em>painel</em></h2>
-        <p class="lead" style="font-size:.98rem">Abre sozinho em <b style="color:#fff">http://localhost:8090</b>. Mostra suas skills, agentes, MCPs e memórias — o jeito de <b style="color:#fff">enxergar</b> o que o OS instalou. Não precisa navegar tudo; descreva a tarefa e a certa dispara.</p>
-        <p class="lead" style="margin-top:.7rem;font-size:.95rem">Se não abrir: Mac <code>cd ~/claude-hub &amp;&amp; ./start.sh</code> · Windows clique duplo em <code>claude-hub\start.bat</code>.</p>
-        <p class="lead" style="margin-top:.7rem;font-size:.88rem;color:var(--fg-mute)"><b style="color:#ccc">Conectores de conta</b> (Canva · Gmail · Drive) são habilitados no claude.ai — o admin já deixou prontos. Veja com <code>/mcp</code>.</p>
+        <div class="kicker">Passo 3 — conectores · e o que vem depois</div>
+        <h2>Conectores + a <em>vitrine</em></h2>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">Conectores de conta</b> (Canva · Gmail · Drive) são habilitados no claude.ai — o admin já deixou prontos. Veja os seus com <code>/mcp</code>.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.95rem">Ao lado, o <b style="color:#fff">Claude OS</b> — o estúdio completo (300+ skills, agentes, painel) rodando na tela do instrutor. <b style="color:#fff">Vem no próximo onboarding</b>; hoje você leva o arsenal essencial.</p>
       </div>
       <div class="R">
-        <img src="assets/hub-skills.png" alt="Painel do Claude OS" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
+        <img src="assets/hub-skills.png" alt="Painel do Claude OS (vitrine — próximo onboarding)" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
       </div>
     </div>
   </section>
@@ -235,7 +234,7 @@ cd $HOME\Downloads\claude-os
       <div class="L">
         <div class="kicker">Prática 1 — Memória · a meta-prática</div>
         <h2>Não decore. <em>Dê instruções</em>.</h2>
-        <p class="lead" style="font-size:.98rem">Você <b style="color:#fff">não precisa decorar comando com barra</b>. Descreva em português o que precisa — o Claude <b style="color:#fff">escolhe a skill certa e lembra</b> (entre sessões). As skills já vieram no OS.</p>
+        <p class="lead" style="font-size:.98rem">Você <b style="color:#fff">não precisa decorar comando com barra</b>. Descreva em português o que precisa — o Claude <b style="color:#fff">escolhe a skill certa e lembra</b> (entre sessões). As skills já vieram no pack.</p>
         <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">É aqui que vive o <b style="color:#ccc">"Opus pensa, Sonnet faz"</b>: salve uma vez e vira automático (manual: <code>/model</code>). O CLAUDE.md do projeto guarda voz <b style="color:#ccc">e sistema visual</b>.</p>
       </div>
       <div class="R">
