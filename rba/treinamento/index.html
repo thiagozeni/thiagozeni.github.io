@@ -41,7 +41,7 @@
   ul.points li small{display:block;color:var(--fg-mute);font-size:.8em;margin-top:.15rem}
 
   code,.code{font-family:var(--mono);background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:6px;padding:.1em .42em;font-size:.85em;color:#cfe0ff}
-  .codeblock{font-family:var(--mono);background:#0c1226;border:1px solid var(--line-strong);border-radius:12px;padding:1.1rem 1.3rem;font-size:clamp(.8rem,1.08vw,1.02rem);color:#cfe0ff;line-height:1.7;white-space:pre-wrap;width:100%}
+  .codeblock{font-family:var(--mono);background:#0c1226;border:1px solid var(--line-strong);border-radius:12px;padding:1.1rem 1.3rem;font-size:clamp(.8rem,1.08vw,1.02rem);color:#cfe0ff;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;width:100%}
   .codeblock .c{color:#6f7da6}.codeblock .o{color:var(--orange-warm)}
   .codeblock .g{color:#86e0a8}
 
@@ -98,9 +98,9 @@
     <div class="bg"><img src="assets/foto-surfista.jpg" alt=""></div>
     <div class="scrim2"></div>
     <div class="inner">
-      <span class="selo">Aula 1 de 2 · ao vivo · 2 horas</span>
+      <span class="selo">Aula 1 de 2 · ao vivo · 2 horas · para DAs e designers</span>
       <h1>Claude<br>na <em>prática</em></h1>
-      <p class="lead" style="margin-top:1.4rem;max-width:44ch">O jeito de trabalhar que leva você ao nível pro. A gente instala tudo ao vivo e aprende as práticas que fazem a diferença. <span style="color:var(--fg-mute)">Aula 2: vídeo com Higgsfield.</span></p>
+      <p class="lead" style="margin-top:1.4rem;max-width:46ch">O jeito de trabalhar que leva você ao nível pro em <b style="color:#fff">design, decks e landing pages</b>. A gente instala tudo ao vivo e produz os 3 entregáveis. <span style="color:var(--fg-mute)">Aula 2: vídeo com Higgsfield. Este deck? Feito com o método de hoje.</span></p>
     </div>
   </section>
 
@@ -110,7 +110,7 @@
       <div class="L">
         <div class="kicker">O universo de capacidades</div>
         <h2>Tem muita coisa. Domine os <em>20%</em>.</h2>
-        <p class="lead" style="font-size:.98rem">Dezenas de skills, MCPs e agentes disponíveis. Você não precisa de todos — <b style="color:#fff">20% resolvem 80%</b> do trabalho. É neles que esta aula foca.</p>
+        <p class="lead" style="font-size:.98rem">O Claude OS já instala <b style="color:#fff">300+ skills, MCPs e agentes</b>. Você não usa todos — <b style="color:#fff">20% resolvem 80%</b> do trabalho. O painel é o mapa; esta aula foca no que importa.</p>
       </div>
       <div class="R">
         <img src="assets/hub-skills.png" alt="Painel de skills do Claude" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
@@ -123,13 +123,27 @@
     <div class="kicker">O que você sai sabendo hoje</div>
     <h2>Não é truque. É um <em>jeito de trabalhar</em>.</h2>
     <div class="cards" style="grid-template-columns:repeat(3,1fr)">
-      <div class="pcard"><div class="pn">FUNDAÇÃO</div><h3>Ambiente</h3><p>Claude + plugins + conectores: o Claude que <b style="color:#fff">faz</b>, não só fala.</p></div>
-      <div class="pcard"><div class="pn">PRÁTICA 1</div><h3>Memória</h3><p>Ele lembra cliente, voz e estado entre sessões.</p></div>
-      <div class="pcard"><div class="pn">PRÁTICA 2</div><h3>Higiene de sessão</h3><p><code>/clear · /compact · /rewind</code> — Claude afiado.</p></div>
-      <div class="pcard"><div class="pn">PRÁTICA 3</div><h3>Opus pensa, Sonnet faz</h3><p>Planeja/revisa no Opus, executa no Sonnet. + <code>/review</code>.</p></div>
-      <div class="pcard"><div class="pn">PRÁTICA 4</div><h3>Versionar &amp; automatizar</h3><p>Commit constante + hooks e rotinas.</p></div>
-      <div class="pcard" style="border-color:rgba(249,99,59,.4);background:linear-gradient(180deg,rgba(249,99,59,.1),rgba(249,99,59,.02))"><div class="pn" style="color:#ffd9cd">A META</div><h3>Chegar no nível pro</h3><p>20% das práticas resolvem 80% do trabalho.</p></div>
+      <div class="pcard"><div class="pn">FUNDAÇÃO</div><h3>Claude OS</h3><p>1 instalador: 300+ skills, agentes e painel — o ambiente <b style="color:#fff">pro completo</b>.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 1</div><h3>Memória</h3><p>Ele lembra cliente, voz e sistema entre sessões. Opus planeja, Sonnet faz — salvo uma vez.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 2</div><h3>Assets reais + referência</h3><p>Nunca aproximar logo nem cor. Referência ANTES de produzir.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 3</div><h3>Olhar renderizado + crítica de DA</h3><p>Nunca aprovar no escuro. Criticar como DA, iterar.</p></div>
+      <div class="pcard"><div class="pn">PRÁTICA 4</div><h3>Higiene de sessão</h3><p><code>/clear · /compact · /rewind</code> — Claude afiado.</p></div>
+      <div class="pcard" style="border-color:rgba(249,99,59,.4);background:linear-gradient(180deg,rgba(249,99,59,.1),rgba(249,99,59,.02))"><div class="pn" style="color:#ffd9cd">A META</div><h3>3 entregáveis</h3><p><b style="color:#fff">Peça · deck · landing page</b> — 20% das práticas, 80% do resultado.</p></div>
     </div>
+  </section>
+
+  <!-- 2b premissas -->
+  <section class="slide">
+    <div class="kicker">Antes de instalar — premissas</div>
+    <h2>O que ter <em>pronto</em></h2>
+    <ul class="points" style="font-size:1.05rem">
+      <li><b>Conta Claude (seat Team RBA)</b> — login já feito<small>seu nome aparece no canto do Claude</small></li>
+      <li><b>Mac</b> (app Terminal) <b>ou Windows 10/11</b> (app PowerShell — não o CMD)</li>
+      <li><b>Python 3</b> instalado<small>necessário para o painel local</small></li>
+      <li><b>Conectores na conta</b> (Canva · Gmail · Drive) — o admin já habilitou</li>
+      <li><b>Google Drive Desktop</b> instalado<small>sincroniza a pasta de projetos local → o Claude lê e atualiza o STATUS.md compartilhado</small></li>
+    </ul>
+    <p class="lead" style="margin-top:1.2rem;font-size:.92rem;color:var(--fg-mute)">Travou em algum pré-requisito? Avise no chat antes de seguir — a instalação assume tudo isto pronto.</p>
   </section>
 
   <!-- 3 divisor instalar -->
@@ -165,38 +179,45 @@ claude</div>
     </div>
   </section>
 
-  <!-- 5 plugins -->
+  <!-- 5 claude os -->
   <section class="slide">
     <div class="split">
       <div class="L">
-        <div class="kicker">Passo 2 — plugins (dentro do Claude)</div>
-        <h2>As habilidades <em>essenciais</em></h2>
-        <p class="lead" style="font-size:.98rem"><b style="color:#fff">document-skills</b> — Word/PPT/PDF/Excel + marca<br><b style="color:#fff">superpowers</b> — estruturar ideias<br><b style="color:#fff">firecrawl</b> — pesquisa na web</p>
+        <div class="kicker">Passo 2 — seu estúdio pré-montado</div>
+        <h2>O <em>Claude OS</em></h2>
+        <p class="lead" style="font-size:.98rem">1 comando instala: <b style="color:#fff">300+ skills · agentes · rules · memória · painel</b>. Faz backup do que já existe e abre o hub automaticamente.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.9rem;color:var(--fg-mute)">Windows: se aparecer erro de política, rode antes: <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code></p>
       </div>
       <div class="R">
-        <div class="codeblock"><span class="c"># adicionar os marketplaces</span>
-/plugin marketplace add anthropics/skills
-/plugin marketplace add anthropics/claude-plugins-official
+        <div class="codeblock"><span class="c"># 1 · Baixe claude-os.zip do Drive:</span>
+<span class="o">https://drive.google.com/file/d/1dIUQTX7l4cuATJ6VqBVULXyowPUH1EdG/view</span>
 
-<span class="c"># instalar</span>
-/plugin install document-skills<span class="o">@anthropic-agent-skills</span>
-/plugin install superpowers<span class="o">@claude-plugins-official</span>
-/plugin install firecrawl<span class="o">@claude-plugins-official</span></div>
+<span class="c"># 2 · Descompacte (clique duplo) — vira a pasta claude-os</span>
+
+<span class="c"># 3 · Rode o instalador</span>
+<span class="c"># Mac (Terminal)</span>
+cd ~/Downloads/claude-os
+./install.sh
+
+<span class="c"># Windows (PowerShell)</span>
+cd $HOME\Downloads\claude-os
+.\install.ps1</div>
       </div>
     </div>
   </section>
 
-  <!-- 6 conectores -->
+  <!-- 6 painel -->
   <section class="slide">
     <div class="split">
       <div class="L">
-        <div class="kicker">Passo 3 — conectores (MCPs)</div>
-        <h2>O Claude que <em>faz</em></h2>
-        <p class="lead" style="font-size:.98rem"><b style="color:#fff">MCPs</b> ligam o Claude às ferramentas que você já usa — Canva, Gmail, Drive, Figma, Supabase… São habilitados <b style="color:#fff">na conta</b> (claude.ai → Settings → Connectors); o admin da RBA já deixou prontos.</p>
-        <p class="lead" style="margin-top:.7rem;font-size:.95rem">Veja os ativos com <code>/mcp</code>. <span style="color:var(--fg-mute)">(à direita: o painel real de MCPs.)</span></p>
+        <div class="kicker">Passo 3 — seu mapa</div>
+        <h2>O <em>painel</em></h2>
+        <p class="lead" style="font-size:.98rem">Abre sozinho em <b style="color:#fff">http://localhost:8090</b>. Mostra suas skills, agentes, MCPs e memórias — o jeito de <b style="color:#fff">enxergar</b> o que o OS instalou. Não precisa navegar tudo; descreva a tarefa e a certa dispara.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.95rem">Se não abrir: Mac <code>cd ~/claude-hub &amp;&amp; ./start.sh</code> · Windows clique duplo em <code>claude-hub\start.bat</code>.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.88rem;color:var(--fg-mute)"><b style="color:#ccc">Conectores de conta</b> (Canva · Gmail · Drive) são habilitados no claude.ai — o admin já deixou prontos. Veja com <code>/mcp</code>.</p>
       </div>
       <div class="R">
-        <img src="assets/hub-mcps.png" alt="Painel de MCPs conectados" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
+        <img src="assets/hub-skills.png" alt="Painel do Claude OS" style="width:100%;max-height:66vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
       </div>
     </div>
   </section>
@@ -205,7 +226,7 @@ claude</div>
   <section class="slide orangeslide">
     <div class="kicker">O coração da aula</div>
     <h2 style="font-size:clamp(2.6rem,6.4vw,5.2rem);max-width:18ch">As 4 práticas que valem <em>80%</em>.</h2>
-    <p class="lead" style="margin-top:1rem;max-width:40ch;font-size:clamp(1.1rem,1.9vw,1.55rem)">Memória · Higiene de sessão · Opus &amp; Sonnet · Versionar &amp; automatizar.</p>
+    <p class="lead" style="margin-top:1rem;max-width:46ch;font-size:clamp(1.1rem,1.9vw,1.55rem)">Memória · Assets reais + referência · Olhar renderizado + crítica&nbsp;de&nbsp;DA · Higiene de sessão.</p>
   </section>
 
   <!-- 8 memória -->
@@ -214,20 +235,20 @@ claude</div>
       <div class="L">
         <div class="kicker">Prática 1 — Memória · a meta-prática</div>
         <h2>Não decore. <em>Dê instruções</em>.</h2>
-        <p class="lead" style="font-size:.98rem">Você <b style="color:#fff">não precisa decorar comando com barra</b>. Descreva em português o que precisa — o Claude <b style="color:#fff">pesquisa, instala e lembra</b> (entre sessões).</p>
-        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">Resultado: você configura conversando. Nem precisa saber qual skill existe nem o comando.</p>
+        <p class="lead" style="font-size:.98rem">Você <b style="color:#fff">não precisa decorar comando com barra</b>. Descreva em português o que precisa — o Claude <b style="color:#fff">escolhe a skill certa e lembra</b> (entre sessões). As skills já vieram no OS.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">É aqui que vive o <b style="color:#ccc">"Opus pensa, Sonnet faz"</b>: salve uma vez e vira automático (manual: <code>/model</code>). O CLAUDE.md do projeto guarda voz <b style="color:#ccc">e sistema visual</b>.</p>
       </div>
       <div class="R">
-        <div class="codeblock"><span class="c"># 1 · mande pesquisar e resolver</span>
-<span class="g">"Pesquise a skill de criação de slides,
- avalie se ajuda neste trabalho e
- instale se fizer sentido."</span>
+        <div class="codeblock"><span class="c"># 1 · salve seu jeito de trabalhar — uma vez</span>
+<span class="g">"Salve na memória: planejar e revisar
+ com Opus, executar com Sonnet."</span>
 
 <span class="c"># 2 · e mande lembrar o contexto do projeto</span>
 cat > CLAUDE.md << 'EOF'
 # Projeto: JBL — Boombox
-Voz: 1ª pessoa do plural, cena vivida.
-Evitar: 2ª pessoa genérica, "by Harman".
+Voz: 2ª pessoa / imperativo (Sinta, Leve), cena vivida.
+Sistema: logo OFICIAL em assets/, cor #ee3c23, Anton.
+Evitar: 1ª pessoa do plural ("a gente"), "by Harman".
 EOF</div>
       </div>
     </div>
@@ -258,9 +279,55 @@ EOF</div>
     </div>
   </section>
 
-  <!-- 9 higiene -->
+  <!-- 9 assets reais + referência -->
   <section class="slide">
-    <div class="kicker">Prática 2 — Higiene de sessão</div>
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Prática 2 — Assets reais + referência</div>
+        <h2>Nunca aproxime. <em>Dirija</em>.</h2>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">Logo e cor nunca são "quase"</b> — o vetor real e o hex oficial entram na pasta <code>assets/</code>. <i style="color:var(--fg-mute)">História real: laranja chutado, logo "by Harman" banido, vetor sem os counters do B — três erros, todos pegos pelo cliente.</i></p>
+        <p class="lead" style="margin-top:.7rem;font-size:.95rem"><b style="color:#fff">Referência ANTES de produzir.</b> Brife o Claude como você brifa um designer: arraste as peças aprovadas e extraia a direção.</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># arraste 2–3 referências pro chat e peça:</span>
+<span class="g">"Estas referências são o tom visual
+ aprovado. Extraia a direção de arte:
+ tipografia, uso do vermelho, densidade,
+ ritmo. Vamos produzir DENTRO dela."</span>
+
+<span class="c"># sem referência → genérico. Igual com gente.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 olhar renderizado + crítica de DA -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Prática 3 — Olhar renderizado + crítica de DA</div>
+        <h2>Nunca aprove <em>no escuro</em></h2>
+        <p class="lead" style="font-size:.98rem">A peça sai em HTML — <b style="color:#fff">ela só existe quando você abre no navegador e olha</b>. Só então vem o veredito, com o seu vocabulário: hierarquia, contraste, ritmo, respiro.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.95rem"><b style="color:#fff">Itere, não recomece.</b> Antes de mexer no que está bom: <i>"salve uma versão"</i> — o Claude cuida do como, ninguém precisa de git.</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># 1 · abra o .html e OLHE</span>
+
+<span class="c"># 2 · critique como DA</span>
+<span class="g">"Critique como diretor de arte:
+ hierarquia, contraste, ritmo, aderência
+ à direção. 3 ajustes concretos."</span>
+
+<span class="c"># 3 · checkpoint antes de mexer</span>
+<span class="g">"Salve uma versão antes de mexer."</span>
+
+<span class="c"># quebrou (bug)? "revise o código e conserte"</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 higiene -->
+  <section class="slide">
+    <div class="kicker">Prática 4 — Higiene de sessão</div>
     <h2>Sessão limpa = Claude <em>afiado</em></h2>
     <div class="cards" style="grid-template-columns:repeat(3,1fr)">
       <div class="pcard"><div class="pn">TROCOU DE TAREFA</div><h3><code>/clear</code></h3><p>Recomeça do zero. Mesa limpa pra próxima tarefa — respostas melhores.</p></div>
@@ -270,61 +337,17 @@ EOF</div>
     <p class="lead" style="margin-top:1.3rem;font-size:1rem">A atenção do Claude piora quando a conversa incha. Limpe cedo, com direção.</p>
   </section>
 
-  <!-- 10 opus/sonnet -->
+  <!-- 12 bônus automação -->
   <section class="slide">
     <div class="split">
       <div class="L">
-        <div class="kicker">Prática 3 — o time de modelos</div>
-        <h2>Opus <em>pensa</em>, Sonnet <em>faz</em></h2>
-        <p class="lead" style="font-size:.98rem"><b style="color:#fff">Opus</b> planeja e revisa (raciocínio profundo); <b style="color:#fff">Sonnet</b> executa (rápido e capaz).</p>
-        <p class="lead" style="margin-top:.7rem;font-size:.95rem">Você <b style="color:#fff">não fica trocando</b>: diga uma vez e <b style="color:#fff">salve na memória</b> — vira automático. Errou? <code>/code-review</code>.</p>
-      </div>
-      <div class="R">
-        <div class="codeblock"><span class="c"># peça uma vez e salve na memória ↓</span>
-<span class="g">"Lembre: planejar e revisar com Opus,
- executar com Sonnet."</span>
-
-<span class="c"># (manual, se quiser trocar na hora)</span>
-/model opus   ·   /model sonnet
-
-<span class="c"># errou? review sistemático</span>
-/code-review</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11 versionamento -->
-  <section class="slide">
-    <div class="split">
-      <div class="L">
-        <div class="kicker">Prática 4a — Versionamento</div>
-        <h2>Cada passo bom é um <em>checkpoint</em></h2>
-        <p class="lead" style="font-size:.98rem">Commit constante = rede de segurança. Deu certo? Salve. Deu errado depois? Você volta pro último ponto bom — sem drama.</p>
-        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">Mensagens curtas e claras. O Claude pode commitar por você.</p>
-      </div>
-      <div class="R">
-        <div class="codeblock"><span class="c"># salve um checkpoint</span>
-git add -A
-git commit -m "feat: peça JBL boombox — capa v1"
-
-<span class="c"># ou peça ao Claude:</span>
-"commita isso com uma mensagem limpa"</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12 hooks e rotinas -->
-  <section class="slide">
-    <div class="split">
-      <div class="L">
-        <div class="kicker">Prática 4b — Automação</div>
+        <div class="kicker">Bônus — Automação (não precisa agora)</div>
         <h2>Automatize o <em>repetitivo</em></h2>
-        <p class="lead" style="font-size:.98rem"><b style="color:#fff">Rotinas</b> — agende recorrentes com <code>/schedule</code> ou repita até terminar com <code>/loop</code>.</p>
-        <p class="lead" style="margin-top:.7rem;font-size:.98rem"><b style="color:#fff">Hooks</b> — ações automáticas a cada passo (no <code>settings.json</code>). <span style="color:var(--fg-mute)">Avançado — exemplos reais ao lado.</span></p>
-        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">💡 Nem precisa mexer no arquivo: descreva a rotina e peça pro Claude configurar. Ex.: <i>"quando eu disser 'vamos encerrar a sessão', atualize a memória do projeto, verifique o git e pergunte se faço push."</i></p>
+        <p class="lead" style="font-size:.98rem"><b style="color:#fff">Rotinas</b> — agende recorrentes com <code>/schedule</code> (ex.: <i>"toda sexta, gere o contact-sheet das peças da semana"</i>) ou repita até terminar com <code>/loop</code>.</p>
+        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">💡 Nem precisa decorar: descreva a rotina e peça pro Claude configurar. Ex.: <i>"quando eu disser 'vamos encerrar', atualize o STATUS.md do projeto."</i></p>
       </div>
       <div class="R">
-        <img src="assets/hub-hooks.png" alt="Hooks ativos (exemplo)" style="width:100%;max-height:64vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
+        <img src="assets/hub-hooks.png" alt="Rotinas e hooks (exemplo)" style="width:100%;max-height:64vh;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block">
       </div>
     </div>
   </section>
@@ -343,12 +366,48 @@ git commit -m "feat: peça JBL boombox — capa v1"
     <div class="pipe">
       <span class="step"><b>plan</b> · Opus</span><span class="arr">→</span>
       <span class="step"><b>exec</b> · Sonnet</span><span class="arr">→</span>
-      <span class="step"><b>review</b> · Opus + /code-review</span><span class="arr">→</span>
+      <span class="step"><b>ABRIR E OLHAR</b></span><span class="arr">→</span>
+      <span class="step"><b>crítica de DA</b></span><span class="arr">→</span>
       <span class="step"><b>ajusta</b></span><span class="arr">→</span>
-      <span class="step"><b>commit</b></span><span class="arr">→</span>
+      <span class="step"><b>salva versão</b></span><span class="arr">→</span>
       <span class="step"><b>/clear</b></span>
     </div>
-    <p class="lead" style="margin-top:1.6rem">Tudo <b class="accent">dentro do contexto da memória</b> (CLAUDE.md). É esse loop, repetido com disciplina, que te leva ao nível pro.</p>
+    <p class="lead" style="margin-top:1.6rem">Tudo <b class="accent">dentro do brand world</b> (CLAUDE.md + assets + referências). É esse loop, repetido com disciplina, que te leva ao nível pro.</p>
+  </section>
+
+  <!-- 14d os 3 entregáveis -->
+  <section class="slide">
+    <div class="kicker">Os 3 entregáveis do DA</div>
+    <h2>Peça · Deck · <em>Landing page</em></h2>
+    <div class="cards" style="grid-template-columns:repeat(3,1fr)">
+      <div class="pcard"><div class="pn">A · PEÇA ESTÁTICA</div><h3>Type-led ou image-led</h3><p>Brand world + referência → peça 1080×1080. Destino digital? O HTML <b style="color:#fff">é</b> o entregável. Segue pra Figma/AI? É o <b style="color:#fff">concept board</b> em minutos.</p></div>
+      <div class="pcard"><div class="pn">B · DECK</div><h3>Apresentação navegável</h3><p>Capa + conceito + próximos passos, no sistema da marca. ← → navega, F = tela cheia, imprimir = PDF. <b style="color:#fff">Este deck foi feito assim.</b></p></div>
+      <div class="pcard"><div class="pn">C · LANDING PAGE</div><h3>Seção por seção</h3><p>"Monte SÓ o hero, pra eu dirigir" → olha → critica → próxima seção. De brand world a página navegável em minutos.</p></div>
+    </div>
+    <p class="lead" style="margin-top:1.3rem;font-size:1rem">O mesmo loop, três acabamentos — tudo a partir do <b class="accent">mesmo brand world</b>.</p>
+  </section>
+
+  <!-- 14c memória de projeto -->
+  <section class="slide">
+    <div class="split">
+      <div class="L">
+        <div class="kicker">Trabalho em equipe — memória de projeto</div>
+        <h2>O time todo vê onde o <em>job</em> está</h2>
+        <p class="lead" style="font-size:.98rem">Cada projeto guarda a <b style="color:#fff">situação atual</b> num <code>STATUS.md</code> no Drive — etapa, decisões, pendências, próximo passo. O Claude <b style="color:#fff">lê no início e atualiza no fim</b>; o Drive sincroniza pra todos. <b style="color:#fff">Sem git.</b></p>
+        <p class="lead" style="margin-top:.7rem;font-size:.92rem;color:var(--fg-mute)">Você não escreve nada à mão — fala em português, o Claude mantém o arquivo.</p>
+      </div>
+      <div class="R">
+        <div class="codeblock"><span class="c"># abra o projeto e pergunte</span>
+<span class="g">"Como está esse projeto?"</span>
+
+<span class="c"># trabalhou? mande atualizar (ou só encerre)</span>
+<span class="g">"Atualiza a situação: capa pronta,
+ falta o fecho."</span>
+
+<span class="c"># começar um job novo</span>
+/novo-projeto Campanha Verão</div>
+      </div>
+    </div>
   </section>
 
   <!-- 14b exemplos produzidos -->
@@ -374,15 +433,15 @@ git commit -m "feat: peça JBL boombox — capa v1"
       <div class="L">
         <div class="kicker">Mão na massa — agora você</div>
         <h2>Rode o loop <em>completo</em></h2>
-        <p class="lead" style="font-size:.98rem">Produza uma peça simples de uma marca e passe por todas as etapas. O objetivo não é a peça — é <b style="color:#fff">praticar o fluxo</b>.</p>
+        <p class="lead" style="font-size:.98rem">Escolha <b style="color:#fff">UM entregável</b> — peça, slide de deck ou hero de landing — e passe por todas as etapas. O objetivo não é a peça — é <b style="color:#fff">praticar o fluxo</b>.</p>
       </div>
       <div class="R">
-        <ul class="points" style="font-size:1.05rem">
-          <li>Crie um <code>CLAUDE.md</code> com a voz da marca</li>
-          <li><b>Opus</b>: peça um plano de 3 conceitos</li>
-          <li><b>Sonnet</b>: execute uma legenda</li>
-          <li>Rode <code>/code-review</code> e ajuste</li>
-          <li><b>Commite</b> o resultado · depois <code>/clear</code></li>
+        <ul class="points" style="font-size:1.02rem">
+          <li><code>CLAUDE.md</code> com voz + <b>sistema</b> (logo/hex/fonte)</li>
+          <li>Arraste 1–2 <b>referências</b> e extraia a direção</li>
+          <li><b>Opus</b>: 3 caminhos · <b>Sonnet</b>: executa um</li>
+          <li><b>ABRA E OLHE</b> · crítica de DA: 3 ajustes · aplique 1</li>
+          <li><i>"Salve uma versão"</i> · depois <code>/clear</code></li>
         </ul>
       </div>
     </div>
@@ -393,8 +452,8 @@ git commit -m "feat: peça JBL boombox — capa v1"
     <div class="split">
       <div class="L">
         <div class="kicker">Leve na cabeça</div>
-        <h2>Memória · Higiene · Opus&amp;Sonnet · <em>Versionar</em></h2>
-        <p class="lead" style="margin-top:1.1rem;font-family:var(--display);font-style:italic;font-size:clamp(1.2rem,2vw,1.7rem);color:#fff">20% das práticas, 80% do resultado.</p>
+        <h2>Memória · Assets+referência · Olhar+criticar · <em>Higiene</em></h2>
+        <p class="lead" style="margin-top:1.1rem;font-family:var(--display);font-style:italic;font-size:clamp(1.2rem,2vw,1.7rem);color:#fff">20% das práticas, 80% do resultado — em peça, deck e landing.</p>
       </div>
       <div class="R">
         <ul class="points">
