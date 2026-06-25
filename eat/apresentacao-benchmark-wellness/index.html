@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EAT+KITCHEN · Benchmark Global · Redes Saudáveis do Mundo · ZN.</title>
+<meta name="description" content="Estudo de benchmark internacional · as melhores redes de restaurantes saudáveis/wellness do mundo · referências para a EAT+KITCHEN · por Thiago Zeni" />
+<link rel="icon" type="image/svg+xml" href="../brand-guide/img/favicon.svg" />
+<link rel="apple-touch-icon" href="../brand-guide/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   EAT+KITCHEN · BENCHMARK GLOBAL — REDES SAUDÁVEIS DO MUNDO
+   Identidade ZN: brutalismo editorial preto puro + lime accent
+   Sora (display) · Manrope (body) · Unbounded (ZN) · JetBrains (mono)
+   ============================================================ */
+:root{
+  --black:#000000; --ink:#0A0A0A; --ink-2:#141414; --ink-3:#1F1F1F;
+  --white:#FFFFFF; --paper:#F5F5F5;
+  --g1:#DADADA; --g2:#9A9A9A; --g3:#5A5A5A; --g4:#2A2A2A;
+  --line:rgba(255,255,255,0.10); --line-soft:rgba(255,255,255,0.06);
+  --rust:#FF4D2E;
+  --zn-lime:#C6FF00; --zn-text:#F2F2F2;
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-body:'Manrope',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --font-zn:'Unbounded',sans-serif;
+  --display-xl:clamp(3rem,12vw,13rem);
+  --display-lg:clamp(2.2rem,7.5vw,6rem);
+  --display-md:clamp(1.5rem,4.4vw,3.6rem);
+  --title:clamp(1.4rem,3.8vw,3rem);
+  --h2:clamp(1.1rem,2.5vw,2.1rem);
+  --h3:clamp(.95rem,1.5vw,1.3rem);
+  --body:clamp(.85rem,1.05vw,1rem);
+  --small:clamp(.7rem,.85vw,.8rem);
+  --label:clamp(.58rem,.7vw,.72rem);
+  --pad:clamp(1.4rem,3.6vw,3.6rem);
+  --gap:clamp(.8rem,1.8vw,1.6rem);
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;overflow-x:hidden;background:var(--black);color:var(--white);font-family:var(--font-body);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;}
+a{color:inherit;text-decoration:none;}
+img,video{max-width:100%;display:block;}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
+.upper{text-transform:uppercase;}
+.mono{font-family:var(--font-mono);}
+.tab{font-feature-settings:"tnum";}
+.lime{color:var(--zn-lime);}
+.brand{font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;display:inline;white-space:nowrap;}
+.brand .plus{display:inline-block;margin:0 .04em;font-weight:700;transform:translateY(-.04em);}
+.tagline{font-family:var(--font-display);font-weight:400;text-transform:uppercase;letter-spacing:.26em;color:var(--white);}
+
+/* HEADER */
+.app-header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,3vw,2.4rem);pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,0.7)0%,rgba(0,0,0,0)100%);}
+.app-header>*{pointer-events:auto;}
+.zn-logo{display:inline-flex;align-items:baseline;gap:.12rem;font-family:var(--font-zn);font-weight:900;font-size:1.25rem;letter-spacing:-.08em;color:var(--zn-text);line-height:1;transition:opacity .3s var(--ease);}
+.zn-logo .zn-dot{color:var(--zn-lime);text-shadow:0 0 14px rgba(198,255,0,.6);animation:lime-pulse 3.4s ease-in-out infinite;}
+.zn-logo:hover{opacity:.75;}
+@keyframes lime-pulse{0%,100%{text-shadow:0 0 12px rgba(198,255,0,.5);}50%{text-shadow:0 0 24px rgba(198,255,0,.9);}}
+.deck-meta{display:flex;align-items:center;gap:.85rem;font-family:var(--font-display);font-size:.58rem;color:var(--g2);letter-spacing:.26em;text-transform:uppercase;font-weight:500;}
+.deck-meta .pulse{width:6px;height:6px;background:var(--zn-lime);border-radius:50%;box-shadow:0 0 0 4px rgba(198,255,0,.16);animation:pulse 2.4s ease-in-out infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(198,255,0,.16);}50%{box-shadow:0 0 0 9px rgba(198,255,0,.04);}}
+
+/* RAIL */
+.progress-rail{position:fixed;top:50%;right:clamp(.6rem,1.4vw,1.2rem);transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:6px;}
+.progress-rail .pip{width:18px;height:1px;background:rgba(255,255,255,.18);transition:all .35s var(--ease);cursor:pointer;padding:0;}
+.progress-rail .pip.active{width:32px;height:2px;background:var(--zn-lime);}
+.progress-rail .pip:hover{background:var(--white);}
+
+/* SLIDE BASE */
+.slide{width:100vw;height:100vh;height:100dvh;overflow:hidden;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;justify-content:center;padding:clamp(3.4rem,7vh,5rem) var(--pad) clamp(2.6rem,5vh,3.4rem);}
+.section-pill{position:absolute;top:clamp(2.8rem,6vh,3.6rem);right:var(--pad);font-family:var(--font-display);font-weight:600;font-size:var(--label);letter-spacing:.24em;text-transform:uppercase;color:var(--black);background:var(--zn-lime);padding:.42em .9em;border-radius:2em;z-index:101;}
+.section-pill.ghost{background:transparent;color:var(--g2);border:1px solid var(--line);}
+.slide-footer{position:absolute;left:var(--pad);right:var(--pad);bottom:clamp(1rem,2.4vh,1.5rem);display:flex;justify-content:space-between;align-items:center;font-family:var(--font-display);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g3);border-top:1px solid var(--line-soft);padding-top:.7rem;}
+.slide-footer .num{color:var(--white);font-weight:600;}
+
+/* TYPO HELPERS */
+.kicker{font-family:var(--font-display);font-weight:600;font-size:var(--label);letter-spacing:.3em;text-transform:uppercase;color:var(--zn-lime);}
+.kicker.muted{color:var(--g2);}
+h1.big,h2.big{font-family:var(--font-display);font-weight:800;font-size:var(--display-md);line-height:.98;letter-spacing:-.04em;text-transform:uppercase;}
+.lead{max-width:62ch;color:var(--g1);font-size:clamp(.95rem,1.5vw,1.2rem);line-height:1.5;}
+.fine{color:var(--g3);font-size:var(--small);}
+
+/* COVER */
+.cover{align-items:flex-start;}
+.cover-eyebrow{font-family:var(--font-display);font-weight:600;font-size:var(--label);letter-spacing:.32em;text-transform:uppercase;color:var(--zn-lime);margin-bottom:clamp(1rem,3vh,2rem);}
+.cover-title{font-family:var(--font-display);font-weight:800;font-size:var(--display-lg);line-height:.92;letter-spacing:-.045em;text-transform:uppercase;max-width:16ch;}
+.cover-title .o{color:var(--zn-lime);}
+.cover-sub{margin-top:clamp(1rem,2.6vh,1.6rem);max-width:56ch;color:var(--g1);font-size:clamp(.95rem,1.5vw,1.2rem);}
+.cover-foot{position:absolute;left:var(--pad);right:var(--pad);bottom:clamp(1.4rem,4vh,2.6rem);display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;font-size:var(--small);color:var(--g2);}
+.cover-foot strong{color:var(--white);}
+
+/* GRIDS / CARDS */
+.grid{display:grid;gap:var(--gap);width:100%;}
+.g2{grid-template-columns:repeat(2,1fr);}
+.g3{grid-template-columns:repeat(3,1fr);}
+.g4{grid-template-columns:repeat(4,1fr);}
+.card{background:var(--ink);border:1px solid var(--line);border-radius:14px;padding:clamp(1rem,1.8vw,1.5rem);}
+.card .ct{font-family:var(--font-display);font-weight:700;font-size:var(--h3);letter-spacing:-.01em;margin-bottom:.4rem;}
+.card .cd{color:var(--g2);font-size:var(--small);line-height:1.5;}
+.card .cn{font-family:var(--font-display);font-weight:300;font-size:.8rem;color:var(--g3);}
+
+/* STAT */
+.stat-num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,6vw,4.6rem);line-height:1;letter-spacing:-.04em;}
+.stat-num .u{font-size:.42em;font-weight:600;color:var(--g2);letter-spacing:0;}
+.stat-lbl{margin-top:.5rem;color:var(--g2);font-size:var(--small);line-height:1.45;}
+.stat-num.lime{color:var(--zn-lime);}
+
+/* INSIGHT CALLOUT */
+.insight{border-left:2px solid var(--zn-lime);padding:.2rem 0 .2rem 1rem;background:linear-gradient(90deg,rgba(198,255,0,.05),transparent);}
+.insight .il{font-family:var(--font-display);font-weight:600;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--zn-lime);display:block;margin-bottom:.35rem;}
+.insight p{font-size:var(--small);color:var(--g1);line-height:1.5;}
+
+/* QUOTE */
+.quote{font-family:var(--font-display);font-weight:300;font-style:italic;font-size:clamp(1rem,1.7vw,1.35rem);line-height:1.4;color:var(--white);}
+.quote .src{display:block;margin-top:.6rem;font-style:normal;font-weight:600;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--g3);}
+
+/* PROFILE */
+.profile{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(1.2rem,3vw,3rem);align-items:center;width:100%;}
+.profile .left{min-width:0;}
+.profile .rank{font-family:var(--font-mono);font-size:.7rem;color:var(--zn-lime);letter-spacing:.1em;}
+.profile .flag{font-size:1.1rem;}
+.profile h2.name{font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.4rem);line-height:.96;letter-spacing:-.035em;text-transform:uppercase;margin:.3rem 0 .25rem;}
+.profile .tag{color:var(--zn-lime);font-family:var(--font-display);font-weight:600;font-size:var(--small);letter-spacing:.04em;text-transform:uppercase;}
+.profile .pos{margin:.9rem 0 1rem;color:var(--g1);font-size:var(--body);line-height:1.5;max-width:46ch;}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;}
+.metric{border:1px solid var(--line);border-radius:10px;padding:.6rem .75rem;background:var(--ink);}
+.metric .mv{font-family:var(--font-display);font-weight:800;font-size:clamp(1.1rem,2vw,1.55rem);line-height:1;letter-spacing:-.02em;}
+.metric .mv .mu{font-size:.6em;font-weight:600;color:var(--g2);}
+.metric .ml{margin-top:.32rem;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g3);}
+.profile .right{display:flex;flex-direction:column;gap:1rem;min-width:0;}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;}
+.chip{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--g1);border:1px solid var(--line);border-radius:2em;padding:.32em .7em;}
+.chip.hot{border-color:rgba(198,255,0,.4);color:var(--zn-lime);}
+
+/* MAP / REGIONS */
+.regions{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);width:100%;}
+.region{border:1px solid var(--line);border-radius:14px;padding:clamp(1rem,1.6vw,1.4rem);background:var(--ink);}
+.region h3{font-family:var(--font-display);font-weight:700;font-size:var(--h3);margin-bottom:.2rem;}
+.region .rc{color:var(--g3);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.8rem;}
+.region ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.region li{display:flex;align-items:baseline;gap:.5rem;font-size:var(--small);color:var(--g1);}
+.region li .fl{font-size:.85rem;}
+.region li b{font-family:var(--font-display);font-weight:600;color:var(--white);}
+.region li .meta{margin-left:auto;color:var(--g3);font-family:var(--font-mono);font-size:.62rem;}
+
+/* MATRIX */
+.matrix{position:relative;width:100%;max-width:min(92vw,1040px);margin:0 auto;aspect-ratio:16/8.2;border:1px solid var(--line);border-radius:14px;background:radial-gradient(120% 120% at 50% 0,rgba(255,255,255,.03),transparent);}
+.matrix .axis-x,.matrix .axis-y{position:absolute;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--g3);font-family:var(--font-display);}
+.matrix .axis-x.l{left:1rem;bottom:.6rem;}
+.matrix .axis-x.r{right:1rem;bottom:.6rem;}
+.matrix .axis-y.t{left:.7rem;top:.8rem;writing-mode:vertical-rl;transform:rotate(180deg);}
+.matrix .axis-y.b{left:.7rem;bottom:.8rem;writing-mode:vertical-rl;transform:rotate(180deg);}
+.matrix .mid-v{position:absolute;left:50%;top:6%;bottom:14%;border-left:1px dashed var(--line);}
+.matrix .mid-h{position:absolute;top:50%;left:6%;right:4%;border-top:1px dashed var(--line);}
+.dot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:.2rem;}
+.dot b{width:9px;height:9px;border-radius:50%;background:var(--zn-lime);box-shadow:0 0 0 4px rgba(198,255,0,.12);}
+.dot.own b{background:var(--white);box-shadow:0 0 0 4px rgba(255,255,255,.1);}
+.dot span{font-size:.58rem;color:var(--g1);font-family:var(--font-display);font-weight:600;white-space:nowrap;}
+
+/* TABLE */
+.cmp{width:100%;border-collapse:collapse;font-size:clamp(.62rem,1vw,.8rem);}
+.cmp th,.cmp td{text-align:left;padding:.5rem .55rem;border-bottom:1px solid var(--line-soft);}
+.cmp th{font-family:var(--font-display);font-weight:600;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--g3);position:sticky;top:0;}
+.cmp td{color:var(--g1);}
+.cmp td b{color:var(--white);font-family:var(--font-display);font-weight:600;}
+.cmp tr:hover td{background:rgba(255,255,255,.02);}
+.cmp .num{font-family:var(--font-mono);}
+
+/* SOCIAL BARS */
+.bars{display:flex;flex-direction:column;gap:.7rem;width:100%;}
+.bar{display:grid;grid-template-columns:9rem 1fr auto;align-items:center;gap:.8rem;}
+.bar .bn{font-family:var(--font-display);font-weight:600;font-size:var(--small);}
+.bar .bt{height:14px;border-radius:7px;background:var(--zn-lime);position:relative;}
+.bar .bv{font-family:var(--font-mono);font-size:.7rem;color:var(--g1);}
+
+/* CAUTION */
+.caution .ch{color:var(--rust);}
+.caution .metric .mv{color:var(--rust);}
+
+/* TWO-COL TEXT */
+.twocol{columns:2;column-gap:clamp(1.4rem,3vw,3rem);}
+.twocol>*{break-inside:avoid;margin-bottom:.9rem;}
+
+/* NUM LIST */
+.numlist{display:grid;gap:.7rem;width:100%;}
+.numlist .nl{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;}
+.numlist .nl .n{font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:var(--zn-lime);line-height:1;min-width:1.4em;}
+.numlist .nl .t{color:var(--g1);font-size:var(--small);line-height:1.5;}
+.numlist .nl .t b{color:var(--white);font-family:var(--font-display);font-weight:600;}
+
+/* ZN SIGNOFF */
+.zn-signature{display:flex;flex-direction:column;gap:1.4rem;width:100%;border-top:2px solid var(--zn-lime);padding-top:1.6rem;margin-top:1rem;}
+.zn-block{display:flex;align-items:center;gap:1.1rem;}
+.zn-big{font-family:var(--font-zn);font-weight:900;font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.08em;line-height:1;}
+.zn-big .zn-dot{color:var(--zn-lime);text-shadow:0 0 18px rgba(198,255,0,.7);}
+.zn-meta{display:flex;flex-direction:column;}
+.zn-meta strong{font-family:var(--font-display);font-weight:700;font-size:1.1rem;}
+.zn-meta span{color:var(--g2);font-size:var(--small);}
+
+/* BRAND LOGO SEAL (hotlink real + fallback wordmark colorido) */
+.blogo{display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:#fff;border-radius:10px;overflow:hidden;position:relative;}
+.blogo img{max-width:78%;max-height:62%;object-fit:contain;}
+.blogo .wm{display:none;font-family:var(--font-display);font-weight:800;font-size:clamp(.7rem,1.3vw,1.05rem);letter-spacing:-.02em;color:#fff;text-align:center;line-height:1;padding:.3rem;}
+.blogo.fallback{background:var(--bc,#1b1b1b);}
+.blogo.fallback img{display:none;}
+.blogo.fallback .wm{display:block;}
+.brandbar{height:4px;width:100%;border-radius:2px;background:var(--bc,var(--zn-lime));}
+
+/* BRAND SEAL no perfil */
+.brandseal{width:clamp(84px,9vw,120px);height:clamp(40px,4.4vw,56px);flex:0 0 auto;}
+
+/* OP STRIP — faixa de operação no perfil */
+.opstrip{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem;width:100%;margin-top:.2rem;border-top:1px solid var(--line-soft);padding-top:.7rem;}
+.opstrip .op{min-width:0;}
+.opstrip .op .ol{font-size:.54rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g3);margin-bottom:.18rem;}
+.opstrip .op .ov{font-family:var(--font-display);font-weight:700;font-size:clamp(.74rem,1.1vw,.95rem);line-height:1.05;color:var(--white);}
+.opstrip .op .ov .ou{font-weight:500;color:var(--g2);font-size:.78em;}
+
+/* OP TABLE */
+.optbl{width:100%;border-collapse:collapse;font-size:clamp(.6rem,.95vw,.78rem);}
+.optbl th,.optbl td{text-align:left;padding:.48rem .5rem;border-bottom:1px solid var(--line-soft);white-space:nowrap;}
+.optbl th{font-family:var(--font-display);font-weight:600;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g3);}
+.optbl td{color:var(--g1);}
+.optbl td b{color:var(--white);font-family:var(--font-display);font-weight:600;}
+.optbl td.s{color:var(--zn-lime);}
+.optbl tr:hover td{background:rgba(255,255,255,.02);}
+.optbl .mono{font-family:var(--font-mono);}
+
+/* SERVICE FORMAT taxonomy */
+.fmt{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap);width:100%;}
+.fmt .ft{border:1px solid var(--line);border-radius:12px;padding:clamp(.8rem,1.4vw,1.2rem);background:var(--ink);display:flex;flex-direction:column;gap:.5rem;}
+.fmt .ft .ico{font-size:1.5rem;}
+.fmt .ft h4{font-family:var(--font-display);font-weight:700;font-size:var(--small);text-transform:uppercase;letter-spacing:.02em;}
+.fmt .ft p{font-size:.64rem;color:var(--g2);line-height:1.45;}
+.fmt .ft .who{margin-top:auto;font-size:.6rem;color:var(--zn-lime);font-family:var(--font-display);font-weight:600;}
+
+/* TESTIMONIALS — voz do cliente */
+.testi{border:1px solid var(--line);border-radius:14px;padding:clamp(1rem,1.6vw,1.4rem);background:var(--ink);display:flex;flex-direction:column;gap:.7rem;}
+.testi .stars{color:var(--zn-lime);font-size:.8rem;letter-spacing:.1em;}
+.testi .stars.neg{color:var(--rust);}
+.testi q{font-family:var(--font-display);font-weight:300;font-style:italic;font-size:clamp(.82rem,1.2vw,1rem);line-height:1.4;color:var(--white);}
+.testi q::before{content:"\201C";}.testi q::after{content:"\201D";}
+.testi .meta{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--g3);margin-top:auto;}
+.testi .meta b{color:var(--g1);font-family:var(--font-display);font-weight:600;}
+
+/* WALL OF BRANDS */
+.wall{display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem;width:100%;}
+.wall .cell{aspect-ratio:16/9;}
+.wall .cap{margin-top:.3rem;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--g3);text-align:center;}
+
+/* FOOTPRINT À ESCALA */
+.fpwrap{display:flex;align-items:flex-end;justify-content:center;gap:clamp(.5rem,1.4vw,1.1rem);width:100%;}
+.fp-item{display:flex;flex-direction:column;align-items:center;gap:.6rem;}
+.fp-box{border:2px solid var(--bc,var(--zn-lime));background:rgba(255,255,255,.035);border-radius:4px;position:relative;flex:0 0 auto;}
+.fp-box::after{content:attr(data-seats);position:absolute;bottom:4px;left:0;right:0;text-align:center;font-size:.5rem;color:var(--g3);font-family:var(--font-mono);}
+.fp-lbl{text-align:center;font-size:.56rem;color:var(--g3);line-height:1.3;}
+.fp-lbl b{display:block;font-family:var(--font-display);font-weight:700;color:var(--white);font-size:.66rem;margin-bottom:.1rem;}
+.fp-lbl .m{color:var(--zn-lime);font-family:var(--font-mono);font-size:.6rem;}
+.fp-human{width:8px;border-radius:3px 3px 0 0;background:rgba(255,255,255,.18);align-self:flex-end;}
+
+/* PHOTO PANEL no perfil */
+.pphoto{position:absolute;top:0;right:0;width:38%;height:100%;overflow:hidden;z-index:0;-webkit-mask-image:linear-gradient(270deg,#000 55%,transparent);mask-image:linear-gradient(270deg,#000 55%,transparent);}
+.pphoto img{width:100%;height:100%;object-fit:cover;opacity:.42;filter:grayscale(.2) contrast(1.02);}
+.pphoto.empty{display:none;}
+.slide.has-photo .profile{position:relative;z-index:1;}
+.pphoto .credit{position:absolute;bottom:.5rem;right:.7rem;font-size:.5rem;color:var(--g2);letter-spacing:.08em;text-transform:uppercase;z-index:2;background:rgba(0,0,0,.4);padding:.1rem .4rem;border-radius:3px;}
+
+/* INSTAGRAM · voz de marca */
+.iggrid{display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem;width:100%;}
+.igcard{border:1px solid var(--line);border-radius:12px;padding:.75rem .8rem;background:var(--ink);display:flex;flex-direction:column;gap:.5rem;min-width:0;}
+.igcard .igtop{display:flex;align-items:center;gap:.5rem;min-width:0;}
+.igseal{width:32px;height:32px;flex:0 0 auto;border-radius:7px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;}
+.igseal img{max-width:80%;max-height:70%;object-fit:contain;}
+.igcard .ighandle{font-family:var(--font-mono);font-size:.56rem;color:var(--g3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.igcard .igfoll{font-family:var(--font-display);font-weight:800;font-size:.95rem;line-height:1;}
+.igcard .igfoll .igu{font-size:.6em;font-weight:600;color:var(--g2);}
+.igcard .igbio{font-size:.62rem;color:var(--g1);line-height:1.4;font-style:italic;}
+.igcard .igbio::before{content:"“";}.igcard .igbio::after{content:"”";}
+.igeng{margin-top:auto;font-size:.54rem;letter-spacing:.06em;text-transform:uppercase;color:var(--zn-lime);font-family:var(--font-display);font-weight:600;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+.reveal[data-delay="1"]{transition-delay:.07s;}
+.reveal[data-delay="2"]{transition-delay:.14s;}
+.reveal[data-delay="3"]{transition-delay:.21s;}
+.reveal[data-delay="4"]{transition-delay:.28s;}
+.reveal[data-delay="5"]{transition-delay:.35s;}
+.reveal[data-delay="6"]{transition-delay:.42s;}
+.reveal[data-delay="7"]{transition-delay:.49s;}
+.reveal[data-delay="8"]{transition-delay:.56s;}
+
+@media (max-width:900px){
+  .profile{grid-template-columns:1fr;gap:1.2rem;}
+  .g3,.g4,.regions{grid-template-columns:1fr 1fr;}
+  .twocol{columns:1;}
+  .bar{grid-template-columns:6.5rem 1fr auto;}
+  .matrix{aspect-ratio:4/5;}
+}
+@media (max-width:600px){
+  .g2,.g3,.g4,.regions,.metrics{grid-template-columns:1fr;}
+  .cmp{font-size:.6rem;}
+  .slide{justify-content:flex-start;padding-top:4.4rem;overflow-y:auto;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <a class="zn-logo" href="../index.html" title="Voltar ao hub">ZN<span class="zn-dot">.</span></a>
+  <div class="deck-meta"><span class="pulse"></span><span>Benchmark Global · Wellness</span></div>
+</header>
+
+<nav class="progress-rail" aria-label="Navegação de slides"></nav>
+
+<main>
+
+  <!-- 01 · CAPA -->
+  <section class="slide cover" data-name="Capa" data-theme="dark">
+    <div class="cover-eyebrow reveal">Estudo de benchmark internacional · 2026</div>
+    <h1 class="cover-title reveal" data-delay="1">As melhores redes<br>de <span class="o">comida saudável</span><br>do mundo</h1>
+    <p class="cover-sub reveal" data-delay="3">Um mapa das referências globais em <em>wellness dining</em> — quem são, como se estruturam e o que cada uma ensina à EAT+KITCHEN.</p>
+    <div class="cover-foot reveal" data-delay="5">
+      <div>Por <strong>Thiago Zeni</strong> · Sócio investidor · conselheiro estratégico</div>
+      <div><strong>15 redes</strong> · 14 países · ~90 fontes · jun 2026</div>
+    </div>
+  </section>
+
+  <!-- 02 · ESCOPO & MÉTODO -->
+  <section class="slide" data-name="Método" data-theme="dark">
+    <div class="section-pill">Método</div>
+    <span class="kicker reveal">Como esta pesquisa foi feita</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.4rem;max-width:18ch;">Escopo &amp; método</h2>
+    <div class="grid g4">
+      <div class="card reveal" data-delay="2"><div class="cn">01</div><div class="ct">4 frentes paralelas</div><div class="cd">Américas, Europa, Ásia/Oceania/Oriente Médio e um corte setorial de mercado — pesquisados simultaneamente.</div></div>
+      <div class="card reveal" data-delay="3"><div class="cn">02</div><div class="ct">~90 fontes citadas</div><div class="cd">Imprensa de negócios, relatórios de mercado, SEC filings, B-Lab, sites oficiais e reviews. Cada número tem origem.</div></div>
+      <div class="card reveal" data-delay="4"><div class="cn">03</div><div class="ct">Critério de inclusão</div><div class="cd">Apenas redes <b>bem estruturadas e reconhecidas</b> — escala real, modelo claro, sinais de marca. Restaurantes únicos ficaram de fora.</div></div>
+      <div class="card reveal" data-delay="5"><div class="cn">04</div><div class="ct">Honestidade de dados</div><div class="cd">Empresas privadas não divulgam receita; seguidores são aproximações. O que não foi confirmado aparece como <span class="mono">n/d</span> — nada inventado.</div></div>
+    </div>
+    <div class="slide-footer"><span class="num">02 / 30</span><span>Padrão Nielsen · Kantar · Ipsos</span></div>
+  </section>
+
+  <!-- 03 · SUMÁRIO EXECUTIVO -->
+  <section class="slide" data-name="Sumário" data-theme="dark">
+    <div class="section-pill">Síntese</div>
+    <span class="kicker reveal">Sumário executivo</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.2rem;max-width:20ch;">Seis achados que atravessam o setor</h2>
+    <div class="numlist reveal" data-delay="2">
+      <div class="nl"><div class="n">1</div><div class="t"><b>Wellness + escala + margem coexistem</b> — quando a tese de saúde é cientificamente ancorada (CAVA = mediterrânea; True Food = anti-inflamatória). Não é nicho de baixa margem.</div></div>
+      <div class="nl"><div class="n">2</div><div class="t"><b>Dois arquétipos vencedores</b> — chef-led/company-owned premium <i>vs.</i> franquia capital-light de volume. Ambos funcionam, com disciplinas distintas.</div></div>
+      <div class="nl"><div class="n">3</div><div class="t"><b>Formato ou produto proprietário é um moat</b> — mais forte que um "cardápio saudável" genérico (Fieldtray, poke, açaí puro).</div></div>
+      <div class="nl"><div class="n">4</div><div class="t"><b>Loyalty/app virou o motor de retenção</b> — CAVA Rewards dirige ⅓ das vendas. Mas fricção mata o programa.</div></div>
+      <div class="nl"><div class="n">5</div><div class="t"><b>Diferenciação vem de autoridade real ou selo verificável</b> — Dr. Weil + Oprah; B-Corp e carbon labels — não de claims genéricos.</div></div>
+      <div class="nl"><div class="n">6</div><div class="t"><b>O modelo de expansão é o destino</b> — disciplina (Chopt) vs. franquia sem suporte (Freshii colapsou). Alerta macro: vendas mesmas-lojas esfriando em 2025.</div></div>
+    </div>
+    <div class="slide-footer"><span class="num">03 / 30</span><span>O essencial em uma tela</span></div>
+  </section>
+
+  <!-- 04 · MERCADO -->
+  <section class="slide" data-name="Mercado" data-theme="dark">
+    <div class="section-pill">Mercado</div>
+    <span class="kicker reveal">Panorama de mercado</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.4rem;max-width:20ch;">O tamanho da oportunidade</h2>
+    <div class="grid g4" style="align-items:end;">
+      <div class="reveal" data-delay="2"><div class="stat-num lime tab"><span data-counter="190">0</span><span class="u"> bi US$</span></div><div class="stat-lbl">Mercado global de <b>fast casual</b> (ordem de grandeza 2024–25; US$145–190 bi entre institutos).</div></div>
+      <div class="reveal" data-delay="3"><div class="stat-num tab"><span data-counter="126">0</span><span class="u"> bi US$</span></div><div class="stat-lbl">Subsegmento <b>healthy / better-for-you</b> (2025, MarketIntelo).</div></div>
+      <div class="reveal" data-delay="4"><div class="stat-num tab"><span data-counter="78" data-div="10">0</span><span class="u"> % a.a.</span></div><div class="stat-lbl">CAGR do segmento saudável (~7,8%) — acima da média do food service.</div></div>
+      <div class="reveal" data-delay="5"><div class="stat-num tab"><span data-counter="38">0</span><span class="u"> %</span></div><div class="stat-lbl">Participação da <b>América do Norte</b> na receita global do segmento.</div></div>
+    </div>
+    <p class="fine reveal" data-delay="6" style="margin-top:1.6rem;max-width:80ch;">Nota metodológica: as estimativas variam muito (US$92 bi a US$240 bi) porque cada instituto define "healthy" e "fast casual" de forma diferente. Tratar como ordens de grandeza. Fontes: Research and Markets, Strategic Market Research, Straits Research, MarketIntelo, FutureDataStats.</p>
+    <div class="slide-footer"><span class="num">04 / 30</span><span>Fast casual saudável · 2024–2034</span></div>
+  </section>
+
+  <!-- 05 · TENDÊNCIAS DE CONSUMO -->
+  <section class="slide" data-name="Tendências" data-theme="dark">
+    <div class="section-pill">Consumo</div>
+    <span class="kicker reveal">O que move o consumidor</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.2rem;max-width:22ch;">Cinco vetores de demanda</h2>
+    <div class="grid g3">
+      <div class="card reveal" data-delay="2"><div class="stat-num lime tab" style="font-size:clamp(1.8rem,4vw,3rem)"><span data-counter="84">0</span><span class="u">%</span></div><div class="cd" style="margin-top:.5rem">dos consumidores dos EUA colocam <b>wellness</b> como prioridade top/importante. <span class="fine">McKinsey 2025</span></div></div>
+      <div class="card reveal" data-delay="3"><div class="stat-num tab" style="font-size:clamp(1.8rem,4vw,3rem)"><span data-counter="124" data-div="10">0</span><span class="u">%</span></div><div class="cd" style="margin-top:.5rem">dos americanos usavam <b>GLP-1</b> (Ozempic/Wegovy) no fim de 2025 — reconfigura porção e foco em proteína. <span class="fine">CNBC/eMarketer</span></div></div>
+      <div class="card reveal" data-delay="4"><div class="stat-num tab" style="font-size:clamp(1.8rem,4vw,3rem)"><span data-counter="80">0</span><span class="u">%</span></div><div class="cd" style="margin-top:.5rem">dos Millennials priorizam <b>clean label</b> (72% da Gen Z). 81% acham "necessário". <span class="fine">Datassential</span></div></div>
+      <div class="card reveal" data-delay="5"><div class="ct">Proteína em 1º</div><div class="cd"><b>Protein-forward</b> (animal e vegetal) lidera as listas de tendências culinárias. <span class="fine">National Restaurant Assoc. 2026</span></div></div>
+      <div class="card reveal" data-delay="6"><div class="stat-num tab" style="font-size:clamp(1.8rem,4vw,3rem)">+<span data-counter="31">0</span><span class="u">%</span></div><div class="cd" style="margin-top:.5rem">premium médio que o consumidor <b>aceita pagar</b> por comida mais saudável (meta-análise). <span class="fine">Obesity Reviews</span></div></div>
+    </div>
+    <div class="slide-footer"><span class="num">05 / 30</span><span>Demanda estrutural, não modismo</span></div>
+  </section>
+
+  <!-- 06 · ARQUÉTIPOS -->
+  <section class="slide" data-name="Arquétipos" data-theme="dark">
+    <div class="section-pill">Modelos</div>
+    <span class="kicker reveal">Dois caminhos para vencer</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.3rem;max-width:20ch;">Os arquétipos vencedores</h2>
+    <div class="grid g2">
+      <div class="card reveal" data-delay="2" style="border-color:rgba(255,255,255,.2)"><div class="cn">Arquétipo A</div><div class="ct">Chef-led · company-owned · premium</div><div class="cd">Controle total de operação e qualidade; cozinha real (não só montagem); ticket e margem mais altos; crescimento deliberado, comunidade a comunidade.<br><br><b style="color:var(--white)">Quem:</b> Honest Greens · Farmer J · Flower Child · True Food · Chopt</div></div>
+      <div class="card reveal" data-delay="3" style="border-color:rgba(198,255,0,.35)"><div class="cn">Arquétipo B</div><div class="ct lime">Franquia · capital-light · volume</div><div class="cd">Produto-herói simples e replicável; expansão rápida com pouco capital próprio; risco-chave = consistência entre lojas e suporte ao franqueado.<br><br><b style="color:var(--white)">Quem:</b> Pokawa · dean &amp; david · Oakberry · SaladStop! · Kcal</div></div>
+    </div>
+    <div class="insight reveal" data-delay="4" style="margin-top:1.4rem;max-width:90ch;"><span class="il">Leitura para a EAT</span><p>Não existe modelo "certo" — existe o modelo coerente com a ambição. A decisão de arquétipo precede a expansão para SP/SC/PR e determina o que medir: ticket e experiência (A) ou unidade replicável e suporte ao franqueado (B).</p></div>
+    <div class="slide-footer"><span class="num">06 / 30</span><span>A escolha que define a operação</span></div>
+  </section>
+
+  <!-- 07 · MAPA GLOBAL -->
+  <section class="slide" data-name="Mapa" data-theme="dark">
+    <div class="section-pill">Cobertura</div>
+    <span class="kicker reveal">As 15 redes do estudo</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.2rem;max-width:24ch;">Um mapa de referências globais</h2>
+    <div class="regions">
+      <div class="region reveal" data-delay="2"><h3>Américas</h3><div class="rc">EUA · 6 redes</div><ul>
+        <li><span class="fl">🇺🇸</span><b>CAVA</b><span class="meta">439 lojas</span></li>
+        <li><span class="fl">🇺🇸</span><b>Sweetgreen</b><span class="meta">281</span></li>
+        <li><span class="fl">🇺🇸</span><b>Just Salad</b><span class="meta">~100</span></li>
+        <li><span class="fl">🇺🇸</span><b>True Food Kitchen</b><span class="meta">46</span></li>
+        <li><span class="fl">🇺🇸</span><b>Flower Child</b><span class="meta">44</span></li>
+        <li><span class="fl">🇺🇸</span><b>Chopt</b><span class="meta">~100</span></li>
+      </ul></div>
+      <div class="region reveal" data-delay="3"><h3>Europa</h3><div class="rc">ES · FR · UK · DE · 5 redes</div><ul>
+        <li><span class="fl">🇪🇸</span><b>Honest Greens</b><span class="meta">~30</span></li>
+        <li><span class="fl">🇫🇷</span><b>Pokawa</b><span class="meta">~130</span></li>
+        <li><span class="fl">🇬🇧</span><b>Farmer J</b><span class="meta">16</span></li>
+        <li><span class="fl">🇩🇪</span><b>dean &amp; david</b><span class="meta">~130</span></li>
+        <li><span class="fl">🇫🇷</span><b>Cojean</b><span class="meta">~40</span></li>
+      </ul></div>
+      <div class="region reveal" data-delay="4"><h3>Ásia · Oceania · OM</h3><div class="rc">BR→global · SG · AU · AE · 4 redes</div><ul>
+        <li><span class="fl">🇧🇷</span><b>Oakberry</b><span class="meta">~700</span></li>
+        <li><span class="fl">🇸🇬</span><b>SaladStop!</b><span class="meta">80+</span></li>
+        <li><span class="fl">🇦🇺</span><b>Fishbowl</b><span class="meta">46</span></li>
+        <li><span class="fl">🇦🇪</span><b>Kcal</b><span class="meta">EAU/KSA</span></li>
+        <li><span class="fl">🇧🇷</span><b>Liv Up</b><span class="meta">D2C</span></li>
+      </ul></div>
+    </div>
+    <div class="slide-footer"><span class="num">07 / 30</span><span>15 redes + 1 case foodtech + 2 alertas</span></div>
+  </section>
+
+  <!-- 07B · MURAL DE MARCAS -->
+  <section class="slide" data-name="Marcas" data-theme="dark">
+    <div class="section-pill">Marcas</div>
+    <span class="kicker reveal">As 15 referências</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.3rem;max-width:24ch;">O rosto das redes</h2>
+    <div class="wall reveal" data-delay="2">
+      <div><div class="cell"><span class="blogo" style="--bc:#6E2C3E"><img src="assets/logo/cava.com.webp" alt="CAVA" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">CAVA</span></span></div><div class="cap">🇺🇸 EUA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#1E5631"><img src="assets/logo/sweetgreen.com.webp" alt="Sweetgreen" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">sweetgreen</span></span></div><div class="cap">🇺🇸 EUA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#43A047"><img src="assets/logo/justsalad.com.webp" alt="Just Salad" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">Just Salad</span></span></div><div class="cap">🇺🇸 EUA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#2F7D4F"><img src="assets/logo/truefoodkitchen.com.webp" alt="True Food Kitchen" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">True Food</span></span></div><div class="cap">🇺🇸 EUA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#E8622D"><img src="assets/logo/iamaflowerchild.com.webp" alt="Flower Child" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">Flower Child</span></span></div><div class="cap">🇺🇸 EUA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#C8202F"><img src="assets/logo/choptsalad.com.webp" alt="Chopt" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">Chopt</span></span></div><div class="cap">🇺🇸 EUA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#1F4D3A"><img src="assets/logo/honestgreens.com.webp" alt="Honest Greens" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">Honest Greens</span></span></div><div class="cap">🇪🇸 ESP</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#FF5566"><img src="assets/logo/pokawa.com.webp" alt="Pokawa" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">POKAWA</span></span></div><div class="cap">🇫🇷 FRA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#F2B705"><img src="assets/logo/farmerj.com.webp" alt="Farmer J" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">Farmer J</span></span></div><div class="cap">🇬🇧 UK</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#8DB600"><img src="assets/logo/deananddavid.com.webp" alt="dean &amp; david" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">dean &amp; david</span></span></div><div class="cap">🇩🇪 ALE</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#E8531A"><img src="assets/logo/cojean.fr.webp" alt="Cojean" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">cojean</span></span></div><div class="cap">🇫🇷 FRA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#4A2A6A"><img src="assets/logo/oakberry.com.webp" alt="Oakberry" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">OAKBERRY</span></span></div><div class="cap">🇧🇷 BRA</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#5BA630"><img src="assets/logo/saladstop.com.webp" alt="SaladStop!" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">SaladStop!</span></span></div><div class="cap">🇸🇬 SGP</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#1899A8"><img src="assets/logo/fishbowl.com.au.webp" alt="Fishbowl" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">Fishbowl</span></span></div><div class="cap">🇦🇺 AUS</div></div>
+      <div><div class="cell"><span class="blogo" style="--bc:#7AB800"><img src="assets/logo/kcallife.com.webp" alt="Kcal" loading="eager" onerror="this.closest('.blogo').classList.add('fallback')"><span class="wm">Kcal</span></span></div><div class="cap">🇦🇪 EAU</div></div>
+    </div>
+    <p class="fine reveal" data-delay="4" style="margin-top:1.1rem">Logos oficiais das marcas · uso de referência para benchmark interno.</p>
+    <div class="slide-footer"><span class="num">07 / 30</span><span>15 marcas · 14 países</span></div>
+  </section>
+
+  <!-- 08 · MATRIZ -->
+  <section class="slide" data-name="Matriz" data-theme="dark">
+    <div class="section-pill">Posicionamento</div>
+    <span class="kicker reveal">Matriz de posicionamento</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1rem;max-width:24ch;">Modelo × escala</h2>
+    <div class="matrix reveal" data-delay="2">
+      <span class="axis-y t">Premium / company-owned</span>
+      <span class="axis-y b">Volume / franquia</span>
+      <span class="axis-x l">Escala menor</span>
+      <span class="axis-x r">Escala global</span>
+      <span class="mid-v"></span><span class="mid-h"></span>
+      <div class="dot own" style="left:18%;top:24%"><b></b><span>Farmer J</span></div>
+      <div class="dot own" style="left:30%;top:18%"><b></b><span>Honest Greens</span></div>
+      <div class="dot own" style="left:34%;top:36%"><b></b><span>True Food</span></div>
+      <div class="dot own" style="left:46%;top:30%"><b></b><span>Flower Child</span></div>
+      <div class="dot own" style="left:60%;top:26%"><b></b><span>Chopt</span></div>
+      <div class="dot own" style="left:80%;top:22%"><b></b><span>CAVA</span></div>
+      <div class="dot own" style="left:70%;top:40%"><b></b><span>Sweetgreen</span></div>
+      <div class="dot own" style="left:50%;top:48%"><b></b><span>Just Salad</span></div>
+      <div class="dot" style="left:40%;top:64%"><b></b><span>Cojean</span></div>
+      <div class="dot" style="left:44%;top:74%"><b></b><span>Fishbowl</span></div>
+      <div class="dot" style="left:58%;top:70%"><b></b><span>Kcal</span></div>
+      <div class="dot" style="left:60%;top:80%"><b></b><span>SaladStop!</span></div>
+      <div class="dot" style="left:66%;top:62%"><b></b><span>dean &amp; david</span></div>
+      <div class="dot" style="left:74%;top:76%"><b></b><span>Pokawa</span></div>
+      <div class="dot" style="left:88%;top:70%"><b></b><span>Oakberry</span></div>
+    </div>
+    <p class="fine reveal" data-delay="3" style="margin-top:1rem"><span style="color:var(--white)">●</span> branco = company-owned premium &nbsp;·&nbsp; <span class="lime">●</span> lime = franquia/volume. Posição aproximada para leitura estratégica.</p>
+    <div class="slide-footer"><span class="num">08 / 30</span><span>Onde cada rede joga</span></div>
+  </section>
+
+  <!-- 08B · FORMATO DE FUNCIONAMENTO -->
+  <section class="slide" data-name="Formato" data-theme="dark">
+    <div class="section-pill">Operação</div>
+    <span class="kicker reveal">Como essas redes funcionam</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1.2rem;max-width:26ch;">Cinco formatos de serviço</h2>
+    <div class="fmt">
+      <div class="ft reveal" data-delay="2"><div class="ico">🥗</div><h4>Balcão / linha de montagem</h4><p>Cliente faz fila e monta o bowl na frente do atendente (assembly line), paga no fim, senta ou leva. O modelo dominante do fast-casual saudável.</p><div class="who">CAVA · Sweetgreen · Chopt · Honest Greens · Pokawa · SaladStop!</div></div>
+      <div class="ft reveal" data-delay="3"><div class="ico">🍽️</div><h4>Salão com atendimento</h4><p>Cliente senta e é servido (full-service com garçom, ou runner que leva o prato à mesa). Cozinha de verdade; ticket e permanência maiores.</p><div class="who">True Food Kitchen (garçom) · Flower Child (runner)</div></div>
+      <div class="ft reveal" data-delay="4"><div class="ico">🛍️</div><h4>Grab-and-go / quiosque</h4><p>Formato pequeno, alto giro, pouco ou nenhum assento; foco em takeaway e pontos de fluxo (mall, aeroporto, estação).</p><div class="who">Oakberry · Cojean · Kcal</div></div>
+      <div class="ft reveal" data-delay="5"><div class="ico">🚗</div><h4>Drive-thru / pickup</h4><p>Retirada rápida sem descer do carro ou balcão de pickup dedicado para pedidos via app. Camada de conveniência sobre o counter-service.</p><div class="who">CAVA (pickup lanes) · Sweetgreen "Sweetlane"</div></div>
+      <div class="ft reveal" data-delay="6"><div class="ico">📦</div><h4>D2C / delivery-first</h4><p>Sem loja física: pedido por app, entrega de refeições (frescas, congeladas ou meal plan). Escala geografia sem CAPEX de unidade.</p><div class="who">Liv Up · Kcal (meal plans)</div></div>
+    </div>
+    <div class="insight reveal" data-delay="7" style="margin-top:1.3rem;max-width:98ch"><span class="il">Camada de tecnologia (ortogonal ao formato)</span><p><b>Totens de autoatendimento</b> (Pokawa; Chopt = 30–40% da receita, +5–10% no ticket) · <b>app de pedido antecipado</b> e loyalty (CAVA 36% digital · Sweetgreen 62%) · <b>QR code</b> na mesa · <b>automação de cozinha</b> (Sweetgreen Infinite Kitchen, ~500 bowls/h, margem 30%+) · <b>self-checkout</b>. A tecnologia reduz fricção e protege margem — independente do formato de salão.</p></div>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>Balcão · salão · quiosque · drive-thru · D2C</span></div>
+  </section>
+
+  <!-- 09 · CAVA -->
+  <section class="slide" data-name="CAVA" data-theme="dark">
+    <div class="section-pill ghost">Américas · 01/06</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">RANK 01 · LÍDER GLOBAL</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇺🇸</span> <span class="tag">Mediterrâneo plant-forward</span></div>
+        <h2 class="name reveal" data-delay="1">CAVA</h2>
+        <p class="pos reveal" data-delay="2">Bowls e pitas mediterrâneos customizáveis. Ancorou wellness numa dieta cientificamente validada e virou a rede saudável mais reconhecida dos EUA — capital aberto na NYSE.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2006</div><div class="ml">Fundação · Maryland</div></div>
+          <div class="metric"><div class="mv">439<span class="mu"> lojas</span></div><div class="ml">EUA · 100% próprias</div></div>
+          <div class="metric"><div class="mv">US$1,1<span class="mu"> bi</span></div><div class="ml">Receita FY25 · +22% · margem 25%</div></div>
+          <div class="metric"><div class="mv">8<span class="mu"> mi</span></div><div class="ml">Membros loyalty · ⅓ das vendas</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">"Best Healthy Chain 2025" · Datassential</span><span class="chip">NYSE: CAVA</span><span class="chip">IG ~321 mil</span><span class="chip">Tier secreto "Oasis"</span></div>
+        <div class="quote reveal" data-delay="5">Margem de loja quase no nível do Chipotle — provando que saúde, escala e lucro cabem na mesma marca.<span class="src">FY2025 · Fortune / SEC</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Tese de saúde nomeável (mediterrânea) + loyalty premium gamificado que dirige um terço das vendas = o motor de retenção mais sofisticado do setor.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">09 / 30</span><span>Escala + margem + wellness</span></div>
+  </section>
+
+  <!-- 10 · SWEETGREEN -->
+  <section class="slide" data-name="Sweetgreen" data-theme="dark">
+    <div class="section-pill ghost">Américas · 02/06</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">RANK 02 · PIONEIRA · TECH</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇺🇸</span> <span class="tag">Saladas &amp; warm bowls sazonais</span></div>
+        <h2 class="name reveal" data-delay="1">Sweetgreen</h2>
+        <p class="pos reveal" data-delay="2">A pioneira do segmento e o "Starbucks da salada". Lidera em tecnologia — a cozinha robótica <em>Infinite Kitchen</em> — mas o FY25 acendeu um alerta de demanda.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2007</div><div class="ml">Fundação · Washington D.C.</div></div>
+          <div class="metric"><div class="mv">281<span class="mu"> lojas</span></div><div class="ml">EUA · capital aberto (SG)</div></div>
+          <div class="metric"><div class="mv">US$680<span class="mu"> mi</span></div><div class="ml">Receita FY25 · prejuízo US$134 mi</div></div>
+          <div class="metric caution"><div class="mv">−7,9<span class="mu">%</span></div><div class="ml">Vendas mesmas-lojas (alerta)</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip">Infinite Kitchen · ~500 bowls/h</span><span class="chip">Drive-thru "Sweetlane"</span><span class="chip">IG ~462 mil</span></div>
+        <div class="quote reveal" data-delay="5">Automação protege a margem — mas não cria demanda. Marca forte e tech não bastaram para segurar o tráfego.<span class="src">Leitura do FY2025</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Eficiência operacional é necessária, não suficiente. Conceito 100% próprio (sem franquia) obriga a defender tráfego ativamente, não só cortar custo.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">10 / 30</span><span>O limite da eficiência</span></div>
+  </section>
+
+  <!-- 11 · JUST SALAD -->
+  <section class="slide" data-name="Just Salad" data-theme="dark">
+    <div class="section-pill ghost">Américas · 03/06</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">RANK 03 · SUSTENTABILIDADE</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇺🇸</span> <span class="tag">"Eat With Purpose"</span></div>
+        <h2 class="name reveal" data-delay="1">Just Salad</h2>
+        <p class="pos reveal" data-delay="2">Saúde acessível + sustentabilidade certificada por terceiros. Primeira rede dos EUA a estampar pegada de carbono no cardápio — e isso ajudou a sustentar um valuation de US$1 bi.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2006</div><div class="ml">Fundação · Manhattan</div></div>
+          <div class="metric"><div class="mv">~100<span class="mu"> lojas</span></div><div class="ml">EUA + 3 Dubai</div></div>
+          <div class="metric"><div class="mv">US$1<span class="mu"> bi</span></div><div class="ml">Valuation · US$200 mi (2025)</div></div>
+          <div class="metric"><div class="mv">B-Corp</div><div class="ml">Score 80,4 · carbon labels</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">1ª com carbon labels nos EUA</span><span class="chip">Reusable Bowl desde 2006</span><span class="chip">IG ~70 mil</span></div>
+        <div class="quote reveal" data-delay="5">O novo programa de pontos "parece desenhado para criar fricção — as recompensas são esquecidas, não resgatadas".<span class="src">Crítica de cliente · Restaurant Dive</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Sustentabilidade verificável vira ativo de valuation. Contraponto: mecânica de fidelidade deve <b>reduzir</b> atrito (resgate em 24h gerou backlash).</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">11 / 30</span><span>Selo verificável como moat</span></div>
+  </section>
+
+  <!-- 12 · TRUE FOOD KITCHEN -->
+  <section class="slide" data-name="True Food" data-theme="dark">
+    <div class="section-pill ghost">Américas · 04/06</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">RANK 04 · AUTORIDADE MÉDICA</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇺🇸</span> <span class="tag">Premium · anti-inflamatório</span></div>
+        <h2 class="name reveal" data-delay="1">True Food Kitchen</h2>
+        <p class="pos reveal" data-delay="2">Cardápio inteiro construído sobre a pirâmide anti-inflamatória do <b>Dr. Andrew Weil</b>. Saúde não é claim de marketing — é a espinha dorsal do menu. Oprah é investidora.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2008</div><div class="ml">Fundação · Phoenix</div></div>
+          <div class="metric"><div class="mv">46<span class="mu"> rest.</span></div><div class="ml">18 estados · premium</div></div>
+          <div class="metric"><div class="mv">US$100<span class="mu"> mi+</span></div><div class="ml">Captados (2022) · Oprah equity</div></div>
+          <div class="metric"><div class="mv">0<span class="mu"> óleo de semente</span></div><div class="ml">100% seed-oil-free (2024)</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">Colab viral com SZA · "SZA CZA Salad"</span><span class="chip">Dr. Weil + Sam Fox</span><span class="chip">IG ~247 mil</span></div>
+        <div class="quote reveal" data-delay="5">Ingredientes orgânicos, anti-inflamatórios, sem óleos de semente — eu me senti bem depois de comer.<span class="src">Review de cliente · Yelp</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Credibilidade vem de autoridade fundadora real (um médico com framework próprio). Capital de missão + gestos culturais virais de baixo custo geram mídia espontânea.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">12 / 30</span><span>A saúde É o produto</span></div>
+  </section>
+
+  <!-- 13 · FLOWER CHILD -->
+  <section class="slide" data-name="Flower Child" data-theme="dark">
+    <div class="section-pill ghost">Américas · 05/06</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">RANK 05 · UNIT ECONOMICS</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇺🇸</span> <span class="tag">"Healthy Food for a Happy World"</span></div>
+        <h2 class="name reveal" data-delay="1">Flower Child</h2>
+        <p class="pos reveal" data-delay="2">Vegetable-forward inclusivo (vegano, vegetariano, GF, paleo). Prova que health-positioning não é nicho de baixa margem — é o ativo de melhor performance do portfólio da Cheesecake Factory.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2014</div><div class="ml">Fundação · Phoenix (Sam Fox)</div></div>
+          <div class="metric"><div class="mv">44<span class="mu"> lojas</span></div><div class="ml">15 estados · grupo CAKE</div></div>
+          <div class="metric"><div class="mv">US$4,6<span class="mu"> mi</span></div><div class="ml">AUV por loja · o maior do estudo</div></div>
+          <div class="metric"><div class="mv">19,5<span class="mu">%</span></div><div class="ml">Margem de loja · SSS +4%</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">AUV ~US$4,6 mi</span><span class="chip">Full-kitchen, não montagem</span><span class="chip">IG ~161 mil</span></div>
+        <div class="quote reveal" data-delay="5">Atenção impecável ao detalhe — serviço excepcionalmente rápido mesmo no pico do almoço.<span class="src">Review de cliente · Yelp</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Qualidade de cozinha real + inclusividade dietética, em vez de competir por preço, entrega o melhor AUV do setor saudável.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">13 / 30</span><span>Saudável também é premium</span></div>
+  </section>
+
+  <!-- 14 · CHOPT -->
+  <section class="slide" data-name="Chopt" data-theme="dark">
+    <div class="section-pill ghost">Américas · 06/06</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">RANK 06 · EXPANSÃO DISCIPLINADA</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇺🇸</span> <span class="tag">Saladas autorais picadas na hora</span></div>
+        <h2 class="name reveal" data-delay="1">Chopt</h2>
+        <p class="pos reveal" data-delay="2">Saladas criativas picadas na faca mezzaluna. Cresceu de ~32 para ~100 lojas mantendo controle total da operação — o oposto exato do erro de franquia da Freshii.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2001</div><div class="ml">Fundação · Union Square NYC</div></div>
+          <div class="metric"><div class="mv">~100<span class="mu"> lojas</span></div><div class="ml">12 mercados · company-owned</div></div>
+          <div class="metric"><div class="mv">3<span class="mu"> tiers</span></div><div class="ml">Chopt Rewards · app via Toast</div></div>
+          <div class="metric"><div class="mv">~32→100</div><div class="ml">Crescimento controlado (2015→25)</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip">Parceria fitness · Cody Rigsby (Peloton)</span><span class="chip">Sourcing regenerativo</span><span class="chip">IG ~129 mil</span></div>
+        <div class="quote reveal" data-delay="5">Faz uma ótima salada — à altura do Sweetgreen na minha opinião, e com preços melhores.<span class="src">Review de cliente · Trustpilot</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Company-owned disciplinado garante consistência de qualidade na escala. App + loyalty tiered + influencer fitness reposicionam "salada" como lifestyle, sem perder preço.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">14 / 30</span><span>Controle como vantagem</span></div>
+  </section>
+
+  <!-- 15 · HONEST GREENS -->
+  <section class="slide" data-name="Honest Greens" data-theme="dark">
+    <div class="section-pill ghost">Europa · 01/05</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">EUROPA · CHEF-LED</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇪🇸</span> <span class="tag">"Eat Real." · plant-forward</span></div>
+        <h2 class="name reveal" data-delay="1">Honest Greens</h2>
+        <p class="pos reveal" data-delay="2">Comida de verdade chef-driven, scratch-made, raiz mediterrânea. Atraiu capital de <b>Ron Shaich</b> (fundador da Panera) — selo de consistência operacional antes do blitz geográfico.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2017</div><div class="ml">Fundação · Barcelona</div></div>
+          <div class="metric"><div class="mv">~30<span class="mu"> lojas</span></div><div class="ml">ES · PT · FR · UK</div></div>
+          <div class="metric"><div class="mv">Act III</div><div class="ml">Investimento de Ron Shaich (2025)</div></div>
+          <div class="metric"><div class="mv">~345<span class="mu"> mil</span></div><div class="ml">Instagram · forte no digital</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">Capital do fundador da Panera</span><span class="chip">App "Speed Lane"</span><span class="chip">Loyalty "Honest People"</span></div>
+        <div class="quote reveal" data-delay="5">A comida é deliciosa, agrada o consumidor focado em saúde e é profundamente conectada às comunidades.<span class="src">Ron Shaich · Act III Holdings</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Comer saudável tratado como experiência sensorial chef-led, não compromisso. Expansão comunidade a comunidade — consistência antes de velocidade.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">15 / 30</span><span>Cozinha de chef em escala</span></div>
+  </section>
+
+  <!-- 16 · POKAWA -->
+  <section class="slide" data-name="Pokawa" data-theme="dark">
+    <div class="section-pill ghost">Europa · 02/05</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">EUROPA · FRANQUIA CAPITAL-LIGHT</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇫🇷</span> <span class="tag">Poke bowls "fast good"</span></div>
+        <h2 class="name reveal" data-delay="1">Pokawa</h2>
+        <p class="pos reveal" data-delay="2">De &lt;€20 mil iniciais a ~130 lojas em ~8 anos. Um produto-herói customizável (poke) escalado por franquia leve — com a consistência operacional como risco central.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2017</div><div class="ml">Fundação · Paris</div></div>
+          <div class="metric"><div class="mv">~130<span class="mu"> lojas</span></div><div class="ml">FR + BE/LU/CH/Marrocos</div></div>
+          <div class="metric"><div class="mv">€100<span class="mu"> mi</span></div><div class="ml">Faturamento de marca (2024)</div></div>
+          <div class="metric"><div class="mv">74<span class="mu">%</span></div><div class="ml">Lojas franqueadas (88 de 119 FR)</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">"Révélation de la Franchise 2022"</span><span class="chip">Pokaw'App + kiosks</span><span class="chip">IG ~185 mil</span></div>
+        <div class="quote reveal" data-delay="5">Um restaurante agradável, a escolha é variada — mas a porção e a qualidade variam entre lojas.<span class="src">Síntese de reviews · Google 4,4★</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Produto-herói customizável escala rápido com pouco capital. A tensão clássica: franquear uma promessa "fresco, feito na hora, saudável" exige governança de consistência.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">16 / 30</span><span>Velocidade via franquia</span></div>
+  </section>
+
+  <!-- 17 · FARMER J -->
+  <section class="slide" data-name="Farmer J" data-theme="dark">
+    <div class="section-pill ghost">Europa · 03/05</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">EUROPA · FORMATO PROPRIETÁRIO</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇬🇧</span> <span class="tag">Farm-to-fork · "proper food, fast"</span></div>
+        <h2 class="name reveal" data-delay="1">Farmer J</h2>
+        <p class="pos reveal" data-delay="2">Transformou o almoço saudável num ritual de marca: <b>The Fieldtray</b>, uma bandeja particionada registrada. Foco cirúrgico em escritórios da City de Londres — e agora NYC.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2016</div><div class="ml">1ª loja · City of London</div></div>
+          <div class="metric"><div class="mv">16<span class="mu"> lojas</span></div><div class="ml">Londres + 1ª em NYC (2026)</div></div>
+          <div class="metric"><div class="mv">£17,5<span class="mu"> mi</span></div><div class="ml">Captados (out/2025 · Beringea)</div></div>
+          <div class="metric"><div class="mv">+55<span class="mu">%</span></div><div class="ml">Vendas 2024 · EBITDA dobrou</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">The Fieldtray™ · formato ownável</span><span class="chip">Great Taste Award</span><span class="chip">IG ~65 mil</span></div>
+        <div class="quote reveal" data-delay="5">Não consigo comprar uma casa, então por que não me presentear com brócolis ao gergelim?<span class="src">Trabalhador da City · City AM</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Diferenciar pela experiência de comer, não só pelos ingredientes. Formato proprietário + densidade geográfica = unit economics que financiam expansão.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">17 / 30</span><span>Um ritual de marca ownável</span></div>
+  </section>
+
+  <!-- 18 · DEAN & DAVID -->
+  <section class="slide" data-name="dean &amp; david" data-theme="dark">
+    <div class="section-pill ghost">Europa · 04/05</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">EUROPA · FRANQUIA DISCIPLINADA</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇩🇪</span> <span class="tag">"we care, you eat"</span></div>
+        <h2 class="name reveal" data-delay="1">dean &amp; david</h2>
+        <p class="pos reveal" data-delay="2">A maior rede saudável estruturada da região DACH. Escalou a 100+ lojas por franquia financiada com o próprio caixa — disciplina no lugar de blitz-scaling com VC.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2007</div><div class="ml">Fundação · Munique</div></div>
+          <div class="metric"><div class="mv">~130<span class="mu"> lojas</span></div><div class="ml">DE/AT/CH/LU + Qatar</div></div>
+          <div class="metric"><div class="mv">Caixa</div><div class="ml">Crescimento autofinanciado</div></div>
+          <div class="metric"><div class="mv">Superfood</div><div class="ml">Sub-marca de sucos prensados</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">Franquia financiada por fluxo de caixa</span><span class="chip">App + Rewards "collect greens"</span><span class="chip">IG ~42 mil</span></div>
+        <div class="quote reveal" data-delay="5">Disciplina sobre velocidade: 100+ unidades sem perseguir capital de risco.<span class="src">Leitura do modelo · Crunchbase/Pitchbook</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Franquia autofinanciada cresce sólido. A sub-marca de sucos/superfood mostra como monetizar o halo de wellness para além do cardápio principal.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">18 / 30</span><span>Escalar sem queimar caixa</span></div>
+  </section>
+
+  <!-- 19 · COJEAN -->
+  <section class="slide" data-name="Cojean" data-theme="dark">
+    <div class="section-pill ghost">Europa · 05/05</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">EUROPA · CERTIFICAÇÃO COMO MOAT</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇫🇷</span> <span class="tag">"Feel-good food" · desde 2001</span></div>
+        <h2 class="name reveal" data-delay="1">Cojean</h2>
+        <p class="pos reveal" data-delay="2">Pioneira "anti-fast-food" criada por um ex-diretor de R&amp;D do McDonald's França. Primeira fast-food do país certificada <b>B-Corp</b> — sustentabilidade convertida em identidade defensável.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2001</div><div class="ml">Fundação · Paris</div></div>
+          <div class="metric"><div class="mv">~40<span class="mu"> lojas</span></div><div class="ml">Paris · expansão em estações</div></div>
+          <div class="metric"><div class="mv">90,2</div><div class="ml">B-Corp score (2019)</div></div>
+          <div class="metric"><div class="mv">~40<span class="mu">%</span></div><div class="ml">Cardápio vegetariano</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">1ª fast-food B-Corp da França</span><span class="chip">Travel-retail (estações)</span><span class="chip">IG ~45 mil</span></div>
+        <div class="quote reveal" data-delay="5">Citada pela revista TIME como pioneira "anti-fast-food".<span class="src">TIME · bcorporation.net</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Certificação B-Corp como moat de posicionamento + expansão por hubs de transporte (não high-street) — um modelo replicável para grab-and-go saudável.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">19 / 30</span><span>O selo como identidade</span></div>
+  </section>
+
+  <!-- 20 · OAKBERRY -->
+  <section class="slide" data-name="Oakberry" data-theme="dark">
+    <div class="section-pill ghost">Global · 01/04</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">GLOBAL · MONOPRODUTO BRASILEIRO 🇧🇷</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇧🇷</span> <span class="tag">Açaí puro "clean"</span></div>
+        <h2 class="name reveal" data-delay="1">Oakberry</h2>
+        <p class="pos reveal" data-delay="2">A marca brasileira que virou referência global. Transformou o açaí num superfood de conveniência e chegou a ~700 lojas em 40+ países — com aporte do BTG Pactual.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2016</div><div class="ml">Fundação · São Paulo</div></div>
+          <div class="metric"><div class="mv">~700<span class="mu"> lojas</span></div><div class="ml">40+ países · franquia</div></div>
+          <div class="metric"><div class="mv">US$67<span class="mu"> mi</span></div><div class="ml">Série C (2024 · BTG Pactual)</div></div>
+          <div class="metric"><div class="mv">US$200<span class="mu"> mi</span></div><div class="ml">Receita ~2024 · ~1.400 funcs.</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">Brasileira global · 40+ países</span><span class="chip">Supply chain na Amazônia</span><span class="chip">App MY OAK · IG ~223 mil</span></div>
+        <div class="quote reveal" data-delay="5">Um único item "saudável-icônico" bem executado viaja melhor que um cardápio amplo.<span class="src">Leitura do modelo · QSR Magazine</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Monoproduto + supply chain verticalizada + franquia small-format = escala global rápida. O case brasileiro mais relevante para a ambição da EAT.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">20 / 30</span><span>O case brasileiro global</span></div>
+  </section>
+
+  <!-- 21 · SALADSTOP! -->
+  <section class="slide" data-name="SaladStop!" data-theme="dark">
+    <div class="section-pill ghost">Global · 02/04</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">GLOBAL · HOLDING MULTIMARCA</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇸🇬</span> <span class="tag">"Eat Wide Awake"</span></div>
+        <h2 class="name reveal" data-delay="1">SaladStop!</h2>
+        <p class="pos reveal" data-delay="2">A maior rede saudável da Ásia, organizada como holding multimarca. Sustentabilidade no núcleo do produto: B-Corp e a primeira loja Net-Zero de food service do Sudeste Asiático.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2009</div><div class="ml">Fundação · Singapura</div></div>
+          <div class="metric"><div class="mv">80+<span class="mu"> lojas</span></div><div class="ml">8 mercados asiáticos</div></div>
+          <div class="metric"><div class="mv">88<span class="mu">%</span></div><div class="ml">Cardápio plant-based</div></div>
+          <div class="metric"><div class="mv">B-Corp</div><div class="ml">+ 1ª loja Net-Zero do SEA</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">Holding: SaladStop!, Heybo, FreshKitchen…</span><span class="chip">Loyalty premia sustentabilidade</span><span class="chip">East Ventures</span></div>
+        <div class="quote reveal" data-delay="5">Loja Net-Zero, carbono rastreado, fidelidade atrelada a impacto — sustentabilidade como produto, não greenwashing.<span class="src">Tatler Asia · SaladStop Group</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Sustentabilidade como eixo de produto e marca. Modelo de holding multimarca cobre faixas de preço/ocasião distintas com operação compartilhada.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">21 / 30</span><span>Multimarca + impacto real</span></div>
+  </section>
+
+  <!-- 22 · FISHBOWL -->
+  <section class="slide" data-name="Fishbowl" data-theme="dark">
+    <div class="section-pill ghost">Global · 03/04</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">GLOBAL · OPERATIONAL-FIRST</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇦🇺</span> <span class="tag">"Change fast food, change the culture"</span></div>
+        <h2 class="name reveal" data-delay="1">Fishbowl</h2>
+        <p class="pos reveal" data-delay="2">Poke e saladas de inspiração asiática made-to-order. Cresceu de 1 a 46 lojas com padronização via stack de tecnologia único — case oficial de scaling operacional.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2016</div><div class="ml">Fundação · Bondi, Sydney</div></div>
+          <div class="metric"><div class="mv">46<span class="mu"> lojas</span></div><div class="ml">Austrália + NY (THISBOWL)</div></div>
+          <div class="metric"><div class="mv">A$22,5<span class="mu"> mi</span></div><div class="ml">Receita estimada</div></div>
+          <div class="metric"><div class="mv">1→46</div><div class="ml">Escala via stack tech único</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">Case oficial de scaling (Square)</span><span class="chip">Parceiro F&amp;B do Australian Open</span><span class="chip">IG ~42 mil</span></div>
+        <div class="quote reveal" data-delay="5">A tecnologia de operação — POS e app únicos — é o que destrava a escala, não só o marketing.<span class="src">Leitura do modelo · Square case study</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Crescimento operational-first: padronização tecnológica permite replicar a operação com consistência. A loja é um produto de software bem montado.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">22 / 30</span><span>Tech de operação destrava escala</span></div>
+  </section>
+
+  <!-- 23 · KCAL -->
+  <section class="slide" data-name="Kcal" data-theme="dark">
+    <div class="section-pill ghost">Global · 04/04</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal">GLOBAL · ECOSSISTEMA WELLNESS</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇦🇪</span> <span class="tag">Healthy fast food · paleo</span></div>
+        <h2 class="name reveal" data-delay="1">Kcal</h2>
+        <p class="pos reveal" data-delay="2">Pioneira do "healthy fast food" no Oriente Médio. Vai além da loja: assinatura de meal plan + wearable conectado (Kcal FIT) criam um ecossistema de wellness "always-on".</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv">2010</div><div class="ml">Fundação · Dubai</div></div>
+          <div class="metric"><div class="mv">EAU·KSA·KW</div><div class="ml">3 mercados · franquia regional</div></div>
+          <div class="metric"><div class="mv">Kcal FIT</div><div class="ml">1º meal plan com fitness tracker</div></div>
+          <div class="metric"><div class="mv">300<span class="mu"> mil+</span></div><div class="ml">Clientes · cozinhas ISO 22000</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip hot">Loja + meal plan + wearable</span><span class="chip">Alinhada à Saudi Vision 2030</span><span class="chip">IG ~47 mil</span></div>
+        <div class="quote reveal" data-delay="5">Loja + assinatura + wearable prende o cliente ao plano de refeições/fitness, não a uma visita avulsa.<span class="src">Leitura do modelo · kcallife.com</span></div>
+        <div class="insight reveal" data-delay="6"><span class="il">Benchmark</span><p>Ecossistema "always-on" aumenta o lifetime value. Ancorar a narrativa em política pública de saúde (Vision 2030) abre portas institucionais.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">23 / 30</span><span>Wellness como assinatura</span></div>
+  </section>
+
+  <!-- 24 · LIV UP -->
+  <section class="slide caution" data-name="Liv Up" data-theme="dark">
+    <div class="section-pill ghost">Case foodtech 🇧🇷</div>
+    <div class="profile">
+      <div class="left">
+        <div class="rank reveal" style="color:var(--white)">CASE ESPECIAL · SAUDÁVEL SEM LOJA</div>
+        <div class="reveal" data-delay="1"><span class="flag">🇧🇷</span> <span class="tag" style="color:var(--white)">Foodtech D2C · refeições prontas</span></div>
+        <h2 class="name reveal" data-delay="1">Liv Up</h2>
+        <p class="pos reveal" data-delay="2">O contraponto à loja física: refeições saudáveis congeladas, sem conservantes, entregues direto ao consumidor por app em 80+ cidades. Atingiu breakeven e abriu o canal B2B.</p>
+        <div class="metrics reveal" data-delay="3">
+          <div class="metric"><div class="mv" style="color:var(--white)">2016</div><div class="ml">Fundação · São Paulo</div></div>
+          <div class="metric"><div class="mv" style="color:var(--white)">80+<span class="mu"> cidades</span></div><div class="ml">Sem lojas · D2C/app</div></div>
+          <div class="metric"><div class="mv" style="color:var(--white)">R$250<span class="mu"> mi</span></div><div class="ml">Faturamento projetado 2025</div></div>
+          <div class="metric"><div class="mv" style="color:var(--white)">Breakeven</div><div class="ml">Atingido em 2024</div></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chips reveal" data-delay="4"><span class="chip">R$180 mi captados</span><span class="chip">B2B "Generosa" (2024)</span><span class="chip">Case Google for Startups</span></div>
+        <div class="quote reveal" data-delay="5" style="color:var(--white)">Saudável não precisa de loja: app + logística de congelados escala geografia sem CAPEX de unidades.<span class="src">Exame · InfoMoney</span></div>
+        <div class="insight reveal" data-delay="6" style="border-color:var(--white);background:linear-gradient(90deg,rgba(255,255,255,.05),transparent)"><span class="il" style="color:var(--white)">Por que importa para a EAT</span><p>Mostra um canal alternativo (D2C + B2B corporativo) que pode complementar a operação de salão — fronteira do wellness food é unit economics + canal, não só varejo de rua.</p></div>
+      </div>
+    </div>
+    <div class="slide-footer"><span class="num">24 / 30</span><span>A fronteira sem CAPEX de loja</span></div>
+  </section>
+
+  <!-- 25 · QUADRO COMPARATIVO -->
+  <section class="slide" data-name="Comparativo" data-theme="dark">
+    <div class="section-pill">Comparativo</div>
+    <span class="kicker reveal">Quadro-resumo</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1rem;max-width:24ch;">As 15 redes, lado a lado</h2>
+    <div class="reveal" data-delay="2" style="width:100%;overflow:auto;">
+    <table class="cmp">
+      <thead><tr><th>Rede</th><th>País</th><th>Início</th><th>Lojas</th><th>Modelo</th><th>Diferencial-chave</th></tr></thead>
+      <tbody>
+        <tr><td><b>CAVA</b></td><td>🇺🇸 EUA</td><td class="num">2006</td><td class="num">439</td><td>Próprio · aberto</td><td>Mediterrâneo + loyalty de 8 mi</td></tr>
+        <tr><td><b>Sweetgreen</b></td><td>🇺🇸 EUA</td><td class="num">2007</td><td class="num">281</td><td>Próprio · aberto</td><td>Automação (Infinite Kitchen)</td></tr>
+        <tr><td><b>Just Salad</b></td><td>🇺🇸 EUA</td><td class="num">2006</td><td class="num">~100</td><td>Próprio · US$1 bi</td><td>B-Corp + carbon labels</td></tr>
+        <tr><td><b>True Food Kitchen</b></td><td>🇺🇸 EUA</td><td class="num">2008</td><td class="num">46</td><td>Próprio · premium</td><td>Autoridade médica (Dr. Weil)</td></tr>
+        <tr><td><b>Flower Child</b></td><td>🇺🇸 EUA</td><td class="num">2014</td><td class="num">44</td><td>Grupo CAKE</td><td>AUV ~US$4,6 mi (o maior)</td></tr>
+        <tr><td><b>Chopt</b></td><td>🇺🇸 EUA</td><td class="num">2001</td><td class="num">~100</td><td>Próprio</td><td>Expansão disciplinada</td></tr>
+        <tr><td><b>Honest Greens</b></td><td>🇪🇸 ESP</td><td class="num">2017</td><td class="num">~30</td><td>Próprio · chef-led</td><td>Capital de Ron Shaich (Panera)</td></tr>
+        <tr><td><b>Pokawa</b></td><td>🇫🇷 FRA</td><td class="num">2017</td><td class="num">~130</td><td>Franquia 74%</td><td>Poke capital-light</td></tr>
+        <tr><td><b>Farmer J</b></td><td>🇬🇧 UK</td><td class="num">2016</td><td class="num">16</td><td>Próprio</td><td>Fieldtray™ (formato ownável)</td></tr>
+        <tr><td><b>dean &amp; david</b></td><td>🇩🇪 ALE</td><td class="num">2007</td><td class="num">~130</td><td>Franquia · caixa</td><td>Autofinanciada (líder DACH)</td></tr>
+        <tr><td><b>Cojean</b></td><td>🇫🇷 FRA</td><td class="num">2001</td><td class="num">~40</td><td>Próprio</td><td>B-Corp 90,2 + travel-retail</td></tr>
+        <tr><td><b>Oakberry</b></td><td>🇧🇷 BRA</td><td class="num">2016</td><td class="num">~700</td><td>Franquia global</td><td>Monoproduto açaí · 40+ países</td></tr>
+        <tr><td><b>SaladStop!</b></td><td>🇸🇬 SGP</td><td class="num">2009</td><td class="num">80+</td><td>Holding multimarca</td><td>B-Corp + loja Net-Zero</td></tr>
+        <tr><td><b>Fishbowl</b></td><td>🇦🇺 AUS</td><td class="num">2016</td><td class="num">46</td><td>Próprio</td><td>Operational-first (tech)</td></tr>
+        <tr><td><b>Kcal</b></td><td>🇦🇪 EAU</td><td class="num">2010</td><td class="num">multi</td><td>Franquia + assinatura</td><td>Loja + meal plan + wearable</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="slide-footer"><span class="num">25 / 30</span><span>+ Liv Up (D2C) e 2 casos-alerta</span></div>
+  </section>
+
+  <!-- 25B · TABELA OPERACIONAL -->
+  <section class="slide" data-name="Operacional" data-theme="dark">
+    <div class="section-pill">Operação</div>
+    <span class="kicker reveal">Comparativo operacional</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1rem;max-width:26ch;">Como cada rede opera</h2>
+    <div class="reveal" data-delay="2" style="width:100%;overflow:auto;">
+    <table class="optbl">
+      <thead><tr><th>Rede</th><th>Serviço</th><th>Loja</th><th>Assentos</th><th>Equipe</th><th>Ticket / AUV</th><th>Tecnologia</th></tr></thead>
+      <tbody id="optbody"></tbody>
+    </table>
+    </div>
+    <p class="fine reveal" data-delay="3" style="margin-top:.8rem">Footprint convertido para m². "n/d" = não divulgado em fonte aberta (empresas privadas ou dados atrás de paywall Technomic). Ticket médio absoluto e funcionários/loja quase nunca são públicos no setor — só indicadores relativos (ex.: kiosk +5–10% no ticket).</p>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>Modelo · footprint · assentos · volume · tech</span></div>
+  </section>
+
+  <!-- 25B2 · FOOTPRINT À ESCALA -->
+  <section class="slide" data-name="Footprint" data-theme="dark">
+    <div class="section-pill">Operação</div>
+    <span class="kicker reveal">Tamanho real das unidades</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 .4rem;max-width:26ch;">Footprint à escala</h2>
+    <p class="lead reveal" data-delay="2" style="font-size:clamp(.85rem,1.2vw,1.05rem);margin-bottom:1.6rem;">Área proporcional ao tamanho real de loja (m²). O mesmo conceito "saudável" vai do <b style="color:#fff">quiosque de 46 m²</b> ao <b style="color:#fff">salão de 650 m²</b> com garçom — 14× de diferença.</p>
+    <div class="fpwrap reveal" data-delay="3">
+      <div class="fp-item"><div class="fp-box" style="width:77px;height:51px;--bc:#4A2A6A"></div><div class="fp-lbl"><b>Oakberry</b><span class="m">~46 m²</span><br>quiosque · 0 lug.</div></div>
+      <div class="fp-item"><div class="fp-box" style="width:88px;height:58px;--bc:#5BA630"></div><div class="fp-lbl"><b>SaladStop!</b><span class="m">~60 m²</span><br>kiosk/small</div></div>
+      <div class="fp-item"><div class="fp-box" style="width:104px;height:69px;--bc:#FF5566"></div><div class="fp-lbl"><b>Pokawa</b><span class="m">70–100 m²</span><br>takeaway</div></div>
+      <div class="fp-item"><div class="fp-box" style="width:131px;height:87px;--bc:#43A047"></div><div class="fp-lbl"><b>Just Salad</b><span class="m">84–186 m²</span><br>takeaway</div></div>
+      <div class="fp-item"><div class="fp-box" style="width:148px;height:99px;--bc:#C8202F"></div><div class="fp-lbl"><b>Chopt</b><span class="m">158–186 m²</span><br>~40 lug.</div></div>
+      <div class="fp-item"><div class="fp-box" style="width:172px;height:114px;--bc:#6E2C3E"></div><div class="fp-lbl"><b>CAVA</b><span class="m">186–279 m²</span><br>35–55 lug.</div></div>
+      <div class="fp-item"><div class="fp-box" style="width:211px;height:141px;--bc:#E8622D"></div><div class="fp-lbl"><b>Flower Child</b><span class="m">325–372 m²</span><br>~140 lug.</div></div>
+      <div class="fp-item"><div class="fp-box" style="width:277px;height:185px;--bc:#2F7D4F"></div><div class="fp-lbl"><b>True Food</b><span class="m">465–650 m²</span><br>60–200 lug. · garçom</div></div>
+    </div>
+    <p class="fine reveal" data-delay="5" style="margin-top:1.4rem">Footprint médio do range divulgado por cada rede; área desenhada em proporção real ao m². Counter-service compacto (esquerda) = menor CAPEX e break-even mais rápido; salão grande (direita) = AUV e permanência maiores.</p>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>Do quiosque ao salão · escala real</span></div>
+  </section>
+
+  <!-- 25C · MODELOS VENCEDORES -->
+  <section class="slide" data-name="Vencedores" data-theme="dark">
+    <div class="section-pill">Síntese</div>
+    <span class="kicker reveal">Margem · fricção · valor</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.2rem;max-width:24ch;">O que torna o modelo vencedor</h2>
+    <div class="grid g3">
+      <div class="card reveal" data-delay="2"><div class="cn">01 · Margem</div><div class="ct">Onde está o lucro</div><div class="cd"><b style="color:var(--white)">CAVA 24–26%</b> de margem de loja (counter mediterrâneo) é a régua. Lojas com <b style="color:var(--white)">automação</b> (Sweetgreen IK) chegam a <b style="color:var(--white)">30%+</b> no 1º ano. <b style="color:var(--white)">Flower Child</b> tem o AUV recorde (US$4,6M) com salão premium. Counter compacto (~190 m²) = menor CAPEX e break-even mais rápido.</div></div>
+      <div class="card reveal" data-delay="3"><div class="cn">02 · Fricção</div><div class="ct">Onde ela some</div><div class="cd"><b style="color:var(--white)">App de pedido antecipado</b> tira a fila (CAVA 36% · Sweetgreen 62% digital). <b style="color:var(--white)">Totens</b> (Chopt: 30–40% da receita, +5–10% no ticket) reduzem erro e fazem upsell. <b style="color:var(--white)">Automação</b> (~500 bowls/h) absorve o pico. <b style="color:var(--white)">Drive-thru/pickup</b> eleva o AUV em 10–15% (CAVA).</div></div>
+      <div class="card reveal" data-delay="4"><div class="cn">03 · Valor percebido</div><div class="ct">Por que paga mais</div><div class="cd">Cozinha de verdade e frescor (<b style="color:var(--white)">chef-led, full-kitchen</b>). Autoridade (<b style="color:var(--white)">Dr. Weil</b>) e selos (<b style="color:var(--white)">B-Corp, carbon labels</b>). Ritual/formato ownável (<b style="color:var(--white)">Fieldtray, açaí puro</b>). O consumidor aceita pagar <b style="color:var(--white)">~30% de premium</b> por comida mais saudável.</div></div>
+    </div>
+    <div class="insight reveal" data-delay="5" style="margin-top:1.3rem;max-width:100ch"><span class="il">O denominador do vencedor</span><p>Footprint eficiente (<b>counter ~190 m²</b> de baixo CAPEX <i>ou</i> salão premium de <b>AUV alto</b>) <b>+</b> camada digital/loyalty que reduz fricção e eleva o ticket <b>+</b> tese de valor defensável. A automação ajuda a margem, mas <b>não cria demanda</b> — a lição Sweetgreen (vendeu a tecnologia em 2025 e a margem da rede caiu a 14,5–15%).</p></div>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>Eficiência × fricção × valor</span></div>
+  </section>
+
+  <!-- 26 · BENCHMARKS DE SOCIAL -->
+  <section class="slide" data-name="Social" data-theme="dark">
+    <div class="section-pill">Marca</div>
+    <span class="kicker reveal">Presença digital</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.2rem;max-width:24ch;">Quem domina o Instagram</h2>
+    <div class="bars reveal" data-delay="2">
+      <div class="bar"><span class="bn">Sweetgreen 🇺🇸</span><span class="bt" style="width:100%"></span><span class="bv">~462 mil</span></div>
+      <div class="bar"><span class="bn">Honest Greens 🇪🇸</span><span class="bt" style="width:75%"></span><span class="bv">~345 mil</span></div>
+      <div class="bar"><span class="bn">CAVA 🇺🇸</span><span class="bt" style="width:69%"></span><span class="bv">~321 mil</span></div>
+      <div class="bar"><span class="bn">True Food 🇺🇸</span><span class="bt" style="width:53%"></span><span class="bv">~247 mil</span></div>
+      <div class="bar"><span class="bn">Oakberry 🇧🇷</span><span class="bt" style="width:48%"></span><span class="bv">~223 mil</span></div>
+      <div class="bar"><span class="bn">Pokawa 🇫🇷</span><span class="bt" style="width:40%"></span><span class="bv">~185 mil</span></div>
+      <div class="bar"><span class="bn">Flower Child 🇺🇸</span><span class="bt" style="width:35%"></span><span class="bv">~161 mil</span></div>
+      <div class="bar"><span class="bn">Chopt 🇺🇸</span><span class="bt" style="width:28%"></span><span class="bv">~129 mil</span></div>
+    </div>
+    <div class="insight reveal" data-delay="4" style="margin-top:1.4rem;max-width:92ch;"><span class="il">Contexto EAT</span><p>Referência: @eatkitchengram tem ~93 mil seguidores — já <b>na faixa de redes globais</b> como Chopt e acima de Just Salad (~70 mil) e Farmer J (~65 mil), com muito menos lojas. O ativo digital da EAT é desproporcionalmente forte; o desafio é convertê-lo em loyalty e canal próprio, como faz a CAVA (⅓ das vendas via app).</p></div>
+    <p class="fine reveal" data-delay="5" style="margin-top:.9rem">Seguidores aproximados (jun/2026); plataformas bloqueiam leitura exata. CAVA mede força no CRM/loyalty, não só no follower count.</p>
+    <div class="slide-footer"><span class="num">26 / 30</span><span>O follower não é o KPI final</span></div>
+  </section>
+
+  <!-- 26A2 · INSTAGRAM · VOZ DE MARCA -->
+  <section class="slide" data-name="Instagram" data-theme="dark">
+    <div class="section-pill">Social</div>
+    <span class="kicker reveal">Instagram · a voz de cada marca</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1rem;max-width:24ch;">Como cada marca fala</h2>
+    <div class="iggrid reveal" data-delay="2">
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/sweetgreen.com.webp" alt="Sweetgreen" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">463<span class="igu">K</span></div><div class="ighandle">@sweetgreen</div></div></div><div class="igbio">touching grass and serving greens</div><div class="igeng">407 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/honestgreens.com.webp" alt="Honest Greens" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">346<span class="igu">K</span></div><div class="ighandle">@honestgreens</div></div></div><div class="igbio">Chef-driven honest kitchen · BCN · MAD · VAL</div><div class="igeng">1.021 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/cava.com.webp" alt="CAVA" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">322<span class="igu">K</span></div><div class="ighandle">@cava</div></div></div><div class="igbio">warning: tzatziki is NOT sunscreen ⚠️</div><div class="igeng">497 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/truefoodkitchen.com.webp" alt="True Food" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">247<span class="igu">K</span></div><div class="ighandle">@livetruefood</div></div></div><div class="igbio">Crafted to Crave. Founded by @drweil 🥬</div><div class="igeng">&nbsp;</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/oakberry.com.webp" alt="Oakberry" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">223<span class="igu">K</span></div><div class="ighandle">@oakberry</div></div></div><div class="igbio">Existe açaí e existe OAKBERRY · #RespectTheOAK</div><div class="igeng">338 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/pokawa.com.webp" alt="Pokawa" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">186<span class="igu">K</span></div><div class="ighandle">@pokawaworld</div></div></div><div class="igbio">From Hawaï ✨ 130 shops</div><div class="igeng">1.889 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/iamaflowerchild.com.webp" alt="Flower Child" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">161<span class="igu">K</span></div><div class="ighandle">@eatflowerchild</div></div></div><div class="igbio">Healthy Food for a Happy World 🌻</div><div class="igeng">&nbsp;</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/choptsalad.com.webp" alt="Chopt" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">129<span class="igu">K</span></div><div class="ighandle">@choptsalad</div></div></div><div class="igbio">Reimagining salads one bowl at a time.</div><div class="igeng">58 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/justsalad.com.webp" alt="Just Salad" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">70<span class="igu">K</span></div><div class="ighandle">@justsalad</div></div></div><div class="igbio">we also have wraps 💅✨</div><div class="igeng">&nbsp;</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/farmerj.com.webp" alt="Farmer J" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">65<span class="igu">K</span></div><div class="ighandle">@farmerjfood</div></div></div><div class="igbio">Home of the Fieldtray · LDN + NYC</div><div class="igeng">344 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/kcallife.com.webp" alt="Kcal" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">47<span class="igu">K</span></div><div class="ighandle">@kcal.life</div></div></div><div class="igbio">#1 UAE's Best Meal Plan · #tastelife</div><div class="igeng">119 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/cojean.fr.webp" alt="Cojean" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">45<span class="igu">K</span></div><div class="ighandle">@cojeanrestaurants</div></div></div><div class="igbio">Feel-good food · veggie, vegan &amp; dog friendly</div><div class="igeng">&nbsp;</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/deananddavid.com.webp" alt="dean &amp; david" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">42<span class="igu">K</span></div><div class="ighandle">@dean_and_david</div></div></div><div class="igbio">Keep it light this summer!</div><div class="igeng">&nbsp;</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/fishbowl.com.au.webp" alt="Fishbowl" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">42<span class="igu">K</span></div><div class="ighandle">@fishbowl_fuel</div></div></div><div class="igbio">Coconut Chicken // Five Spice Beef</div><div class="igeng">96 ❤ · último post</div></div>
+      <div class="igcard"><div class="igtop"><span class="igseal"><img src="assets/logo/saladstop.com.webp" alt="SaladStop!" onerror="this.style.display='none'"></span><div style="min-width:0"><div class="igfoll">7,7<span class="igu">K*</span></div><div class="ighandle">@saladstopsg</div></div></div><div class="igbio">Empowering you to create healthier habits</div><div class="igeng">*conta por país</div></div>
+    </div>
+    <p class="fine reveal" data-delay="4" style="margin-top:.9rem">Bios e métricas reais coletadas no Instagram (jun 2026). ❤ = curtidas no post mais recente. SaladStop! opera contas por país (@saladstopsg sede · @saladstopid ~80K).</p>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>15 marcas · a voz em uma frase</span></div>
+  </section>
+
+  <!-- 26A2b · BOARD DE COMUNICAÇÃO -->
+  <section class="slide" data-name="Board IG" data-theme="dark" style="padding-top:clamp(2.8rem,6vh,4rem);">
+    <div class="section-pill">Social</div>
+    <div style="text-align:center;margin-bottom:.9rem;width:100%">
+      <span class="kicker reveal">Board de comunicação · Instagram</span>
+      <h2 class="reveal" data-delay="1" style="font-family:var(--font-display);font-weight:800;font-size:clamp(1.3rem,2.8vw,2.3rem);text-transform:uppercase;letter-spacing:-.02em;margin-top:.35rem;">Como cada marca comunica</h2>
+    </div>
+    <img class="reveal" data-delay="2" src="assets/social-board.jpg" alt="Board com os posts mais recentes do Instagram das 15 redes saudáveis" style="width:auto;max-width:95%;max-height:66vh;border-radius:10px;border:1px solid var(--line);display:block;margin:0 auto;" />
+    <p class="fine reveal" data-delay="3" style="text-align:center;margin-top:.8rem;width:100%">Posts mais recentes, coletados ao vivo no Instagram (jun 2026) · 15 marcas · cada célula é um post real.</p>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>O feed real de cada rede</span></div>
+  </section>
+
+  <!-- 26A3 · VOZ SOCIAL · INSTAGRAM -->
+  <section class="slide" data-name="Voz social" data-theme="dark">
+    <div class="section-pill">Social</div>
+    <span class="kicker reveal">Voz do cliente · Instagram</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.1rem;max-width:24ch;">Comentários reais nos posts</h2>
+    <div class="grid g3">
+      <div class="testi reveal" data-delay="2"><div class="stars">★★★★★</div><q>So excited!! 😍 — Let's all vote for Greece!</q><div class="meta"><b>CAVA</b> · Instagram · campanha de eventos</div></div>
+      <div class="testi reveal" data-delay="3"><div class="stars">★★★★★</div><q>Gimme 14 of them — @musingsofk on a day like today?? SOLD</q><div class="meta"><b>Fishbowl</b> · Instagram · lançamento de menu</div></div>
+      <div class="testi reveal" data-delay="4"><div class="stars">★★★★★</div><q>You are simply the best. ❤️</q><div class="meta"><b>Kcal</b> · Instagram · novos meal plans</div></div>
+      <div class="testi reveal" data-delay="5"><div class="stars">★★★★★</div><q>Que ganas de probar la nueva carta de verano ✨</q><div class="meta"><b>Honest Greens</b> · Instagram · menu de verão (ES)</div></div>
+      <div class="testi reveal" data-delay="6"><div class="stars neg">★☆☆☆☆</div><q>Such a hateful company 🤮</q><div class="meta"><b>Sweetgreen</b> · Instagram · backlash recorrente</div></div>
+      <div class="testi reveal" data-delay="7"><div class="stars neg">★★☆☆☆</div><q>Que ridículo! Tanta coisa para trabalhar o marketing…</q><div class="meta"><b>Oakberry</b> · Instagram · crítica a campanha</div></div>
+    </div>
+    <div class="insight reveal" data-delay="8" style="margin-top:1.2rem;max-width:100ch"><span class="il">Leitura</span><p>O tom social é mais <b>emocional e imediato</b> que os reviews — entusiasmo puro nos lançamentos. Mas marcas grandes colhem <b>entusiasmo E backlash público</b> (Sweetgreen, Oakberry): a <b>gestão de comunidade</b> é parte do ativo de marca, não acessório.</p></div>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>Engajamento real, com o lado bom e o ruim</span></div>
+  </section>
+
+  <!-- 26B · VOZ DO CLIENTE · DEPOIMENTOS -->
+  <section class="slide" data-name="Voz do cliente" data-theme="dark">
+    <div class="section-pill">Voz do cliente</div>
+    <span class="kicker reveal">Recortes reais · Tripadvisor</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.1rem;max-width:24ch;">O que os clientes dizem</h2>
+    <div class="grid g3">
+      <div class="testi reveal" data-delay="2"><div class="stars">★★★★★</div><q>The food quality is fantastic. Great service too.</q><div class="meta"><b>CAVA</b> · Tripadvisor · NYC</div></div>
+      <div class="testi reveal" data-delay="3"><div class="stars">★★★★★</div><q>Management refunded the entire purchase. This is the way business should be done.</q><div class="meta"><b>Flower Child</b> · recuperação de serviço · Scottsdale</div></div>
+      <div class="testi reveal" data-delay="4"><div class="stars">★★★★☆</div><q>Good salads at fair prices by NY standards. Portions are quite large.</q><div class="meta"><b>Sweetgreen</b> · Tripadvisor · NoMad</div></div>
+      <div class="testi reveal" data-delay="5"><div class="stars neg">★★☆☆☆</div><q>Portions are getting smaller — at least 1/3 less today. This is not good value.</q><div class="meta"><b>Farmer J</b> · Tripadvisor · Londres</div></div>
+      <div class="testi reveal" data-delay="6"><div class="stars neg">★☆☆☆☆</div><q>Mistakes in our order, black avocado… a first and last experience!</q><div class="meta"><b>Pokawa</b> · Tripadvisor · Paris</div></div>
+      <div class="testi reveal" data-delay="7"><div class="stars neg">★★☆☆☆</div><q>We choose standing at the counter… tables extremely uncomfortable. Not to repeat.</q><div class="meta"><b>Honest Greens</b> · Tripadvisor · Madri</div></div>
+    </div>
+    <p class="fine reveal" data-delay="8" style="margin-top:1rem">Depoimentos verbatim reais, com URL de origem (Tripadvisor, nota por unidade). Mix proposital de elogio e crítica — a crítica é o sinal mais útil.</p>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>12 de 13 redes com depoimento rastreável</span></div>
+  </section>
+
+  <!-- 26C · SÍNTESE DA PERCEPÇÃO -->
+  <section class="slide" data-name="Percepção" data-theme="dark">
+    <div class="section-pill">Voz do cliente</div>
+    <span class="kicker reveal">O padrão por trás dos reviews</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.2rem;max-width:24ch;">Valor · fricção · preço</h2>
+    <div class="grid g3">
+      <div class="card reveal" data-delay="2"><div class="cn">Valor percebido</div><div class="ct">"Saudável E gostoso"</div><div class="cd">Três palavras dominam os elogios: <b style="color:var(--white)">fresh · delicious · healthy</b>. O gancho é o combo saudável + saboroso (Sweetgreen, Kcal, Flower Child, True Food). <b style="color:var(--white)">Customização</b> (montar o bowl) e <b style="color:var(--white)">velocidade</b> reforçam o valor.</div></div>
+      <div class="card reveal" data-delay="3" style="border-color:rgba(255,77,46,.3)"><div class="cn" style="color:var(--rust)">Fricção</div><div class="ct">Sempre operacional</div><div class="cd">As queixas quase nunca são do conceito, e sim da execução: <b style="color:var(--white)">inconsistência no pico</b> (ruptura de estoque, erro de montagem, qualidade que varia por unidade), <b style="color:var(--white)">fila/espera maior que a prometida</b> e <b style="color:var(--white)">app rígido</b> (Sweetgreen).</div></div>
+      <div class="card reveal" data-delay="4"><div class="cn">Percepção de preço</div><div class="ct">Porção &gt; preço absoluto</div><div class="cd">A tensão é <b style="color:var(--white)">porção × preço</b>, não o preço em si. O cliente paga o "saudável premium", mas pune <b style="color:var(--white)">porção encolhendo</b> ("1/3 a menos", "uma colherada de cada"). Porção generosa transforma o mesmo preço em "great value".</div></div>
+    </div>
+    <div class="insight reveal" data-delay="5" style="margin-top:1.3rem;max-width:100ch"><span class="il">Leitura para a EAT+KITCHEN</span><p>A fraqueza dos líderes é <b>operacional, não conceitual</b> — consistência, fila e porção honesta. É exatamente onde uma rede menor e bem gerida pode <b>ganhar percepção de valor</b>: porção generosa + execução consistente + a promessa "comida de verdade" cumprida em toda visita.</p></div>
+    <div class="slide-footer"><span class="num">00 / 00</span><span>Onde os líderes deixam brecha</span></div>
+  </section>
+
+  <!-- 27 · CASOS-ALERTA -->
+  <section class="slide caution" data-name="Alertas" data-theme="dark">
+    <div class="section-pill" style="background:var(--rust);color:var(--white)">Alertas</div>
+    <span class="kicker reveal" style="color:var(--rust)">O que evitar</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.2rem;max-width:22ch;">Dois colapsos que ensinam</h2>
+    <div class="grid g2">
+      <div class="card reveal" data-delay="2" style="border-color:rgba(255,77,46,.4)">
+        <div class="cn" style="color:var(--rust)">🇨🇦 Freshii · franquia sem suporte</div>
+        <div class="ct">Crescimento de unidades ≠ valor</div>
+        <div class="cd">Pico de 220 lojas em 20 países (2016), abrindo ~3,5/semana. Sem suporte ao franqueado, colapsou: EUA <b style="color:var(--white)">170 → &lt;30 lojas</b>, ação &lt;US$1, vendida por ~⅓ do valor de IPO (2023). O caso "Percy" (caixas terceirizados a US$3,75/h) feriu a reputação.<br><br><b style="color:var(--white)">Lição:</b> economia do franqueado e suporte operacional são pré-condição — sem isso, escala vira passivo.</div>
+      </div>
+      <div class="card reveal" data-delay="3" style="border-color:rgba(255,77,46,.4)">
+        <div class="cn" style="color:var(--rust)">🇬🇧 Leon · diluição de marca</div>
+        <div class="ct">Integridade é o ativo central</div>
+        <div class="cd">Pioneira "naturally fast food" (2004). Passou dos fundadores → EG Group (£100 mi) → Asda, <b style="color:var(--white)">diluiu o posicionamento de saúde</b> para perseguir margem, perdeu dinheiro todo ano desde 2016 e entrou em administração (~20 fechamentos, fim 2025). O cofundador recomprou por ~£30–50 mi para restaurar a promessa.<br><br><b style="color:var(--white)">Lição:</b> credibilidade de saúde é o ativo — diluí-la erode confiança e economia juntas.</div>
+      </div>
+    </div>
+    <div class="insight reveal" data-delay="4" style="margin-top:1.3rem;border-color:var(--rust);background:linear-gradient(90deg,rgba(255,77,46,.06),transparent);max-width:92ch"><span class="il" style="color:var(--rust)">Para a EAT</span><p>Ao expandir (SP/SC/PR) e eventualmente franquear: blindar o suporte ao franqueado (anti-Freshii) e nunca diluir a promessa "comida de verdade" para ganhar volume (anti-Leon).</p></div>
+    <div class="slide-footer"><span class="num">27 / 30</span><span>Lições do fracasso</span></div>
+  </section>
+
+  <!-- 28 · FATORES DE SUCESSO -->
+  <section class="slide" data-name="Fatores" data-theme="dark">
+    <div class="section-pill">Síntese</div>
+    <span class="kicker reveal">O denominador comum</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.2rem;max-width:26ch;">O que faz uma rede ser bem estruturada</h2>
+    <div class="grid g3">
+      <div class="card reveal" data-delay="2"><div class="cn">01</div><div class="ct">Unit economics provados</div><div class="cd">AUV ~US$2,7–4,6 mi e margem de loja 17–26%. A régua dos líderes.</div></div>
+      <div class="card reveal" data-delay="2"><div class="cn">02</div><div class="ct">Formato build-your-own</div><div class="cd">Bowls/saladas com whole foods — os pratos mais bem rankeados em saúde.</div></div>
+      <div class="card reveal" data-delay="3"><div class="cn">03</div><div class="ct">Loyalty/app como motor</div><div class="cd">CAVA: 8 mi membros, ⅓ das vendas. Sem fricção no resgate.</div></div>
+      <div class="card reveal" data-delay="3"><div class="cn">04</div><div class="ct">Automação na margem</div><div class="cd">Defende a margem (Sweetgreen) — mas não substitui demanda.</div></div>
+      <div class="card reveal" data-delay="4"><div class="cn">05</div><div class="ct">Arquétipo de expansão claro</div><div class="cd">Company-owned disciplinado OU franquia small-format — escolha consciente.</div></div>
+      <div class="card reveal" data-delay="4"><div class="cn">06</div><div class="ct">Diferenciação defensável</div><div class="cd">Autoridade real (Dr. Weil) ou selo verificável (B-Corp, carbon labels).</div></div>
+    </div>
+    <div class="insight reveal" data-delay="5" style="margin-top:1.3rem;max-width:92ch"><span class="il">+ 1 condição inegociável</span><p><b>Integridade de marca preservada.</b> O caso Leon mostra que diluir a credibilidade de saúde para perseguir margem destrói confiança e economia ao mesmo tempo.</p></div>
+    <div class="slide-footer"><span class="num">28 / 30</span><span>Sete fatores recorrentes</span></div>
+  </section>
+
+  <!-- 29 · LEITURAS PARA A EAT -->
+  <section class="slide" data-name="Para a EAT" data-theme="dark">
+    <div class="section-pill">Aplicação</div>
+    <span class="kicker reveal">Do benchmark à ação</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.5rem 0 1.2rem;max-width:24ch;">Seis leituras para a EAT+KITCHEN</h2>
+    <div class="numlist reveal" data-delay="2">
+      <div class="nl"><div class="n">1</div><div class="t"><b>Nomear a tese de saúde.</b> "Comida de verdade" / clean label como framework defensável — o que CAVA fez com o mediterrâneo e True Food com o anti-inflamatório.</div></div>
+      <div class="nl"><div class="n">2</div><div class="t"><b>App + loyalty como motor.</b> O projeto de app próprio já está no roadmap; mirar o padrão CAVA (tiers, vendas digitais), evitando a fricção do novo Just Salad.</div></div>
+      <div class="nl"><div class="n">3</div><div class="t"><b>Criar um formato/ritual ownável.</b> Transformar um item ou formato em marca própria — lição Farmer J (Fieldtray) e Oakberry (açaí puro).</div></div>
+      <div class="nl"><div class="n">4</div><div class="t"><b>Decidir o arquétipo antes de SP/SC/PR.</b> Company-owned disciplinado (Chopt) vs. franquia (Pokawa, dean &amp; david) — e dimensionar suporte e unit economics conforme.</div></div>
+      <div class="nl"><div class="n">5</div><div class="t"><b>Converter o ativo digital.</b> ~93 mil seguidores já rivalizam com redes globais — falta transformar alcance em loyalty e canal próprio (ver Liv Up para D2C/B2B).</div></div>
+      <div class="nl"><div class="n">6</div><div class="t"><b>Proteger a marca na escala.</b> Suporte ao franqueado (anti-Freshii) + integridade da promessa de saúde (anti-Leon) como cláusulas inegociáveis.</div></div>
+    </div>
+    <div class="slide-footer"><span class="num">29 / 30</span><span>Referências viram decisões</span></div>
+  </section>
+
+  <!-- 30 · ENCERRAMENTO -->
+  <section class="slide" data-name="Encerramento" data-theme="dark">
+    <div class="section-pill ghost">Fim</div>
+    <span class="kicker reveal">Benchmark global · wellness dining</span>
+    <h2 class="big reveal" data-delay="1" style="margin:.6rem 0 1rem;max-width:20ch;">As melhores do mundo,<br>mapeadas para a EAT.</h2>
+    <p class="lead reveal" data-delay="2">15 redes · 14 países · 2 arquétipos vencedores · 2 casos-alerta. A conclusão: saúde, escala e margem coexistem — quando a tese é defensável, o loyalty é o motor e a marca não se dilui.</p>
+    <footer class="zn-signature reveal" data-delay="4">
+      <div class="zn-block">
+        <span class="zn-big">ZN<span class="zn-dot">.</span></span>
+        <div class="zn-meta"><strong>Thiago Zeni</strong><span>Sócio investidor · conselheiro estratégico</span></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:var(--small);color:var(--g3);border-top:1px solid var(--line-soft);padding-top:1rem">
+        <span>Pesquisa interna · uso restrito · jun 2026</span>
+        <span>~90 fontes citadas · fonte completa em <span class="mono">pesquisa/09-benchmark-redes-saudaveis-mundo.md</span></span>
+      </div>
+    </footer>
+    <div class="slide-footer"><span class="num">30 / 30</span><span>PESSOAS. COMIDA. VERDADE.</span></div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const slides=Array.from(document.querySelectorAll('.slide'));
+  const rail=document.querySelector('.progress-rail');
+  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  slides.forEach((slide,i)=>{
+    const pip=document.createElement('button');
+    pip.className='pip';
+    pip.setAttribute('aria-label',`Slide ${i+1}: ${slide.dataset.name||''}`);
+    pip.addEventListener('click',()=>slide.scrollIntoView({behavior:'smooth',block:'start'}));
+    rail.appendChild(pip);
+  });
+  const pips=Array.from(rail.querySelectorAll('.pip'));
+  /* auto-numera os rodapés (NN / TOTAL) para suportar inserção de slides sem reeditar footers */
+  const total=slides.length;
+  slides.forEach((slide,i)=>{const num=slide.querySelector('.slide-footer .num');if(num)num.textContent=String(i+1).padStart(2,'0')+' / '+total;});
+  /* ===== injeta selo de logo (brandfetch) + faixa operacional nos perfis ===== */
+  const BRAND={
+    'CAVA':{d:'cava.com',c:'#6E2C3E'},'Sweetgreen':{d:'sweetgreen.com',c:'#1E5631'},
+    'Just Salad':{d:'justsalad.com',c:'#43A047'},'True Food':{d:'truefoodkitchen.com',c:'#2F7D4F'},
+    'Flower Child':{d:'iamaflowerchild.com',c:'#E8622D'},'Chopt':{d:'choptsalad.com',c:'#C8202F'},
+    'Honest Greens':{d:'honestgreens.com',c:'#1F4D3A'},'Pokawa':{d:'pokawa.com',c:'#FF5566'},
+    'Farmer J':{d:'farmerj.com',c:'#F2B705'},'dean & david':{d:'deananddavid.com',c:'#8DB600'},
+    'Cojean':{d:'cojean.fr',c:'#E8531A'},'Oakberry':{d:'oakberry.com',c:'#4A2A6A'},
+    'SaladStop!':{d:'saladstop.com',c:'#5BA630'},'Fishbowl':{d:'fishbowl.com.au',c:'#1899A8'},
+    'Kcal':{d:'kcallife.com',c:'#7AB800'},'Liv Up':{d:'livup.com.br',c:'#00A86B'}
+  };
+  const OPS={
+    'CAVA':{serv:'Balcão + drive-thru',size:'186–279 m²',seats:'35–55 lug.',team:'n/d',vol:'AUV US$2,9M · 25%',tech:'App · 36% digital'},
+    'Sweetgreen':{serv:'Balcão + Sweetlane',size:'~213 m²',seats:'~32 lug.',team:'n/d',vol:'AUV US$2,8M',tech:'Robô IK · 62% digital'},
+    'Just Salad':{serv:'Balcão · urbano',size:'84–186 m²',seats:'Takeaway',team:'n/d',vol:'AUV US$2,0M · 20%+',tech:'App · reusable bowl'},
+    'True Food':{serv:'Salão c/ garçom',size:'465–650 m²',seats:'60–200 lug.',team:'Alto (full-service)',vol:'~US$30–40/pessoa',tech:'Full-service · OpenTable'},
+    'Flower Child':{serv:'Balcão + runner à mesa',size:'325–372 m²',seats:'~140 lug.',team:'n/d',vol:'AUV US$4,6M',tech:'Kiosk · 55% off-prem'},
+    'Chopt':{serv:'Balcão / digital-first',size:'158–186 m²',seats:'~40 lug.',team:'n/d',vol:'AUV US$2,0M · ticket kiosk +5–10%',tech:'Kiosks: 30–40%'},
+    'Honest Greens':{serv:'Balcão + cozinha aberta',size:'Grande · open kitchen',seats:'até ~100 lug.',team:'~18/loja',vol:'Rede €17,6M (2023)',tech:'App · pickup'},
+    'Pokawa':{serv:'Balcão + totens',size:'70–100 m²',seats:'Foco takeaway',team:'5–6 FTE',vol:'~€850k/loja · EBITDA 15–20%',tech:'Totens · app'},
+    'Farmer J':{serv:'Balcão · off-premise',size:'Pequeno (City)',seats:'até 1.500/dia',team:'n/d',vol:'~£1,8M/loja · ticket £12',tech:'C&C · Deliveroo'},
+    'dean & david':{serv:'Balcão · 4 formatos',size:'Express 10–75 · Downtown 60–350 m²',seats:'Express 0 · Downtown sim',team:'n/d',vol:'~€875k/loja',tech:'App Rewards'},
+    'Cojean':{serv:'Balcão · B-Corp',size:'40–80 m²',seats:'n/d',team:'n/d',vol:'~€1,5M/loja',tech:'n/d'},
+    'Oakberry':{serv:'Quiosque grab-and-go',size:'~46 m² (quiosque)',seats:'Sem assentos',team:'1–3',vol:'Ticket +12–15% (preço único)',tech:'App · Qu commerce'},
+    'SaladStop!':{serv:'Balcão + self-order',size:'46–74 m²',seats:'Kiosk/small outlet',team:'n/d',vol:'Break-even ~4 meses',tech:'Self-order · rewards'},
+    'Fishbowl':{serv:'Balcão · Square POS',size:'até ~200 m²',seats:'n/d',team:'n/d',vol:'Ticket &lt;A$20 · 600k/ano',tech:'Stack Square'},
+    'Kcal':{serv:'Dine-in + meal-plan',size:'n/d',seats:'Dine-in',team:'n/d',vol:'Ticket ~US$20/pax',tech:'App + wearable'}
+  };
+  /* fotos reais de ambiente/prato por marca (Wikimedia Commons / sites oficiais) */
+  const CREDIT={'cava.com':'Wikimedia','sweetgreen.com':'Wikimedia','justsalad.com':'Wikimedia','truefoodkitchen.com':'Wikimedia','iamaflowerchild.com':'Wikimedia','choptsalad.com':'Wikimedia','deananddavid.com':'Wikimedia','oakberry.com':'Wikimedia','saladstop.com':'Wikimedia','honestgreens.com':'divulgação','farmerj.com':'Biasol','fishbowl.com.au':'Broadsheet','pokawa.com':'snacking.fr','cojean.fr':'Moodie Davitt','livup.com.br':'InfoMoney','kcallife.com':'site oficial'};
+  const PHOTO=new Set(Object.keys(CREDIT));
+  const POS={'livup.com.br':'left center'};
+  slides.forEach(s=>{
+    const name=s.dataset.name;const prof=s.querySelector('.profile');if(!prof)return;
+    const b=BRAND[name],right=prof.querySelector('.right'),left=prof.querySelector('.left');
+    if(b&&right){
+      const seal=document.createElement('div');seal.className='brandseal reveal';
+      seal.innerHTML='<span class="blogo" style="--bc:'+b.c+'"><img src="assets/logo/'+b.d+'.webp" alt="'+name+'" loading="eager" onerror="this.closest(\'.blogo\').classList.add(\'fallback\')"><span class="wm">'+name+'</span></span>';
+      const chips=right.querySelector('.chips');
+      if(chips)right.replaceChild(seal,chips);else right.insertBefore(seal,right.firstChild);
+    }
+    if(b&&PHOTO.has(b.d)){
+      s.classList.add('has-photo');
+      const ph=document.createElement('div');ph.className='pphoto';
+      ph.innerHTML='<img src="assets/photo/'+b.d+'.jpg" alt="'+name+' — ambiente" loading="eager" style="object-position:'+(POS[b.d]||'50% 50%')+'" onerror="this.closest(\'.pphoto\').classList.add(\'empty\')"><span class="credit">'+(CREDIT[b.d]||'ref.')+'</span>';
+      s.insertBefore(ph,s.firstChild);
+    }
+    const o=OPS[name];
+    if(o&&left){
+      const strip=document.createElement('div');strip.className='opstrip reveal';
+      const cell=(l,v)=>'<div class="op"><div class="ol">'+l+'</div><div class="ov">'+(v||'n/d')+'</div></div>';
+      strip.innerHTML=cell('Serviço',o.serv)+cell('Loja',o.size)+cell('Assentos',o.seats)+cell('Equipe',o.team)+cell('Ticket / AUV',o.vol)+cell('Tecnologia',o.tech);
+      left.appendChild(strip);
+    }
+  });
+  /* popula a tabela operacional a partir do mesmo objeto OPS (fonte única) */
+  const FLAG={'CAVA':'🇺🇸','Sweetgreen':'🇺🇸','Just Salad':'🇺🇸','True Food':'🇺🇸','Flower Child':'🇺🇸','Chopt':'🇺🇸','Honest Greens':'🇪🇸','Pokawa':'🇫🇷','Farmer J':'🇬🇧','dean & david':'🇩🇪','Cojean':'🇫🇷','Oakberry':'🇧🇷','SaladStop!':'🇸🇬','Fishbowl':'🇦🇺','Kcal':'🇦🇪'};
+  const tb=document.getElementById('optbody');
+  if(tb){Object.entries(OPS).forEach(([n,o])=>{const tr=document.createElement('tr');tr.innerHTML='<td><b>'+(FLAG[n]||'')+' '+n+'</b></td><td class="s">'+o.serv+'</td><td>'+o.size+'</td><td>'+o.seats+'</td><td>'+o.team+'</td><td>'+o.vol+'</td><td>'+o.tech+'</td>';tb.appendChild(tr);});}
+  const revealObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealObserver.unobserve(e.target);}});
+  },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+  let activeIndex=0;
+  const animatedSlides=new WeakSet();
+  const activeObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting&&e.intersectionRatio>=0.55){
+        const idx=slides.indexOf(e.target);
+        if(idx!==-1){activeIndex=idx;pips.forEach((p,i)=>p.classList.toggle('active',i===idx));animateCounters(e.target);}
+      }
+    });
+  },{threshold:[0.55]});
+  slides.forEach(s=>activeObserver.observe(s));
+  function animateCounters(slide){
+    if(animatedSlides.has(slide))return;
+    animatedSlides.add(slide);
+    slide.querySelectorAll('[data-counter]').forEach(el=>{
+      const target=parseFloat(el.dataset.counter);
+      const div=parseFloat(el.dataset.div||'1');
+      if(isNaN(target))return;
+      if(reduceMotion){el.textContent=fmt(target/div);return;}
+      const dur=1100,start=performance.now(),ease=t=>1-Math.pow(1-t,3);
+      function tick(now){
+        const el2=Math.min((now-start)/dur,1);
+        el.textContent=fmt((target*ease(el2))/div);
+        if(el2<1)requestAnimationFrame(tick);else el.textContent=fmt(target/div);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  function fmt(n){
+    if(Number.isInteger(n))return n>=1000?n.toLocaleString('pt-BR'):String(n);
+    return n.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+  }
+  document.addEventListener('keydown',(e)=>{
+    const k=e.key;
+    if(['ArrowDown','PageDown',' '].includes(k)){e.preventDefault();goTo(activeIndex+1);}
+    else if(['ArrowUp','PageUp'].includes(k)){e.preventDefault();goTo(activeIndex-1);}
+    else if(k==='Home'){e.preventDefault();goTo(0);}
+    else if(k==='End'){e.preventDefault();goTo(slides.length-1);}
+  });
+  function goTo(idx){idx=Math.max(0,Math.min(slides.length-1,idx));slides[idx].scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'start'});}
+  let touchStartY=null;
+  document.addEventListener('touchstart',(e)=>{if(e.touches.length===1)touchStartY=e.touches[0].clientY;},{passive:true});
+  document.addEventListener('touchend',(e)=>{
+    if(touchStartY===null)return;
+    const endY=(e.changedTouches[0]||{}).clientY??touchStartY;
+    const dy=touchStartY-endY;
+    if(Math.abs(dy)>60){if(dy>0)goTo(activeIndex+1);else goTo(activeIndex-1);}
+    touchStartY=null;
+  },{passive:true});
+  setTimeout(()=>{const first=slides[0];if(first){first.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));animateCounters(first);}},60);
+})();
+</script>
+</body>
+</html>
