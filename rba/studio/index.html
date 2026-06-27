@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZN Studio</title>
+<style>
+  :root{--bg:#0D0D0D;--panel:#111;--ink:#F2F2F2;--mut:#7A7A7A;--line:rgba(255,255,255,.10);--accent:#C6FF00;--red:#FF2D2D}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{min-height:100vh;background:radial-gradient(circle at 50% 35%,#171717,#050505);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;display:grid;place-items:center}
+  .gate{width:min(420px,calc(100vw - 32px));border:1px solid var(--line);background:rgba(17,17,17,.92);padding:28px;border-radius:4px;box-shadow:0 24px 80px rgba(0,0,0,.45)}
+  .brand{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+  .zn{font-family:Unbounded,system-ui,sans-serif;font-weight:900;font-size:24px;letter-spacing:-.06em}.zn b{color:var(--accent);font-weight:900}
+  h1{font-size:15px;font-weight:700;color:var(--ink)}
+  p{font-size:12px;line-height:1.45;color:var(--mut);margin-bottom:18px}
+  form{display:flex;gap:8px}
+  input{min-width:0;flex:1;background:#1a1a1a;color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:11px 12px;font:14px system-ui}
+  button{background:var(--accent);color:#050505;border:0;border-radius:3px;padding:11px 14px;font-weight:800;cursor:pointer}
+  button:disabled{opacity:.55;cursor:default}
+  .err{min-height:18px;margin-top:12px;color:var(--red);font-size:12px;font-weight:700}
+</style>
+</head>
+<body>
+<main class="gate">
+  <div class="brand"><div class="zn">ZN<b>.</b></div><h1>Studio</h1></div>
+  <p>Acesso restrito. O app e seus assets são decifrados somente em memória.</p>
+  <form id="gateForm">
+    <input id="pass" type="password" autocomplete="current-password" placeholder="Senha" autofocus>
+    <button id="go">Entrar</button>
+  </form>
+  <div class="err" id="err"></div>
+</main>
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const enc = new TextEncoder();
+  const dec = new TextDecoder();
+
+  function b64Bytes(s) {
+    const bin = atob(s), out = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+
+  function mime(path) {
+    const ext = path.split('.').pop().toLowerCase();
+    return {
+      css:'text/css', js:'text/javascript', svg:'image/svg+xml', png:'image/png',
+      jpg:'image/jpeg', jpeg:'image/jpeg', webp:'image/webp', woff2:'font/woff2',
+      otf:'font/otf', json:'application/json',
+    }[ext] || 'application/octet-stream';
+  }
+
+  function dirOf(path) {
+    const i = path.lastIndexOf('/');
+    return i < 0 ? '' : path.slice(0, i + 1);
+  }
+
+  function clean(path) {
+    return String(path).split('?')[0].replace(/^\.\//, '');
+  }
+
+  function joinPath(base, url) {
+    if (/^(data:|blob:|https?:|\/)/i.test(url)) return url;
+    if (url.startsWith('assets/')) return clean(url);
+    const stack = (dirOf(base) + url).split('/');
+    const out = [];
+    stack.forEach(part => {
+      if (!part || part === '.') return;
+      if (part === '..') out.pop();
+      else out.push(part);
+    });
+    return out.join('/');
+  }
+
+  function rewriteCSS(css, path) {
+    return css.replace(/url\((['"]?)([^'")]+)\1\)/g, (all, q, url) => {
+      const key = joinPath(path, clean(url));
+      const blob = window.__assets[key];
+      return blob ? `url("${blob}")` : all;
+    });
+  }
+
+  function injectStyle(css) {
+    const el = document.createElement('style');
+    el.textContent = css;
+    document.head.appendChild(el);
+  }
+
+  function loadScript(src) {
+    return new Promise((ok, err) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = ok;
+      s.onerror = err;
+      document.body.appendChild(s);
+    });
+  }
+
+  async function decrypt(pass) {
+    const packed = await fetch('app.enc', { cache:'no-store' }).then(r => {
+      if (!r.ok) throw new Error('Pacote não encontrado');
+      return r.json();
+    });
+    const salt = b64Bytes(packed.salt), iv = b64Bytes(packed.iv), tag = b64Bytes(packed.tag), ct = b64Bytes(packed.ct);
+    const material = await crypto.subtle.importKey('raw', enc.encode(pass), 'PBKDF2', false, ['deriveKey']);
+    const key = await crypto.subtle.deriveKey(
+      { name:'PBKDF2', salt, iterations:200000, hash:'SHA-256' },
+      material,
+      { name:'AES-GCM', length:256 },
+      false,
+      ['decrypt'],
+    );
+    const data = new Uint8Array(ct.length + tag.length);
+    data.set(ct); data.set(tag, ct.length);
+    const plain = await crypto.subtle.decrypt({ name:'AES-GCM', iv }, key, data);
+    return JSON.parse(dec.decode(plain));
+  }
+
+  async function boot(manifest) {
+    window.__assets = {};
+    Object.entries(manifest.files || {}).forEach(([path, b64]) => {
+      const blob = new Blob([b64Bytes(b64)], { type:mime(path) });
+      window.__assets[clean(path)] = URL.createObjectURL(blob);
+    });
+    window.assetURL = p => window.__assets[clean(p)] || p;
+
+    if (manifest.files['assets/fonts/zn-fonts.css']) {
+      injectStyle(rewriteCSS(dec.decode(b64Bytes(manifest.files['assets/fonts/zn-fonts.css'])), 'assets/fonts/zn-fonts.css'));
+    }
+    if (manifest.files[manifest.css]) {
+      injectStyle(rewriteCSS(dec.decode(b64Bytes(manifest.files[manifest.css])), manifest.css));
+    }
+
+    document.body.innerHTML = manifest.bodyHTML;
+    for (const path of manifest.scripts || []) {
+      const src = window.__assets[clean(path)];
+      if (src) await loadScript(src);
+    }
+  }
+
+  $('gateForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    $('err').textContent = '';
+    $('go').disabled = true;
+    try {
+      await boot(await decrypt($('pass').value));
+    } catch (err) {
+      $('err').textContent = err && err.message === 'Pacote não encontrado' ? err.message : 'Senha incorreta';
+      $('go').disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>
