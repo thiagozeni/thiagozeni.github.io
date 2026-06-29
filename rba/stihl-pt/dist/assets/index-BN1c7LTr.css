@@ -7,3 +7,6 @@
 /* RBA-I18N-GAME-TITLE: em pt/es o lettering SVG (inglês) dos jogos 1-3 vira texto no mesmo estilo do título do game-4 (display, bold), herdando a cor */
 .rba-game-title{display:block;font-family:var(--dd-font-stack-display);font-weight:700;text-transform:uppercase;line-height:1.05;text-wrap:balance;font-size:var(--dd-font-size-xl)}
 .game-3__headline .rba-game-title{font-size:var(--dd-font-size-2xl)}
+/* o lettering SVG também aparece DENTRO do jogo (tela de cada rodada, .__stepsscreen-logo). Cor por jogo, espelhando o SVG original: game-2 e game-3 rodam sobre fundo escuro (lettering claro); game-1 fica sobre a faixa laranja (lettering escuro). */
+.game-2__stepsscreen-logo .rba-game-title,.game-3__stepsscreen-logo .rba-game-title{color:var(--dd-lightest)}
+.game-1__stepsscreen-logo .rba-game-title{color:var(--dd-darkest)}
