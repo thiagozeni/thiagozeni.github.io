@@ -312,7 +312,7 @@
         "22-superclonewatches-1ngtqqa",
         "22-superclonewatches-ltm0hn"
       ],
-      "reviewedAt": "2026-07-19T12:47:06.527Z"
+      "reviewedAt": "2026-07-19T19:56:23.224Z"
     },
     "Aquanaut 5167A (Preto)": {
       "rank": 24,
@@ -399,12 +399,14 @@
       "rank": 60,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=BTF",
+      "reasoning": "4vp2gz: ouro amarelo, bezel cerâmico preto, Oysterflex, dial champagne c/ subdials pretos — 116518LN. ltm0hn é 116508 (rejeitada).",
       "candidateIds": [
         "60-superclonewatches-4vp2gz",
         "60-superclonewatches-ltm0hn"
       ],
-      "reviewedAt": "2026-07-19T12:47:06.527Z"
+      "reviewedAt": "2026-07-11T04:07:03.933Z",
+      "quarantineReason": "factory-mismatch: registro=Clean (Legacy), catálogo=BTF",
+      "quarantinedAt": "2026-07-11T11:43:17.305Z"
     },
     "Nautilus 5712/1A (Fase da Lua)": {
       "rank": 61,
@@ -564,7 +566,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-07-19T12:47:06.527Z"
+      "reviewedAt": "2026-07-19T19:56:23.225Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -660,6 +662,16 @@
       "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
       "reviewedAt": "2026-07-11T03:34:37.153Z"
     },
+    "RM 055 Bubba Watson (RM055)": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "ZF",
+      "collectedCount": 8,
+      "reasoning": "Mídia factory-correta (ZF) coletada e validada (8 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Richard Mille; missing-local-file: /media/img/f-122-35f7ce77.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
     "Minute Repeater Tourbillon Perpetual Calendar 5207P": {
       "verdict": "incerto",
       "bestImageId": null,
@@ -747,7 +759,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-07-19T12:47:06.527Z"
+      "reviewedAt": "2026-07-19T19:56:23.224Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1266,82 +1278,55 @@
       ],
       "reviewedAt": "2026-07-11T10:34:30.045Z"
     },
-    "Submariner 16610 (Vintage)": {
-      "rank": 96,
-      "verdict": "confirmado",
-      "bestImageId": "hunt-submariner-16610-vintage-2",
-      "reasoning": "Submariner Date preto, bezel aluminio preto, 300m — condiz com 16610. wb-96-3/4 sao Milgauss PVD (outro modelo).",
-      "candidateIds": [
-        "hunt-submariner-16610-vintage-2",
-        "hunt-submariner-16610-vintage-1",
-        "wb-96-4",
-        "wb-96-3"
-      ],
-      "reviewedAt": "2026-07-17T17:08:17.916Z"
-    },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
       "verdict": "confirmado",
       "bestImageId": "hunt-seamaster-planet-ocean-600m-1",
-      "reasoning": "Omega Seamaster Professional Co-Axial 600m/2000ft, mostrador preto e bezel preto — corresponde ao Planet Ocean 600M. f-119 nao existem.",
+      "reasoning": "Única foto acessível mostra Seamaster Planet Ocean dial/bezel preto cerâmica com válvula de hélio; 3 caminhos f-119 não existem no disco.",
       "candidateIds": [
-        "hunt-seamaster-planet-ocean-600m-2",
         "hunt-seamaster-planet-ocean-600m-1",
         "f-119-2e19a199",
-        "f-119-d15e682a"
+        "f-119-d15e682a",
+        "f-119-a5f3df7b"
       ],
-      "reviewedAt": "2026-07-17T17:08:17.916Z"
-    },
-    "RM 055 Bubba Watson (RM055)": {
-      "rank": 122,
-      "verdict": "confirmado",
-      "bestImageId": "hunt-rm-055-bubba-watson-rm055-1",
-      "reasoning": "Richard Mille tonneau em ceramica branca ATZ, mostrador esqueletizado, pulseira branca — bate com RM 055 Bubba Watson. f-122 nao existem.",
-      "candidateIds": [
-        "hunt-rm-055-bubba-watson-rm055-2",
-        "hunt-rm-055-bubba-watson-rm055-1",
-        "f-122-35f7ce77",
-        "f-122-e4aade5e"
-      ],
-      "reviewedAt": "2026-07-17T17:08:17.916Z"
+      "reviewedAt": "2026-07-19T19:30:39.359Z"
     },
     "RM 011 Felipe Massa Flyback Chrono": {
       "rank": 116,
       "verdict": "confirmado",
-      "bestImageId": "hunt-rm-011-felipe-massa-flyback-chrono-2",
-      "reasoning": "RM 011 ceramica preta, mostrador esqueleto com 'RICHARD MILLE' e marcacao RM011-FM Felipe Massa",
+      "bestImageId": "hunt-rm-011-felipe-massa-flyback-chrono-1",
+      "reasoning": "Única foto acessível mostra RM tonneau carbono com cronógrafo azul/amarelo, condizente com RM011 Massa; f-116-*.webp inexistente.",
       "candidateIds": [
-        "hunt-rm-011-felipe-massa-flyback-chrono-2",
         "hunt-rm-011-felipe-massa-flyback-chrono-1",
         "f-116-ba73557c"
       ],
-      "reviewedAt": "2026-07-17T17:09:21.606Z"
-    },
-    "Datejust 41 Blue Motif": {
-      "rank": 27,
-      "verdict": "confirmado",
-      "bestImageId": "hunt-datejust-41-blue-motif-2",
-      "reasoning": "Todas mostram Datejust 41 dial azul motif (fluted, jubilee); a escolhida tem mostrador frontal e nítido",
-      "candidateIds": [
-        "hunt-datejust-41-blue-motif-2",
-        "hunt-datejust-41-blue-motif-1",
-        "wb-27-4",
-        "wb-27-3"
-      ],
-      "reviewedAt": "2026-07-17T23:21:03.299Z"
+      "reviewedAt": "2026-07-19T19:30:39.359Z"
     },
     "Daytona 126500LN (Panda Novo)": {
       "rank": 3,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Todas as 4 candidatas são fotos do movimento (cal. 4130/4131 gravado DAYTONA), nenhuma mostra o mostrador; impossível confirmar variante Panda.",
+      "reasoning": "Todas as 4 fotos são do movimento/caseback (4130, Daytona gravado); nenhuma mostra o mostrador panda.",
       "candidateIds": [
         "3-superluxuryreps-1b05ko8",
         "3-superluxuryreps-8y00yq",
         "3-superluxuryreps-10p4yaq",
         "3-superluxuryreps-6t0xic"
       ],
-      "reviewedAt": "2026-07-19T12:47:06.525Z"
+      "reviewedAt": "2026-07-19T19:56:23.221Z"
+    },
+    "Datejust 41 Blue Motif": {
+      "rank": 27,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "wb-27-4",
+        "wb-27-3",
+        "wb-27-2",
+        "wb-27-1"
+      ],
+      "reviewedAt": "2026-07-19T19:56:23.224Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1354,7 +1339,20 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-07-19T12:47:06.527Z"
+      "reviewedAt": "2026-07-19T19:56:23.224Z"
+    },
+    "Submariner 16610 (Vintage)": {
+      "rank": 96,
+      "verdict": "rejeitado",
+      "bestImageId": null,
+      "reasoning": "Fotos mostram um Rolex Milgauss (mostrador 'MILGAUSS', ponteiro raio laranja, PVD preto), não um Submariner.",
+      "candidateIds": [
+        "wb-96-4",
+        "wb-96-3",
+        "wb-96-2",
+        "wb-96-1"
+      ],
+      "reviewedAt": "2026-07-19T19:55:30.027Z"
     }
   }
 }

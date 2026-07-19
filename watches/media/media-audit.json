@@ -1,17 +1,35 @@
 {
-  "generatedAt": "2026-07-19T12:47:06.826Z",
-  "totalImages": 1475,
+  "generatedAt": "2026-07-19T19:56:23.373Z",
+  "totalImages": 1467,
   "summary": {
     "models": 137,
-    "verified": 118,
+    "verified": 115,
     "strong": 17,
-    "weak": 1,
-    "rejected": 0,
+    "weak": 3,
+    "rejected": 1,
     "missing": 1,
-    "conflictsDiscarded": 324,
-    "coveragePct": 99
+    "conflictsDiscarded": 320,
+    "coveragePct": 96
   },
   "backlog": [
+    {
+      "rank": 27,
+      "model": "Datejust 41 Blue Motif",
+      "brand": "Rolex",
+      "state": "fraco"
+    },
+    {
+      "rank": 96,
+      "model": "Submariner 16610 (Vintage)",
+      "brand": "Rolex",
+      "state": "rejeitado"
+    },
+    {
+      "rank": 122,
+      "model": "RM 055 Bubba Watson (RM055)",
+      "brand": "Richard Mille",
+      "state": "fraco"
+    },
     {
       "rank": 120,
       "model": "Lange 1 (Ref. 191.032)",
@@ -20,7 +38,7 @@
     },
     {
       "rank": 137,
-      "model": "Datejust 41 (ERF Free-Sprung 3235)",
+      "model": "Daytona 126519LN (Ghost, White Gold)",
       "brand": "Rolex",
       "state": "sem-imagem"
     }

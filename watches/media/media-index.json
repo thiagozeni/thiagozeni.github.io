@@ -48720,80 +48720,6 @@
     }
   },
   {
-    "id": "hunt-submariner-16610-vintage-1",
-    "model": "Submariner 16610 (Vintage)",
-    "brand": "Rolex",
-    "factory": "BPF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Rolex Submariner 16610 (Vintage) — replicavalley.net",
-    "source": "replicavalley.net",
-    "sourceDomain": "replicavalley.net",
-    "image": "https://www.replicavalley.net/media/catalog/product/cache/5cb4fd2be3b70d0efdeabd2263c1b0ed/s/0/s001-rolex-submariner-16610-black-dial-1.jpg",
-    "localImage": "/media/img/hunt-submariner-16610-vintage-1.jpg",
-    "confidence": 70,
-    "matchReasons": [
-      "marca:Rolex",
-      "fabrica:BPF",
-      "caca-agentica",
-      "Página titulada 'Rolex Submariner 16610 Black Dial' com bisel de aço preto (variante 5-digit vintage correta, não a 16610LV verde)"
-    ],
-    "factoryVerified": false,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T17:06:33.914Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Submariner 16610 (Vintage)"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 2
-    }
-  },
-  {
-    "id": "hunt-submariner-16610-vintage-2",
-    "model": "Submariner 16610 (Vintage)",
-    "brand": "Rolex",
-    "factory": "BPF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Rolex Submariner 16610 (Vintage) — intime06.co",
-    "source": "intime06.co",
-    "sourceDomain": "intime06.co",
-    "image": "https://www.intime06.co/45735-large_default/submariner-16610ln-ss-best-edition-black-dial-black-bezel-on-sa3135.jpg",
-    "localImage": "/media/img/hunt-submariner-16610-vintage-2.jpg",
-    "confidence": 70,
-    "matchReasons": [
-      "marca:Rolex",
-      "fabrica:BPF",
-      "caca-agentica",
-      "Título 'Submariner 16610LN ... black Dial Black Bezel' (16610LN = bisel preto, variante correta). 'Best Edition', fábrica não nomeada"
-    ],
-    "factoryVerified": false,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T17:06:35.089Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Submariner 16610 (Vintage)"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 2
-    }
-  },
-  {
     "id": "hunt-rm-011-felipe-massa-flyback-chrono-1",
     "model": "RM 011 Felipe Massa Flyback Chrono",
     "brand": "Richard Mille",
@@ -48803,21 +48729,21 @@
     "title": "Richard Mille RM 011 Felipe Massa Flyback Chrono — swissmade.uk.com",
     "source": "swissmade.uk.com",
     "sourceDomain": "swissmade.uk.com",
-    "image": "https://swissmade.uk.com/wp-content/uploads/2025/05/20180225_210817_239-570x379_1-510x339.jpg",
+    "image": "https://swissmade.uk.com/wp-content/uploads/2025/05/20180225_210817_241-570x379_1.jpg",
     "localImage": "/media/img/hunt-rm-011-felipe-massa-flyback-chrono-1.jpg",
     "confidence": 85,
     "matchReasons": [
       "marca:Richard Mille",
       "fabrica:KV (KVF / KW)",
       "caca-agentica",
-      "Título nomeia explicitamente 'Felipe Massa 10th Anniversary KVF ... A7750' — fábrica KVF e movimento A7750 batem exatamente com o batch; carbono NTPT com skeleton dial de acento azul (variante Felipe Massa legítima)"
+      "Página nomeia explicitamente 'RM011 SS Felipe Massa 10th Anniversary KVF' — factory KVF confirma o batch (KV/KVF/KW). Imagem validada visualmente: caixa carbono, mostrador skeleton azul/preto, cronógrafo flyback — condiz com RM011 Felipe Massa. Content-type image/jpeg confirmado via fetch."
     ],
     "factoryVerified": true,
     "tags": [
       "hunt",
       "clean"
     ],
-    "collectedAt": "2026-07-17T17:06:35.707Z",
+    "collectedAt": "2026-07-19T19:29:29.046Z",
     "mediaType": "image",
     "entity": {
       "kind": "model",
@@ -48828,43 +48754,6 @@
       "height": null,
       "hasWatermark": false,
       "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-rm-011-felipe-massa-flyback-chrono-2",
-    "model": "RM 011 Felipe Massa Flyback Chrono",
-    "brand": "Richard Mille",
-    "factory": "KV (KVF / KW)",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Richard Mille RM 011 Felipe Massa Flyback Chrono — swisschronox.com",
-    "source": "swisschronox.com",
-    "sourceDomain": "swisschronox.com",
-    "image": "https://swisschronox.com/wp-content/uploads/2022/05/richard-mille-rm-011-felipe-massa-black-phantom-2.jpg",
-    "localImage": "/media/img/hunt-rm-011-felipe-massa-flyback-chrono-2.jpg",
-    "confidence": 70,
-    "matchReasons": [
-      "marca:Richard Mille",
-      "fabrica:KV (KVF / KW)",
-      "caca-agentica",
-      "RM011 Felipe Massa 'Black Phantom' — ATENÇÃO: caixa em CERÂMICA preta (não carbono), movimento RMAC3/7750, fábrica não rotulada. Mesma família Felipe Massa, mas material difere do carbono do batch"
-    ],
-    "factoryVerified": false,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T17:06:36.029Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "RM 011 Felipe Massa Flyback Chrono"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 2
     }
   },
   {
@@ -48877,21 +48766,21 @@
     "title": "Omega Seamaster Planet Ocean 600M — pyluxury.com",
     "source": "pyluxury.com",
     "sourceDomain": "pyluxury.com",
-    "image": "https://pyluxury.com/wp-content/uploads/2026/04/OMEGA-Seamaster-Planet-Ocean-600M-217.30.42.21.01.001-Black-Dial-Black-Bezel-1-800x800.webp",
+    "image": "https://pyluxury.com/wp-content/uploads/2026/04/OMEGA-Seamaster-Planet-Ocean-600M-217.30.42.21.01.001-Black-Dial-Black-Bezel-2-800x800.webp",
     "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.webp",
     "confidence": 85,
     "matchReasons": [
       "marca:Omega",
       "fabrica:VSF",
       "caca-agentica",
-      "Página nomeia ref 217.30.42.21.01.001, mostrador preto + bisel cerâmico preto, 'Best Replica VSF', caliber 8912 (clone da família 8900) — fábrica VSF confirmada no texto"
+      "Página nomeia explicitamente 'OMEGA Seamaster Planet Ocean 600M 217.30.42.21.01.001 Black Dial Black Ceramic Bezel 1:1 Best Replica VSF 42mm' — factory VSF confirma o batch. Modelo sem variante entre parênteses no nome do batch, então dial/bezel preto (a config mais icônica/padrão) é aceitável. Imagem validada visualmente: relógio mostrado na mão sobre caixa da loja, com logo 'PY LUXURY' sobreposto no canto — watermark:true."
     ],
     "factoryVerified": true,
     "tags": [
       "hunt",
-      "clean"
+      "watermark"
     ],
-    "collectedAt": "2026-07-17T17:06:37.575Z",
+    "collectedAt": "2026-07-19T19:29:31.112Z",
     "mediaType": "image",
     "entity": {
       "kind": "model",
@@ -48900,192 +48789,7 @@
     "quality": {
       "width": null,
       "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-seamaster-planet-ocean-600m-2",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — pyluxury.com",
-    "source": "pyluxury.com",
-    "sourceDomain": "pyluxury.com",
-    "image": "https://pyluxury.com/wp-content/uploads/2026/04/OMEGA-Seamaster-Planet-Ocean-600M-217.30.42.21.01.001-Black-Dial-Black-Bezel-2-800x800.webp",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.webp",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Segunda foto da mesma galeria do produto VSF preto/preto"
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T17:06:38.124Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-rm-055-bubba-watson-rm055-1",
-    "model": "RM 055 Bubba Watson (RM055)",
-    "brand": "Richard Mille",
-    "factory": "ZF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Richard Mille RM 055 Bubba Watson (RM055) — pyluxury.com",
-    "source": "pyluxury.com",
-    "sourceDomain": "pyluxury.com",
-    "image": "https://pyluxury.com/wp-content/uploads/2025/07/Richard-Mille-RM055-White-Ceramic-Bubba-Watson-Super-Clone-Best-Replica-ZF-11-800x800.webp",
-    "localImage": "/media/img/hunt-rm-055-bubba-watson-rm055-1.webp",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Richard Mille",
-      "fabrica:ZF",
-      "caca-agentica",
-      "Página confirma 'RM055 White Ceramic Bubba Watson ... ZF' com caliber RMUL2 super clone — fábrica ZF e movimento RMUL2 batem exatamente com o batch"
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T17:06:38.641Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "RM 055 Bubba Watson (RM055)"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-rm-055-bubba-watson-rm055-2",
-    "model": "RM 055 Bubba Watson (RM055)",
-    "brand": "Richard Mille",
-    "factory": "ZF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Richard Mille RM 055 Bubba Watson (RM055) — pyluxury.com",
-    "source": "pyluxury.com",
-    "sourceDomain": "pyluxury.com",
-    "image": "https://pyluxury.com/wp-content/uploads/2025/07/Richard-Mille-RM055-White-Ceramic-Bubba-Watson-Super-Clone-Best-Replica-ZF-1-800x800.webp",
-    "localImage": "/media/img/hunt-rm-055-bubba-watson-rm055-2.webp",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Richard Mille",
-      "fabrica:ZF",
-      "caca-agentica",
-      "Segunda foto da mesma galeria ZF White Ceramic"
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T17:06:39.158Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "RM 055 Bubba Watson (RM055)"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-datejust-41-blue-motif-1",
-    "model": "Datejust 41 Blue Motif",
-    "brand": "Rolex",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Rolex Datejust 41 Blue Motif — vsfactory.us",
-    "source": "vsfactory.us",
-    "sourceDomain": "vsfactory.us",
-    "image": "https://vsfactory.us/wp-content/uploads/2026/03/i1750767591022_9464_0_0-1-1200x1600.jpg",
-    "localImage": "/media/img/hunt-datejust-41-blue-motif-1.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Rolex",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Página de produto da própria VSF; título nomeia 'Blue Fluted Motif Dial Fluted Bezel Jubilee (126334)'. Verificação visual confirma o padrão motif no mostrador azul (não o azul sunburst liso). URL validada: image/jpeg 208KB, 1200x1600."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T23:19:09.079Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Datejust 41 Blue Motif"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-datejust-41-blue-motif-2",
-    "model": "Datejust 41 Blue Motif",
-    "brand": "Rolex",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Rolex Datejust 41 Blue Motif — superrolex.io",
-    "source": "superrolex.io",
-    "sourceDomain": "superrolex.io",
-    "image": "https://superrolex.io/wp-content/uploads/2025/04/IMG-20230428-WA0023.jpg",
-    "localImage": "/media/img/hunt-datejust-41-blue-motif-2.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Rolex",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Título nomeia 'VSF Factory 126334 Patterned Blue MOTIF Dial VS3235'. Foto estilo QC em luz natural, variante motif confirmada visualmente; sem overlay de marca d'água (cartão do seller ao fundo). URL validada: image/jpeg 88KB."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-07-17T23:19:09.293Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Datejust 41 Blue Motif"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
+      "hasWatermark": true,
       "sourceTier": 1
     }
   }
