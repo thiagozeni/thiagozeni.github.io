@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-07-08T11:14:16.134Z",
   "method": "visual-review-subagents + deep-per-image (etapa4)",
-  "reviewed": 136,
+  "reviewed": 137,
   "verdicts": {
     "Seamaster Diver 300M (Preto)": {
       "rank": 12,
@@ -304,15 +304,15 @@
     },
     "Daytona 116519LN (Ghost/Ouro Branco)": {
       "rank": 22,
-      "verdict": "incerto",
+      "verdict": "rejeitado",
       "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=BTF",
+      "reasoning": "Foto 'White Gold Silver' mostra caixa amarela (ouro amarelo), foto 'Yellow Gold' confirma ouro amarelo; grey dial não é o 'Ghost' preto em ouro branco.",
       "candidateIds": [
         "22-superclonewatches-1g30x0b",
         "22-superclonewatches-1ngtqqa",
         "22-superclonewatches-ltm0hn"
       ],
-      "reviewedAt": "2026-07-19T19:56:23.224Z"
+      "reviewedAt": "2026-07-19T23:11:53.416Z"
     },
     "Aquanaut 5167A (Preto)": {
       "rank": 24,
@@ -397,16 +397,14 @@
     },
     "Daytona 116518LN (Pikachu)": {
       "rank": 60,
-      "verdict": "incerto",
+      "verdict": "rejeitado",
       "bestImageId": null,
-      "reasoning": "4vp2gz: ouro amarelo, bezel cerâmico preto, Oysterflex, dial champagne c/ subdials pretos — 116518LN. ltm0hn é 116508 (rejeitada).",
+      "reasoning": "Ambas as fotos mostram mostrador champagne/creme em ouro amarelo, não o mostrador preto característico do 'Pikachu'.",
       "candidateIds": [
         "60-superclonewatches-4vp2gz",
         "60-superclonewatches-ltm0hn"
       ],
-      "reviewedAt": "2026-07-11T04:07:03.933Z",
-      "quarantineReason": "factory-mismatch: registro=Clean (Legacy), catálogo=BTF",
-      "quarantinedAt": "2026-07-11T11:43:17.305Z"
+      "reviewedAt": "2026-07-19T23:11:53.417Z"
     },
     "Nautilus 5712/1A (Fase da Lua)": {
       "rank": 61,
@@ -566,7 +564,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-07-19T19:56:23.225Z"
+      "reviewedAt": "2026-07-19T23:11:53.417Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -759,7 +757,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-07-19T19:56:23.224Z"
+      "reviewedAt": "2026-07-19T23:11:53.416Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1306,27 +1304,27 @@
       "rank": 3,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Todas as 4 fotos são do movimento/caseback (4130, Daytona gravado); nenhuma mostra o mostrador panda.",
+      "reasoning": "As 4 fotos mostram apenas o movimento/caseback (calibre 4131), nenhuma revela o mostrador para confirmar 'panda'.",
       "candidateIds": [
         "3-superluxuryreps-1b05ko8",
         "3-superluxuryreps-8y00yq",
         "3-superluxuryreps-10p4yaq",
         "3-superluxuryreps-6t0xic"
       ],
-      "reviewedAt": "2026-07-19T19:56:23.221Z"
+      "reviewedAt": "2026-07-19T23:11:53.413Z"
     },
     "Datejust 41 Blue Motif": {
       "rank": 27,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "verdict": "confirmado",
+      "bestImageId": "hunt-datejust-41-blue-motif-1",
+      "reasoning": "Datejust 41 com mostrador azul motif (padrão fluted/linhas), moldura fluted, pulseira Jubilee — bate com nome e cor.",
       "candidateIds": [
+        "hunt-datejust-41-blue-motif-2",
+        "hunt-datejust-41-blue-motif-1",
         "wb-27-4",
-        "wb-27-3",
-        "wb-27-2",
-        "wb-27-1"
+        "wb-27-3"
       ],
-      "reviewedAt": "2026-07-19T19:56:23.224Z"
+      "reviewedAt": "2026-07-19T23:10:29.130Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1339,20 +1337,31 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-07-19T19:56:23.224Z"
+      "reviewedAt": "2026-07-19T23:11:53.416Z"
     },
     "Submariner 16610 (Vintage)": {
       "rank": 96,
-      "verdict": "rejeitado",
+      "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Fotos mostram um Rolex Milgauss (mostrador 'MILGAUSS', ponteiro raio laranja, PVD preto), não um Submariner.",
+      "reasoning": "Única foto de Submariner preto, mas luneta cerâmica brilhante não parece vintage; outras 3 fotos são Milgauss (modelo errado).",
       "candidateIds": [
+        "hunt-submariner-16610-vintage-1",
         "wb-96-4",
         "wb-96-3",
-        "wb-96-2",
-        "wb-96-1"
+        "wb-96-2"
       ],
-      "reviewedAt": "2026-07-19T19:55:30.027Z"
+      "reviewedAt": "2026-07-19T23:10:29.132Z"
+    },
+    "Daytona 126519LN (Ghost, White Gold)": {
+      "rank": 137,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Daytona painel prata/panda em pulseira borracha; caixa parece aço, sem indício visual de ouro branco ou dial 'ghost'.",
+      "candidateIds": [
+        "hunt-daytona-126519ln-ghost-white-gold-2",
+        "hunt-daytona-126519ln-ghost-white-gold-1"
+      ],
+      "reviewedAt": "2026-07-19T23:10:29.132Z"
     }
   }
 }

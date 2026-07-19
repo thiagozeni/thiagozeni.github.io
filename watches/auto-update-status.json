@@ -1,10 +1,85 @@
 {
-  "generatedAt": "2026-07-19T19:56:45.348Z",
+  "generatedAt": "2026-07-19T23:17:36.220Z",
   "runs": [
     {
       "stamp": "2026-07-19",
+      "startedAt": "2026-07-19T23:03:14.271Z",
+      "running": false,
+      "interrupted": false,
+      "phases": [
+        {
+          "name": "news",
+          "label": "Notícias (bbtwatch)",
+          "status": "ok",
+          "startedAt": "2026-07-19T23:03:14.309Z",
+          "finishedAt": "2026-07-19T23:03:16.544Z",
+          "secs": 2,
+          "failures": []
+        },
+        {
+          "name": "discover",
+          "label": "Descoberta de mercado",
+          "status": "ok",
+          "startedAt": "2026-07-19T23:03:16.544Z",
+          "finishedAt": "2026-07-19T23:06:03.290Z",
+          "secs": 167,
+          "failures": []
+        },
+        {
+          "name": "hunt",
+          "label": "Caça de mídia",
+          "status": "ok",
+          "startedAt": "2026-07-19T23:06:03.291Z",
+          "finishedAt": "2026-07-19T23:09:29.574Z",
+          "secs": 206,
+          "failures": []
+        },
+        {
+          "name": "curate",
+          "label": "Curadoria (revisão visual)",
+          "status": "ok",
+          "startedAt": "2026-07-19T23:09:29.575Z",
+          "finishedAt": "2026-07-19T23:11:53.627Z",
+          "secs": 144,
+          "failures": []
+        },
+        {
+          "name": "refresh",
+          "label": "Re-pesquisa de evidência",
+          "status": "ok",
+          "startedAt": "2026-07-19T23:11:53.627Z",
+          "finishedAt": "2026-07-19T23:17:23.640Z",
+          "secs": 330,
+          "failures": []
+        },
+        {
+          "name": "rescore",
+          "label": "Re-score",
+          "status": "ok",
+          "startedAt": "2026-07-19T23:17:23.640Z",
+          "finishedAt": "2026-07-19T23:17:23.784Z",
+          "secs": 0,
+          "failures": []
+        },
+        {
+          "name": "gate",
+          "label": "Gate + commit",
+          "status": "ok",
+          "startedAt": "2026-07-19T23:17:23.784Z",
+          "finishedAt": "2026-07-19T23:17:35.942Z",
+          "secs": 12,
+          "failures": []
+        }
+      ],
+      "coveragePct": 96,
+      "commit": "1a668e0",
+      "finishedAt": "2026-07-19T23:17:35.942Z",
+      "secs": 862
+    },
+    {
+      "stamp": "2026-07-19",
       "startedAt": "2026-07-19T19:50:12.417Z",
-      "running": true,
+      "running": false,
       "interrupted": false,
       "phases": [
         {
@@ -81,15 +156,17 @@
         {
           "name": "gate",
           "label": "Gate + commit",
-          "status": "rodando",
+          "status": "ok",
           "startedAt": "2026-07-19T19:56:45.348Z",
-          "finishedAt": null,
-          "secs": null,
+          "finishedAt": "2026-07-19T19:56:57.071Z",
+          "secs": 12,
           "failures": []
         }
       ],
-      "coveragePct": null,
-      "commit": null
+      "coveragePct": 96,
+      "commit": null,
+      "finishedAt": "2026-07-19T19:56:57.071Z",
+      "secs": 405
     },
     {
       "stamp": "2026-07-19",

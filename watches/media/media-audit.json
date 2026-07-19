@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-07-19T19:56:23.373Z",
-  "totalImages": 1467,
+  "generatedAt": "2026-07-19T23:11:53.581Z",
+  "totalImages": 1472,
   "summary": {
-    "models": 137,
-    "verified": 115,
+    "models": 138,
+    "verified": 116,
     "strong": 17,
-    "weak": 3,
-    "rejected": 1,
+    "weak": 2,
+    "rejected": 2,
     "missing": 1,
-    "conflictsDiscarded": 320,
+    "conflictsDiscarded": 321,
     "coveragePct": 96
   },
   "backlog": [
     {
-      "rank": 27,
-      "model": "Datejust 41 Blue Motif",
+      "rank": 22,
+      "model": "Daytona 116519LN (Ghost/Ouro Branco)",
       "brand": "Rolex",
-      "state": "fraco"
+      "state": "rejeitado"
     },
     {
-      "rank": 96,
-      "model": "Submariner 16610 (Vintage)",
+      "rank": 60,
+      "model": "Daytona 116518LN (Pikachu)",
       "brand": "Rolex",
       "state": "rejeitado"
     },
@@ -37,8 +37,8 @@
       "state": "fraco"
     },
     {
-      "rank": 137,
-      "model": "Daytona 126519LN (Ghost, White Gold)",
+      "rank": 138,
+      "model": "Datejust 41 Fluted Bezel (ref. exata não confirmada, família 126334)",
       "brand": "Rolex",
       "state": "sem-imagem"
     }

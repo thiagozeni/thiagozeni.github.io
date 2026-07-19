@@ -48792,5 +48792,190 @@
       "hasWatermark": true,
       "sourceTier": 1
     }
+  },
+  {
+    "id": "hunt-daytona-126519ln-ghost-white-gold-1",
+    "model": "Daytona 126519LN (Ghost, White Gold)",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Daytona 126519LN (Ghost, White Gold) — vsfactory.us",
+    "source": "vsfactory.us",
+    "sourceDomain": "vsfactory.us",
+    "image": "https://vsfactory.us/wp-content/uploads/2026/03/i1750398193553_3350_0_0-1.jpg",
+    "localImage": "/media/img/hunt-daytona-126519ln-ghost-white-gold-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Página oficial VSF nomeia explicitamente ref 126519LN, 'New Generation White Gold / Oysterflex Rubber Configuration' e dial 'Iconic Grey Ghost Configuration' — variante confirmada no texto."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-19T23:09:27.160Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Daytona 126519LN (Ghost, White Gold)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-daytona-126519ln-ghost-white-gold-2",
+    "model": "Daytona 126519LN (Ghost, White Gold)",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Daytona 126519LN (Ghost, White Gold) — vsfactory.us",
+    "source": "vsfactory.us",
+    "sourceDomain": "vsfactory.us",
+    "image": "https://vsfactory.us/wp-content/uploads/2026/03/i1750398193560_1487_0_2-1200x1600.jpg",
+    "localImage": "/media/img/hunt-daytona-126519ln-ghost-white-gold-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Imagem de galeria da mesma página de produto VSF confirmada."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-19T23:09:27.625Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Daytona 126519LN (Ghost, White Gold)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-datejust-41-blue-motif-1",
+    "model": "Datejust 41 Blue Motif",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust 41 Blue Motif — superrolex.io",
+    "source": "superrolex.io",
+    "sourceDomain": "superrolex.io",
+    "image": "https://superrolex.io/wp-content/uploads/2025/04/IMG-20230428-WA0023.jpg",
+    "localImage": "/media/img/hunt-datejust-41-blue-motif-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Título explicita 'VSF Factory', ref 126334 e 'Patterned Blue MOTIF Dial' — variante confirmada no texto."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-19T23:09:27.676Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Datejust 41 Blue Motif"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-datejust-41-blue-motif-2",
+    "model": "Datejust 41 Blue Motif",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust 41 Blue Motif — superrolex.io",
+    "source": "superrolex.io",
+    "sourceDomain": "superrolex.io",
+    "image": "https://superrolex.io/wp-content/uploads/2025/04/IMG-20230427-WA0048.jpg",
+    "localImage": "/media/img/hunt-datejust-41-blue-motif-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Imagem de galeria adicional da mesma página de produto."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-19T23:09:27.695Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Datejust 41 Blue Motif"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-submariner-16610-vintage-1",
+    "model": "Submariner 16610 (Vintage)",
+    "brand": "Rolex",
+    "factory": "BPF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Submariner 16610 (Vintage) — replicavalley.net",
+    "source": "replicavalley.net",
+    "sourceDomain": "replicavalley.net",
+    "image": "https://www.replicavalley.net/media/catalog/product/cache/5cb4fd2be3b70d0efdeabd2263c1b0ed/s/0/s001-rolex-submariner-16610-black-dial-1.jpg",
+    "localImage": "/media/img/hunt-submariner-16610-vintage-1.jpg",
+    "confidence": 70,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:BPF",
+      "caca-agentica",
+      "Página nomeia explicitamente ref 16610, dial preto e bezel preto (não LV verde, não azul) — variante correta confirmada no texto, mas a fábrica não é identificada como BPF (movimento listado como 'Asian 2813' genérico)."
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-19T23:09:29.519Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Submariner 16610 (Vintage)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 2
+    }
   }
 ]
