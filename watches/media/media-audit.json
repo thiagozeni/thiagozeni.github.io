@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-07-19T12:47:06.826Z",
+  "totalImages": 1475,
+  "summary": {
+    "models": 137,
+    "verified": 118,
+    "strong": 17,
+    "weak": 1,
+    "rejected": 0,
+    "missing": 1,
+    "conflictsDiscarded": 324,
+    "coveragePct": 99
+  },
+  "backlog": [
+    {
+      "rank": 120,
+      "model": "Lange 1 (Ref. 191.032)",
+      "brand": "A. Lange & Söhne",
+      "state": "fraco"
+    },
+    {
+      "rank": 137,
+      "model": "Datejust 41 (ERF Free-Sprung 3235)",
+      "brand": "Rolex",
+      "state": "sem-imagem"
+    }
+  ]
+}

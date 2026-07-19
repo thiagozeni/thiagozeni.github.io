@@ -1,0 +1,1360 @@
+{
+  "generatedAt": "2026-07-08T11:14:16.134Z",
+  "method": "visual-review-subagents + deep-per-image (etapa4)",
+  "reviewed": 136,
+  "verdicts": {
+    "Seamaster Diver 300M (Preto)": {
+      "rank": 12,
+      "verdict": "confirmado",
+      "bestImageId": "12-superluxuryreps-usdxw8",
+      "reasoning": "Seamaster 300M preto, marca/linha/cor batem"
+    },
+    "Datejust 41 Mint Green (Fluted/Jubilee)": {
+      "rank": 14,
+      "verdict": "confirmado",
+      "bestImageId": "14-superclonewatches-7e78pn",
+      "reasoning": "DJ verde motif fluted + jubilee"
+    },
+    "Yacht-Master 126622 Rhodium": {
+      "rank": 23,
+      "verdict": "confirmado",
+      "bestImageId": "23-superclonewatches-7s47f5",
+      "reasoning": "YM bisel platina relevo, mostrador rodio",
+      "source": "deep-per-image"
+    },
+    "Submersible Carbotech PAM1616": {
+      "rank": 28,
+      "verdict": "confirmado",
+      "bestImageId": "28-superclonewatches-1lz17e5",
+      "reasoning": "Panerai Submersible carbotech, etiqueta PAM1616",
+      "source": "deep-per-image"
+    },
+    "Seamaster Diver 300M (Verde)": {
+      "rank": 32,
+      "verdict": "confirmado",
+      "bestImageId": "cl-32-1",
+      "reasoning": "Omega Seamaster 300M mostrador e luneta verdes"
+    },
+    "Seamaster 300 No Time To Die (NTTD Ti)": {
+      "rank": 36,
+      "verdict": "confirmado",
+      "bestImageId": "36-superluxuryreps-1b54tcg",
+      "reasoning": "Seamaster titanio tropical mesh = NTTD Ti"
+    },
+    "Aqua Terra Worldtimer": {
+      "rank": 42,
+      "verdict": "confirmado",
+      "bestImageId": "42-superclonewatches-wu4wgc",
+      "reasoning": "anel de cidades + globo = Worldtimer"
+    },
+    "Datejust 41 Rhodium": {
+      "rank": 48,
+      "verdict": "confirmado",
+      "bestImageId": "48-superclonewatches-gqjhk7",
+      "reasoning": "Rolex Datejust 41 mostrador rodio/cinza com indices de diamante, bezel canelado e jubilee. Corresponde ao modelo."
+    },
+    "Datejust 36 Wimbledon": {
+      "rank": 49,
+      "verdict": "confirmado",
+      "bestImageId": "49-superluxuryreps-gbdkph",
+      "reasoning": "slate + romanos verdes = Wimbledon"
+    },
+    "Yacht-Master 226659 (Ouro Branco/Oysterflex)": {
+      "rank": 55,
+      "verdict": "confirmado",
+      "bestImageId": "55-superclonewatches-1e3yuun",
+      "reasoning": "ouro branco, ceramica preta, Oysterflex = 226659"
+    },
+    "Aqua Terra 150m (Verde Oliva)": {
+      "rank": 57,
+      "verdict": "confirmado",
+      "bestImageId": "57-superluxuryreps-1342nc",
+      "reasoning": "dial verde oliva teak em borracha"
+    },
+    "Planet Ocean 600m 43.5mm": {
+      "rank": 69,
+      "verdict": "confirmado",
+      "bestImageId": "69-superclonewatches-1h4y3f",
+      "reasoning": "Planet Ocean 600m Americas Cup branco 43.5mm"
+    },
+    "Daytona 116505 (Rose Gold Preto)": {
+      "rank": 71,
+      "verdict": "confirmado",
+      "bestImageId": "71-superclonewatches-mxvjdq",
+      "reasoning": "Daytona ouro rose mostrador preto"
+    },
+    "Pelagos FXD Marine Nationale": {
+      "rank": 92,
+      "verdict": "confirmado",
+      "bestImageId": "92-superluxuryreps-5mpvyb",
+      "reasoning": "Pelagos FXD azul, lugs fixos, nato azul"
+    },
+    "Speedmaster Moonwatch Professional": {
+      "rank": 100,
+      "verdict": "confirmado",
+      "bestImageId": "100-superluxuryreps-1n0d5du",
+      "reasoning": "Speedmaster Professional aco, bezel tachymetre"
+    },
+    "Submariner Date 126610LN (Preto)": {
+      "rank": 1,
+      "verdict": "confirmado",
+      "bestImageId": "f-1-70433002",
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (7 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "wrongIds": [
+        "1-superluxuryreps-18pyluo",
+        "1-superluxuryreps-olx151",
+        "1-superluxuryreps-1dkn929",
+        "1-superluxuryreps-1ibrxom",
+        "1-superluxuryreps-mgam4s",
+        "1-superluxuryreps-1sns71q"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "1-superluxuryreps-olx151",
+      "source": "factory-sticker-review",
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 7,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Submariner Date 126610LV (Starbucks)": {
+      "rank": 2,
+      "verdict": "confirmado",
+      "bestImageId": "2-superluxuryreps-2uv6ff",
+      "reasoning": "Bezel verde + dial preto = Starbucks 126610LV"
+    },
+    "Daytona 126506 (Platona)": {
+      "rank": 5,
+      "verdict": "confirmado",
+      "bestImageId": "5-superclonewatches-13k6gbq",
+      "reasoning": "ice blue + bezel marrom = platinum 126506 Platona"
+    },
+    "Submariner No-Date 114060": {
+      "rank": 6,
+      "verdict": "confirmado",
+      "bestImageId": "6-superluxuryreps-1f16dtt",
+      "reasoning": "Submariner no-date preto, SUBMARINER sem DATE"
+    },
+    "Submariner No-Date 124060": {
+      "rank": 7,
+      "verdict": "confirmado",
+      "bestImageId": "7-superclonewatches-zfefrp",
+      "reasoning": "Submariner no-date 41mm preto, sem data",
+      "source": "deep-per-image"
+    },
+    "GMT-Master II 126710BLNR (Batman)": {
+      "rank": 8,
+      "verdict": "confirmado",
+      "bestImageId": "8-superluxuryreps-u4uhoi",
+      "reasoning": "bezel azul/preto Batman + Jubilee"
+    },
+    "GMT-Master II 126710GRNR (Bruce Wayne)": {
+      "rank": 10,
+      "verdict": "confirmado",
+      "bestImageId": "f-10-388e8c75",
+      "reasoning": "Mídia factory-correta (ARF) coletada e validada (5 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "source": "factory-sticker-review",
+      "wrongIds": [
+        "10-superclonewatches-1p3kpa6",
+        "10-superluxuryreps-fgckag",
+        "10-superluxuryreps-1lnu57e",
+        "10-superluxuryreps-degaxr",
+        "10-superluxuryreps-1682rzz",
+        "10-superluxuryreps-l733",
+        "10-superluxuryreps-16xddre",
+        "10-superluxuryreps-105yuyy",
+        "10-superluxuryreps-tekc6i",
+        "10-superluxuryreps-mn5te2",
+        "10-superluxuryreps-fvralm",
+        "10-superluxuryreps-1r7ky4y",
+        "10-superclonewatches-5cef0n"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "ARF",
+      "factoryActual": "CLEAN",
+      "factoryResolved": true,
+      "collectedFactory": "ARF",
+      "collectedCount": 5,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Daytona 116500LN (Godzilla/Preto)": {
+      "rank": 11,
+      "verdict": "confirmado",
+      "bestImageId": "f-11-e26d59bc",
+      "reasoning": "Mídia factory-correta (BTF) coletada e validada (4 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "wrongIds": [
+        "11-superclonewatches-nepbf4",
+        "11-superclonewatches-1q6v4qe"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "BTF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "11-superclonewatches-nepbf4",
+      "source": "factory-sticker-review",
+      "factoryResolved": true,
+      "collectedFactory": "BTF",
+      "collectedCount": 4,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Royal Oak 15500 (Preto)": {
+      "rank": 15,
+      "verdict": "confirmado",
+      "bestImageId": "15-superclonewatches-hha5iw",
+      "reasoning": "RO 15500 preto tapisserie so-horas"
+    },
+    "Nautilus 5711/1A (Green Dial)": {
+      "rank": 16,
+      "verdict": "confirmado",
+      "bestImageId": "16-superclonewatches-11bvxwn",
+      "reasoning": "Nautilus 5711 dial verde"
+    },
+    "GMT-Master II 126720VTNR (Sprite - Canhoto)": {
+      "rank": 17,
+      "verdict": "confirmado",
+      "bestImageId": "f-17-767d1681",
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (5 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "source": "factory-sticker-review",
+      "wrongIds": [
+        "17-superluxuryreps-xbx7j7",
+        "17-superluxuryreps-11v0bhq",
+        "17-superluxuryreps-1vx1yjn",
+        "17-superluxuryreps-1vr4go7",
+        "17-superluxuryreps-en31o",
+        "17-superclonewatches-1ach3ma",
+        "17-superclonewatches-hhr5ex"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "17-superclonewatches-1ach3ma",
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 5,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "GMT-Master II 126710BLRO (Pepsi)": {
+      "rank": 19,
+      "verdict": "confirmado",
+      "bestImageId": "f-19-b6042370",
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (7 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "source": "factory-sticker-review",
+      "wrongIds": [
+        "19-superclonewatches-jkq49b",
+        "19-superclonewatches-16l2vte",
+        "19-superluxuryreps-14afdoo",
+        "19-superluxuryreps-1uu4kzw",
+        "19-superluxuryreps-via85b",
+        "19-superluxuryreps-1obwp7j",
+        "19-superluxuryreps-1jh8201",
+        "19-superluxuryreps-akkh5a",
+        "19-superluxuryreps-94243",
+        "19-superluxuryreps-1825iey",
+        "19-superluxuryreps-g8v38",
+        "19-superluxuryreps-rgvojv",
+        "19-superluxuryreps-3gmhr5",
+        "19-superluxuryreps-vkzdhk",
+        "19-superluxuryreps-1sh68zc",
+        "19-superluxuryreps-akhfk8"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "19-superluxuryreps-1jh8201",
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 7,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Submariner 116610LN (Clássico)": {
+      "rank": 20,
+      "verdict": "confirmado",
+      "bestImageId": "f-20-d99eae33",
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (4 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "wrongIds": [
+        "20-superclonewatches-gzau3h",
+        "20-superclonewatches-10myaal",
+        "20-superclonewatches-7fgzgf",
+        "20-superluxuryreps-ne1g8y",
+        "20-superluxuryreps-1kdaw5h",
+        "20-superluxuryreps-6weqar",
+        "20-superluxuryreps-18y9cde",
+        "20-superluxuryreps-1nfbop9",
+        "20-superluxuryreps-18zgvst",
+        "20-superluxuryreps-1csubf",
+        "20-superluxuryreps-5xr6uv",
+        "20-superluxuryreps-yrdnx3",
+        "20-superluxuryreps-1rl04zb",
+        "20-superluxuryreps-u6fbdq",
+        "20-superluxuryreps-2or82i",
+        "20-superluxuryreps-vidp4q",
+        "20-superluxuryreps-1oc066y",
+        "20-superluxuryreps-1h9q48o",
+        "20-superluxuryreps-ndm3ga"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "20-superluxuryreps-18zgvst",
+      "source": "factory-sticker-review",
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 4,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Daytona 116519LN (Ghost/Ouro Branco)": {
+      "rank": 22,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=BTF",
+      "candidateIds": [
+        "22-superclonewatches-1g30x0b",
+        "22-superclonewatches-1ngtqqa",
+        "22-superclonewatches-ltm0hn"
+      ],
+      "reviewedAt": "2026-07-19T12:47:06.527Z"
+    },
+    "Aquanaut 5167A (Preto)": {
+      "rank": 24,
+      "verdict": "confirmado",
+      "bestImageId": "24-superclonewatches-y99nr3",
+      "reasoning": "Aquanaut almofada dial preto texturizado"
+    },
+    "Submariner 116610LV (Hulk)": {
+      "rank": 25,
+      "verdict": "confirmado",
+      "bestImageId": "f-25-05bb6c86",
+      "reasoning": "Mídia factory-correta (ZF) coletada e validada (2 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "wrongIds": [
+        "25-superclonewatches-1hrd0am",
+        "25-superluxuryreps-19tiaxv",
+        "25-superluxuryreps-4i95ib",
+        "25-superluxuryreps-c1088a",
+        "25-superluxuryreps-j14jnz",
+        "25-superluxuryreps-1cqzg7j",
+        "25-superluxuryreps-l7f7pf",
+        "25-superluxuryreps-16rn3tt",
+        "25-superluxuryreps-qa0dvl",
+        "25-superluxuryreps-1bu89zz",
+        "25-superluxuryreps-vclk1r",
+        "25-superluxuryreps-1xlwodm"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "ZF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "25-superluxuryreps-j14jnz",
+      "source": "factory-sticker-review",
+      "factoryResolved": true,
+      "collectedFactory": "ZF",
+      "collectedCount": 2,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Royal Oak 15510 (50th Anniv Verde)": {
+      "rank": 29,
+      "verdict": "confirmado",
+      "bestImageId": "cl-29-1",
+      "reasoning": "AP RO verde tapisserie data 3h = 15510 50th",
+      "wrongIds": [
+        "29-superclonewatches-1niww9a",
+        "29-superclonewatches-fcxxn7",
+        "29-superclonewatches-1m1rtsm",
+        "29-superclonewatches-kcrc3z",
+        "29-superclonewatches-2zw9s1",
+        "29-superclonewatches-r12wq6",
+        "29-superclonewatches-jqebyo"
+      ],
+      "source": "deep-per-image"
+    },
+    "Royal Oak 15202 (Jumbo Extra-Thin)": {
+      "rank": 38,
+      "verdict": "confirmado",
+      "bestImageId": "38-superclonewatches-40h0qr",
+      "reasoning": "RO Jumbo extra-fino azul tapisserie 15202"
+    },
+    "Nautilus 5711/1A (White Dial)": {
+      "rank": 44,
+      "verdict": "confirmado",
+      "bestImageId": "44-superluxuryreps-14gmu50",
+      "reasoning": "Nautilus 5711 dial branco ranhurado"
+    },
+    "Aquanaut 5168G (Verde Khaki)": {
+      "rank": 46,
+      "verdict": "confirmado",
+      "bestImageId": "cl-46-1",
+      "reasoning": "Aquanaut verde oliva/khaki relevo pulseira verde = 5168G"
+    },
+    "Submariner 126619LB (Smurf/Bluesy Ouro Branco)": {
+      "rank": 52,
+      "verdict": "confirmado",
+      "bestImageId": "52-superclonewatches-1i3ckq9",
+      "reasoning": "dial preto + bezel azul ouro branco = 126619LB"
+    },
+    "Daytona 116508 (John Mayer Verde)": {
+      "rank": 58,
+      "verdict": "confirmado",
+      "bestImageId": "58-superclonewatches-171skv6",
+      "reasoning": "Daytona ouro dial verde John Mayer 116508"
+    },
+    "Daytona 116518LN (Pikachu)": {
+      "rank": 60,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=BTF",
+      "candidateIds": [
+        "60-superclonewatches-4vp2gz",
+        "60-superclonewatches-ltm0hn"
+      ],
+      "reviewedAt": "2026-07-19T12:47:06.527Z"
+    },
+    "Nautilus 5712/1A (Fase da Lua)": {
+      "rank": 61,
+      "verdict": "confirmado",
+      "bestImageId": "61-superluxuryreps-1dk1o1s",
+      "reasoning": "Nautilus azul moonphase + reserva = 5712"
+    },
+    "Calatrava 5227G": {
+      "rank": 62,
+      "verdict": "confirmado",
+      "bestImageId": "62-superluxuryreps-1regf9i",
+      "reasoning": "Patek ouro branco cal324 tampa officier 5227G"
+    },
+    "Submariner 116613LB (Two-Tone Ouro/Aço)": {
+      "rank": 63,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Submariner two-tone dial+bezel azuis 116613LB",
+      "quarantineReason": "factory-mismatch: registro=Clean, catálogo=VSF",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Royal Oak 15400 (Branco/Prata)": {
+      "rank": 64,
+      "verdict": "confirmado",
+      "bestImageId": "cl-64-1",
+      "reasoning": "AP RO branco Grande Tapisserie data 3h = 15400"
+    },
+    "Submariner Date 116613LN (Two-Tone Preto)": {
+      "rank": 66,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Sub two-tone dial+bezel pretos 116613LN",
+      "quarantineReason": "factory-mismatch: registro=Clean, catálogo=VSF",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Royal Oak 15510 (50th Anniv)": {
+      "rank": 70,
+      "verdict": "confirmado",
+      "bestImageId": "70-superluxuryreps-1litybz",
+      "reasoning": "RO 15510 ouro rose",
+      "wrongIds": [
+        "70-superclonewatches-kcrc3z",
+        "70-superclonewatches-1n9zano",
+        "70-superclonewatches-1niww9a",
+        "70-superclonewatches-fcxxn7"
+      ],
+      "source": "deep-per-image"
+    },
+    "Royal Oak Double Balance 15407": {
+      "rank": 72,
+      "verdict": "confirmado",
+      "bestImageId": "72-superclonewatches-1e9zs7f",
+      "reasoning": "RO openworked ouro rose 15407 Double Balance"
+    },
+    "GMT-Master II 126718GRNR (Full Yellow Gold)": {
+      "rank": 80,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "GMT full ouro amarelo bezel cinza/preto GRNR",
+      "quarantineReason": "factory-mismatch: registro=GMF (Tungsten), catálogo=GF (Gold Factory)",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "GMT-Master II 116710BLNR (Batman Antigo)": {
+      "rank": 85,
+      "verdict": "confirmado",
+      "bestImageId": "f-85-daf03928",
+      "reasoning": "Mídia factory-correta (ARF) coletada e validada (2 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "source": "factory-sticker-review",
+      "wrongIds": [
+        "85-superluxuryreps-1ikusqw",
+        "85-superluxuryreps-1qozebo",
+        "85-superclonewatches-1c9w0je",
+        "85-superclonewatches-g6r8es",
+        "85-superluxuryreps-1tsdmpl",
+        "85-superluxuryreps-bq5kx0",
+        "85-superluxuryreps-h6tgar",
+        "85-superluxuryreps-34l5lt",
+        "85-superluxuryreps-1sc9zmm",
+        "85-superluxuryreps-11algid",
+        "85-superluxuryreps-i2o8uj",
+        "85-superluxuryreps-u4uhoi"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "ARF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "85-superluxuryreps-1sc9zmm",
+      "factoryResolved": true,
+      "collectedFactory": "ARF",
+      "collectedCount": 2,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "GMT-Master II 126719BLRO (Meteorito)": {
+      "rank": 88,
+      "verdict": "confirmado",
+      "bestImageId": "88-superclonewatches-fun1dn",
+      "reasoning": "Pepsi + dial meteorito ouro branco 126719BLRO"
+    },
+    "Royal Oak Chronograph 26240": {
+      "rank": 90,
+      "verdict": "confirmado",
+      "bestImageId": "90-superclonewatches-1dyofj",
+      "reasoning": "RO Chrono 26240 aco dial azul"
+    },
+    "Aquanaut 5164A (Travel Time)": {
+      "rank": 94,
+      "verdict": "confirmado",
+      "bestImageId": "94-superclonewatches-1m6y91j",
+      "reasoning": "Aquanaut Travel Time azul dual-time 5164A"
+    },
+    "Nautilus 5726/1A (Calendário Anual)": {
+      "rank": 95,
+      "verdict": "confirmado",
+      "bestImageId": "95-superluxuryreps-qtu9pz",
+      "reasoning": "Nautilus azul calendario anual + moonphase 5726"
+    },
+    "Nautilus 5980 (Cronógrafo)": {
+      "rank": 97,
+      "verdict": "confirmado",
+      "bestImageId": "97-superclonewatches-4t9oje",
+      "reasoning": "Nautilus crono monocontador 6h azul-preto 5980"
+    },
+    "Daytona 116520 (Mostrador Branco Aço)": {
+      "rank": 98,
+      "verdict": "confirmado",
+      "bestImageId": "98-superclonewatches-2y1o5f",
+      "reasoning": "Daytona 116520 aco dial branco"
+    },
+    "Sea-Dweller 126600 (SD43)": {
+      "rank": 33,
+      "verdict": "confirmado",
+      "bestImageId": "f-33-b01ceeeb",
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (7 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "wrongIds": [
+        "cl-33-1",
+        "cl-33-2",
+        "cl-33-3",
+        "cl-33-4"
+      ],
+      "factoryMismatch": true,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "cl-33-4",
+      "source": "factory-sticker-review",
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 7,
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Submariner 114060 No-Date": {
+      "rank": 51,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean, catálogo=VSF",
+      "candidateIds": [
+        "cl-51-4",
+        "cl-51-3",
+        "cl-51-2",
+        "cl-51-1"
+      ],
+      "reviewedAt": "2026-07-19T12:47:06.527Z"
+    },
+    "Sea-Dweller 126603 (Two-Tone)": {
+      "rank": 84,
+      "verdict": "confirmado",
+      "bestImageId": "cl-84-1",
+      "reasoning": "Sea-Dweller two-tone aco/ouro preto ciclope = 126603"
+    },
+    "Datejust 41 126334 (Jubilee)": {
+      "verdict": "confirmado",
+      "bestImageId": "f-101-9bc44b5b",
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 6,
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Royal Oak 15500ST": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "ZF",
+      "collectedCount": 7,
+      "reasoning": "Mídia factory-correta (ZF) coletada e validada (7 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Audemars Piguet; missing-local-file: /media/img/f-110-0497546e.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Aquanaut 5167A (40mm)": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "DDF",
+      "collectedCount": 5,
+      "reasoning": "Mídia factory-correta (DDF) coletada e validada (5 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-102-f4c9a806.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Royal Oak 15510ST": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "APSF",
+      "collectedCount": 7,
+      "reasoning": "Mídia factory-correta (APSF) coletada e validada (7 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Audemars Piguet; missing-local-file: /media/img/f-117-40759b26.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Aquanaut 5168G 42mm Blue & Green": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "DDF",
+      "collectedCount": 3,
+      "reasoning": "Mídia factory-correta (DDF) coletada e validada (3 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-118-f1173a77.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Royal Oak Offshore 26420 Chronograph": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "APSF",
+      "collectedCount": 5,
+      "reasoning": "Mídia factory-correta (APSF) coletada e validada (5 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Audemars Piguet; missing-local-file: /media/img/f-124-3a9a6bb3.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Seamaster Diver 300M (2024 update, V4)": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 11,
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (11 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Omega; missing-local-file: /media/img/f-132-69c5ac64.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Calatrava 5227": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "3KF",
+      "collectedCount": 11,
+      "reasoning": "Mídia factory-correta (3KF) coletada e validada (11 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-126-5f2af9c3.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Air-King 126900": {
+      "verdict": "confirmado",
+      "bestImageId": "f-127-5933adbd",
+      "factoryResolved": true,
+      "collectedFactory": "VSF",
+      "collectedCount": 6,
+      "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
+      "reviewedAt": "2026-07-11T03:34:37.153Z"
+    },
+    "Minute Repeater Tourbillon Perpetual Calendar 5207P": {
+      "verdict": "incerto",
+      "bestImageId": null,
+      "factoryResolved": true,
+      "collectedFactory": "UNITED",
+      "collectedCount": 9,
+      "reasoning": "Mídia factory-correta (UNITED) coletada e validada (9 fotos).",
+      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-105-59224bff.jpg",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "Luminor Marina PAM111": {
+      "rank": 4,
+      "verdict": "confirmado",
+      "bestImageId": "pt-4-1",
+      "reasoning": "pt-4-1/2: Luminor Marina aço, dial preto, seg. pequeno às 9, pulseira marrom = PAM111. cl-4-1 é carbotech lume verde (outro)."
+    },
+    "Daytona 126529LN (Le Mans Edition)": {
+      "rank": 13,
+      "verdict": "confirmado",
+      "bestImageId": "pt-13-1",
+      "reasoning": "Daytona bezel cerâmico preto, dial preto c/ contadores prata, '100' vermelho e contador 24h = Le Mans 126529LN."
+    },
+    "Luminor Marina PAM1312": {
+      "rank": 37,
+      "verdict": "confirmado",
+      "bestImageId": "pt-37-1",
+      "reasoning": "pt-37-1/2: Luminor Marina 44 dial preto, data às 3, seg. azulado às 9 = PAM1312. cl-37-1 é dial branco (PAM1394)."
+    },
+    "Yacht-Master 226627 (Titânio RLX)": {
+      "rank": 47,
+      "verdict": "confirmado",
+      "bestImageId": "pt-47-1",
+      "reasoning": "Yacht-Master 42 bezel preto fosco, dial preto, bracelete Oyster escovado (titânio) = 226627; 226659 usaria Oysterflex."
+    },
+    "Luminor GMT PAM441 (Cerâmica)": {
+      "rank": 53,
+      "verdict": "confirmado",
+      "bestImageId": "pt-53-1",
+      "reasoning": "Luminor 1950 GMT caixa cerâmica preta, dial 'CERAMICA', data às 3, seg. às 9 = PAM441 em todas as candidatas."
+    },
+    "Tank Must (Large)": {
+      "rank": 54,
+      "verdict": "confirmado",
+      "bestImageId": "pt-54-1",
+      "reasoning": "Tank Must aço, dial prateado romanos pretos, ponteiros azulados, coroa c/ cabochão — corresponde ao modelo."
+    },
+    "Portugieser 7 Days 5007": {
+      "rank": 81,
+      "verdict": "confirmado",
+      "bestImageId": "pt-81-1",
+      "reasoning": "IWC Portugieser Automatic 7 Days (IW500715) com dial branco e subdials azuis; linha e referência 5007 conferem."
+    },
+    "Explorer II 226570 'Polar'": {
+      "rank": 130,
+      "verdict": "confirmado",
+      "bestImageId": "cl-130-2",
+      "reasoning": "cl-130-1/2 mostram Explorer II dial branco 'Polar' com ponteiro GMT laranja; pt-130-1/2 são a variante de dial preto."
+    },
+    "Sky-Dweller 326934 Steel": {
+      "rank": 112,
+      "verdict": "confirmado",
+      "bestImageId": "cl-112-1",
+      "reasoning": "Sky-Dweller aço com dial branco, bezel canelado e jubilee — layout com anel 24h confere com 326934."
+    },
+    "Santos-Dumont Large": {
+      "rank": 134,
+      "verdict": "confirmado",
+      "bestImageId": "pt-134-1",
+      "reasoning": "Santos-Dumont em aço, dial prata com romanos, ponteiros azulados, coroa cabochon — proporções do Large (31.4mm)."
+    },
+    "RM 052 Tourbillon Skull": {
+      "rank": 133,
+      "verdict": "confirmado",
+      "bestImageId": "cl-133-1",
+      "reasoning": "RM 052 Skull visível: caveira preta no mostrador esqueletizado; caseback grava 'RM052AMCC26/30'."
+    },
+    "Explorer I 214270 (39mm)": {
+      "rank": 18,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=ARF",
+      "candidateIds": [
+        "bb-18-4",
+        "bb-18-3",
+        "bb-18-2",
+        "bb-18-1"
+      ],
+      "reviewedAt": "2026-07-19T12:47:06.527Z"
+    },
+    "Submersible PAM968 (Bronzo)": {
+      "rank": 39,
+      "verdict": "confirmado",
+      "bestImageId": "bb-39-1",
+      "reasoning": "bb-* mostram Submersible bronze, bezel cerâmica marrom, dial marrom 300m — é o PAM968; cl-39-1 é PAM382 verde.",
+      "candidateIds": [
+        "cl-39-1",
+        "bb-39-1",
+        "bb-39-2",
+        "bb-39-3"
+      ]
+    },
+    "Overseas 4500V (Azul)": {
+      "rank": 65,
+      "verdict": "confirmado",
+      "bestImageId": "bb-65-1",
+      "reasoning": "Overseas 4500V (bezel/pulseira característicos) com mostrador azul sunburst; caixa ouro rosa, dial confere azul.",
+      "candidateIds": [
+        "bb-65-1",
+        "bb-65-2",
+        "bb-65-3",
+        "bb-65-4"
+      ]
+    },
+    "Overseas 4500V (Prata)": {
+      "rank": 75,
+      "verdict": "confirmado",
+      "bestImageId": "bb-75-3",
+      "reasoning": "Overseas 4500V ouro rosa com mostrador prateado sunburst — cor 'Prata' confere; bb-75-3 mostra o dial frontal nítido.",
+      "candidateIds": [
+        "bb-75-1",
+        "bb-75-2",
+        "bb-75-3",
+        "bb-75-4"
+      ]
+    },
+    "Santos Dumont (Rose Gold)": {
+      "rank": 82,
+      "verdict": "confirmado",
+      "bestImageId": "bb-82-1",
+      "reasoning": "Cartier Santos-Dumont: caixa quadrada slim rose gold, parafusos, romanos, cabochon azul, pulseira couro. Match exato.",
+      "candidateIds": [
+        "cl-82-1",
+        "cl-82-2",
+        "cl-82-3",
+        "cl-82-4",
+        "bb-82-1",
+        "bb-82-2",
+        "bb-82-3",
+        "bb-82-4"
+      ]
+    },
+    "Day-Date 40 Ice Blue (Baguette)": {
+      "rank": 86,
+      "verdict": "confirmado",
+      "bestImageId": "bb-86-1",
+      "reasoning": "Day-Date 40 mostrador ice blue com indices baguette de diamante e pulseira president. Marca, linha e cor batem.",
+      "candidateIds": [
+        "86-superluxuryreps-1jpgzw3",
+        "86-superluxuryreps-7232d1",
+        "86-superluxuryreps-tft6t3",
+        "86-superluxuryreps-1ftjb95",
+        "86-superluxuryreps-o2zsfe",
+        "86-superluxuryreps-1nleoj9",
+        "86-superluxuryreps-12tc8ii",
+        "86-superluxuryreps-1wyxq8m",
+        "86-superluxuryreps-kbjspk",
+        "86-superluxuryreps-1p72cym",
+        "86-superluxuryreps-yxejvl",
+        "86-superclonewatches-15x12a9",
+        "86-superclonewatches-1xnrvte",
+        "cl-86-1",
+        "cl-86-2",
+        "cl-86-3",
+        "cl-86-4",
+        "bb-86-1",
+        "bb-86-2",
+        "bb-86-3",
+        "bb-86-4"
+      ]
+    },
+    "Navitimer B01 43mm": {
+      "rank": 93,
+      "verdict": "confirmado",
+      "bestImageId": "bb-93-1",
+      "reasoning": "Navitimer B01 chrono com regua de calculo, ~43mm no paquimetro do review. cl-93 era Chronomat (descartado).",
+      "candidateIds": [
+        "cl-93-1",
+        "cl-93-2",
+        "cl-93-3",
+        "cl-93-4",
+        "bb-93-1",
+        "bb-93-2",
+        "bb-93-3",
+        "bb-93-4"
+      ]
+    },
+    "Black Bay 58 79030N (39mm)": {
+      "rank": 104,
+      "verdict": "confirmado",
+      "bestImageId": "bb-104-1",
+      "reasoning": "BB58 preto/gilt: bezel preto com pearl vermelho, snowflake, mostrador preto dourado, pulseira rebitada. Match exato.",
+      "candidateIds": [
+        "cl-104-1",
+        "cl-104-2",
+        "cl-104-3",
+        "cl-104-4",
+        "bb-104-1",
+        "bb-104-2",
+        "bb-104-3",
+        "bb-104-4"
+      ]
+    },
+    "Speedmaster Dark Side of the Moon (Ref. 311)": {
+      "rank": 109,
+      "verdict": "confirmado",
+      "bestImageId": "bb-109-1",
+      "reasoning": "DSOTM: ceramica preta total, Speedmaster vermelho, nylon preto. cl-109 era variante cinza/amarela (descartada).",
+      "candidateIds": [
+        "cl-109-1",
+        "cl-109-2",
+        "cl-109-3",
+        "bb-109-1",
+        "bb-109-2",
+        "bb-109-3",
+        "bb-109-4"
+      ]
+    },
+    "Cosmograph Daytona 126500LN Steel": {
+      "rank": 111,
+      "verdict": "confirmado",
+      "bestImageId": "bb-111-1",
+      "reasoning": "bb-111-1: Daytona aço, bezel Cerachrom preto, mostrador preto, pulseira aço (Clean 4130) = 126500LN. cl-111 é two-tone c/ bezel ouro.",
+      "candidateIds": [
+        "cl-111-1",
+        "cl-111-2",
+        "cl-111-3",
+        "cl-111-4",
+        "bb-111-1",
+        "bb-111-2",
+        "bb-111-3",
+        "bb-111-4"
+      ]
+    },
+    "Classic Fusion 45mm (Ref. 511)": {
+      "rank": 113,
+      "verdict": "confirmado",
+      "bestImageId": "bb-113-1",
+      "reasoning": "bb-113-1: Hublot Classic Fusion 45mm rose gold pavé, ref 511.OX — marca, linha e ref 511 batem. cl-113 é 33mm feminino branco.",
+      "candidateIds": [
+        "cl-113-1",
+        "cl-113-2",
+        "cl-113-3",
+        "cl-113-4",
+        "bb-113-1",
+        "bb-113-2",
+        "bb-113-3",
+        "bb-113-4"
+      ]
+    },
+    "RM 027 Tourbillon Rafael Nadal": {
+      "rank": 131,
+      "verdict": "confirmado",
+      "bestImageId": "bb-131-1",
+      "reasoning": "bb-131-1: Richard Mille tonneau preto, esqueletizado, turbilhão às 6h, placa RM027. cl-131 é Royal Oak e pt-131 é Big Pilot IWC.",
+      "candidateIds": [
+        "cl-131-1",
+        "pt-131-1",
+        "pt-131-2",
+        "pt-131-3",
+        "pt-131-4",
+        "bb-131-1",
+        "bb-131-2",
+        "bb-131-3",
+        "bb-131-4"
+      ]
+    },
+    "Lange 1 (Ref. 191.032)": {
+      "rank": 120,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "A. Lange & Söhne Lange 1, caixa ouro rosa (correto p/ ref 191.032), data grande no canto sup. dir., sub-mostrador de horas descentralizado (romanos), segundos embaixo, reserva AUF/AB — layout Lange 1 confere. CAVEAT: fábrica GF é improvável (catálogo GF de A. Lange = só 1815 Tourbillon + Saxonia Thin; GF não faz Lange 1) — atribuição a revisar. Imagem de loja, estilo render. Watermark replicais.",
+      "quarantineReason": "factory-mismatch: registro=GF, catálogo=Indefinida (rep genérico)",
+      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+    },
+    "BR 03-92 42mm (Ref. BR0392)": {
+      "rank": 121,
+      "verdict": "confirmado",
+      "bestImageId": "bb-121-1",
+      "reasoning": "BR 03-92 Diver bronze/verde: caixa quadrada B&R 42mm, ref BR0392-D no título; marca, linha e ref batem (cor não especificada no nome).",
+      "candidateIds": [
+        "bb-121-1",
+        "bb-121-2",
+        "bb-121-3",
+        "bb-121-4"
+      ]
+    },
+    "Santos Medium 35mm": {
+      "rank": 34,
+      "verdict": "confirmado",
+      "bestImageId": "wb-34-1",
+      "reasoning": "Santos de Cartier medium two-tone aço/ouro, dial branco romano, coroa azul — 3 fotos batem; wb-34-2 é só logo da loja.",
+      "candidateIds": [
+        "wb-34-1",
+        "wb-34-2",
+        "wb-34-3",
+        "wb-34-4"
+      ]
+    },
+    "Ballon Bleu 42mm": {
+      "rank": 76,
+      "verdict": "confirmado",
+      "bestImageId": "wb-76-3",
+      "reasoning": "Ballon Bleu masculino ~42mm: dial prata guilloché, romanos, coroa safira cabochon, couro preto. wb-76-2 é só um logo 'CLEAN'.",
+      "candidateIds": [
+        "wb-76-1",
+        "wb-76-2",
+        "wb-76-3",
+        "wb-76-4"
+      ]
+    },
+    "Pilot Chrono 'Le Petit Prince'": {
+      "rank": 89,
+      "verdict": "confirmado",
+      "bestImageId": "wb-89-2",
+      "reasoning": "IWC Pilot Chronograph mostrador azul Petit Prince (IW377717) nítido nas 4 fotos; wb-89-2 tem a melhor vista frontal.",
+      "candidateIds": [
+        "wb-89-1",
+        "wb-89-2",
+        "wb-89-3",
+        "wb-89-4"
+      ]
+    },
+    "Speedmaster Moonwatch Professional 3861": {
+      "rank": 103,
+      "verdict": "confirmado",
+      "bestImageId": "dir-103-1",
+      "reasoning": "Speedmaster Moonwatch Professional, mostrador preto, 3 subdials, tachymètre — modelo confere. Listagem é OMF V2 Venus 75; frente idêntica ao 3861 (diferença é gravação do movimento no verso). Watermark trustytime."
+    },
+    "RM 035 Rafael Nadal (RM035-01)": {
+      "rank": 129,
+      "verdict": "confirmado",
+      "bestImageId": "dir-129-1",
+      "reasoning": "Richard Mille tonneau carbono forjado, esqueleto, pulseira vermelha — 'RM35-0' no mostrador. Página rotula KVF V3 explicitamente. Caveat de fidelidade: KVF só faz a versão carbono forjado do Nadal (que no genuíno mapeia mais ao RM35-02 que ao RM035 original 2011). Watermark swissrep."
+    },
+    "Big Pilot 43mm": {
+      "rank": 67,
+      "verdict": "confirmado",
+      "bestImageId": "dir-67-1",
+      "reasoning": "IWC Big Pilot 43mm (IW329301): triângulo + 2 pontos às 12h, 'AUTOMATIC', couro marrom com rebites — modelo/tamanho conferem. Loja não rotula a fábrica como ZF (ZF é famosa pelo 46mm); foto limpa do 43mm correto."
+    },
+    "Monaco Calibre Heuer 02 Chronograph": {
+      "rank": 123,
+      "verdict": "confirmado",
+      "bestImageId": "dir-123-1",
+      "reasoning": "TAG Monaco caixa quadrada, mostrador preto, 2 subdials brancos, ponteiro de crono vermelho, data às 6h (ref CBL2113.BA0644) — modelo confere. Loja não rotula a fábrica; foto stock limpa."
+    },
+    "Carrera Chronograph 39 'Glassbox'": {
+      "rank": 114,
+      "verdict": "confirmado",
+      "bestImageId": "dir-114-1",
+      "reasoning": "TAG Carrera 60th Anniversary panda: mostrador prata, 3 subdials pretos, cristal box abaulado (glassbox), logo CARRERA/HEUER — modelo confere. Loja não publica código de fábrica; V7F não confirmado. Watermark de telefone."
+    },
+    "Santos 40mm (Branco)": {
+      "rank": 43,
+      "verdict": "confirmado",
+      "bestImageId": "dir-43-1",
+      "reasoning": "Cartier Santos de Cartier Large, caixa quadrada de aço, mostrador branco/prata, algarismos romanos, ponteiros azuis, coroa espinélio azul, pulseira de aço com parafusos — modelo confere (Santos branco = ref WSSA0018; o WSSA0037 do catálogo original é na verdade cinza). Página rotula 'SS BVF 1:1 best edition white dial'. Watermark etasaat."
+    },
+    "Nautilus 5711/1A (Blue Dial)": {
+      "rank": 9,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-9-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Nautilus azul degradê clássico, aço, horizontal embossed — variante exata (não Tiffany/verde das caças anteriores)."
+    },
+    "Pilot Mark XX (Azul)": {
+      "rank": 21,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-21-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Mark XX azul: 'MARK XX AUTOMATIC' legível no mostrador, data às 3h. Watermark necoclock."
+    },
+    "Royal Oak 15500 (Azul)": {
+      "rank": 26,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-26-1",
+      "reasoning": "[validação visual do operador 2026-07-08] RO azul Grande Tapisserie 3 ponteiros + data (sem crono) — 15500, não o cronógrafo 26715 rejeitado antes."
+    },
+    "Seamaster Diver 300M (Branco)": {
+      "rank": 31,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-31-1",
+      "reasoning": "[validação visual do operador 2026-07-08] SMP mostrador BRANCO ondas + bisel preto (variante branca legítima do 300M). Watermark dealerclocks."
+    },
+    "Black Bay 58 Preto/Dourado": {
+      "rank": 35,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-35-1",
+      "reasoning": "[validação visual do operador 2026-07-08] BB58 black/gilt: mostrador preto, detalhes dourados, bisel preto/gilt com triângulo vermelho. Watermark dealerclocks."
+    },
+    "Aqua Terra 150m (Azul Teak)": {
+      "rank": 40,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-40-1",
+      "reasoning": "[validação visual do operador 2026-07-08] AT azul teak (listras deck), ponteiro central azul, data às 6h."
+    },
+    "Master Ultra Thin Moon (Prata)": {
+      "rank": 41,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-41-1",
+      "reasoning": "[validação visual do operador 2026-07-08] JLC MUT Moon prata: fase da lua às 6h, caixa fina, couro preto."
+    },
+    "Black Bay 58 Azul": {
+      "rank": 45,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-45-1",
+      "reasoning": "[validação visual do operador 2026-07-08] BB58 AZUL time-only (bisel+mostrador azuis, snowflake) — não o BB Chrono rosa das caças anteriores."
+    },
+    "Deepsea 136660 (James Cameron)": {
+      "rank": 50,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-50-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Deepsea D-Blue: degradê azul→preto, 'DEEPSEA' verde. Watermark dealerclocks."
+    },
+    "Planet Ocean Deep Black Ceramic": {
+      "rank": 56,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-56-1",
+      "reasoning": "[validação visual do operador 2026-07-08] PO Deep Black GMT: caixa cerâmica preta total, GMT laranja, borracha preta costura branca."
+    },
+    "Day-Date 40 Olive Green": {
+      "rank": 59,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-59-1",
+      "reasoning": "[validação visual do operador 2026-07-08] DD40 verde-oliva romanos, ouro amarelo, presidente — variante exata."
+    },
+    "Pelagos Titanium 42mm (Preto)": {
+      "rank": 78,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-78-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Pelagos 42 preto titânio: 'PELAGOS ... 500m' no mostrador, snowflake, bisel fosco."
+    },
+    "Big Bang Unico Titanium": {
+      "rank": 83,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-83-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Unico esqueleto, caixa titânio + bisel cerâmico, borracha preta — foto real com timegrapher ao fundo."
+    },
+    "Black Bay GMT Pepsi": {
+      "rank": 87,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-87-1",
+      "reasoning": "[validação visual do operador 2026-07-08] BB GMT pepsi Tudor (bordô/azul), snowflake, GMT vermelho. Watermark dealerclocks."
+    },
+    "Portugieser Chrono (Branco/Azul)": {
+      "rank": 91,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-91-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Portugieser chrono branco com numerais/ponteiros AZUIS — variante exata. Watermark dealerclocks."
+    },
+    "Royal Oak Offshore Chrono 'Vampire'": {
+      "rank": 99,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-99-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Offshore 26470 preto com anel taquimétrico/costura VERMELHOS — tema Vampire."
+    },
+    "Big Bang 44mm Black Ceramic": {
+      "rank": 125,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-125-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Big Bang 44 Black Magic: cerâmica preta, crono, borracha. Watermark dealerclocks."
+    },
+    "Lange 1 Yellow Gold 38.5mm": {
+      "rank": 128,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-128-1",
+      "reasoning": "[validação visual do operador 2026-07-08] Lange 1 OURO AMARELO, argenté, data grande + segundos descentralizados. Ressalva: render de catálogo de loja (watchsavers), fábrica não identificada."
+    },
+    "GMT-Master II 116710LN (Preto Antigo)": {
+      "rank": 77,
+      "verdict": "confirmado",
+      "bestImageId": "wb-77-1",
+      "reasoning": "GMT-Master II bezel cerâmico preto, ponteiro GMT verde e texto verde no dial; wb-77-1 frontal e clara.",
+      "candidateIds": [
+        "wb-77-2",
+        "wb-77-1",
+        "ul-77-4",
+        "ul-77-3"
+      ],
+      "reviewedAt": "2026-07-11T04:04:47.086Z"
+    },
+    "Royal Oak Offshore Diver 15703": {
+      "rank": 79,
+      "verdict": "confirmado",
+      "bestImageId": "wb-79-2",
+      "reasoning": "AP RO Offshore Diver, dial preto Méga Tapisserie 300m/1000ft em borracha preta; wb-79-2 mostra o dial inteiro.",
+      "candidateIds": [
+        "wb-79-4",
+        "wb-79-3",
+        "wb-79-2",
+        "wb-79-1"
+      ],
+      "reviewedAt": "2026-07-11T04:04:47.086Z"
+    },
+    "GMT-Master II 126715CHNR (Full Everose)": {
+      "rank": 68,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-gmt-master-ii-126715chnr-full-everose-1",
+      "reasoning": "Vi GMT-Master II full everose com luneta root beer preto/marrom e dial preto em 3 fotos; a hunt-1 mostra o relógio inteiro e nítido.",
+      "candidateIds": [
+        "hunt-gmt-master-ii-126715chnr-full-everose-3",
+        "hunt-gmt-master-ii-126715chnr-full-everose-2",
+        "hunt-gmt-master-ii-126715chnr-full-everose-1",
+        "cl-68-4"
+      ],
+      "reviewedAt": "2026-07-11T10:32:35.594Z"
+    },
+    "Submariner 126618LN (Full Gold Preto)": {
+      "rank": 73,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-submariner-126618ln-full-gold-preto-1",
+      "reasoning": "Submariner full yellow gold com dial e luneta pretos visível nas 3 hunt; pt-73-4 é macro do mesmo dial preto/ouro.",
+      "candidateIds": [
+        "hunt-submariner-126618ln-full-gold-preto-3",
+        "hunt-submariner-126618ln-full-gold-preto-2",
+        "hunt-submariner-126618ln-full-gold-preto-1",
+        "pt-73-4"
+      ],
+      "reviewedAt": "2026-07-11T10:32:35.594Z"
+    },
+    "Daytona 116509 (Blue Dial)": {
+      "rank": 74,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-daytona-116509-blue-dial-1",
+      "reasoning": "hunt-1 mostra Daytona white gold com dial azul e subdials azuis. wb-74-1 é só logo, ul-74-3 é fundo de caixa, ul-74-2 é Daytona branco.",
+      "candidateIds": [
+        "hunt-daytona-116509-blue-dial-1",
+        "wb-74-1",
+        "ul-74-3",
+        "ul-74-2"
+      ],
+      "reviewedAt": "2026-07-11T10:32:35.594Z"
+    },
+    "Seamaster Aqua Terra 150M (Ref. 220)": {
+      "rank": 108,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-seamaster-aqua-terra-150m-ref-220-1",
+      "reasoning": "3 fotos mostram Aqua Terra 150M dial teak prata com ponteiro laranja (ref. 220.10); f-108 não existe no disco.",
+      "candidateIds": [
+        "hunt-seamaster-aqua-terra-150m-ref-220-3",
+        "hunt-seamaster-aqua-terra-150m-ref-220-2",
+        "hunt-seamaster-aqua-terra-150m-ref-220-1",
+        "f-108-a635a818"
+      ],
+      "reviewedAt": "2026-07-11T10:32:35.594Z"
+    },
+    "Seamaster Diver 300M 210.30": {
+      "rank": 115,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-seamaster-diver-300m-210-30-1",
+      "reasoning": "Omega Seamaster Diver 300M aço, dial branco em ondas, bezel cerâmico preto — ref 210.30 correta. 2 candidatas f-115 ausentes em disco.",
+      "candidateIds": [
+        "hunt-seamaster-diver-300m-210-30-2",
+        "hunt-seamaster-diver-300m-210-30-1",
+        "f-115-cb0a0c2e",
+        "f-115-7bdcc22f"
+      ],
+      "reviewedAt": "2026-07-11T10:34:30.044Z"
+    },
+    "Master Ultra Thin": {
+      "rank": 107,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-master-ultra-thin-1",
+      "reasoning": "JLC Master Ultra Thin Moon, dial preto com fase da lua, caixa fina em aço — linha correta. Candidatas f-107 ausentes em disco.",
+      "candidateIds": [
+        "hunt-master-ultra-thin-2",
+        "hunt-master-ultra-thin-1",
+        "f-107-b48513dc",
+        "f-107-0327e8f7"
+      ],
+      "reviewedAt": "2026-07-11T10:34:30.045Z"
+    },
+    "RM 11-03 Flyback Chronograph": {
+      "rank": 106,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-rm-11-03-flyback-chronograph-1",
+      "reasoning": "RM 11-03 titânio: dial esqueletizado com 'RM 11-03', pushers flyback rotulados, coroa amarela. Candidatas f-106 ausentes em disco.",
+      "candidateIds": [
+        "hunt-rm-11-03-flyback-chronograph-1",
+        "f-106-d5762d70",
+        "f-106-8459a368",
+        "f-106-c0648695"
+      ],
+      "reviewedAt": "2026-07-11T10:34:30.045Z"
+    },
+    "Land-Dweller 40 127334 (White Rolesor)": {
+      "rank": 135,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-land-dweller-40-127334-white-rolesor-1",
+      "reasoning": "Ambas mostram Land-Dweller: dial honeycomb branco, numerais 6/9 abertos, bezel canelado WG, Flat Jubilee — White Rolesor 127334.",
+      "candidateIds": [
+        "hunt-land-dweller-40-127334-white-rolesor-2",
+        "hunt-land-dweller-40-127334-white-rolesor-1"
+      ],
+      "reviewedAt": "2026-07-11T10:34:30.045Z"
+    },
+    "Cubitus 5822P (Fase da Lua, Platina)": {
+      "rank": 136,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-cubitus-5822p-fase-da-lua-platina-2",
+      "reasoning": "Cubitus quadrado, dial azul, big date, subdial dia+fase da lua — 5822P platina. Candidata -2 frontal completa é a melhor.",
+      "candidateIds": [
+        "hunt-cubitus-5822p-fase-da-lua-platina-3",
+        "hunt-cubitus-5822p-fase-da-lua-platina-2",
+        "hunt-cubitus-5822p-fase-da-lua-platina-1"
+      ],
+      "reviewedAt": "2026-07-11T10:34:30.045Z"
+    },
+    "Submariner 16610 (Vintage)": {
+      "rank": 96,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-submariner-16610-vintage-2",
+      "reasoning": "Submariner Date preto, bezel aluminio preto, 300m — condiz com 16610. wb-96-3/4 sao Milgauss PVD (outro modelo).",
+      "candidateIds": [
+        "hunt-submariner-16610-vintage-2",
+        "hunt-submariner-16610-vintage-1",
+        "wb-96-4",
+        "wb-96-3"
+      ],
+      "reviewedAt": "2026-07-17T17:08:17.916Z"
+    },
+    "Seamaster Planet Ocean 600M": {
+      "rank": 119,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-seamaster-planet-ocean-600m-1",
+      "reasoning": "Omega Seamaster Professional Co-Axial 600m/2000ft, mostrador preto e bezel preto — corresponde ao Planet Ocean 600M. f-119 nao existem.",
+      "candidateIds": [
+        "hunt-seamaster-planet-ocean-600m-2",
+        "hunt-seamaster-planet-ocean-600m-1",
+        "f-119-2e19a199",
+        "f-119-d15e682a"
+      ],
+      "reviewedAt": "2026-07-17T17:08:17.916Z"
+    },
+    "RM 055 Bubba Watson (RM055)": {
+      "rank": 122,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-rm-055-bubba-watson-rm055-1",
+      "reasoning": "Richard Mille tonneau em ceramica branca ATZ, mostrador esqueletizado, pulseira branca — bate com RM 055 Bubba Watson. f-122 nao existem.",
+      "candidateIds": [
+        "hunt-rm-055-bubba-watson-rm055-2",
+        "hunt-rm-055-bubba-watson-rm055-1",
+        "f-122-35f7ce77",
+        "f-122-e4aade5e"
+      ],
+      "reviewedAt": "2026-07-17T17:08:17.916Z"
+    },
+    "RM 011 Felipe Massa Flyback Chrono": {
+      "rank": 116,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-rm-011-felipe-massa-flyback-chrono-2",
+      "reasoning": "RM 011 ceramica preta, mostrador esqueleto com 'RICHARD MILLE' e marcacao RM011-FM Felipe Massa",
+      "candidateIds": [
+        "hunt-rm-011-felipe-massa-flyback-chrono-2",
+        "hunt-rm-011-felipe-massa-flyback-chrono-1",
+        "f-116-ba73557c"
+      ],
+      "reviewedAt": "2026-07-17T17:09:21.606Z"
+    },
+    "Datejust 41 Blue Motif": {
+      "rank": 27,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-datejust-41-blue-motif-2",
+      "reasoning": "Todas mostram Datejust 41 dial azul motif (fluted, jubilee); a escolhida tem mostrador frontal e nítido",
+      "candidateIds": [
+        "hunt-datejust-41-blue-motif-2",
+        "hunt-datejust-41-blue-motif-1",
+        "wb-27-4",
+        "wb-27-3"
+      ],
+      "reviewedAt": "2026-07-17T23:21:03.299Z"
+    },
+    "Daytona 126500LN (Panda Novo)": {
+      "rank": 3,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Todas as 4 candidatas são fotos do movimento (cal. 4130/4131 gravado DAYTONA), nenhuma mostra o mostrador; impossível confirmar variante Panda.",
+      "candidateIds": [
+        "3-superluxuryreps-1b05ko8",
+        "3-superluxuryreps-8y00yq",
+        "3-superluxuryreps-10p4yaq",
+        "3-superluxuryreps-6t0xic"
+      ],
+      "reviewedAt": "2026-07-19T12:47:06.525Z"
+    },
+    "GMT-Master II 126711CHNR (Root Beer)": {
+      "rank": 30,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "30-superclonewatches-16pf706",
+        "30-superclonewatches-134h2bh",
+        "30-superclonewatches-1tbxoft",
+        "30-superluxuryreps-1peyjoj"
+      ],
+      "reviewedAt": "2026-07-19T12:47:06.527Z"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "method": "factory-sticker-vision (gemma-vision) + verificacao visual manual",
+  "generatedAt": "2026-06-30",
+  "scope": "74 modelos com foto local (dos 100 do catalogo)",
+  "summary": {
+    "modelosAuditados": 74,
+    "mismatchConfirmados": 9,
+    "todosRealmente": "CLEAN",
+    "suspeitosNaoConfirmados": 2
+  },
+  "finding": "O campo `factory` do catalogo reflete a 'melhor fabrica' por consenso de forum (ARF/VSF/ZF/BTF). Mas as fotos que os resellers (superluxuryreps/superclonewatches) de fato estocam sao, em 9 modelos-carro-chefe, do build CLEAN. A atribuicao de fabrica do catalogo nao bate com o mercado real fotografado.",
+  "confirmedMismatches": [
+    {
+      "model": "Daytona 116500LN (Godzilla/Preto)",
+      "rank": 11,
+      "factoryExpected": "BTF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "11-superclonewatches-nepbf4",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "GMT-Master II 116710BLNR (Batman Antigo)",
+      "rank": 85,
+      "factoryExpected": "ARF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "85-superluxuryreps-1sc9zmm",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "GMT-Master II 126710BLRO (Pepsi)",
+      "rank": 19,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "19-superluxuryreps-1jh8201",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "GMT-Master II 126710GRNR (Bruce Wayne)",
+      "rank": 10,
+      "factoryExpected": "ARF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": null,
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "GMT-Master II 126720VTNR (Sprite - Canhoto)",
+      "rank": 17,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "17-superclonewatches-1ach3ma",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "Sea-Dweller 126600 (SD43)",
+      "rank": 33,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "cl-33-4",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "Submariner 116610LN (Clássico)",
+      "rank": 20,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "20-superluxuryreps-18zgvst",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "Submariner 116610LV (Hulk)",
+      "rank": 25,
+      "factoryExpected": "ZF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "25-superluxuryreps-j14jnz",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    },
+    {
+      "model": "Submariner Date 126610LN (Preto)",
+      "rank": 1,
+      "factoryExpected": "VSF",
+      "factoryActual": "CLEAN",
+      "evidenceImageId": "1-superluxuryreps-olx151",
+      "action": "fotos ocultadas (verdict rejeitado), precisa de coleta na fabrica do catalogo"
+    }
+  ],
+  "suspectsUnverified": [
+    {
+      "model": "GMT-Master II 126718GRNR (Full Yellow Gold)",
+      "catalogFactory": "GMF",
+      "agentClaim": "GOLD FACTORY",
+      "status": "nao confirmei selo nas imagens amostradas; provavel leitura errada; fotos possivelmente reusadas entre modelos"
+    },
+    {
+      "model": "GMT-Master II 126719BLRO (Meteorito)",
+      "catalogFactory": "C+",
+      "agentClaim": "GOLD FACTORY",
+      "status": "idem; nao aplicado"
+    }
+  ]
+}

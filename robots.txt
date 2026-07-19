@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /publi/
 Disallow: /rba
+Disallow: /watches
 
 Sitemap: https://thiagozeni.com/sitemap.xml
