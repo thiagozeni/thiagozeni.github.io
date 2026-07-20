@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-07-19T23:11:53.581Z",
-  "totalImages": 1472,
+  "generatedAt": "2026-07-20T00:33:14.332Z",
+  "totalImages": 1500,
   "summary": {
     "models": 138,
-    "verified": 116,
-    "strong": 17,
+    "verified": 120,
+    "strong": 14,
     "weak": 2,
     "rejected": 2,
-    "missing": 1,
-    "conflictsDiscarded": 321,
-    "coveragePct": 96
+    "missing": 0,
+    "conflictsDiscarded": 333,
+    "coveragePct": 97
   },
   "backlog": [
     {
-      "rank": 22,
-      "model": "Daytona 116519LN (Ghost/Ouro Branco)",
+      "rank": 63,
+      "model": "Submariner 116613LB (Two-Tone Ouro/Aço)",
       "brand": "Rolex",
       "state": "rejeitado"
     },
     {
-      "rank": 60,
-      "model": "Daytona 116518LN (Pikachu)",
+      "rank": 66,
+      "model": "Submariner Date 116613LN (Two-Tone Preto)",
       "brand": "Rolex",
       "state": "rejeitado"
     },
@@ -35,12 +35,6 @@
       "model": "Lange 1 (Ref. 191.032)",
       "brand": "A. Lange & Söhne",
       "state": "fraco"
-    },
-    {
-      "rank": 138,
-      "model": "Datejust 41 Fluted Bezel (ref. exata não confirmada, família 126334)",
-      "brand": "Rolex",
-      "state": "sem-imagem"
     }
   ]
 }
