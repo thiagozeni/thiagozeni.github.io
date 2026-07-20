@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-20T00:33:14.332Z",
+  "generatedAt": "2026-07-20T11:58:23.696Z",
   "totalImages": 1500,
   "summary": {
     "models": 138,
     "verified": 120,
-    "strong": 14,
+    "strong": 13,
     "weak": 2,
-    "rejected": 2,
+    "rejected": 3,
     "missing": 0,
     "conflictsDiscarded": 333,
-    "coveragePct": 97
+    "coveragePct": 96
   },
   "backlog": [
     {
@@ -21,6 +21,12 @@
     {
       "rank": 66,
       "model": "Submariner Date 116613LN (Two-Tone Preto)",
+      "brand": "Rolex",
+      "state": "rejeitado"
+    },
+    {
+      "rank": 80,
+      "model": "GMT-Master II 126718GRNR (Full Yellow Gold)",
       "brand": "Rolex",
       "state": "rejeitado"
     },

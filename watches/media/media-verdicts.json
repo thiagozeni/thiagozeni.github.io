@@ -395,37 +395,11 @@
       "bestImageId": "62-superluxuryreps-1regf9i",
       "reasoning": "Patek ouro branco cal324 tampa officier 5227G"
     },
-    "Submariner 116613LB (Two-Tone Ouro/Aço)": {
-      "rank": 63,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "Todas as 4 imagens mostram um Yacht-Master (dial 'YACHT-MASTER', luneta lisa), não um Submariner.",
-      "candidateIds": [
-        "63-superluxuryreps-1rn95xr",
-        "63-superluxuryreps-176h9ov",
-        "63-superluxuryreps-lqx9xw",
-        "63-superluxuryreps-1suhel3"
-      ],
-      "reviewedAt": "2026-07-20T00:33:14.177Z"
-    },
     "Royal Oak 15400 (Branco/Prata)": {
       "rank": 64,
       "verdict": "confirmado",
       "bestImageId": "cl-64-1",
       "reasoning": "AP RO branco Grande Tapisserie data 3h = 15400"
-    },
-    "Submariner Date 116613LN (Two-Tone Preto)": {
-      "rank": 66,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "Mesmas 4 imagens do Yacht-Master (dial 'YACHT-MASTER', luneta lisa) — não é Submariner.",
-      "candidateIds": [
-        "66-superluxuryreps-1rn95xr",
-        "66-superluxuryreps-176h9ov",
-        "66-superluxuryreps-lqx9xw",
-        "66-superluxuryreps-1suhel3"
-      ],
-      "reviewedAt": "2026-07-20T00:33:14.177Z"
     },
     "Royal Oak 15510 (50th Anniv)": {
       "rank": 70,
@@ -448,11 +422,16 @@
     },
     "GMT-Master II 126718GRNR (Full Yellow Gold)": {
       "rank": 80,
-      "verdict": "incerto",
+      "verdict": "rejeitado",
       "bestImageId": null,
-      "reasoning": "GMT full ouro amarelo bezel cinza/preto GRNR",
-      "quarantineReason": "factory-mismatch: registro=GMF (Tungsten), catálogo=GF (Gold Factory)",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "reasoning": "2 imagens são ouro amarelo mas bezel preto/preto (não verde); 1 é Yacht-Master; 1 é Root Beer rosé — nenhuma é GRNR verde.",
+      "candidateIds": [
+        "80-superluxuryreps-1no8tij",
+        "80-superclonewatches-pzem80",
+        "80-superclonewatches-r0rsw8",
+        "80-superclonewatches-16pf706"
+      ],
+      "reviewedAt": "2026-07-20T11:58:23.548Z"
     },
     "GMT-Master II 116710BLNR (Batman Antigo)": {
       "rank": 85,
@@ -551,7 +530,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-07-20T00:33:14.177Z"
+      "reviewedAt": "2026-07-20T11:58:23.548Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -569,14 +548,17 @@
       "reviewedAt": "2026-07-11T03:34:37.153Z"
     },
     "Royal Oak 15500ST": {
+      "rank": 110,
       "verdict": "incerto",
       "bestImageId": null,
-      "factoryResolved": true,
-      "collectedFactory": "ZF",
-      "collectedCount": 7,
-      "reasoning": "Mídia factory-correta (ZF) coletada e validada (7 fotos).",
-      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Audemars Piguet; missing-local-file: /media/img/f-110-0497546e.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "reasoning": "Os 4 caminhos de candidatas do lote não existem no disco; só um arquivo não listado (dial verde) foi encontrado.",
+      "candidateIds": [
+        "f-110-0497546e",
+        "f-110-f99d5a51",
+        "f-110-bd3895d0",
+        "f-110-c693e956"
+      ],
+      "reviewedAt": "2026-07-20T11:58:23.548Z"
     },
     "Aquanaut 5167A (40mm)": {
       "verdict": "incerto",
@@ -744,7 +726,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-07-20T00:33:14.176Z"
+      "reviewedAt": "2026-07-20T11:58:23.548Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1311,19 +1293,6 @@
       ],
       "reviewedAt": "2026-07-19T23:10:29.132Z"
     },
-    "Daytona 126500LN (Panda Novo)": {
-      "rank": 3,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "As 4 fotos mostram só movimento/tampa traseira (gravação DAYTONA), mostrador nunca aparece p/ confirmar cor panda.",
-      "candidateIds": [
-        "3-superluxuryreps-1b05ko8",
-        "3-superluxuryreps-8y00yq",
-        "3-superluxuryreps-10p4yaq",
-        "3-superluxuryreps-6t0xic"
-      ],
-      "reviewedAt": "2026-07-20T00:33:14.173Z"
-    },
     "Daytona 116519LN (Ghost/Ouro Branco)": {
       "rank": 22,
       "verdict": "confirmado",
@@ -1336,19 +1305,6 @@
         "pt-22-1"
       ],
       "reviewedAt": "2026-07-20T00:31:48.117Z"
-    },
-    "GMT-Master II 126711CHNR (Root Beer)": {
-      "rank": 30,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
-      "candidateIds": [
-        "30-superclonewatches-16pf706",
-        "30-superclonewatches-134h2bh",
-        "30-superclonewatches-1tbxoft",
-        "30-superluxuryreps-1peyjoj"
-      ],
-      "reviewedAt": "2026-07-20T00:33:14.176Z"
     },
     "Daytona 116518LN (Pikachu)": {
       "rank": 60,
@@ -1388,6 +1344,58 @@
         "cl-138-1"
       ],
       "reviewedAt": "2026-07-20T00:31:48.119Z"
+    },
+    "Daytona 126500LN (Panda Novo)": {
+      "rank": 3,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "4 fotos são só movimento/caseback (Daytona, cal.4131, gravação Rolex); mostrador panda não aparece em nenhuma.",
+      "candidateIds": [
+        "3-superluxuryreps-1b05ko8",
+        "3-superluxuryreps-8y00yq",
+        "3-superluxuryreps-10p4yaq",
+        "3-superluxuryreps-6t0xic"
+      ],
+      "reviewedAt": "2026-07-20T11:58:23.545Z"
+    },
+    "GMT-Master II 126711CHNR (Root Beer)": {
+      "rank": 30,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "30-superclonewatches-16pf706",
+        "30-superclonewatches-134h2bh",
+        "30-superclonewatches-1tbxoft",
+        "30-superluxuryreps-1peyjoj"
+      ],
+      "reviewedAt": "2026-07-20T11:58:23.548Z"
+    },
+    "Submariner 116613LB (Two-Tone Ouro/Aço)": {
+      "rank": 63,
+      "verdict": "rejeitado",
+      "bestImageId": null,
+      "reasoning": "Todas as 4 fotos são de um Yacht-Master (mostrador marrom, luneta lisa ouro rosa), não Submariner azul.",
+      "candidateIds": [
+        "63-superluxuryreps-1rn95xr",
+        "63-superluxuryreps-176h9ov",
+        "63-superluxuryreps-lqx9xw",
+        "63-superluxuryreps-1suhel3"
+      ],
+      "reviewedAt": "2026-07-20T11:55:44.553Z"
+    },
+    "Submariner Date 116613LN (Two-Tone Preto)": {
+      "rank": 66,
+      "verdict": "rejeitado",
+      "bestImageId": null,
+      "reasoning": "Mesmas fotos do Yacht-Master (mostrador marrom, luneta lisa), sem luneta serrilhada preta nem mostrador preto de Submariner.",
+      "candidateIds": [
+        "66-superluxuryreps-1rn95xr",
+        "66-superluxuryreps-176h9ov",
+        "66-superluxuryreps-lqx9xw",
+        "66-superluxuryreps-1suhel3"
+      ],
+      "reviewedAt": "2026-07-20T11:55:44.553Z"
     }
   }
 }

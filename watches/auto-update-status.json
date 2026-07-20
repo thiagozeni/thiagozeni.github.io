@@ -1,6 +1,92 @@
 {
-  "generatedAt": "2026-07-20T00:36:58.745Z",
+  "generatedAt": "2026-07-20T12:00:24.480Z",
   "runs": [
+    {
+      "stamp": "2026-07-20",
+      "startedAt": "2026-07-20T11:50:28.647Z",
+      "running": false,
+      "interrupted": false,
+      "phases": [
+        {
+          "name": "news",
+          "label": "Notícias (bbtwatch)",
+          "status": "ok",
+          "startedAt": "2026-07-20T11:50:28.681Z",
+          "finishedAt": "2026-07-20T11:50:30.690Z",
+          "secs": 2,
+          "failures": []
+        },
+        {
+          "name": "discover",
+          "label": "Descoberta de mercado",
+          "status": "ok",
+          "startedAt": "2026-07-20T11:50:30.690Z",
+          "finishedAt": "2026-07-20T11:53:16.802Z",
+          "secs": 166,
+          "failures": []
+        },
+        {
+          "name": "hunt",
+          "label": "Caça de mídia",
+          "status": "falhou",
+          "startedAt": "2026-07-20T11:53:16.802Z",
+          "finishedAt": "2026-07-20T11:54:26.484Z",
+          "secs": 70,
+          "failures": [
+            {
+              "step": "hunt-capture",
+              "detail": null,
+              "at": "2026-07-20T11:54:26.415Z"
+            },
+            {
+              "step": "hunt-out",
+              "detail": null,
+              "at": "2026-07-20T11:54:26.453Z"
+            }
+          ]
+        },
+        {
+          "name": "curate",
+          "label": "Curadoria (revisão visual)",
+          "status": "ok",
+          "startedAt": "2026-07-20T11:54:26.484Z",
+          "finishedAt": "2026-07-20T11:58:23.736Z",
+          "secs": 237,
+          "failures": []
+        },
+        {
+          "name": "refresh",
+          "label": "Re-pesquisa de evidência",
+          "status": "ok",
+          "startedAt": "2026-07-20T11:58:23.737Z",
+          "finishedAt": "2026-07-20T12:00:12.293Z",
+          "secs": 109,
+          "failures": []
+        },
+        {
+          "name": "rescore",
+          "label": "Re-score",
+          "status": "ok",
+          "startedAt": "2026-07-20T12:00:12.293Z",
+          "finishedAt": "2026-07-20T12:00:12.431Z",
+          "secs": 0,
+          "failures": []
+        },
+        {
+          "name": "gate",
+          "label": "Gate + commit",
+          "status": "ok",
+          "startedAt": "2026-07-20T12:00:12.431Z",
+          "finishedAt": "2026-07-20T12:00:24.288Z",
+          "secs": 12,
+          "failures": []
+        }
+      ],
+      "coveragePct": 96,
+      "commit": "916f91f",
+      "finishedAt": "2026-07-20T12:00:24.288Z",
+      "secs": 596
+    },
     {
       "stamp": "2026-07-20",
       "startedAt": "2026-07-20T00:25:36.195Z",
@@ -83,7 +169,7 @@
         }
       ],
       "coveragePct": 97,
-      "commit": "efbeb83",
+      "commit": null,
       "finishedAt": "2026-07-20T00:36:58.131Z",
       "secs": 682
     },
