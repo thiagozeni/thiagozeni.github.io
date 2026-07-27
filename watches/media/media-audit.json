@@ -1,41 +1,17 @@
 {
-  "generatedAt": "2026-07-20T11:58:23.696Z",
-  "totalImages": 1500,
+  "generatedAt": "2026-07-27T12:41:18.045Z",
+  "totalImages": 1504,
   "summary": {
     "models": 138,
-    "verified": 120,
+    "verified": 124,
     "strong": 13,
-    "weak": 2,
-    "rejected": 3,
+    "weak": 1,
+    "rejected": 0,
     "missing": 0,
     "conflictsDiscarded": 333,
-    "coveragePct": 96
+    "coveragePct": 99
   },
   "backlog": [
-    {
-      "rank": 63,
-      "model": "Submariner 116613LB (Two-Tone Ouro/Aço)",
-      "brand": "Rolex",
-      "state": "rejeitado"
-    },
-    {
-      "rank": 66,
-      "model": "Submariner Date 116613LN (Two-Tone Preto)",
-      "brand": "Rolex",
-      "state": "rejeitado"
-    },
-    {
-      "rank": 80,
-      "model": "GMT-Master II 126718GRNR (Full Yellow Gold)",
-      "brand": "Rolex",
-      "state": "rejeitado"
-    },
-    {
-      "rank": 122,
-      "model": "RM 055 Bubba Watson (RM055)",
-      "brand": "Richard Mille",
-      "state": "fraco"
-    },
     {
       "rank": 120,
       "model": "Lange 1 (Ref. 191.032)",

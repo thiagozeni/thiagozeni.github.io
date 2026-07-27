@@ -49653,5 +49653,155 @@
       "coleta-dirigida"
     ],
     "collectedAt": "2026-07-20T00:30:17.422Z"
+  },
+  {
+    "id": "hunt-submariner-116613lb-two-tone-ouro-aco-1",
+    "model": "Submariner 116613LB (Two-Tone Ouro/Aço)",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Submariner 116613LB (Two-Tone Ouro/Aço) — vsfactorywatches.com",
+    "source": "vsfactorywatches.com",
+    "sourceDomain": "vsfactorywatches.com",
+    "image": "https://www.vsfactorywatches.com/wp-content/uploads/2025/11/Swiss-Grade-VSF-Submariner-116613LB-Blue-Dial-Blue-Ceramic-Bezel-Steel-YG-Two-Tone-Bracelet-904L-Steel-Case-VS3135-01.jpg",
+    "localImage": "/media/img/hunt-submariner-116613lb-two-tone-ouro-aco-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Página oficial VSF nomeia explicitamente '116613LB 40mm Blue Dial Blue Ceramic Bezel Yellow Gold and Steel' — referência e cor de mostrador/bezel batem exatamente com o modelo do lote (two-tone aço/ouro, DanDong 3135)."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-27T12:38:19.956Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Submariner 116613LB (Two-Tone Ouro/Aço)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    },
+    "video": "https://www.vsfactorywatches.com/wp-content/uploads/2025/11/Swiss-Grade-VSF-Submariner-116613LB-Blue-Dial-Blue-Ceramic-Bezel-Steel-YG-Two-Tone-Bracelet-904L-Steel-Case-VS3135.mp4"
+  },
+  {
+    "id": "hunt-submariner-date-116613ln-two-tone-preto-1",
+    "model": "Submariner Date 116613LN (Two-Tone Preto)",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Submariner Date 116613LN (Two-Tone Preto) — vsfactorywatches.com",
+    "source": "vsfactorywatches.com",
+    "sourceDomain": "vsfactorywatches.com",
+    "image": "https://www.vsfactorywatches.com/wp-content/uploads/2025/11/Swiss-Grade-VSF-Submariner-116613LN-Black-Dial-Black-Ceramic-Bezel-Steel-YG-Two-Tone-Bracelet-904L-Steel-Case-VS3135-00.jpg",
+    "localImage": "/media/img/hunt-submariner-date-116613ln-two-tone-preto-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Página oficial VSF nomeia explicitamente '116613LN 40mm Black Dial Black Ceramic Bezel Yellow Gold and Steel' — mostrador e bezel pretos, two-tone, batem com o modelo do lote (DanDong 3135)."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-27T12:38:20.224Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Submariner Date 116613LN (Two-Tone Preto)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    },
+    "video": "https://www.vsfactorywatches.com/wp-content/uploads/2025/11/Swiss-Grade-VSF-Submariner-116613LN-Black-Dial-Black-Ceramic-Bezel-Steel-YG-Two-Tone-Bracelet-904L-Steel-Case-VS3135.mp4"
+  },
+  {
+    "id": "hunt-gmt-master-ii-126718grnr-full-yellow-gold-1",
+    "model": "GMT-Master II 126718GRNR (Full Yellow Gold)",
+    "brand": "Rolex",
+    "factory": "GF (Gold Factory)",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex GMT-Master II 126718GRNR (Full Yellow Gold) — cleanfactoryus.com",
+    "source": "cleanfactoryus.com",
+    "sourceDomain": "cleanfactoryus.com",
+    "image": "https://cleanfactoryus.com/wp-content/uploads/2023/11/1-7-10-scaled.jpg?v=1755695583",
+    "localImage": "/media/img/hunt-gmt-master-ii-126718grnr-full-yellow-gold-1.jpg",
+    "confidence": 70,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:GF (Gold Factory)",
+      "caca-agentica",
+      "Página nomeia explicitamente '126718GRNR ... black lacquer dial ... 18k yellow gold over solid 904L' + pulseira Jubilee — variante certa (full gold, mostrador PRETO, não confundir com a variante Tiger Iron 2025 que a mesma loja também vende). Fábrica do lote é GF (Gold Factory); não achei página de produto da GF especificamente (site gffactoryrolex.com fora do ar, factorygf.com bloqueou fetch com 403) — esta é Clean Factory, fábrica não confirmada como a do lote, daí factoryLabeled:false."
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-27T12:38:20.755Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "GMT-Master II 126718GRNR (Full Yellow Gold)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 2
+    }
+  },
+  {
+    "id": "hunt-rm-055-bubba-watson-rm055-1",
+    "model": "RM 055 Bubba Watson (RM055)",
+    "brand": "Richard Mille",
+    "factory": "ZF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Richard Mille RM 055 Bubba Watson (RM055) — pyluxury.com",
+    "source": "pyluxury.com",
+    "sourceDomain": "pyluxury.com",
+    "image": "https://pyluxury.com/wp-content/uploads/2025/07/Richard-Mille-RM055-White-Ceramic-Bubba-Watson-Super-Clone-Best-Replica-ZF-11-800x800.webp",
+    "localImage": "/media/img/hunt-rm-055-bubba-watson-rm055-1.webp",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Richard Mille",
+      "fabrica:ZF",
+      "caca-agentica",
+      "Título da página confirma 'Richard Mille RM055 White Ceramic Bubba Watson ... ZF' e movimento 'RMUL2 Super Clone' — bate com fábrica (ZF) e movimento (Clone RMUL2 skeletonised manual V2) do lote. Modelo no lote não especifica variante de cor entre parênteses (só a ref RM055), então a versão White Ceramic original é válida — imagem validada como .webp real via fetch direto."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-07-27T12:38:22.550Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "RM 055 Bubba Watson (RM055)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
   }
 ]

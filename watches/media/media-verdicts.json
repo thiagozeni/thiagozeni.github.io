@@ -420,19 +420,6 @@
       "bestImageId": "72-superclonewatches-1e9zs7f",
       "reasoning": "RO openworked ouro rose 15407 Double Balance"
     },
-    "GMT-Master II 126718GRNR (Full Yellow Gold)": {
-      "rank": 80,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "2 imagens são ouro amarelo mas bezel preto/preto (não verde); 1 é Yacht-Master; 1 é Root Beer rosé — nenhuma é GRNR verde.",
-      "candidateIds": [
-        "80-superluxuryreps-1no8tij",
-        "80-superclonewatches-pzem80",
-        "80-superclonewatches-r0rsw8",
-        "80-superclonewatches-16pf706"
-      ],
-      "reviewedAt": "2026-07-20T11:58:23.548Z"
-    },
     "GMT-Master II 116710BLNR (Batman Antigo)": {
       "rank": 85,
       "verdict": "confirmado",
@@ -530,7 +517,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-07-20T11:58:23.548Z"
+      "reviewedAt": "2026-07-27T12:41:17.875Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -546,19 +533,6 @@
       "collectedCount": 6,
       "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
       "reviewedAt": "2026-07-11T03:34:37.153Z"
-    },
-    "Royal Oak 15500ST": {
-      "rank": 110,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Os 4 caminhos de candidatas do lote não existem no disco; só um arquivo não listado (dial verde) foi encontrado.",
-      "candidateIds": [
-        "f-110-0497546e",
-        "f-110-f99d5a51",
-        "f-110-bd3895d0",
-        "f-110-c693e956"
-      ],
-      "reviewedAt": "2026-07-20T11:58:23.548Z"
     },
     "Aquanaut 5167A (40mm)": {
       "verdict": "incerto",
@@ -628,16 +602,6 @@
       "collectedCount": 6,
       "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
       "reviewedAt": "2026-07-11T03:34:37.153Z"
-    },
-    "RM 055 Bubba Watson (RM055)": {
-      "verdict": "incerto",
-      "bestImageId": null,
-      "factoryResolved": true,
-      "collectedFactory": "ZF",
-      "collectedCount": 8,
-      "reasoning": "Mídia factory-correta (ZF) coletada e validada (8 fotos).",
-      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Richard Mille; missing-local-file: /media/img/f-122-35f7ce77.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
     },
     "Minute Repeater Tourbillon Perpetual Calendar 5207P": {
       "verdict": "incerto",
@@ -726,7 +690,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-07-20T11:58:23.548Z"
+      "reviewedAt": "2026-07-27T12:41:17.875Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1349,14 +1313,14 @@
       "rank": 3,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "4 fotos são só movimento/caseback (Daytona, cal.4131, gravação Rolex); mostrador panda não aparece em nenhuma.",
+      "reasoning": "Todas as 4 fotos mostram apenas o movimento/fundo (calibre 4131, 'DAYTONA'), nenhuma mostra o mostrador/dial frontal.",
       "candidateIds": [
         "3-superluxuryreps-1b05ko8",
         "3-superluxuryreps-8y00yq",
         "3-superluxuryreps-10p4yaq",
         "3-superluxuryreps-6t0xic"
       ],
-      "reviewedAt": "2026-07-20T11:58:23.545Z"
+      "reviewedAt": "2026-07-27T12:41:17.873Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1369,33 +1333,72 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-07-20T11:58:23.548Z"
+      "reviewedAt": "2026-07-27T12:41:17.875Z"
     },
     "Submariner 116613LB (Two-Tone Ouro/Aço)": {
       "rank": 63,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "Todas as 4 fotos são de um Yacht-Master (mostrador marrom, luneta lisa ouro rosa), não Submariner azul.",
+      "verdict": "confirmado",
+      "bestImageId": "hunt-submariner-116613lb-two-tone-ouro-aco-1",
+      "reasoning": "Mostrador e luneta azuis, bracelete bicolor ouro/aço — combina. As 3 do superluxuryreps são Yacht-Master mostrador marrom, erradas.",
       "candidateIds": [
+        "hunt-submariner-116613lb-two-tone-ouro-aco-1",
         "63-superluxuryreps-1rn95xr",
         "63-superluxuryreps-176h9ov",
-        "63-superluxuryreps-lqx9xw",
-        "63-superluxuryreps-1suhel3"
+        "63-superluxuryreps-lqx9xw"
       ],
-      "reviewedAt": "2026-07-20T11:55:44.553Z"
+      "reviewedAt": "2026-07-27T12:40:12.761Z"
     },
     "Submariner Date 116613LN (Two-Tone Preto)": {
       "rank": 66,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "Mesmas fotos do Yacht-Master (mostrador marrom, luneta lisa), sem luneta serrilhada preta nem mostrador preto de Submariner.",
+      "verdict": "confirmado",
+      "bestImageId": "hunt-submariner-date-116613ln-two-tone-preto-1",
+      "reasoning": "Mostrador e luneta pretos, bracelete bicolor ouro/aço — combina. As 3 do superluxuryreps são Yacht-Master mostrador marrom, erradas.",
       "candidateIds": [
+        "hunt-submariner-date-116613ln-two-tone-preto-1",
         "66-superluxuryreps-1rn95xr",
         "66-superluxuryreps-176h9ov",
-        "66-superluxuryreps-lqx9xw",
-        "66-superluxuryreps-1suhel3"
+        "66-superluxuryreps-lqx9xw"
       ],
-      "reviewedAt": "2026-07-20T11:55:44.553Z"
+      "reviewedAt": "2026-07-27T12:40:12.761Z"
+    },
+    "GMT-Master II 126718GRNR (Full Yellow Gold)": {
+      "rank": 80,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-gmt-master-ii-126718grnr-full-yellow-gold-1",
+      "reasoning": "Caixa/bracelete full ouro amarelo, bezel preto, dial 'GMT-MASTER II'; a 4ª candidata é um Yacht-Master, não bate.",
+      "candidateIds": [
+        "hunt-gmt-master-ii-126718grnr-full-yellow-gold-1",
+        "80-superluxuryreps-1no8tij",
+        "80-superclonewatches-pzem80",
+        "80-superclonewatches-r0rsw8"
+      ],
+      "reviewedAt": "2026-07-27T12:41:17.875Z"
+    },
+    "Royal Oak 15500ST": {
+      "rank": 110,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Os 4 caminhos de imagem do lote não existem no disco (arquivo não encontrado); impossível validar visualmente.",
+      "candidateIds": [
+        "f-110-0497546e",
+        "f-110-f99d5a51",
+        "f-110-bd3895d0",
+        "f-110-c693e956"
+      ],
+      "reviewedAt": "2026-07-27T12:40:12.761Z"
+    },
+    "RM 055 Bubba Watson (RM055)": {
+      "rank": 122,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-rm-055-bubba-watson-rm055-1",
+      "reasoning": "Richard Mille tonneau case, skeleton dial, 'RICHARD MILLE' text visível; branco cerâmica é variante real do RM055.",
+      "candidateIds": [
+        "hunt-rm-055-bubba-watson-rm055-1",
+        "pt-122-4",
+        "pt-122-3",
+        "pt-122-2"
+      ],
+      "reviewedAt": "2026-07-27T12:41:17.872Z"
     }
   }
 }

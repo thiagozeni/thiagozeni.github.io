@@ -1,6 +1,81 @@
 {
-  "generatedAt": "2026-07-20T12:00:24.480Z",
+  "generatedAt": "2026-07-27T12:43:24.954Z",
   "runs": [
+    {
+      "stamp": "2026-07-27",
+      "startedAt": "2026-07-27T12:30:07.144Z",
+      "running": false,
+      "interrupted": false,
+      "phases": [
+        {
+          "name": "news",
+          "label": "Notícias (bbtwatch)",
+          "status": "ok",
+          "startedAt": "2026-07-27T12:30:07.180Z",
+          "finishedAt": "2026-07-27T12:30:09.235Z",
+          "secs": 2,
+          "failures": []
+        },
+        {
+          "name": "discover",
+          "label": "Descoberta de mercado",
+          "status": "ok",
+          "startedAt": "2026-07-27T12:30:09.235Z",
+          "finishedAt": "2026-07-27T12:33:00.433Z",
+          "secs": 171,
+          "failures": []
+        },
+        {
+          "name": "hunt",
+          "label": "Caça de mídia",
+          "status": "ok",
+          "startedAt": "2026-07-27T12:33:00.433Z",
+          "finishedAt": "2026-07-27T12:38:22.603Z",
+          "secs": 322,
+          "failures": []
+        },
+        {
+          "name": "curate",
+          "label": "Curadoria (revisão visual)",
+          "status": "ok",
+          "startedAt": "2026-07-27T12:38:22.603Z",
+          "finishedAt": "2026-07-27T12:41:18.090Z",
+          "secs": 175,
+          "failures": []
+        },
+        {
+          "name": "refresh",
+          "label": "Re-pesquisa de evidência",
+          "status": "ok",
+          "startedAt": "2026-07-27T12:41:18.090Z",
+          "finishedAt": "2026-07-27T12:43:12.506Z",
+          "secs": 114,
+          "failures": []
+        },
+        {
+          "name": "rescore",
+          "label": "Re-score",
+          "status": "ok",
+          "startedAt": "2026-07-27T12:43:12.506Z",
+          "finishedAt": "2026-07-27T12:43:12.653Z",
+          "secs": 0,
+          "failures": []
+        },
+        {
+          "name": "gate",
+          "label": "Gate + commit",
+          "status": "ok",
+          "startedAt": "2026-07-27T12:43:12.653Z",
+          "finishedAt": "2026-07-27T12:43:24.549Z",
+          "secs": 12,
+          "failures": []
+        }
+      ],
+      "coveragePct": 99,
+      "commit": "aa08ec5",
+      "finishedAt": "2026-07-27T12:43:24.549Z",
+      "secs": 797
+    },
     {
       "stamp": "2026-07-20",
       "startedAt": "2026-07-20T11:50:28.647Z",
@@ -83,7 +158,7 @@
         }
       ],
       "coveragePct": 96,
-      "commit": "916f91f",
+      "commit": null,
       "finishedAt": "2026-07-20T12:00:24.288Z",
       "secs": 596
     },
@@ -599,103 +674,6 @@
       "commit": null,
       "finishedAt": "2026-07-11T04:12:11.122Z",
       "secs": 1005
-    },
-    {
-      "stamp": "2026-07-07",
-      "startedAt": "2026-07-07T15:52:33.000Z",
-      "finishedAt": "2026-07-07T17:16:08.000Z",
-      "secs": 5015,
-      "running": false,
-      "interrupted": false,
-      "reconstructed": true,
-      "coveragePct": 87,
-      "commit": "4548856",
-      "phases": [
-        {
-          "name": "news",
-          "label": "Notícias (bbtwatch)",
-          "status": "falhou",
-          "startedAt": "2026-07-07T15:52:33.000Z",
-          "finishedAt": "2026-07-07T16:50:00.000Z",
-          "secs": 3447,
-          "failures": [
-            {
-              "step": "news",
-              "detail": "fetch pendurado 50min em tarpit do bbtwatch (sem timeout) — morto manualmente; watchdog run_to adicionado em b644ce0",
-              "at": "2026-07-07T16:43:00.000Z"
-            },
-            {
-              "step": "news-bodies",
-              "detail": "firecrawl sem créditos + bbtwatch lento — morto; fail_soft seguiu",
-              "at": "2026-07-07T16:50:00.000Z"
-            }
-          ]
-        },
-        {
-          "name": "discover",
-          "label": "Descoberta de mercado",
-          "status": "ok",
-          "startedAt": "2026-07-07T16:50:00.000Z",
-          "finishedAt": "2026-07-07T17:00:00.000Z",
-          "secs": 600,
-          "failures": [],
-          "note": "1 candidato (ERF DJ41 Ombré) REJEITADO por schema inválido — guardrail de integridade funcionou"
-        },
-        {
-          "name": "hunt",
-          "label": "Caça de mídia",
-          "status": "ok",
-          "startedAt": "2026-07-07T17:00:00.000Z",
-          "finishedAt": "2026-07-07T17:06:00.000Z",
-          "secs": 360,
-          "failures": [],
-          "note": "10 modelos → 30 imagens + 2 vídeos ingeridos; 10 vereditos reabertos"
-        },
-        {
-          "name": "curate",
-          "label": "Curadoria (revisão visual)",
-          "status": "ok",
-          "startedAt": "2026-07-07T17:06:00.000Z",
-          "finishedAt": "2026-07-07T17:12:00.000Z",
-          "secs": 360,
-          "failures": [],
-          "note": "2 iterações; cobertura 84% → 87% (116/134)"
-        },
-        {
-          "name": "refresh",
-          "label": "Re-pesquisa de evidência",
-          "status": "falhou",
-          "startedAt": "2026-07-07T17:12:00.000Z",
-          "finishedAt": "2026-07-07T17:14:00.000Z",
-          "secs": 120,
-          "failures": [
-            {
-              "step": "merge-evidence",
-              "detail": "crash em rank sem arquivo de evidência (#111, addition) — consertado em b644ce0; re-pesquisa de #29/#74 aproveitada depois (#74 destravou por mérito: 8.78)",
-              "at": "2026-07-07T17:14:00.000Z"
-            }
-          ]
-        },
-        {
-          "name": "rescore",
-          "label": "Re-score",
-          "status": "ok",
-          "startedAt": "2026-07-07T17:14:00.000Z",
-          "finishedAt": "2026-07-07T17:14:30.000Z",
-          "secs": 30,
-          "failures": []
-        },
-        {
-          "name": "gate",
-          "label": "Gate + commit",
-          "status": "ok",
-          "startedAt": "2026-07-07T17:14:30.000Z",
-          "finishedAt": "2026-07-07T17:16:08.000Z",
-          "secs": 98,
-          "failures": [],
-          "note": "109 testes + build verdes → commit 4548856"
-        }
-      ]
     }
   ]
 }
