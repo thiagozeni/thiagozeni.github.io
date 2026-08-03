@@ -1,0 +1,1 @@
+import{j as e}from"./index-BYIuoisk.js";function c({eyebrow:s,title:n,description:l,count:a}){return e.jsxs("header",{className:"page-header",children:[e.jsxs("div",{children:[s?e.jsx("span",{className:"eyebrow",children:s}):null,e.jsx("h2",{children:n}),l?e.jsx("p",{children:l}):null]}),a!=null?e.jsx("span",{className:"page-count",children:a}):null]})}export{c as P};

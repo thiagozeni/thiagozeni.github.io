@@ -517,7 +517,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-07-27T12:41:17.875Z"
+      "reviewedAt": "2026-08-03T12:34:34.223Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -535,14 +535,17 @@
       "reviewedAt": "2026-07-11T03:34:37.153Z"
     },
     "Aquanaut 5167A (40mm)": {
+      "rank": 102,
       "verdict": "incerto",
       "bestImageId": null,
-      "factoryResolved": true,
-      "collectedFactory": "DDF",
-      "collectedCount": 5,
-      "reasoning": "Mídia factory-correta (DDF) coletada e validada (5 fotos).",
-      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-102-f4c9a806.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "reasoning": "Caminhos das imagens do lote não existem no disco (arquivos reais têm outros hashes); impossível verificar",
+      "candidateIds": [
+        "f-102-f4c9a806",
+        "f-102-ce173ecf",
+        "f-102-3eabe200",
+        "f-102-076a4194"
+      ],
+      "reviewedAt": "2026-08-03T12:34:34.223Z"
     },
     "Royal Oak 15510ST": {
       "verdict": "incerto",
@@ -690,7 +693,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-07-27T12:41:17.875Z"
+      "reviewedAt": "2026-08-03T12:34:34.223Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1309,32 +1312,6 @@
       ],
       "reviewedAt": "2026-07-20T00:31:48.119Z"
     },
-    "Daytona 126500LN (Panda Novo)": {
-      "rank": 3,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Todas as 4 fotos mostram apenas o movimento/fundo (calibre 4131, 'DAYTONA'), nenhuma mostra o mostrador/dial frontal.",
-      "candidateIds": [
-        "3-superluxuryreps-1b05ko8",
-        "3-superluxuryreps-8y00yq",
-        "3-superluxuryreps-10p4yaq",
-        "3-superluxuryreps-6t0xic"
-      ],
-      "reviewedAt": "2026-07-27T12:41:17.873Z"
-    },
-    "GMT-Master II 126711CHNR (Root Beer)": {
-      "rank": 30,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
-      "candidateIds": [
-        "30-superclonewatches-16pf706",
-        "30-superclonewatches-134h2bh",
-        "30-superclonewatches-1tbxoft",
-        "30-superluxuryreps-1peyjoj"
-      ],
-      "reviewedAt": "2026-07-27T12:41:17.875Z"
-    },
     "Submariner 116613LB (Two-Tone Ouro/Aço)": {
       "rank": 63,
       "verdict": "confirmado",
@@ -1374,19 +1351,6 @@
       ],
       "reviewedAt": "2026-07-27T12:41:17.875Z"
     },
-    "Royal Oak 15500ST": {
-      "rank": 110,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Os 4 caminhos de imagem do lote não existem no disco (arquivo não encontrado); impossível validar visualmente.",
-      "candidateIds": [
-        "f-110-0497546e",
-        "f-110-f99d5a51",
-        "f-110-bd3895d0",
-        "f-110-c693e956"
-      ],
-      "reviewedAt": "2026-07-27T12:40:12.761Z"
-    },
     "RM 055 Bubba Watson (RM055)": {
       "rank": 122,
       "verdict": "confirmado",
@@ -1399,6 +1363,45 @@
         "pt-122-2"
       ],
       "reviewedAt": "2026-07-27T12:41:17.872Z"
+    },
+    "Daytona 126500LN (Panda Novo)": {
+      "rank": 3,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Só fotos de movimento/caseback (4131, gravação Daytona); mostrador não visível para confirmar cor Panda",
+      "candidateIds": [
+        "3-superluxuryreps-1b05ko8",
+        "3-superluxuryreps-8y00yq",
+        "3-superluxuryreps-10p4yaq",
+        "3-superluxuryreps-6t0xic"
+      ],
+      "reviewedAt": "2026-08-03T12:34:34.220Z"
+    },
+    "GMT-Master II 126711CHNR (Root Beer)": {
+      "rank": 30,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "30-superclonewatches-16pf706",
+        "30-superclonewatches-134h2bh",
+        "30-superclonewatches-1tbxoft",
+        "30-superluxuryreps-1peyjoj"
+      ],
+      "reviewedAt": "2026-08-03T12:34:34.223Z"
+    },
+    "Royal Oak 15500ST": {
+      "rank": 110,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Caminhos das imagens do lote não existem no disco (arquivo real é f-110-808537df.jpg); impossível verificar",
+      "candidateIds": [
+        "f-110-0497546e",
+        "f-110-f99d5a51",
+        "f-110-bd3895d0",
+        "f-110-c693e956"
+      ],
+      "reviewedAt": "2026-08-03T12:34:34.223Z"
     }
   }
 }
