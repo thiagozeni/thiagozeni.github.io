@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-03T12:34:34.506Z",
+  "generatedAt": "2026-08-10T10:26:45.577Z",
   "totalImages": 1504,
   "summary": {
-    "models": 138,
+    "models": 139,
     "verified": 124,
     "strong": 13,
     "weak": 1,
     "rejected": 0,
-    "missing": 0,
+    "missing": 1,
     "conflictsDiscarded": 333,
     "coveragePct": 99
   },
@@ -17,6 +17,12 @@
       "model": "Lange 1 (Ref. 191.032)",
       "brand": "A. Lange & Söhne",
       "state": "fraco"
+    },
+    {
+      "rank": 139,
+      "model": "Datejust 41 Ombré Green 126334-0034",
+      "brand": "Rolex",
+      "state": "sem-imagem"
     }
   ]
 }

@@ -517,7 +517,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-08-03T12:34:34.223Z"
+      "reviewedAt": "2026-08-10T10:26:45.309Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -533,19 +533,6 @@
       "collectedCount": 6,
       "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
       "reviewedAt": "2026-07-11T03:34:37.153Z"
-    },
-    "Aquanaut 5167A (40mm)": {
-      "rank": 102,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Caminhos das imagens do lote não existem no disco (arquivos reais têm outros hashes); impossível verificar",
-      "candidateIds": [
-        "f-102-f4c9a806",
-        "f-102-ce173ecf",
-        "f-102-3eabe200",
-        "f-102-076a4194"
-      ],
-      "reviewedAt": "2026-08-03T12:34:34.223Z"
     },
     "Royal Oak 15510ST": {
       "verdict": "incerto",
@@ -693,7 +680,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-08-03T12:34:34.223Z"
+      "reviewedAt": "2026-08-10T10:26:45.309Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1368,14 +1355,14 @@
       "rank": 3,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Só fotos de movimento/caseback (4131, gravação Daytona); mostrador não visível para confirmar cor Panda",
+      "reasoning": "As 4 candidatas mostram apenas movimento/tampa traseira (cal. 4131); mostrador panda não visível em nenhuma.",
       "candidateIds": [
         "3-superluxuryreps-1b05ko8",
         "3-superluxuryreps-8y00yq",
         "3-superluxuryreps-10p4yaq",
         "3-superluxuryreps-6t0xic"
       ],
-      "reviewedAt": "2026-08-03T12:34:34.220Z"
+      "reviewedAt": "2026-08-10T10:26:45.306Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1388,20 +1375,33 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-08-03T12:34:34.223Z"
+      "reviewedAt": "2026-08-10T10:26:45.309Z"
     },
     "Royal Oak 15500ST": {
       "rank": 110,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Caminhos das imagens do lote não existem no disco (arquivo real é f-110-808537df.jpg); impossível verificar",
+      "reasoning": "Os 4 arquivos de imagem do batch.json não existem no disco; impossível verificar visualmente.",
       "candidateIds": [
         "f-110-0497546e",
         "f-110-f99d5a51",
         "f-110-bd3895d0",
         "f-110-c693e956"
       ],
-      "reviewedAt": "2026-08-03T12:34:34.223Z"
+      "reviewedAt": "2026-08-10T10:26:45.309Z"
+    },
+    "Aquanaut 5167A (40mm)": {
+      "rank": 102,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Os 4 arquivos de imagem do batch.json não existem no disco; impossível verificar visualmente.",
+      "candidateIds": [
+        "f-102-f4c9a806",
+        "f-102-ce173ecf",
+        "f-102-3eabe200",
+        "f-102-076a4194"
+      ],
+      "reviewedAt": "2026-08-10T10:26:45.309Z"
     }
   }
 }
