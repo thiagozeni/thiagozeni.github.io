@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-07-08T11:14:16.134Z",
   "method": "visual-review-subagents + deep-per-image (etapa4)",
-  "reviewed": 138,
+  "reviewed": 139,
   "verdicts": {
     "Seamaster Diver 300M (Preto)": {
       "rank": 12,
@@ -517,7 +517,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-08-10T10:26:45.309Z"
+      "reviewedAt": "2026-08-13T16:15:02.421Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -680,7 +680,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-08-10T10:26:45.309Z"
+      "reviewedAt": "2026-08-13T16:15:02.421Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -858,14 +858,6 @@
         "bb-131-3",
         "bb-131-4"
       ]
-    },
-    "Lange 1 (Ref. 191.032)": {
-      "rank": 120,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "A. Lange & Söhne Lange 1, caixa ouro rosa (correto p/ ref 191.032), data grande no canto sup. dir., sub-mostrador de horas descentralizado (romanos), segundos embaixo, reserva AUF/AB — layout Lange 1 confere. CAVEAT: fábrica GF é improvável (catálogo GF de A. Lange = só 1815 Tourbillon + Saxonia Thin; GF não faz Lange 1) — atribuição a revisar. Imagem de loja, estilo render. Watermark replicais.",
-      "quarantineReason": "factory-mismatch: registro=GF, catálogo=Indefinida (rep genérico)",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
     },
     "BR 03-92 42mm (Ref. BR0392)": {
       "rank": 121,
@@ -1355,14 +1347,14 @@
       "rank": 3,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "As 4 candidatas mostram apenas movimento/tampa traseira (cal. 4131); mostrador panda não visível em nenhuma.",
+      "reasoning": "4 fotos são apenas do movimento/caseback (calibre 4131, gravação Daytona); mostrador panda não aparece em nenhuma.",
       "candidateIds": [
         "3-superluxuryreps-1b05ko8",
         "3-superluxuryreps-8y00yq",
         "3-superluxuryreps-10p4yaq",
         "3-superluxuryreps-6t0xic"
       ],
-      "reviewedAt": "2026-08-10T10:26:45.306Z"
+      "reviewedAt": "2026-08-13T16:15:02.418Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1375,33 +1367,58 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-08-10T10:26:45.309Z"
+      "reviewedAt": "2026-08-13T16:15:02.421Z"
     },
     "Royal Oak 15500ST": {
       "rank": 110,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Os 4 arquivos de imagem do batch.json não existem no disco; impossível verificar visualmente.",
+      "reasoning": "Arquivos de imagem (f-110-*) não existem no disco — impossível visualizar para confirmar.",
       "candidateIds": [
         "f-110-0497546e",
         "f-110-f99d5a51",
         "f-110-bd3895d0",
         "f-110-c693e956"
       ],
-      "reviewedAt": "2026-08-10T10:26:45.309Z"
+      "reviewedAt": "2026-08-13T16:15:02.421Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Os 4 arquivos de imagem do batch.json não existem no disco; impossível verificar visualmente.",
+      "reasoning": "Arquivos de imagem (f-102-*) não existem no disco — impossível visualizar para confirmar.",
       "candidateIds": [
         "f-102-f4c9a806",
         "f-102-ce173ecf",
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-08-10T10:26:45.309Z"
+      "reviewedAt": "2026-08-13T16:15:02.421Z"
+    },
+    "Lange 1 (Ref. 191.032)": {
+      "rank": 120,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-lange-1-ref-191-032-1",
+      "reasoning": "2 fotos mostram Lange 1 ouro rosé genuíno; as outras 2 (bb-120-3/4) são Breitling Avenger, modelo errado.",
+      "candidateIds": [
+        "hunt-lange-1-ref-191-032-1",
+        "dir-120-1",
+        "bb-120-4",
+        "bb-120-3"
+      ],
+      "reviewedAt": "2026-08-13T16:14:00.656Z"
+    },
+    "Datejust 41 Ombré Green 126334-0034": {
+      "rank": 139,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-datejust-41-ombre-green-126334-0034-2",
+      "reasoning": "Mostrador verde ombré, bisel canelado, pulseira Jubilee — bate com Datejust 41 nas 3 fotos.",
+      "candidateIds": [
+        "hunt-datejust-41-ombre-green-126334-0034-3",
+        "hunt-datejust-41-ombre-green-126334-0034-2",
+        "hunt-datejust-41-ombre-green-126334-0034-1"
+      ],
+      "reviewedAt": "2026-08-13T16:14:00.656Z"
     }
   }
 }
