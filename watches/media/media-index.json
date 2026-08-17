@@ -32098,7 +32098,7 @@
       "vsf"
     ],
     "collectedAt": "2026-06-30T08:00:00.000Z",
-    "localImage": "/media/img/f-108-676b7483.jpg",
+    "localImage": null,
     "mediaType": "image",
     "entity": {
       "kind": "model",
@@ -32431,7 +32431,7 @@
       "zf"
     ],
     "collectedAt": "2026-06-30T08:00:00.000Z",
-    "localImage": "/media/img/f-110-5aec421e.jpg",
+    "localImage": null,
     "mediaType": "image",
     "entity": {
       "kind": "model",

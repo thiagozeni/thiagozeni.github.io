@@ -517,7 +517,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-08-13T16:15:02.421Z"
+      "reviewedAt": "2026-08-17T09:54:24.188Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -680,7 +680,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-08-13T16:15:02.421Z"
+      "reviewedAt": "2026-08-17T09:54:24.188Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1343,58 +1343,6 @@
       ],
       "reviewedAt": "2026-07-27T12:41:17.872Z"
     },
-    "Daytona 126500LN (Panda Novo)": {
-      "rank": 3,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "4 fotos são apenas do movimento/caseback (calibre 4131, gravação Daytona); mostrador panda não aparece em nenhuma.",
-      "candidateIds": [
-        "3-superluxuryreps-1b05ko8",
-        "3-superluxuryreps-8y00yq",
-        "3-superluxuryreps-10p4yaq",
-        "3-superluxuryreps-6t0xic"
-      ],
-      "reviewedAt": "2026-08-13T16:15:02.418Z"
-    },
-    "GMT-Master II 126711CHNR (Root Beer)": {
-      "rank": 30,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
-      "candidateIds": [
-        "30-superclonewatches-16pf706",
-        "30-superclonewatches-134h2bh",
-        "30-superclonewatches-1tbxoft",
-        "30-superluxuryreps-1peyjoj"
-      ],
-      "reviewedAt": "2026-08-13T16:15:02.421Z"
-    },
-    "Royal Oak 15500ST": {
-      "rank": 110,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Arquivos de imagem (f-110-*) não existem no disco — impossível visualizar para confirmar.",
-      "candidateIds": [
-        "f-110-0497546e",
-        "f-110-f99d5a51",
-        "f-110-bd3895d0",
-        "f-110-c693e956"
-      ],
-      "reviewedAt": "2026-08-13T16:15:02.421Z"
-    },
-    "Aquanaut 5167A (40mm)": {
-      "rank": 102,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Arquivos de imagem (f-102-*) não existem no disco — impossível visualizar para confirmar.",
-      "candidateIds": [
-        "f-102-f4c9a806",
-        "f-102-ce173ecf",
-        "f-102-3eabe200",
-        "f-102-076a4194"
-      ],
-      "reviewedAt": "2026-08-13T16:15:02.421Z"
-    },
     "Lange 1 (Ref. 191.032)": {
       "rank": 120,
       "verdict": "confirmado",
@@ -1419,6 +1367,58 @@
         "hunt-datejust-41-ombre-green-126334-0034-1"
       ],
       "reviewedAt": "2026-08-13T16:14:00.656Z"
+    },
+    "Daytona 126500LN (Panda Novo)": {
+      "rank": 3,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Todas as 4 fotos mostram apenas o movimento/tampa traseira (caliber 4131, texto DAYTONA); mostrador panda não visível.",
+      "candidateIds": [
+        "3-superluxuryreps-1b05ko8",
+        "3-superluxuryreps-8y00yq",
+        "3-superluxuryreps-10p4yaq",
+        "3-superluxuryreps-6t0xic"
+      ],
+      "reviewedAt": "2026-08-17T09:54:24.185Z"
+    },
+    "GMT-Master II 126711CHNR (Root Beer)": {
+      "rank": 30,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "30-superclonewatches-16pf706",
+        "30-superclonewatches-134h2bh",
+        "30-superclonewatches-1tbxoft",
+        "30-superluxuryreps-1peyjoj"
+      ],
+      "reviewedAt": "2026-08-17T09:54:24.188Z"
+    },
+    "Royal Oak 15500ST": {
+      "rank": 110,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Arquivos de imagem (f-110-*) não existem no caminho informado; impossível avaliar.",
+      "candidateIds": [
+        "f-110-0497546e",
+        "f-110-f99d5a51",
+        "f-110-bd3895d0",
+        "f-110-c693e956"
+      ],
+      "reviewedAt": "2026-08-17T09:54:24.188Z"
+    },
+    "Aquanaut 5167A (40mm)": {
+      "rank": 102,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Arquivos de imagem (f-102-*) não existem no caminho informado; impossível avaliar.",
+      "candidateIds": [
+        "f-102-f4c9a806",
+        "f-102-ce173ecf",
+        "f-102-3eabe200",
+        "f-102-076a4194"
+      ],
+      "reviewedAt": "2026-08-17T09:54:24.188Z"
     }
   }
 }
