@@ -49954,5 +49954,116 @@
       "hasWatermark": false,
       "sourceTier": 2
     }
+  },
+  {
+    "id": "hunt-royal-oak-15510-1",
+    "model": "Royal Oak 15510",
+    "brand": "Audemars Piguet",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak 15510 — vsfactory.us",
+    "source": "vsfactory.us",
+    "sourceDomain": "vsfactory.us",
+    "image": "https://vsfactory.us/wp-content/uploads/2026/04/img_752c9805_20260427_i1777221448437_7808_0_5.jpg.jpg",
+    "localImage": "/media/img/hunt-royal-oak-15510-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Página oficial da fábrica VSF ('VS Audemars Piguet Royal Oak 15510'); crop de comparação dial-a-dial rotulado 'VS' vs 'GEN' vs 'Market', mostrador verde-oliva waffle confirmado no texto. É gráfico comparativo, não foto de produto limpa, mas fonte é a própria fábrica e a variante é explicitamente nomeada."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-08-24T10:00:28.478Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak 15510"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-royal-oak-15510-2",
+    "model": "Royal Oak 15510",
+    "brand": "Audemars Piguet",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak 15510 — superclonewatches.is",
+    "source": "superclonewatches.is",
+    "sourceDomain": "superclonewatches.is",
+    "image": "https://superclonewatches.is/wp-content/uploads/2023/07/Audemars-Piguet-Replica-Royal-Oak-15510-scaled.jpeg",
+    "localImage": "/media/img/hunt-royal-oak-15510-2.jpg",
+    "confidence": 70,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Foto real 'in-hand' com marca d'água 'superclonewatches.is' na caixa; título/descrição da página confirmam '15510' e 'green dial' explicitamente; fábrica não identificada no texto."
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "hunt",
+      "watermark"
+    ],
+    "collectedAt": "2026-08-24T10:00:28.986Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak 15510"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": true,
+      "sourceTier": 2
+    }
+  },
+  {
+    "id": "hunt-royal-oak-15510-3",
+    "model": "Royal Oak 15510",
+    "brand": "Audemars Piguet",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak 15510 — superclonewatches.is",
+    "source": "superclonewatches.is",
+    "sourceDomain": "superclonewatches.is",
+    "image": "https://superclonewatches.is/wp-content/uploads/2023/06/AP-15510-Green.jpg",
+    "localImage": "/media/img/hunt-royal-oak-15510-3.jpg",
+    "confidence": 70,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Render de produto limpo, sem marca d'água; mesma página confirma '15510'/'green dial' no texto; fábrica não identificada."
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-08-24T10:00:29.337Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak 15510"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 2
+    }
   }
 ]

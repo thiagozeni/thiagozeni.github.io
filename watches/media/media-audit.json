@@ -1,22 +1,15 @@
 {
-  "generatedAt": "2026-08-17T09:54:24.485Z",
-  "totalImages": 1508,
+  "generatedAt": "2026-08-24T10:02:30.636Z",
+  "totalImages": 1511,
   "summary": {
     "models": 140,
-    "verified": 126,
+    "verified": 127,
     "strong": 13,
     "weak": 0,
     "rejected": 0,
-    "missing": 1,
+    "missing": 0,
     "conflictsDiscarded": 334,
-    "coveragePct": 99
+    "coveragePct": 100
   },
-  "backlog": [
-    {
-      "rank": 140,
-      "model": "Royal Oak 15510",
-      "brand": "Audemars Piguet",
-      "state": "sem-imagem"
-    }
-  ]
+  "backlog": []
 }
