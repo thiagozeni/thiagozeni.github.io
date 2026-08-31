@@ -1,6 +1,94 @@
 {
-  "generatedAt": "2026-08-24T10:05:15.775Z",
+  "generatedAt": "2026-08-31T17:02:30.246Z",
   "runs": [
+    {
+      "stamp": "2026-08-31",
+      "startedAt": "2026-08-31T16:56:39.844Z",
+      "running": false,
+      "interrupted": false,
+      "phases": [
+        {
+          "name": "news",
+          "label": "Notícias (bbtwatch)",
+          "status": "ok",
+          "startedAt": "2026-08-31T16:56:39.930Z",
+          "finishedAt": "2026-08-31T16:56:42.247Z",
+          "secs": 2,
+          "failures": [],
+          "warnings": [
+            {
+              "step": "news-stale",
+              "detail": "notícias dormentes — artigo mais recente é de 2026-07-03 (> 30 dias)",
+              "at": "2026-08-31T16:56:42.201Z"
+            }
+          ]
+        },
+        {
+          "name": "discover",
+          "label": "Descoberta de mercado",
+          "status": "ok",
+          "startedAt": "2026-08-31T16:56:42.247Z",
+          "finishedAt": "2026-08-31T16:59:39.865Z",
+          "secs": 178,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "hunt",
+          "label": "Caça de mídia",
+          "status": "ok",
+          "startedAt": "2026-08-31T16:59:39.865Z",
+          "finishedAt": "2026-08-31T16:59:39.981Z",
+          "secs": 0,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "curate",
+          "label": "Curadoria (revisão visual)",
+          "status": "ok",
+          "startedAt": "2026-08-31T16:59:39.981Z",
+          "finishedAt": "2026-08-31T17:00:35.640Z",
+          "secs": 56,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "refresh",
+          "label": "Re-pesquisa de evidência",
+          "status": "ok",
+          "startedAt": "2026-08-31T17:00:35.640Z",
+          "finishedAt": "2026-08-31T17:02:17.239Z",
+          "secs": 102,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "rescore",
+          "label": "Re-score",
+          "status": "ok",
+          "startedAt": "2026-08-31T17:02:17.239Z",
+          "finishedAt": "2026-08-31T17:02:17.381Z",
+          "secs": 0,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "gate",
+          "label": "Gate + commit",
+          "status": "ok",
+          "startedAt": "2026-08-31T17:02:17.381Z",
+          "finishedAt": "2026-08-31T17:02:29.745Z",
+          "secs": 12,
+          "failures": [],
+          "warnings": []
+        }
+      ],
+      "coveragePct": 100,
+      "commit": "9641d20",
+      "finishedAt": "2026-08-31T17:02:29.745Z",
+      "secs": 350
+    },
     {
       "stamp": "2026-08-24",
       "startedAt": "2026-08-24T09:53:45.273Z",
@@ -85,7 +173,7 @@
         }
       ],
       "coveragePct": 100,
-      "commit": "64abd25",
+      "commit": null,
       "finishedAt": "2026-08-24T10:05:15.025Z",
       "secs": 690
     },
@@ -597,92 +685,6 @@
       "commit": null,
       "finishedAt": "2026-07-20T12:00:24.288Z",
       "secs": 596
-    },
-    {
-      "stamp": "2026-07-20",
-      "startedAt": "2026-07-20T00:25:36.195Z",
-      "running": false,
-      "interrupted": false,
-      "phases": [
-        {
-          "name": "news",
-          "label": "Notícias (bbtwatch)",
-          "status": "ok",
-          "startedAt": "2026-07-20T00:25:36.252Z",
-          "finishedAt": "2026-07-20T00:25:38.493Z",
-          "secs": 2,
-          "failures": []
-        },
-        {
-          "name": "discover",
-          "label": "Descoberta de mercado",
-          "status": "ok",
-          "startedAt": "2026-07-20T00:25:38.493Z",
-          "finishedAt": "2026-07-20T00:28:05.192Z",
-          "secs": 147,
-          "failures": []
-        },
-        {
-          "name": "hunt",
-          "label": "Caça de mídia",
-          "status": "falhou",
-          "startedAt": "2026-07-20T00:28:05.192Z",
-          "finishedAt": "2026-07-20T00:28:52.850Z",
-          "secs": 48,
-          "failures": [
-            {
-              "step": "hunt-capture",
-              "detail": null,
-              "at": "2026-07-20T00:28:52.778Z"
-            },
-            {
-              "step": "hunt-out",
-              "detail": null,
-              "at": "2026-07-20T00:28:52.818Z"
-            }
-          ]
-        },
-        {
-          "name": "curate",
-          "label": "Curadoria (revisão visual)",
-          "status": "ok",
-          "startedAt": "2026-07-20T00:28:52.850Z",
-          "finishedAt": "2026-07-20T00:33:14.374Z",
-          "secs": 262,
-          "failures": []
-        },
-        {
-          "name": "refresh",
-          "label": "Re-pesquisa de evidência",
-          "status": "ok",
-          "startedAt": "2026-07-20T00:33:14.375Z",
-          "finishedAt": "2026-07-20T00:36:46.413Z",
-          "secs": 212,
-          "failures": []
-        },
-        {
-          "name": "rescore",
-          "label": "Re-score",
-          "status": "ok",
-          "startedAt": "2026-07-20T00:36:46.413Z",
-          "finishedAt": "2026-07-20T00:36:46.549Z",
-          "secs": 0,
-          "failures": []
-        },
-        {
-          "name": "gate",
-          "label": "Gate + commit",
-          "status": "ok",
-          "startedAt": "2026-07-20T00:36:46.549Z",
-          "finishedAt": "2026-07-20T00:36:58.131Z",
-          "secs": 12,
-          "failures": []
-        }
-      ],
-      "coveragePct": 97,
-      "commit": null,
-      "finishedAt": "2026-07-20T00:36:58.131Z",
-      "secs": 682
     }
   ]
 }

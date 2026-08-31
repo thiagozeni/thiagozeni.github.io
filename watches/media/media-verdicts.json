@@ -517,7 +517,7 @@
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-08-24T10:02:30.481Z"
+      "reviewedAt": "2026-08-31T17:00:26.923Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -680,7 +680,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-08-24T10:02:30.481Z"
+      "reviewedAt": "2026-08-31T17:00:26.923Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1368,18 +1368,30 @@
       ],
       "reviewedAt": "2026-08-13T16:14:00.656Z"
     },
+    "Royal Oak 15510": {
+      "rank": 140,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-royal-oak-15510-3",
+      "reasoning": "Mostrador verde com textura 'Petite Tapisserie', caixa octogonal, logo Audemars Piguet, bracelete integrado.",
+      "candidateIds": [
+        "hunt-royal-oak-15510-3",
+        "hunt-royal-oak-15510-2",
+        "hunt-royal-oak-15510-1"
+      ],
+      "reviewedAt": "2026-08-24T10:01:33.316Z"
+    },
     "Daytona 126500LN (Panda Novo)": {
       "rank": 3,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Todas as 4 fotos são de movimento/fundo de caixa (cal. 4131, texto Daytona); nenhuma mostra o mostrador para confirmar a cor Panda.",
+      "reasoning": "Todas as 4 fotos mostram só o movimento/caseback; mostrador panda não é visível para confirmar cor.",
       "candidateIds": [
         "3-superluxuryreps-1b05ko8",
         "3-superluxuryreps-8y00yq",
         "3-superluxuryreps-10p4yaq",
         "3-superluxuryreps-6t0xic"
       ],
-      "reviewedAt": "2026-08-24T10:02:30.478Z"
+      "reviewedAt": "2026-08-31T17:00:26.919Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1392,7 +1404,7 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-08-24T10:02:30.481Z"
+      "reviewedAt": "2026-08-31T17:00:26.923Z"
     },
     "Royal Oak 15500ST": {
       "rank": 110,
@@ -1405,32 +1417,20 @@
         "f-110-bd3895d0",
         "f-110-c693e956"
       ],
-      "reviewedAt": "2026-08-24T10:02:30.481Z"
+      "reviewedAt": "2026-08-31T17:00:26.923Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Nenhum dos 4 arquivos de imagem existe no disco (f-102-*) — impossível verificar visualmente.",
+      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Patek Philippe",
       "candidateIds": [
         "f-102-f4c9a806",
         "f-102-ce173ecf",
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-08-24T10:02:30.481Z"
-    },
-    "Royal Oak 15510": {
-      "rank": 140,
-      "verdict": "confirmado",
-      "bestImageId": "hunt-royal-oak-15510-3",
-      "reasoning": "Mostrador verde com textura 'Petite Tapisserie', caixa octogonal, logo Audemars Piguet, bracelete integrado.",
-      "candidateIds": [
-        "hunt-royal-oak-15510-3",
-        "hunt-royal-oak-15510-2",
-        "hunt-royal-oak-15510-1"
-      ],
-      "reviewedAt": "2026-08-24T10:01:33.316Z"
+      "reviewedAt": "2026-08-31T17:00:26.923Z"
     }
   }
 }
