@@ -48026,7 +48026,7 @@
     "source": "trustytime.xyz",
     "sourceDomain": "trustytime.xyz",
     "image": "https://trustytime.xyz/wp-content/uploads/2020/07/ROLGMT193_02.jpg",
-    "localImage": "/media/img/hunt-gmt-master-ii-126715chnr-full-everose-2.jpg",
+    "localImage": null,
     "confidence": 70,
     "matchReasons": [
       "marca:Rolex",
