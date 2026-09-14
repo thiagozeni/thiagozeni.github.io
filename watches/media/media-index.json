@@ -48693,7 +48693,7 @@
     "source": "trustytime.xyz",
     "sourceDomain": "trustytime.xyz",
     "image": "https://trustytime.xyz/wp-content/uploads/2020/07/OMG0645_02.jpg",
-    "localImage": "/media/img/hunt-seamaster-diver-300m-210-30-2.jpg",
+    "localImage": null,
     "confidence": 70,
     "matchReasons": [
       "marca:Omega",
