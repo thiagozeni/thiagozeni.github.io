@@ -1,0 +1,1 @@
+function t(o){let e=0;return function(){e+=1,o.overflow="hidden";let n=!1;return function(){n||(n=!0,e-=1,e===0&&(o.overflow=""))}}}const c=typeof document>"u"?()=>()=>{}:t(document.body.style);export{c as l};

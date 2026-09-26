@@ -1,0 +1,85 @@
+{
+  "stamp": "2026-08-13",
+  "previousStamp": "2026-08-10",
+  "newModels": [],
+  "removedModels": [],
+  "scoreChanges": [],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 1,
+      "count": 3
+    },
+    {
+      "rank": 19,
+      "count": 3
+    },
+    {
+      "rank": 101,
+      "count": 2
+    },
+    {
+      "rank": 105,
+      "count": 3
+    },
+    {
+      "rank": 106,
+      "count": 1
+    },
+    {
+      "rank": 107,
+      "count": 2
+    },
+    {
+      "rank": 108,
+      "count": 5
+    },
+    {
+      "rank": 115,
+      "count": 3
+    },
+    {
+      "rank": 117,
+      "count": 1
+    },
+    {
+      "rank": 118,
+      "count": 2
+    },
+    {
+      "rank": 119,
+      "count": 4
+    },
+    {
+      "rank": 120,
+      "count": 1
+    },
+    {
+      "rank": 122,
+      "count": 1
+    },
+    {
+      "rank": 124,
+      "count": 2
+    },
+    {
+      "rank": 126,
+      "count": 2
+    },
+    {
+      "rank": 127,
+      "count": 1
+    },
+    {
+      "rank": 139,
+      "count": 3
+    }
+  ],
+  "newNews": [],
+  "summary": {
+    "newModels": 0,
+    "scoreChanges": 0,
+    "newMedia": 39,
+    "newNews": 0
+  }
+}

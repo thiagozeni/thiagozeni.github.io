@@ -1,0 +1,33 @@
+{
+  "stamp": "2026-07-20",
+  "previousStamp": "2026-07-19",
+  "newModels": [],
+  "removedModels": [],
+  "scoreChanges": [],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 22,
+      "count": 8
+    },
+    {
+      "rank": 60,
+      "count": 8
+    },
+    {
+      "rank": 122,
+      "count": 8
+    },
+    {
+      "rank": 138,
+      "count": 4
+    }
+  ],
+  "newNews": [],
+  "summary": {
+    "newModels": 0,
+    "scoreChanges": 0,
+    "newMedia": 28,
+    "newNews": 0
+  }
+}

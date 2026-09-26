@@ -1,0 +1,27 @@
+{
+  "stamp": "2026-08-17",
+  "previousStamp": "2026-08-13",
+  "newModels": [
+    140
+  ],
+  "removedModels": [],
+  "scoreChanges": [],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 108,
+      "count": 1
+    },
+    {
+      "rank": 110,
+      "count": 1
+    }
+  ],
+  "newNews": [],
+  "summary": {
+    "newModels": 1,
+    "scoreChanges": 0,
+    "newMedia": 2,
+    "newNews": 0
+  }
+}

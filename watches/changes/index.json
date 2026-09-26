@@ -1,0 +1,122 @@
+[
+  {
+    "stamp": "2026-09-21",
+    "previousStamp": "2026-09-14",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 0,
+      "newNews": 3
+    }
+  },
+  {
+    "stamp": "2026-09-14",
+    "previousStamp": "2026-09-07",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 1,
+      "newNews": 1
+    }
+  },
+  {
+    "stamp": "2026-09-07",
+    "previousStamp": "2026-08-31",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 1,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-08-31",
+    "previousStamp": "2026-08-24",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 0,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-08-24",
+    "previousStamp": "2026-08-17",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 3,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-08-17",
+    "previousStamp": "2026-08-13",
+    "summary": {
+      "newModels": 1,
+      "scoreChanges": 0,
+      "newMedia": 2,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-08-13",
+    "previousStamp": "2026-08-10",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 39,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-08-10",
+    "previousStamp": "2026-08-03",
+    "summary": {
+      "newModels": 1,
+      "scoreChanges": 0,
+      "newMedia": 0,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-08-03",
+    "previousStamp": "2026-07-27",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 0,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-07-27",
+    "previousStamp": "2026-07-20",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 4,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-07-20",
+    "previousStamp": "2026-07-19",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 28,
+      "newNews": 0
+    }
+  },
+  {
+    "stamp": "2026-07-19",
+    "previousStamp": "2026-07-07",
+    "summary": {
+      "newModels": 4,
+      "scoreChanges": 3,
+      "newMedia": 36,
+      "newNews": 7
+    }
+  }
+]

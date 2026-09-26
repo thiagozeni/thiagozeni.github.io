@@ -1,0 +1,135 @@
+{
+  "stamp": "2026-07-19",
+  "previousStamp": "2026-07-07",
+  "newModels": [
+    135,
+    136,
+    137,
+    138
+  ],
+  "removedModels": [],
+  "scoreChanges": [
+    {
+      "rank": 111,
+      "from": 8.5,
+      "to": 9.02,
+      "delta": 0.52
+    },
+    {
+      "rank": 74,
+      "from": 8.5,
+      "to": 8.78,
+      "delta": 0.28
+    },
+    {
+      "rank": 19,
+      "from": 8.6,
+      "to": 8.5,
+      "delta": -0.1
+    }
+  ],
+  "confidenceChanges": [
+    {
+      "rank": 23,
+      "from": 76,
+      "to": 63
+    }
+  ],
+  "newMedia": [
+    {
+      "rank": 27,
+      "count": 2
+    },
+    {
+      "rank": 45,
+      "count": 1
+    },
+    {
+      "rank": 59,
+      "count": 2
+    },
+    {
+      "rank": 68,
+      "count": 3
+    },
+    {
+      "rank": 73,
+      "count": 3
+    },
+    {
+      "rank": 74,
+      "count": 1
+    },
+    {
+      "rank": 78,
+      "count": 2
+    },
+    {
+      "rank": 83,
+      "count": 2
+    },
+    {
+      "rank": 87,
+      "count": 2
+    },
+    {
+      "rank": 91,
+      "count": 2
+    },
+    {
+      "rank": 96,
+      "count": 1
+    },
+    {
+      "rank": 99,
+      "count": 2
+    },
+    {
+      "rank": 106,
+      "count": 1
+    },
+    {
+      "rank": 107,
+      "count": 2
+    },
+    {
+      "rank": 108,
+      "count": 3
+    },
+    {
+      "rank": 115,
+      "count": 2
+    },
+    {
+      "rank": 116,
+      "count": 1
+    },
+    {
+      "rank": 119,
+      "count": 1
+    },
+    {
+      "rank": 125,
+      "count": 2
+    },
+    {
+      "rank": 128,
+      "count": 1
+    }
+  ],
+  "newNews": [
+    "https://www.bbtwatch.com/en/dj/lspc/125990.html",
+    "https://www.bbtwatch.com/en/dj/125978.html",
+    "https://www.bbtwatch.com/en/dj/125108.html",
+    "https://www.bbtwatch.com/en/dj/124262.html",
+    "https://www.bbtwatch.com/en/dj/124252.html",
+    "https://www.bbtwatch.com/en/dj/123119.html",
+    "https://www.bbtwatch.com/en/dj/116995.html"
+  ],
+  "summary": {
+    "newModels": 4,
+    "scoreChanges": 3,
+    "newMedia": 36,
+    "newNews": 7
+  }
+}
