@@ -7,7 +7,9 @@
       "scoreChanges": 0,
       "newMedia": 0,
       "newNews": 3
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-09-14",
@@ -17,7 +19,9 @@
       "scoreChanges": 0,
       "newMedia": 1,
       "newNews": 1
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-09-07",
@@ -27,7 +31,9 @@
       "scoreChanges": 0,
       "newMedia": 1,
       "newNews": 0
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-08-31",
@@ -37,7 +43,9 @@
       "scoreChanges": 0,
       "newMedia": 0,
       "newNews": 0
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-08-24",
@@ -47,7 +55,9 @@
       "scoreChanges": 0,
       "newMedia": 3,
       "newNews": 0
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-08-17",
@@ -57,7 +67,11 @@
       "scoreChanges": 0,
       "newMedia": 2,
       "newNews": 0
-    }
+    },
+    "newModels": [
+      140
+    ],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-08-13",
@@ -67,7 +81,9 @@
       "scoreChanges": 0,
       "newMedia": 39,
       "newNews": 0
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-08-10",
@@ -77,7 +93,11 @@
       "scoreChanges": 0,
       "newMedia": 0,
       "newNews": 0
-    }
+    },
+    "newModels": [
+      139
+    ],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-08-03",
@@ -87,7 +107,9 @@
       "scoreChanges": 0,
       "newMedia": 0,
       "newNews": 0
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-07-27",
@@ -97,7 +119,9 @@
       "scoreChanges": 0,
       "newMedia": 4,
       "newNews": 0
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-07-20",
@@ -107,7 +131,9 @@
       "scoreChanges": 0,
       "newMedia": 28,
       "newNews": 0
-    }
+    },
+    "newModels": [],
+    "scoreChanges": []
   },
   {
     "stamp": "2026-07-19",
@@ -117,6 +143,26 @@
       "scoreChanges": 3,
       "newMedia": 36,
       "newNews": 7
-    }
+    },
+    "newModels": [
+      135,
+      136,
+      137,
+      138
+    ],
+    "scoreChanges": [
+      {
+        "rank": 111,
+        "delta": 0.52
+      },
+      {
+        "rank": 74,
+        "delta": 0.28
+      },
+      {
+        "rank": 19,
+        "delta": -0.1
+      }
+    ]
   }
 ]
