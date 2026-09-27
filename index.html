@@ -2072,7 +2072,7 @@
   <a href="#contact" class="thumb-cta" id="thumb-cta" inert aria-hidden="true">Fale comigo <span aria-hidden="true">→</span></a>
 
   <!-- ── Mobile Menu ── -->
-  <div id="mobileMenu" style="
+  <div id="mobileMenu" data-lenis-prevent style="
     display:none; position:fixed; inset:0; background:rgba(5,5,5,0.97);
     z-index:999; flex-direction:column; align-items:center; justify-content:safe center; overflow-y:auto; overscroll-behavior:contain; padding:calc(5rem + env(safe-area-inset-top)) 1.5rem calc(2rem + env(safe-area-inset-bottom));
     gap:2.5rem; backdrop-filter:blur(20px);
@@ -3290,7 +3290,10 @@
       setMenu(false);
     }
     // girar/redimensionar para desktop com o menu aberto: restaura scroll e Lenis
-    matchMedia('(max-width: 768px)').addEventListener('change', (e) => { if (!e.matches && menuOpen) setMenu(false); });
+    const mqMenu = matchMedia('(max-width: 768px)');
+    const onMqMenu = (e) => { if (!e.matches && menuOpen) setMenu(false); };
+    // Safari < 14 só tem addListener
+    if (mqMenu.addEventListener) mqMenu.addEventListener('change', onMqMenu); else mqMenu.addListener(onMqMenu);
 
     // ── Intersection Observer ──────────────────────────────
     const revealObs = new IntersectionObserver((entries) => {
