@@ -2009,6 +2009,7 @@
         transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
       }
       .thumb-cta.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+      .thumb-cta.show.reading { opacity: 0; pointer-events: none; transform: translate(-50%, 140%); }
       .thumb-cta:active { transform: translate(-50%, 0) scale(0.97); }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -2016,6 +2017,7 @@
       .thumb-cta { transition: opacity 0.2s; }
     }
   </style>
+  <noscript><style>.reveal, .line-mask, .hero-location, .hero-name, .hero-content * { opacity: 1 !important; transform: none !important; } .line-mask { display: none !important; } #preloader { display: none !important; }</style></noscript>
 </head>
 
 <body>
@@ -2114,15 +2116,15 @@
           </p>
           <div class="hero-stats">
             <div class="hero-stat">
-              <span class="hero-stat-num" data-target="28">0</span>
+              <span class="hero-stat-num" data-target="28">28+</span>
               <span class="hero-stat-label">Anos inovando</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-num" data-target="40">0</span>
+              <span class="hero-stat-num" data-target="40">40+</span>
               <span class="hero-stat-label">Marcas atendidas</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-num" data-target="10">0</span>
+              <span class="hero-stat-num" data-target="10">10+</span>
               <span class="hero-stat-label">Prêmios &amp; distinções</span>
             </div>
           </div>
@@ -3299,6 +3301,8 @@
     });
 
     // ── Counter animation ──────────────────────────────────
+    // O HTML traz o valor final (fallback sem JS); com JS, zera e anima
+    document.querySelectorAll('[data-target]').forEach(el => { el.textContent = '0'; });
     function startCounters() {
       document.querySelectorAll('[data-target]').forEach(el => {
         const target = +el.dataset.target;
@@ -3852,6 +3856,15 @@
     new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.top < 0; update(); }).observe(hero);
     new IntersectionObserver(([e]) => { atContact = e.isIntersecting; update(); }, { rootMargin: '0px 0px -20% 0px' }).observe(contact);
     new MutationObserver(update).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    // Lendo (rolando para baixo) o CTA recolhe para não cobrir texto; volta ao subir ou ao parar
+    let prevY = window.scrollY, idle;
+    window.addEventListener('scroll', () => {
+      const d = window.scrollY - prevY; prevY = window.scrollY;
+      if (d < -2) { cta.classList.remove('reading'); return; }
+      if (d <= 2) return;                             // cauda da inércia do Lenis não conta como leitura
+      cta.classList.add('reading');
+      clearTimeout(idle); idle = setTimeout(() => cta.classList.remove('reading'), 700);
+    }, { passive: true });
   })();
   </script>
 </body>
