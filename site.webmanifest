@@ -1,0 +1,13 @@
+{
+  "name": "Thiago Zeni",
+  "short_name": "Thiago Zeni",
+  "description": "Inovação, estratégia de negócio e inteligência artificial.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    { "src": "/img/icons/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/icons/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
