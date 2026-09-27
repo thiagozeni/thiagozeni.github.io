@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#050505" />
+  <script>try { if (document.referrer && new URL(document.referrer).host === location.host && document.referrer !== location.href) document.documentElement.classList.add("no-preloader"); } catch (e) { }</script>
   <link rel="manifest" href="/site.webmanifest">
   <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
   <title>Thiago Zeni — Inovação, Estratégia & Inteligência Artificial</title>
@@ -1993,6 +1994,7 @@
     }
     .contact-link { min-height: 44px; }
     @view-transition { navigation: auto; }
+    html.no-preloader #preloader { display: none; }
     /* ─── Mobile rodada 2: zona do polegar, hero, reduced-motion ─── */
     .thumb-cta { display: none; }
     @media (max-width: 768px) {
@@ -2014,11 +2016,14 @@
       .thumb-cta:active { transform: translate(-50%, 0) scale(0.97); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .marquee-track, .marquee-track2, .marquee-track3 { animation: none !important; }
+      .marquee-track, .marquee-track2, .marquee-track3 { animation: none !important; flex-wrap: wrap; justify-content: center; gap: 0.75rem; transform: none !important; }
+      .marquee-row { overflow: visible; -webkit-mask-image: none; mask-image: none; margin-bottom: 0.75rem; }
+      .brand-chip.dup { display: none; }
+      .brand-chip { white-space: normal; flex-shrink: 1; }
       .thumb-cta { transition: opacity 0.2s; }
     }
   </style>
-  <noscript><style>.reveal, .line-mask, .hero-location, .hero-name, .hero-content * { opacity: 1 !important; transform: none !important; } .line-mask { display: none !important; } #preloader { display: none !important; }</style></noscript>
+  <noscript><style>.contact-form { display: none !important; } .exp-item, .award-card { opacity: 1 !important; transform: none !important; } .reveal, .line-mask, .hero-location, .hero-name, .hero-content * { opacity: 1 !important; transform: none !important; } .line-mask { display: none !important; } #preloader { display: none !important; }</style></noscript>
 </head>
 
 <body>
@@ -2064,12 +2069,12 @@
     <a href="#contact" class="nav-cta">Fale comigo</a>
     <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></div>
   </nav>
-  <a href="#contact" class="thumb-cta" id="thumb-cta">Fale comigo <span aria-hidden="true">→</span></a>
+  <a href="#contact" class="thumb-cta" id="thumb-cta" inert aria-hidden="true">Fale comigo <span aria-hidden="true">→</span></a>
 
   <!-- ── Mobile Menu ── -->
   <div id="mobileMenu" style="
     display:none; position:fixed; inset:0; background:rgba(5,5,5,0.97);
-    z-index:999; flex-direction:column; align-items:center; justify-content:center;
+    z-index:999; flex-direction:column; align-items:center; justify-content:safe center; overflow-y:auto; overscroll-behavior:contain; padding:calc(5rem + env(safe-area-inset-top)) 1.5rem calc(2rem + env(safe-area-inset-bottom));
     gap:2.5rem; backdrop-filter:blur(20px);
   ">
     <a href="#about" onclick="closeMobile()"
@@ -2458,19 +2463,19 @@
           <div class="brand-chip"><span class="brand-chip-name">Robust</span></div>
           <div class="brand-chip"><span class="brand-chip-name">RBA+</span></div>
           <div class="brand-chip"><span class="brand-chip-name">EAT+KITCHEN</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Stihl</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Harman AL</span><span class="brand-chip-sub">JBL · AKG · Harman Kardon</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Mormaii</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Via Marte</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Luz da Lua</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Klin</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Móveis Saccaro</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Minelab</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Tri-Jóias</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Gedore</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Robust</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">RBA+</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">EAT+KITCHEN</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Stihl</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Harman AL</span><span class="brand-chip-sub">JBL · AKG · Harman Kardon</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Mormaii</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Via Marte</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Luz da Lua</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Klin</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Móveis Saccaro</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Minelab</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Tri-Jóias</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Gedore</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Robust</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">RBA+</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">EAT+KITCHEN</span></div>
         </div>
       </div>
       <div class="marquee-row">
@@ -2485,16 +2490,16 @@
           <div class="brand-chip"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Grupo K1</span><span class="brand-chip-sub">Kappesberg · Idélli · UZ</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Kildare</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Unicasa</span><span class="brand-chip-sub">Favorita · Dellano · New · Casa Brasileira</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Bontempo</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Florense</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Dakota</span><span class="brand-chip-sub">Tanara · Campesi · Kolosh</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Coca-Cola Clothing</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Lojas Colombo</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Lojas Lebes</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo K1</span><span class="brand-chip-sub">Kappesberg · Idélli · UZ</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Kildare</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Unicasa</span><span class="brand-chip-sub">Favorita · Dellano · New · Casa Brasileira</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Bontempo</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Florense</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Dakota</span><span class="brand-chip-sub">Tanara · Campesi · Kolosh</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Coca-Cola Clothing</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Lojas Colombo</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Lojas Lebes</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo K1</span><span class="brand-chip-sub">Kappesberg · Idélli · UZ</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Kildare</span></div>
         </div>
       </div>
       <div class="marquee-row">
@@ -2510,17 +2515,17 @@
           <div class="brand-chip"><span class="brand-chip-name">Calçados Bibi</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Freeway</span></div>
           <div class="brand-chip"><span class="brand-chip-name">Para-Evento</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Sicred</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Ford Motorcraft</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Shell</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Hercosul</span><span class="brand-chip-sub">Biofresh · Three Dogs · Three Cats · Primocão e Primogato</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Universidade Feevale</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Cobasi</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Pamplona Alimentos</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Calçados Bibi</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Freeway</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Para-Evento</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Sicred</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Ford Motorcraft</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Shell</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Hercosul</span><span class="brand-chip-sub">Biofresh · Three Dogs · Three Cats · Primocão e Primogato</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Universidade Feevale</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Cobasi</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Pamplona Alimentos</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Calçados Bibi</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Freeway</span></div>
+          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Para-Evento</span></div>
         </div>
       </div>
     </div>
@@ -2908,7 +2913,7 @@
       <div class="cases-grid" id="lab-coverflow">
 
         <a href="https://3contratodos.com" target="_blank" rel="noopener" class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/3contratodos.jpg" srcset="/img/lab/m/3contratodos.jpg 800w, /img/lab/3contratodos.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="3 Contra Todos — beat'em up do Werdum" loading="lazy" style="object-position:center 40%"></div>
+          <div class="lab-thumb"><img src="/img/lab/3contratodos.jpg" srcset="/img/lab/m/3contratodos.jpg 800w, /img/lab/3contratodos.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="3 Contra Todos — beat'em up do Werdum" loading="lazy" style="object-position:center 40%"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">app stores · web</span>
@@ -2926,7 +2931,7 @@
         </a>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/avatar3d.jpg" srcset="/img/lab/m/avatar3d.jpg 800w, /img/lab/avatar3d.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Esteira de três fotos para avatar 3D" loading="lazy" style="object-position:center"></div>
+          <div class="lab-thumb"><img src="/img/lab/avatar3d.jpg" srcset="/img/lab/m/avatar3d.jpg 800w, /img/lab/avatar3d.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Esteira de três fotos para avatar 3D" loading="lazy" style="object-position:center"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">visão computacional</span>
@@ -2943,7 +2948,7 @@
         </div>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/radar.jpg" srcset="/img/lab/m/radar.jpg 800w, /img/lab/radar.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Radar de IA" loading="lazy"></div>
+          <div class="lab-thumb"><img src="/img/lab/radar.jpg" srcset="/img/lab/m/radar.jpg 800w, /img/lab/radar.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Radar de IA" loading="lazy"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">ferramenta própria</span>
@@ -2961,7 +2966,7 @@
         </div>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/video-editor.jpg" srcset="/img/lab/m/video-editor.jpg 800w, /img/lab/video-editor.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Pipeline de edição de vídeo em oito estágios" loading="lazy" style="object-position:center"></div>
+          <div class="lab-thumb"><img src="/img/lab/video-editor.jpg" srcset="/img/lab/m/video-editor.jpg 800w, /img/lab/video-editor.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Pipeline de edição de vídeo em oito estágios" loading="lazy" style="object-position:center"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">edição com IA</span>
@@ -2978,7 +2983,7 @@
         </div>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/ferramental.jpg" srcset="/img/lab/m/ferramental.jpg 800w, /img/lab/ferramental.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Ferramental de IA" loading="lazy"></div>
+          <div class="lab-thumb"><img src="/img/lab/ferramental.jpg" srcset="/img/lab/m/ferramental.jpg 800w, /img/lab/ferramental.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Ferramental de IA" loading="lazy"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">infraestrutura própria</span>
@@ -2996,7 +3001,7 @@
         </div>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/prospeccao.jpg" srcset="/img/lab/m/prospeccao.jpg 800w, /img/lab/prospeccao.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Radar de prospecção B2B com dados públicos" loading="lazy" style="object-position:center"></div>
+          <div class="lab-thumb"><img src="/img/lab/prospeccao.jpg" srcset="/img/lab/m/prospeccao.jpg 800w, /img/lab/prospeccao.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Radar de prospecção B2B com dados públicos" loading="lazy" style="object-position:center"></div>
           <div class="cgc-top">
             <span class="cgc-year">Sob medida</span>
             <span class="cgc-agency">inteligência comercial</span>
@@ -3013,7 +3018,7 @@
         </div>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/concierge.jpg" srcset="/img/lab/m/concierge.jpg 800w, /img/lab/concierge.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Concierge Gastronômico" loading="lazy" style="object-position:center"></div>
+          <div class="lab-thumb"><img src="/img/lab/concierge.jpg" srcset="/img/lab/m/concierge.jpg 800w, /img/lab/concierge.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Concierge Gastronômico" loading="lazy" style="object-position:center"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">setor gastronômico</span>
@@ -3030,7 +3035,7 @@
         </div>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/painel.jpg" srcset="/img/lab/m/painel.jpg 800w, /img/lab/painel.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Painel Esportivo" loading="lazy" style="object-position:center 38%"></div>
+          <div class="lab-thumb"><img src="/img/lab/painel.jpg" srcset="/img/lab/m/painel.jpg 800w, /img/lab/painel.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Painel Esportivo" loading="lazy" style="object-position:center 38%"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">sports bar</span>
@@ -3046,7 +3051,7 @@
         </div>
 
         <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/gestao.jpg" srcset="/img/lab/m/gestao.jpg 800w, /img/lab/gestao.jpg 1400w" sizes="(max-width: 767px) 92vw, 45vw" alt="Gestão Imobiliária" loading="lazy" style="object-position:top"></div>
+          <div class="lab-thumb"><img src="/img/lab/gestao.jpg" srcset="/img/lab/m/gestao.jpg 800w, /img/lab/gestao.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Gestão Imobiliária" loading="lazy" style="object-position:top"></div>
           <div class="cgc-top">
             <span class="cgc-year">Autoral</span>
             <span class="cgc-agency">gestão patrimonial</span>
@@ -3284,6 +3289,8 @@
     function closeMobile() {
       setMenu(false);
     }
+    // girar/redimensionar para desktop com o menu aberto: restaura scroll e Lenis
+    matchMedia('(max-width: 768px)').addEventListener('change', (e) => { if (!e.matches && menuOpen) setMenu(false); });
 
     // ── Intersection Observer ──────────────────────────────
     const revealObs = new IntersectionObserver((entries) => {
@@ -3465,6 +3472,7 @@
         clone.muted = true;
         clone.setAttribute('playsinline', '');
         clone.setAttribute('preload', 'auto');
+        clone.poster = heroVideo.poster;
         clone.className = 'hero-video-clone';
         heroVideo.parentNode.appendChild(clone);
 
@@ -3474,15 +3482,17 @@
           if (xfading) return;
           xfading = true;
           to.currentTime = 0;
-          to.play().catch(() => { });
-          to.style.opacity = '1';
-          from.style.opacity = '0';
-          setTimeout(() => {
-            from.pause();
-            from.currentTime = 0;
-            a = to; b = from;
-            xfading = false;
-          }, FADE * 1000);
+          // só troca quando o outro buffer realmente tocar; se falhar, o atual segue em loop
+          to.play().then(() => {
+            to.style.opacity = '1';
+            from.style.opacity = '0';
+            setTimeout(() => {
+              from.pause();
+              from.currentTime = 0;
+              a = to; b = from;
+              xfading = false;
+            }, FADE * 1000);
+          }).catch(() => { from.currentTime = 0; from.play().catch(() => { }); xfading = false; });
         }
 
         function onHeroTimeUpdate() {
@@ -3850,9 +3860,13 @@
     const contact = document.getElementById('contact');
     if (!cta || !hero || !contact || !('IntersectionObserver' in window)) return;
     let pastHero = false, atContact = false;
+    // invisível = fora do Tab e do leitor de tela
+    const sync = () => { const on = cta.classList.contains('show') && !cta.classList.contains('reading'); cta.inert = !on; if (on) cta.removeAttribute('aria-hidden'); else cta.setAttribute('aria-hidden', 'true'); };
+    sync();
     const update = () => {
       const menuOpen = document.body.classList.contains('menu-open');
       cta.classList.toggle('show', pastHero && !atContact && !menuOpen);
+      sync();
     };
     new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.top < 0; update(); }).observe(hero);
     new IntersectionObserver(([e]) => { atContact = e.isIntersecting; update(); }, { rootMargin: '0px 0px -20% 0px' }).observe(contact);
@@ -3861,10 +3875,10 @@
     let prevY = window.scrollY, idle;
     window.addEventListener('scroll', () => {
       const d = window.scrollY - prevY; prevY = window.scrollY;
-      if (d < -2) { cta.classList.remove('reading'); return; }
+      if (d < -2) { cta.classList.remove('reading'); sync(); return; }
       if (d <= 2) return;                             // cauda da inércia do Lenis não conta como leitura
-      cta.classList.add('reading');
-      clearTimeout(idle); idle = setTimeout(() => cta.classList.remove('reading'), 700);
+      cta.classList.add('reading'); sync();
+      clearTimeout(idle); idle = setTimeout(() => { cta.classList.remove('reading'); sync(); }, 700);
     }, { passive: true });
   })();
   </script>
