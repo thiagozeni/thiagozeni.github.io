@@ -1,16 +1,126 @@
 {
-  "updatedAt": "2026-09-27",
+  "updatedAt": "2026-09-28",
   "items": [
     {
-      "id": "2026-09-25-rcf-datejust-two-tone-branco-2026",
+      "id": "2026-09-27-rich-126610lv-vs-gen-vsf",
+      "date": "2026-09-27",
+      "kind": "comparativo",
+      "tone": "positivo",
+      "brand": "Rolex",
+      "model": "Submariner Date 126610LV",
+      "factory": "RICH",
+      "title": "Dono de genuíno e de 6 VSF acha a RICH 126610LV melhor no vidro e no mostrador",
+      "summary": "O membro diz que o vidro da RICH é mais claro que o do seu genuíno e o da VSF, e que o mostrador não tem o afundamento de 'tensão superficial' ao redor dos ponteiros. Em vídeo comparativo, a lupa da data com cerca de 2,5x foi considerada correta, contra cerca de 2,0x, fraca, na outra peça.",
+      "catalogRank": 2,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/rich-submariner.11050731/",
+          "title": "RICH submariner",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-26-erf-speedmaster-modulo-st19",
+      "date": "2026-09-26",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Omega",
+      "model": "Speedmaster",
+      "factory": "ERF",
+      "title": "Relojoeiro lista falhas no novo Speedmaster da ERF",
+      "summary": "Um relojoeiro chinês aponta pinhões ocultos finos, espessura do fundo diferente do genuíno, folga nos ponteiros do segundos e do minutos do cronógrafo, e subdials das 3h e 6h só decorativos após ajuste. Também cita pulseira e fecho errados, vidro do fundo que não é safira e QC irregular do movimento. Respostas mencionam travadas e esperam uma V2.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/erf-releasing-new-omega-speedmasters.11049455/",
+          "title": "ERF Releasing New Omega Speedmasters!",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-26-ppm-aquanaut-5261-v2",
+      "date": "2026-09-26",
+      "kind": "versao",
+      "tone": "neutro",
+      "brand": "Patek Philippe",
+      "model": "Aquanaut 5261",
+      "factory": "PPM",
+      "title": "PPM Aquanaut 5261 V2 ganha peso de 128 g, mas o extra está na pulseira",
+      "summary": "A V2 é anunciada com 128 g para imitar o peso do genuíno. Um comprador com fotos afirma que todo o peso extra está na pulseira, e não na caixa ou no movimento.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/ppm-aquanaut-5261-release-gain-weight-128g.11041491/",
+          "title": "PPM Aquanaut 5261 Release: Gain Weight 128g",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-26-rich-datejust-41",
+      "date": "2026-09-26",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Datejust 41",
+      "factory": "RICH",
+      "title": "RICH lança o Datejust 41; informações ainda escassas",
+      "summary": "A RICH acabou de lançar o Datejust 41 e há pouca informação. Membros comparam com a ARF, que usaria a caixa Clean com o calibre DD3235. O contato do vendedor diz que o 36mm não está nos planos por ora.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/rich-41mm-datejust-first-look.11051471/",
+          "title": "RICH 41mm DateJust First Look",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-25-zf-ap-15300",
+      "date": "2026-09-25",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak 15300 (39mm)",
+      "factory": "ZF",
+      "title": "ZF lança o Royal Oak 15300 e as primeiras fotos de QC do mostrador preto saem",
+      "summary": "A thread do lançamento foi aberta em 11/09. Na semana de 23 a 26/09 surgiram as primeiras fotos de QC do mostrador preto, com parafusos do bezel que 'podem melhorar'. O branco segue em pré-venda, com compradores aguardando QC. Membros o veem como mais vestível que o 15500.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/zf-launches-15300.11052725/",
+          "title": "ZF launches 15300",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-25-rcf-datejust-two-tone-branco",
       "date": "2026-09-25",
       "kind": "lancamento",
       "tone": "neutro",
       "brand": "Rolex",
-      "model": "Datejust 36/41 Two-Tone mostrador branco (lançamento Rolex 2026)",
-      "factory": "RCF",
-      "title": "RC Factory lança o Datejust two-tone de mostrador branco de 2026 em versão pesada",
-      "summary": "A RC clonou o Datejust two-tone de mostrador branco lançado pela Rolex em 2026, em 36 e 41 mm, com peso de até 149,1 g e calibre DD3235 regulado (sem free-sprung). O blog observa que os Datejust de RC, VS, Clean Plus, GS, AR, QF e Gold estão praticamente iguais entre si.",
+      "model": "Datejust two-tone mostrador branco (2026, 36/41mm)",
+      "factory": "RC Factory",
+      "title": "RC Factory clona o Datejust two-tone de mostrador branco de 2026",
+      "summary": "É uma versão com peso aumentado (149,1 g), em 36 e 41 mm, com calibre DD3235 sem free-sprung. O blog observa que muitas fábricas fazem Datejusts quase idênticos e que revendedores costumam vender Datejust de outras fábricas como se fosse da VS.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -46,15 +156,103 @@
       ]
     },
     {
-      "id": "2026-09-21-ppf-mks-vc-222-comparativo",
+      "id": "2026-09-23-p1-5990-5968",
+      "date": "2026-09-23",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "Patek Philippe",
+      "model": "Nautilus 5990 e 5968",
+      "factory": "P1",
+      "title": "P1 Factory lança os cronógrafos Nautilus 5990 e 5968",
+      "summary": "A P1 anunciou os dois cronógrafos Nautilus. Membros duvidam do calibre (Miyota, 7750 modificado ou 4801) e presumem que o fuso horário do 5990 não funciona. O subdial das 6h só andaria com o cronógrafo ligado, como no genuíno, segundo quem manuseou o P1 5980.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/new-release-p1-factory-5990-and-5968.11053720/",
+          "title": "[NEW RELEASE] P1 FACTORY 5990 and 5968",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-multi-126610-ranking-2026",
+      "date": "2026-09-21",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Submariner Date 126610",
+      "factory": "RICH/VSF/ARF/CPLUS/RWF/QF",
+      "title": "Review em equipe pontua 7 versões da Submariner 126610 contra o genuíno",
+      "summary": "Três avaliadores deram notas de 340 pontos (caixa, bezel, data, mostrador, ponteiros, movimento, coroa, pulseira). O genuíno ficou em primeiro, RICH e VSF foram as mais próximas e a QF ficou por último em todas as listas. Um avaliador deu à QF a pior nota em caixa e bezel.",
+      "catalogRank": 1,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/review-who-has-the-best-sub-2026-edition-ref-126610.11046437/",
+          "title": "Review: Who has the best sub? 2026 Edition Ref. 126610",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-parmi-rm55-01",
+      "date": "2026-09-21",
+      "kind": "comparativo",
+      "tone": "positivo",
+      "brand": "Richard Mille",
+      "model": "RM 55-01",
+      "factory": "Parmi",
+      "title": "Parmi RM55-01 é comparada a duas outras versões",
+      "summary": "A versão Parmi tem caixa, gravações e movimento elogiados, e parafusos em titânio real. A versão intermediária tem caixa afiada demais, fonte e gravações erradas e coroa grande. A versão econômica tem movimento falso (quartzo) e acabamento plástico. Um respondente discorda de 'indistinguível do genuíno' e estima a Parmi em cerca de 92%.",
+      "catalogRank": 122,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/new-2026-parmi-rm55%E2%80%9101-is-here.11046986/",
+          "title": "New 2026 Parmi RM55-01 is Here",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-intime-gmt-pepsi-defeito",
+      "date": "2026-09-21",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "GMT-Master II Pepsi",
+      "factory": "",
+      "title": "GMT Pepsi para o segundos após 6 semanas e o movimento se desloca na caixa",
+      "summary": "O comprador relata que o segundos parou após seis semanas de uso diário. Ao puxar a coroa totalmente, o movimento se mexia dentro da caixa. O reparo enfrentou recusa na alfândega chinesa e novo atraso. Um respondente lembra que devolver para reparo dobra os riscos.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/intime-sells-me-a-defective-watch.11051106/",
+          "title": "InTime sells me a defective watch",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-ppf-mks-vc-222",
       "date": "2026-09-21",
       "kind": "comparativo",
       "tone": "negativo",
       "brand": "Vacheron Constantin",
       "model": "Historiques 222 (4200H, azul)",
       "factory": "PPF × MKS",
-      "title": "VC 222: PPF × MKS mostra que nenhum dos dois está correto",
-      "summary": "No comparativo, a PPF ainda tem a fonte da data com o formato errado e lume levemente rosado. A MKS tem o eixo central dos ponteiros bem maior que o do genuíno e lume esverdeado. As duas usam o mesmo movimento base com placas extras, que não é um super clone de verdade.",
+      "title": "VC 222: nem a PPF nem a MKS acertam por completo",
+      "summary": "A PPF deixou o lume menos rosado e mudou a fonte da data, mas o formato dos números continua errado. A MKS tem o eixo central dos ponteiros bem maior que o original e lume esverdeado. As duas usam o mesmo calibre base com placas extras, que não é um clone verdadeiro, e o logo da Cruz de Malta na fivela também difere.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -90,15 +288,44 @@
       ]
     },
     {
-      "id": "2026-09-14-a7-v7-renascimento",
+      "id": "2026-09-15-umi-5712-free-sprung",
+      "date": "2026-09-15",
+      "kind": "lancamento",
+      "tone": "positivo",
+      "brand": "Patek Philippe",
+      "model": "Nautilus 5712/1A (Fase da Lua)",
+      "factory": "UMI",
+      "title": "UMI lança o Nautilus 5712 com calibre 240 free-sprung de verdade",
+      "summary": "O calibre 240 é free-sprung de fato, com quatro massas no balanço, e a caixa é usinada em CNC. O degradê azul do mostrador ficou melhor que o da WS. O resenhista aponta que as pontas das alças ficaram afiadas demais e que ainda não houve comparação com o genuíno.",
+      "catalogRank": 61,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.menwatchesreview.com/2026/09/15/umi-factory-replica-patek-philippe-nautilus-5712-with-free-sprung-240-movement/",
+          "title": "Umi Factory Replica Patek Philippe Nautilus 5712 with Free-Sprung 240 Movement",
+          "site": "menwatchesreview.com",
+          "type": "blog",
+          "bias": "enthusiast"
+        },
+        {
+          "url": "https://andiotwatches.vip/",
+          "title": "Andiot Watches — New Products (UMI 5712 azul, 16/09)",
+          "site": "andiotwatches.vip",
+          "type": "reseller",
+          "bias": "reseller"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-14-a7-v7-retorno",
       "date": "2026-09-14",
       "kind": "fabrica",
       "tone": "neutro",
-      "brand": "",
-      "model": "",
-      "factory": "A7 (suposta V7)",
-      "title": "Surge a A7, anunciada como o retorno da V7 (IWC)",
-      "summary": "A nova fábrica A7 é divulgada como o retorno da V7, fechada após as batidas policiais do fim de 2025. Os primeiros modelos são o IWC Ingenieur e o Mark de titânio. Os blogs independentes dizem haver alguma relação com a V7, mas não confirmam a ligação e notam que os posts de divulgação dos revendedores são quase idênticos.",
+      "brand": "IWC",
+      "model": "Ingenieur",
+      "factory": "A7",
+      "title": "A7 surge dizendo ser a V7, e o Ingenieur mostra diferenças",
+      "summary": "A nova A7 diz ser a V7, especialista em IWC que fechou depois da batida policial no fim de 2025. MZ e G7 já tinham dito o mesmo antes. Na comparação do Ingenieur, a impressão do \"U\", do \"INGENIEUR\", do \"SWISS MADE\", da data e das gravações do fecho saiu diferente e menos precisa que no V7 original. Um segundo blog trata o suposto retorno com ceticismo.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -115,13 +342,6 @@
           "site": "wristwatchspot.com",
           "type": "blog",
           "bias": "enthusiast"
-        },
-        {
-          "url": "https://vsfwatcheshub.com/real-stories/v7-factory-is-back-as-a7-iwc-models/",
-          "title": "V7 Factory Is Back as A7 — Every IWC Model They're Making Again",
-          "site": "vsfwatcheshub.com",
-          "type": "reseller",
-          "bias": "reseller"
         }
       ]
     },

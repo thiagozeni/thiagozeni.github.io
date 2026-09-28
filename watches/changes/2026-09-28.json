@@ -1,0 +1,26 @@
+{
+  "stamp": "2026-09-28",
+  "previousStamp": "2026-09-21",
+  "newModels": [
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149
+  ],
+  "removedModels": [],
+  "scoreChanges": [],
+  "confidenceChanges": [],
+  "newMedia": [],
+  "newNews": [],
+  "summary": {
+    "newModels": 9,
+    "scoreChanges": 0,
+    "newMedia": 0,
+    "newNews": 0
+  }
+}
