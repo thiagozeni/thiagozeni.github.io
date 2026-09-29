@@ -1,0 +1,64 @@
+{
+  "stamp": "2026-09-29",
+  "previousStamp": "2026-09-28",
+  "newModels": [],
+  "removedModels": [],
+  "scoreChanges": [
+    {
+      "rank": 12,
+      "from": 6.5,
+      "to": 6.72,
+      "delta": 0.22
+    },
+    {
+      "rank": 61,
+      "from": 7.7,
+      "to": 7.88,
+      "delta": 0.18
+    }
+  ],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 141,
+      "count": 5
+    },
+    {
+      "rank": 142,
+      "count": 1
+    },
+    {
+      "rank": 143,
+      "count": 6
+    },
+    {
+      "rank": 144,
+      "count": 6
+    },
+    {
+      "rank": 145,
+      "count": 5
+    },
+    {
+      "rank": 146,
+      "count": 5
+    },
+    {
+      "rank": 147,
+      "count": 4
+    },
+    {
+      "rank": 148,
+      "count": 4
+    }
+  ],
+  "newNews": [
+    "https://www.bbtwatch.com/en/dj/109067.html"
+  ],
+  "summary": {
+    "newModels": 0,
+    "scoreChanges": 2,
+    "newMedia": 36,
+    "newNews": 1
+  }
+}

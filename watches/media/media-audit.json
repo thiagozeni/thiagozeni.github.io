@@ -1,64 +1,22 @@
 {
-  "generatedAt": "2026-09-28T23:36:17.700Z",
-  "totalImages": 1511,
+  "generatedAt": "2026-09-29T00:52:32.255Z",
+  "totalImages": 1547,
   "summary": {
     "models": 149,
-    "verified": 127,
+    "verified": 134,
     "strong": 13,
     "weak": 0,
-    "rejected": 0,
-    "missing": 9,
-    "conflictsDiscarded": 334,
-    "coveragePct": 94
+    "rejected": 1,
+    "missing": 1,
+    "conflictsDiscarded": 342,
+    "coveragePct": 99
   },
   "backlog": [
-    {
-      "rank": 141,
-      "model": "Pilot's Watch Chronograph 41 (IW388104, Verde, bracelete)",
-      "brand": "IWC",
-      "state": "sem-imagem"
-    },
-    {
-      "rank": 142,
-      "model": "Black Bay Pro GMT 79470 (39mm)",
-      "brand": "Tudor",
-      "state": "sem-imagem"
-    },
-    {
-      "rank": 143,
-      "model": "Grand Complications 6102P Celestial (Platina)",
-      "brand": "Patek Philippe",
-      "state": "sem-imagem"
-    },
-    {
-      "rank": 144,
-      "model": "Yacht-Master 40 126655 (Everose, Oysterflex)",
-      "brand": "Rolex",
-      "state": "sem-imagem"
-    },
-    {
-      "rank": 145,
-      "model": "Oyster Perpetual 41 124300",
-      "brand": "Rolex",
-      "state": "sem-imagem"
-    },
-    {
-      "rank": 146,
-      "model": "Daytona 126503 (Rolesor Amarelo)",
-      "brand": "Rolex",
-      "state": "sem-imagem"
-    },
     {
       "rank": 147,
       "model": "Royal Oak Chronograph 38mm 26715 (Azul)",
       "brand": "Audemars Piguet",
-      "state": "sem-imagem"
-    },
-    {
-      "rank": 148,
-      "model": "Royal Oak 37mm 15450 (Azul)",
-      "brand": "Audemars Piguet",
-      "state": "sem-imagem"
+      "state": "rejeitado"
     },
     {
       "rank": 149,

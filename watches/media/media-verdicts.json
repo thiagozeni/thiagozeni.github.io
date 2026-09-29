@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-07-08T11:14:16.134Z",
   "method": "visual-review-subagents + deep-per-image (etapa4)",
-  "reviewed": 140,
+  "reviewed": 148,
   "verdicts": {
     "Seamaster Diver 300M (Preto)": {
       "rank": 12,
@@ -1384,14 +1384,14 @@
       "rank": 3,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "As 4 fotos são só do movimento (cal. 4131, rotor 'DAYTONA'). Nenhuma mostra o mostrador, então não dá para ver a cor panda.",
+      "reasoning": "As 4 fotos mostram só o movimento cal. 4131 (Daytona). Nenhum mostrador visível para confirmar o Panda branco",
       "candidateIds": [
         "3-superluxuryreps-1b05ko8",
         "3-superluxuryreps-8y00yq",
         "3-superluxuryreps-10p4yaq",
         "3-superluxuryreps-6t0xic"
       ],
-      "reviewedAt": "2026-09-28T23:36:17.452Z"
+      "reviewedAt": "2026-09-29T00:51:57.995Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1404,7 +1404,7 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-09-28T23:36:17.455Z"
+      "reviewedAt": "2026-09-29T00:51:57.997Z"
     },
     "Royal Oak 15500ST": {
       "rank": 110,
@@ -1417,7 +1417,7 @@
         "f-110-bd3895d0",
         "f-110-c693e956"
       ],
-      "reviewedAt": "2026-09-28T23:36:17.455Z"
+      "reviewedAt": "2026-09-29T00:51:57.997Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -1430,7 +1430,108 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-09-28T23:36:17.455Z"
+      "reviewedAt": "2026-09-29T00:51:57.997Z"
+    },
+    "Pilot's Watch Chronograph 41 (IW388104, Verde, bracelete)": {
+      "rank": 141,
+      "verdict": "confirmado",
+      "bestImageId": "pt-141-1",
+      "reasoning": "Cronógrafo piloto IWC, mostrador verde, dia-data às 3h, bracelete de aço. Bate com o IW388104",
+      "candidateIds": [
+        "pt-141-4",
+        "pt-141-3",
+        "pt-141-2",
+        "pt-141-1"
+      ],
+      "reviewedAt": "2026-09-29T00:51:57.997Z"
+    },
+    "Black Bay Pro GMT 79470 (39mm)": {
+      "rank": 142,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-black-bay-pro-gmt-79470-39mm-1",
+      "reasoning": "Tudor BB Pro: bisel 24h em aço, mostrador preto, ponteiro GMT amarelo, bracelete de aço",
+      "candidateIds": [
+        "hunt-black-bay-pro-gmt-79470-39mm-1"
+      ],
+      "reviewedAt": "2026-09-29T00:51:57.997Z"
+    },
+    "Grand Complications 6102P Celestial (Platina)": {
+      "rank": 143,
+      "verdict": "confirmado",
+      "bestImageId": "pt-143-1",
+      "reasoning": "Patek Celestial 6102 com mapa celeste azul, lua e anel de data azul, caixa branca. Metal (platina vs aço) não é visível.",
+      "candidateIds": [
+        "pt-143-4",
+        "pt-143-3",
+        "pt-143-2",
+        "pt-143-1"
+      ],
+      "reviewedAt": "2026-09-29T00:52:32.152Z"
+    },
+    "Yacht-Master 40 126655 (Everose, Oysterflex)": {
+      "rank": 144,
+      "verdict": "confirmado",
+      "bestImageId": "pt-144-1",
+      "reasoning": "Yacht-Master em ouro rosa, luneta cerâmica preta fosca, mostrador preto, pulseira Oysterflex. Corresponde ao 126655.",
+      "candidateIds": [
+        "pt-144-4",
+        "pt-144-3",
+        "pt-144-2",
+        "pt-144-1"
+      ],
+      "reviewedAt": "2026-09-29T00:52:32.152Z"
+    },
+    "Oyster Perpetual 41 124300": {
+      "rank": 145,
+      "verdict": "confirmado",
+      "bestImageId": "pt-145-1",
+      "reasoning": "Rolex Oyster Perpetual 41 em aço, luneta lisa, mostrador azul-turquesa, pulseira Oyster. Corresponde ao 124300.",
+      "candidateIds": [
+        "pt-145-4",
+        "pt-145-3",
+        "pt-145-2",
+        "pt-145-1"
+      ],
+      "reviewedAt": "2026-09-29T00:52:32.152Z"
+    },
+    "Daytona 126503 (Rolesor Amarelo)": {
+      "rank": 146,
+      "verdict": "confirmado",
+      "bestImageId": "pt-146-1",
+      "reasoning": "Daytona em aço e ouro amarelo, luneta de ouro com taquímetro, mostrador branco com subdials dourados. Corresponde ao 126503.",
+      "candidateIds": [
+        "pt-146-4",
+        "pt-146-3",
+        "pt-146-2",
+        "pt-146-1"
+      ],
+      "reviewedAt": "2026-09-29T00:52:32.152Z"
+    },
+    "Royal Oak Chronograph 38mm 26715 (Azul)": {
+      "rank": 147,
+      "verdict": "rejeitado",
+      "bestImageId": null,
+      "reasoning": "Todas as fotos são de Rolex GMT-Master II Root Beer (126715), não do AP Royal Oak Chrono azul.",
+      "candidateIds": [
+        "pt-147-4",
+        "pt-147-3",
+        "pt-147-2",
+        "pt-147-1"
+      ],
+      "reviewedAt": "2026-09-29T00:52:32.152Z"
+    },
+    "Royal Oak 37mm 15450 (Azul)": {
+      "rank": 148,
+      "verdict": "confirmado",
+      "bestImageId": "pt-148-1",
+      "reasoning": "AP Royal Oak em aço, mostrador azul Grande Tapisserie, data às 3h, sem segundos centrais extras. Corresponde ao 15450.",
+      "candidateIds": [
+        "pt-148-4",
+        "pt-148-3",
+        "pt-148-2",
+        "pt-148-1"
+      ],
+      "reviewedAt": "2026-09-29T00:52:32.152Z"
     }
   }
 }
