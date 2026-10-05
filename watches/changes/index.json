@@ -1,5 +1,17 @@
 [
   {
+    "stamp": "2026-10-05",
+    "previousStamp": "2026-09-29",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 0,
+      "newMedia": 2,
+      "newNews": 0
+    },
+    "newModels": [],
+    "scoreChanges": []
+  },
+  {
     "stamp": "2026-09-29",
     "previousStamp": "2026-09-28",
     "summary": {

@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-07-08T11:14:16.134Z",
   "method": "visual-review-subagents + deep-per-image (etapa4)",
-  "reviewed": 148,
+  "reviewed": 149,
   "verdicts": {
     "Seamaster Diver 300M (Preto)": {
       "rank": 12,
@@ -508,16 +508,16 @@
     },
     "Submariner 114060 No-Date": {
       "rank": 51,
-      "verdict": "incerto",
+      "verdict": "rejeitado",
       "bestImageId": null,
-      "reasoning": "Submariner de aço, sem data, mostrador preto, bezel cerâmica preta. O texto '1000ft=300m' parece do 124060, então não dá para afirmar o 114060.",
+      "reasoning": "Sub preto sem data, mas com coroa entre SWISS e MADE às 6h e alças finas: é o 124060, não o 114060",
       "candidateIds": [
         "cl-51-4",
         "cl-51-3",
         "cl-51-2",
         "cl-51-1"
       ],
-      "reviewedAt": "2026-09-28T23:36:17.455Z"
+      "reviewedAt": "2026-10-05T18:20:55.745Z"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
@@ -680,7 +680,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-09-28T23:36:17.455Z"
+      "reviewedAt": "2026-10-05T18:20:55.745Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1380,58 +1380,6 @@
       ],
       "reviewedAt": "2026-08-24T10:01:33.316Z"
     },
-    "Daytona 126500LN (Panda Novo)": {
-      "rank": 3,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "As 4 fotos mostram só o movimento cal. 4131 (Daytona). Nenhum mostrador visível para confirmar o Panda branco",
-      "candidateIds": [
-        "3-superluxuryreps-1b05ko8",
-        "3-superluxuryreps-8y00yq",
-        "3-superluxuryreps-10p4yaq",
-        "3-superluxuryreps-6t0xic"
-      ],
-      "reviewedAt": "2026-09-29T00:51:57.995Z"
-    },
-    "GMT-Master II 126711CHNR (Root Beer)": {
-      "rank": 30,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
-      "candidateIds": [
-        "30-superclonewatches-16pf706",
-        "30-superclonewatches-134h2bh",
-        "30-superclonewatches-1tbxoft",
-        "30-superluxuryreps-1peyjoj"
-      ],
-      "reviewedAt": "2026-09-29T00:51:57.997Z"
-    },
-    "Royal Oak 15500ST": {
-      "rank": 110,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Audemars Piguet",
-      "candidateIds": [
-        "f-110-0497546e",
-        "f-110-f99d5a51",
-        "f-110-bd3895d0",
-        "f-110-c693e956"
-      ],
-      "reviewedAt": "2026-09-29T00:51:57.997Z"
-    },
-    "Aquanaut 5167A (40mm)": {
-      "rank": 102,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Patek Philippe",
-      "candidateIds": [
-        "f-102-f4c9a806",
-        "f-102-ce173ecf",
-        "f-102-3eabe200",
-        "f-102-076a4194"
-      ],
-      "reviewedAt": "2026-09-29T00:51:57.997Z"
-    },
     "Pilot's Watch Chronograph 41 (IW388104, Verde, bracelete)": {
       "rank": 141,
       "verdict": "confirmado",
@@ -1532,6 +1480,69 @@
         "pt-148-1"
       ],
       "reviewedAt": "2026-09-29T00:52:32.152Z"
+    },
+    "Daytona 126500LN (Panda Novo)": {
+      "rank": 3,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Todas as 4 fotos mostram só o movimento 4131 (Daytona); nenhum mostrador visível para confirmar o Panda branco/preto",
+      "candidateIds": [
+        "3-superluxuryreps-1b05ko8",
+        "3-superluxuryreps-8y00yq",
+        "3-superluxuryreps-10p4yaq",
+        "3-superluxuryreps-6t0xic"
+      ],
+      "reviewedAt": "2026-10-05T18:20:55.742Z"
+    },
+    "GMT-Master II 126711CHNR (Root Beer)": {
+      "rank": 30,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "30-superclonewatches-16pf706",
+        "30-superclonewatches-134h2bh",
+        "30-superclonewatches-1tbxoft",
+        "30-superluxuryreps-1peyjoj"
+      ],
+      "reviewedAt": "2026-10-05T18:20:55.745Z"
+    },
+    "Royal Oak 15500ST": {
+      "rank": 110,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Audemars Piguet",
+      "candidateIds": [
+        "f-110-0497546e",
+        "f-110-f99d5a51",
+        "f-110-bd3895d0",
+        "f-110-c693e956"
+      ],
+      "reviewedAt": "2026-10-05T18:20:55.745Z"
+    },
+    "Aquanaut 5167A (40mm)": {
+      "rank": 102,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Patek Philippe",
+      "candidateIds": [
+        "f-102-f4c9a806",
+        "f-102-ce173ecf",
+        "f-102-3eabe200",
+        "f-102-076a4194"
+      ],
+      "reviewedAt": "2026-10-05T18:20:55.745Z"
+    },
+    "Royal Oak Perpetual Calendar 26574": {
+      "rank": 149,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-royal-oak-perpetual-calendar-26574-2",
+      "reasoning": "Steel RO QP, blue tapisserie dial, day/date/month subdials, moonphase, week ring: matches 26574ST",
+      "candidateIds": [
+        "hunt-royal-oak-perpetual-calendar-26574-2",
+        "hunt-royal-oak-perpetual-calendar-26574-1"
+      ],
+      "reviewedAt": "2026-10-05T18:20:15.576Z"
     }
   }
 }

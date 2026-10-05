@@ -51026,5 +51026,79 @@
       "coleta-dirigida"
     ],
     "collectedAt": "2026-09-29T00:51:24.471Z"
+  },
+  {
+    "id": "hunt-royal-oak-perpetual-calendar-26574-1",
+    "model": "Royal Oak Perpetual Calendar 26574",
+    "brand": "Audemars Piguet",
+    "factory": "APSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak Perpetual Calendar 26574 — dealerclocks.io",
+    "source": "dealerclocks.io",
+    "sourceDomain": "dealerclocks.io",
+    "image": "https://www.dealerclocks.io/wp-content/uploads/2024/10/IMG_1604-拷贝.jpg",
+    "localImage": "/media/img/hunt-royal-oak-perpetual-calendar-26574-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:APSF",
+      "caca-agentica",
+      "O título da página diz '26574 SS APSF 1:1 Best Edition Blue Dial on SS Bracelet A5134'. URL validada como image/jpeg. Conteúdo e marca d'água não verificados visualmente."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-05T18:19:27.037Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak Perpetual Calendar 26574"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-royal-oak-perpetual-calendar-26574-2",
+    "model": "Royal Oak Perpetual Calendar 26574",
+    "brand": "Audemars Piguet",
+    "factory": "APSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak Perpetual Calendar 26574 — dealerclocks.io",
+    "source": "dealerclocks.io",
+    "sourceDomain": "dealerclocks.io",
+    "image": "https://www.dealerclocks.io/wp-content/uploads/2024/10/IMG_1605-拷贝.jpg",
+    "localImage": "/media/img/hunt-royal-oak-perpetual-calendar-26574-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:APSF",
+      "caca-agentica",
+      "Mesma página de produto APSF 26574 azul. URL validada como image/jpeg. Conteúdo e marca d'água não verificados visualmente."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-05T18:19:27.634Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak Perpetual Calendar 26574"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
   }
 ]

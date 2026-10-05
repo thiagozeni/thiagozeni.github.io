@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-29T00:52:32.255Z",
-  "totalImages": 1547,
+  "generatedAt": "2026-10-05T18:20:55.874Z",
+  "totalImages": 1549,
   "summary": {
     "models": 149,
-    "verified": 134,
-    "strong": 13,
+    "verified": 135,
+    "strong": 12,
     "weak": 0,
-    "rejected": 1,
-    "missing": 1,
+    "rejected": 2,
+    "missing": 0,
     "conflictsDiscarded": 342,
     "coveragePct": 99
   },
   "backlog": [
     {
+      "rank": 51,
+      "model": "Submariner 114060 No-Date",
+      "brand": "Rolex",
+      "state": "rejeitado"
+    },
+    {
       "rank": 147,
       "model": "Royal Oak Chronograph 38mm 26715 (Azul)",
       "brand": "Audemars Piguet",
       "state": "rejeitado"
-    },
-    {
-      "rank": 149,
-      "model": "Royal Oak Perpetual Calendar 26574",
-      "brand": "Audemars Piguet",
-      "state": "sem-imagem"
     }
   ]
 }
