@@ -1,1 +1,0 @@
-import{w as o}from"./index-BnJmybzx.js";const a={CLEAN:{operational:!1,since:"2025-07-13",note:"Operação policial; apenas estoque legado em 2026"},JF:{operational:!1,since:null,note:"Extinta; estoques remanescentes"}},t=o;function l(e){const n=t(e);return a[n]??{operational:!0,since:null,note:null}}export{l as f,t as n};

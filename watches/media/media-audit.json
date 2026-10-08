@@ -1,29 +1,17 @@
 {
-  "generatedAt": "2026-10-08T19:27:13.677Z",
-  "totalImages": 2220,
+  "generatedAt": "2026-10-08T22:36:31.957Z",
+  "totalImages": 2322,
   "summary": {
     "models": 149,
-    "verified": 134,
-    "strong": 11,
-    "weak": 4,
+    "verified": 137,
+    "strong": 10,
+    "weak": 2,
     "rejected": 0,
     "missing": 0,
     "conflictsDiscarded": 364,
-    "coveragePct": 97
+    "coveragePct": 99
   },
   "backlog": [
-    {
-      "rank": 59,
-      "model": "Day-Date 40 Olive Green",
-      "brand": "Rolex",
-      "state": "fraco"
-    },
-    {
-      "rank": 69,
-      "model": "Planet Ocean 600m 43.5mm",
-      "brand": "Omega",
-      "state": "fraco"
-    },
     {
       "rank": 93,
       "model": "Navitimer B01 43mm",
