@@ -1,0 +1,246 @@
+{
+  "stamp": "2026-10-08",
+  "previousStamp": "2026-10-05",
+  "newModels": [],
+  "removedModels": [],
+  "scoreChanges": [
+    {
+      "rank": 2,
+      "from": 8.62,
+      "to": 8.72,
+      "delta": 0.1
+    }
+  ],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 3,
+      "count": 20
+    },
+    {
+      "rank": 5,
+      "count": 18
+    },
+    {
+      "rank": 7,
+      "count": 14
+    },
+    {
+      "rank": 11,
+      "count": 8
+    },
+    {
+      "rank": 12,
+      "count": 12
+    },
+    {
+      "rank": 13,
+      "count": 18
+    },
+    {
+      "rank": 14,
+      "count": 11
+    },
+    {
+      "rank": 15,
+      "count": 23
+    },
+    {
+      "rank": 16,
+      "count": 23
+    },
+    {
+      "rank": 17,
+      "count": 18
+    },
+    {
+      "rank": 22,
+      "count": 13
+    },
+    {
+      "rank": 23,
+      "count": 8
+    },
+    {
+      "rank": 25,
+      "count": 16
+    },
+    {
+      "rank": 29,
+      "count": 12
+    },
+    {
+      "rank": 32,
+      "count": 4
+    },
+    {
+      "rank": 36,
+      "count": 8
+    },
+    {
+      "rank": 38,
+      "count": 15
+    },
+    {
+      "rank": 46,
+      "count": 20
+    },
+    {
+      "rank": 47,
+      "count": 9
+    },
+    {
+      "rank": 51,
+      "count": 15
+    },
+    {
+      "rank": 55,
+      "count": 16
+    },
+    {
+      "rank": 57,
+      "count": 4
+    },
+    {
+      "rank": 58,
+      "count": 20
+    },
+    {
+      "rank": 62,
+      "count": 4
+    },
+    {
+      "rank": 66,
+      "count": 8
+    },
+    {
+      "rank": 68,
+      "count": 22
+    },
+    {
+      "rank": 69,
+      "count": 4
+    },
+    {
+      "rank": 71,
+      "count": 11
+    },
+    {
+      "rank": 72,
+      "count": 15
+    },
+    {
+      "rank": 84,
+      "count": 15
+    },
+    {
+      "rank": 85,
+      "count": 7
+    },
+    {
+      "rank": 86,
+      "count": 4
+    },
+    {
+      "rank": 88,
+      "count": 12
+    },
+    {
+      "rank": 94,
+      "count": 7
+    },
+    {
+      "rank": 96,
+      "count": 7
+    },
+    {
+      "rank": 97,
+      "count": 8
+    },
+    {
+      "rank": 98,
+      "count": 13
+    },
+    {
+      "rank": 106,
+      "count": 4
+    },
+    {
+      "rank": 110,
+      "count": 23
+    },
+    {
+      "rank": 112,
+      "count": 4
+    },
+    {
+      "rank": 116,
+      "count": 3
+    },
+    {
+      "rank": 118,
+      "count": 23
+    },
+    {
+      "rank": 124,
+      "count": 19
+    },
+    {
+      "rank": 125,
+      "count": 7
+    },
+    {
+      "rank": 127,
+      "count": 17
+    },
+    {
+      "rank": 130,
+      "count": 18
+    },
+    {
+      "rank": 135,
+      "count": 9
+    },
+    {
+      "rank": 136,
+      "count": 8
+    },
+    {
+      "rank": 137,
+      "count": 18
+    },
+    {
+      "rank": 138,
+      "count": 20
+    },
+    {
+      "rank": 139,
+      "count": 11
+    },
+    {
+      "rank": 140,
+      "count": 22
+    },
+    {
+      "rank": 146,
+      "count": 8
+    },
+    {
+      "rank": 147,
+      "count": 4
+    },
+    {
+      "rank": 149,
+      "count": 7
+    }
+  ],
+  "newNews": [
+    "https://www.bbtwatch.com/en/dj/kdpc/131531.html"
+  ],
+  "summary": {
+    "newModels": 0,
+    "scoreChanges": 1,
+    "newMedia": 687,
+    "newNews": 1
+  }
+}

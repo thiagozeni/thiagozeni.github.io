@@ -1,0 +1,254 @@
+{
+  "updatedAt": "2026-10-08",
+  "storesRead": 6,
+  "items": [
+    {
+      "key": "rolex|126610ln",
+      "brand": "Rolex",
+      "ref": "126610LN",
+      "label": "Rolex Submariner 126610LN",
+      "factories": [
+        "RICH",
+        "VSF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        1
+      ]
+    },
+    {
+      "key": "rolex|126334",
+      "brand": "Rolex",
+      "ref": "126334",
+      "label": "Rolex DateJust 41 126334 SS Blue Dial",
+      "factories": [
+        "RICH",
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        101,
+        138,
+        139
+      ]
+    },
+    {
+      "key": "richardmille|rm6702",
+      "brand": "Richard Mille",
+      "ref": "RM67-02",
+      "label": "Richard Mille RM67-02 Pro Sebastien Ogier Black Carbon TPT France CRMA7",
+      "factories": [
+        "RICH"
+      ],
+      "stores": 2,
+      "catalogRanks": []
+    },
+    {
+      "key": "patekphilippe|5168g",
+      "brand": "Patek Philippe",
+      "ref": "5168G",
+      "label": "Patek Philippe Aquanaut “Blue Dial” 5168G",
+      "factories": [],
+      "stores": 2,
+      "catalogRanks": [
+        46,
+        118
+      ]
+    },
+    {
+      "key": "rolex|116520",
+      "brand": "Rolex",
+      "ref": "116520",
+      "label": "Rolex GMT-Master II “Pepsi” Jubilee 116520",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        98
+      ]
+    },
+    {
+      "key": "rolex|126711chnr",
+      "brand": "Rolex",
+      "ref": "126711CHNR",
+      "label": "Rolex GMT-Master II 126711CHNR “Root Beer” Copy",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        30
+      ]
+    },
+    {
+      "key": "rolex|126610lv",
+      "brand": "Rolex",
+      "ref": "126610LV",
+      "label": "Rolex Submariner 41mm 126610LV Kermit",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        2
+      ]
+    },
+    {
+      "key": "patekphilippe|5167",
+      "brand": "Patek Philippe",
+      "ref": "5167",
+      "label": "Patek Philippe Aquanaut 5167 SS Gray Dial",
+      "factories": [
+        "DDF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        24,
+        102
+      ]
+    },
+    {
+      "key": "rolex|126500",
+      "brand": "Rolex",
+      "ref": "126500",
+      "label": "Rolex Daytona 126500 Black Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 1,
+      "catalogRanks": [
+        3,
+        111
+      ]
+    },
+    {
+      "key": "rolex|126710grnr",
+      "brand": "Rolex",
+      "ref": "126710GRNR",
+      "label": "Rolex GMT-Master II 126710GRNR",
+      "factories": [
+        "RICH",
+        "VSF"
+      ],
+      "stores": 1,
+      "catalogRanks": [
+        10
+      ]
+    },
+    {
+      "key": "patekphilippe|5968a",
+      "brand": "Patek Philippe",
+      "ref": "5968A",
+      "label": "Patek Philippe Aquanaut Chronograph Orange 5968A",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": []
+    },
+    {
+      "key": "rolex|124060",
+      "brand": "Rolex",
+      "ref": "124060",
+      "label": "Rolex Submariner 41mm 124060 No Date Black Ceramic",
+      "factories": [
+        "RICH",
+        "VSF"
+      ],
+      "stores": 1,
+      "catalogRanks": [
+        7
+      ]
+    },
+    {
+      "key": "patekphilippe|57111a",
+      "brand": "Patek Philippe",
+      "ref": "5711/1A",
+      "label": "Patek Philippe Nautilus 5711/1A Blue Dial",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": [
+        9,
+        16,
+        44
+      ]
+    },
+    {
+      "key": "rolex|126710blro",
+      "brand": "Rolex",
+      "ref": "126710BLRO",
+      "label": "Rolex GMT-Master II 126710BLRO",
+      "factories": [
+        "RICH",
+        "VSF"
+      ],
+      "stores": 1,
+      "catalogRanks": [
+        19
+      ]
+    },
+    {
+      "key": "rolex|116710blnr",
+      "brand": "Rolex",
+      "ref": "116710BLNR",
+      "label": "Rolex GMT-Master II 116710BLNR “Batman”",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": [
+        85
+      ]
+    },
+    {
+      "key": "rolex|116519ln",
+      "brand": "Rolex",
+      "ref": "116519LN",
+      "label": "Rolex Daytona “Ghost” 116519LN “White Gold”",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": [
+        22
+      ]
+    },
+    {
+      "key": "rolex|80298",
+      "brand": "Rolex",
+      "ref": "80298",
+      "label": "Rolex Tridor Pearlmaster 80298 “Ladies”",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": []
+    },
+    {
+      "key": "rolex|116610lv",
+      "brand": "Rolex",
+      "ref": "116610LV",
+      "label": "Rolex Submariner Date 116610LV “Hulk”",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": [
+        25
+      ]
+    },
+    {
+      "key": "rolex|126710blnr",
+      "brand": "Rolex",
+      "ref": "126710BLNR",
+      "label": "Rolex GMT-Master II 126710BLNR",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 1,
+      "catalogRanks": [
+        8
+      ]
+    },
+    {
+      "key": "rolex|116506",
+      "brand": "Rolex",
+      "ref": "116506",
+      "label": "Rolex Cosmograph Daytona 116506",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": []
+    }
+  ]
+}

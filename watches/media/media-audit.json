@@ -1,28 +1,40 @@
 {
-  "generatedAt": "2026-10-05T18:20:55.874Z",
-  "totalImages": 1549,
+  "generatedAt": "2026-10-08T19:27:13.677Z",
+  "totalImages": 2220,
   "summary": {
     "models": 149,
-    "verified": 135,
-    "strong": 12,
-    "weak": 0,
-    "rejected": 2,
+    "verified": 134,
+    "strong": 11,
+    "weak": 4,
+    "rejected": 0,
     "missing": 0,
-    "conflictsDiscarded": 342,
-    "coveragePct": 99
+    "conflictsDiscarded": 364,
+    "coveragePct": 97
   },
   "backlog": [
     {
-      "rank": 51,
-      "model": "Submariner 114060 No-Date",
+      "rank": 59,
+      "model": "Day-Date 40 Olive Green",
       "brand": "Rolex",
-      "state": "rejeitado"
+      "state": "fraco"
     },
     {
-      "rank": 147,
-      "model": "Royal Oak Chronograph 38mm 26715 (Azul)",
-      "brand": "Audemars Piguet",
-      "state": "rejeitado"
+      "rank": 69,
+      "model": "Planet Ocean 600m 43.5mm",
+      "brand": "Omega",
+      "state": "fraco"
+    },
+    {
+      "rank": 93,
+      "model": "Navitimer B01 43mm",
+      "brand": "Breitling",
+      "state": "fraco"
+    },
+    {
+      "rank": 119,
+      "model": "Seamaster Planet Ocean 600M",
+      "brand": "Omega",
+      "state": "fraco"
     }
   ]
 }

@@ -7,45 +7,154 @@
       "rank": 12,
       "verdict": "confirmado",
       "bestImageId": "12-superluxuryreps-usdxw8",
-      "reasoning": "Seamaster 300M preto, marca/linha/cor batem"
+      "reasoning": "Seamaster 300M preto, marca/linha/cor batem",
+      "wrongIds": [
+        "12-superclonewatches-rurzgw",
+        "12-superclonewatches-1equzbp",
+        "12-superclonewatches-1f88wek",
+        "12-superluxuryreps-1unui4l",
+        "12-superluxuryreps-wdd718",
+        "12-superluxuryreps-gtutbu",
+        "st-12-ul-66025-1",
+        "st-12-ul-66025-2",
+        "st-12-ul-66025-3",
+        "st-12-ul-66025-4"
+      ],
+      "wrongNotes": {
+        "12-superclonewatches-rurzgw": "errada: mostrador verde, pulseira aco",
+        "12-superclonewatches-1equzbp": "errada: mostrador azul",
+        "12-superclonewatches-1f88wek": "errada: 007 marrom, mesh",
+        "12-superluxuryreps-1unui4l": "errada: azul, Sedna rose",
+        "12-superluxuryreps-wdd718": "errada: azul, Sedna rose",
+        "12-superluxuryreps-gtutbu": "errada: azul, Sedna rose",
+        "st-12-ul-66025-1": "errada: caixa em ouro amarelo, edição James Bond, pulseira de borracha",
+        "st-12-ul-66025-2": "errada: caixa em ouro amarelo, edição James Bond, pulseira de borracha",
+        "st-12-ul-66025-3": "errada: caixa em ouro amarelo, edição James Bond, pulseira de borracha",
+        "st-12-ul-66025-4": "errada: verso da edição limitada em ouro amarelo"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Datejust 41 Mint Green (Fluted/Jubilee)": {
       "rank": 14,
       "verdict": "confirmado",
       "bestImageId": "14-superclonewatches-7e78pn",
-      "reasoning": "DJ verde motif fluted + jubilee"
+      "reasoning": "DJ verde motif fluted + jubilee",
+      "wrongIds": [
+        "st-14-ul-145323-1",
+        "st-14-ul-145323-2",
+        "st-14-ul-77275-1"
+      ],
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-14-ul-145323-1": "errada: mostrador preto e pulseira Oyster",
+        "st-14-ul-145323-2": "errada: mostrador preto e pulseira Oyster",
+        "st-14-ul-77275-1": "errada: mostrador azul-gelo com algarismos arábicos"
+      }
     },
     "Yacht-Master 126622 Rhodium": {
       "rank": 23,
       "verdict": "confirmado",
       "bestImageId": "23-superclonewatches-7s47f5",
       "reasoning": "YM bisel platina relevo, mostrador rodio",
-      "source": "deep-per-image"
+      "source": "deep-per-image",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submersible Carbotech PAM1616": {
       "rank": 28,
       "verdict": "confirmado",
       "bestImageId": "28-superclonewatches-1lz17e5",
       "reasoning": "Panerai Submersible carbotech, etiqueta PAM1616",
-      "source": "deep-per-image"
+      "source": "deep-per-image",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Seamaster Diver 300M (Verde)": {
       "rank": 32,
       "verdict": "confirmado",
       "bestImageId": "cl-32-1",
-      "reasoning": "Omega Seamaster 300M mostrador e luneta verdes"
+      "reasoning": "Omega Seamaster 300M mostrador e luneta verdes",
+      "wrongIds": [
+        "32-superluxuryreps-usdxw8",
+        "32-superluxuryreps-1sq5d5v",
+        "32-superluxuryreps-13291mx",
+        "32-superclonewatches-1equzbp",
+        "32-superclonewatches-1f88wek",
+        "32-superluxuryreps-1unui4l",
+        "32-superluxuryreps-wdd718",
+        "32-superluxuryreps-gtutbu"
+      ],
+      "wrongNotes": {
+        "32-superluxuryreps-usdxw8": "errada: Nekton titânio mostrador preto",
+        "32-superluxuryreps-1sq5d5v": "errada: Nekton titânio mostrador preto",
+        "32-superluxuryreps-13291mx": "errada: Nekton titânio mostrador preto",
+        "32-superclonewatches-1equzbp": "errada: bisel e mostrador azul",
+        "32-superclonewatches-1f88wek": "errada: versão marrom/Bond em malha",
+        "32-superluxuryreps-1unui4l": "errada: azul bicolor ouro rosa",
+        "32-superluxuryreps-wdd718": "errada: azul bicolor ouro rosa",
+        "32-superluxuryreps-gtutbu": "errada: azul bicolor ouro rosa"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Seamaster 300 No Time To Die (NTTD Ti)": {
       "rank": 36,
       "verdict": "confirmado",
       "bestImageId": "36-superluxuryreps-1b54tcg",
-      "reasoning": "Seamaster titanio tropical mesh = NTTD Ti"
+      "reasoning": "Seamaster titanio tropical mesh = NTTD Ti",
+      "wrongIds": [
+        "36-superclonewatches-advwi5",
+        "36-superclonewatches-1equzbp",
+        "36-superclonewatches-wd5bi8",
+        "36-superluxuryreps-tyvgsp",
+        "36-superluxuryreps-1q0ea4x",
+        "36-superluxuryreps-1rn8tk1",
+        "36-superluxuryreps-1vnxf9p",
+        "36-superluxuryreps-rf7y5h",
+        "36-superluxuryreps-k292f0",
+        "36-superluxuryreps-jugzv8",
+        "36-superclonewatches-d47wow",
+        "st-36-lcw-19641-3"
+      ],
+      "wrongNotes": {
+        "36-superclonewatches-advwi5": "errada: ouro com mesh dourado, não Ti",
+        "36-superclonewatches-1equzbp": "errada: Diver azul",
+        "36-superclonewatches-wd5bi8": "errada: Diver azul",
+        "36-superluxuryreps-tyvgsp": "errada: Diver Sedna borracha",
+        "36-superluxuryreps-1q0ea4x": "errada: Diver Sedna borracha",
+        "36-superluxuryreps-1rn8tk1": "errada: Diver Sedna borracha",
+        "36-superluxuryreps-1vnxf9p": "errada: Diver Sedna borracha",
+        "36-superluxuryreps-rf7y5h": "errada: Diver cronógrafo",
+        "36-superluxuryreps-k292f0": "errada: Diver cronógrafo",
+        "36-superluxuryreps-jugzv8": "errada: Diver cronógrafo",
+        "36-superclonewatches-d47wow": "errada: Diver branco/azul",
+        "st-36-lcw-19641-3": "errada: foto sob luz UV: o mostrador parece preto e a variante fica incerta"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Aqua Terra Worldtimer": {
       "rank": 42,
       "verdict": "confirmado",
       "bestImageId": "42-superclonewatches-wu4wgc",
-      "reasoning": "anel de cidades + globo = Worldtimer"
+      "reasoning": "anel de cidades + globo = Worldtimer",
+      "wrongIds": [
+        "42-superclonewatches-18dlh6y",
+        "42-superclonewatches-2wo4p4",
+        "42-superluxuryreps-1bwpi1",
+        "42-superluxuryreps-1dx5qnv",
+        "42-superluxuryreps-1342nc",
+        "42-superluxuryreps-10ktedr",
+        "42-superluxuryreps-6gdcup"
+      ],
+      "wrongNotes": {
+        "42-superclonewatches-18dlh6y": "errada: Aqua Terra preto",
+        "42-superclonewatches-2wo4p4": "errada: Aqua Terra branco",
+        "42-superluxuryreps-1bwpi1": "errada: Aqua Terra preto",
+        "42-superluxuryreps-1dx5qnv": "errada: Aqua Terra preto",
+        "42-superluxuryreps-1342nc": "errada: Aqua Terra verde",
+        "42-superluxuryreps-10ktedr": "errada: Aqua Terra verde",
+        "42-superluxuryreps-6gdcup": "errada: Aqua Terra verde"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Datejust 41 Rhodium": {
       "rank": 48,
@@ -57,43 +166,158 @@
       "rank": 49,
       "verdict": "confirmado",
       "bestImageId": "49-superluxuryreps-gbdkph",
-      "reasoning": "slate + romanos verdes = Wimbledon"
+      "reasoning": "slate + romanos verdes = Wimbledon",
+      "wrongIds": [
+        "49-superclonewatches-1irm0s2",
+        "49-superclonewatches-187zjp5",
+        "49-superclonewatches-g0xqx",
+        "49-superclonewatches-1hryls2"
+      ],
+      "wrongNotes": {
+        "49-superclonewatches-1irm0s2": "errada: bicolor ouro rosé",
+        "49-superclonewatches-187zjp5": "errada: bicolor ouro amarelo",
+        "49-superclonewatches-g0xqx": "errada: bicolor ouro rosé",
+        "49-superclonewatches-1hryls2": "errada: bicolor ouro rosé"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Yacht-Master 226659 (Ouro Branco/Oysterflex)": {
       "rank": 55,
       "verdict": "confirmado",
       "bestImageId": "55-superclonewatches-1e3yuun",
-      "reasoning": "ouro branco, ceramica preta, Oysterflex = 226659"
+      "reasoning": "ouro branco, ceramica preta, Oysterflex = 226659",
+      "wrongIds": [
+        "st-55-ul-58418-4"
+      ],
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-55-ul-58418-4": "lixo: fundo da caixa e fecho apenas"
+      }
     },
     "Aqua Terra 150m (Verde Oliva)": {
       "rank": 57,
       "verdict": "confirmado",
       "bestImageId": "57-superluxuryreps-1342nc",
-      "reasoning": "dial verde oliva teak em borracha"
+      "reasoning": "dial verde oliva teak em borracha",
+      "wrongIds": [
+        "57-superluxuryreps-1bwpi1",
+        "57-superluxuryreps-1dx5qnv",
+        "57-superclonewatches-wu4wgc",
+        "57-superclonewatches-18dlh6y",
+        "57-superclonewatches-2wo4p4",
+        "st-57-lcw-2588-1",
+        "st-57-lcw-2588-2",
+        "st-57-lcw-2588-3",
+        "st-57-lcw-2588-4"
+      ],
+      "wrongNotes": {
+        "57-superluxuryreps-1bwpi1": "errada: mostrador preto",
+        "57-superluxuryreps-1dx5qnv": "errada: mostrador preto",
+        "57-superclonewatches-wu4wgc": "errada: Worldtimer azul",
+        "57-superclonewatches-18dlh6y": "errada: mostrador preto",
+        "57-superclonewatches-2wo4p4": "errada: mostrador branco",
+        "st-57-lcw-2588-1": "errada: mostrador preto, não verde",
+        "st-57-lcw-2588-2": "errada: mostrador preto, não verde",
+        "st-57-lcw-2588-3": "errada: mostrador preto, não verde",
+        "st-57-lcw-2588-4": "errada: mostrador preto, não verde"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Planet Ocean 600m 43.5mm": {
       "rank": 69,
-      "verdict": "confirmado",
-      "bestImageId": "69-superclonewatches-1h4y3f",
-      "reasoning": "Planet Ocean 600m Americas Cup branco 43.5mm"
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Planet Ocean 600m Americas Cup branco 43.5mm",
+      "wrongIds": [
+        "69-superclonewatches-1h4y3f",
+        "69-superluxuryreps-14dm9f5",
+        "69-superluxuryreps-6vvyp0",
+        "69-superluxuryreps-1hui753",
+        "69-superclonewatches-18catpa",
+        "69-superclonewatches-rkc43v",
+        "69-superluxuryreps-u9lx0i",
+        "69-superluxuryreps-ez8rxk"
+      ],
+      "wrongNotes": {
+        "69-superclonewatches-1h4y3f": "errada: Seamaster branco/azul",
+        "69-superluxuryreps-14dm9f5": "errada: PO Chrono Sedna azul",
+        "69-superluxuryreps-6vvyp0": "errada: pulseira azul Sedna",
+        "69-superluxuryreps-1hui753": "errada: PO Chrono Sedna azul",
+        "69-superclonewatches-18catpa": "errada: Ultra Deep",
+        "69-superclonewatches-rkc43v": "errada: Ultra Deep em caixa",
+        "69-superluxuryreps-u9lx0i": "errada: PO Chrono laranja",
+        "69-superluxuryreps-ez8rxk": "errada: PO Chrono laranja"
+      },
+      "galleryAuditedAt": "2026-10-08",
+      "reopenedReason": "conferência por foto 08/10 reprovou a capa: errada: Seamaster branco/azul"
     },
     "Daytona 116505 (Rose Gold Preto)": {
       "rank": 71,
       "verdict": "confirmado",
       "bestImageId": "71-superclonewatches-mxvjdq",
-      "reasoning": "Daytona ouro rose mostrador preto"
+      "reasoning": "Daytona ouro rose mostrador preto",
+      "wrongIds": [
+        "71-superclonewatches-1lbcnpj",
+        "71-superclonewatches-vmankr",
+        "st-71-ul-147478-3",
+        "st-71-tk-184144-1",
+        "st-71-tk-184144-2",
+        "st-71-tk-184144-3",
+        "st-71-tk-184144-4",
+        "st-71-tk-184127-1",
+        "st-71-tk-184127-2",
+        "st-71-tk-184127-3",
+        "st-71-tk-184127-4"
+      ],
+      "wrongNotes": {
+        "71-superclonewatches-1lbcnpj": "errada: mostrador chocolate, bracelete Oyster",
+        "71-superclonewatches-vmankr": "errada: mostrador rosa/salmão",
+        "st-71-ul-147478-3": "lixo: fundo e fecho apenas",
+        "st-71-tk-184144-1": "errada: mostrador marrom chocolate",
+        "st-71-tk-184144-2": "errada: mostrador marrom chocolate",
+        "st-71-tk-184144-3": "errada: mostrador marrom chocolate",
+        "st-71-tk-184144-4": "errada: mostrador marrom chocolate",
+        "st-71-tk-184127-1": "errada: mostrador rosé/champanhe",
+        "st-71-tk-184127-2": "errada: mostrador rosé/champanhe",
+        "st-71-tk-184127-3": "errada: mostrador rosé/champanhe",
+        "st-71-tk-184127-4": "errada: mostrador rosé/champanhe"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Pelagos FXD Marine Nationale": {
       "rank": 92,
       "verdict": "confirmado",
       "bestImageId": "92-superluxuryreps-5mpvyb",
-      "reasoning": "Pelagos FXD azul, lugs fixos, nato azul"
+      "reasoning": "Pelagos FXD azul, lugs fixos, nato azul",
+      "wrongIds": [
+        "92-superluxuryreps-1mn21ox",
+        "92-superluxuryreps-1tegkhf",
+        "92-superluxuryreps-14r1at",
+        "92-superluxuryreps-7w5k3b",
+        "92-superluxuryreps-1o08gb6",
+        "92-superluxuryreps-1urmz3o",
+        "92-superluxuryreps-g0qhi0",
+        "92-superluxuryreps-10ay1vg"
+      ],
+      "wrongNotes": {
+        "92-superluxuryreps-1mn21ox": "errada: mostrador preto custom meme",
+        "92-superluxuryreps-1tegkhf": "errada: mostrador preto custom meme",
+        "92-superluxuryreps-14r1at": "errada: mostrador preto custom meme",
+        "92-superluxuryreps-7w5k3b": "errada: mostrador preto custom meme",
+        "92-superluxuryreps-1o08gb6": "errada: mostrador preto custom meme",
+        "92-superluxuryreps-1urmz3o": "errada: mostrador preto custom meme",
+        "92-superluxuryreps-g0qhi0": "errada: lateral da versão preta",
+        "92-superluxuryreps-10ay1vg": "lixo: apenas fecho/pulseira"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Speedmaster Moonwatch Professional": {
       "rank": 100,
       "verdict": "confirmado",
       "bestImageId": "100-superluxuryreps-1n0d5du",
-      "reasoning": "Speedmaster Professional aco, bezel tachymetre"
+      "reasoning": "Speedmaster Professional aco, bezel tachymetre",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner Date 126610LN (Preto)": {
       "rank": 1,
@@ -106,7 +330,8 @@
         "1-superluxuryreps-1dkn929",
         "1-superluxuryreps-1ibrxom",
         "1-superluxuryreps-mgam4s",
-        "1-superluxuryreps-1sns71q"
+        "1-superluxuryreps-1sns71q",
+        "f-1-47c34c02"
       ],
       "factoryMismatch": true,
       "factoryExpected": "VSF",
@@ -116,38 +341,92 @@
       "factoryResolved": true,
       "collectedFactory": "VSF",
       "collectedCount": 7,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "wrongNotes": {
+        "f-1-47c34c02": "errada: dois relógios, inclui Tudor Black Bay"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner Date 126610LV (Starbucks)": {
       "rank": 2,
       "verdict": "confirmado",
       "bestImageId": "2-superluxuryreps-2uv6ff",
-      "reasoning": "Bezel verde + dial preto = Starbucks 126610LV"
+      "reasoning": "Bezel verde + dial preto = Starbucks 126610LV",
+      "wrongIds": [
+        "2-superluxuryreps-of32ju"
+      ],
+      "wrongNotes": {
+        "2-superluxuryreps-of32ju": "lixo: só fecho/verso"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 126506 (Platona)": {
       "rank": 5,
       "verdict": "confirmado",
       "bestImageId": "5-superclonewatches-13k6gbq",
-      "reasoning": "ice blue + bezel marrom = platinum 126506 Platona"
+      "reasoning": "ice blue + bezel marrom = platinum 126506 Platona",
+      "wrongIds": [
+        "st-5-lcw-20289-4",
+        "st-5-ul-150901-2"
+      ],
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-5-lcw-20289-4": "lixo: fecho/pulseira apenas",
+        "st-5-ul-150901-2": "lixo: fundo/mecanismo de costas, lateral"
+      }
     },
     "Submariner No-Date 114060": {
       "rank": 6,
       "verdict": "confirmado",
       "bestImageId": "6-superluxuryreps-1f16dtt",
-      "reasoning": "Submariner no-date preto, SUBMARINER sem DATE"
+      "reasoning": "Submariner no-date preto, SUBMARINER sem DATE",
+      "wrongIds": [
+        "6-superluxuryreps-1367b62",
+        "6-superluxuryreps-2irerw"
+      ],
+      "wrongNotes": {
+        "6-superluxuryreps-1367b62": "lixo: caseback/clasp view",
+        "6-superluxuryreps-2irerw": "lixo: clasp and caseback only"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner No-Date 124060": {
       "rank": 7,
       "verdict": "confirmado",
       "bestImageId": "7-superclonewatches-zfefrp",
       "reasoning": "Submariner no-date 41mm preto, sem data",
-      "source": "deep-per-image"
+      "source": "deep-per-image",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "GMT-Master II 126710BLNR (Batman)": {
       "rank": 8,
       "verdict": "confirmado",
       "bestImageId": "8-superluxuryreps-u4uhoi",
-      "reasoning": "bezel azul/preto Batman + Jubilee"
+      "reasoning": "bezel azul/preto Batman + Jubilee",
+      "wrongIds": [
+        "8-superluxuryreps-1i38saf",
+        "8-superluxuryreps-12er0ye",
+        "8-superclonewatches-1c9w0je",
+        "8-superluxuryreps-1tsdmpl",
+        "8-superluxuryreps-h6tgar",
+        "8-superluxuryreps-34l5lt",
+        "8-superluxuryreps-1sc9zmm",
+        "8-superluxuryreps-11algid",
+        "8-superluxuryreps-i2o8uj"
+      ],
+      "wrongNotes": {
+        "8-superluxuryreps-1i38saf": "lixo: só coroa lateral",
+        "8-superluxuryreps-12er0ye": "lixo: só fecho",
+        "8-superclonewatches-1c9w0je": "errada: bracelete Oyster, não Jubilee",
+        "8-superluxuryreps-1tsdmpl": "lixo: fundo de caixa",
+        "8-superluxuryreps-h6tgar": "errada: bracelete Oyster",
+        "8-superluxuryreps-34l5lt": "lixo: só fecho",
+        "8-superluxuryreps-1sc9zmm": "errada: bracelete Oyster",
+        "8-superluxuryreps-11algid": "errada: bracelete Oyster",
+        "8-superluxuryreps-i2o8uj": "lixo: foto de lume escura"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "GMT-Master II 126710GRNR (Bruce Wayne)": {
       "rank": 10,
@@ -168,7 +447,8 @@
         "10-superluxuryreps-mn5te2",
         "10-superluxuryreps-fvralm",
         "10-superluxuryreps-1r7ky4y",
-        "10-superclonewatches-5cef0n"
+        "10-superclonewatches-5cef0n",
+        "f-10-eb8ee258"
       ],
       "factoryMismatch": true,
       "factoryExpected": "ARF",
@@ -176,7 +456,11 @@
       "factoryResolved": true,
       "collectedFactory": "ARF",
       "collectedCount": 5,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "wrongNotes": {
+        "f-10-eb8ee258": "errada: pulseira Oyster, ref não Jubilee"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 116500LN (Godzilla/Preto)": {
       "rank": 11,
@@ -185,7 +469,8 @@
       "reasoning": "Mídia factory-correta (BTF) coletada e validada (4 fotos). As fotos CLEAN antigas seguem ocultas (wrongIds). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
       "wrongIds": [
         "11-superclonewatches-nepbf4",
-        "11-superclonewatches-1q6v4qe"
+        "11-superclonewatches-1q6v4qe",
+        "st-11-ul-61841-1"
       ],
       "factoryMismatch": true,
       "factoryExpected": "BTF",
@@ -195,19 +480,175 @@
       "factoryResolved": true,
       "collectedFactory": "BTF",
       "collectedCount": 4,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-11-ul-61841-1": "errada: Daytona ouro amarelo, outra variante"
+      }
     },
     "Royal Oak 15500 (Preto)": {
       "rank": 15,
       "verdict": "confirmado",
       "bestImageId": "15-superclonewatches-hha5iw",
-      "reasoning": "RO 15500 preto tapisserie so-horas"
+      "reasoning": "RO 15500 preto tapisserie so-horas",
+      "wrongIds": [
+        "15-superluxuryreps-lm5ba4",
+        "15-superluxuryreps-1fp79y6",
+        "15-superluxuryreps-pfjgv5",
+        "15-superluxuryreps-31tcf5",
+        "15-superluxuryreps-1bt9lb8",
+        "15-superluxuryreps-1v8bs3i",
+        "15-superluxuryreps-ikxukg",
+        "15-superluxuryreps-14ynz0i",
+        "15-superluxuryreps-1rce3gk",
+        "15-superluxuryreps-ep05xi",
+        "15-superluxuryreps-mgvj7l",
+        "15-superluxuryreps-1h6d6eo",
+        "15-superluxuryreps-q6fz3o",
+        "15-superluxuryreps-bi1ovo",
+        "15-superluxuryreps-14uu9br",
+        "15-superluxuryreps-ntklyq",
+        "15-superluxuryreps-1vurgmu",
+        "st-15-lcw-20198-4",
+        "st-15-lcw-1897-1",
+        "st-15-lcw-1897-3",
+        "st-15-lcw-1897-4",
+        "st-15-ul-138383-1",
+        "st-15-ul-138383-2",
+        "st-15-ul-138383-3",
+        "st-15-tk-200255-1",
+        "st-15-tk-200255-2",
+        "st-15-tk-200255-3",
+        "st-15-tk-200255-4",
+        "st-15-tk-194847-1",
+        "st-15-tk-194847-2",
+        "st-15-tk-194847-3",
+        "st-15-tk-194847-4"
+      ],
+      "wrongNotes": {
+        "15-superluxuryreps-lm5ba4": "errada: cronógrafo azul",
+        "15-superluxuryreps-1fp79y6": "errada: cronógrafo azul",
+        "15-superluxuryreps-pfjgv5": "errada: cronógrafo azul",
+        "15-superluxuryreps-31tcf5": "lixo: só pulseira/verso",
+        "15-superluxuryreps-1bt9lb8": "lixo: fundo de caixa cronógrafo",
+        "15-superluxuryreps-1v8bs3i": "errada: cronógrafo ouro rosa branco",
+        "15-superluxuryreps-ikxukg": "errada: cronógrafo ouro rosa branco",
+        "15-superluxuryreps-14ynz0i": "errada: cronógrafo ouro rosa branco",
+        "15-superluxuryreps-1rce3gk": "errada: cronógrafo ouro rosa branco",
+        "15-superluxuryreps-ep05xi": "errada: fundo de caixa ouro rosa",
+        "15-superluxuryreps-mgvj7l": "errada: pulseira ouro rosa",
+        "15-superluxuryreps-1h6d6eo": "errada: jumbo ouro mostrador azul",
+        "15-superluxuryreps-q6fz3o": "errada: jumbo ouro mostrador azul",
+        "15-superluxuryreps-bi1ovo": "errada: perfil ouro",
+        "15-superluxuryreps-14uu9br": "errada: ouro mostrador azul",
+        "15-superluxuryreps-ntklyq": "errada: ouro, verso",
+        "15-superluxuryreps-1vurgmu": "lixo: só fecho dourado",
+        "st-15-lcw-20198-4": "lixo: só fecho da pulseira",
+        "st-15-lcw-1897-1": "errada: mostrador azul",
+        "st-15-lcw-1897-3": "errada: mostrador azul",
+        "st-15-lcw-1897-4": "lixo: vista lateral sem identificar o relógio",
+        "st-15-ul-138383-1": "errada: ouro rosa, mostrador branco, couro",
+        "st-15-ul-138383-2": "errada: ouro rosa, mostrador branco, couro",
+        "st-15-ul-138383-3": "errada: ouro rosa, mostrador branco, couro",
+        "st-15-tk-200255-1": "errada: caixa PVD preta",
+        "st-15-tk-200255-2": "errada: caixa PVD preta",
+        "st-15-tk-200255-3": "errada: caixa PVD preta",
+        "st-15-tk-200255-4": "errada: caixa PVD preta",
+        "st-15-tk-194847-1": "errada: ouro rosa, não é aço",
+        "st-15-tk-194847-2": "errada: ouro rosa, não é aço",
+        "st-15-tk-194847-3": "errada: ouro rosa, não é aço",
+        "st-15-tk-194847-4": "errada: ouro rosa, não é aço"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Nautilus 5711/1A (Green Dial)": {
       "rank": 16,
       "verdict": "confirmado",
       "bestImageId": "16-superclonewatches-11bvxwn",
-      "reasoning": "Nautilus 5711 dial verde"
+      "reasoning": "Nautilus 5711 dial verde",
+      "wrongIds": [
+        "16-superluxuryreps-10ip93c",
+        "16-superluxuryreps-hvaqiw",
+        "16-superluxuryreps-1ggu4td",
+        "16-superluxuryreps-1hzbhmv",
+        "16-superluxuryreps-1e0xdld",
+        "16-superluxuryreps-1w5ctp6",
+        "16-superluxuryreps-1lcazc",
+        "16-superluxuryreps-1d3z5mi",
+        "16-superluxuryreps-1ow0rpg",
+        "16-superluxuryreps-sez4cp",
+        "16-superluxuryreps-2mzxud",
+        "16-superluxuryreps-5gh3wi",
+        "16-superluxuryreps-1gz3yjo",
+        "16-superluxuryreps-rphdpe",
+        "16-superluxuryreps-fzsfk1",
+        "16-superluxuryreps-laimq0",
+        "16-superluxuryreps-qokdy8",
+        "16-superluxuryreps-165ol6e",
+        "16-superluxuryreps-1kg9k5f",
+        "16-superluxuryreps-4okxhd",
+        "st-16-lcw-19862-1",
+        "st-16-lcw-19862-2",
+        "st-16-lcw-19862-3",
+        "st-16-lcw-19862-4",
+        "st-16-ul-75579-1",
+        "st-16-ul-75579-2",
+        "st-16-ul-71775-1",
+        "st-16-ul-188599-1",
+        "st-16-ul-188599-2",
+        "st-16-ul-188599-3",
+        "st-16-ul-188599-4",
+        "st-16-ul-188591-1",
+        "st-16-ul-188591-2",
+        "st-16-ul-188591-3",
+        "st-16-ul-188591-4",
+        "st-16-tk-196463-1",
+        "st-16-tk-196463-2",
+        "st-16-tk-196463-3",
+        "st-16-tk-196463-4"
+      ],
+      "wrongNotes": {
+        "16-superluxuryreps-10ip93c": "errada: mostrador Tiffany turquesa",
+        "16-superluxuryreps-hvaqiw": "errada: mostrador Tiffany turquesa",
+        "16-superluxuryreps-1ggu4td": "lixo: fundo da caixa/movimento",
+        "16-superluxuryreps-1hzbhmv": "errada: mostrador azul",
+        "16-superluxuryreps-1e0xdld": "errada: mostrador azul",
+        "16-superluxuryreps-1w5ctp6": "errada: mostrador azul",
+        "16-superluxuryreps-1lcazc": "errada: ouro rosé em couro",
+        "16-superluxuryreps-1d3z5mi": "errada: ouro rosé em couro",
+        "16-superluxuryreps-1ow0rpg": "errada: ouro rosé em couro",
+        "16-superluxuryreps-sez4cp": "lixo: fundo da caixa ouro rosé",
+        "16-superluxuryreps-2mzxud": "lixo: fundo da caixa ouro rosé",
+        "16-superluxuryreps-5gh3wi": "lixo: apenas o fecho",
+        "16-superluxuryreps-1gz3yjo": "errada: ouro rosé em couro",
+        "16-superluxuryreps-rphdpe": "errada: ouro rosé em couro",
+        "16-superluxuryreps-fzsfk1": "errada: Nautilus em couro, dentro da caixa",
+        "16-superluxuryreps-laimq0": "errada: Nautilus em couro, dentro da caixa",
+        "16-superluxuryreps-qokdy8": "errada: Nautilus em couro, dentro da caixa",
+        "16-superluxuryreps-165ol6e": "errada: Nautilus em couro, dentro da caixa",
+        "16-superluxuryreps-1kg9k5f": "errada: mostrador branco/prata",
+        "16-superluxuryreps-4okxhd": "errada: mostrador branco/prata",
+        "st-16-lcw-19862-1": "errada: carbono preto/ouro rosé, mostrador preto",
+        "st-16-lcw-19862-2": "errada: carbono preto/ouro rosé, mostrador preto",
+        "st-16-lcw-19862-3": "errada: carbono preto/ouro rosé, mostrador preto",
+        "st-16-lcw-19862-4": "errada: pulseira carbono preto/ouro rosé",
+        "st-16-ul-75579-1": "errada: mostrador azul Tiffany",
+        "st-16-ul-75579-2": "errada: mostrador azul Tiffany",
+        "st-16-ul-71775-1": "errada: ouro com diamantes e tourbillon",
+        "st-16-ul-188599-1": "errada: luneta com diamantes baguete e mostrador cinza-escuro degradê, não verde-oliva",
+        "st-16-ul-188599-2": "errada: perfil lateral do anúncio da versão com luneta de diamantes; não confirma a vari",
+        "st-16-ul-188599-3": "errada: perfil lateral do anúncio da versão com luneta de diamantes; não confirma a vari",
+        "st-16-ul-188599-4": "errada: perfil lateral do anúncio da versão com luneta de diamantes; não confirma a vari",
+        "st-16-ul-188591-1": "errada: luneta de safiras azuis e mostrador cinza degradê, não verde-oliva",
+        "st-16-ul-188591-2": "errada: perfil lateral do anúncio da versão com luneta de safiras; não confirma a varian",
+        "st-16-ul-188591-3": "errada: perfil lateral do anúncio da versão com luneta de safiras; não confirma a varian",
+        "st-16-ul-188591-4": "errada: perfil lateral do anúncio da versão com luneta de safiras; não confirma a varian",
+        "st-16-tk-196463-1": "errada: caixa preta (DLC) e mostrador azul Tiffany 'AET Remould', não aço com mostrador ",
+        "st-16-tk-196463-2": "errada: caixa preta (DLC) e mostrador azul Tiffany 'AET Remould', não aço com mostrador ",
+        "st-16-tk-196463-3": "errada: caixa preta (DLC) e mostrador azul Tiffany 'AET Remould', não aço com mostrador ",
+        "st-16-tk-196463-4": "errada: caixa preta (DLC) e mostrador azul Tiffany 'AET Remould', não aço com mostrador "
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "GMT-Master II 126720VTNR (Sprite - Canhoto)": {
       "rank": 17,
@@ -222,7 +663,13 @@
         "17-superluxuryreps-1vr4go7",
         "17-superluxuryreps-en31o",
         "17-superclonewatches-1ach3ma",
-        "17-superclonewatches-hhr5ex"
+        "17-superclonewatches-hhr5ex",
+        "f-17-0b123426",
+        "f-17-6b834374",
+        "st-17-lcw-20057-4",
+        "st-17-lcw-1875-4",
+        "st-17-ul-139091-1",
+        "st-17-ul-139091-2"
       ],
       "factoryMismatch": true,
       "factoryExpected": "VSF",
@@ -231,7 +678,16 @@
       "factoryResolved": true,
       "collectedFactory": "VSF",
       "collectedCount": 5,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "wrongNotes": {
+        "f-17-0b123426": "errada: bisel preto/cinza, não Sprite",
+        "f-17-6b834374": "lixo: só fecho",
+        "st-17-lcw-20057-4": "lixo: vista lateral do case, sem identificar o modelo",
+        "st-17-lcw-1875-4": "lixo: fundo da caixa",
+        "st-17-ul-139091-1": "errada: GMT ouro/aço mostrador verde",
+        "st-17-ul-139091-2": "errada: GMT ouro/aço mostrador verde"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "GMT-Master II 126710BLRO (Pepsi)": {
       "rank": 19,
@@ -255,7 +711,9 @@
         "19-superluxuryreps-3gmhr5",
         "19-superluxuryreps-vkzdhk",
         "19-superluxuryreps-1sh68zc",
-        "19-superluxuryreps-akhfk8"
+        "19-superluxuryreps-akhfk8",
+        "f-19-f9e4aefb",
+        "f-19-31a0be5e"
       ],
       "factoryMismatch": true,
       "factoryExpected": "VSF",
@@ -264,7 +722,12 @@
       "factoryResolved": true,
       "collectedFactory": "VSF",
       "collectedCount": 7,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "wrongNotes": {
+        "f-19-f9e4aefb": "lixo: tile SEM IMAGEM",
+        "f-19-31a0be5e": "lixo: só detalhe da bisel"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner 116610LN (Clássico)": {
       "rank": 20,
@@ -300,13 +763,23 @@
       "factoryResolved": true,
       "collectedFactory": "VSF",
       "collectedCount": 4,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "galleryAuditedAt": "2026-10-08"
     },
     "Aquanaut 5167A (Preto)": {
       "rank": 24,
       "verdict": "confirmado",
       "bestImageId": "24-superclonewatches-y99nr3",
-      "reasoning": "Aquanaut almofada dial preto texturizado"
+      "reasoning": "Aquanaut almofada dial preto texturizado",
+      "wrongIds": [
+        "24-superluxuryreps-1lcjbp6",
+        "24-superluxuryreps-f51qse"
+      ],
+      "wrongNotes": {
+        "24-superluxuryreps-1lcjbp6": "lixo: so fecho",
+        "24-superluxuryreps-f51qse": "lixo: verso da pulseira/fundo"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner 116610LV (Hulk)": {
       "rank": 25,
@@ -325,7 +798,12 @@
         "25-superluxuryreps-qa0dvl",
         "25-superluxuryreps-1bu89zz",
         "25-superluxuryreps-vclk1r",
-        "25-superluxuryreps-1xlwodm"
+        "25-superluxuryreps-1xlwodm",
+        "st-25-lcw-2694-4",
+        "st-25-ul-60553-1",
+        "st-25-ul-60553-2",
+        "st-25-ul-60553-3",
+        "st-25-ul-60553-4"
       ],
       "factoryMismatch": true,
       "factoryExpected": "ZF",
@@ -335,7 +813,15 @@
       "factoryResolved": true,
       "collectedFactory": "ZF",
       "collectedCount": 2,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-25-lcw-2694-4": "lixo: fundo da caixa (caseback) apenas",
+        "st-25-ul-60553-1": "errada: Submariner PVD preto, não Hulk verde",
+        "st-25-ul-60553-2": "errada: Submariner PVD preto, não Hulk verde",
+        "st-25-ul-60553-3": "errada: Submariner PVD preto, não Hulk verde",
+        "st-25-ul-60553-4": "errada: Submariner PVD preto, não Hulk verde"
+      }
     },
     "Royal Oak 15510 (50th Anniv Verde)": {
       "rank": 29,
@@ -349,57 +835,266 @@
         "29-superclonewatches-kcrc3z",
         "29-superclonewatches-2zw9s1",
         "29-superclonewatches-r12wq6",
-        "29-superclonewatches-jqebyo"
+        "29-superclonewatches-jqebyo",
+        "st-29-ul-159393-1",
+        "st-29-ul-159393-2",
+        "st-29-ul-159393-3",
+        "st-29-ul-159393-4"
       ],
-      "source": "deep-per-image"
+      "source": "deep-per-image",
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-29-ul-159393-1": "errada: ouro rosa mostrador preto",
+        "st-29-ul-159393-2": "errada: ouro rosa preto em caixa",
+        "st-29-ul-159393-3": "errada: ouro rosa preto em caixa",
+        "st-29-ul-159393-4": "errada: ouro rosa, pulseira na caixa"
+      }
     },
     "Royal Oak 15202 (Jumbo Extra-Thin)": {
       "rank": 38,
       "verdict": "confirmado",
       "bestImageId": "38-superclonewatches-40h0qr",
-      "reasoning": "RO Jumbo extra-fino azul tapisserie 15202"
+      "reasoning": "RO Jumbo extra-fino azul tapisserie 15202",
+      "wrongIds": [
+        "38-superluxuryreps-lm5ba4",
+        "38-superluxuryreps-1fp79y6",
+        "38-superluxuryreps-pfjgv5",
+        "38-superluxuryreps-31tcf5",
+        "38-superluxuryreps-1bt9lb8",
+        "38-superluxuryreps-1v8bs3i",
+        "38-superluxuryreps-ikxukg",
+        "38-superluxuryreps-14ynz0i",
+        "38-superluxuryreps-1rce3gk",
+        "38-superluxuryreps-ep05xi",
+        "38-superluxuryreps-mgvj7l",
+        "38-superclonewatches-nfexl0",
+        "38-superclonewatches-2zw9s1",
+        "38-superclonewatches-dnr35r",
+        "st-38-lcw-20207-3",
+        "st-38-lcw-20207-4",
+        "st-38-ul-72030-3"
+      ],
+      "wrongNotes": {
+        "38-superluxuryreps-lm5ba4": "errada: cronógrafo 41mm",
+        "38-superluxuryreps-1fp79y6": "errada: cronógrafo 41mm",
+        "38-superluxuryreps-pfjgv5": "errada: cronógrafo 41mm",
+        "38-superluxuryreps-31tcf5": "errada: cronógrafo, pulseira",
+        "38-superluxuryreps-1bt9lb8": "errada: fundo de cronógrafo",
+        "38-superluxuryreps-1v8bs3i": "errada: cronógrafo ouro rosa",
+        "38-superluxuryreps-ikxukg": "errada: cronógrafo ouro rosa",
+        "38-superluxuryreps-14ynz0i": "errada: cronógrafo ouro rosa",
+        "38-superluxuryreps-1rce3gk": "errada: cronógrafo ouro rosa",
+        "38-superluxuryreps-ep05xi": "errada: cronógrafo ouro rosa",
+        "38-superluxuryreps-mgvj7l": "errada: cronógrafo ouro rosa",
+        "38-superclonewatches-nfexl0": "errada: ouro amarelo",
+        "38-superclonewatches-2zw9s1": "errada: ouro, mostrador degradê",
+        "38-superclonewatches-dnr35r": "errada: preto, tourbillon aberto",
+        "st-38-lcw-20207-3": "lixo: fundo/movimento apenas",
+        "st-38-lcw-20207-4": "lixo: só pulseira, sem mostrador",
+        "st-38-ul-72030-3": "lixo: fundo e fecho apenas"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Nautilus 5711/1A (White Dial)": {
       "rank": 44,
       "verdict": "confirmado",
       "bestImageId": "44-superluxuryreps-14gmu50",
-      "reasoning": "Nautilus 5711 dial branco ranhurado"
+      "reasoning": "Nautilus 5711 dial branco ranhurado",
+      "wrongIds": [
+        "44-superluxuryreps-1cidtrk",
+        "44-superluxuryreps-16uy7i0",
+        "44-superluxuryreps-bqjv3d",
+        "44-superluxuryreps-1nt5wm9",
+        "44-superluxuryreps-5pshnu",
+        "44-superluxuryreps-1q1j613",
+        "44-superluxuryreps-olbpfx",
+        "44-superclonewatches-atz30u",
+        "44-superclonewatches-5pp3qb",
+        "44-superclonewatches-by60n6"
+      ],
+      "wrongNotes": {
+        "44-superluxuryreps-1cidtrk": "errada: mostrador verde",
+        "44-superluxuryreps-16uy7i0": "errada: mostrador verde",
+        "44-superluxuryreps-bqjv3d": "errada: mostrador verde",
+        "44-superluxuryreps-1nt5wm9": "lixo: fundo/fecho apenas",
+        "44-superluxuryreps-5pshnu": "errada: ouro rosa mostrador marrom",
+        "44-superluxuryreps-1q1j613": "errada: ouro rosa, fundo",
+        "44-superluxuryreps-olbpfx": "errada: ouro rosa mostrador marrom",
+        "44-superclonewatches-atz30u": "errada: ouro rosa mostrador branco",
+        "44-superclonewatches-5pp3qb": "errada: mostrador azul, couro",
+        "44-superclonewatches-by60n6": "errada: ouro rosa mostrador marrom"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Aquanaut 5168G (Verde Khaki)": {
       "rank": 46,
       "verdict": "confirmado",
       "bestImageId": "cl-46-1",
-      "reasoning": "Aquanaut verde oliva/khaki relevo pulseira verde = 5168G"
+      "reasoning": "Aquanaut verde oliva/khaki relevo pulseira verde = 5168G",
+      "wrongIds": [
+        "46-superluxuryreps-eqrbji",
+        "46-superluxuryreps-1t7yqlo",
+        "46-superluxuryreps-1up3o71",
+        "46-superluxuryreps-h137au",
+        "46-superclonewatches-eqjcev",
+        "46-superluxuryreps-xnxexf",
+        "46-superluxuryreps-9c16y2",
+        "st-46-lcw-1895-1",
+        "st-46-lcw-1895-2",
+        "st-46-lcw-1895-3",
+        "st-46-lcw-1895-4",
+        "st-46-ul-34306-2",
+        "st-46-ul-34306-4"
+      ],
+      "wrongNotes": {
+        "46-superluxuryreps-eqrbji": "errada: mostrador preto, tira preta",
+        "46-superluxuryreps-1t7yqlo": "errada: mostrador preto, tira preta",
+        "46-superluxuryreps-1up3o71": "lixo: movimento",
+        "46-superluxuryreps-h137au": "lixo: fundo de caixa",
+        "46-superclonewatches-eqjcev": "errada: mostrador azul",
+        "46-superluxuryreps-xnxexf": "lixo: fundo de caixa azul",
+        "46-superluxuryreps-9c16y2": "errada: tira azul, só perfil",
+        "st-46-lcw-1895-1": "errada: mostrador azul, não verde khaki",
+        "st-46-lcw-1895-2": "errada: mostrador azul, não verde khaki",
+        "st-46-lcw-1895-3": "errada: mostrador azul, não verde khaki",
+        "st-46-lcw-1895-4": "errada: mostrador azul, não verde khaki",
+        "st-46-ul-34306-2": "lixo: vista lateral fina, sem mostrador",
+        "st-46-ul-34306-4": "lixo: fundo/fecho apenas"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner 126619LB (Smurf/Bluesy Ouro Branco)": {
       "rank": 52,
       "verdict": "confirmado",
       "bestImageId": "52-superclonewatches-1i3ckq9",
-      "reasoning": "dial preto + bezel azul ouro branco = 126619LB"
+      "reasoning": "dial preto + bezel azul ouro branco = 126619LB",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 116508 (John Mayer Verde)": {
       "rank": 58,
       "verdict": "confirmado",
       "bestImageId": "58-superclonewatches-171skv6",
-      "reasoning": "Daytona ouro dial verde John Mayer 116508"
+      "reasoning": "Daytona ouro dial verde John Mayer 116508",
+      "wrongIds": [
+        "58-superluxuryreps-b8mqfj",
+        "58-superluxuryreps-p7ep3j",
+        "58-superluxuryreps-1waytqq",
+        "58-superluxuryreps-1ic6v2s",
+        "58-superluxuryreps-1xi72e1",
+        "58-superluxuryreps-1366nrm",
+        "58-superluxuryreps-cfuz2y",
+        "58-superluxuryreps-w0h82p",
+        "58-superluxuryreps-86jjev",
+        "58-superluxuryreps-r5skv8",
+        "st-58-ul-72427-1",
+        "st-58-ul-72427-2"
+      ],
+      "wrongNotes": {
+        "58-superluxuryreps-b8mqfj": "errada: mostrador roxo aço",
+        "58-superluxuryreps-p7ep3j": "errada: mostrador roxo aço",
+        "58-superluxuryreps-1waytqq": "errada: Daytona aço, lateral",
+        "58-superluxuryreps-1ic6v2s": "errada: Daytona aço, lateral",
+        "58-superluxuryreps-1xi72e1": "errada: Daytona aço, fecho",
+        "58-superluxuryreps-1366nrm": "errada: Daytona aço, fundo",
+        "58-superluxuryreps-cfuz2y": "errada: Daytona aço, fecho",
+        "58-superluxuryreps-w0h82p": "errada: mostrador branco/preto",
+        "58-superluxuryreps-86jjev": "errada: mostrador branco/preto",
+        "58-superluxuryreps-r5skv8": "lixo: fecho apenas",
+        "st-58-ul-72427-1": "errada: mostrador preto, não verde",
+        "st-58-ul-72427-2": "errada: mostrador preto, não verde"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Nautilus 5712/1A (Fase da Lua)": {
       "rank": 61,
       "verdict": "confirmado",
       "bestImageId": "61-superluxuryreps-1dk1o1s",
-      "reasoning": "Nautilus azul moonphase + reserva = 5712"
+      "reasoning": "Nautilus azul moonphase + reserva = 5712",
+      "wrongIds": [
+        "61-superluxuryreps-18thlq5",
+        "61-superclonewatches-oo5zbo",
+        "61-superclonewatches-cyt0s1"
+      ],
+      "wrongNotes": {
+        "61-superluxuryreps-18thlq5": "lixo: só fundo de caixa",
+        "61-superclonewatches-oo5zbo": "errada: ouro rosa",
+        "61-superclonewatches-cyt0s1": "errada: ouro rosa"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Calatrava 5227G": {
       "rank": 62,
-      "verdict": "confirmado",
-      "bestImageId": "62-superluxuryreps-1regf9i",
-      "reasoning": "Patek ouro branco cal324 tampa officier 5227G"
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Patek ouro branco cal324 tampa officier 5227G",
+      "wrongIds": [
+        "62-superluxuryreps-1regf9i",
+        "62-superluxuryreps-s9two3"
+      ],
+      "wrongNotes": {
+        "62-superluxuryreps-1regf9i": "lixo: apenas o fundo da caixa",
+        "62-superluxuryreps-s9two3": "lixo: apenas o perfil lateral"
+      },
+      "galleryAuditedAt": "2026-10-08",
+      "reopenedReason": "conferência por foto 08/10 reprovou a capa: lixo: apenas o fundo da caixa"
     },
     "Royal Oak 15400 (Branco/Prata)": {
       "rank": 64,
       "verdict": "confirmado",
       "bestImageId": "cl-64-1",
-      "reasoning": "AP RO branco Grande Tapisserie data 3h = 15400"
+      "reasoning": "AP RO branco Grande Tapisserie data 3h = 15400",
+      "wrongIds": [
+        "64-superluxuryreps-lm5ba4",
+        "64-superluxuryreps-1fp79y6",
+        "64-superluxuryreps-pfjgv5",
+        "64-superluxuryreps-31tcf5",
+        "64-superluxuryreps-1bt9lb8",
+        "64-superluxuryreps-1v8bs3i",
+        "64-superluxuryreps-ikxukg",
+        "64-superluxuryreps-14ynz0i",
+        "64-superluxuryreps-1rce3gk",
+        "64-superluxuryreps-ep05xi",
+        "64-superluxuryreps-mgvj7l",
+        "64-superluxuryreps-1h6d6eo",
+        "64-superluxuryreps-q6fz3o",
+        "64-superluxuryreps-bi1ovo",
+        "64-superluxuryreps-14uu9br",
+        "64-superluxuryreps-ntklyq",
+        "64-superluxuryreps-1vurgmu",
+        "64-superclonewatches-1h4hp1e",
+        "64-superluxuryreps-zfiw7q",
+        "64-superluxuryreps-vjl7kq",
+        "64-superluxuryreps-rnnixq",
+        "64-superluxuryreps-1e1dnds",
+        "64-superluxuryreps-1dzpuq"
+      ],
+      "wrongNotes": {
+        "64-superluxuryreps-lm5ba4": "errada: cronógrafo mostrador azul",
+        "64-superluxuryreps-1fp79y6": "errada: cronógrafo mostrador azul",
+        "64-superluxuryreps-pfjgv5": "errada: cronógrafo mostrador azul",
+        "64-superluxuryreps-31tcf5": "lixo: só pulseira",
+        "64-superluxuryreps-1bt9lb8": "lixo: só fundo da caixa",
+        "64-superluxuryreps-1v8bs3i": "errada: cronógrafo ouro rosa",
+        "64-superluxuryreps-ikxukg": "errada: cronógrafo ouro rosa",
+        "64-superluxuryreps-14ynz0i": "errada: cronógrafo ouro rosa",
+        "64-superluxuryreps-1rce3gk": "errada: cronógrafo ouro rosa",
+        "64-superluxuryreps-ep05xi": "lixo: fundo da caixa ouro rosa",
+        "64-superluxuryreps-mgvj7l": "lixo: só pulseira ouro rosa",
+        "64-superluxuryreps-1h6d6eo": "errada: Jumbo ouro azul na caixa",
+        "64-superluxuryreps-q6fz3o": "errada: Jumbo ouro mostrador azul",
+        "64-superluxuryreps-bi1ovo": "errada: Jumbo ouro, vista lateral",
+        "64-superluxuryreps-14uu9br": "errada: Jumbo ouro mostrador azul",
+        "64-superluxuryreps-ntklyq": "lixo: só pulseira ouro",
+        "64-superluxuryreps-1vurgmu": "lixo: só fecho ouro",
+        "64-superclonewatches-1h4hp1e": "errada: mostrador azul 3 ponteiros",
+        "64-superluxuryreps-zfiw7q": "errada: carbono forjado preto",
+        "64-superluxuryreps-vjl7kq": "errada: carbono forjado preto",
+        "64-superluxuryreps-rnnixq": "errada: carbono forjado preto",
+        "64-superluxuryreps-1e1dnds": "errada: carbono forjado preto",
+        "64-superluxuryreps-1dzpuq": "lixo: só pulseira de tecido"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak 15510 (50th Anniv)": {
       "rank": 70,
@@ -410,15 +1105,33 @@
         "70-superclonewatches-kcrc3z",
         "70-superclonewatches-1n9zano",
         "70-superclonewatches-1niww9a",
-        "70-superclonewatches-fcxxn7"
+        "70-superclonewatches-fcxxn7",
+        "70-superluxuryreps-1t1po6n",
+        "70-superluxuryreps-1rpc9ar",
+        "70-superluxuryreps-oqbs41",
+        "70-superluxuryreps-el5fru"
       ],
-      "source": "deep-per-image"
+      "source": "deep-per-image",
+      "wrongNotes": {
+        "70-superluxuryreps-1t1po6n": "lixo: fundo/movimento",
+        "70-superluxuryreps-1rpc9ar": "lixo: caixa",
+        "70-superluxuryreps-oqbs41": "lixo: movimento",
+        "70-superluxuryreps-el5fru": "lixo: pulseira/fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak Double Balance 15407": {
       "rank": 72,
       "verdict": "confirmado",
       "bestImageId": "72-superclonewatches-1e9zs7f",
-      "reasoning": "RO openworked ouro rose 15407 Double Balance"
+      "reasoning": "RO openworked ouro rose 15407 Double Balance",
+      "wrongIds": [
+        "st-72-lcw-20185-4"
+      ],
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-72-lcw-20185-4": "lixo: pulseira em balança, sem mostrador"
+      }
     },
     "GMT-Master II 116710BLNR (Batman Antigo)": {
       "rank": 85,
@@ -438,7 +1151,11 @@
         "85-superluxuryreps-1sc9zmm",
         "85-superluxuryreps-11algid",
         "85-superluxuryreps-i2o8uj",
-        "85-superluxuryreps-u4uhoi"
+        "85-superluxuryreps-u4uhoi",
+        "st-85-ul-63150-1",
+        "st-85-ul-63150-2",
+        "st-85-ul-63150-3",
+        "st-85-ul-57746-4"
       ],
       "factoryMismatch": true,
       "factoryExpected": "ARF",
@@ -447,43 +1164,158 @@
       "factoryResolved": true,
       "collectedFactory": "ARF",
       "collectedCount": 2,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-85-ul-63150-1": "errada: Blaken preto custom, não Batman",
+        "st-85-ul-63150-2": "errada: fundo/pulseira preta custom Blaken",
+        "st-85-ul-63150-3": "lixo: fundo da caixa apenas",
+        "st-85-ul-57746-4": "lixo: fundo/fecho apenas"
+      }
     },
     "GMT-Master II 126719BLRO (Meteorito)": {
       "rank": 88,
       "verdict": "confirmado",
       "bestImageId": "88-superclonewatches-fun1dn",
-      "reasoning": "Pepsi + dial meteorito ouro branco 126719BLRO"
+      "reasoning": "Pepsi + dial meteorito ouro branco 126719BLRO",
+      "wrongIds": [
+        "88-superclonewatches-1tbxoft",
+        "88-superluxuryreps-1m4bdhe",
+        "88-superluxuryreps-evvrc6",
+        "88-superluxuryreps-fj3r9",
+        "88-superluxuryreps-dqbdib",
+        "88-superluxuryreps-essx8k",
+        "88-superluxuryreps-1ivbep2",
+        "st-88-lcw-20050-2",
+        "st-88-lcw-20050-3",
+        "st-88-tk-195887-1",
+        "st-88-tk-195887-2",
+        "st-88-tk-195887-3",
+        "st-88-tk-195887-4"
+      ],
+      "wrongNotes": {
+        "88-superclonewatches-1tbxoft": "errada: GMT Rootbeer bicolor",
+        "88-superluxuryreps-1m4bdhe": "errada: Pepsi mostrador preto/azul, não meteorito",
+        "88-superluxuryreps-evvrc6": "errada: Pepsi mostrador preto/azul, não meteorito",
+        "88-superluxuryreps-fj3r9": "errada: Pepsi mostrador preto/azul, não meteorito",
+        "88-superluxuryreps-dqbdib": "lixo: perfil, relógio não identificável",
+        "88-superluxuryreps-essx8k": "lixo: perfil/coroa apenas",
+        "88-superluxuryreps-1ivbep2": "lixo: só fecho",
+        "st-88-lcw-20050-2": "lixo: foto escura só de lume",
+        "st-88-lcw-20050-3": "lixo: relógio sobre balança, tomada de peso",
+        "st-88-tk-195887-1": "errada: mostrador azul, não meteorito",
+        "st-88-tk-195887-2": "errada: mostrador azul, não meteorito",
+        "st-88-tk-195887-3": "errada: mostrador azul, não meteorito",
+        "st-88-tk-195887-4": "errada: mostrador azul, não meteorito"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak Chronograph 26240": {
       "rank": 90,
       "verdict": "confirmado",
       "bestImageId": "90-superclonewatches-1dyofj",
-      "reasoning": "RO Chrono 26240 aco dial azul"
+      "reasoning": "RO Chrono 26240 aco dial azul",
+      "wrongIds": [
+        "90-superluxuryreps-1d5abo2",
+        "90-superluxuryreps-yl8e1i",
+        "90-superluxuryreps-13fx192",
+        "90-superluxuryreps-1t1po6n",
+        "90-superluxuryreps-1rpc9ar",
+        "90-superluxuryreps-1litybz",
+        "90-superluxuryreps-1gn01ub",
+        "90-superluxuryreps-jnqlxu",
+        "90-superluxuryreps-363vzm",
+        "90-superluxuryreps-157yi29",
+        "90-superluxuryreps-oqbs41",
+        "90-superluxuryreps-el5fru"
+      ],
+      "wrongNotes": {
+        "90-superluxuryreps-1d5abo2": "errada: gold 3-hand Royal Oak, no chronograph",
+        "90-superluxuryreps-yl8e1i": "errada: gold 3-hand Royal Oak, no chronograph",
+        "90-superluxuryreps-13fx192": "errada: gold 3-hand Royal Oak side",
+        "90-superluxuryreps-1t1po6n": "lixo: caseback of 3-hand model",
+        "90-superluxuryreps-1rpc9ar": "lixo: box shot, watch tiny",
+        "90-superluxuryreps-1litybz": "errada: gold 3-hand Royal Oak, no chronograph",
+        "90-superluxuryreps-1gn01ub": "errada: gold 3-hand Royal Oak, no chronograph",
+        "90-superluxuryreps-jnqlxu": "errada: gold 3-hand Royal Oak, no chronograph",
+        "90-superluxuryreps-363vzm": "errada: gold 3-hand Royal Oak, no chronograph",
+        "90-superluxuryreps-157yi29": "errada: gold 3-hand Royal Oak, no chronograph",
+        "90-superluxuryreps-oqbs41": "lixo: movement/caseback of 3-hand model",
+        "90-superluxuryreps-el5fru": "lixo: clasp only"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Aquanaut 5164A (Travel Time)": {
       "rank": 94,
       "verdict": "confirmado",
       "bestImageId": "94-superclonewatches-1m6y91j",
-      "reasoning": "Aquanaut Travel Time azul dual-time 5164A"
+      "reasoning": "Aquanaut Travel Time azul dual-time 5164A",
+      "wrongIds": [
+        "94-superclonewatches-8foye",
+        "st-94-ul-81733-3",
+        "st-94-ul-27326-1",
+        "st-94-ul-27326-2",
+        "st-94-ul-27326-3",
+        "st-94-ul-27326-4"
+      ],
+      "wrongNotes": {
+        "94-superclonewatches-8foye": "errada: ouro rosa, não aço",
+        "st-94-ul-81733-3": "lixo: fundo e fecho",
+        "st-94-ul-27326-1": "errada: ouro rosa marrom (5164R)",
+        "st-94-ul-27326-2": "errada: ouro rosa marrom (5164R)",
+        "st-94-ul-27326-3": "errada: ouro rosa, fundo e fecho",
+        "st-94-ul-27326-4": "errada: ouro rosa marrom (5164R)"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Nautilus 5726/1A (Calendário Anual)": {
       "rank": 95,
       "verdict": "confirmado",
       "bestImageId": "95-superluxuryreps-qtu9pz",
-      "reasoning": "Nautilus azul calendario anual + moonphase 5726"
+      "reasoning": "Nautilus azul calendario anual + moonphase 5726",
+      "wrongIds": [
+        "95-superluxuryreps-15si6im",
+        "95-superclonewatches-1byxb8o",
+        "95-superclonewatches-7wvodw"
+      ],
+      "wrongNotes": {
+        "95-superluxuryreps-15si6im": "lixo: fundo do relógio",
+        "95-superclonewatches-1byxb8o": "errada: ouro rosa",
+        "95-superclonewatches-7wvodw": "errada: ouro rosa"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Nautilus 5980 (Cronógrafo)": {
       "rank": 97,
       "verdict": "confirmado",
       "bestImageId": "97-superclonewatches-4t9oje",
-      "reasoning": "Nautilus crono monocontador 6h azul-preto 5980"
+      "reasoning": "Nautilus crono monocontador 6h azul-preto 5980",
+      "wrongIds": [
+        "st-97-ul-66338-4",
+        "st-97-ul-59011-4"
+      ],
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-97-ul-66338-4": "lixo: fundo da caixa e fecho",
+        "st-97-ul-59011-4": "lixo: fundo da caixa e fecho"
+      }
     },
     "Daytona 116520 (Mostrador Branco Aço)": {
       "rank": 98,
       "verdict": "confirmado",
       "bestImageId": "98-superclonewatches-2y1o5f",
-      "reasoning": "Daytona 116520 aco dial branco"
+      "reasoning": "Daytona 116520 aco dial branco",
+      "wrongIds": [
+        "98-superclonewatches-fvedhj",
+        "st-98-ul-63284-1",
+        "st-98-tk-187871-4"
+      ],
+      "wrongNotes": {
+        "98-superclonewatches-fvedhj": "errada: mostrador preto",
+        "st-98-ul-63284-1": "errada: Daytona PVD preto, lateral; não aço branco",
+        "st-98-tk-187871-4": "lixo: corte ruim, mostrador cortado/cropped"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Sea-Dweller 126600 (SD43)": {
       "rank": 33,
@@ -504,26 +1336,16 @@
       "factoryResolved": true,
       "collectedFactory": "VSF",
       "collectedCount": 7,
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
-    },
-    "Submariner 114060 No-Date": {
-      "rank": 51,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "Sub preto sem data, mas com coroa entre SWISS e MADE às 6h e alças finas: é o 124060, não o 114060",
-      "candidateIds": [
-        "cl-51-4",
-        "cl-51-3",
-        "cl-51-2",
-        "cl-51-1"
-      ],
-      "reviewedAt": "2026-10-05T18:20:55.745Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "galleryAuditedAt": "2026-10-08"
     },
     "Sea-Dweller 126603 (Two-Tone)": {
       "rank": 84,
       "verdict": "confirmado",
       "bestImageId": "cl-84-1",
-      "reasoning": "Sea-Dweller two-tone aco/ouro preto ciclope = 126603"
+      "reasoning": "Sea-Dweller two-tone aco/ouro preto ciclope = 126603",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Datejust 41 126334 (Jubilee)": {
       "verdict": "confirmado",
@@ -532,7 +1354,14 @@
       "collectedFactory": "VSF",
       "collectedCount": 6,
       "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "wrongIds": [
+        "f-101-e7506d04"
+      ],
+      "wrongNotes": {
+        "f-101-e7506d04": "lixo: SEM IMAGEM"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak 15510ST": {
       "verdict": "incerto",
@@ -542,7 +1371,14 @@
       "collectedCount": 7,
       "reasoning": "Mídia factory-correta (APSF) coletada e validada (7 fotos).",
       "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Audemars Piguet; missing-local-file: /media/img/f-117-40759b26.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "quarantinedAt": "2026-07-10T22:10:47.469Z",
+      "wrongIds": [
+        "f-117-d0493af8"
+      ],
+      "wrongNotes": {
+        "f-117-d0493af8": "lixo: movement only"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Aquanaut 5168G 42mm Blue & Green": {
       "verdict": "incerto",
@@ -552,7 +1388,22 @@
       "collectedCount": 3,
       "reasoning": "Mídia factory-correta (DDF) coletada e validada (3 fotos).",
       "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-118-f1173a77.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "quarantinedAt": "2026-07-10T22:10:47.469Z",
+      "wrongIds": [
+        "f-118-f1173a77",
+        "f-118-304fef4c",
+        "st-118-ul-34306-2",
+        "st-118-ul-34306-4",
+        "st-118-ul-2849-3"
+      ],
+      "wrongNotes": {
+        "f-118-f1173a77": "lixo: SEM IMAGEM",
+        "f-118-304fef4c": "lixo: SEM IMAGEM",
+        "st-118-ul-34306-2": "lixo: vista lateral fina, sem mostrador",
+        "st-118-ul-34306-4": "lixo: fundo/fecho apenas",
+        "st-118-ul-2849-3": "lixo: fundo/movimento e fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak Offshore 26420 Chronograph": {
       "verdict": "incerto",
@@ -562,7 +1413,22 @@
       "collectedCount": 5,
       "reasoning": "Mídia factory-correta (APSF) coletada e validada (5 fotos).",
       "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Audemars Piguet; missing-local-file: /media/img/f-124-3a9a6bb3.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "quarantinedAt": "2026-07-10T22:10:47.469Z",
+      "wrongIds": [
+        "f-124-3a9a6bb3",
+        "f-124-7f74118a",
+        "f-124-75e2d8d1",
+        "f-124-3e8523be",
+        "st-124-ul-147418-3"
+      ],
+      "wrongNotes": {
+        "f-124-3a9a6bb3": "lixo: colagem de QC",
+        "f-124-7f74118a": "errada: fundo de caixa ouro rosa",
+        "f-124-75e2d8d1": "lixo: SEM IMAGEM",
+        "f-124-3e8523be": "lixo: SEM IMAGEM",
+        "st-124-ul-147418-3": "lixo: fundo da caixa/movimento"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Seamaster Diver 300M (2024 update, V4)": {
       "verdict": "incerto",
@@ -572,7 +1438,24 @@
       "collectedCount": 11,
       "reasoning": "Mídia factory-correta (VSF) coletada e validada (11 fotos).",
       "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Omega; missing-local-file: /media/img/f-132-69c5ac64.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "quarantinedAt": "2026-07-10T22:10:47.469Z",
+      "wrongIds": [
+        "f-132-69c5ac64",
+        "f-132-0f231080",
+        "f-132-2541426e",
+        "f-132-077e1a9d",
+        "f-132-859e5831",
+        "f-132-d491eff9"
+      ],
+      "wrongNotes": {
+        "f-132-69c5ac64": "errada: 007 brown dial bronze-gold bezel mesh",
+        "f-132-0f231080": "errada: 007 green/gold bezel mesh",
+        "f-132-2541426e": "lixo: tiny watch, text overlay",
+        "f-132-077e1a9d": "errada: 007 gold bezel mesh",
+        "f-132-859e5831": "lixo: caseback only",
+        "f-132-d491eff9": "errada: black dial gold bezel rubber"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Calatrava 5227": {
       "verdict": "incerto",
@@ -582,7 +1465,20 @@
       "collectedCount": 11,
       "reasoning": "Mídia factory-correta (3KF) coletada e validada (11 fotos).",
       "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-126-5f2af9c3.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "quarantinedAt": "2026-07-10T22:10:47.469Z",
+      "wrongIds": [
+        "f-126-90680328",
+        "f-126-b53a033c",
+        "f-126-fa4a5f19",
+        "f-126-860706ee"
+      ],
+      "wrongNotes": {
+        "f-126-90680328": "lixo: SEM IMAGEM",
+        "f-126-b53a033c": "lixo: SEM IMAGEM",
+        "f-126-fa4a5f19": "lixo: apenas fundo/movimento",
+        "f-126-860706ee": "lixo: apenas fundo/movimento dourado"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Air-King 126900": {
       "verdict": "confirmado",
@@ -591,7 +1487,22 @@
       "collectedFactory": "VSF",
       "collectedCount": 6,
       "reasoning": "Mídia factory-correta (VSF) coletada e validada (6 fotos). Re-baixada via safe-download e re-confirmada por revisão visual do operador em 2026-07-11 (quarentena 2026-07-10: missing-local-file).",
-      "reviewedAt": "2026-07-11T03:34:37.153Z"
+      "reviewedAt": "2026-07-11T03:34:37.153Z",
+      "wrongIds": [
+        "f-127-08e7de0a",
+        "f-127-0a208793",
+        "f-127-bc922302",
+        "st-127-lcw-20111-3",
+        "st-127-lcw-2395-4"
+      ],
+      "wrongNotes": {
+        "f-127-08e7de0a": "lixo: fundo do relógio",
+        "f-127-0a208793": "lixo: vista lateral, sem mostrador",
+        "f-127-bc922302": "lixo: SEM IMAGEM",
+        "st-127-lcw-20111-3": "lixo: foto de lume no escuro",
+        "st-127-lcw-2395-4": "lixo: vista lateral sem identificar o relógio"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Minute Repeater Tourbillon Perpetual Calendar 5207P": {
       "verdict": "incerto",
@@ -601,73 +1512,178 @@
       "collectedCount": 9,
       "reasoning": "Mídia factory-correta (UNITED) coletada e validada (9 fotos).",
       "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-105-59224bff.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z"
+      "quarantinedAt": "2026-07-10T22:10:47.469Z",
+      "wrongIds": [
+        "f-105-ca0a8e0b",
+        "f-105-c13e665d",
+        "f-105-31e9a13d",
+        "f-105-109078dc"
+      ],
+      "wrongNotes": {
+        "f-105-ca0a8e0b": "errada: ouro rosa, mostrador preto",
+        "f-105-c13e665d": "lixo: SEM IMAGEM",
+        "f-105-31e9a13d": "lixo: só movimento",
+        "f-105-109078dc": "errada: Audemars Piguet, outra marca"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Luminor Marina PAM111": {
       "rank": 4,
       "verdict": "confirmado",
       "bestImageId": "pt-4-1",
-      "reasoning": "pt-4-1/2: Luminor Marina aço, dial preto, seg. pequeno às 9, pulseira marrom = PAM111. cl-4-1 é carbotech lume verde (outro)."
+      "reasoning": "pt-4-1/2: Luminor Marina aço, dial preto, seg. pequeno às 9, pulseira marrom = PAM111. cl-4-1 é carbotech lume verde (outro).",
+      "wrongIds": [
+        "cl-4-1",
+        "pt-4-3"
+      ],
+      "wrongNotes": {
+        "cl-4-1": "errada: Marina preto de cerâmica com data, outra referência",
+        "pt-4-3": "lixo: foto só de lume no escuro"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 126529LN (Le Mans Edition)": {
       "rank": 13,
       "verdict": "confirmado",
       "bestImageId": "pt-13-1",
-      "reasoning": "Daytona bezel cerâmico preto, dial preto c/ contadores prata, '100' vermelho e contador 24h = Le Mans 126529LN."
+      "reasoning": "Daytona bezel cerâmico preto, dial preto c/ contadores prata, '100' vermelho e contador 24h = Le Mans 126529LN.",
+      "wrongIds": [
+        "pt-13-3",
+        "st-13-ul-140466-2"
+      ],
+      "wrongNotes": {
+        "pt-13-3": "lixo: apenas lume no escuro",
+        "st-13-ul-140466-2": "lixo: só lateral da pulseira"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Luminor Marina PAM1312": {
       "rank": 37,
       "verdict": "confirmado",
       "bestImageId": "pt-37-1",
-      "reasoning": "pt-37-1/2: Luminor Marina 44 dial preto, data às 3, seg. azulado às 9 = PAM1312. cl-37-1 é dial branco (PAM1394)."
+      "reasoning": "pt-37-1/2: Luminor Marina 44 dial preto, data às 3, seg. azulado às 9 = PAM1312. cl-37-1 é dial branco (PAM1394).",
+      "wrongIds": [
+        "cl-37-1",
+        "pt-37-3"
+      ],
+      "wrongNotes": {
+        "cl-37-1": "errada: mostrador branco, couro verde",
+        "pt-37-3": "lixo: só lume"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Yacht-Master 226627 (Titânio RLX)": {
       "rank": 47,
       "verdict": "confirmado",
       "bestImageId": "pt-47-1",
-      "reasoning": "Yacht-Master 42 bezel preto fosco, dial preto, bracelete Oyster escovado (titânio) = 226627; 226659 usaria Oysterflex."
+      "reasoning": "Yacht-Master 42 bezel preto fosco, dial preto, bracelete Oyster escovado (titânio) = 226627; 226659 usaria Oysterflex.",
+      "wrongIds": [
+        "pt-47-3",
+        "pt-47-4"
+      ],
+      "wrongNotes": {
+        "pt-47-3": "lixo: só lume no escuro",
+        "pt-47-4": "lixo: close da data"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Luminor GMT PAM441 (Cerâmica)": {
       "rank": 53,
       "verdict": "confirmado",
       "bestImageId": "pt-53-1",
-      "reasoning": "Luminor 1950 GMT caixa cerâmica preta, dial 'CERAMICA', data às 3, seg. às 9 = PAM441 em todas as candidatas."
+      "reasoning": "Luminor 1950 GMT caixa cerâmica preta, dial 'CERAMICA', data às 3, seg. às 9 = PAM441 em todas as candidatas.",
+      "wrongIds": [
+        "pt-53-3"
+      ],
+      "wrongNotes": {
+        "pt-53-3": "lixo: apenas lume no escuro"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Tank Must (Large)": {
       "rank": 54,
       "verdict": "confirmado",
       "bestImageId": "pt-54-1",
-      "reasoning": "Tank Must aço, dial prateado romanos pretos, ponteiros azulados, coroa c/ cabochão — corresponde ao modelo."
+      "reasoning": "Tank Must aço, dial prateado romanos pretos, ponteiros azulados, coroa c/ cabochão — corresponde ao modelo.",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Portugieser 7 Days 5007": {
       "rank": 81,
       "verdict": "confirmado",
       "bestImageId": "pt-81-1",
-      "reasoning": "IWC Portugieser Automatic 7 Days (IW500715) com dial branco e subdials azuis; linha e referência 5007 conferem."
+      "reasoning": "IWC Portugieser Automatic 7 Days (IW500715) com dial branco e subdials azuis; linha e referência 5007 conferem.",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Explorer II 226570 'Polar'": {
       "rank": 130,
       "verdict": "confirmado",
       "bestImageId": "cl-130-2",
-      "reasoning": "cl-130-1/2 mostram Explorer II dial branco 'Polar' com ponteiro GMT laranja; pt-130-1/2 são a variante de dial preto."
+      "reasoning": "cl-130-1/2 mostram Explorer II dial branco 'Polar' com ponteiro GMT laranja; pt-130-1/2 são a variante de dial preto.",
+      "wrongIds": [
+        "pt-130-1",
+        "pt-130-2",
+        "pt-130-3",
+        "pt-130-4",
+        "st-130-ul-155103-1",
+        "st-130-ul-155103-2"
+      ],
+      "wrongNotes": {
+        "pt-130-1": "errada: mostrador preto",
+        "pt-130-2": "errada: mostrador preto",
+        "pt-130-3": "lixo: só lume escuro",
+        "pt-130-4": "errada: mostrador preto",
+        "st-130-ul-155103-1": "errada: Land-Dweller mostrador favo de mel, não Explorer II",
+        "st-130-ul-155103-2": "errada: Land-Dweller mostrador favo de mel, não Explorer II"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Sky-Dweller 326934 Steel": {
       "rank": 112,
       "verdict": "confirmado",
       "bestImageId": "cl-112-1",
-      "reasoning": "Sky-Dweller aço com dial branco, bezel canelado e jubilee — layout com anel 24h confere com 326934."
+      "reasoning": "Sky-Dweller aço com dial branco, bezel canelado e jubilee — layout com anel 24h confere com 326934.",
+      "wrongIds": [
+        "cl-112-3",
+        "pt-112-1",
+        "pt-112-2",
+        "pt-112-3",
+        "pt-112-4",
+        "st-112-ul-143240-1",
+        "st-112-ul-143240-2"
+      ],
+      "wrongNotes": {
+        "cl-112-3": "lixo: clasp only",
+        "pt-112-1": "errada: green dial, Oyster, other generation",
+        "pt-112-2": "errada: green dial, other generation",
+        "pt-112-3": "lixo: lume-only dark shot",
+        "pt-112-4": "errada: green dial, other generation",
+        "st-112-ul-143240-1": "errada: Submariner ouro amarelo, mostrador azul",
+        "st-112-ul-143240-2": "errada: fundo de relógio de ouro"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Santos-Dumont Large": {
       "rank": 134,
       "verdict": "confirmado",
       "bestImageId": "pt-134-1",
-      "reasoning": "Santos-Dumont em aço, dial prata com romanos, ponteiros azulados, coroa cabochon — proporções do Large (31.4mm)."
+      "reasoning": "Santos-Dumont em aço, dial prata com romanos, ponteiros azulados, coroa cabochon — proporções do Large (31.4mm).",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "RM 052 Tourbillon Skull": {
       "rank": 133,
       "verdict": "confirmado",
       "bestImageId": "cl-133-1",
-      "reasoning": "RM 052 Skull visível: caveira preta no mostrador esqueletizado; caseback grava 'RM052AMCC26/30'."
+      "reasoning": "RM 052 Skull visível: caveira preta no mostrador esqueletizado; caseback grava 'RM052AMCC26/30'.",
+      "wrongIds": [
+        "cl-133-4"
+      ],
+      "wrongNotes": {
+        "cl-133-4": "lixo: fundo apenas"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Explorer I 214270 (39mm)": {
       "rank": 18,
@@ -680,7 +1696,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-10-05T18:20:55.745Z"
+      "reviewedAt": "2026-10-08T19:27:13.499Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -692,7 +1708,14 @@
         "bb-39-1",
         "bb-39-2",
         "bb-39-3"
-      ]
+      ],
+      "wrongIds": [
+        "cl-39-1"
+      ],
+      "wrongNotes": {
+        "cl-39-1": "errada: green dial, not brown PAM968"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Overseas 4500V (Azul)": {
       "rank": 65,
@@ -704,7 +1727,9 @@
         "bb-65-2",
         "bb-65-3",
         "bb-65-4"
-      ]
+      ],
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Overseas 4500V (Prata)": {
       "rank": 75,
@@ -716,7 +1741,9 @@
         "bb-75-2",
         "bb-75-3",
         "bb-75-4"
-      ]
+      ],
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Santos Dumont (Rose Gold)": {
       "rank": 82,
@@ -732,7 +1759,20 @@
         "bb-82-2",
         "bb-82-3",
         "bb-82-4"
-      ]
+      ],
+      "wrongIds": [
+        "cl-82-1",
+        "cl-82-2",
+        "cl-82-3",
+        "cl-82-4"
+      ],
+      "wrongNotes": {
+        "cl-82-1": "errada: Panthere com diamantes",
+        "cl-82-2": "errada: Panthere fundo de caixa",
+        "cl-82-3": "errada: Panthere com diamantes",
+        "cl-82-4": "errada: Panthere com diamantes"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Day-Date 40 Ice Blue (Baguette)": {
       "rank": 86,
@@ -761,12 +1801,59 @@
         "bb-86-2",
         "bb-86-3",
         "bb-86-4"
-      ]
+      ],
+      "wrongIds": [
+        "86-superluxuryreps-1jpgzw3",
+        "86-superluxuryreps-7232d1",
+        "86-superluxuryreps-tft6t3",
+        "86-superluxuryreps-1ftjb95",
+        "86-superluxuryreps-o2zsfe",
+        "86-superluxuryreps-1nleoj9",
+        "86-superluxuryreps-12tc8ii",
+        "86-superluxuryreps-1wyxq8m",
+        "86-superluxuryreps-kbjspk",
+        "86-superluxuryreps-1p72cym",
+        "86-superluxuryreps-yxejvl",
+        "cl-86-1",
+        "cl-86-2",
+        "cl-86-3",
+        "cl-86-4",
+        "bb-86-3",
+        "bb-86-4",
+        "86-superclonewatches-15x12a9",
+        "86-superclonewatches-1xnrvte",
+        "st-86-ul-144800-1",
+        "st-86-ul-144800-2"
+      ],
+      "wrongNotes": {
+        "86-superluxuryreps-1jpgzw3": "errada: ouro rosa mostrador pavê",
+        "86-superluxuryreps-7232d1": "errada: ouro rosa mostrador pavê",
+        "86-superluxuryreps-tft6t3": "errada: ouro rosa mostrador pavê",
+        "86-superluxuryreps-1ftjb95": "errada: ouro rosa mostrador pavê",
+        "86-superluxuryreps-o2zsfe": "lixo: fundo da caixa ouro rosa",
+        "86-superluxuryreps-1nleoj9": "lixo: só pulseira ouro rosa",
+        "86-superluxuryreps-12tc8ii": "errada: ouro rosa mostrador meteorito",
+        "86-superluxuryreps-1wyxq8m": "errada: ouro rosa mostrador meteorito",
+        "86-superluxuryreps-kbjspk": "errada: ouro rosa mostrador meteorito",
+        "86-superluxuryreps-1p72cym": "errada: ouro rosa mostrador meteorito",
+        "86-superluxuryreps-yxejvl": "errada: ouro rosa mostrador meteorito",
+        "cl-86-1": "errada: é um Daytona",
+        "cl-86-2": "errada: é um Daytona, vista lateral",
+        "cl-86-3": "lixo: fundo da caixa de Daytona",
+        "cl-86-4": "errada: é um Daytona",
+        "bb-86-3": "lixo: pulseira de lado, sem mostrador",
+        "bb-86-4": "lixo: fundo da caixa",
+        "86-superclonewatches-15x12a9": "errada: mostrador azul degradê, outro modelo",
+        "86-superclonewatches-1xnrvte": "lixo: pulseira de lado, sem mostrador",
+        "st-86-ul-144800-1": "errada: algarismos arábicos (orientais), sem índices baguete de diamante",
+        "st-86-ul-144800-2": "errada: algarismos arábicos (orientais), sem índices baguete de diamante"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Navitimer B01 43mm": {
       "rank": 93,
-      "verdict": "confirmado",
-      "bestImageId": "bb-93-1",
+      "verdict": "incerto",
+      "bestImageId": null,
       "reasoning": "Navitimer B01 chrono com regua de calculo, ~43mm no paquimetro do review. cl-93 era Chronomat (descartado).",
       "candidateIds": [
         "cl-93-1",
@@ -777,7 +1864,29 @@
         "bb-93-2",
         "bb-93-3",
         "bb-93-4"
-      ]
+      ],
+      "wrongIds": [
+        "bb-93-1",
+        "cl-93-1",
+        "cl-93-2",
+        "cl-93-3",
+        "cl-93-4",
+        "bb-93-2",
+        "bb-93-3",
+        "bb-93-4"
+      ],
+      "wrongNotes": {
+        "bb-93-1": "lixo: Chinese text collage",
+        "cl-93-1": "errada: Chronomat-style bezel, not Navitimer slide rule",
+        "cl-93-2": "errada: Chronomat-style bezel, not Navitimer",
+        "cl-93-3": "errada: Chronomat-style bezel, not Navitimer",
+        "cl-93-4": "lixo: case side only",
+        "bb-93-2": "lixo: text collage case/caseback",
+        "bb-93-3": "lixo: text collage",
+        "bb-93-4": "lixo: text collage"
+      },
+      "galleryAuditedAt": "2026-10-08",
+      "reopenedReason": "conferência por foto 08/10 reprovou a capa: lixo: Chinese text collage"
     },
     "Black Bay 58 79030N (39mm)": {
       "rank": 104,
@@ -793,7 +1902,22 @@
         "bb-104-2",
         "bb-104-3",
         "bb-104-4"
-      ]
+      ],
+      "wrongIds": [
+        "cl-104-1",
+        "cl-104-2",
+        "cl-104-3",
+        "cl-104-4",
+        "bb-104-4"
+      ],
+      "wrongNotes": {
+        "cl-104-1": "errada: Black Bay Chrono rosa",
+        "cl-104-2": "errada: Black Bay Chrono rosa",
+        "cl-104-3": "errada: Black Bay Chrono rosa",
+        "cl-104-4": "errada: Black Bay Chrono rosa",
+        "bb-104-4": "lixo: lateral/fundo"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Speedmaster Dark Side of the Moon (Ref. 311)": {
       "rank": 109,
@@ -808,7 +1932,18 @@
         "bb-109-2",
         "bb-109-3",
         "bb-109-4"
-      ]
+      ],
+      "wrongIds": [
+        "cl-109-1",
+        "cl-109-2",
+        "cl-109-3"
+      ],
+      "wrongNotes": {
+        "cl-109-1": "errada: Speedmaster cinza com pulseira verde",
+        "cl-109-2": "errada: Speedmaster cinza com pulseira verde",
+        "cl-109-3": "errada: Speedmaster cinza com pulseira verde"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Cosmograph Daytona 126500LN Steel": {
       "rank": 111,
@@ -824,7 +1959,20 @@
         "bb-111-2",
         "bb-111-3",
         "bb-111-4"
-      ]
+      ],
+      "wrongIds": [
+        "cl-111-1",
+        "cl-111-2",
+        "cl-111-3",
+        "cl-111-4"
+      ],
+      "wrongNotes": {
+        "cl-111-1": "errada: Daytona bicolor ouro/aço",
+        "cl-111-2": "errada: Daytona bicolor ouro/aço",
+        "cl-111-3": "errada: Daytona bicolor ouro/aço",
+        "cl-111-4": "errada: Daytona bicolor ouro/aço"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Classic Fusion 45mm (Ref. 511)": {
       "rank": 113,
@@ -857,7 +2005,9 @@
         "bb-131-2",
         "bb-131-3",
         "bb-131-4"
-      ]
+      ],
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "BR 03-92 42mm (Ref. BR0392)": {
       "rank": 121,
@@ -869,7 +2019,9 @@
         "bb-121-2",
         "bb-121-3",
         "bb-121-4"
-      ]
+      ],
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Santos Medium 35mm": {
       "rank": 34,
@@ -881,7 +2033,14 @@
         "wb-34-2",
         "wb-34-3",
         "wb-34-4"
-      ]
+      ],
+      "wrongIds": [
+        "wb-34-2"
+      ],
+      "wrongNotes": {
+        "wb-34-2": "lixo: só logo Luxury Reps"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Ballon Bleu 42mm": {
       "rank": 76,
@@ -893,7 +2052,14 @@
         "wb-76-2",
         "wb-76-3",
         "wb-76-4"
-      ]
+      ],
+      "wrongIds": [
+        "wb-76-2"
+      ],
+      "wrongNotes": {
+        "wb-76-2": "lixo: só logo CLEAN"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Pilot Chrono 'Le Petit Prince'": {
       "rank": 89,
@@ -905,151 +2071,906 @@
         "wb-89-2",
         "wb-89-3",
         "wb-89-4"
-      ]
+      ],
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Speedmaster Moonwatch Professional 3861": {
       "rank": 103,
       "verdict": "confirmado",
       "bestImageId": "dir-103-1",
-      "reasoning": "Speedmaster Moonwatch Professional, mostrador preto, 3 subdials, tachymètre — modelo confere. Listagem é OMF V2 Venus 75; frente idêntica ao 3861 (diferença é gravação do movimento no verso). Watermark trustytime."
+      "reasoning": "Speedmaster Moonwatch Professional, mostrador preto, 3 subdials, tachymètre — modelo confere. Listagem é OMF V2 Venus 75; frente idêntica ao 3861 (diferença é gravação do movimento no verso). Watermark trustytime.",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "RM 035 Rafael Nadal (RM035-01)": {
       "rank": 129,
       "verdict": "confirmado",
       "bestImageId": "dir-129-1",
-      "reasoning": "Richard Mille tonneau carbono forjado, esqueleto, pulseira vermelha — 'RM35-0' no mostrador. Página rotula KVF V3 explicitamente. Caveat de fidelidade: KVF só faz a versão carbono forjado do Nadal (que no genuíno mapeia mais ao RM35-02 que ao RM035 original 2011). Watermark swissrep."
+      "reasoning": "Richard Mille tonneau carbono forjado, esqueleto, pulseira vermelha — 'RM35-0' no mostrador. Página rotula KVF V3 explicitamente. Caveat de fidelidade: KVF só faz a versão carbono forjado do Nadal (que no genuíno mapeia mais ao RM35-02 que ao RM035 original 2011). Watermark swissrep.",
+      "wrongIds": [
+        "cl-129-1",
+        "cl-129-2",
+        "cl-129-3",
+        "cl-129-4",
+        "wb-129-1"
+      ],
+      "wrongNotes": {
+        "cl-129-1": "errada: caixa vermelha com diamantes",
+        "cl-129-2": "errada: caixa vermelha com diamantes",
+        "cl-129-3": "lixo: só pulseira",
+        "cl-129-4": "lixo: só pulseira",
+        "wb-129-1": "lixo: só logo Luxury Reps"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Big Pilot 43mm": {
       "rank": 67,
       "verdict": "confirmado",
       "bestImageId": "dir-67-1",
-      "reasoning": "IWC Big Pilot 43mm (IW329301): triângulo + 2 pontos às 12h, 'AUTOMATIC', couro marrom com rebites — modelo/tamanho conferem. Loja não rotula a fábrica como ZF (ZF é famosa pelo 46mm); foto limpa do 43mm correto."
+      "reasoning": "IWC Big Pilot 43mm (IW329301): triângulo + 2 pontos às 12h, 'AUTOMATIC', couro marrom com rebites — modelo/tamanho conferem. Loja não rotula a fábrica como ZF (ZF é famosa pelo 46mm); foto limpa do 43mm correto.",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Monaco Calibre Heuer 02 Chronograph": {
       "rank": 123,
       "verdict": "confirmado",
       "bestImageId": "dir-123-1",
-      "reasoning": "TAG Monaco caixa quadrada, mostrador preto, 2 subdials brancos, ponteiro de crono vermelho, data às 6h (ref CBL2113.BA0644) — modelo confere. Loja não rotula a fábrica; foto stock limpa."
+      "reasoning": "TAG Monaco caixa quadrada, mostrador preto, 2 subdials brancos, ponteiro de crono vermelho, data às 6h (ref CBL2113.BA0644) — modelo confere. Loja não rotula a fábrica; foto stock limpa.",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Carrera Chronograph 39 'Glassbox'": {
       "rank": 114,
       "verdict": "confirmado",
       "bestImageId": "dir-114-1",
-      "reasoning": "TAG Carrera 60th Anniversary panda: mostrador prata, 3 subdials pretos, cristal box abaulado (glassbox), logo CARRERA/HEUER — modelo confere. Loja não publica código de fábrica; V7F não confirmado. Watermark de telefone."
+      "reasoning": "TAG Carrera 60th Anniversary panda: mostrador prata, 3 subdials pretos, cristal box abaulado (glassbox), logo CARRERA/HEUER — modelo confere. Loja não publica código de fábrica; V7F não confirmado. Watermark de telefone.",
+      "wrongIds": [
+        "dir-114-2"
+      ],
+      "wrongNotes": {
+        "dir-114-2": "lixo: fundo/fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Santos 40mm (Branco)": {
       "rank": 43,
       "verdict": "confirmado",
       "bestImageId": "dir-43-1",
-      "reasoning": "Cartier Santos de Cartier Large, caixa quadrada de aço, mostrador branco/prata, algarismos romanos, ponteiros azuis, coroa espinélio azul, pulseira de aço com parafusos — modelo confere (Santos branco = ref WSSA0018; o WSSA0037 do catálogo original é na verdade cinza). Página rotula 'SS BVF 1:1 best edition white dial'. Watermark etasaat."
+      "reasoning": "Cartier Santos de Cartier Large, caixa quadrada de aço, mostrador branco/prata, algarismos romanos, ponteiros azuis, coroa espinélio azul, pulseira de aço com parafusos — modelo confere (Santos branco = ref WSSA0018; o WSSA0037 do catálogo original é na verdade cinza). Página rotula 'SS BVF 1:1 best edition white dial'. Watermark etasaat.",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Nautilus 5711/1A (Blue Dial)": {
       "rank": 9,
       "verdict": "confirmado",
       "bestImageId": "hunt-9-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Nautilus azul degradê clássico, aço, horizontal embossed — variante exata (não Tiffany/verde das caças anteriores)."
+      "reasoning": "[validação visual do operador 2026-07-08] Nautilus azul degradê clássico, aço, horizontal embossed — variante exata (não Tiffany/verde das caças anteriores).",
+      "wrongIds": [
+        "9-superclonewatches-11bvxwn",
+        "9-superluxuryreps-10ip93c",
+        "9-superluxuryreps-hvaqiw",
+        "9-superluxuryreps-1ggu4td",
+        "9-superluxuryreps-1lcazc",
+        "9-superluxuryreps-1d3z5mi",
+        "9-superluxuryreps-1ow0rpg",
+        "9-superluxuryreps-sez4cp",
+        "9-superluxuryreps-2mzxud",
+        "9-superluxuryreps-5gh3wi",
+        "9-superluxuryreps-1gz3yjo",
+        "9-superluxuryreps-rphdpe",
+        "9-superluxuryreps-fzsfk1",
+        "9-superluxuryreps-laimq0",
+        "9-superluxuryreps-qokdy8",
+        "9-superluxuryreps-165ol6e",
+        "9-superluxuryreps-1kg9k5f",
+        "9-superluxuryreps-4okxhd",
+        "cl-9-1",
+        "cl-9-2",
+        "cl-9-3",
+        "bb-9-1",
+        "bb-9-2",
+        "bb-9-3",
+        "bb-9-4",
+        "ul-9-1",
+        "ul-9-2",
+        "ul-9-3",
+        "ul-9-4",
+        "wb-9-2",
+        "hunt-9-2"
+      ],
+      "wrongNotes": {
+        "9-superclonewatches-11bvxwn": "errada: mostrador verde",
+        "9-superluxuryreps-10ip93c": "errada: mostrador Tiffany",
+        "9-superluxuryreps-hvaqiw": "errada: mostrador Tiffany",
+        "9-superluxuryreps-1ggu4td": "lixo: fundo do relógio",
+        "9-superluxuryreps-1lcazc": "errada: ouro rosa, couro",
+        "9-superluxuryreps-1d3z5mi": "errada: ouro rosa, couro",
+        "9-superluxuryreps-1ow0rpg": "errada: ouro rosa, couro",
+        "9-superluxuryreps-sez4cp": "errada: ouro rosa, fundo",
+        "9-superluxuryreps-2mzxud": "errada: ouro rosa, fundo",
+        "9-superluxuryreps-5gh3wi": "errada: pulseira couro/fecho ouro",
+        "9-superluxuryreps-1gz3yjo": "errada: ouro rosa, couro",
+        "9-superluxuryreps-rphdpe": "errada: ouro rosa, couro",
+        "9-superluxuryreps-fzsfk1": "errada: couro na caixa, outra ref",
+        "9-superluxuryreps-laimq0": "errada: couro na caixa, outra ref",
+        "9-superluxuryreps-qokdy8": "errada: couro na caixa, outra ref",
+        "9-superluxuryreps-165ol6e": "errada: couro na caixa, outra ref",
+        "9-superluxuryreps-1kg9k5f": "errada: mostrador branco",
+        "9-superluxuryreps-4okxhd": "errada: mostrador branco",
+        "cl-9-1": "errada: mostrador Tiffany",
+        "cl-9-2": "errada: mostrador Tiffany",
+        "cl-9-3": "lixo: fundo do relógio",
+        "bb-9-1": "errada: carbono forjado preto",
+        "bb-9-2": "errada: carbono forjado preto",
+        "bb-9-3": "errada: carbono forjado preto",
+        "bb-9-4": "errada: carbono forjado preto",
+        "ul-9-1": "errada: diamantes + tourbillon",
+        "ul-9-2": "errada: diamantes + tourbillon",
+        "ul-9-3": "errada: diamantes + tourbillon",
+        "ul-9-4": "errada: diamantes + tourbillon",
+        "wb-9-2": "lixo: só logo",
+        "hunt-9-2": "lixo: vista lateral cortada"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Pilot Mark XX (Azul)": {
       "rank": 21,
       "verdict": "confirmado",
       "bestImageId": "hunt-21-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Mark XX azul: 'MARK XX AUTOMATIC' legível no mostrador, data às 3h. Watermark necoclock."
+      "reasoning": "[validação visual do operador 2026-07-08] Mark XX azul: 'MARK XX AUTOMATIC' legível no mostrador, data às 3h. Watermark necoclock.",
+      "wrongIds": [
+        "wb-21-1",
+        "wb-21-2",
+        "wb-21-3",
+        "wb-21-4"
+      ],
+      "wrongNotes": {
+        "wb-21-1": "errada: mostrador preto",
+        "wb-21-2": "errada: mostrador preto",
+        "wb-21-3": "lixo: apenas lume no escuro",
+        "wb-21-4": "errada: mostrador preto"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak 15500 (Azul)": {
       "rank": 26,
       "verdict": "confirmado",
       "bestImageId": "hunt-26-1",
-      "reasoning": "[validação visual do operador 2026-07-08] RO azul Grande Tapisserie 3 ponteiros + data (sem crono) — 15500, não o cronógrafo 26715 rejeitado antes."
+      "reasoning": "[validação visual do operador 2026-07-08] RO azul Grande Tapisserie 3 ponteiros + data (sem crono) — 15500, não o cronógrafo 26715 rejeitado antes.",
+      "wrongIds": [
+        "26-superluxuryreps-lm5ba4",
+        "26-superluxuryreps-1fp79y6",
+        "26-superluxuryreps-pfjgv5",
+        "26-superluxuryreps-31tcf5",
+        "26-superluxuryreps-1bt9lb8",
+        "26-superluxuryreps-1v8bs3i",
+        "26-superluxuryreps-ikxukg",
+        "26-superluxuryreps-14ynz0i",
+        "26-superluxuryreps-1rce3gk",
+        "26-superluxuryreps-ep05xi",
+        "26-superluxuryreps-mgvj7l",
+        "26-superluxuryreps-1h6d6eo",
+        "26-superluxuryreps-q6fz3o",
+        "26-superluxuryreps-bi1ovo",
+        "26-superluxuryreps-14uu9br",
+        "26-superluxuryreps-ntklyq",
+        "26-superluxuryreps-1vurgmu",
+        "cl-26-1",
+        "cl-26-2",
+        "cl-26-3",
+        "ul-26-1",
+        "ul-26-2",
+        "ul-26-3",
+        "wb-26-1",
+        "wb-26-2",
+        "wb-26-3",
+        "wb-26-4",
+        "26-superclonewatches-hha5iw"
+      ],
+      "wrongNotes": {
+        "26-superluxuryreps-lm5ba4": "errada: cronógrafo azul, não 15500 time-and-date",
+        "26-superluxuryreps-1fp79y6": "errada: cronógrafo azul, outra referência",
+        "26-superluxuryreps-pfjgv5": "errada: cronógrafo azul, outra referência",
+        "26-superluxuryreps-31tcf5": "lixo: só pulseira/verso",
+        "26-superluxuryreps-1bt9lb8": "lixo: fundo de caixa de cronógrafo",
+        "26-superluxuryreps-1v8bs3i": "errada: cronógrafo ouro rosa mostrador branco",
+        "26-superluxuryreps-ikxukg": "errada: cronógrafo ouro rosa",
+        "26-superluxuryreps-14ynz0i": "errada: cronógrafo ouro rosa",
+        "26-superluxuryreps-1rce3gk": "errada: cronógrafo ouro rosa",
+        "26-superluxuryreps-ep05xi": "errada: fundo de caixa ouro rosa cronógrafo",
+        "26-superluxuryreps-mgvj7l": "errada: pulseira ouro rosa cronógrafo",
+        "26-superluxuryreps-1h6d6eo": "errada: caixa 15407/jumbo ouro, outro modelo",
+        "26-superluxuryreps-q6fz3o": "errada: jumbo ouro mostrador azul, outro modelo",
+        "26-superluxuryreps-bi1ovo": "errada: perfil ouro, outro modelo",
+        "26-superluxuryreps-14uu9br": "errada: ouro, outro modelo",
+        "26-superluxuryreps-ntklyq": "errada: ouro, outro modelo",
+        "26-superluxuryreps-1vurgmu": "lixo: só fecho dourado",
+        "cl-26-1": "errada: cerâmica azul Murakami",
+        "cl-26-2": "errada: cerâmica azul",
+        "cl-26-3": "errada: cerâmica azul",
+        "ul-26-1": "errada: mostrador branco/prata",
+        "ul-26-2": "errada: mostrador branco/prata",
+        "ul-26-3": "lixo: só fundo de caixa",
+        "wb-26-1": "errada: cerâmica azul mostrador branco",
+        "wb-26-2": "errada: cerâmica azul mostrador branco",
+        "wb-26-3": "errada: cerâmica azul mostrador branco",
+        "wb-26-4": "errada: cerâmica azul, movimento",
+        "26-superclonewatches-hha5iw": "errada: mostrador preto"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Seamaster Diver 300M (Branco)": {
       "rank": 31,
       "verdict": "confirmado",
       "bestImageId": "hunt-31-1",
-      "reasoning": "[validação visual do operador 2026-07-08] SMP mostrador BRANCO ondas + bisel preto (variante branca legítima do 300M). Watermark dealerclocks."
+      "reasoning": "[validação visual do operador 2026-07-08] SMP mostrador BRANCO ondas + bisel preto (variante branca legítima do 300M). Watermark dealerclocks.",
+      "wrongIds": [
+        "cl-31-3",
+        "cl-31-1",
+        "cl-31-2",
+        "pt-31-3",
+        "ul-31-1",
+        "ul-31-2",
+        "ul-31-3",
+        "ul-31-4",
+        "wb-31-1",
+        "wb-31-2",
+        "31-superluxuryreps-usdxw8",
+        "31-superluxuryreps-1sq5d5v",
+        "31-superluxuryreps-13291mx",
+        "31-superclonewatches-rurzgw",
+        "31-superclonewatches-1equzbp",
+        "31-superclonewatches-1f88wek",
+        "31-superluxuryreps-1unui4l",
+        "31-superluxuryreps-wdd718",
+        "31-superluxuryreps-gtutbu"
+      ],
+      "wrongNotes": {
+        "cl-31-3": "errada: blue wave dial with gold accents",
+        "cl-31-1": "errada: brown 007 titanium mesh",
+        "cl-31-2": "errada: brown 007 titanium mesh",
+        "pt-31-3": "lixo: lume-only dark shot",
+        "ul-31-1": "errada: blue dial two-tone",
+        "ul-31-2": "errada: blue dial two-tone",
+        "ul-31-3": "errada: blue dial two-tone",
+        "ul-31-4": "lixo: two-tone caseback and clasp",
+        "wb-31-1": "errada: white dial with blue bezel, red arrow hand",
+        "wb-31-2": "errada: white dial with blue bezel, red arrow hand",
+        "31-superluxuryreps-usdxw8": "errada: blue dial titanium bezel rubber",
+        "31-superluxuryreps-1sq5d5v": "errada: blue dial titanium bezel rubber",
+        "31-superluxuryreps-13291mx": "errada: blue dial titanium bezel rubber",
+        "31-superclonewatches-rurzgw": "errada: green dial/bezel",
+        "31-superclonewatches-1equzbp": "errada: blue dial/bezel",
+        "31-superclonewatches-1f88wek": "errada: brown 007 titanium mesh",
+        "31-superluxuryreps-1unui4l": "errada: blue dial two-tone rose gold",
+        "31-superluxuryreps-wdd718": "errada: blue dial two-tone rose gold",
+        "31-superluxuryreps-gtutbu": "errada: blue dial close-up with gold bezel"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Black Bay 58 Preto/Dourado": {
       "rank": 35,
       "verdict": "confirmado",
       "bestImageId": "hunt-35-1",
-      "reasoning": "[validação visual do operador 2026-07-08] BB58 black/gilt: mostrador preto, detalhes dourados, bisel preto/gilt com triângulo vermelho. Watermark dealerclocks."
+      "reasoning": "[validação visual do operador 2026-07-08] BB58 black/gilt: mostrador preto, detalhes dourados, bisel preto/gilt com triângulo vermelho. Watermark dealerclocks.",
+      "wrongIds": [
+        "cl-35-1",
+        "cl-35-2",
+        "cl-35-3",
+        "cl-35-4",
+        "wb-35-1",
+        "wb-35-2",
+        "wb-35-3",
+        "wb-35-4",
+        "35-superluxuryreps-119dx8",
+        "35-superluxuryreps-hiw3vi",
+        "35-superluxuryreps-y0itts",
+        "35-superluxuryreps-1jkqpy6",
+        "35-superluxuryreps-173aiwe",
+        "35-superluxuryreps-15vu4m",
+        "35-superluxuryreps-16ehtk1",
+        "35-superluxuryreps-1krrn1b",
+        "35-superluxuryreps-qvnm8x",
+        "35-superluxuryreps-1imsjkx",
+        "35-superluxuryreps-tm920d",
+        "35-superluxuryreps-1i9069e",
+        "35-superluxuryreps-13snioh",
+        "35-superluxuryreps-pcav3k",
+        "35-superluxuryreps-1m3h740",
+        "35-superluxuryreps-15luh5s",
+        "35-superluxuryreps-1aofnbx",
+        "35-superluxuryreps-1r62da7",
+        "35-superluxuryreps-8ml19d",
+        "35-superluxuryreps-p47r7n",
+        "35-superluxuryreps-jnh70t",
+        "35-superluxuryreps-dp67fk",
+        "35-superluxuryreps-157p358",
+        "35-superluxuryreps-1lpbt3i",
+        "35-superluxuryreps-1urm0h1",
+        "35-superluxuryreps-c84og7",
+        "35-superluxuryreps-xsckkl",
+        "35-superluxuryreps-t34o4",
+        "35-superluxuryreps-hapume"
+      ],
+      "wrongNotes": {
+        "cl-35-1": "errada: Black Bay Chrono pink dial",
+        "cl-35-2": "errada: Black Bay Chrono pink dial",
+        "cl-35-3": "errada: Black Bay Chrono pink dial",
+        "cl-35-4": "errada: Black Bay Chrono pink dial",
+        "wb-35-1": "errada: Black Bay Chrono white panda",
+        "wb-35-2": "errada: Black Bay Chrono white panda",
+        "wb-35-3": "lixo: lume-only dark shot",
+        "wb-35-4": "errada: Black Bay Chrono white panda",
+        "35-superluxuryreps-119dx8": "errada: Black Bay Chrono pink dial",
+        "35-superluxuryreps-hiw3vi": "errada: Black Bay Chrono pink dial",
+        "35-superluxuryreps-y0itts": "errada: Black Bay Chrono pink dial",
+        "35-superluxuryreps-1jkqpy6": "errada: Black Bay Chrono pink dial",
+        "35-superluxuryreps-173aiwe": "lixo: caseback/clasp only",
+        "35-superluxuryreps-15vu4m": "lixo: caseback/clasp only",
+        "35-superluxuryreps-16ehtk1": "errada: Black Bay Chrono tiffany dial",
+        "35-superluxuryreps-1krrn1b": "errada: Black Bay Chrono tiffany dial",
+        "35-superluxuryreps-qvnm8x": "errada: Black Bay Chrono tiffany dial",
+        "35-superluxuryreps-1imsjkx": "errada: Black Bay Chrono tiffany dial",
+        "35-superluxuryreps-tm920d": "errada: chronograph side view",
+        "35-superluxuryreps-1i9069e": "errada: chronograph side view",
+        "35-superluxuryreps-13snioh": "lixo: caseback only",
+        "35-superluxuryreps-pcav3k": "lixo: clasp only",
+        "35-superluxuryreps-1m3h740": "errada: Black Bay Chrono white dial",
+        "35-superluxuryreps-15luh5s": "errada: Black Bay Chrono white dial",
+        "35-superluxuryreps-1aofnbx": "errada: Black Bay Chrono white dial",
+        "35-superluxuryreps-1r62da7": "errada: Black Bay Chrono white dial",
+        "35-superluxuryreps-8ml19d": "errada: Black Bay Chrono white dial",
+        "35-superluxuryreps-p47r7n": "errada: Black Bay Chrono white dial",
+        "35-superluxuryreps-jnh70t": "errada: chronograph side view",
+        "35-superluxuryreps-dp67fk": "lixo: caseback only",
+        "35-superluxuryreps-157p358": "lixo: clasp only",
+        "35-superluxuryreps-1lpbt3i": "lixo: clasp only",
+        "35-superluxuryreps-1urm0h1": "errada: Black Bay GMT red/black bezel",
+        "35-superluxuryreps-c84og7": "errada: Black Bay GMT red/black bezel",
+        "35-superluxuryreps-xsckkl": "errada: Black Bay GMT dial close-up",
+        "35-superluxuryreps-t34o4": "errada: Black Bay GMT red bezel",
+        "35-superluxuryreps-hapume": "lixo: clasp/caseback only"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Aqua Terra 150m (Azul Teak)": {
       "rank": 40,
       "verdict": "confirmado",
       "bestImageId": "hunt-40-1",
-      "reasoning": "[validação visual do operador 2026-07-08] AT azul teak (listras deck), ponteiro central azul, data às 6h."
+      "reasoning": "[validação visual do operador 2026-07-08] AT azul teak (listras deck), ponteiro central azul, data às 6h.",
+      "wrongIds": [
+        "bb-40-1",
+        "bb-40-2",
+        "bb-40-3",
+        "bb-40-4",
+        "wb-40-1",
+        "wb-40-2",
+        "wb-40-3",
+        "wb-40-4",
+        "40-superluxuryreps-1bwpi1",
+        "40-superluxuryreps-1dx5qnv",
+        "40-superluxuryreps-1342nc",
+        "40-superluxuryreps-10ktedr",
+        "40-superluxuryreps-6gdcup",
+        "40-superclonewatches-wu4wgc",
+        "40-superclonewatches-18dlh6y",
+        "40-superclonewatches-2wo4p4"
+      ],
+      "wrongNotes": {
+        "bb-40-1": "errada: black dial, older Aqua Terra",
+        "bb-40-2": "errada: black dial, older Aqua Terra",
+        "bb-40-3": "errada: white dial",
+        "bb-40-4": "errada: white dial",
+        "wb-40-1": "errada: different watch, gold dress",
+        "wb-40-2": "errada: different watch, gold dress",
+        "wb-40-3": "errada: different watch, gold dress",
+        "wb-40-4": "errada: different watch, gold dress",
+        "40-superluxuryreps-1bwpi1": "errada: black dial",
+        "40-superluxuryreps-1dx5qnv": "errada: black dial",
+        "40-superluxuryreps-1342nc": "errada: green dial, rubber strap",
+        "40-superluxuryreps-10ktedr": "errada: green dial, rubber strap",
+        "40-superluxuryreps-6gdcup": "errada: green dial, rubber strap",
+        "40-superclonewatches-wu4wgc": "errada: GMT worldtimer, blue rubber",
+        "40-superclonewatches-18dlh6y": "errada: black dial",
+        "40-superclonewatches-2wo4p4": "errada: white dial"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Master Ultra Thin Moon (Prata)": {
       "rank": 41,
       "verdict": "confirmado",
       "bestImageId": "hunt-41-1",
-      "reasoning": "[validação visual do operador 2026-07-08] JLC MUT Moon prata: fase da lua às 6h, caixa fina, couro preto."
+      "reasoning": "[validação visual do operador 2026-07-08] JLC MUT Moon prata: fase da lua às 6h, caixa fina, couro preto.",
+      "wrongIds": [
+        "cl-41-1",
+        "cl-41-2",
+        "cl-41-3",
+        "cl-41-4",
+        "pt-41-1",
+        "pt-41-2",
+        "pt-41-3",
+        "pt-41-4",
+        "wb-41-1",
+        "wb-41-2",
+        "wb-41-3",
+        "wb-41-4"
+      ],
+      "wrongNotes": {
+        "cl-41-1": "errada: Master Ultra Thin sem fase da lua",
+        "cl-41-2": "errada: Master Ultra Thin sem fase da lua",
+        "cl-41-3": "errada: Master Ultra Thin sem fase da lua",
+        "cl-41-4": "errada: Master Ultra Thin sem fase da lua",
+        "pt-41-1": "errada: mostrador azul",
+        "pt-41-2": "errada: mostrador azul",
+        "pt-41-3": "errada: mostrador azul",
+        "pt-41-4": "errada: mostrador azul",
+        "wb-41-1": "errada: mostrador aventurina",
+        "wb-41-2": "errada: mostrador aventurina",
+        "wb-41-3": "errada: mostrador aventurina",
+        "wb-41-4": "errada: mostrador aventurina"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Black Bay 58 Azul": {
       "rank": 45,
       "verdict": "confirmado",
       "bestImageId": "hunt-45-1",
-      "reasoning": "[validação visual do operador 2026-07-08] BB58 AZUL time-only (bisel+mostrador azuis, snowflake) — não o BB Chrono rosa das caças anteriores."
+      "reasoning": "[validação visual do operador 2026-07-08] BB58 AZUL time-only (bisel+mostrador azuis, snowflake) — não o BB Chrono rosa das caças anteriores.",
+      "wrongIds": [
+        "cl-45-1",
+        "cl-45-2",
+        "cl-45-3",
+        "cl-45-4",
+        "wb-45-1",
+        "wb-45-2",
+        "wb-45-3",
+        "wb-45-4",
+        "hunt-45-3",
+        "45-superluxuryreps-119dx8",
+        "45-superluxuryreps-hiw3vi",
+        "45-superluxuryreps-y0itts",
+        "45-superluxuryreps-1jkqpy6",
+        "45-superluxuryreps-173aiwe",
+        "45-superluxuryreps-15vu4m",
+        "45-superluxuryreps-16ehtk1",
+        "45-superluxuryreps-1krrn1b",
+        "45-superluxuryreps-qvnm8x",
+        "45-superluxuryreps-1imsjkx",
+        "45-superluxuryreps-tm920d",
+        "45-superluxuryreps-1i9069e",
+        "45-superluxuryreps-13snioh",
+        "45-superluxuryreps-pcav3k",
+        "45-superluxuryreps-1m3h740",
+        "45-superluxuryreps-15luh5s",
+        "45-superluxuryreps-1aofnbx",
+        "45-superluxuryreps-1r62da7",
+        "45-superluxuryreps-8ml19d",
+        "45-superluxuryreps-p47r7n",
+        "45-superluxuryreps-jnh70t",
+        "45-superluxuryreps-dp67fk",
+        "45-superluxuryreps-157p358",
+        "45-superluxuryreps-1lpbt3i",
+        "45-superluxuryreps-1urm0h1",
+        "45-superluxuryreps-c84og7",
+        "45-superluxuryreps-xsckkl",
+        "45-superluxuryreps-t34o4",
+        "45-superluxuryreps-hapume"
+      ],
+      "wrongNotes": {
+        "cl-45-1": "errada: Black Bay Chrono rosa",
+        "cl-45-2": "errada: Black Bay Chrono rosa",
+        "cl-45-3": "errada: Black Bay Chrono rosa",
+        "cl-45-4": "errada: Black Bay Chrono rosa",
+        "wb-45-1": "errada: Black Bay Chrono branco",
+        "wb-45-2": "errada: Black Bay Chrono branco",
+        "wb-45-3": "lixo: so lume, dial de chrono",
+        "wb-45-4": "errada: Black Bay Chrono branco",
+        "hunt-45-3": "lixo: so fecho/pulseira",
+        "45-superluxuryreps-119dx8": "errada: Black Bay Chrono rosa",
+        "45-superluxuryreps-hiw3vi": "errada: Black Bay Chrono rosa",
+        "45-superluxuryreps-y0itts": "errada: Black Bay Chrono rosa",
+        "45-superluxuryreps-1jkqpy6": "errada: Black Bay Chrono rosa",
+        "45-superluxuryreps-173aiwe": "lixo: fundo de caixa/fecho",
+        "45-superluxuryreps-15vu4m": "lixo: fecho/fundo de caixa",
+        "45-superluxuryreps-16ehtk1": "errada: Black Bay Chrono turquesa",
+        "45-superluxuryreps-1krrn1b": "errada: Black Bay Chrono turquesa",
+        "45-superluxuryreps-qvnm8x": "errada: Black Bay Chrono turquesa",
+        "45-superluxuryreps-1imsjkx": "errada: Black Bay Chrono turquesa",
+        "45-superluxuryreps-tm920d": "errada: lateral de Black Bay Chrono",
+        "45-superluxuryreps-1i9069e": "errada: lateral de Black Bay Chrono",
+        "45-superluxuryreps-13snioh": "lixo: fundo de caixa de chrono",
+        "45-superluxuryreps-pcav3k": "lixo: so fecho",
+        "45-superluxuryreps-1m3h740": "errada: Black Bay Chrono branco",
+        "45-superluxuryreps-15luh5s": "errada: Black Bay Chrono branco",
+        "45-superluxuryreps-1aofnbx": "errada: Black Bay Chrono branco",
+        "45-superluxuryreps-1r62da7": "errada: Black Bay Chrono branco",
+        "45-superluxuryreps-8ml19d": "errada: Black Bay Chrono branco",
+        "45-superluxuryreps-p47r7n": "errada: Black Bay Chrono branco",
+        "45-superluxuryreps-jnh70t": "errada: lateral de Black Bay Chrono",
+        "45-superluxuryreps-dp67fk": "lixo: fundo de caixa/fecho",
+        "45-superluxuryreps-157p358": "lixo: so fecho/pulseira",
+        "45-superluxuryreps-1lpbt3i": "lixo: so fecho/pulseira",
+        "45-superluxuryreps-1urm0h1": "errada: Black Bay GMT preto/vermelho",
+        "45-superluxuryreps-c84og7": "errada: Black Bay GMT preto/vermelho",
+        "45-superluxuryreps-xsckkl": "errada: Black Bay GMT dial",
+        "45-superluxuryreps-t34o4": "errada: Black Bay GMT lateral",
+        "45-superluxuryreps-hapume": "lixo: so pulseira/fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Deepsea 136660 (James Cameron)": {
       "rank": 50,
       "verdict": "confirmado",
       "bestImageId": "hunt-50-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Deepsea D-Blue: degradê azul→preto, 'DEEPSEA' verde. Watermark dealerclocks."
+      "reasoning": "[validação visual do operador 2026-07-08] Deepsea D-Blue: degradê azul→preto, 'DEEPSEA' verde. Watermark dealerclocks.",
+      "wrongIds": [
+        "pt-50-1",
+        "pt-50-2",
+        "pt-50-3",
+        "pt-50-4",
+        "wb-50-2",
+        "wb-50-4"
+      ],
+      "wrongNotes": {
+        "pt-50-1": "errada: mostrador preto, não degradê",
+        "pt-50-2": "errada: mostrador preto, não degradê",
+        "pt-50-3": "lixo: só lume em fundo escuro",
+        "pt-50-4": "errada: mostrador preto, detalhe",
+        "wb-50-2": "lixo: só logo Luxury Reps",
+        "wb-50-4": "lixo: só fundo da caixa"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Planet Ocean Deep Black Ceramic": {
       "rank": 56,
       "verdict": "confirmado",
       "bestImageId": "hunt-56-1",
-      "reasoning": "[validação visual do operador 2026-07-08] PO Deep Black GMT: caixa cerâmica preta total, GMT laranja, borracha preta costura branca."
-    },
-    "Day-Date 40 Olive Green": {
-      "rank": 59,
-      "verdict": "confirmado",
-      "bestImageId": "hunt-59-1",
-      "reasoning": "[validação visual do operador 2026-07-08] DD40 verde-oliva romanos, ouro amarelo, presidente — variante exata."
+      "reasoning": "[validação visual do operador 2026-07-08] PO Deep Black GMT: caixa cerâmica preta total, GMT laranja, borracha preta costura branca.",
+      "wrongIds": [
+        "cl-56-1",
+        "ul-56-1",
+        "ul-56-2",
+        "ul-56-3",
+        "ul-56-4",
+        "wb-56-2",
+        "56-superclonewatches-18catpa",
+        "56-superclonewatches-rkc43v",
+        "56-superclonewatches-1h4y3f",
+        "56-superluxuryreps-1k2t328",
+        "56-superluxuryreps-1tz2olc",
+        "56-superluxuryreps-1oed4ds",
+        "56-superluxuryreps-1nsfkbo",
+        "56-superluxuryreps-tyvgsp",
+        "56-superluxuryreps-1q0ea4x",
+        "56-superluxuryreps-1rn8tk1",
+        "56-superluxuryreps-1vnxf9p",
+        "56-superluxuryreps-u9lx0i",
+        "56-superluxuryreps-ez8rxk",
+        "56-superluxuryreps-txd04f",
+        "56-superluxuryreps-14dm9f5",
+        "56-superluxuryreps-6vvyp0",
+        "56-superluxuryreps-1hui753"
+      ],
+      "wrongNotes": {
+        "cl-56-1": "errada: Ultra Deep azul de aço, outro modelo",
+        "ul-56-1": "errada: Planet Ocean GMT de aço",
+        "ul-56-2": "errada: Planet Ocean GMT de aço",
+        "ul-56-3": "errada: Planet Ocean GMT de aço",
+        "ul-56-4": "errada: Planet Ocean GMT de aço",
+        "wb-56-2": "lixo: logo/texto Luxury Reps",
+        "56-superclonewatches-18catpa": "errada: Ultra Deep azul de aço",
+        "56-superclonewatches-rkc43v": "errada: caixa com Ultra Deep azul",
+        "56-superclonewatches-1h4y3f": "errada: Seamaster branco/azul em borracha",
+        "56-superluxuryreps-1k2t328": "errada: Speedmaster Moonwatch",
+        "56-superluxuryreps-1tz2olc": "errada: Speedmaster Moonwatch",
+        "56-superluxuryreps-1oed4ds": "errada: Speedmaster, detalhe do mostrador",
+        "56-superluxuryreps-1nsfkbo": "errada: Speedmaster, detalhe do mostrador",
+        "56-superluxuryreps-tyvgsp": "errada: Seamaster Diver 300M ouro rosé",
+        "56-superluxuryreps-1q0ea4x": "errada: Seamaster Diver 300M ouro rosé",
+        "56-superluxuryreps-1rn8tk1": "errada: Seamaster Diver 300M ouro rosé",
+        "56-superluxuryreps-1vnxf9p": "errada: Seamaster Diver 300M ouro rosé",
+        "56-superluxuryreps-u9lx0i": "errada: Planet Ocean cronógrafo laranja",
+        "56-superluxuryreps-ez8rxk": "errada: Planet Ocean cronógrafo laranja",
+        "56-superluxuryreps-txd04f": "errada: Planet Ocean cronógrafo laranja",
+        "56-superluxuryreps-14dm9f5": "errada: Planet Ocean cronógrafo azul/ouro rosé",
+        "56-superluxuryreps-6vvyp0": "errada: fecho de pulseira azul, outro modelo",
+        "56-superluxuryreps-1hui753": "errada: Planet Ocean cronógrafo azul/ouro rosé"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Pelagos Titanium 42mm (Preto)": {
       "rank": 78,
       "verdict": "confirmado",
       "bestImageId": "hunt-78-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Pelagos 42 preto titânio: 'PELAGOS ... 500m' no mostrador, snowflake, bisel fosco."
+      "reasoning": "[validação visual do operador 2026-07-08] Pelagos 42 preto titânio: 'PELAGOS ... 500m' no mostrador, snowflake, bisel fosco.",
+      "wrongIds": [
+        "cl-78-1",
+        "cl-78-2",
+        "cl-78-3",
+        "cl-78-4"
+      ],
+      "wrongNotes": {
+        "cl-78-1": "errada: mostrador azul",
+        "cl-78-2": "errada: mostrador azul",
+        "cl-78-3": "errada: azul, vista lateral",
+        "cl-78-4": "errada: mostrador azul"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Big Bang Unico Titanium": {
       "rank": 83,
       "verdict": "confirmado",
       "bestImageId": "hunt-83-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Unico esqueleto, caixa titânio + bisel cerâmico, borracha preta — foto real com timegrapher ao fundo."
+      "reasoning": "[validação visual do operador 2026-07-08] Unico esqueleto, caixa titânio + bisel cerâmico, borracha preta — foto real com timegrapher ao fundo.",
+      "wrongIds": [
+        "ul-83-1",
+        "ul-83-2",
+        "ul-83-3",
+        "83-superclonewatches-otb3ze",
+        "83-superclonewatches-153cz1y",
+        "83-superluxuryreps-9z154p",
+        "83-superluxuryreps-1iqhe0s",
+        "83-superluxuryreps-633ghq",
+        "83-superluxuryreps-sgtkxs",
+        "83-superluxuryreps-1eujpdu",
+        "83-superluxuryreps-1a6dndf",
+        "83-superluxuryreps-8n4miq",
+        "83-superluxuryreps-1kedcj2",
+        "83-superluxuryreps-1hekveu",
+        "83-superluxuryreps-1y4sims",
+        "83-superluxuryreps-gxsjxo",
+        "83-superluxuryreps-1tl6hgs",
+        "83-superluxuryreps-2bxsrr",
+        "83-superluxuryreps-1xh463v",
+        "83-superluxuryreps-ktq8kt",
+        "83-superluxuryreps-17xhhvu",
+        "83-superluxuryreps-1ub7mbw",
+        "83-superluxuryreps-hntosu",
+        "83-superluxuryreps-mw6rix",
+        "83-superluxuryreps-1ly6on",
+        "83-superluxuryreps-k3qmho",
+        "83-superluxuryreps-1adefkr",
+        "83-superluxuryreps-1e9c47t"
+      ],
+      "wrongNotes": {
+        "ul-83-1": "errada: Big Bang Meca-10, outro modelo",
+        "ul-83-2": "errada: Big Bang Meca-10, outro modelo",
+        "ul-83-3": "lixo: apenas movimento",
+        "83-superclonewatches-otb3ze": "errada: Sang Bleu ouro",
+        "83-superclonewatches-153cz1y": "errada: Sang Bleu",
+        "83-superluxuryreps-9z154p": "errada: Unico cerâmica vermelha",
+        "83-superluxuryreps-1iqhe0s": "errada: Unico cerâmica vermelha",
+        "83-superluxuryreps-633ghq": "errada: Unico vermelho",
+        "83-superluxuryreps-sgtkxs": "errada: Unico vermelho",
+        "83-superluxuryreps-1eujpdu": "errada: Unico vermelho, fundo",
+        "83-superluxuryreps-1a6dndf": "lixo: só pulseira/fivela azul",
+        "83-superluxuryreps-8n4miq": "errada: lateral Spirit of Big Bang azul",
+        "83-superluxuryreps-1kedcj2": "errada: Spirit of Big Bang azul",
+        "83-superluxuryreps-1hekveu": "errada: Spirit of Big Bang azul",
+        "83-superluxuryreps-1y4sims": "errada: Unico amarelo",
+        "83-superluxuryreps-gxsjxo": "errada: Unico amarelo",
+        "83-superluxuryreps-1tl6hgs": "errada: Unico amarelo",
+        "83-superluxuryreps-2bxsrr": "errada: Unico amarelo",
+        "83-superluxuryreps-1xh463v": "errada: Unico amarelo",
+        "83-superluxuryreps-ktq8kt": "errada: Unico amarelo, fundo",
+        "83-superluxuryreps-17xhhvu": "errada: Spirit of Big Bang",
+        "83-superluxuryreps-1ub7mbw": "errada: Spirit of Big Bang",
+        "83-superluxuryreps-hntosu": "errada: Spirit of Big Bang",
+        "83-superluxuryreps-mw6rix": "errada: Spirit of Big Bang",
+        "83-superluxuryreps-1ly6on": "errada: Spirit of Big Bang azul",
+        "83-superluxuryreps-k3qmho": "errada: Spirit of Big Bang azul",
+        "83-superluxuryreps-1adefkr": "errada: Spirit of Big Bang azul",
+        "83-superluxuryreps-1e9c47t": "errada: Spirit of Big Bang"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Black Bay GMT Pepsi": {
       "rank": 87,
       "verdict": "confirmado",
       "bestImageId": "hunt-87-1",
-      "reasoning": "[validação visual do operador 2026-07-08] BB GMT pepsi Tudor (bordô/azul), snowflake, GMT vermelho. Watermark dealerclocks."
+      "reasoning": "[validação visual do operador 2026-07-08] BB GMT pepsi Tudor (bordô/azul), snowflake, GMT vermelho. Watermark dealerclocks.",
+      "wrongIds": [
+        "pt-87-1",
+        "pt-87-2",
+        "pt-87-3",
+        "pt-87-4",
+        "wb-87-1",
+        "wb-87-2",
+        "wb-87-3",
+        "wb-87-4",
+        "87-superluxuryreps-hapume",
+        "87-superluxuryreps-119dx8",
+        "87-superluxuryreps-hiw3vi",
+        "87-superluxuryreps-y0itts",
+        "87-superluxuryreps-1jkqpy6",
+        "87-superluxuryreps-173aiwe",
+        "87-superluxuryreps-15vu4m",
+        "87-superluxuryreps-16ehtk1",
+        "87-superluxuryreps-1krrn1b",
+        "87-superluxuryreps-qvnm8x",
+        "87-superluxuryreps-1imsjkx",
+        "87-superluxuryreps-tm920d",
+        "87-superluxuryreps-1i9069e",
+        "87-superluxuryreps-13snioh",
+        "87-superluxuryreps-pcav3k",
+        "87-superluxuryreps-1m3h740",
+        "87-superluxuryreps-15luh5s",
+        "87-superluxuryreps-1aofnbx",
+        "87-superluxuryreps-1r62da7",
+        "87-superluxuryreps-8ml19d",
+        "87-superluxuryreps-p47r7n",
+        "87-superluxuryreps-jnh70t",
+        "87-superluxuryreps-dp67fk",
+        "87-superluxuryreps-157p358",
+        "87-superluxuryreps-1lpbt3i"
+      ],
+      "wrongNotes": {
+        "pt-87-1": "errada: mostrador branco",
+        "pt-87-2": "errada: mostrador branco",
+        "pt-87-3": "errada: lume de mostrador branco",
+        "pt-87-4": "errada: mostrador branco",
+        "wb-87-1": "lixo: SEM IMAGEM",
+        "wb-87-2": "lixo: logo Luxury Reps",
+        "wb-87-3": "lixo: SEM IMAGEM",
+        "wb-87-4": "lixo: SEM IMAGEM",
+        "87-superluxuryreps-hapume": "lixo: fecho/traseira apenas",
+        "87-superluxuryreps-119dx8": "errada: Black Bay Chrono rosa",
+        "87-superluxuryreps-hiw3vi": "errada: Black Bay Chrono rosa",
+        "87-superluxuryreps-y0itts": "errada: Black Bay Chrono rosa",
+        "87-superluxuryreps-1jkqpy6": "errada: Black Bay Chrono rosa",
+        "87-superluxuryreps-173aiwe": "errada: Chrono rosa, fundo",
+        "87-superluxuryreps-15vu4m": "errada: Chrono, fundo",
+        "87-superluxuryreps-16ehtk1": "errada: Chrono turquesa",
+        "87-superluxuryreps-1krrn1b": "errada: Chrono turquesa",
+        "87-superluxuryreps-qvnm8x": "errada: Chrono turquesa",
+        "87-superluxuryreps-1imsjkx": "errada: Chrono turquesa",
+        "87-superluxuryreps-tm920d": "errada: Chrono, lateral",
+        "87-superluxuryreps-1i9069e": "errada: Chrono, lateral",
+        "87-superluxuryreps-13snioh": "errada: Chrono, fundo",
+        "87-superluxuryreps-pcav3k": "errada: Chrono, fecho",
+        "87-superluxuryreps-1m3h740": "errada: Chrono panda branco",
+        "87-superluxuryreps-15luh5s": "errada: Chrono panda branco",
+        "87-superluxuryreps-1aofnbx": "errada: Chrono panda branco",
+        "87-superluxuryreps-1r62da7": "errada: Chrono panda branco",
+        "87-superluxuryreps-8ml19d": "errada: Chrono panda branco",
+        "87-superluxuryreps-p47r7n": "errada: Chrono panda branco",
+        "87-superluxuryreps-jnh70t": "errada: Chrono, lateral",
+        "87-superluxuryreps-dp67fk": "errada: Chrono, fundo",
+        "87-superluxuryreps-157p358": "errada: Chrono, fecho",
+        "87-superluxuryreps-1lpbt3i": "errada: Chrono, fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Portugieser Chrono (Branco/Azul)": {
       "rank": 91,
       "verdict": "confirmado",
       "bestImageId": "hunt-91-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Portugieser chrono branco com numerais/ponteiros AZUIS — variante exata. Watermark dealerclocks."
+      "reasoning": "[validação visual do operador 2026-07-08] Portugieser chrono branco com numerais/ponteiros AZUIS — variante exata. Watermark dealerclocks.",
+      "wrongIds": [
+        "wb-91-1"
+      ],
+      "wrongNotes": {
+        "wb-91-1": "lixo: só logo Luxury Reps"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak Offshore Chrono 'Vampire'": {
       "rank": 99,
       "verdict": "confirmado",
       "bestImageId": "hunt-99-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Offshore 26470 preto com anel taquimétrico/costura VERMELHOS — tema Vampire."
+      "reasoning": "[validação visual do operador 2026-07-08] Offshore 26470 preto com anel taquimétrico/costura VERMELHOS — tema Vampire.",
+      "wrongIds": [
+        "cl-99-1",
+        "cl-99-2",
+        "cl-99-3",
+        "cl-99-4",
+        "ul-99-1",
+        "ul-99-2",
+        "ul-99-3",
+        "wb-99-1",
+        "wb-99-2",
+        "wb-99-3",
+        "wb-99-4",
+        "99-superclonewatches-119r89a",
+        "99-superclonewatches-vdsh1q",
+        "99-superclonewatches-tpuez7",
+        "99-superclonewatches-1dyofj",
+        "99-superclonewatches-1yn9l3p",
+        "99-superclonewatches-tl3tru",
+        "99-superclonewatches-2geq4t",
+        "99-superclonewatches-1kdmdpd"
+      ],
+      "wrongNotes": {
+        "cl-99-1": "errada: Offshore cinza/azul",
+        "cl-99-2": "errada: Offshore cinza/azul",
+        "cl-99-3": "errada: Offshore cinza/azul",
+        "cl-99-4": "lixo: fundo do relógio",
+        "ul-99-1": "errada: Offshore azul/amarelo",
+        "ul-99-2": "errada: Offshore azul/amarelo",
+        "ul-99-3": "errada: azul/amarelo, fundo",
+        "wb-99-1": "errada: cerâmica preta/ouro",
+        "wb-99-2": "lixo: só logo",
+        "wb-99-3": "errada: cerâmica preta/ouro",
+        "wb-99-4": "errada: cerâmica preta/ouro",
+        "99-superclonewatches-119r89a": "errada: Royal Oak ouro rosa",
+        "99-superclonewatches-vdsh1q": "errada: Royal Oak aço cinza",
+        "99-superclonewatches-tpuez7": "errada: Royal Oak bicolor",
+        "99-superclonewatches-1dyofj": "errada: Royal Oak azul",
+        "99-superclonewatches-1yn9l3p": "errada: Offshore borracha cinza",
+        "99-superclonewatches-tl3tru": "errada: Offshore azul claro",
+        "99-superclonewatches-2geq4t": "errada: Royal Oak preto",
+        "99-superclonewatches-1kdmdpd": "errada: Offshore azul"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Big Bang 44mm Black Ceramic": {
       "rank": 125,
       "verdict": "confirmado",
       "bestImageId": "hunt-125-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Big Bang 44 Black Magic: cerâmica preta, crono, borracha. Watermark dealerclocks."
+      "reasoning": "[validação visual do operador 2026-07-08] Big Bang 44 Black Magic: cerâmica preta, crono, borracha. Watermark dealerclocks.",
+      "wrongIds": [
+        "cl-125-1",
+        "cl-125-2",
+        "cl-125-3",
+        "cl-125-4",
+        "bb-125-1",
+        "bb-125-2",
+        "bb-125-3",
+        "bb-125-4",
+        "wb-125-1",
+        "wb-125-2",
+        "wb-125-3",
+        "wb-125-4",
+        "st-125-ul-57428-1",
+        "st-125-ul-57428-2",
+        "st-125-ul-57428-3",
+        "st-125-ul-55905-1",
+        "st-125-ul-55905-2",
+        "st-125-ul-55905-3",
+        "st-125-ul-55905-4"
+      ],
+      "wrongNotes": {
+        "cl-125-1": "errada: Sang Bleu verde",
+        "cl-125-2": "errada: Sang Bleu verde",
+        "cl-125-3": "errada: Sang Bleu verde",
+        "cl-125-4": "errada: Sang Bleu verde, fundo",
+        "bb-125-1": "errada: Unico ouro rosa",
+        "bb-125-2": "errada: Unico ouro rosa",
+        "bb-125-3": "errada: Unico ouro rosa",
+        "bb-125-4": "errada: Unico ouro rosa",
+        "wb-125-1": "errada: Sang Bleu diamantes",
+        "wb-125-2": "errada: Sang Bleu diamantes",
+        "wb-125-3": "errada: Sang Bleu diamantes",
+        "wb-125-4": "errada: Sang Bleu diamantes",
+        "st-125-ul-57428-1": "errada: caixa de aço com luneta de cerâmica, não cerâmica preta inteira",
+        "st-125-ul-57428-2": "errada: caixa de aço com luneta de cerâmica, não cerâmica preta inteira",
+        "st-125-ul-57428-3": "errada: verso de caixa de aço",
+        "st-125-ul-55905-1": "errada: Big Bang Unico em cerâmica azul",
+        "st-125-ul-55905-2": "errada: Big Bang Unico em cerâmica azul",
+        "st-125-ul-55905-3": "errada: Big Bang Unico em cerâmica azul",
+        "st-125-ul-55905-4": "errada: verso do Big Bang Unico em cerâmica azul"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Lange 1 Yellow Gold 38.5mm": {
       "rank": 128,
       "verdict": "confirmado",
       "bestImageId": "hunt-128-1",
-      "reasoning": "[validação visual do operador 2026-07-08] Lange 1 OURO AMARELO, argenté, data grande + segundos descentralizados. Ressalva: render de catálogo de loja (watchsavers), fábrica não identificada."
+      "reasoning": "[validação visual do operador 2026-07-08] Lange 1 OURO AMARELO, argenté, data grande + segundos descentralizados. Ressalva: render de catálogo de loja (watchsavers), fábrica não identificada.",
+      "wrongIds": [
+        "wb-128-1",
+        "wb-128-2",
+        "wb-128-3",
+        "wb-128-4"
+      ],
+      "wrongNotes": {
+        "wb-128-1": "errada: Audemars Piguet Royal Oak",
+        "wb-128-2": "lixo: SEM IMAGEM",
+        "wb-128-3": "lixo: SEM IMAGEM",
+        "wb-128-4": "lixo: SEM IMAGEM"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "GMT-Master II 116710LN (Preto Antigo)": {
       "rank": 77,
@@ -1062,7 +2983,30 @@
         "ul-77-4",
         "ul-77-3"
       ],
-      "reviewedAt": "2026-07-11T04:04:47.086Z"
+      "reviewedAt": "2026-07-11T04:04:47.086Z",
+      "wrongIds": [
+        "wb-77-2",
+        "77-superclonewatches-1tbxoft",
+        "77-superluxuryreps-1m4bdhe",
+        "77-superluxuryreps-evvrc6",
+        "77-superluxuryreps-fj3r9",
+        "77-superluxuryreps-dqbdib",
+        "77-superluxuryreps-1ivbep2",
+        "cl-77-2",
+        "cl-77-4"
+      ],
+      "wrongNotes": {
+        "wb-77-2": "lixo: só fecho/pulseira",
+        "77-superclonewatches-1tbxoft": "errada: GMT Rootbeer bicolor",
+        "77-superluxuryreps-1m4bdhe": "errada: GMT Pepsi azul/vermelho",
+        "77-superluxuryreps-evvrc6": "errada: GMT Pepsi azul/vermelho",
+        "77-superluxuryreps-fj3r9": "errada: GMT Pepsi azul/vermelho",
+        "77-superluxuryreps-dqbdib": "lixo: perfil, relógio não identificável",
+        "77-superluxuryreps-1ivbep2": "lixo: só fecho/pulseira",
+        "cl-77-2": "lixo: só fecho e verso",
+        "cl-77-4": "lixo: só fundo de caixa e fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak Offshore Diver 15703": {
       "rank": 79,
@@ -1075,7 +3019,64 @@
         "wb-79-2",
         "wb-79-1"
       ],
-      "reviewedAt": "2026-07-11T04:04:47.086Z"
+      "reviewedAt": "2026-07-11T04:04:47.086Z",
+      "wrongIds": [
+        "wb-79-3",
+        "79-superluxuryreps-lm5ba4",
+        "79-superluxuryreps-1fp79y6",
+        "79-superluxuryreps-pfjgv5",
+        "79-superluxuryreps-31tcf5",
+        "79-superluxuryreps-1bt9lb8",
+        "79-superluxuryreps-1v8bs3i",
+        "79-superluxuryreps-ikxukg",
+        "79-superluxuryreps-14ynz0i",
+        "79-superluxuryreps-1rce3gk",
+        "79-superluxuryreps-ep05xi",
+        "79-superluxuryreps-mgvj7l",
+        "79-superluxuryreps-1h6d6eo",
+        "79-superluxuryreps-q6fz3o",
+        "79-superluxuryreps-bi1ovo",
+        "79-superluxuryreps-14uu9br",
+        "79-superluxuryreps-ntklyq",
+        "79-superluxuryreps-1vurgmu",
+        "cl-79-1",
+        "ul-79-1",
+        "ul-79-2",
+        "ul-79-3",
+        "ul-79-4",
+        "79-superclonewatches-1yn9l3p",
+        "79-superclonewatches-tl3tru",
+        "79-superclonewatches-2geq4t"
+      ],
+      "wrongNotes": {
+        "wb-79-3": "lixo: lume-only dark shot",
+        "79-superluxuryreps-lm5ba4": "errada: blue dial steel chronograph, not diver",
+        "79-superluxuryreps-1fp79y6": "errada: blue dial steel chronograph",
+        "79-superluxuryreps-pfjgv5": "errada: blue dial steel chronograph",
+        "79-superluxuryreps-31tcf5": "lixo: bracelet clasp only",
+        "79-superluxuryreps-1bt9lb8": "lixo: caseback of chronograph",
+        "79-superluxuryreps-1v8bs3i": "errada: rose gold chronograph",
+        "79-superluxuryreps-ikxukg": "errada: rose gold chronograph white dial",
+        "79-superluxuryreps-14ynz0i": "errada: rose gold chronograph dial close-up",
+        "79-superluxuryreps-1rce3gk": "errada: rose gold chronograph dial close-up",
+        "79-superluxuryreps-ep05xi": "lixo: caseback of rose gold chronograph",
+        "79-superluxuryreps-mgvj7l": "lixo: clasp only, rose gold",
+        "79-superluxuryreps-1h6d6eo": "errada: gold Royal Oak in box, blue dial",
+        "79-superluxuryreps-q6fz3o": "errada: gold Royal Oak jumbo blue dial",
+        "79-superluxuryreps-bi1ovo": "errada: gold Royal Oak side view",
+        "79-superluxuryreps-14uu9br": "errada: gold Royal Oak blue dial",
+        "79-superluxuryreps-ntklyq": "lixo: clasp of gold bracelet",
+        "79-superluxuryreps-1vurgmu": "lixo: gold clasp only",
+        "cl-79-1": "errada: khaki/olive dial on green strap, not black",
+        "ul-79-1": "errada: forged carbon case yellow accent",
+        "ul-79-2": "errada: forged carbon case yellow accent",
+        "ul-79-3": "errada: forged carbon case yellow accent",
+        "ul-79-4": "errada: forged carbon case yellow accent",
+        "79-superclonewatches-1yn9l3p": "errada: Offshore chronograph, not diver",
+        "79-superclonewatches-tl3tru": "errada: Offshore chronograph blue dial",
+        "79-superclonewatches-2geq4t": "errada: Offshore chronograph black ceramic"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "GMT-Master II 126715CHNR (Full Everose)": {
       "rank": 68,
@@ -1088,7 +3089,46 @@
         "hunt-gmt-master-ii-126715chnr-full-everose-1",
         "cl-68-4"
       ],
-      "reviewedAt": "2026-07-11T10:32:35.594Z"
+      "reviewedAt": "2026-07-11T10:32:35.594Z",
+      "wrongIds": [
+        "cl-68-4",
+        "hunt-gmt-master-ii-126715chnr-full-everose-2",
+        "cl-68-1",
+        "cl-68-2",
+        "cl-68-3",
+        "st-68-lcw-20071-3",
+        "st-68-lcw-20059-1",
+        "st-68-lcw-20059-2",
+        "st-68-lcw-20059-3",
+        "st-68-lcw-20059-4",
+        "st-68-ul-6368-1",
+        "st-68-ul-6368-2",
+        "st-68-ul-6368-3",
+        "st-68-tk-192246-1",
+        "st-68-tk-192246-2",
+        "st-68-tk-192246-3",
+        "st-68-tk-192246-4"
+      ],
+      "wrongNotes": {
+        "cl-68-4": "errada: purple strata dial, not black",
+        "hunt-gmt-master-ii-126715chnr-full-everose-2": "lixo: SEM IMAGEM",
+        "cl-68-1": "errada: purple strata dial, not black",
+        "cl-68-2": "errada: purple strata dial, not black",
+        "cl-68-3": "errada: purple strata dial, not black",
+        "st-68-lcw-20071-3": "lixo: foto só de lume no escuro",
+        "st-68-lcw-20059-1": "errada: mostrador preto liso, não meteorito",
+        "st-68-lcw-20059-2": "errada: mostrador preto liso, não meteorito",
+        "st-68-lcw-20059-3": "errada: mostrador preto, lume",
+        "st-68-lcw-20059-4": "lixo: fundo da caixa",
+        "st-68-ul-6368-1": "errada: mostrador preto liso",
+        "st-68-ul-6368-2": "errada: mostrador preto liso",
+        "st-68-ul-6368-3": "errada: mostrador preto liso",
+        "st-68-tk-192246-1": "errada: mostrador preto liso",
+        "st-68-tk-192246-2": "errada: mostrador preto liso",
+        "st-68-tk-192246-3": "errada: mostrador preto liso",
+        "st-68-tk-192246-4": "errada: mostrador preto liso"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner 126618LN (Full Gold Preto)": {
       "rank": 73,
@@ -1101,7 +3141,14 @@
         "hunt-submariner-126618ln-full-gold-preto-1",
         "pt-73-4"
       ],
-      "reviewedAt": "2026-07-11T10:32:35.594Z"
+      "reviewedAt": "2026-07-11T10:32:35.594Z",
+      "wrongIds": [
+        "pt-73-3"
+      ],
+      "wrongNotes": {
+        "pt-73-3": "lixo: foto só de lume no escuro"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 116509 (Blue Dial)": {
       "rank": 74,
@@ -1114,7 +3161,15 @@
         "ul-74-3",
         "ul-74-2"
       ],
-      "reviewedAt": "2026-07-11T10:32:35.594Z"
+      "reviewedAt": "2026-07-11T10:32:35.594Z",
+      "wrongIds": [
+        "ul-74-1",
+        "ul-74-2",
+        "ul-74-3",
+        "wb-74-1"
+      ],
+      "wrongReason": "revisão visual 08/10: ul-74-1/2 mostrador branco (anúncio titulado 116509 azul), ul-74-3 fundo de caixa do mesmo anúncio, wb-74-1 só logotipo",
+      "galleryAuditedAt": "2026-10-08"
     },
     "Seamaster Aqua Terra 150M (Ref. 220)": {
       "rank": 108,
@@ -1127,7 +3182,24 @@
         "hunt-seamaster-aqua-terra-150m-ref-220-1",
         "f-108-a635a818"
       ],
-      "reviewedAt": "2026-07-11T10:32:35.594Z"
+      "reviewedAt": "2026-07-11T10:32:35.594Z",
+      "wrongIds": [
+        "f-108-7ba9fa5f",
+        "f-108-eac5eb4d",
+        "f-108-a87497ba",
+        "f-108-0b7b4261",
+        "f-108-03e707ea",
+        "f-108-676b7483"
+      ],
+      "wrongNotes": {
+        "f-108-7ba9fa5f": "lixo: SEM IMAGEM",
+        "f-108-eac5eb4d": "errada: older-gen 231 style dial",
+        "f-108-a87497ba": "lixo: SEM IMAGEM",
+        "f-108-0b7b4261": "errada: older-gen black dial yellow seconds",
+        "f-108-03e707ea": "lixo: marketing banner with text",
+        "f-108-676b7483": "errada: Aqua Terra GMT worldtimer green"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Seamaster Diver 300M 210.30": {
       "rank": 115,
@@ -1140,7 +3212,14 @@
         "f-115-cb0a0c2e",
         "f-115-7bdcc22f"
       ],
-      "reviewedAt": "2026-07-11T10:34:30.044Z"
+      "reviewedAt": "2026-07-11T10:34:30.044Z",
+      "wrongIds": [
+        "hunt-seamaster-diver-300m-210-30-2"
+      ],
+      "wrongNotes": {
+        "hunt-seamaster-diver-300m-210-30-2": "lixo: SEM IMAGEM tile"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Master Ultra Thin": {
       "rank": 107,
@@ -1153,7 +3232,16 @@
         "f-107-b48513dc",
         "f-107-0327e8f7"
       ],
-      "reviewedAt": "2026-07-11T10:34:30.045Z"
+      "reviewedAt": "2026-07-11T10:34:30.045Z",
+      "wrongIds": [
+        "f-107-fa4f004b",
+        "f-107-20e1c6ac"
+      ],
+      "wrongNotes": {
+        "f-107-fa4f004b": "errada: modelo com reserva de marcha, outro",
+        "f-107-20e1c6ac": "lixo: apenas o perfil lateral"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "RM 11-03 Flyback Chronograph": {
       "rank": 106,
@@ -1166,7 +3254,22 @@
         "f-106-8459a368",
         "f-106-c0648695"
       ],
-      "reviewedAt": "2026-07-11T10:34:30.045Z"
+      "reviewedAt": "2026-07-11T10:34:30.045Z",
+      "wrongIds": [
+        "f-106-d5762d70",
+        "f-106-8459a368",
+        "f-106-c0648695",
+        "f-106-e6507f9a",
+        "st-106-ul-58234-4"
+      ],
+      "wrongNotes": {
+        "f-106-d5762d70": "errada: parece RM 011 Massa, não 11-03",
+        "f-106-8459a368": "errada: fundo de caixa RM011",
+        "f-106-c0648695": "errada: botões RM011, perfil",
+        "f-106-e6507f9a": "errada: RM 011 aço, não 11-03",
+        "st-106-ul-58234-4": "lixo: fundo/movimento traseiro apenas"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Land-Dweller 40 127334 (White Rolesor)": {
       "rank": 135,
@@ -1177,7 +3280,9 @@
         "hunt-land-dweller-40-127334-white-rolesor-2",
         "hunt-land-dweller-40-127334-white-rolesor-1"
       ],
-      "reviewedAt": "2026-07-11T10:34:30.045Z"
+      "reviewedAt": "2026-07-11T10:34:30.045Z",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Cubitus 5822P (Fase da Lua, Platina)": {
       "rank": 136,
@@ -1189,20 +3294,16 @@
         "hunt-cubitus-5822p-fase-da-lua-platina-2",
         "hunt-cubitus-5822p-fase-da-lua-platina-1"
       ],
-      "reviewedAt": "2026-07-11T10:34:30.045Z"
-    },
-    "Seamaster Planet Ocean 600M": {
-      "rank": 119,
-      "verdict": "confirmado",
-      "bestImageId": "hunt-seamaster-planet-ocean-600m-1",
-      "reasoning": "Única foto acessível mostra Seamaster Planet Ocean dial/bezel preto cerâmica com válvula de hélio; 3 caminhos f-119 não existem no disco.",
-      "candidateIds": [
-        "hunt-seamaster-planet-ocean-600m-1",
-        "f-119-2e19a199",
-        "f-119-d15e682a",
-        "f-119-a5f3df7b"
+      "reviewedAt": "2026-07-11T10:34:30.045Z",
+      "wrongIds": [
+        "hunt-cubitus-5822p-fase-da-lua-platina-1",
+        "hunt-cubitus-5822p-fase-da-lua-platina-3"
       ],
-      "reviewedAt": "2026-07-19T19:30:39.359Z"
+      "wrongNotes": {
+        "hunt-cubitus-5822p-fase-da-lua-platina-1": "lixo: banner de review com texto",
+        "hunt-cubitus-5822p-fase-da-lua-platina-3": "lixo: detalhe da caixa, difícil de identificar"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "RM 011 Felipe Massa Flyback Chrono": {
       "rank": 116,
@@ -1213,7 +3314,16 @@
         "hunt-rm-011-felipe-massa-flyback-chrono-1",
         "f-116-ba73557c"
       ],
-      "reviewedAt": "2026-07-19T19:30:39.359Z"
+      "reviewedAt": "2026-07-19T19:30:39.359Z",
+      "wrongIds": [
+        "st-116-ul-137905-1",
+        "st-116-ul-136874-2"
+      ],
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-116-ul-137905-1": "errada: caixa branca com borracha verde (Le Mans)",
+        "st-116-ul-136874-2": "lixo: vista traseira, mostrador não aparece"
+      }
     },
     "Datejust 41 Blue Motif": {
       "rank": 27,
@@ -1226,18 +3336,30 @@
         "wb-27-4",
         "wb-27-3"
       ],
-      "reviewedAt": "2026-07-19T23:10:29.130Z"
-    },
-    "Daytona 126519LN (Ghost, White Gold)": {
-      "rank": 137,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Daytona painel prata/panda em pulseira borracha; caixa parece aço, sem indício visual de ouro branco ou dial 'ghost'.",
-      "candidateIds": [
-        "hunt-daytona-126519ln-ghost-white-gold-2",
-        "hunt-daytona-126519ln-ghost-white-gold-1"
+      "reviewedAt": "2026-07-19T23:10:29.130Z",
+      "wrongIds": [
+        "27-superluxuryreps-13ni9oo",
+        "27-superluxuryreps-he5y2f",
+        "27-superluxuryreps-q4p83s",
+        "27-superluxuryreps-clw6iv",
+        "27-superluxuryreps-jg27f9",
+        "27-superluxuryreps-1rcso4m",
+        "27-superclonewatches-m4vtm2",
+        "27-superclonewatches-1bdhcxh",
+        "27-superclonewatches-bfs6ud"
       ],
-      "reviewedAt": "2026-07-19T23:10:29.132Z"
+      "wrongNotes": {
+        "27-superluxuryreps-13ni9oo": "errada: mostrador azul numerais romanos",
+        "27-superluxuryreps-he5y2f": "errada: mostrador azul numerais romanos",
+        "27-superluxuryreps-q4p83s": "errada: mostrador azul numerais romanos",
+        "27-superluxuryreps-clw6iv": "errada: mostrador azul numerais romanos",
+        "27-superluxuryreps-jg27f9": "lixo: só fundo da caixa",
+        "27-superluxuryreps-1rcso4m": "lixo: só fecho",
+        "27-superclonewatches-m4vtm2": "errada: Oyster Perpetual Celebration",
+        "27-superclonewatches-1bdhcxh": "errada: mostrador azul numerais romanos",
+        "27-superclonewatches-bfs6ud": "errada: mostrador azul com diamantes"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 116519LN (Ghost/Ouro Branco)": {
       "rank": 22,
@@ -1250,7 +3372,26 @@
         "pt-22-2",
         "pt-22-1"
       ],
-      "reviewedAt": "2026-07-20T00:31:48.117Z"
+      "reviewedAt": "2026-07-20T00:31:48.117Z",
+      "wrongIds": [
+        "cl-22-1",
+        "cl-22-2",
+        "cl-22-3",
+        "cl-22-4",
+        "st-22-ul-80153-1",
+        "st-22-ul-70169-1",
+        "st-22-ul-70169-4"
+      ],
+      "wrongNotes": {
+        "cl-22-1": "errada: ouro amarelo",
+        "cl-22-2": "errada: ouro amarelo",
+        "cl-22-3": "errada: ouro amarelo, mostrador panda",
+        "cl-22-4": "errada: ouro amarelo",
+        "st-22-ul-80153-1": "errada: mostrador preto com diamantes",
+        "st-22-ul-70169-1": "errada: mostrador meteorito",
+        "st-22-ul-70169-4": "lixo: vista lateral só do fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 116518LN (Pikachu)": {
       "rank": 60,
@@ -1263,7 +3404,16 @@
         "pt-60-2",
         "pt-60-1"
       ],
-      "reviewedAt": "2026-07-20T00:31:48.119Z"
+      "reviewedAt": "2026-07-20T00:31:48.119Z",
+      "wrongIds": [
+        "pt-60-3",
+        "60-superclonewatches-ltm0hn"
+      ],
+      "wrongNotes": {
+        "pt-60-3": "lixo: só lume escuro",
+        "60-superclonewatches-ltm0hn": "errada: bracelete Oyster, não borracha"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner 16610 (Vintage)": {
       "rank": 96,
@@ -1276,7 +3426,34 @@
         "wb-96-3",
         "wb-96-2"
       ],
-      "reviewedAt": "2026-07-20T00:31:48.119Z"
+      "reviewedAt": "2026-07-20T00:31:48.119Z",
+      "wrongIds": [
+        "wb-96-2",
+        "wb-96-3",
+        "wb-96-4",
+        "wb-96-1",
+        "st-96-ul-60370-1",
+        "st-96-ul-60370-2",
+        "st-96-ul-60370-3",
+        "st-96-ul-60370-4",
+        "st-96-ul-3334-1",
+        "st-96-ul-3334-2",
+        "st-96-ul-3334-3"
+      ],
+      "wrongNotes": {
+        "wb-96-2": "lixo: logo only",
+        "wb-96-3": "errada: black Milgauss white dial",
+        "wb-96-4": "errada: black Milgauss white dial",
+        "wb-96-1": "errada: black Milgauss white dial",
+        "st-96-ul-60370-1": "errada: bisel azul",
+        "st-96-ul-60370-2": "errada: bisel azul",
+        "st-96-ul-60370-3": "lixo: só a pulseira",
+        "st-96-ul-60370-4": "lixo: fundo da caixa e fecho",
+        "st-96-ul-3334-1": "errada: bisel verde",
+        "st-96-ul-3334-2": "errada: bisel verde",
+        "st-96-ul-3334-3": "lixo: fundo da caixa e fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Datejust 41 Fluted Bezel (ref. exata não confirmada, família 126334)": {
       "rank": 138,
@@ -1289,7 +3466,18 @@
         "cl-138-2",
         "cl-138-1"
       ],
-      "reviewedAt": "2026-07-20T00:31:48.119Z"
+      "reviewedAt": "2026-07-20T00:31:48.119Z",
+      "wrongIds": [
+        "cl-138-4",
+        "st-138-lcw-20160-4",
+        "st-138-ul-137495-2"
+      ],
+      "wrongNotes": {
+        "cl-138-4": "lixo: caseback and clasp only",
+        "st-138-lcw-20160-4": "lixo: relógio minúsculo sobre balança",
+        "st-138-ul-137495-2": "lixo: fundo da caixa e fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner 116613LB (Two-Tone Ouro/Aço)": {
       "rank": 63,
@@ -1302,7 +3490,22 @@
         "63-superluxuryreps-176h9ov",
         "63-superluxuryreps-lqx9xw"
       ],
-      "reviewedAt": "2026-07-27T12:40:12.761Z"
+      "reviewedAt": "2026-07-27T12:40:12.761Z",
+      "wrongIds": [
+        "63-superluxuryreps-1g9qcql",
+        "63-superluxuryreps-jagwu5",
+        "63-superluxuryreps-1esmv1b",
+        "63-superluxuryreps-8l5a4f",
+        "63-superluxuryreps-11err6n"
+      ],
+      "wrongNotes": {
+        "63-superluxuryreps-1g9qcql": "lixo: só coroa e fundo, sem mostrador",
+        "63-superluxuryreps-jagwu5": "lixo: só fecho e fundo",
+        "63-superluxuryreps-1esmv1b": "lixo: pulseira de lado, mostrador não visível",
+        "63-superluxuryreps-8l5a4f": "lixo: só fecho",
+        "63-superluxuryreps-11err6n": "lixo: só fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Submariner Date 116613LN (Two-Tone Preto)": {
       "rank": 66,
@@ -1315,7 +3518,24 @@
         "66-superluxuryreps-176h9ov",
         "66-superluxuryreps-lqx9xw"
       ],
-      "reviewedAt": "2026-07-27T12:40:12.761Z"
+      "reviewedAt": "2026-07-27T12:40:12.761Z",
+      "wrongIds": [
+        "66-superluxuryreps-9qeoum",
+        "66-superluxuryreps-twfj9o",
+        "66-superluxuryreps-destbg",
+        "66-superluxuryreps-1vya5cc",
+        "66-superluxuryreps-13uq7kt",
+        "66-superclonewatches-138e20n"
+      ],
+      "wrongNotes": {
+        "66-superluxuryreps-9qeoum": "errada: mostrador/bezel azul",
+        "66-superluxuryreps-twfj9o": "errada: mostrador/bezel azul",
+        "66-superluxuryreps-destbg": "errada: bezel azul",
+        "66-superluxuryreps-1vya5cc": "errada: bezel azul",
+        "66-superluxuryreps-13uq7kt": "lixo: apenas fecho",
+        "66-superclonewatches-138e20n": "errada: Datejust, não Submariner"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "GMT-Master II 126718GRNR (Full Yellow Gold)": {
       "rank": 80,
@@ -1328,7 +3548,32 @@
         "80-superclonewatches-pzem80",
         "80-superclonewatches-r0rsw8"
       ],
-      "reviewedAt": "2026-07-27T12:41:17.875Z"
+      "reviewedAt": "2026-07-27T12:41:17.875Z",
+      "wrongIds": [
+        "80-superluxuryreps-1m4bdhe",
+        "80-superluxuryreps-evvrc6",
+        "80-superluxuryreps-fj3r9",
+        "80-superluxuryreps-dqbdib",
+        "80-superluxuryreps-essx8k",
+        "80-superluxuryreps-1ivbep2",
+        "80-superluxuryreps-cpa90k",
+        "80-superluxuryreps-10bf16v",
+        "80-superluxuryreps-fl9c6c",
+        "80-superluxuryreps-1b2abis"
+      ],
+      "wrongNotes": {
+        "80-superluxuryreps-1m4bdhe": "errada: GMT pepsi de aço",
+        "80-superluxuryreps-evvrc6": "errada: GMT pepsi de aço",
+        "80-superluxuryreps-fj3r9": "errada: GMT pepsi de aço",
+        "80-superluxuryreps-dqbdib": "errada: GMT de aço, só a lateral",
+        "80-superluxuryreps-essx8k": "errada: GMT de aço, só a lateral",
+        "80-superluxuryreps-1ivbep2": "errada: pulseira de aço",
+        "80-superluxuryreps-cpa90k": "errada: mostrador champanhe, GMT antigo",
+        "80-superluxuryreps-10bf16v": "errada: mostrador champanhe, GMT antigo",
+        "80-superluxuryreps-fl9c6c": "errada: mostrador champanhe, GMT antigo",
+        "80-superluxuryreps-1b2abis": "lixo: apenas o fecho"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "RM 055 Bubba Watson (RM055)": {
       "rank": 122,
@@ -1341,7 +3586,18 @@
         "pt-122-3",
         "pt-122-2"
       ],
-      "reviewedAt": "2026-07-27T12:41:17.872Z"
+      "reviewedAt": "2026-07-27T12:41:17.872Z",
+      "wrongIds": [
+        "pt-122-3",
+        "pt-122-4",
+        "f-122-bbdd2d81"
+      ],
+      "wrongNotes": {
+        "pt-122-3": "lixo: so lume",
+        "pt-122-4": "lixo: close do movimento",
+        "f-122-bbdd2d81": "lixo: SEM IMAGEM"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Lange 1 (Ref. 191.032)": {
       "rank": 120,
@@ -1354,7 +3610,9 @@
         "bb-120-4",
         "bb-120-3"
       ],
-      "reviewedAt": "2026-08-13T16:14:00.656Z"
+      "reviewedAt": "2026-08-13T16:14:00.656Z",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Datejust 41 Ombré Green 126334-0034": {
       "rank": 139,
@@ -1366,7 +3624,17 @@
         "hunt-datejust-41-ombre-green-126334-0034-2",
         "hunt-datejust-41-ombre-green-126334-0034-1"
       ],
-      "reviewedAt": "2026-08-13T16:14:00.656Z"
+      "reviewedAt": "2026-08-13T16:14:00.656Z",
+      "wrongIds": [
+        "st-139-ul-145323-1",
+        "st-139-ul-145323-2",
+        "st-139-ul-77275-1"
+      ],
+      "wrongNotes": {
+        "st-139-ul-145323-1": "errada: mostrador preto, Oyster",
+        "st-139-ul-145323-2": "errada: mostrador preto, Oyster",
+        "st-139-ul-77275-1": "errada: azul gelo árabe"
+      }
     },
     "Royal Oak 15510": {
       "rank": 140,
@@ -1378,7 +3646,30 @@
         "hunt-royal-oak-15510-2",
         "hunt-royal-oak-15510-1"
       ],
-      "reviewedAt": "2026-08-24T10:01:33.316Z"
+      "reviewedAt": "2026-08-24T10:01:33.316Z",
+      "wrongIds": [
+        "hunt-royal-oak-15510-1",
+        "st-140-lcw-20208-3",
+        "st-140-lcw-20208-4",
+        "st-140-lcw-20204-4",
+        "st-140-ul-161842-2",
+        "st-140-ul-159393-1",
+        "st-140-ul-159393-2",
+        "st-140-ul-159393-3",
+        "st-140-ul-159393-4"
+      ],
+      "wrongNotes": {
+        "hunt-royal-oak-15510-1": "lixo: banner promocional",
+        "st-140-lcw-20208-3": "lixo: só pulseira",
+        "st-140-lcw-20208-4": "lixo: só fecho da pulseira",
+        "st-140-lcw-20204-4": "lixo: só fecho da pulseira",
+        "st-140-ul-161842-2": "lixo: fundo/movimento apenas",
+        "st-140-ul-159393-1": "errada: ouro rosé, não aço",
+        "st-140-ul-159393-2": "errada: ouro rosé na caixa, não aço",
+        "st-140-ul-159393-3": "errada: ouro rosé, lateral em caixa",
+        "st-140-ul-159393-4": "lixo: pulseira ouro rosé na caixa"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Pilot's Watch Chronograph 41 (IW388104, Verde, bracelete)": {
       "rank": 141,
@@ -1391,7 +3682,14 @@
         "pt-141-2",
         "pt-141-1"
       ],
-      "reviewedAt": "2026-09-29T00:51:57.997Z"
+      "reviewedAt": "2026-09-29T00:51:57.997Z",
+      "wrongIds": [
+        "pt-141-3"
+      ],
+      "wrongNotes": {
+        "pt-141-3": "lixo: só lume"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Black Bay Pro GMT 79470 (39mm)": {
       "rank": 142,
@@ -1401,7 +3699,9 @@
       "candidateIds": [
         "hunt-black-bay-pro-gmt-79470-39mm-1"
       ],
-      "reviewedAt": "2026-09-29T00:51:57.997Z"
+      "reviewedAt": "2026-09-29T00:51:57.997Z",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
     },
     "Grand Complications 6102P Celestial (Platina)": {
       "rank": 143,
@@ -1414,7 +3714,14 @@
         "pt-143-2",
         "pt-143-1"
       ],
-      "reviewedAt": "2026-09-29T00:52:32.152Z"
+      "reviewedAt": "2026-09-29T00:52:32.152Z",
+      "wrongIds": [
+        "pt-143-2"
+      ],
+      "wrongNotes": {
+        "pt-143-2": "lixo: so lume"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Yacht-Master 40 126655 (Everose, Oysterflex)": {
       "rank": 144,
@@ -1427,7 +3734,16 @@
         "pt-144-2",
         "pt-144-1"
       ],
-      "reviewedAt": "2026-09-29T00:52:32.152Z"
+      "reviewedAt": "2026-09-29T00:52:32.152Z",
+      "wrongIds": [
+        "pt-144-3",
+        "pt-144-4"
+      ],
+      "wrongNotes": {
+        "pt-144-3": "lixo: apenas lume",
+        "pt-144-4": "lixo: close parcial do mostrador"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Oyster Perpetual 41 124300": {
       "rank": 145,
@@ -1440,7 +3756,14 @@
         "pt-145-2",
         "pt-145-1"
       ],
-      "reviewedAt": "2026-09-29T00:52:32.152Z"
+      "reviewedAt": "2026-09-29T00:52:32.152Z",
+      "wrongIds": [
+        "pt-145-3"
+      ],
+      "wrongNotes": {
+        "pt-145-3": "lixo: só lume escuro"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Daytona 126503 (Rolesor Amarelo)": {
       "rank": 146,
@@ -1453,20 +3776,14 @@
         "pt-146-2",
         "pt-146-1"
       ],
-      "reviewedAt": "2026-09-29T00:52:32.152Z"
-    },
-    "Royal Oak Chronograph 38mm 26715 (Azul)": {
-      "rank": 147,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "Todas as fotos são de Rolex GMT-Master II Root Beer (126715), não do AP Royal Oak Chrono azul.",
-      "candidateIds": [
-        "pt-147-4",
-        "pt-147-3",
-        "pt-147-2",
-        "pt-147-1"
+      "reviewedAt": "2026-09-29T00:52:32.152Z",
+      "wrongIds": [
+        "pt-146-3"
       ],
-      "reviewedAt": "2026-09-29T00:52:32.152Z"
+      "wrongNotes": {
+        "pt-146-3": "lixo: só lume no escuro"
+      },
+      "galleryAuditedAt": "2026-10-08"
     },
     "Royal Oak 37mm 15450 (Azul)": {
       "rank": 148,
@@ -1479,20 +3796,40 @@
         "pt-148-2",
         "pt-148-1"
       ],
-      "reviewedAt": "2026-09-29T00:52:32.152Z"
+      "reviewedAt": "2026-09-29T00:52:32.152Z",
+      "wrongIds": [],
+      "galleryAuditedAt": "2026-10-08"
+    },
+    "Royal Oak Perpetual Calendar 26574": {
+      "rank": 149,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-royal-oak-perpetual-calendar-26574-2",
+      "reasoning": "Steel RO QP, blue tapisserie dial, day/date/month subdials, moonphase, week ring: matches 26574ST",
+      "candidateIds": [
+        "hunt-royal-oak-perpetual-calendar-26574-2",
+        "hunt-royal-oak-perpetual-calendar-26574-1"
+      ],
+      "reviewedAt": "2026-10-05T18:20:15.576Z",
+      "wrongIds": [
+        "st-149-ul-72077-4"
+      ],
+      "galleryAuditedAt": "2026-10-08",
+      "wrongNotes": {
+        "st-149-ul-72077-4": "lixo: fundo da caixa e movimento"
+      }
     },
     "Daytona 126500LN (Panda Novo)": {
       "rank": 3,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Todas as 4 fotos mostram só o movimento 4131 (Daytona); nenhum mostrador visível para confirmar o Panda branco/preto",
+      "verdict": "confirmado",
+      "bestImageId": "st-3-tk-201637-2",
+      "reasoning": "Daytona aço, mostrador branco com subdials pretos e luneta cerâmica preta: panda 126500LN. As 4 fotos batem.",
       "candidateIds": [
-        "3-superluxuryreps-1b05ko8",
-        "3-superluxuryreps-8y00yq",
-        "3-superluxuryreps-10p4yaq",
-        "3-superluxuryreps-6t0xic"
+        "st-3-tk-201637-4",
+        "st-3-tk-201637-3",
+        "st-3-tk-201637-2",
+        "st-3-tk-201637-1"
       ],
-      "reviewedAt": "2026-10-05T18:20:55.742Z"
+      "reviewedAt": "2026-10-08T19:26:15.449Z"
     },
     "GMT-Master II 126711CHNR (Root Beer)": {
       "rank": 30,
@@ -1505,20 +3842,59 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-10-05T18:20:55.745Z"
+      "reviewedAt": "2026-10-08T19:27:13.499Z"
+    },
+    "Submariner 114060 No-Date": {
+      "rank": 51,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-submariner-114060-no-date-1",
+      "reasoning": "Submariner aço sem data, mostrador e luneta cerâmica pretos. Todas batem; 114060 e 124060 são difíceis de separar na foto.",
+      "candidateIds": [
+        "hunt-submariner-114060-no-date-3",
+        "hunt-submariner-114060-no-date-2",
+        "hunt-submariner-114060-no-date-1",
+        "st-51-tk-159853-4"
+      ],
+      "reviewedAt": "2026-10-08T19:26:15.452Z"
+    },
+    "Day-Date 40 Olive Green": {
+      "rank": 59,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Day-Date 40 ouro amarelo, verde vivo romano (tom não é oliva/228235 Everose); wb-59 só mostram fundo/fecho",
+      "candidateIds": [
+        "hunt-59-2",
+        "hunt-59-1",
+        "wb-59-4",
+        "wb-59-3"
+      ],
+      "reviewedAt": "2026-10-08T19:27:13.499Z"
     },
     "Royal Oak 15500ST": {
       "rank": 110,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Audemars Piguet",
+      "reasoning": "As 4 imagens não existem no disco, nada foi visto. Os títulos citam cerâmica preta, não o 15500ST de aço.",
       "candidateIds": [
-        "f-110-0497546e",
-        "f-110-f99d5a51",
-        "f-110-bd3895d0",
-        "f-110-c693e956"
+        "st-110-tk-200255-4",
+        "st-110-tk-200255-3",
+        "st-110-tk-200255-2",
+        "st-110-tk-200255-1"
       ],
-      "reviewedAt": "2026-10-05T18:20:55.745Z"
+      "reviewedAt": "2026-10-08T19:26:15.452Z"
+    },
+    "Seamaster Planet Ocean 600M": {
+      "rank": 119,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Omega",
+      "candidateIds": [
+        "hunt-seamaster-planet-ocean-600m-1",
+        "f-119-2e19a199",
+        "f-119-a5f3df7b",
+        "f-119-40f4ed03"
+      ],
+      "reviewedAt": "2026-10-08T19:26:15.452Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -1531,18 +3907,39 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-10-05T18:20:55.745Z"
+      "reviewedAt": "2026-10-08T19:27:13.499Z"
     },
-    "Royal Oak Perpetual Calendar 26574": {
-      "rank": 149,
+    "Daytona 126519LN (Ghost, White Gold)": {
+      "rank": 137,
       "verdict": "confirmado",
-      "bestImageId": "hunt-royal-oak-perpetual-calendar-26574-2",
-      "reasoning": "Steel RO QP, blue tapisserie dial, day/date/month subdials, moonphase, week ring: matches 26574ST",
+      "bestImageId": "st-137-tk-190359-2",
+      "reasoning": "Daytona ouro branco, luneta cerâmica preta, mostrador preto com subdials cinza aço, Oysterflex: variante Ghost",
       "candidateIds": [
-        "hunt-royal-oak-perpetual-calendar-26574-2",
-        "hunt-royal-oak-perpetual-calendar-26574-1"
+        "st-137-tk-190359-4",
+        "st-137-tk-190359-3",
+        "st-137-tk-190359-2",
+        "st-137-tk-190359-1"
       ],
-      "reviewedAt": "2026-10-05T18:20:15.576Z"
+      "reviewedAt": "2026-10-08T19:27:13.499Z"
+    },
+    "Royal Oak Chronograph 38mm 26715 (Azul)": {
+      "rank": 147,
+      "verdict": "confirmado",
+      "bestImageId": "st-147-ul-184795-2",
+      "reasoning": "AP Royal Oak Chrono aço, mostrador azul tapisserie com subdials azuis, pulseira integrada; imagem -4 ausente no disco",
+      "candidateIds": [
+        "st-147-ul-184795-4",
+        "st-147-ul-184795-3",
+        "st-147-ul-184795-2",
+        "st-147-ul-184795-1"
+      ],
+      "reviewedAt": "2026-10-08T19:27:13.499Z"
     }
+  },
+  "galleryAudit": {
+    "date": "2026-10-08",
+    "method": "conferência visual por foto (folhas de contato, 10 agentes)",
+    "photos": 1300,
+    "hidden": 780
   }
 }
