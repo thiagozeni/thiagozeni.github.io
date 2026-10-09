@@ -1,5 +1,24 @@
 [
   {
+    "stamp": "2026-10-09",
+    "previousStamp": "2026-10-08",
+    "summary": {
+      "newModels": 1,
+      "scoreChanges": 1,
+      "newMedia": 24,
+      "newNews": 1
+    },
+    "newModels": [
+      150
+    ],
+    "scoreChanges": [
+      {
+        "rank": 16,
+        "delta": 0.14
+      }
+    ]
+  },
+  {
     "stamp": "2026-10-08",
     "previousStamp": "2026-10-05",
     "summary": {

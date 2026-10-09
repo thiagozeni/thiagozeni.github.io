@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "storesRead": 6,
   "items": [
     {
@@ -95,6 +95,19 @@
       ]
     },
     {
+      "key": "rolex|226659",
+      "brand": "Rolex",
+      "ref": "226659",
+      "label": "Rolex Yacht-Master 226659“White Gold”",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        55
+      ]
+    },
+    {
       "key": "patekphilippe|5167",
       "brand": "Patek Philippe",
       "ref": "5167",
@@ -146,6 +159,19 @@
       "catalogRanks": []
     },
     {
+      "key": "patekphilippe|57111a",
+      "brand": "Patek Philippe",
+      "ref": "5711/1A",
+      "label": "Patek Philippe Nautilus 5711/1A Blue Dial",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": [
+        9,
+        16,
+        44
+      ]
+    },
+    {
       "key": "rolex|124060",
       "brand": "Rolex",
       "ref": "124060",
@@ -160,16 +186,14 @@
       ]
     },
     {
-      "key": "patekphilippe|57111a",
-      "brand": "Patek Philippe",
-      "ref": "5711/1A",
-      "label": "Patek Philippe Nautilus 5711/1A Blue Dial",
+      "key": "rolex|116710blnr",
+      "brand": "Rolex",
+      "ref": "116710BLNR",
+      "label": "Rolex GMT-Master II 116710BLNR “Batman”",
       "factories": [],
       "stores": 1,
       "catalogRanks": [
-        9,
-        16,
-        44
+        85
       ]
     },
     {
@@ -184,17 +208,6 @@
       "stores": 1,
       "catalogRanks": [
         19
-      ]
-    },
-    {
-      "key": "rolex|116710blnr",
-      "brand": "Rolex",
-      "ref": "116710BLNR",
-      "label": "Rolex GMT-Master II 116710BLNR “Batman”",
-      "factories": [],
-      "stores": 1,
-      "catalogRanks": [
-        85
       ]
     },
     {
@@ -240,15 +253,6 @@
       "catalogRanks": [
         8
       ]
-    },
-    {
-      "key": "rolex|116506",
-      "brand": "Rolex",
-      "ref": "116506",
-      "label": "Rolex Cosmograph Daytona 116506",
-      "factories": [],
-      "stores": 1,
-      "catalogRanks": []
     }
   ]
 }

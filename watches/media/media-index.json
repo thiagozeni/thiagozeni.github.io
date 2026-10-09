@@ -48757,43 +48757,6 @@
     }
   },
   {
-    "id": "hunt-seamaster-planet-ocean-600m-1",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — pyluxury.com",
-    "source": "pyluxury.com",
-    "sourceDomain": "pyluxury.com",
-    "image": "https://pyluxury.com/wp-content/uploads/2026/04/OMEGA-Seamaster-Planet-Ocean-600M-217.30.42.21.01.001-Black-Dial-Black-Bezel-2-800x800.webp",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.webp",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Página nomeia explicitamente 'OMEGA Seamaster Planet Ocean 600M 217.30.42.21.01.001 Black Dial Black Ceramic Bezel 1:1 Best Replica VSF 42mm' — factory VSF confirma o batch. Modelo sem variante entre parênteses no nome do batch, então dial/bezel preto (a config mais icônica/padrão) é aceitável. Imagem validada visualmente: relógio mostrado na mão sobre caixa da loja, com logo 'PY LUXURY' sobreposto no canto — watermark:true."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "watermark"
-    ],
-    "collectedAt": "2026-07-19T19:29:31.112Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": true,
-      "sourceTier": 1
-    }
-  },
-  {
     "id": "hunt-daytona-126519ln-ghost-white-gold-1",
     "model": "Daytona 126519LN (Ghost, White Gold)",
     "brand": "Rolex",
@@ -71053,5 +71016,878 @@
       "py"
     ],
     "collectedAt": "2026-10-08T22:41:25.789Z"
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-1",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
+    "source": "thevsfactory.com",
+    "sourceDomain": "thevsfactory.com",
+    "image": "https://thevsfactory.com/wp-content/uploads/2026/06/i1694185438_3406_0-600x600.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "The page title names VS Factory, Planet Ocean 600M 43.5mm, Black/Orange, ref. 215.32.44.21.01.001 and the DD8900 movement, matching the batch's 8900. The image URL was fetched and is image/jpeg (64.7KB). The photo itself wasn't visually checked."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-09T15:26:41.332Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "st-48-ul-145323-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust 126334 “White Rolesor” Precision Duplicate 1:1",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2025/01/rolex-datejust-oyster-126334-white-gold-4.webp",
+    "localImage": "/media/img/st-48-ul-145323-1.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-10-09T15:27:32.455Z"
+  },
+  {
+    "id": "st-48-ul-145323-2",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust 126334 “White Rolesor” Precision Duplicate 1:1",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2025/01/rolex-datejust-oyster-126334-white-gold-1.jpg",
+    "localImage": "/media/img/st-48-ul-145323-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-10-09T15:27:32.579Z"
+  },
+  {
+    "id": "st-48-ul-77275-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust 126334 “Fluted Bezel” Superior Replica",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2022/03/rolex-datejust-fluted-replica-1.webp",
+    "localImage": "/media/img/st-48-ul-77275-1.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-10-09T15:27:32.653Z"
+  },
+  {
+    "id": "st-48-tk-201778-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "RICH",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS RICH 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/27183428/20260827_001-scaled.jpg",
+    "localImage": "/media/img/st-48-tk-201778-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:33.899Z"
+  },
+  {
+    "id": "st-48-tk-201778-2",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "RICH",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS RICH 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/27183428/20260827_001-scaled.jpg",
+    "localImage": "/media/img/st-48-tk-201778-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:33.989Z"
+  },
+  {
+    "id": "st-48-tk-201778-3",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "RICH",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS RICH 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/27183442/20260827_002-scaled.jpg",
+    "localImage": "/media/img/st-48-tk-201778-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:34.232Z"
+  },
+  {
+    "id": "st-48-tk-201778-4",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "RICH",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS RICH 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/27183455/20260827_003-scaled.jpg",
+    "localImage": "/media/img/st-48-tk-201778-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:34.622Z"
+  },
+  {
+    "id": "st-48-tk-200752-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 WDF 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/09/22064006/20260922_305.jpg",
+    "localImage": "/media/img/st-48-tk-200752-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:34.888Z"
+  },
+  {
+    "id": "st-48-tk-200752-2",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 WDF 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/09/22064006/20260922_305.jpg",
+    "localImage": "/media/img/st-48-tk-200752-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:34.973Z"
+  },
+  {
+    "id": "st-48-tk-200752-3",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 WDF 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/09/22063957/20260922_304.jpg",
+    "localImage": "/media/img/st-48-tk-200752-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:35.536Z"
+  },
+  {
+    "id": "st-48-tk-200752-4",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 WDF 1:1 Best Edition Gray Stick Dial on Jubilee Bracelet JH3235 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/09/22063931/20260922_301.jpg",
+    "localImage": "/media/img/st-48-tk-200752-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:36.101Z"
+  },
+  {
+    "id": "st-49-ul-188249-1",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust M126234-0069 Authentic Copy 1:1",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2026/09/Yeni-Proje-2026-09-06T152611.057.webp",
+    "localImage": "/media/img/st-49-ul-188249-1.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-10-09T15:27:36.696Z"
+  },
+  {
+    "id": "st-49-ul-188249-2",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust M126234-0069 Authentic Copy 1:1",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2026/05/Yeni-Proje-2026-05-01T185255.536.webp",
+    "localImage": "/media/img/st-49-ul-188249-2.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-10-09T15:27:36.776Z"
+  },
+  {
+    "id": "st-49-ul-188249-3",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust M126234-0069 Authentic Copy 1:1",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2026/05/Yeni-Proje-2026-05-01T185316.714.webp",
+    "localImage": "/media/img/st-49-ul-188249-3.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-10-09T15:27:36.850Z"
+  },
+  {
+    "id": "st-49-ul-147109-1",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Datejust 126234 “Mint Green” Authentic Super Replica",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2025/03/datejust-36-mint-green-dial-replica-1.webp",
+    "localImage": "/media/img/st-49-ul-147109-1.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-10-09T15:27:36.977Z"
+  },
+  {
+    "id": "st-49-tk-193630-1",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Oyster Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03100425/20260803_348.jpg",
+    "localImage": "/media/img/st-49-tk-193630-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:38.105Z"
+  },
+  {
+    "id": "st-49-tk-193630-2",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Oyster Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03100425/20260803_348.jpg",
+    "localImage": "/media/img/st-49-tk-193630-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:38.162Z"
+  },
+  {
+    "id": "st-49-tk-193630-3",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Oyster Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03100406/20260803_345.jpg",
+    "localImage": "/media/img/st-49-tk-193630-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:38.560Z"
+  },
+  {
+    "id": "st-49-tk-193630-4",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Oyster Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03100348/20260803_342.jpg",
+    "localImage": "/media/img/st-49-tk-193630-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:38.838Z"
+  },
+  {
+    "id": "st-49-tk-193612-1",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Jubilee Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03100031/20260803_332.jpg",
+    "localImage": "/media/img/st-49-tk-193612-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:39.102Z"
+  },
+  {
+    "id": "st-49-tk-193612-2",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Jubilee Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03100031/20260803_332.jpg",
+    "localImage": "/media/img/st-49-tk-193612-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:39.155Z"
+  },
+  {
+    "id": "st-49-tk-193612-3",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Jubilee Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03100012/20260803_329.jpg",
+    "localImage": "/media/img/st-49-tk-193612-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:39.434Z"
+  },
+  {
+    "id": "st-49-tk-193612-4",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 904L V2 VSF 1:1 Best Edition Green Ombre Dial Stick Marker On Jubilee Bracelet VS3235 126g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/08/03095951/20260803_326.jpg",
+    "localImage": "/media/img/st-49-tk-193612-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-09T15:27:39.723Z"
+  },
+  {
+    "id": "sv-4-py-22048",
+    "model": "Luminor Marina PAM111",
+    "brand": "Panerai",
+    "factory": "XF/Noob",
+    "type": "video",
+    "status": "validado",
+    "title": "Đồng Hồ Panerai Luminor Marina PAM1115 Vàng Vàng Mặt Xám Dây Da Replica 1:1 44mm — vídeo de produto (pyluxury.com)",
+    "source": "pyluxury.com",
+    "sourceDomain": "pyluxury.com",
+    "sourceUrl": "https://pyluxury.com/product/dong-ho-panerai-luminor-marina-pam1115-vang-vang-mat-xam-day-da-replica/",
+    "embedUrl": "https://player.vimeo.com/video/1175236675",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2136014093-f4591206209c42f32a8a89ce052b41cd9aa6d186076391e4549be1c6ef9f750d-d_200x150?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "py"
+    ],
+    "collectedAt": "2026-10-09T15:28:05.931Z"
+  },
+  {
+    "id": "sv-13-py-5194",
+    "model": "Daytona 126529LN (Le Mans Edition)",
+    "brand": "Rolex",
+    "factory": "UFO",
+    "type": "video",
+    "status": "validado",
+    "title": "Đồng hồ Rolex Cosmograph Daytona Le Mans 126529LN Rep 1:1 Cao Cấp 40mm — vídeo de produto (pyluxury.com)",
+    "source": "pyluxury.com",
+    "sourceDomain": "pyluxury.com",
+    "sourceUrl": "https://pyluxury.com/product/dong-ho-rolex-cosmograph-daytona-le-mans-126529ln-rep-11-cao-cap-40mm/",
+    "embedUrl": "https://player.vimeo.com/video/1155491049",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2108206928-05bf608aaa22746576beed1b5a7ede6dbc26de111edd304a78fae0f4953ac226-d_295x166?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "py"
+    ],
+    "collectedAt": "2026-10-09T15:28:19.452Z"
+  },
+  {
+    "id": "sv-27-py-5965",
+    "model": "Datejust 41 Blue Motif",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "Đồng Hồ Rolex Datejust 126334 Mặt Đen Cọc Số Đính Đá Rep 1:1 VS Factory 41mm — vídeo de produto (pyluxury.com)",
+    "source": "pyluxury.com",
+    "sourceDomain": "pyluxury.com",
+    "sourceUrl": "https://pyluxury.com/product/dong-ho-rolex-datejust-126334-mat-den-coc-so-dinh-da-rep-11-vs-factory-41mm/",
+    "embedUrl": "https://player.vimeo.com/video/1163288145",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2119429592-3210ae13f589454827bc43dce113a7ebc78c61d9aa6c9dee534c2f121834b85f-d_200x150?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "py"
+    ],
+    "collectedAt": "2026-10-09T15:28:32.218Z"
+  },
+  {
+    "id": "sv-42-vsf-15396",
+    "model": "Aqua Terra Worldtimer",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "VS Factory Omega Seamaster Aqua Terra Worldtimer 43mm “Summer Blue” （220.12.43.22.03.002）1:1 Super Clone – DD8938 Movement — vídeo de produto (vsfactory.us)",
+    "source": "vsfactory.us",
+    "sourceDomain": "vsfactory.us",
+    "sourceUrl": "https://thevsfactory.com/product/vs-factory-omega-seamaster-aqua-terra-worldtimer-43mm-summer-blue-11-super-clone-dd8938-movement/",
+    "embedUrl": "https://player.vimeo.com/video/1184667362",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2147868564-04b693b1d79837a2f0fe5faee459fb929b1d13afa5a786ce8d5f272cc70a414f-d_295x166?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "vsf"
+    ],
+    "collectedAt": "2026-10-09T15:28:47.649Z"
+  },
+  {
+    "id": "sv-48-vsf-12018",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "VS Factory Rolex Datejust 41mm Green Fluted Motif Dial Fluted Bezel Jubilee Bracelet (126334) 1:1 Super Clone – DD3235 Movement — vídeo de produto (vsfactory.us)",
+    "source": "vsfactory.us",
+    "sourceDomain": "vsfactory.us",
+    "sourceUrl": "https://thevsfactory.com/product/vs-factory-rolex-datejust-41mm-green-fluted-motif-dial-fluted-bezel-jubilee-bracelet-126334-11-super-clone-dd3235-movement/",
+    "embedUrl": "https://player.vimeo.com/video/1176477907",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2137560958-1a148caec4f05fe6d6f5e8833ee4e1749e42ebd837d9024d2d7ceeea505a8b9f-d_200x150?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "vsf"
+    ],
+    "collectedAt": "2026-10-09T15:28:54.550Z"
+  },
+  {
+    "id": "sv-49-py-30947",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "Rolex Datejust 126234 Green Ombré Dial Fluted Bezel Oyster Bracelet Super Clone VSF 36mm — vídeo de produto (pyluxury.com)",
+    "source": "pyluxury.com",
+    "sourceDomain": "pyluxury.com",
+    "sourceUrl": "https://pyluxury.com/product/rolex-datejust-126234-green-ombre-dial-fluted-bezel-oyster-bracelet-super-clone/",
+    "embedUrl": "https://player.vimeo.com/video/1193255995",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2158681871-627492160c1a3c967607e3aa6fbb399b463f62e1808d0e31bf4b78e258fd933e-d_200x150?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "py"
+    ],
+    "collectedAt": "2026-10-09T15:29:07.540Z"
+  },
+  {
+    "id": "sv-61-kt-2766",
+    "model": "Nautilus 5712/1A (Fase da Lua)",
+    "brand": "Patek Philippe",
+    "factory": "PPF",
+    "type": "video",
+    "status": "validado",
+    "title": "PATEK PHILIPPE – Super Clone Nautilus 40mm 5712 SS/SS Blue/Stk PPF V3 A240 — vídeo de produto (kevintoptime.com)",
+    "source": "kevintoptime.com",
+    "sourceDomain": "kevintoptime.com",
+    "sourceUrl": "https://kevintoptime.com/product/patek-philippe-super-clone-nautilus-40mm-5712-ss-ss-blue-stk-ppf-v3-a240/",
+    "embedUrl": "https://player.vimeo.com/video/1096176675",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2030163181-1f3168a44729c79064ead851b6877f0b80eb496d32db9865daf559525c7e848b-d_295x166?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "kt"
+    ],
+    "collectedAt": "2026-10-09T15:29:37.131Z"
+  },
+  {
+    "id": "sv-71-kt-1349",
+    "model": "Daytona 116505 (Rose Gold Preto)",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "ROLEX – SUPER CLONE Daytona 116505 40mm RG/RG Black Dial VSF DD4130 (Weight Adjusted) — vídeo de produto (kevintoptime.com)",
+    "source": "kevintoptime.com",
+    "sourceDomain": "kevintoptime.com",
+    "sourceUrl": "https://kevintoptime.com/product/rolex-super-clone-daytona-116505-40mm-rg-rg-black-dial-vsf-dd4130-weight-adjusted/",
+    "embedUrl": "https://player.vimeo.com/video/1096141141",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2030116924-304bfa72bec6cf8f2c8c9261d5d46265fb63a37b6601b29ec1021128306c39e5-d_295x166?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "kt"
+    ],
+    "collectedAt": "2026-10-09T15:29:48.587Z"
+  },
+  {
+    "id": "sv-150-vsf-16242",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "VS Factory Rolex Cosmograph Daytona 40mm “Panda” White Dial Exhibition Caseback (126502LN) 1:1 Super Clone – DD4131 Movement — vídeo de produto (vsfactory.us)",
+    "source": "vsfactory.us",
+    "sourceDomain": "vsfactory.us",
+    "sourceUrl": "https://thevsfactory.com/product/vs-factory-rolex-cosmograph-daytona-40mm-panda-white-dial-exhibition-caseback-126500ln-11-super-clone-dd4131-movement/",
+    "embedUrl": "https://player.vimeo.com/video/1220715059",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2193237426-94e6519ec1c135c365c4d75105b096da77bb1cb239c25a6e2063a76facca93ce-d_295x166?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "vsf"
+    ],
+    "collectedAt": "2026-10-09T15:30:12.620Z"
   }
 ]

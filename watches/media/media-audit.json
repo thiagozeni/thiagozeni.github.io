@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-08T22:36:31.957Z",
-  "totalImages": 2322,
+  "generatedAt": "2026-10-09T15:27:22.544Z",
+  "totalImages": 2333,
   "summary": {
-    "models": 149,
+    "models": 150,
     "verified": 137,
     "strong": 10,
     "weak": 2,
     "rejected": 0,
-    "missing": 0,
-    "conflictsDiscarded": 364,
-    "coveragePct": 99
+    "missing": 1,
+    "conflictsDiscarded": 365,
+    "coveragePct": 98
   },
   "backlog": [
     {
@@ -23,6 +23,12 @@
       "model": "Seamaster Planet Ocean 600M",
       "brand": "Omega",
       "state": "fraco"
+    },
+    {
+      "rank": 150,
+      "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+      "brand": "Rolex",
+      "state": "sem-imagem"
     }
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "stamp": "2026-10-09",
+  "previousStamp": "2026-10-08",
+  "newModels": [
+    150
+  ],
+  "removedModels": [],
+  "scoreChanges": [
+    {
+      "rank": 16,
+      "from": 7.8,
+      "to": 7.94,
+      "delta": 0.14
+    }
+  ],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 48,
+      "count": 11
+    },
+    {
+      "rank": 49,
+      "count": 12
+    },
+    {
+      "rank": 119,
+      "count": 1
+    }
+  ],
+  "newNews": [
+    "https://www.bbtwatch.com/en/dj/109232.html"
+  ],
+  "summary": {
+    "newModels": 1,
+    "scoreChanges": 1,
+    "newMedia": 24,
+    "newNews": 1
+  }
+}

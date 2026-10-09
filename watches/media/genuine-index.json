@@ -1183,6 +1183,26 @@
           "year": "2026",
           "condition": "New",
           "review": "recusada"
+        },
+        {
+          "id": "gn-14-44912154-1",
+          "local": "/media/genuine/gn-14-44912154-1.jpg",
+          "listing": "44912154",
+          "dial": "Green",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-14-44912154-2",
+          "local": "/media/genuine/gn-14-44912154-2.jpg",
+          "listing": "44912154",
+          "dial": "Green",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
         }
       ]
     },
@@ -3645,6 +3665,26 @@
           "year": "2017 (Approximation)",
           "condition": "Used Very good",
           "review": "recusada"
+        },
+        {
+          "id": "gn-60-49057128-1",
+          "local": "/media/genuine/gn-60-49057128-1.jpg",
+          "listing": "49057128",
+          "dial": "Champagne",
+          "caseMaterial": "Yellow gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-60-49057128-2",
+          "local": "/media/genuine/gn-60-49057128-2.jpg",
+          "listing": "49057128",
+          "dial": "Champagne",
+          "caseMaterial": "Yellow gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
         }
       ]
     },
@@ -4635,6 +4675,26 @@
           "caseMaterial": "Platinum",
           "year": "2018",
           "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-86-46017164-1",
+          "local": "/media/genuine/gn-86-46017164-1.jpg",
+          "listing": "46017164",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "2019",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-86-46017164-2",
+          "local": "/media/genuine/gn-86-46017164-2.jpg",
+          "listing": "46017164",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "2019",
+          "condition": "Like",
           "review": "recusada"
         }
       ]
@@ -5983,6 +6043,26 @@
           "year": "2025",
           "condition": "New",
           "review": "recusada"
+        },
+        {
+          "id": "gn-139-47979325-1",
+          "local": "/media/genuine/gn-139-47979325-1.jpg",
+          "listing": "47979325",
+          "dial": "Green",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "New",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-139-47979325-2",
+          "local": "/media/genuine/gn-139-47979325-2.jpg",
+          "listing": "47979325",
+          "dial": "Green",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "New",
+          "review": "recusada"
         }
       ]
     },
@@ -6387,7 +6467,1860 @@
           "review": "recusada"
         }
       ]
+    },
+    "Big Pilot 43mm": {
+      "rank": 67,
+      "ref": "IW3293",
+      "dial": "Black",
+      "photos": [
+        {
+          "id": "gn-67-48860015-1",
+          "local": "/media/genuine/gn-67-48860015-1.jpg",
+          "listing": "48860015",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-67-48860015-2",
+          "local": "/media/genuine/gn-67-48860015-2.jpg",
+          "listing": "48860015",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-67-48918747-1",
+          "local": "/media/genuine/gn-67-48918747-1.jpg",
+          "listing": "48918747",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "2021",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-67-48918747-2",
+          "local": "/media/genuine/gn-67-48918747-2.jpg",
+          "listing": "48918747",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "2021",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-67-48419242-1",
+          "local": "/media/genuine/gn-67-48419242-1.jpg",
+          "listing": "48419242",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Used Good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-67-48419242-2",
+          "local": "/media/genuine/gn-67-48419242-2.jpg",
+          "listing": "48419242",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Used Good",
+          "review": "recusada"
+        }
+      ]
+    },
+    "Royal Oak 15510 (50th Anniv)": {
+      "rank": 70,
+      "ref": "15510ST",
+      "dial": "Blue",
+      "photos": [
+        {
+          "id": "gn-70-47535817-1",
+          "local": "/media/genuine/gn-70-47535817-1.jpg",
+          "listing": "47535817",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-70-47535817-2",
+          "local": "/media/genuine/gn-70-47535817-2.jpg",
+          "listing": "47535817",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-70-47095721-1",
+          "local": "/media/genuine/gn-70-47095721-1.jpg",
+          "listing": "47095721",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2023 (Approximation)",
+          "condition": "Used Good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-70-47095721-2",
+          "local": "/media/genuine/gn-70-47095721-2.jpg",
+          "listing": "47095721",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2023 (Approximation)",
+          "condition": "Used Good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Royal Oak Double Balance 15407": {
+      "rank": 72,
+      "ref": "15407ST",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": [
+        {
+          "id": "gn-72-48280697-1",
+          "local": "/media/genuine/gn-72-48280697-1.jpg",
+          "listing": "48280697",
+          "dial": "Skeletonized",
+          "caseMaterial": "Steel",
+          "year": "2023",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-72-48280697-2",
+          "local": "/media/genuine/gn-72-48280697-2.jpg",
+          "listing": "48280697",
+          "dial": "Skeletonized",
+          "caseMaterial": "Steel",
+          "year": "2023",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-72-49063735-1",
+          "local": "/media/genuine/gn-72-49063735-1.jpg",
+          "listing": "49063735",
+          "dial": "Skeletonized",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-72-49063735-2",
+          "local": "/media/genuine/gn-72-49063735-2.jpg",
+          "listing": "49063735",
+          "dial": "Skeletonized",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-72-48899849-1",
+          "local": "/media/genuine/gn-72-48899849-1.jpg",
+          "listing": "48899849",
+          "dial": "Skeletonized",
+          "caseMaterial": "Steel",
+          "year": "2021",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-72-48899849-2",
+          "local": "/media/genuine/gn-72-48899849-2.jpg",
+          "listing": "48899849",
+          "dial": "Skeletonized",
+          "caseMaterial": "Steel",
+          "year": "2021",
+          "condition": "Like",
+          "review": "ok"
+        }
+      ]
+    },
+    "Royal Oak Offshore Diver 15703": {
+      "rank": 79,
+      "ref": "15703ST",
+      "dial": "Black",
+      "photos": [
+        {
+          "id": "gn-79-47136940-1",
+          "local": "/media/genuine/gn-79-47136940-1.jpg",
+          "listing": "47136940",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-79-47136940-2",
+          "local": "/media/genuine/gn-79-47136940-2.jpg",
+          "listing": "47136940",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-79-46657944-1",
+          "local": "/media/genuine/gn-79-46657944-1.jpg",
+          "listing": "46657944",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-79-46657944-2",
+          "local": "/media/genuine/gn-79-46657944-2.jpg",
+          "listing": "46657944",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-79-47983087-1",
+          "local": "/media/genuine/gn-79-47983087-1.jpg",
+          "listing": "47983087",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-79-47983087-2",
+          "local": "/media/genuine/gn-79-47983087-2.jpg",
+          "listing": "47983087",
+          "dial": "Black",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Portugieser 7 Days 5007": {
+      "rank": 81,
+      "ref": "IW5007",
+      "dial": [
+        "Silver",
+        "White"
+      ],
+      "photos": [
+        {
+          "id": "gn-81-47464009-1",
+          "local": "/media/genuine/gn-81-47464009-1.jpg",
+          "listing": "47464009",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-81-47464009-2",
+          "local": "/media/genuine/gn-81-47464009-2.jpg",
+          "listing": "47464009",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-81-48910308-1",
+          "local": "/media/genuine/gn-81-48910308-1.jpg",
+          "listing": "48910308",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2015",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-81-48910308-2",
+          "local": "/media/genuine/gn-81-48910308-2.jpg",
+          "listing": "48910308",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2015",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Big Bang Unico Titanium": {
+      "rank": 83,
+      "ref": "411.NX.1170",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": [
+        {
+          "id": "gn-83-48427269-1",
+          "local": "/media/genuine/gn-83-48427269-1.jpg",
+          "listing": "48427269",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-83-48427269-2",
+          "local": "/media/genuine/gn-83-48427269-2.jpg",
+          "listing": "48427269",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-83-49078485-1",
+          "local": "/media/genuine/gn-83-49078485-1.jpg",
+          "listing": "49078485",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "2021 (Approximation)",
+          "condition": "Used Good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-83-49078485-2",
+          "local": "/media/genuine/gn-83-49078485-2.jpg",
+          "listing": "49078485",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "2021 (Approximation)",
+          "condition": "Used Good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-83-41003229-1",
+          "local": "/media/genuine/gn-83-41003229-1.jpg",
+          "listing": "41003229",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "Unknown",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-83-41003229-2",
+          "local": "/media/genuine/gn-83-41003229-2.jpg",
+          "listing": "41003229",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "Unknown",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-83-48083787-1",
+          "local": "/media/genuine/gn-83-48083787-1.jpg",
+          "listing": "48083787",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-83-48083787-2",
+          "local": "/media/genuine/gn-83-48083787-2.jpg",
+          "listing": "48083787",
+          "dial": "Skeletonized",
+          "caseMaterial": "Titanium",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        }
+      ]
+    },
+    "Nautilus 5726/1A (Calendário Anual)": {
+      "rank": 95,
+      "ref": "5726/1A",
+      "dial": "Blue",
+      "photos": [
+        {
+          "id": "gn-95-43549119-1",
+          "local": "/media/genuine/gn-95-43549119-1.jpg",
+          "listing": "43549119",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-95-43549119-2",
+          "local": "/media/genuine/gn-95-43549119-2.jpg",
+          "listing": "43549119",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-95-46683220-1",
+          "local": "/media/genuine/gn-95-46683220-1.jpg",
+          "listing": "46683220",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-95-46683220-2",
+          "local": "/media/genuine/gn-95-46683220-2.jpg",
+          "listing": "46683220",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-95-42653915-1",
+          "local": "/media/genuine/gn-95-42653915-1.jpg",
+          "listing": "42653915",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-95-42653915-2",
+          "local": "/media/genuine/gn-95-42653915-2.jpg",
+          "listing": "42653915",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-95-48116721-1",
+          "local": "/media/genuine/gn-95-48116721-1.jpg",
+          "listing": "48116721",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2024 (Approximation)",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-95-48116721-2",
+          "local": "/media/genuine/gn-95-48116721-2.jpg",
+          "listing": "48116721",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2024 (Approximation)",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Nautilus 5980 (Cronógrafo)": {
+      "rank": 97,
+      "ref": "5980/1A",
+      "dial": [
+        "Blue",
+        "Black"
+      ],
+      "photos": [
+        {
+          "id": "gn-97-44785118-1",
+          "local": "/media/genuine/gn-97-44785118-1.jpg",
+          "listing": "44785118",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2018",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-97-44785118-2",
+          "local": "/media/genuine/gn-97-44785118-2.jpg",
+          "listing": "44785118",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2018",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-97-47607564-1",
+          "local": "/media/genuine/gn-97-47607564-1.jpg",
+          "listing": "47607564",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-97-47607564-2",
+          "local": "/media/genuine/gn-97-47607564-2.jpg",
+          "listing": "47607564",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-97-49053399-1",
+          "local": "/media/genuine/gn-97-49053399-1.jpg",
+          "listing": "49053399",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2015",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-97-49053399-2",
+          "local": "/media/genuine/gn-97-49053399-2.jpg",
+          "listing": "49053399",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2015",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-97-49090436-1",
+          "local": "/media/genuine/gn-97-49090436-1.jpg",
+          "listing": "49090436",
+          "dial": "Blue",
+          "caseMaterial": "",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-97-49090436-2",
+          "local": "/media/genuine/gn-97-49090436-2.jpg",
+          "listing": "49090436",
+          "dial": "Blue",
+          "caseMaterial": "",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Royal Oak 15500ST": {
+      "rank": 110,
+      "ref": "15500ST",
+      "dial": "Blue",
+      "photos": [
+        {
+          "id": "gn-110-47100886-1",
+          "local": "/media/genuine/gn-110-47100886-1.jpg",
+          "listing": "47100886",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-110-47100886-2",
+          "local": "/media/genuine/gn-110-47100886-2.jpg",
+          "listing": "47100886",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-110-46669067-1",
+          "local": "/media/genuine/gn-110-46669067-1.jpg",
+          "listing": "46669067",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-110-46669067-2",
+          "local": "/media/genuine/gn-110-46669067-2.jpg",
+          "listing": "46669067",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-110-48091690-1",
+          "local": "/media/genuine/gn-110-48091690-1.jpg",
+          "listing": "48091690",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-110-48091690-2",
+          "local": "/media/genuine/gn-110-48091690-2.jpg",
+          "listing": "48091690",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2020",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-110-48545839-1",
+          "local": "/media/genuine/gn-110-48545839-1.jpg",
+          "listing": "48545839",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2021",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-110-48545839-2",
+          "local": "/media/genuine/gn-110-48545839-2.jpg",
+          "listing": "48545839",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2021",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Royal Oak 15510ST": {
+      "rank": 117,
+      "ref": "15510ST",
+      "dial": "Green",
+      "photos": [
+        {
+          "id": "gn-117-47508392-1",
+          "local": "/media/genuine/gn-117-47508392-1.jpg",
+          "listing": "47508392",
+          "dial": "Green",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-117-47508392-2",
+          "local": "/media/genuine/gn-117-47508392-2.jpg",
+          "listing": "47508392",
+          "dial": "Green",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Aquanaut 5168G 42mm Blue & Green": {
+      "rank": 118,
+      "ref": "5168G",
+      "dial": "Green",
+      "photos": [
+        {
+          "id": "gn-118-46209303-1",
+          "local": "/media/genuine/gn-118-46209303-1.jpg",
+          "listing": "46209303",
+          "dial": "Green",
+          "caseMaterial": "White gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-118-46209303-2",
+          "local": "/media/genuine/gn-118-46209303-2.jpg",
+          "listing": "46209303",
+          "dial": "Green",
+          "caseMaterial": "White gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-118-46875859-1",
+          "local": "/media/genuine/gn-118-46875859-1.jpg",
+          "listing": "46875859",
+          "dial": "Green",
+          "caseMaterial": "White gold",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-118-46875859-2",
+          "local": "/media/genuine/gn-118-46875859-2.jpg",
+          "listing": "46875859",
+          "dial": "Green",
+          "caseMaterial": "White gold",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-118-47444358-1",
+          "local": "/media/genuine/gn-118-47444358-1.jpg",
+          "listing": "47444358",
+          "dial": "Green",
+          "caseMaterial": "White gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-118-47444358-2",
+          "local": "/media/genuine/gn-118-47444358-2.jpg",
+          "listing": "47444358",
+          "dial": "Green",
+          "caseMaterial": "White gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Sky-Dweller 326934 Steel": {
+      "rank": 112,
+      "ref": "326934",
+      "dial": "White",
+      "photos": [
+        {
+          "id": "gn-112-47641134-1",
+          "local": "/media/genuine/gn-112-47641134-1.jpg",
+          "listing": "47641134",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2018 (Approximation)",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-112-47641134-2",
+          "local": "/media/genuine/gn-112-47641134-2.jpg",
+          "listing": "47641134",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2018 (Approximation)",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-112-49092335-1",
+          "local": "/media/genuine/gn-112-49092335-1.jpg",
+          "listing": "49092335",
+          "dial": "White",
+          "caseMaterial": "Gold/Steel",
+          "year": "2022",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-112-49092335-2",
+          "local": "/media/genuine/gn-112-49092335-2.jpg",
+          "listing": "49092335",
+          "dial": "White",
+          "caseMaterial": "Gold/Steel",
+          "year": "2022",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-112-49050369-1",
+          "local": "/media/genuine/gn-112-49050369-1.jpg",
+          "listing": "49050369",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2021 (Approximation)",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-112-49050369-2",
+          "local": "/media/genuine/gn-112-49050369-2.jpg",
+          "listing": "49050369",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2021 (Approximation)",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-112-49060176-1",
+          "local": "/media/genuine/gn-112-49060176-1.jpg",
+          "listing": "49060176",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-112-49060176-2",
+          "local": "/media/genuine/gn-112-49060176-2.jpg",
+          "listing": "49060176",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "RM 055 Bubba Watson (RM055)": {
+      "rank": 122,
+      "ref": "RM055",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": [
+        {
+          "id": "gn-122-46000990-1",
+          "local": "/media/genuine/gn-122-46000990-1.jpg",
+          "listing": "46000990",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "Used Good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-122-46000990-2",
+          "local": "/media/genuine/gn-122-46000990-2.jpg",
+          "listing": "46000990",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "Used Good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-122-18630952-1",
+          "local": "/media/genuine/gn-122-18630952-1.jpg",
+          "listing": "18630952",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-122-18630952-2",
+          "local": "/media/genuine/gn-122-18630952-2.jpg",
+          "listing": "18630952",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-122-48404381-1",
+          "local": "/media/genuine/gn-122-48404381-1.jpg",
+          "listing": "48404381",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-122-48404381-2",
+          "local": "/media/genuine/gn-122-48404381-2.jpg",
+          "listing": "48404381",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-122-46717284-1",
+          "local": "/media/genuine/gn-122-46717284-1.jpg",
+          "listing": "46717284",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-122-46717284-2",
+          "local": "/media/genuine/gn-122-46717284-2.jpg",
+          "listing": "46717284",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        }
+      ]
+    },
+    "Carrera Chronograph 39 'Glassbox'": {
+      "rank": 114,
+      "ref": "CBS22",
+      "dial": [
+        "Silver",
+        "White"
+      ],
+      "photos": [
+        {
+          "id": "gn-114-49053951-1",
+          "local": "/media/genuine/gn-114-49053951-1.jpg",
+          "listing": "49053951",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "New",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-114-49053951-2",
+          "local": "/media/genuine/gn-114-49053951-2.jpg",
+          "listing": "49053951",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "New",
+          "review": "recusada"
+        }
+      ]
+    },
+    "RM 11-03 Flyback Chronograph": {
+      "rank": 106,
+      "ref": "RM11-03",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": [
+        {
+          "id": "gn-106-46901075-1",
+          "local": "/media/genuine/gn-106-46901075-1.jpg",
+          "listing": "46901075",
+          "dial": "Skeletonized",
+          "caseMaterial": "Rose gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-106-46901075-2",
+          "local": "/media/genuine/gn-106-46901075-2.jpg",
+          "listing": "46901075",
+          "dial": "Skeletonized",
+          "caseMaterial": "Rose gold",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-106-47088303-1",
+          "local": "/media/genuine/gn-106-47088303-1.jpg",
+          "listing": "47088303",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-106-47088303-2",
+          "local": "/media/genuine/gn-106-47088303-2.jpg",
+          "listing": "47088303",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-106-34526538-1",
+          "local": "/media/genuine/gn-106-34526538-1.jpg",
+          "listing": "34526538",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "",
+          "review": "ok"
+        },
+        {
+          "id": "gn-106-34526538-2",
+          "local": "/media/genuine/gn-106-34526538-2.jpg",
+          "listing": "34526538",
+          "dial": "Skeletonized",
+          "caseMaterial": "Ceramic",
+          "year": "Unknown",
+          "condition": "",
+          "review": "ok"
+        }
+      ]
+    },
+    "RM 035 Rafael Nadal (RM035-01)": {
+      "rank": 129,
+      "ref": "RM35-01",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": [
+        {
+          "id": "gn-129-42256026-1",
+          "local": "/media/genuine/gn-129-42256026-1.jpg",
+          "listing": "42256026",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2014 (Approximation)",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-129-42256026-2",
+          "local": "/media/genuine/gn-129-42256026-2.jpg",
+          "listing": "42256026",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2014 (Approximation)",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-129-38609100-1",
+          "local": "/media/genuine/gn-129-38609100-1.jpg",
+          "listing": "38609100",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2014",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-129-38609100-2",
+          "local": "/media/genuine/gn-129-38609100-2.jpg",
+          "listing": "38609100",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2014",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-129-48027694-1",
+          "local": "/media/genuine/gn-129-48027694-1.jpg",
+          "listing": "48027694",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2016",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-129-48027694-2",
+          "local": "/media/genuine/gn-129-48027694-2.jpg",
+          "listing": "48027694",
+          "dial": "Skeletonized",
+          "caseMaterial": "Carbon",
+          "year": "2016",
+          "condition": "Like",
+          "review": "ok"
+        }
+      ]
+    },
+    "RM 011 Felipe Massa Flyback Chrono": {
+      "rank": 116,
+      "ref": "RM011",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": [
+        {
+          "id": "gn-116-46342194-1",
+          "local": "/media/genuine/gn-116-46342194-1.jpg",
+          "listing": "46342194",
+          "dial": "Skeletonized",
+          "caseMaterial": "Rose gold",
+          "year": "2011",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-116-46342194-2",
+          "local": "/media/genuine/gn-116-46342194-2.jpg",
+          "listing": "46342194",
+          "dial": "Skeletonized",
+          "caseMaterial": "Rose gold",
+          "year": "2011",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Minute Repeater Tourbillon Perpetual Calendar 5207P": {
+      "rank": 105,
+      "ref": "5207P",
+      "dial": [
+        "Salmon",
+        "Pink"
+      ],
+      "photos": [
+        {
+          "id": "gn-105-46766976-1",
+          "local": "/media/genuine/gn-105-46766976-1.jpg",
+          "listing": "46766976",
+          "dial": "Pink",
+          "caseMaterial": "Platinum",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-105-46766976-2",
+          "local": "/media/genuine/gn-105-46766976-2.jpg",
+          "listing": "46766976",
+          "dial": "Pink",
+          "caseMaterial": "Platinum",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        }
+      ]
+    },
+    "RM 027 Tourbillon Rafael Nadal": {
+      "rank": 131,
+      "ref": "RM027",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": []
+    },
+    "RM 052 Tourbillon Skull": {
+      "rank": 133,
+      "ref": "RM052",
+      "dial": [
+        "Skeletonized",
+        "Transparent"
+      ],
+      "photos": []
+    },
+    "Land-Dweller 40 127334 (White Rolesor)": {
+      "rank": 135,
+      "ref": "127334",
+      "dial": "White",
+      "photos": [
+        {
+          "id": "gn-135-48945474-1",
+          "local": "/media/genuine/gn-135-48945474-1.jpg",
+          "listing": "48945474",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-135-48945474-2",
+          "local": "/media/genuine/gn-135-48945474-2.jpg",
+          "listing": "48945474",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-135-48835161-1",
+          "local": "/media/genuine/gn-135-48835161-1.jpg",
+          "listing": "48835161",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-135-48835161-2",
+          "local": "/media/genuine/gn-135-48835161-2.jpg",
+          "listing": "48835161",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-135-49093139-1",
+          "local": "/media/genuine/gn-135-49093139-1.jpg",
+          "listing": "49093139",
+          "dial": "White",
+          "caseMaterial": "Gold/Steel",
+          "year": "2026",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-135-49093139-2",
+          "local": "/media/genuine/gn-135-49093139-2.jpg",
+          "listing": "49093139",
+          "dial": "White",
+          "caseMaterial": "Gold/Steel",
+          "year": "2026",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-135-49082931-1",
+          "local": "/media/genuine/gn-135-49082931-1.jpg",
+          "listing": "49082931",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-135-49082931-2",
+          "local": "/media/genuine/gn-135-49082931-2.jpg",
+          "listing": "49082931",
+          "dial": "White",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "ok"
+        }
+      ]
+    },
+    "Cubitus 5822P (Fase da Lua, Platina)": {
+      "rank": 136,
+      "ref": "5822P",
+      "dial": "Blue",
+      "photos": [
+        {
+          "id": "gn-136-47684179-1",
+          "local": "/media/genuine/gn-136-47684179-1.jpg",
+          "listing": "47684179",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-136-47684179-2",
+          "local": "/media/genuine/gn-136-47684179-2.jpg",
+          "listing": "47684179",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-136-47660985-1",
+          "local": "/media/genuine/gn-136-47660985-1.jpg",
+          "listing": "47660985",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "Unknown",
+          "condition": "Used Good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-136-47660985-2",
+          "local": "/media/genuine/gn-136-47660985-2.jpg",
+          "listing": "47660985",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "Unknown",
+          "condition": "Used Good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-136-47088306-1",
+          "local": "/media/genuine/gn-136-47088306-1.jpg",
+          "listing": "47088306",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-136-47088306-2",
+          "local": "/media/genuine/gn-136-47088306-2.jpg",
+          "listing": "47088306",
+          "dial": "Blue",
+          "caseMaterial": "Gold/Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-136-44673583-1",
+          "local": "/media/genuine/gn-136-44673583-1.jpg",
+          "listing": "44673583",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-136-44673583-2",
+          "local": "/media/genuine/gn-136-44673583-2.jpg",
+          "listing": "44673583",
+          "dial": "Blue",
+          "caseMaterial": "Platinum",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "recusada"
+        }
+      ]
+    },
+    "Datejust 41 Fluted Bezel (ref. exata não confirmada, família 126334)": {
+      "rank": 138,
+      "ref": "126334",
+      "dial": [
+        "Grey",
+        "Slate"
+      ],
+      "photos": [
+        {
+          "id": "gn-138-47886691-1",
+          "local": "/media/genuine/gn-138-47886691-1.jpg",
+          "listing": "47886691",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-138-47886691-2",
+          "local": "/media/genuine/gn-138-47886691-2.jpg",
+          "listing": "47886691",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-138-47677527-1",
+          "local": "/media/genuine/gn-138-47677527-1.jpg",
+          "listing": "47677527",
+          "dial": "Grey",
+          "caseMaterial": "Silver",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-138-47677527-2",
+          "local": "/media/genuine/gn-138-47677527-2.jpg",
+          "listing": "47677527",
+          "dial": "Grey",
+          "caseMaterial": "Silver",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        }
+      ]
+    },
+    "Daytona 126503 (Rolesor Amarelo)": {
+      "rank": 146,
+      "ref": "126503",
+      "dial": "White",
+      "photos": [
+        {
+          "id": "gn-146-47763077-1",
+          "local": "/media/genuine/gn-146-47763077-1.jpg",
+          "listing": "47763077",
+          "dial": "White",
+          "caseMaterial": "Gold/Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-146-47763077-2",
+          "local": "/media/genuine/gn-146-47763077-2.jpg",
+          "listing": "47763077",
+          "dial": "White",
+          "caseMaterial": "Gold/Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "ok"
+        }
+      ]
+    },
+    "Royal Oak Perpetual Calendar 26574": {
+      "rank": 149,
+      "ref": "26574ST",
+      "dial": "Blue",
+      "photos": [
+        {
+          "id": "gn-149-47000334-1",
+          "local": "/media/genuine/gn-149-47000334-1.jpg",
+          "listing": "47000334",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-149-47000334-2",
+          "local": "/media/genuine/gn-149-47000334-2.jpg",
+          "listing": "47000334",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-149-43299992-1",
+          "local": "/media/genuine/gn-149-43299992-1.jpg",
+          "listing": "43299992",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-149-43299992-2",
+          "local": "/media/genuine/gn-149-43299992-2.jpg",
+          "listing": "43299992",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2022",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-149-14357478-1",
+          "local": "/media/genuine/gn-149-14357478-1.jpg",
+          "listing": "14357478",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-149-14357478-2",
+          "local": "/media/genuine/gn-149-14357478-2.jpg",
+          "listing": "14357478",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Aqua Terra Worldtimer": {
+      "rank": 42,
+      "ref": "220.12.43.22.03.002",
+      "dial": "Blue",
+      "photos": [
+        {
+          "id": "gn-42-48066354-1",
+          "local": "/media/genuine/gn-42-48066354-1.jpg",
+          "listing": "48066354",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-42-48066354-2",
+          "local": "/media/genuine/gn-42-48066354-2.jpg",
+          "listing": "48066354",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-42-48678060-1",
+          "local": "/media/genuine/gn-42-48678060-1.jpg",
+          "listing": "48678060",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2025",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-42-48678060-2",
+          "local": "/media/genuine/gn-42-48678060-2.jpg",
+          "listing": "48678060",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2025",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-42-48082015-1",
+          "local": "/media/genuine/gn-42-48082015-1.jpg",
+          "listing": "48082015",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-42-48082015-2",
+          "local": "/media/genuine/gn-42-48082015-2.jpg",
+          "listing": "48082015",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-42-48648408-1",
+          "local": "/media/genuine/gn-42-48648408-1.jpg",
+          "listing": "48648408",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2025",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-42-48648408-2",
+          "local": "/media/genuine/gn-42-48648408-2.jpg",
+          "listing": "48648408",
+          "dial": "Blue",
+          "caseMaterial": "Steel",
+          "year": "2025",
+          "condition": "Like",
+          "review": "ok"
+        }
+      ]
+    },
+    "Datejust 41 Rhodium": {
+      "rank": 48,
+      "ref": "126334",
+      "dial": [
+        "Grey",
+        "Rhodium"
+      ],
+      "photos": [
+        {
+          "id": "gn-48-47886691-1",
+          "local": "/media/genuine/gn-48-47886691-1.jpg",
+          "listing": "47886691",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-48-47886691-2",
+          "local": "/media/genuine/gn-48-47886691-2.jpg",
+          "listing": "47886691",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-48-47677527-1",
+          "local": "/media/genuine/gn-48-47677527-1.jpg",
+          "listing": "47677527",
+          "dial": "Grey",
+          "caseMaterial": "Silver",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-48-47677527-2",
+          "local": "/media/genuine/gn-48-47677527-2.jpg",
+          "listing": "47677527",
+          "dial": "Grey",
+          "caseMaterial": "Silver",
+          "year": "Unknown",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-48-47176163-1",
+          "local": "/media/genuine/gn-48-47176163-1.jpg",
+          "listing": "47176163",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2022 (Approximation)",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-48-47176163-2",
+          "local": "/media/genuine/gn-48-47176163-2.jpg",
+          "listing": "47176163",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2022 (Approximation)",
+          "condition": "Used Very good",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-48-12589642-1",
+          "local": "/media/genuine/gn-48-12589642-1.jpg",
+          "listing": "12589642",
+          "dial": "Grey",
+          "caseMaterial": "Gold/Steel",
+          "year": "2025",
+          "condition": "Like",
+          "review": "recusada"
+        },
+        {
+          "id": "gn-48-12589642-2",
+          "local": "/media/genuine/gn-48-12589642-2.jpg",
+          "listing": "12589642",
+          "dial": "Grey",
+          "caseMaterial": "Gold/Steel",
+          "year": "2025",
+          "condition": "Like",
+          "review": "recusada"
+        }
+      ]
+    },
+    "Datejust 36 Wimbledon": {
+      "rank": 49,
+      "ref": "126234",
+      "dial": [
+        "Grey",
+        "Slate"
+      ],
+      "photos": [
+        {
+          "id": "gn-49-44976437-1",
+          "local": "/media/genuine/gn-49-44976437-1.jpg",
+          "listing": "44976437",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2023",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-49-44976437-2",
+          "local": "/media/genuine/gn-49-44976437-2.jpg",
+          "listing": "44976437",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2023",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-49-34994895-1",
+          "local": "/media/genuine/gn-49-34994895-1.jpg",
+          "listing": "34994895",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "New",
+          "review": "ok"
+        },
+        {
+          "id": "gn-49-34994895-2",
+          "local": "/media/genuine/gn-49-34994895-2.jpg",
+          "listing": "34994895",
+          "dial": "Grey",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "New",
+          "review": "ok"
+        }
+      ]
+    },
+    "Santos Dumont (Rose Gold)": {
+      "rank": 82,
+      "ref": "WGSA0021",
+      "dial": "Silver",
+      "photos": [
+        {
+          "id": "gn-82-48987450-1",
+          "local": "/media/genuine/gn-82-48987450-1.jpg",
+          "listing": "48987450",
+          "dial": "Silver",
+          "caseMaterial": "Rose gold",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-82-48987450-2",
+          "local": "/media/genuine/gn-82-48987450-2.jpg",
+          "listing": "48987450",
+          "dial": "Silver",
+          "caseMaterial": "Rose gold",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-82-47957452-1",
+          "local": "/media/genuine/gn-82-47957452-1.jpg",
+          "listing": "47957452",
+          "dial": "Silver",
+          "caseMaterial": "Rose gold",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-82-47957452-2",
+          "local": "/media/genuine/gn-82-47957452-2.jpg",
+          "listing": "47957452",
+          "dial": "Silver",
+          "caseMaterial": "Rose gold",
+          "year": "2022",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-82-45860675-1",
+          "local": "/media/genuine/gn-82-45860675-1.jpg",
+          "listing": "45860675",
+          "dial": "Silver",
+          "caseMaterial": "Rose gold",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-82-45860675-2",
+          "local": "/media/genuine/gn-82-45860675-2.jpg",
+          "listing": "45860675",
+          "dial": "Silver",
+          "caseMaterial": "Rose gold",
+          "year": "2019",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
+    },
+    "Santos-Dumont Large": {
+      "rank": 134,
+      "ref": "WSSA0032",
+      "dial": "Silver",
+      "photos": [
+        {
+          "id": "gn-134-46223862-1",
+          "local": "/media/genuine/gn-134-46223862-1.jpg",
+          "listing": "46223862",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2025",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-134-46223862-2",
+          "local": "/media/genuine/gn-134-46223862-2.jpg",
+          "listing": "46223862",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2025",
+          "condition": "Like",
+          "review": "ok"
+        },
+        {
+          "id": "gn-134-48830574-1",
+          "local": "/media/genuine/gn-134-48830574-1.jpg",
+          "listing": "48830574",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-134-48830574-2",
+          "local": "/media/genuine/gn-134-48830574-2.jpg",
+          "listing": "48830574",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2024",
+          "condition": "Used Good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-134-49064189-1",
+          "local": "/media/genuine/gn-134-49064189-1.jpg",
+          "listing": "49064189",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Used Very good",
+          "review": "ok"
+        },
+        {
+          "id": "gn-134-49064189-2",
+          "local": "/media/genuine/gn-134-49064189-2.jpg",
+          "listing": "49064189",
+          "dial": "Silver",
+          "caseMaterial": "Steel",
+          "year": "2026",
+          "condition": "Used Very good",
+          "review": "ok"
+        }
+      ]
     }
   },
-  "updatedAt": "2026-10-08"
+  "updatedAt": "2026-10-09"
 }

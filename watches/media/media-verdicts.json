@@ -162,7 +162,35 @@
       "rank": 48,
       "verdict": "confirmado",
       "bestImageId": "48-superclonewatches-gqjhk7",
-      "reasoning": "Rolex Datejust 41 mostrador rodio/cinza com indices de diamante, bezel canelado e jubilee. Corresponde ao modelo."
+      "reasoning": "Rolex Datejust 41 mostrador rodio/cinza com indices de diamante, bezel canelado e jubilee. Corresponde ao modelo.",
+      "wrongIds": [
+        "st-48-ul-145323-1",
+        "st-48-ul-145323-2",
+        "st-48-ul-77275-1",
+        "st-48-tk-201778-1",
+        "st-48-tk-201778-2",
+        "st-48-tk-201778-3",
+        "st-48-tk-201778-4",
+        "st-48-tk-200752-1",
+        "st-48-tk-200752-2",
+        "st-48-tk-200752-3",
+        "st-48-tk-200752-4",
+        "sv-48-vsf-12018"
+      ],
+      "wrongNotes": {
+        "st-48-ul-145323-1": "errada: mostrador preto e bracelete Oyster",
+        "st-48-ul-145323-2": "errada: mostrador preto e bracelete Oyster",
+        "st-48-ul-77275-1": "errada: mostrador azul-gelo com numerais arábicos",
+        "st-48-tk-201778-1": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "st-48-tk-201778-2": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "st-48-tk-201778-3": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "st-48-tk-201778-4": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "st-48-tk-200752-1": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "st-48-tk-200752-2": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "st-48-tk-200752-3": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "st-48-tk-200752-4": "errada: mostrador ródio com índices de bastão, sem diamantes",
+        "sv-48-vsf-12018": "errada: mostrador verde"
+      }
     },
     "Datejust 36 Wimbledon": {
       "rank": 49,
@@ -173,13 +201,39 @@
         "49-superclonewatches-1irm0s2",
         "49-superclonewatches-187zjp5",
         "49-superclonewatches-g0xqx",
-        "49-superclonewatches-1hryls2"
+        "49-superclonewatches-1hryls2",
+        "st-49-ul-188249-1",
+        "st-49-ul-188249-2",
+        "st-49-ul-188249-3",
+        "st-49-ul-147109-1",
+        "st-49-tk-193630-1",
+        "st-49-tk-193630-2",
+        "st-49-tk-193630-3",
+        "st-49-tk-193630-4",
+        "st-49-tk-193612-1",
+        "st-49-tk-193612-2",
+        "st-49-tk-193612-3",
+        "st-49-tk-193612-4",
+        "sv-49-py-30947"
       ],
       "wrongNotes": {
         "49-superclonewatches-1irm0s2": "errada: bicolor ouro rosé",
         "49-superclonewatches-187zjp5": "errada: bicolor ouro amarelo",
         "49-superclonewatches-g0xqx": "errada: bicolor ouro rosé",
-        "49-superclonewatches-1hryls2": "errada: bicolor ouro rosé"
+        "49-superclonewatches-1hryls2": "errada: bicolor ouro rosé",
+        "st-49-ul-188249-1": "errada: mostrador azul com romanos; não é o ardósia Wimbledon",
+        "st-49-ul-188249-2": "errada: só o mostrador, azul com romanos; não é o Wimbledon",
+        "st-49-ul-188249-3": "lixo: só a luneta solta, sem o relógio",
+        "st-49-ul-147109-1": "errada: mostrador verde menta com índices de bastão",
+        "st-49-tk-193630-1": "errada: mostrador verde degradê e bracelete Oyster",
+        "st-49-tk-193630-2": "errada: mostrador verde degradê e bracelete Oyster",
+        "st-49-tk-193630-3": "errada: mostrador verde degradê e bracelete Oyster",
+        "st-49-tk-193630-4": "errada: mostrador verde degradê e bracelete Oyster",
+        "st-49-tk-193612-1": "errada: mostrador verde degradê; não é o ardósia Wimbledon",
+        "st-49-tk-193612-2": "errada: mostrador verde degradê; não é o ardósia Wimbledon",
+        "st-49-tk-193612-3": "errada: mostrador verde degradê; não é o ardósia Wimbledon",
+        "st-49-tk-193612-4": "errada: mostrador verde degradê; não é o ardósia Wimbledon",
+        "sv-49-py-30947": "errada: mostrador verde e bracelete Oyster"
       },
       "galleryAuditedAt": "2026-10-08"
     },
@@ -1529,13 +1583,15 @@
         "cl-4-1",
         "pt-4-3",
         "sv-4-vsf-17422",
-        "sv-4-vsf-15195"
+        "sv-4-vsf-15195",
+        "sv-4-py-22048"
       ],
       "wrongNotes": {
         "cl-4-1": "errada: Marina preto de cerâmica com data, outra referência",
         "pt-4-3": "lixo: foto só de lume no escuro",
         "sv-4-vsf-17422": "errada: mostrador parece esverdeado e com mais inscrições do que o PAM111; variante ince",
-        "sv-4-vsf-15195": "errada: caixa de ouro rosa com mostrador azul e data; o modelo é aço, mostrador preto, s"
+        "sv-4-vsf-15195": "errada: caixa de ouro rosa com mostrador azul e data; o modelo é aço, mostrador preto, s",
+        "sv-4-py-22048": "errada: caixa dourada e mostrador com data e ponteiro azul (GMT); não é o Luminor Marina"
       },
       "galleryAuditedAt": "2026-10-08"
     },
@@ -1548,13 +1604,15 @@
         "pt-13-3",
         "st-13-ul-140466-2",
         "sv-13-vsf-17068",
-        "sv-13-py-5195"
+        "sv-13-py-5195",
+        "sv-13-py-5194"
       ],
       "wrongNotes": {
         "pt-13-3": "lixo: apenas lume no escuro",
         "st-13-ul-140466-2": "lixo: só lateral da pulseira",
         "sv-13-vsf-17068": "errada: luneta cerâmica preta, pulseira de aço e mostrador preto; não é o Le Mans",
-        "sv-13-py-5195": "errada: Daytona de aço com pulseira Oyster e mostrador preto; não é o Le Mans de ouro br"
+        "sv-13-py-5195": "errada: Daytona de aço com pulseira Oyster e mostrador preto; não é o Le Mans de ouro br",
+        "sv-13-py-5194": "errada: Daytona de aço com bracelete de metal e mostrador preto com subdiais brancos; nã"
       },
       "galleryAuditedAt": "2026-10-08"
     },
@@ -1699,7 +1757,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-10-08T22:36:31.788Z"
+      "reviewedAt": "2026-10-09T15:27:22.330Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -1866,19 +1924,6 @@
         "st-86-ul-144800-2": "errada: algarismos arábicos (orientais), sem índices baguete de diamante"
       },
       "galleryAuditedAt": "2026-10-08"
-    },
-    "Navitimer B01 43mm": {
-      "rank": 93,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Navitimer B01 cronógrafo 43mm, mas todas são infográficos da edição especial TWA (AB0121), sem foto limpa do modelo padrão",
-      "candidateIds": [
-        "bb-93-4",
-        "bb-93-3",
-        "bb-93-2",
-        "bb-93-1"
-      ],
-      "reviewedAt": "2026-10-08T22:36:31.788Z"
     },
     "Black Bay 58 79030N (39mm)": {
       "rank": 104,
@@ -3349,7 +3394,8 @@
         "27-superclonewatches-1bdhcxh",
         "27-superclonewatches-bfs6ud",
         "sv-27-vsf-12136",
-        "sv-27-vsf-12074"
+        "sv-27-vsf-12074",
+        "sv-27-py-5965"
       ],
       "wrongNotes": {
         "27-superluxuryreps-13ni9oo": "errada: mostrador azul numerais romanos",
@@ -3362,7 +3408,8 @@
         "27-superclonewatches-1bdhcxh": "errada: mostrador azul numerais romanos",
         "27-superclonewatches-bfs6ud": "errada: mostrador azul com diamantes",
         "sv-27-vsf-12136": "errada: mostrador azul liso raiado; não se vê o padrão Motif",
-        "sv-27-vsf-12074": "errada: mostrador cinza ardósia com romanos (Wimbledon), não azul Motif"
+        "sv-27-vsf-12074": "errada: mostrador cinza ardósia com romanos (Wimbledon), não azul Motif",
+        "sv-27-py-5965": "errada: mostrador preto com índices de diamante; não é o azul Motif"
       },
       "galleryAuditedAt": "2026-10-08"
     },
@@ -3879,19 +3926,6 @@
       ],
       "reviewedAt": "2026-10-08T19:27:13.499Z"
     },
-    "GMT-Master II 126711CHNR (Root Beer)": {
-      "rank": 30,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
-      "candidateIds": [
-        "30-superclonewatches-16pf706",
-        "30-superclonewatches-134h2bh",
-        "30-superclonewatches-1tbxoft",
-        "30-superluxuryreps-1peyjoj"
-      ],
-      "reviewedAt": "2026-10-08T22:36:31.788Z"
-    },
     "Day-Date 40 Olive Green": {
       "rank": 59,
       "verdict": "confirmado",
@@ -3918,18 +3952,44 @@
       ],
       "reviewedAt": "2026-10-08T22:35:56.213Z"
     },
+    "GMT-Master II 126711CHNR (Root Beer)": {
+      "rank": 30,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "30-superclonewatches-16pf706",
+        "30-superclonewatches-134h2bh",
+        "30-superclonewatches-1tbxoft",
+        "30-superluxuryreps-1peyjoj"
+      ],
+      "reviewedAt": "2026-10-09T15:27:22.330Z"
+    },
+    "Navitimer B01 43mm": {
+      "rank": 93,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Navitimer B01 sim, mas todas são infográficos/colagens da edição especial TWA (creme/vermelho), não foto de produto padrão",
+      "candidateIds": [
+        "bb-93-4",
+        "bb-93-3",
+        "bb-93-2",
+        "bb-93-1"
+      ],
+      "reviewedAt": "2026-10-09T15:27:22.330Z"
+    },
     "Royal Oak 15500ST": {
       "rank": 110,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Nenhum arquivo de imagem existe no disco. O título cita Royal Oak de cerâmica preta, não o 15500ST de aço",
+      "reasoning": "Nenhuma das 4 imagens existe no disco; títulos indicam versão em cerâmica preta, não aço ST",
       "candidateIds": [
         "st-110-tk-200255-4",
         "st-110-tk-200255-3",
         "st-110-tk-200255-2",
         "st-110-tk-200255-1"
       ],
-      "reviewedAt": "2026-10-08T22:36:31.788Z"
+      "reviewedAt": "2026-10-09T15:27:22.330Z"
     },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
@@ -3942,7 +4002,7 @@
         "f-119-a5f3df7b",
         "f-119-40f4ed03"
       ],
-      "reviewedAt": "2026-10-08T22:36:31.788Z"
+      "reviewedAt": "2026-10-09T15:27:22.330Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -3955,7 +4015,7 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-10-08T22:35:56.213Z"
+      "reviewedAt": "2026-10-09T15:27:22.330Z"
     }
   },
   "galleryAudit": {
