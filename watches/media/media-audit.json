@@ -1,34 +1,22 @@
 {
-  "generatedAt": "2026-10-09T15:27:22.544Z",
-  "totalImages": 2333,
+  "generatedAt": "2026-10-09T15:57:16.017Z",
+  "totalImages": 2367,
   "summary": {
     "models": 150,
-    "verified": 137,
-    "strong": 10,
-    "weak": 2,
+    "verified": 138,
+    "strong": 11,
+    "weak": 1,
     "rejected": 0,
-    "missing": 1,
-    "conflictsDiscarded": 365,
-    "coveragePct": 98
+    "missing": 0,
+    "conflictsDiscarded": 389,
+    "coveragePct": 99
   },
   "backlog": [
-    {
-      "rank": 93,
-      "model": "Navitimer B01 43mm",
-      "brand": "Breitling",
-      "state": "fraco"
-    },
     {
       "rank": 119,
       "model": "Seamaster Planet Ocean 600M",
       "brand": "Omega",
       "state": "fraco"
-    },
-    {
-      "rank": 150,
-      "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
-      "brand": "Rolex",
-      "state": "sem-imagem"
     }
   ]
 }

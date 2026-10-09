@@ -1,0 +1,1 @@
+import{r as m,j as s}from"./index-Y-YpoWov.js";function l({src:e,brand:a="",alt:r="",eager:t=!1}){const[o,n]=m.useState(!1);return!e||o?s.jsx("span",{className:"thumb thumb--empty","aria-label":r,role:"img",children:a.slice(0,1).toUpperCase()||"?"}):s.jsx("img",{className:"thumb",src:e,alt:r,loading:t?"eager":"lazy",decoding:"async",onError:()=>n(!0)})}export{l as T};

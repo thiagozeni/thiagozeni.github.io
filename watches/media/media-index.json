@@ -71018,43 +71018,6 @@
     "collectedAt": "2026-10-08T22:41:25.789Z"
   },
   {
-    "id": "hunt-seamaster-planet-ocean-600m-1",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
-    "source": "thevsfactory.com",
-    "sourceDomain": "thevsfactory.com",
-    "image": "https://thevsfactory.com/wp-content/uploads/2026/06/i1694185438_3406_0-600x600.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "The page title names VS Factory, Planet Ocean 600M 43.5mm, Black/Orange, ref. 215.32.44.21.01.001 and the DD8900 movement, matching the batch's 8900. The image URL was fetched and is image/jpeg (64.7KB). The photo itself wasn't visually checked."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-09T15:26:41.332Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
     "id": "st-48-ul-145323-1",
     "model": "Datejust 41 Rhodium",
     "brand": "Rolex",
@@ -71889,5 +71852,174 @@
       "vsf"
     ],
     "collectedAt": "2026-10-09T15:30:12.620Z"
+  },
+  {
+    "id": "hunt-daytona-126502-rolesium-mostrador-esmalte-branco-luneta-cerachrom-antracite-1",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "QF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite) — menwatchesreview.com",
+    "source": "menwatchesreview.com",
+    "sourceDomain": "menwatchesreview.com",
+    "image": "https://www.menwatchesreview.com/wp-content/uploads/2026/09/QF-126502.jpg",
+    "localImage": "/media/img/hunt-daytona-126502-rolesium-mostrador-esmalte-branco-luneta-cerachrom-antracite-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Rolex",
+      "fabrica:QF",
+      "caca-agentica",
+      "Na página de review, a imagem tem alt e legenda 'QF 126502'. A mesma página traz CBD, VS e o genuíno em imagens separadas e rotuladas. O 126502 tem uma única variante (esmalte branco, luneta antracite). Validado como image/jpeg (220KB)."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-09T15:56:02.238Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-1",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — wristwatchspot.com",
+    "source": "wristwatchspot.com",
+    "sourceDomain": "wristwatchspot.com",
+    "image": "https://www.wristwatchspot.com/wp-content/uploads/2019/01/VS-Factory-Replica-Omega-Planet-Ocean-600m.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Alt 'VS Factory Replica Omega Planet Ocean 600m'. A matéria é sobre o VSF PO 600M de 43,5mm (mostrador preto com detalhes laranja, luneta cerâmica, clone 8900). Validado como image/jpeg."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-09T15:56:03.449Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-2",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — wristwatchspot.com",
+    "source": "wristwatchspot.com",
+    "sourceDomain": "wristwatchspot.com",
+    "image": "https://www.wristwatchspot.com/wp-content/uploads/2019/01/Replica-Omega-Planet-Ocean-600m-Orange.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Mesma matéria VSF (preto/laranja, 43,5mm, 8900). Alt 'Replica Omega Planet Ocean 600m Orange'. Validado como image/jpeg."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-09T15:56:03.595Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "sv-4-kt-3223",
+    "model": "Luminor Marina PAM111",
+    "brand": "Panerai",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "PANERAI – Luminor Marina PAM1114 44mm RG/LE Blue VSF P9010 — vídeo de produto (kevintoptime.com)",
+    "source": "kevintoptime.com",
+    "sourceDomain": "kevintoptime.com",
+    "sourceUrl": "https://kevintoptime.com/product/panerai-luminor-marina-pam1114-44mm-rg-le-blue-vsf-p9010/",
+    "embedUrl": "https://player.vimeo.com/video/1096447149",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2030518280-018bebc396b000ce98cd7ce8d09c0311240498325b965a439c421859e2b891d0-d_295x166?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "kt"
+    ],
+    "collectedAt": "2026-10-09T15:57:54.309Z"
+  },
+  {
+    "id": "sv-49-py-30542",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "Rolex Datejust 126234 Green Ombré Dial Jubilee Bracelet 1:1 Best Replica VSF 36mm — vídeo de produto (pyluxury.com)",
+    "source": "pyluxury.com",
+    "sourceDomain": "pyluxury.com",
+    "sourceUrl": "https://pyluxury.com/product/rolex-datejust-126234-green-ombre-dial-jubilee-bracelet-11-best-replica/",
+    "embedUrl": "https://player.vimeo.com/video/1189426672",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2153935828-12301034a04834660945f487747d0ec890a733927bb537f2cd794b3cb61c763a-d_200x150?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "py"
+    ],
+    "collectedAt": "2026-10-09T15:59:13.546Z"
   }
 ]
