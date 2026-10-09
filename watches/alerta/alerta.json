@@ -23,7 +23,11 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-134300-ul-1.webp",
+        "/media/alerta/al-134300-tk-3.jpg"
+      ]
     },
     {
       "key": "rolex|127336",
@@ -46,7 +50,13 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-127336-lcw-1.jpg",
+        "/media/alerta/al-127336-lcw-2.jpg",
+        "/media/alerta/al-127336-ul-3.jpg",
+        "/media/alerta/al-127336-ul-4.jpg"
+      ]
     },
     {
       "key": "rolex|126729vtnr",
@@ -69,7 +79,12 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126729vtnr-lcw-1.jpg",
+        "/media/alerta/al-126729vtnr-lcw-2.jpg",
+        "/media/alerta/al-126729vtnr-tk-3.jpg"
+      ]
     },
     {
       "key": "rolex|134303",
@@ -93,7 +108,12 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-134303-tk-1.jpg",
+        "/media/alerta/al-134303-vsf-2.jpg",
+        "/media/alerta/al-134303-vsf-3.jpg"
+      ]
     },
     {
       "key": "patekphilippe|71281g001",
@@ -116,7 +136,13 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-7128-1g-001-lcw-1.jpg",
+        "/media/alerta/al-7128-1g-001-lcw-2.jpg",
+        "/media/alerta/al-7128-1g-001-py-3.jpg",
+        "/media/alerta/al-7128-1g-001-py-4.jpg"
+      ]
     },
     {
       "key": "rolex|126003",
@@ -140,7 +166,12 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126003-tk-1.jpg",
+        "/media/alerta/al-126003-py-2.jpg",
+        "/media/alerta/al-126003-py-3.jpg"
+      ]
     },
     {
       "key": "audemarspiguet|15210stooa348kb01",
@@ -160,7 +191,11 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-15210st-oo-a348kb-01-py-1.jpg",
+        "/media/alerta/al-15210st-oo-a348kb-01-py-2.jpg"
+      ]
     },
     {
       "key": "audemarspiguet|15510bcoo1320bc04",
@@ -182,7 +217,8 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": []
     },
     {
       "key": "patekphilippe|58101g001",
@@ -204,7 +240,8 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": []
     },
     {
       "key": "patekphilippe|71281r001",
@@ -224,7 +261,11 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-7128-1r-001-ul-1.webp",
+        "/media/alerta/al-7128-1r-001-ul-2.webp"
+      ]
     },
     {
       "key": "rolex|127234",
@@ -244,7 +285,11 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-127234-py-1.jpg",
+        "/media/alerta/al-127234-py-2.jpg"
+      ]
     },
     {
       "key": "tudor|m2543c1a7nu",
@@ -266,7 +311,11 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-m2543c1a7nu-py-1.jpg",
+        "/media/alerta/al-m2543c1a7nu-py-2.jpg"
+      ]
     },
     {
       "key": "audemarspiguet|15300",
@@ -288,7 +337,11 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-15300-py-1.jpg",
+        "/media/alerta/al-15300-py-2.jpg"
+      ]
     },
     {
       "key": "patekphilippe|5990",
@@ -309,7 +362,8 @@
       "firstSeen": "2026-10-09",
       "lastSignal": "2026-10-09",
       "status": "observacao",
-      "catalogRank": null
+      "catalogRank": null,
+      "photos": []
     }
   ]
 }

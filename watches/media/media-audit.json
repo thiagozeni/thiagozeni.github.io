@@ -1,17 +1,23 @@
 {
-  "generatedAt": "2026-10-09T21:53:53.213Z",
-  "totalImages": 2370,
+  "generatedAt": "2026-10-09T23:55:28.401Z",
+  "totalImages": 2371,
   "summary": {
     "models": 150,
-    "verified": 138,
-    "strong": 11,
+    "verified": 139,
+    "strong": 9,
     "weak": 1,
-    "rejected": 0,
+    "rejected": 1,
     "missing": 0,
     "conflictsDiscarded": 388,
     "coveragePct": 99
   },
   "backlog": [
+    {
+      "rank": 110,
+      "model": "Royal Oak 15500ST",
+      "brand": "Audemars Piguet",
+      "state": "rejeitado"
+    },
     {
       "rank": 119,
       "model": "Seamaster Planet Ocean 600M",

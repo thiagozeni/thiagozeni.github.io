@@ -1411,29 +1411,17 @@
       "galleryAuditedAt": "2026-10-08"
     },
     "Aquanaut 5168G 42mm Blue & Green": {
-      "verdict": "incerto",
-      "bestImageId": null,
-      "factoryResolved": true,
-      "collectedFactory": "DDF",
-      "collectedCount": 3,
-      "reasoning": "Mídia factory-correta (DDF) coletada e validada (3 fotos).",
-      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Patek Philippe; missing-local-file: /media/img/f-118-f1173a77.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z",
-      "wrongIds": [
-        "f-118-f1173a77",
-        "f-118-304fef4c",
-        "st-118-ul-34306-2",
-        "st-118-ul-34306-4",
-        "st-118-ul-2849-3"
+      "rank": 118,
+      "verdict": "confirmado",
+      "bestImageId": "st-118-tk-187837-1",
+      "reasoning": "Patek Aquanaut, mostrador azul em relevo e pulseira azul: bate com o 5168G azul. Nenhuma foto mostra a versão verde.",
+      "candidateIds": [
+        "st-118-tk-187837-4",
+        "st-118-tk-187837-3",
+        "st-118-tk-187837-2",
+        "st-118-tk-187837-1"
       ],
-      "wrongNotes": {
-        "f-118-f1173a77": "lixo: SEM IMAGEM",
-        "f-118-304fef4c": "lixo: SEM IMAGEM",
-        "st-118-ul-34306-2": "lixo: vista lateral fina, sem mostrador",
-        "st-118-ul-34306-4": "lixo: fundo/fecho apenas",
-        "st-118-ul-2849-3": "lixo: fundo/movimento e fecho"
-      },
-      "galleryAuditedAt": "2026-10-08"
+      "reviewedAt": "2026-10-09T23:55:28.219Z"
     },
     "Royal Oak Offshore 26420 Chronograph": {
       "verdict": "incerto",
@@ -1746,7 +1734,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-10-09T21:53:52.956Z"
+      "reviewedAt": "2026-10-09T23:55:28.218Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -3975,20 +3963,20 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-10-09T21:53:52.955Z"
+      "reviewedAt": "2026-10-09T23:55:28.218Z"
     },
     "Royal Oak 15500ST": {
       "rank": 110,
-      "verdict": "incerto",
+      "verdict": "rejeitado",
       "bestImageId": null,
-      "reasoning": "Os 4 arquivos de imagem não existem no disco; título indica cerâmica preta, não ST",
+      "reasoning": "Fotos mostram caixa/pulseira de cerâmica preta, não aço ST; candidata -4 sem arquivo",
       "candidateIds": [
         "st-110-tk-200255-4",
         "st-110-tk-200255-3",
         "st-110-tk-200255-2",
         "st-110-tk-200255-1"
       ],
-      "reviewedAt": "2026-10-09T21:53:52.955Z"
+      "reviewedAt": "2026-10-09T23:54:35.106Z"
     },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
@@ -3996,12 +3984,12 @@
       "bestImageId": null,
       "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Omega",
       "candidateIds": [
-        "hunt-seamaster-planet-ocean-600m-3",
         "hunt-seamaster-planet-ocean-600m-2",
         "hunt-seamaster-planet-ocean-600m-1",
+        "hunt-seamaster-planet-ocean-600m-3",
         "f-119-2e19a199"
       ],
-      "reviewedAt": "2026-10-09T21:53:52.955Z"
+      "reviewedAt": "2026-10-09T23:55:28.218Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -4014,7 +4002,7 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-10-09T21:53:52.955Z"
+      "reviewedAt": "2026-10-09T23:55:28.219Z"
     },
     "Royal Oak 15510ST": {
       "rank": 117,
@@ -4027,7 +4015,7 @@
         "f-117-61214ae0",
         "f-117-0e671be6"
       ],
-      "reviewedAt": "2026-10-09T21:53:52.955Z"
+      "reviewedAt": "2026-10-09T23:55:28.219Z"
     }
   },
   "galleryAudit": {
