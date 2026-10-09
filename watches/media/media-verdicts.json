@@ -1410,19 +1410,6 @@
       },
       "galleryAuditedAt": "2026-10-08"
     },
-    "Royal Oak 15510ST": {
-      "rank": 117,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Audemars Piguet",
-      "candidateIds": [
-        "f-117-40759b26",
-        "f-117-97a57d37",
-        "f-117-61214ae0",
-        "f-117-0e671be6"
-      ],
-      "reviewedAt": "2026-10-09T15:57:15.853Z"
-    },
     "Aquanaut 5168G 42mm Blue & Green": {
       "verdict": "incerto",
       "bestImageId": null,
@@ -1583,7 +1570,8 @@
         "sv-4-vsf-17422",
         "sv-4-vsf-15195",
         "sv-4-py-22048",
-        "sv-4-kt-3223"
+        "sv-4-kt-3223",
+        "sv-4-kt-1438"
       ],
       "wrongNotes": {
         "cl-4-1": "errada: Marina preto de cerâmica com data, outra referência",
@@ -1591,7 +1579,8 @@
         "sv-4-vsf-17422": "errada: mostrador parece esverdeado e com mais inscrições do que o PAM111; variante ince",
         "sv-4-vsf-15195": "errada: caixa de ouro rosa com mostrador azul e data; o modelo é aço, mostrador preto, s",
         "sv-4-py-22048": "errada: caixa dourada e mostrador com data e ponteiro azul (GMT); não é o Luminor Marina",
-        "sv-4-kt-3223": "errada: é o PAM1114 em ouro rosé com mostrador azul e data, não o PAM111 de aço com most"
+        "sv-4-kt-3223": "errada: é o PAM1114 em ouro rosé com mostrador azul e data, não o PAM111 de aço com most",
+        "sv-4-kt-1438": "errada: É o PAM1119 com caixa de carbono e mostrador cinza, não o PAM111 de aço com most"
       },
       "galleryAuditedAt": "2026-10-08"
     },
@@ -1757,7 +1746,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-10-09T15:57:15.852Z"
+      "reviewedAt": "2026-10-09T21:53:52.956Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -3952,19 +3941,6 @@
       ],
       "reviewedAt": "2026-10-08T22:35:56.213Z"
     },
-    "GMT-Master II 126711CHNR (Root Beer)": {
-      "rank": 30,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
-      "candidateIds": [
-        "30-superclonewatches-16pf706",
-        "30-superclonewatches-134h2bh",
-        "30-superclonewatches-1tbxoft",
-        "30-superluxuryreps-1peyjoj"
-      ],
-      "reviewedAt": "2026-10-09T15:57:15.853Z"
-    },
     "Navitimer B01 43mm": {
       "rank": 93,
       "verdict": "confirmado",
@@ -3978,18 +3954,41 @@
       ],
       "reviewedAt": "2026-10-09T15:56:40.055Z"
     },
+    "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)": {
+      "rank": 150,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Daytona branco com luneta preta em aço; não dá para ver Rolesium nem luneta antracite, parece 126500LN.",
+      "candidateIds": [
+        "hunt-daytona-126502-rolesium-mostrador-esmalte-branco-luneta-cerachrom-antracite-1"
+      ],
+      "reviewedAt": "2026-10-09T15:56:40.055Z"
+    },
+    "GMT-Master II 126711CHNR (Root Beer)": {
+      "rank": 30,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=VSF",
+      "candidateIds": [
+        "30-superclonewatches-16pf706",
+        "30-superclonewatches-134h2bh",
+        "30-superclonewatches-1tbxoft",
+        "30-superluxuryreps-1peyjoj"
+      ],
+      "reviewedAt": "2026-10-09T21:53:52.955Z"
+    },
     "Royal Oak 15500ST": {
       "rank": 110,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Nenhuma das 4 imagens existe no disco; títulos indicam caixa de cerâmica preta, não aço (ST).",
+      "reasoning": "Os 4 arquivos de imagem não existem no disco; título indica cerâmica preta, não ST",
       "candidateIds": [
         "st-110-tk-200255-4",
         "st-110-tk-200255-3",
         "st-110-tk-200255-2",
         "st-110-tk-200255-1"
       ],
-      "reviewedAt": "2026-10-09T15:57:15.853Z"
+      "reviewedAt": "2026-10-09T21:53:52.955Z"
     },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
@@ -3997,12 +3996,12 @@
       "bestImageId": null,
       "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Omega",
       "candidateIds": [
+        "hunt-seamaster-planet-ocean-600m-3",
         "hunt-seamaster-planet-ocean-600m-2",
         "hunt-seamaster-planet-ocean-600m-1",
-        "f-119-2e19a199",
-        "f-119-a5f3df7b"
+        "f-119-2e19a199"
       ],
-      "reviewedAt": "2026-10-09T15:57:15.853Z"
+      "reviewedAt": "2026-10-09T21:53:52.955Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -4015,17 +4014,20 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-10-09T15:57:15.853Z"
+      "reviewedAt": "2026-10-09T21:53:52.955Z"
     },
-    "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)": {
-      "rank": 150,
+    "Royal Oak 15510ST": {
+      "rank": 117,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "Daytona branco com luneta preta em aço; não dá para ver Rolesium nem luneta antracite, parece 126500LN.",
+      "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Audemars Piguet",
       "candidateIds": [
-        "hunt-daytona-126502-rolesium-mostrador-esmalte-branco-luneta-cerachrom-antracite-1"
+        "f-117-40759b26",
+        "f-117-97a57d37",
+        "f-117-61214ae0",
+        "f-117-0e671be6"
       ],
-      "reviewedAt": "2026-10-09T15:56:40.055Z"
+      "reviewedAt": "2026-10-09T21:53:52.955Z"
     }
   },
   "galleryAudit": {

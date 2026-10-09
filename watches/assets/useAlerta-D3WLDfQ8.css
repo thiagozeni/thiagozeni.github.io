@@ -1,0 +1,1 @@
+.alerta__reasons{display:flex;flex-wrap:wrap;gap:4px}.alerta__reason{font-size:var(--fs-xs);font-weight:700;padding:2px 8px;border-radius:var(--r-pill);color:var(--c-text-2);background:var(--c-surface-2)}.alerta__reason--genuino{color:var(--c-conflict-text);background:var(--c-conflict-soft)}

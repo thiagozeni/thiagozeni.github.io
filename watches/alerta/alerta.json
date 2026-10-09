@@ -1,0 +1,315 @@
+{
+  "updatedAt": "2026-10-09",
+  "items": [
+    {
+      "key": "rolex|134300",
+      "brand": "Rolex",
+      "ref": "134300",
+      "label": "Rolex Oyster Perpetual 41 (new case shape)",
+      "factories": [
+        "QF",
+        "VSF"
+      ],
+      "stores": 5,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Oyster Perpetual 41 (new case shape)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "rolex|127336",
+      "brand": "Rolex",
+      "ref": "127336",
+      "label": "Rolex Land-Dweller 40 (platinum)",
+      "factories": [
+        "BPF"
+      ],
+      "stores": 4,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Land-Dweller 40 (platinum)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "rolex|126729vtnr",
+      "brand": "Rolex",
+      "ref": "126729VTNR",
+      "label": "Rolex GMT-Master II Sprite (white gold)",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "GMT-Master II Sprite (white gold)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "rolex|134303",
+      "brand": "Rolex",
+      "ref": "134303",
+      "label": "Rolex Oyster Perpetual 41 Yellow Rolesor",
+      "factories": [
+        "QF",
+        "VSF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Oyster Perpetual 41 Yellow Rolesor",
+        "released": "2026-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "patekphilippe|71281g001",
+      "brand": "Patek Philippe",
+      "ref": "7128/1G-001",
+      "label": "Patek Philippe Cubitus 40mm (white gold)",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 2,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Cubitus 40mm (white gold)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "rolex|126003",
+      "brand": "Rolex",
+      "ref": "126003",
+      "label": "Rolex Oyster Perpetual 36 Yellow Rolesor",
+      "factories": [
+        "QF",
+        "VSF"
+      ],
+      "stores": 2,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Oyster Perpetual 36 Yellow Rolesor",
+        "released": "2026-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "audemarspiguet|15210stooa348kb01",
+      "brand": "Audemars Piguet",
+      "ref": "15210ST.OO.A348KB.01",
+      "label": "Audemars Piguet Code 11.59 Time and Date 41 (steel)",
+      "factories": [],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Code 11.59 Time and Date 41 (steel)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "audemarspiguet|15510bcoo1320bc04",
+      "brand": "Audemars Piguet",
+      "ref": "15510BC.OO.1320BC.04",
+      "label": "Audemars Piguet Royal Oak Selfwinding 41 (white gold)",
+      "factories": [
+        "ZF"
+      ],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Royal Oak Selfwinding 41 (white gold)",
+        "released": "2025-06"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "patekphilippe|58101g001",
+      "brand": "Patek Philippe",
+      "ref": "5810/1G-001",
+      "label": "Patek Philippe Nautilus 50th Anniversary (limited, white gold)",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Nautilus 50th Anniversary (limited, white gold)",
+        "released": "2026-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "patekphilippe|71281r001",
+      "brand": "Patek Philippe",
+      "ref": "7128/1R-001",
+      "label": "Patek Philippe Cubitus 40mm (rose gold)",
+      "factories": [],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Cubitus 40mm (rose gold)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "rolex|127234",
+      "brand": "Rolex",
+      "ref": "127234",
+      "label": "Rolex Land-Dweller 36 (Oystersteel and white gold)",
+      "factories": [],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Land-Dweller 36 (Oystersteel and white gold)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "tudor|m2543c1a7nu",
+      "brand": "Tudor",
+      "ref": "M2543C1A7NU",
+      "label": "Tudor Pelagos Ultra (titanium, 1000 m)",
+      "factories": [
+        "ZF"
+      ],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Pelagos Ultra (titanium, 1000 m)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "audemarspiguet|15300",
+      "brand": "Audemars Piguet",
+      "ref": "15300",
+      "label": "Audemars Piguet Royal Oak 15300 (39mm)",
+      "factories": [
+        "ZF"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-10-03-zf-15300",
+        "2026-09-25-zf-15300"
+      ],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    },
+    {
+      "key": "patekphilippe|5990",
+      "brand": "Patek Philippe",
+      "ref": "5990",
+      "label": "Patek Philippe Nautilus 5990 e 5968 (cronógrafos)",
+      "factories": [
+        "P1F"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-09-23-p1f-5990-5968"
+      ],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "observacao",
+      "catalogRank": null
+    }
+  ]
+}

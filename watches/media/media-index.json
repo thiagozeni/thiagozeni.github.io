@@ -71891,80 +71891,6 @@
     }
   },
   {
-    "id": "hunt-seamaster-planet-ocean-600m-1",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — wristwatchspot.com",
-    "source": "wristwatchspot.com",
-    "sourceDomain": "wristwatchspot.com",
-    "image": "https://www.wristwatchspot.com/wp-content/uploads/2019/01/VS-Factory-Replica-Omega-Planet-Ocean-600m.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Alt 'VS Factory Replica Omega Planet Ocean 600m'. A matéria é sobre o VSF PO 600M de 43,5mm (mostrador preto com detalhes laranja, luneta cerâmica, clone 8900). Validado como image/jpeg."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-09T15:56:03.449Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-seamaster-planet-ocean-600m-2",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — wristwatchspot.com",
-    "source": "wristwatchspot.com",
-    "sourceDomain": "wristwatchspot.com",
-    "image": "https://www.wristwatchspot.com/wp-content/uploads/2019/01/Replica-Omega-Planet-Ocean-600m-Orange.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Mesma matéria VSF (preto/laranja, 43,5mm, 8900). Alt 'Replica Omega Planet Ocean 600m Orange'. Validado como image/jpeg."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-09T15:56:03.595Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
     "id": "sv-4-kt-3223",
     "model": "Luminor Marina PAM111",
     "brand": "Panerai",
@@ -72021,5 +71947,145 @@
       "py"
     ],
     "collectedAt": "2026-10-09T15:59:13.546Z"
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-1",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
+    "source": "realcleanfactory.com",
+    "sourceDomain": "realcleanfactory.com",
+    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727410592454.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "O título da página nomeia VS Factory, PO 600M 43.5mm, ref 215.30.44.21.01.002, Super Clone 8900; o texto descreve mostrador preto de cerâmica, bisel de cerâmica preta e escala laranja de 15 min. A URL respondeu como image/jpeg (165 KB). Primeira imagem da galeria. Não vi a foto; marca d'água não verificada."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-09T21:53:17.519Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-2",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
+    "source": "realcleanfactory.com",
+    "sourceDomain": "realcleanfactory.com",
+    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727409438677.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Mesma página de produto VSF 215.30.44.21.01.002, mostrador preto. A URL respondeu como image/jpeg (291 KB). Não vi a foto; marca d'água não verificada."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-09T21:53:17.596Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-3",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
+    "source": "realcleanfactory.com",
+    "sourceDomain": "realcleanfactory.com",
+    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727409451346.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-3.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Mesma página de produto VSF 215.30.44.21.01.002, mostrador preto. A URL respondeu como image/jpeg (312 KB). Não vi a foto; marca d'água não verificada."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-09T21:53:17.662Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "sv-4-kt-1438",
+    "model": "Luminor Marina PAM111",
+    "brand": "Panerai",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "PANERAI – Luminor Marina PAM1119 44mm Carbon/NY Grey Dial VSF P9010 — vídeo de produto (kevintoptime.com)",
+    "source": "kevintoptime.com",
+    "sourceDomain": "kevintoptime.com",
+    "sourceUrl": "https://kevintoptime.com/product/panerai-luminor-marina-pam1119-44mm-carbon-ny-grey-dial-vsf-p9010/",
+    "embedUrl": "https://player.vimeo.com/video/1096147582",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2030124858-34e2cea38a850adcfc4205ae1cd1f14632f3aaed63538d6a255effbb120a16a5-d_295x166?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "kt"
+    ],
+    "collectedAt": "2026-10-09T21:54:34.128Z"
   }
 ]

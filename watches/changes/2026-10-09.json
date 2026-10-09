@@ -25,7 +25,7 @@
     },
     {
       "rank": 119,
-      "count": 2
+      "count": 3
     }
   ],
   "newNews": [
@@ -34,7 +34,7 @@
   "summary": {
     "newModels": 1,
     "scoreChanges": 1,
-    "newMedia": 25,
+    "newMedia": 26,
     "newNews": 1
   }
 }

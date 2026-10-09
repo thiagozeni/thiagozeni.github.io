@@ -122,20 +122,6 @@
       ]
     },
     {
-      "key": "rolex|126500",
-      "brand": "Rolex",
-      "ref": "126500",
-      "label": "Rolex Daytona 126500 Black Dial",
-      "factories": [
-        "VSF"
-      ],
-      "stores": 1,
-      "catalogRanks": [
-        3,
-        111
-      ]
-    },
-    {
       "key": "rolex|126710grnr",
       "brand": "Rolex",
       "ref": "126710GRNR",
@@ -147,6 +133,20 @@
       "stores": 1,
       "catalogRanks": [
         10
+      ]
+    },
+    {
+      "key": "rolex|126500",
+      "brand": "Rolex",
+      "ref": "126500",
+      "label": "Rolex Daytona 126500 Black Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 1,
+      "catalogRanks": [
+        3,
+        111
       ]
     },
     {
@@ -197,6 +197,17 @@
       ]
     },
     {
+      "key": "rolex|116519ln",
+      "brand": "Rolex",
+      "ref": "116519LN",
+      "label": "Rolex Daytona “Ghost” 116519LN “White Gold”",
+      "factories": [],
+      "stores": 1,
+      "catalogRanks": [
+        22
+      ]
+    },
+    {
       "key": "rolex|126710blro",
       "brand": "Rolex",
       "ref": "126710BLRO",
@@ -208,17 +219,6 @@
       "stores": 1,
       "catalogRanks": [
         19
-      ]
-    },
-    {
-      "key": "rolex|116519ln",
-      "brand": "Rolex",
-      "ref": "116519LN",
-      "label": "Rolex Daytona “Ghost” 116519LN “White Gold”",
-      "factories": [],
-      "stores": 1,
-      "catalogRanks": [
-        22
       ]
     },
     {

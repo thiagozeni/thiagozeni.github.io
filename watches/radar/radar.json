@@ -2,15 +2,15 @@
   "updatedAt": "2026-10-09",
   "items": [
     {
-      "id": "2026-10-09-ccf-4600v",
+      "id": "2026-10-09-cc-vc-4600v",
       "date": "2026-10-09",
       "kind": "comparativo",
       "tone": "negativo",
       "brand": "Vacheron Constantin",
-      "model": "Overseas 4600V (34,5 mm)",
+      "model": "Overseas 4600V (34,5mm)",
       "factory": "CC",
-      "title": "CC Factory 4600V usa Miyota 9015, mas o balanço denuncia o rep",
-      "summary": "O 4600V da CC usa Miyota 9015 e mede cerca de 35 mm. Pelo fundo transparente, o balanço está na posição errada em relação ao genuíno. O sunburst é fraco, a impressão é falha e o lume dos índices é esverdeado enquanto o dos ponteiros é branco.",
+      "title": "CC Factory 4600V: réplica intermediária com balanço na posição errada",
+      "summary": "Com Miyota 9015, o balanço visto pelo fundo fica na posição errada e denuncia o relógio para quem conhece o genuíno. O sunburst é fraco, há falhas de impressão e o lume é esverdeado nos índices e branco nos ponteiros. A caixa mede uns 35 mm.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -19,6 +19,50 @@
           "title": "CC Factory Replica Vacheron Constantin 4600V",
           "site": "wristwatchspot.com",
           "type": "blog",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-v7f-ingenieur-50th",
+      "date": "2026-10-09",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "IWC",
+      "model": "Ingenieur 50th Anniversary (mostrador prata)",
+      "factory": "V7F",
+      "title": "V7F lança o Ingenieur 50º aniversário com mostrador prata",
+      "summary": "Um post no r/RepTime mostra o Ingenieur 50th Anniversary prata da V7F. O autor reclama que a versão em titânio nunca saiu com a mesma rapidez.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1x1wdyt/v7f_50th_anniversary_ingenieur_wish_they_were/",
+          "title": "V7F 50th Anniversary Ingenieur. Wish they were this fast with making the Titanium version.",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-vsf-126655-v2-replaqueamento",
+      "date": "2026-10-09",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Yacht-Master 40 126655 (Everose, Oysterflex)",
+      "factory": "VSF",
+      "title": "Replaquear o VSF Yacht-Master 126655 V2 não mudou o visual",
+      "summary": "O dono comparou fotos de antes e depois do replaqueamento em ouro rosé e não viu diferença de cor ou brilho. Conclui que o acabamento de fábrica do V2 já é bom.",
+      "catalogRank": 144,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1x1w8wf/does_plating_increase_longevity/",
+          "title": "Does plating increase longevity?",
+          "site": "reddit.com",
+          "type": "reddit",
           "bias": "enthusiast"
         }
       ]
@@ -156,15 +200,37 @@
       ]
     },
     {
-      "id": "2026-10-05-vsf-126519-cinza",
+      "id": "2026-10-06-vsf-126711chnr-ouro-rose",
+      "date": "2026-10-06",
+      "kind": "comparativo",
+      "tone": "positivo",
+      "brand": "Rolex",
+      "model": "GMT-Master II 126711CHNR (Root Beer)",
+      "factory": "VSF",
+      "title": "Comprador aprova o tom de ouro rosé do VSF Root Beer sem replaquear",
+      "summary": "O comprador considerou o RCF, mas escolheu o VSF pelas fotos. Diz que o tom rosé ficou ótimo sem replaquear, o que contraria o hábito de replaquear o two-tone.",
+      "catalogRank": 30,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1wzcnlx/shocked_at_how_good_vsf_rose_gold_tone_is_on_this/",
+          "title": "Shocked at how good VSF Rose Gold tone is on this GMT Rootbeer",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-05-vsf-126519-cinza-vs-padrao",
       "date": "2026-10-05",
       "kind": "comparativo",
-      "tone": "neutro",
+      "tone": "negativo",
       "brand": "Rolex",
-      "model": "Daytona 126519 (mostrador cinza)",
+      "model": "Daytona 126519LN (mostrador cinza)",
       "factory": "VSF",
-      "title": "Daytona 126519 VS × genérico: peso, sunburst e calibre separam os dois",
-      "summary": "O VS tem peso extra (136 g contra cerca de 110 g), sunburst cinza-cimento que muda com o ângulo e o calibre DD4131; o genérico usa SH4131, tem mostrador escuro demais e gravações do fecho diferentes. O blog alerta que revendedores entregam outras fábricas como se fossem VS.",
+      "title": "Revendedores trocam VSF por outra fábrica; Daytona 126519 mostra como distinguir",
+      "summary": "Revendedores cobram por VSF e entregam outra fábrica. A VSF com peso extra tem 136 g e DD4131, contra cerca de 110 g e SH4131 da versão padrão. A VSF também tem sunburst cinza-cimento mais marcado e gravações do fecho diferentes. O artigo lembra que o VSF DJ V2 tem cerca de 135 g e 8 elos de cada lado.",
       "catalogRank": 137,
       "status": "observacao",
       "sources": [
@@ -178,15 +244,37 @@
       ]
     },
     {
-      "id": "2026-10-03-vsf-126710blro-v3",
+      "id": "2026-10-05-vsf-daytona-4130-ruido-rotor",
+      "date": "2026-10-05",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Daytona 4130 (mostrador branco)",
+      "factory": "VSF",
+      "title": "Dono relata ruído de rotor no VSF Daytona 4130 branco",
+      "summary": "O dono gostou da estética e do peso, mas relata ruído de rotor no movimento. Diz também que o relógio parece menos refinado na mão que o Submariner e o GMT da mesma fábrica.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1wynnva/daytona_4130_steele_bezel/",
+          "title": "Daytona 4130 Steele Bezel",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-03-vsf-126710blro-v3-dd3285v2",
       "date": "2026-10-03",
       "kind": "versao",
       "tone": "neutro",
       "brand": "Rolex",
       "model": "GMT-Master II 126710BLRO (Pepsi)",
       "factory": "VSF",
-      "title": "VSF GMT Pepsi V3 aparece com movimento Dandong DD3285v2",
-      "summary": "Um membro do RWI achou um anúncio, no ar desde 21/09, de um GMT Pepsi 'VSF V3' com o movimento Dandong DD3285v2, 'efeito free-sprung' e inserto de luneta revisado. Seria uma troca do calibre próprio da VS pelo da Dandong. Ninguém no fórum confirmou ainda.",
+      "title": "Anúncio diz que o VSF GMT V3 trocou para o Dandong DD3285v2; troca não confirmada",
+      "summary": "Um anúncio no ar desde 21/09 descreve o Pepsi VSF V3 com DD3285v2 com 'efeito free-sprung' e luneta melhorada, saindo dos movimentos VS próprios. No Reddit, em 06/10, um comprador ainda esperava que a VSF adotasse o movimento novo, e outro chama o lote atual de 'fake sprung'. A troca segue sem confirmação.",
       "catalogRank": 19,
       "status": "observacao",
       "sources": [
@@ -196,19 +284,55 @@
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
+        },
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1wywpga/gmt_pepsi_help_rf_vs_vsf/",
+          "title": "GMT Pepsi Help RF VS VSF",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "enthusiast"
+        },
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1wzangl/first_rep_pulled_the_trigger_on_the_vsf_gmtmaster/",
+          "title": "First rep! Pulled the trigger on the VSF GMT-Master II 126710GRNR",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "enthusiast"
         }
       ]
     },
     {
-      "id": "2026-10-03-qf-126502",
+      "id": "2026-10-03-zf-15300",
+      "date": "2026-10-03",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak 15300 (39mm)",
+      "factory": "ZF",
+      "title": "ZF Royal Oak 15300 começa a chegar às mãos dos compradores",
+      "summary": "A 15300 de 39 mm, em mostrador prata ou azul, saiu em setembro e as primeiras fotos de QC e relatos aprovados apareceram nesta janela. O acabamento da caixa é descrito como de quinas vivas, mas risca fácil e logo pede polimento.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/11052725/",
+          "title": "ZF launches 15300",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-03-qf-126502-esmalte",
       "date": "2026-10-03",
       "kind": "comparativo",
       "tone": "positivo",
       "brand": "Rolex",
       "model": "Daytona 126502 (esmalte branco, luneta antracite)",
       "factory": "QF",
-      "title": "QF 126502 imita bem o esmalte e acerta mais a luneta antracite que a Li Chen",
-      "summary": "O mostrador da QF tem um branco brilhante e 'molhado' que imita bem o esmalte de longe. Na lupa faltam as bordas derretidas do Grand Feu genuíno. O tom antracite da luneta QF fica mais perto do genuíno que o da luneta aftermarket da Li Chen.",
+      "title": "QF 126502: esmalte convincente à distância e luneta mais fiel que a da Li Chen",
+      "summary": "O branco brilhante da QF imita bem o esmalte Grand Feu à distância do braço. Na lupa, faltam as bordas suaves e 'derretidas' do esmalte vítreo genuíno nos degraus dos submostradores. O tom antracite da luneta QF ficou mais próximo do genuíno que a peça aftermarket da Li Chen.",
       "catalogRank": 150,
       "status": "observacao",
       "sources": [
@@ -229,8 +353,8 @@
       "brand": "Audemars Piguet",
       "model": "Royal Oak 15510",
       "factory": "VSF",
-      "title": "Tapisserie da VSF passa a ser vista como a melhor no 15510",
-      "summary": "Membros do RWI avaliam que o mostrador tapisserie da VSF supera ZF e APSF/OCTA no 15510. As rivais ainda levam vantagem por terem free-sprung de verdade.",
+      "title": "Fórum vê a tapisserie da VSF 15510 acima de ZF e APSF/OCTA",
+      "summary": "Membros consideram o mostrador da VSF 15510 o melhor hoje. ZF e APSF/OCTA ainda são preferidas por terem movimento free-sprung de verdade. A visão que prevaleceu: o mostrador está sempre à vista e o movimento quase nunca.",
       "catalogRank": 140,
       "status": "observacao",
       "sources": [
@@ -244,37 +368,44 @@
       ]
     },
     {
-      "id": "2026-10-03-zf-15300",
+      "id": "2026-10-03-a7f-v7f-ingenieur-aqua",
       "date": "2026-10-03",
-      "kind": "lancamento",
-      "tone": "neutro",
-      "brand": "Audemars Piguet",
-      "model": "Royal Oak 15300 (39 mm, azul e prata)",
-      "factory": "ZF",
-      "title": "ZF 15300 começa a chegar às mãos dos compradores",
-      "summary": "Saíram os primeiros QCs aprovados do Royal Oak 15300 da ZF, nos mostradores azul e branco/prata. Pelos relatos, o acabamento da caixa tem arestas vivas e risca com facilidade.",
+      "kind": "comparativo",
+      "tone": "positivo",
+      "brand": "IWC",
+      "model": "Ingenieur Automatic 40 (Aqua)",
+      "factory": "A7F × V7F",
+      "title": "Ingenieur Aqua da A7F é quase idêntico ao da V7F de antes do raid e passa em teste de 6 bar",
+      "summary": "Um dono comparou o V7F de antes do raid com o A7F novo e não achou diferença clara, nem na gravação da pulseira, só talvez um leve tom de cor. Outro relato mostra o A7 Ingenieur aprovado em teste de pressão de 6 bar.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
-          "url": "https://forum.replica-watch.info/threads/11052725/",
-          "title": "ZF launches 15300",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
+          "url": "https://www.reddit.com/r/RepTime/comments/1ww9a5l/v7f_vs_a7f_aqua_ingenieur_comparison/",
+          "title": "V7F vs A7F Aqua Ingenieur comparison",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "enthusiast"
+        },
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1wyn886/a7v7_ingenieur_passed_6_bar_pressure_test/",
+          "title": "A7/V7 Ingenieur Passed 6 Bar Pressure Test",
+          "site": "reddit.com",
+          "type": "reddit",
           "bias": "enthusiast"
         }
       ]
     },
     {
-      "id": "2026-10-02-bbf-ddf-5711",
+      "id": "2026-10-02-bbf-ddf-5711-330-hacking",
       "date": "2026-10-02",
       "kind": "comparativo",
-      "tone": "positivo",
+      "tone": "neutro",
       "brand": "Patek Philippe",
       "model": "Nautilus 5711/1A (Azul)",
-      "factory": "DDF / BBF",
-      "title": "BBF adota clone do 330 com hacking, e DDF leva o comparativo do 5711",
-      "summary": "A BBF passou a usar o clone do calibre 330 com parada de segundos (hacking), que a DDF já tinha, e a 3K deve seguir. No lado a lado, a DDF tem degradê do azul mais natural, impressão mais grossa (em duas versões) e gravações do movimento mais fundas que as da BBF.",
+      "factory": "BBF × DDF",
+      "title": "BBF lança 5711 com clone 330 com hacking; comparativo com DDF favorece a DDF",
+      "summary": "A BBF passou a usar o clone 330 com parada de segundos (hacking), depois da DDF, e a 3K deve vir em seguida. No comparativo, a DDF tem azul mais claro com degradê mais natural, impressão mais grossa (e duas versões de impressão do mostrador) e gravações do movimento mais fundas e limpas. As gravações da BBF são mais rasas.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -288,21 +419,50 @@
       ]
     },
     {
-      "id": "2026-10-02-xing-luneta-dj41-amarela",
+      "id": "2026-10-02-xing-luneta-dj41-amarelada",
       "date": "2026-10-02",
       "kind": "defeito",
       "tone": "negativo",
       "brand": "Rolex",
       "model": "Datejust 41 (luneta canelada aftermarket)",
-      "factory": "Xing (aftermarket)",
-      "title": "Luneta canelada da Xing fica amarela demais no sol",
-      "summary": "Ao ar livre, a luneta canelada aftermarket da Xing (imitando ouro branco) parece amarela demais, mesmo sem contato com água. Membros sugerem refazer o banho.",
+      "factory": "Xing Patrick (aftermarket)",
+      "title": "Luneta canelada Xing para DJ41 fica amarelada; comprador relata 52 dias sem entrega",
+      "summary": "A luneta canelada 'ouro branco' da Xing aparece amarela demais na luz externa depois de alguns meses, sem contato com água; a sugestão foi replaquear. Em outro tópico, um comprador relata 52 dias sem relógio nem reembolso, e outros contam atrasos de até 14 semanas.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/11054498/",
           "title": "Xing bezel on dj41 color is very yellow",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        },
+        {
+          "url": "https://forum.replica-watch.info/threads/11054494/",
+          "title": "Xingpatrick order dispute — 52 days without delivery or refund",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-vsf-clean-vs3235-dd3285",
+      "date": "2026-10-02",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Calibres VS3235 × DD3285 (Datejust / GMT)",
+      "factory": "VSF × Clean",
+      "title": "VS3235 e DD3285 são vistos como equivalentes em estabilidade a longo prazo",
+      "summary": "O tópico concluiu que o VS3235 (VSF) e o DD3285 (Dandong, usado pela Clean) se igualam no timegrapher a longo prazo. Os dois têm os 70h reais de reserva e não usam placas decorativas falsas.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/11054459/",
+          "title": "VS3235 vs DD3285 - Which caliber is proving more stable long term?",
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
@@ -325,28 +485,6 @@
         {
           "url": "https://forum.replica-watch.info/threads/11054494/",
           "title": "Xingpatrick order dispute — 52 days without delivery or refund",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
-          "bias": "neutral"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-02-vs3235-dd3285-estabilidade",
-      "date": "2026-10-02",
-      "kind": "comparativo",
-      "tone": "positivo",
-      "brand": "Rolex",
-      "model": "Datejust / GMT-Master II (calibres VS3235 e DD3285)",
-      "factory": "VSF / Clean",
-      "title": "Fórum considera VS3235 e DD3285 equivalentes no longo prazo",
-      "summary": "No RWI, o consenso é que o VS3235 (VSF) e o DD3285 (Dandong, usado pela Clean) têm estabilidade equivalente no cronocomparador. Os dois entregam cerca de 70 h de reserva, sem placas decorativas ruidosas.",
-      "catalogRank": null,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://forum.replica-watch.info/threads/11054459/",
-          "title": "VS3235 vs DD3285 - Which caliber is proving more stable long term?",
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
@@ -398,6 +536,28 @@
       ]
     },
     {
+      "id": "2026-10-01-arf-submariner-glidelock",
+      "date": "2026-10-01",
+      "kind": "comparativo",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Submariner (pulseira Glidelock)",
+      "factory": "ARF",
+      "title": "Glidelock de réplica, até em pulseiras ARF, é bem mais áspero que o do genuíno",
+      "summary": "O deslizamento do Glidelock é bem pior que o do genuíno mesmo em pulseiras ARF ou 'CNC' caras; o autor polia trilhos e sapatas para corrigir. Algumas pulseiras de réplica usam sapatas de metal, enquanto o genuíno da série 12 usa plástico.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/11054402/",
+          "title": "DIY - Submariner Glide-Lock FIX",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
       "id": "2026-10-01-arf-glidelock",
       "date": "2026-10-01",
       "kind": "defeito",
@@ -416,6 +576,50 @@
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-ppf-5711-sh330-quickset",
+      "date": "2026-09-30",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Patek Philippe",
+      "model": "Nautilus 5711/1A",
+      "factory": "PPF",
+      "title": "Review oficial do RWI: PPF 5711 com SH330 trava o ajuste rápido da data",
+      "summary": "Na unidade testada, a data travava com só 2/3 do número visível na janela e só se centralizava à noite. O movimento SH330 não é free-sprung, deu 38h de reserva e +8–10 s/d. O relógio pesa 120 g contra 131 g do genuíno (sem rotor de ouro maciço), e a gravação do fecho é mediana. Caixa, mostrador e ponteiros foram elogiados.",
+      "catalogRank": 44,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/11054329/",
+          "title": "***Official RWI Review*** PPF Patek Philippe Nautilus 5711 with SH330",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-vsf-dj41-v2-luneta-canelada",
+      "date": "2026-09-30",
+      "kind": "defeito",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Datejust 41 canelado (mostrador preto, Oyster)",
+      "factory": "VSF",
+      "title": "Luneta canelada do VSF DJ41 V2 parece mais alta que a do ARF V3",
+      "summary": "Um dono dos dois relógios diz que a luneta canelada do VSF V2, a versão mais nova e pesada, parece visivelmente mais grossa que a do ARF V3, mesmo aprovada no QC. Ninguém mediu com paquímetro ainda.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/11054361/",
+          "title": "Im confused I have the Datejust 41 v2 fluted and the bezel looks much thicker than my ARF v3?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
         }
       ]
     },
@@ -464,28 +668,6 @@
       ]
     },
     {
-      "id": "2026-09-30-ppf-5711-sh330-review",
-      "date": "2026-09-30",
-      "kind": "defeito",
-      "tone": "negativo",
-      "brand": "Patek Philippe",
-      "model": "Nautilus 5711/1A",
-      "factory": "PPF",
-      "title": "Review oficial do RWI acha defeito no ajuste de data do PPF 5711 com SH330",
-      "summary": "Na unidade testada, a data travava no ajuste rápido e ficava com só 2/3 do número na janela. O movimento SH330 deu +8–10 s/d e 38 h de reserva, sem free-sprung. O relógio pesa 120 g contra 131 g do genuíno, que tem rotor de ouro maciço.",
-      "catalogRank": 44,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://forum.replica-watch.info/threads/11054329/",
-          "title": "***Official RWI Review*** PPF Patek Philippe Nautilus 5711 with SH330",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
-          "bias": "enthusiast"
-        }
-      ]
-    },
-    {
       "id": "2026-09-30-orf-nttd-v2-free-sprung",
       "date": "2026-09-30",
       "kind": "comparativo",
@@ -530,24 +712,24 @@
       ]
     },
     {
-      "id": "2026-09-28-mks-ppf-4500v",
+      "id": "2026-09-28-cbd-yachtmaster-rolesium-hibrido",
       "date": "2026-09-28",
-      "kind": "comparativo",
-      "tone": "neutro",
-      "brand": "Vacheron Constantin",
-      "model": "Overseas 4500V",
-      "factory": "MKS / PPF",
-      "title": "4500V MKS × PPF: balanço já está no lugar certo, gravações diferem",
-      "summary": "MKS e PPF mudaram o balanço para as 8h, a posição correta (antes ficava às 6h). A MKS tem gravações fundas na placa do calibre e engrenagens que giram com o rotor; na PPF a gravação é rasa, quase impressa, e as engrenagens são fixas. Há relatos de alta taxa de reparo no movimento da PPF.",
-      "catalogRank": null,
+      "kind": "lancamento",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Yacht-Master 40 (caixa 126622 com visual Rolesium antigo)",
+      "factory": "CBD",
+      "title": "CBD lança Yacht-Master híbrido que não existe como referência genuína",
+      "summary": "A CBD juntou a caixa do 126622 de 40 mm com o visual do antigo Yacht-Master Rolesium descontinuado e usa o DD3235. Impressão, ponteiros e luneta parecem decentes, mas não existe referência genuína assim. Membros lembram que a CBD foi a primeira a clonar o Daytona 126502.",
+      "catalogRank": 23,
       "status": "observacao",
       "sources": [
         {
-          "url": "https://www.susanreviews.com/2026/09/28/vc-4500v-mks-vs-ppf/",
-          "title": "VC 4500V MKS vs PPF",
-          "site": "susanreviews.com",
-          "type": "blog",
-          "bias": "enthusiast"
+          "url": "https://forum.replica-watch.info/threads/11054183/",
+          "title": "CBD Factory Rolex Yachtmaster Rolesium",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
         }
       ]
     },
@@ -559,8 +741,8 @@
       "brand": "Rolex",
       "model": "Daytona 126500LN (luneta aftermarket)",
       "factory": "Li Chen (aftermarket)",
-      "title": "Luneta 'corrigida' da Li Chen para o 126500 ainda tem erro",
-      "summary": "O marcador do 110 foi corrigido, mas o traço entre 180 e 200 continua mais longe do 200 que no genuíno. A gravação é mais rasa e o preenchimento mais claro e menos granulado. Parte do fórum acha o detalhe irrelevante no pulso.",
+      "title": "Luneta 'corrigida' da Li Chen para o 126500 ainda tem erro de escala",
+      "summary": "O triângulo do 110 foi corrigido, mas o traço entre 180 e 200 continua mal posicionado (no genuíno fica mais perto do 200). A gravação é mais rasa e o preenchimento mais claro e menos granulado. Parte do fórum acha que isso não denuncia a réplica de cara.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -574,24 +756,24 @@
       ]
     },
     {
-      "id": "2026-09-28-cbd-yacht-master-rolesium",
+      "id": "2026-09-28-mks-ppf-4500v",
       "date": "2026-09-28",
-      "kind": "lancamento",
+      "kind": "comparativo",
       "tone": "neutro",
-      "brand": "Rolex",
-      "model": "Yacht-Master 40 126622 (visual Rolesium antigo)",
-      "factory": "CBD",
-      "title": "CBD lança Yacht-Master híbrido que não existe como referência genuína",
-      "summary": "A CBD juntou a caixa do 126622 com o visual do antigo Yacht-Master Rolesium, combinação que a Rolex nunca fez, e usou o calibre DD3235. Impressão, ponteiros e luneta parecem corretos. Membros lembram que a CBD foi a primeira a clonar o Daytona 126502.",
-      "catalogRank": 23,
+      "brand": "Vacheron Constantin",
+      "model": "Overseas 4500V",
+      "factory": "MKS × PPF",
+      "title": "VC 4500V: MKS tem gravações fundas no movimento, PPF parece impressa",
+      "summary": "As duas fábricas já posicionam o balanço às 8h, que é o correto (antes ficava às 6h). A MKS grava fundo a cruz de Malta e os textos; a PPF grava raso, quase como impressão, e duas engrenagens ficam paradas quando o rotor gira. As duas medem uns 11,7 mm e 166 g, e a PPF teria alto índice de conserto.",
+      "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
-          "url": "https://forum.replica-watch.info/threads/11054183/",
-          "title": "CBD Factory Rolex Yachtmaster Rolesium",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
-          "bias": "neutral"
+          "url": "https://www.susanreviews.com/2026/09/28/vc-4500v-mks-vs-ppf/",
+          "title": "VC 4500V MKS vs PPF",
+          "site": "susanreviews.com",
+          "type": "blog",
+          "bias": "enthusiast"
         }
       ]
     },
@@ -630,10 +812,10 @@
       "kind": "comparativo",
       "tone": "neutro",
       "brand": "Rolex",
-      "model": "Oyster Perpetual 36 126000 (mostrador 'celebration')",
-      "factory": "QF / VSF / GMF",
-      "title": "OP 126000 celebration: QF acerta o desenho das bolhas, VSF acerta as cores",
-      "summary": "No mostrador 'celebration', a QF (JH3230 free-sprung) tem as bolhas no lugar certo, mas o dono achou as cores pálidas e alaranjadas. A VSF acerta melhor as cores. A GMF também já fabrica esse modelo.",
+      "model": "Oyster Perpetual 36 126000 (mostrador Celebration)",
+      "factory": "QF × VSF × GMF",
+      "title": "OP 126000 Celebration: QF acerta a disposição das bolhas, VSF acerta as cores",
+      "summary": "Contra fotos do genuíno, a QF (JH3230 free-sprung) tem alinhamento de texto e padrão das bolhas mais fiéis. A VSF (VS3235) tem cores mais corretas, e um dono achou o mostrador da QF pálido e laranja demais. A GMF também lançou a versão, mas há relatos de coroa e movimento ruins em OP anterior da fábrica.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -791,10 +973,10 @@
       "kind": "lancamento",
       "tone": "neutro",
       "brand": "Rolex",
-      "model": "Datejust two-tone mostrador branco (modelo 2026, 36/41 mm)",
-      "factory": "RC",
-      "title": "RC Factory lança Datejust two-tone branco de 2026 com peso extra e DD3235",
-      "summary": "A RC lançou o Datejust two-tone branco de 2026 em 36 e 41 mm, com peso extra (até 149,1 g) e calibre DD3235 sem free-sprung. O mostrador branco tem acabamento liso, com aspecto de jade.",
+      "model": "Datejust 36/41 Two-Tone mostrador branco (lançamento Rolex 2026)",
+      "factory": "RCF",
+      "title": "RC Factory clona o Datejust two-tone branco de 2026 com peso de até 149 g",
+      "summary": "O lançamento sai em 36 e 41 mm, com mostrador branco liso de aspecto 'jade' e peso de até 149,1 g. O movimento é o DD3235 sem free-sprung, enquanto a VSF usa 'efeito' free-sprung e a Rich usa free-sprung real.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [

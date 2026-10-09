@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-09T15:57:16.017Z",
-  "totalImages": 2367,
+  "generatedAt": "2026-10-09T21:53:53.213Z",
+  "totalImages": 2370,
   "summary": {
     "models": 150,
     "verified": 138,
@@ -8,7 +8,7 @@
     "weak": 1,
     "rejected": 0,
     "missing": 0,
-    "conflictsDiscarded": 389,
+    "conflictsDiscarded": 388,
     "coveragePct": 99
   },
   "backlog": [
