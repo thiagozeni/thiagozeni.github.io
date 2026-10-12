@@ -34,21 +34,6 @@
       ]
     },
     {
-      "key": "patekphilippe|5167",
-      "brand": "Patek Philippe",
-      "ref": "5167",
-      "label": "Patek Philippe Aquanaut 5167 SS Gray Dial",
-      "factories": [
-        "3KF",
-        "DDF"
-      ],
-      "stores": 4,
-      "catalogRanks": [
-        24,
-        102
-      ]
-    },
-    {
       "key": "rolex|126610lv",
       "brand": "Rolex",
       "ref": "126610LV",
@@ -62,18 +47,18 @@
       ]
     },
     {
-      "key": "rolex|126710grnr",
-      "brand": "Rolex",
-      "ref": "126710GRNR",
-      "label": "Rolex Bruce Wayne GMT Master II 126710GRNR Jubilee",
+      "key": "patekphilippe|5167",
+      "brand": "Patek Philippe",
+      "ref": "5167",
+      "label": "Patek Philippe Aquanaut 5167 SS Gray Dial",
       "factories": [
-        "Clean",
-        "RICH",
-        "VSF"
+        "3KF",
+        "DDF"
       ],
-      "stores": 3,
+      "stores": 4,
       "catalogRanks": [
-        10
+        24,
+        102
       ]
     },
     {
@@ -106,21 +91,6 @@
       ]
     },
     {
-      "key": "rolex|116610lv",
-      "brand": "Rolex",
-      "ref": "116610LV",
-      "label": "Rolex Submariner Date 116610LV “Hulk”",
-      "factories": [
-        "Clean",
-        "VSF",
-        "ZZF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        25
-      ]
-    },
-    {
       "key": "rolex|116506",
       "brand": "Rolex",
       "ref": "116506",
@@ -131,6 +101,21 @@
       ],
       "stores": 3,
       "catalogRanks": []
+    },
+    {
+      "key": "rolex|126710grnr",
+      "brand": "Rolex",
+      "ref": "126710GRNR",
+      "label": "Rolex Bruce Wayne GMT Master II 126710GRNR Jubilee",
+      "factories": [
+        "Clean",
+        "RICH",
+        "VSF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        10
+      ]
     },
     {
       "key": "rolex|126711chnr",
@@ -163,6 +148,21 @@
       ]
     },
     {
+      "key": "rolex|116610lv",
+      "brand": "Rolex",
+      "ref": "116610LV",
+      "label": "Rolex Submariner Date 116610LV “Hulk”",
+      "factories": [
+        "Clean",
+        "VSF",
+        "ZZF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        25
+      ]
+    },
+    {
       "key": "rolex|226659",
       "brand": "Rolex",
       "ref": "226659",
@@ -191,21 +191,6 @@
       ]
     },
     {
-      "key": "rolex|126500",
-      "brand": "Rolex",
-      "ref": "126500",
-      "label": "Rolex Daytona 126500 Black Dial",
-      "factories": [
-        "Clean",
-        "VSF"
-      ],
-      "stores": 2,
-      "catalogRanks": [
-        3,
-        111
-      ]
-    },
-    {
       "key": "rolex|126710blnr",
       "brand": "Rolex",
       "ref": "126710BLNR",
@@ -220,15 +205,19 @@
       ]
     },
     {
-      "key": "richardmille|rm6702",
-      "brand": "Richard Mille",
-      "ref": "RM67-02",
-      "label": "Richard Mille RM67-02 Sebastien Ogier Black Carbon TPT France CRMA7 Pro",
+      "key": "rolex|126500",
+      "brand": "Rolex",
+      "ref": "126500",
+      "label": "Rolex Daytona 126500 Black Dial",
       "factories": [
-        "RICH"
+        "Clean",
+        "VSF"
       ],
       "stores": 2,
-      "catalogRanks": []
+      "catalogRanks": [
+        3,
+        111
+      ]
     },
     {
       "key": "rolex|126500ln",
@@ -245,18 +234,6 @@
       ]
     },
     {
-      "key": "patekphilippe|5168g",
-      "brand": "Patek Philippe",
-      "ref": "5168G",
-      "label": "Patek Philippe Aquanaut “Blue Dial” 5168G",
-      "factories": [],
-      "stores": 2,
-      "catalogRanks": [
-        46,
-        118
-      ]
-    },
-    {
       "key": "rolex|116520",
       "brand": "Rolex",
       "ref": "116520",
@@ -270,11 +247,33 @@
       ]
     },
     {
+      "key": "richardmille|rm6702",
+      "brand": "Richard Mille",
+      "ref": "RM67-02",
+      "label": "Richard Mille RM67-02 Sebastien Ogier Black Carbon TPT France CRMA7 Pro",
+      "factories": [
+        "RICH"
+      ],
+      "stores": 2,
+      "catalogRanks": []
+    },
+    {
       "key": "rolex|126660",
       "brand": "Rolex",
       "ref": "126660",
       "label": "Rolex Deepsea Sea Dweller Gradient Blue Dial 126660",
       "factories": [],
+      "stores": 2,
+      "catalogRanks": []
+    },
+    {
+      "key": "tudor|tudorheritageblackbayfiftyeight39mmssbla",
+      "brand": "Tudor",
+      "ref": null,
+      "label": "Tudor Heritage Black Bay FIFTY EIGHT 39mm SS Black Bezel",
+      "factories": [
+        "ZF"
+      ],
       "stores": 2,
       "catalogRanks": []
     }

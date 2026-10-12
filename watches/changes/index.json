@@ -4,12 +4,17 @@
     "previousStamp": "2026-10-09",
     "summary": {
       "newModels": 0,
-      "scoreChanges": 0,
+      "scoreChanges": 1,
       "newMedia": 2,
       "newNews": 2
     },
     "newModels": [],
-    "scoreChanges": []
+    "scoreChanges": [
+      {
+        "rank": 31,
+        "delta": 0.2
+      }
+    ]
   },
   {
     "stamp": "2026-10-09",

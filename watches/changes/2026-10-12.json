@@ -3,7 +3,14 @@
   "previousStamp": "2026-10-09",
   "newModels": [],
   "removedModels": [],
-  "scoreChanges": [],
+  "scoreChanges": [
+    {
+      "rank": 31,
+      "from": 6.86,
+      "to": 7.06,
+      "delta": 0.2
+    }
+  ],
   "confidenceChanges": [],
   "newMedia": [
     {
@@ -17,7 +24,7 @@
   ],
   "summary": {
     "newModels": 0,
-    "scoreChanges": 0,
+    "scoreChanges": 1,
     "newMedia": 2,
     "newNews": 2
   }

@@ -10,7 +10,7 @@
         "QF",
         "VSF"
       ],
-      "stores": 5,
+      "stores": 6,
       "reasons": [
         "genuino",
         "lojas"
@@ -21,12 +21,40 @@
       },
       "radarIds": [],
       "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-09",
+      "lastSignal": "2026-10-12",
       "status": "observacao",
       "catalogRank": null,
       "photos": [
         "/media/alerta/al-134300-ul-1.webp",
         "/media/alerta/al-134300-tk-3.jpg"
+      ]
+    },
+    {
+      "key": "rolex|126729vtnr",
+      "brand": "Rolex",
+      "ref": "126729VTNR",
+      "label": "Rolex GMT-Master II Sprite (white gold)",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 5,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "GMT-Master II Sprite (white gold)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126729vtnr-lcw-1.jpg",
+        "/media/alerta/al-126729vtnr-lcw-2.jpg",
+        "/media/alerta/al-126729vtnr-tk-3.jpg"
       ]
     },
     {
@@ -56,34 +84,6 @@
         "/media/alerta/al-127336-lcw-2.jpg",
         "/media/alerta/al-127336-ul-3.jpg",
         "/media/alerta/al-127336-ul-4.jpg"
-      ]
-    },
-    {
-      "key": "rolex|126729vtnr",
-      "brand": "Rolex",
-      "ref": "126729VTNR",
-      "label": "Rolex GMT-Master II Sprite (white gold)",
-      "factories": [
-        "VSF"
-      ],
-      "stores": 3,
-      "reasons": [
-        "genuino",
-        "lojas"
-      ],
-      "genuine": {
-        "name": "GMT-Master II Sprite (white gold)",
-        "released": "2025-04"
-      },
-      "radarIds": [],
-      "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-09",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-126729vtnr-lcw-1.jpg",
-        "/media/alerta/al-126729vtnr-lcw-2.jpg",
-        "/media/alerta/al-126729vtnr-tk-3.jpg"
       ]
     },
     {
@@ -172,6 +172,97 @@
         "/media/alerta/al-126003-py-2.jpg",
         "/media/alerta/al-126003-py-3.jpg"
       ]
+    },
+    {
+      "key": "omega|21592462201007",
+      "brand": "Omega",
+      "ref": "215.92.46.22.01.007",
+      "label": "Omega Seamaster Planet Ocean Worldtimer (titanium)",
+      "factories": [],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Seamaster Planet Ocean Worldtimer (titanium)",
+        "released": "2025-03"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
+      "key": "omega|21732422101004",
+      "brand": "Omega",
+      "ref": "217.32.42.21.01.004",
+      "label": "Omega Seamaster Planet Ocean 4th generation (orange bezel)",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Seamaster Planet Ocean 4th generation (orange bezel)",
+        "released": "2025-11"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-217-32-42-21-01-004-vsf-1.jpg",
+        "/media/alerta/al-217-32-42-21-01-004-vsf-2.jpg"
+      ]
+    },
+    {
+      "key": "omega|22032412103001",
+      "brand": "Omega",
+      "ref": "220.32.41.21.03.001",
+      "label": "Omega Seamaster Aqua Terra 41 Turquoise",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Seamaster Aqua Terra 41 Turquoise",
+        "released": "2025-08"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
+      "key": "rolex|126599tsa",
+      "brand": "Rolex",
+      "ref": "126599TSA",
+      "label": "Rolex Cosmograph Daytona (white gold, off-catalogue)",
+      "factories": [],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Cosmograph Daytona (white gold, off-catalogue)",
+        "released": "2025-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
     },
     {
       "key": "audemarspiguet|15210stooa348kb01",
@@ -318,6 +409,33 @@
       ]
     },
     {
+      "key": "audemarspiguet|15605",
+      "brand": "Audemars Piguet",
+      "ref": "15605",
+      "label": "Audemars Piguet Royal Oak 15605 / 15600Ti / 15600CE",
+      "factories": [
+        "Desconhecida",
+        "Não identificada"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-10-09-desconhecida-royal-oak-15605-15600ti-15600ce",
+        "2026-10-09-desconhecida-ap-15605-15600ti-15600ce"
+      ],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-15605-py-1.webp",
+        "/media/alerta/al-15605-py-2.webp"
+      ]
+    },
+    {
       "key": "audemarspiguet|15300",
       "brand": "Audemars Piguet",
       "ref": "15300",
@@ -366,31 +484,6 @@
       "photos": [
         "/media/alerta/al-15210-py-1.jpg",
         "/media/alerta/al-15210-py-2.jpg"
-      ]
-    },
-    {
-      "key": "audemarspiguet|15605",
-      "brand": "Audemars Piguet",
-      "ref": "15605",
-      "label": "Audemars Piguet Royal Oak 15605 / 15600Ti / 15600CE",
-      "factories": [
-        "Desconhecida"
-      ],
-      "stores": 0,
-      "reasons": [
-        "radar"
-      ],
-      "genuine": null,
-      "radarIds": [
-        "2026-10-09-desconhecida-royal-oak-15605-15600ti-15600ce"
-      ],
-      "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-12",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-15605-py-1.webp",
-        "/media/alerta/al-15605-py-2.webp"
       ]
     },
     {
