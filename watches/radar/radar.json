@@ -2,46 +2,31 @@
   "updatedAt": "2026-10-12",
   "items": [
     {
-      "id": "2026-10-12-vsf-126519-vs-generico",
+      "id": "2026-10-12-vsf-126519-vs-padrao",
       "date": "2026-10-12",
       "kind": "comparativo",
       "tone": "neutro",
       "brand": "Rolex",
-      "model": "Daytona 126519LN (Ghost, mostrador cinza)",
+      "model": "Daytona 126519 (Ghost, mostrador cinza)",
       "factory": "VSF",
-      "title": "Como diferenciar o Daytona 126519 VS de uma versão genérica",
-      "summary": "O VS com peso extra tem 136 g, contra cerca de 110 g do genérico, mostrador cinza-cimento com sunburst mais marcado e movimento DD4131. O genérico usa SH4131, tem mostrador escuro demais e gravações do fecho diferentes.",
+      "title": "Daytona 126519: VSF × peça 'padrão' de outra fábrica",
+      "summary": "A VSF lastreada pesa 136 g e usa movimento DD4131, enquanto a outra pesa cerca de 110 g e usa SH4131. O mostrador da VSF é cinza-cimento com sunburst marcado, o da outra é escuro e chapado, e as gravações do fecho também diferem. No fórum há um membro com a VSF V2 avaliando trocar pelo mostrador aftermarket da SWF.",
       "catalogRank": 137,
       "status": "observacao",
       "sources": [
         {
           "url": "https://www.susanreviews.com/2026/10/",
-          "title": "Susan Reviews – Grey Daytona 126519 VS vs standard quality",
+          "title": "Susan Reviews — Grey Daytona VS vs Standard Quality",
           "site": "susanreviews.com",
           "type": "blog",
-          "bias": "neutral"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-12-orf-vsf-seamaster-branco",
-      "date": "2026-10-12",
-      "kind": "comparativo",
-      "tone": "neutro",
-      "brand": "Omega",
-      "model": "Seamaster Diver 300M (Branco)",
-      "factory": "ORF × VSF",
-      "title": "Seamaster branco: fonte vermelha da ORF mais fiel que a 'laranja' da VSF",
-      "summary": "Um dono relata que o texto vermelho do Seamaster branco da ORF fica igual ao genuíno, enquanto o da VSF puxa para o laranja. É opinião de um usuário só, vista no resumo do RSS.",
-      "catalogRank": 31,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://www.reddit.com/r/RepTime/new/.rss",
-          "title": "ORF SEAMASTER WHITE DIAL (r/RepTime)",
-          "site": "reddit.com",
-          "type": "reddit",
           "bias": "enthusiast"
+        },
+        {
+          "url": "https://forum.replica-watch.info/threads/ghost-dial-ref-126519-question-vsf-v-swf.11054963/",
+          "title": "Ghost Dial ref. 126519 question. VSF v SWF",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
         }
       ]
     },
@@ -54,13 +39,35 @@
       "model": "Speedmaster Racing",
       "factory": "HKF",
       "title": "HKF Speedmaster Racing: contador de minutos do cronógrafo não zera",
-      "summary": "Um comprador relata que o contador de minutos do cronógrafo não volta a zero, enquanto segundos e horas zeram normalmente. O revendedor diz que é comum em todo Speedmaster réplica.",
+      "summary": "O comprador relata que o contador de minutos do cronógrafo não volta a zero, enquanto segundos e horas zeram. O revendedor diz que é comum a todas as réplicas de Speedmaster, sem confirmação independente.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://www.reddit.com/r/RepTime/new/.rss",
-          "title": "First rep HKF Speedmaster racing… minute hand chrono doesn't reset (r/RepTime)",
+          "title": "First rep HKF Speedmaster racing ... minute hand chrono dial doesn't reset",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-12-orf-seamaster-300m-branco",
+      "date": "2026-10-12",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Omega",
+      "model": "Seamaster Diver 300M (mostrador branco)",
+      "factory": "ORF",
+      "title": "Seamaster 300M branco: vermelho da ORF mais fiel que o da VSF",
+      "summary": "Um usuário diz que o texto vermelho do mostrador branco da ORF é igual ao do genuíno, enquanto o da VSF puxa para o laranja.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/new/.rss",
+          "title": "ORF SEAMASTER WHITE DIAL",
           "site": "reddit.com",
           "type": "reddit",
           "bias": "enthusiast"
@@ -98,7 +105,7 @@
       "model": "Sky-Dweller (várias referências)",
       "factory": "PPMF",
       "title": "Fábrica nova PPMF anuncia linha de Sky-Dweller",
-      "summary": "A PPMF, fábrica nova, divulgou fotos de vários Sky-Dweller em metais e cores de mostrador diferentes, sem dados de movimento nem confirmação de que as complicações funcionam. A primeira reação achou o ouro amarelo com tom 'cheddar' demais.",
+      "summary": "A PPMF, fábrica nova, anunciou vários Sky-Dweller em metais e cores de mostrador diferentes, só com fotos. Ainda não há dados de movimento nem se as complicações funcionam, e o primeiro comentário achou o ouro amarelo com tom de 'cheddar'.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -107,7 +114,7 @@
           "title": "PPMF Releasing Rolex SkyDweller Models",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -119,8 +126,8 @@
       "brand": "Audemars Piguet",
       "model": "Code 11.59 15210",
       "factory": "APKF",
-      "title": "APKF lança série Code 11.59 15210, com desvios já apontados por dono",
-      "summary": "Um dono com um mês de uso considera 'bom o suficiente', mas aponta o disco de data preto (cinza no genuíno), o logo aplicado 'Audemars Piguet' grosso demais e o rehaut mais fundo, estes dois últimos comuns a todos os APK. Outro membro acha o anel interno azul saturado demais.",
+      "title": "APKF lança a série Code 11.59 15210, com desvios já apontados",
+      "summary": "Um dono que usa a peça há um mês diz que é 'boa o bastante', mas aponta diferenças: o disco de data é preto, quando no genuíno é cinza, o 'Audemars Piguet' aplicado é grosso demais e o rehaut é mais fundo. Outro membro acha o anel interno azul saturado demais.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -129,20 +136,20 @@
           "title": "APKF Releasing Code 11.59 15210 Series",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
     {
-      "id": "2026-10-10-desconhecida-yacht-master-ii-7750",
+      "id": "2026-10-10-indefinida-yacht-master-ii-7750",
       "date": "2026-10-10",
       "kind": "lancamento",
       "tone": "negativo",
       "brand": "Rolex",
       "model": "Yacht-Master II (2026)",
-      "factory": "Não identificada",
-      "title": "Yacht-Master II '2026' aparece com base 7750, sem fábrica nomeada",
-      "summary": "A ficha técnica fala em movimento cronógrafo 7750, 44 mm e 13 mm de espessura, sem fábrica nomeada nem respostas. A base 7750, em vez de um mecanismo de regata, indica réplica de baixo nível.",
+      "factory": "Indefinida",
+      "title": "Yacht-Master II '2026' aparece com movimento 7750 genérico",
+      "summary": "A ficha técnica mostra base 7750 de cronógrafo comum, caixa de 44×13 mm e nenhuma fábrica identificada. O movimento não reproduz a regata do genuíno, o que indica peça de baixo nível.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -156,24 +163,24 @@
       ]
     },
     {
-      "id": "2026-10-10-vsf-gmt-queda-qualidade",
+      "id": "2026-10-10-vsf-gmt-lotes-recentes",
       "date": "2026-10-10",
       "kind": "defeito",
       "tone": "negativo",
       "brand": "Rolex",
-      "model": "GMT-Master II (lotes recentes)",
+      "model": "GMT-Master II (linha 1267xx)",
       "factory": "VSF",
-      "title": "Relatos de queda de qualidade nos GMT VSF desde o lote 5X",
-      "summary": "Relatos de peças misturadas, cristais desalinhados, vedações ruins e luneta sem os recortes fresados do genuíno. Em outubro surgiram anel branco de refração na borda do cristal, guarda-coroa mal formado, rehaut curvo e, no Daytona de série '6W', vedação leitosa.",
+      "title": "Membros relatam queda de qualidade nos lotes recentes do VSF GMT",
+      "summary": "Membros dizem que, desde o lote '5X**', a VSF mistura peças, monta cristais desalinhados e usa luneta sem os recortes fresados do genuíno. Em outubro surgiram relatos de anel branco por refração na borda do cristal, guarda-coroas mal formados e rehaut curvo.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/vsf-gmt-quality-pouring-down-the-drain%E2%80%A6-stop-praising-it-please.11051369/",
-          "title": "VSF GMT Quality pouring down the drain… (stop praising it! - please)",
+          "title": "VSF GMT Quality pouring down the drain…",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -183,32 +190,32 @@
       "kind": "comparativo",
       "tone": "positivo",
       "brand": "Rolex",
-      "model": "Bracelete Jubilee two-tone 20 mm (elos centrais)",
+      "model": "Bracelete Jubilee bicolor 20mm",
       "factory": "WSO/eWatch (aftermarket)",
-      "title": "Elos Jubilee aftermarket de ouro 14k quase iguais aos genuínos de 18k",
-      "summary": "Os elos centrais de ouro 14k maciço ficam só um pouco mais claros que os de 18k genuínos e têm diferença de peso mínima. A principal diferença é o acabamento: o genuíno não tem nenhuma aresta viva ao toque.",
+      "title": "Elos centrais em ouro 14k aftermarket × Jubilee genuíno 18k",
+      "summary": "O ouro genuíno é um pouco mais escuro e a diferença de peso é mínima. A diferença principal é o acabamento: o elo genuíno não tem nenhuma aresta viva ao passar o dedo, e o aftermarket tem.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/rolex-gen-2-tone-jubliee-mid-links-vs-wso-ewatch-14kt-2tone-links.11055141/",
-          "title": "ROLEX GEN 2 tone jubilee MID LINKS VS WSO EWATCH 14kt 2tone links",
+          "title": "ROLEX GEN 2 tone jubilee MID LINKS VS WSO EWATCH 14kt",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
     {
-      "id": "2026-10-10-qf-126502-esmalte",
+      "id": "2026-10-10-qf-126502-mostrador-luneta",
       "date": "2026-10-10",
       "kind": "comparativo",
       "tone": "negativo",
       "brand": "Rolex",
-      "model": "Daytona 126502 (Rolesium, esmalte branco)",
+      "model": "Daytona 126502 (Rolesium)",
       "factory": "QF",
-      "title": "Daytona 126502: mostrador QF sem a profundidade do esmalte genuíno",
-      "summary": "A luneta de série sai preta ou cinza demais, contra o cinza metálico da luneta de platina do genuíno. O mostrador QF 'chega perto', mas não tem o efeito 3D arredondado do esmalte em camadas. Ninguém tem um genuíno para servir de base.",
+      "title": "QF 126502: luneta e esmalte do mostrador longe do genuíno",
+      "summary": "A luneta de fábrica sai preta ou cinza demais, enquanto a do genuíno é monobloco de platina cinza metálico. O mostrador da QF chega perto, mas não tem o efeito 3D arredondado do esmalte em várias camadas do genuíno.",
       "catalogRank": 150,
       "status": "observacao",
       "sources": [
@@ -217,20 +224,20 @@
           "title": "Rolex Daytona Rolesium 126502 - likelihood of rep?",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
     {
-      "id": "2026-10-09-desconhecida-ap-15605-15600ti-15600ce",
+      "id": "2026-10-09-indefinida-ap-15605-15600",
       "date": "2026-10-09",
       "kind": "lancamento",
       "tone": "neutro",
       "brand": "Audemars Piguet",
       "model": "Royal Oak 15605 / 15600Ti / 15600CE",
-      "factory": "Não identificada",
-      "title": "Teaser chinês anuncia réplicas do Royal Oak 15605, 15600Ti e 15600CE",
-      "summary": "Um cartaz de site chinês anuncia para breve as versões em aço, titânio e cerâmica, mas não diz qual é a fábrica. Membros lembram que as tentativas anteriores dessas referências foram fracas.",
+      "factory": "Indefinida",
+      "title": "Cartaz chinês anuncia clones dos Royal Oak 15605, 15600Ti e 15600CE",
+      "summary": "Um teaser de site chinês anuncia os Royal Oak 15605, 15600 em titânio e 15600 em cerâmica, sem dizer a fábrica. Membros lembram que tentativas anteriores nessas referências foram fracas.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -239,6 +246,79 @@
           "title": "15605, 15600Ti and 15600CE coming soon",
           "site": "forum.replica-watch.info",
           "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-vsf-falsos-vsf",
+      "date": "2026-10-09",
+      "kind": "fabrica",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "",
+      "factory": "VSF",
+      "title": "Peças vendidas como VSF que vêm de outras fábricas",
+      "summary": "No fórum, compradores relatam desconfiança de relógios vendidos como VSF, e a orientação é conferir o número de série no rehaut e o código do fecho. Segundo a Susan Reviews, alguns vendedores cobram por VS e entregam peças de outras fábricas, por exemplo no Datejust V2 (o legítimo pesa cerca de 135 g e tem 8 elos de cada lado).",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/fake-vsf.11055054/",
+          "title": "Fake VSF?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        },
+        {
+          "url": "https://www.susanreviews.com/2026/10/",
+          "title": "Susan Reviews — outubro 2026",
+          "site": "susanreviews.com",
+          "type": "blog",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-3bf-daytona-le-mans",
+      "date": "2026-10-09",
+      "kind": "fabrica",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Daytona Le Mans 126529LN",
+      "factory": "3BF",
+      "title": "Fábrica desconhecida '3BF' aparece com Daytona Le Mans",
+      "summary": "Um revendedor passou a oferecer um Daytona Le Mans atribuído a uma fábrica chamada '3BF'. Ninguém no fórum conhece a fábrica nem confirmou qualidade.",
+      "catalogRank": 13,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/rolex-daytona-le-mans-usine-3bf.11055005/",
+          "title": "Rolex daytona le Mans, usine 3BF",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-ccf-vc-4600v",
+      "date": "2026-10-09",
+      "kind": "lancamento",
+      "tone": "negativo",
+      "brand": "Vacheron Constantin",
+      "model": "Overseas 4600V",
+      "factory": "CCF (CC Factory)",
+      "title": "CC Factory faz Overseas 4600V de nível intermediário com Miyota 9015",
+      "summary": "A caixa tem cerca de 35 mm e o movimento é Miyota 9015, mas o balanço fica às 6h, posição errada que denuncia a réplica pelo fundo. O sunburst é fraco, há falhas de impressão e o lume é esverdeado nos índices e branco nos ponteiros.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.wristwatchspot.com/2026/10/09/cc-factory-replica-vacheron-constantin-4600v/",
+          "title": "CC Factory Replica Vacheron Constantin 4600V",
+          "site": "wristwatchspot.com",
+          "type": "blog",
           "bias": "enthusiast"
         }
       ]
@@ -268,28 +348,6 @@
           "title": "Susan Reviews – Grey Daytona 126519 VS vs standard quality",
           "site": "susanreviews.com",
           "type": "blog",
-          "bias": "neutral"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-09-3bf-daytona-le-mans",
-      "date": "2026-10-09",
-      "kind": "fabrica",
-      "tone": "neutro",
-      "brand": "Rolex",
-      "model": "Daytona Le Mans",
-      "factory": "3BF",
-      "title": "Nome novo '3BF' aparece em catálogo de revendedor com Daytona Le Mans",
-      "summary": "Um membro pergunta se a fábrica '3BF', que aparece num revendedor oferecendo o Daytona Le Mans, é conhecida. Ninguém respondeu sobre a qualidade, então é uma fábrica nova sem avaliação.",
-      "catalogRank": null,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://forum.replica-watch.info/threads/rolex-daytona-le-mans-usine-3bf.11055005/",
-          "title": "Rolex daytona le Mans, usine 3BF",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
           "bias": "neutral"
         }
       ]
@@ -478,15 +536,15 @@
       ]
     },
     {
-      "id": "2026-10-08-a7f-v7-renomeada",
+      "id": "2026-10-08-a7f-rename-v7",
       "date": "2026-10-08",
       "kind": "fabrica",
       "tone": "neutro",
-      "brand": "IWC",
+      "brand": "",
       "model": "",
-      "factory": "A7F (ex-V7F)",
-      "title": "V7 volta como A7: troca de nome confirmada por revendedores",
-      "summary": "Segundo revendedores citados no fórum, 'a V7 virou A7', com a mesma qualidade. A comparação da Susan Reviews entre o Ingenieur V7 antigo e o A7 achou pequenas diferenças de impressão ('U', 'INGENIEUR', 'SWISS MADE') e de gravação do fecho.",
+      "factory": "A7F (ex-V7F?)",
+      "title": "V7 'virou' A7, mas a ligação entre as duas não está provada",
+      "summary": "Segundo revendedores citados no fórum, a V7 voltou com o nome A7 e a mesma qualidade. A WristWatchSpot lembra que MZ e G7 já tinham feito a mesma alegação de renascimento da V7 e trata a ligação como não comprovada.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -495,33 +553,33 @@
           "title": "A7F Releasing IWC Ingenieur 50th Anniversary Edition",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         },
         {
-          "url": "https://www.susanreviews.com/",
-          "title": "Susan Reviews – A7 vs V7",
-          "site": "susanreviews.com",
+          "url": "https://www.wristwatchspot.com/2026/09/18/v7-is-back/",
+          "title": "V7 is Back?",
+          "site": "wristwatchspot.com",
           "type": "blog",
-          "bias": "neutral"
+          "bias": "enthusiast"
         }
       ]
     },
     {
-      "id": "2026-10-08-vsf-rcf-day-date-228238",
+      "id": "2026-10-08-vsf-228238-vs-gen-vs-rcf",
       "date": "2026-10-08",
       "kind": "comparativo",
       "tone": "positivo",
       "brand": "Rolex",
-      "model": "Day-Date 40 228238 (mostrador verde)",
-      "factory": "VSF × RCF",
-      "title": "Day-Date verde: VS mais perto do genuíno que RC na cor e no ouro",
-      "summary": "No comparativo chinês traduzido, o verde e a altura da coroa do VS ficam iguais ao genuíno, e o banho fica só um pouco mais avermelhado. O RC tem mostrador escuro demais, coroa saliente e ouro esverdeado. A fonte talvez seja promocional da VS.",
+      "model": "Day-Date 40 228238 (verde)",
+      "factory": "VSF",
+      "title": "Day-Date 228238: VSF mais perto do genuíno que a RCF",
+      "summary": "No comparativo, a VSF tem verde e altura de coroa próximos do genuíno e banho só um pouco mais avermelhado. A RCF tem mostrador escuro demais, coroa saliente e ouro esverdeado. A fonte original é chinesa e pode ser promocional da VSF.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/vsf-with-the-best-gold-tone-gen-vs-vsf-vs-rcf-gold-daydate-comparison.11054949/",
-          "title": "VSF With the Best Gold Tone??? GEN vs VSF vs RCF Gold Daydate Comparison!",
+          "title": "VSF With the Best Gold Tone??? GEN vs VSF vs RCF",
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "enthusiast"
@@ -536,14 +594,14 @@
       "brand": "Rolex",
       "model": "GMT-Master II 126710GRNR (Bruce Wayne)",
       "factory": "Clean",
-      "title": "BW da Clean ao lado do genuíno: luneta e fonte 'DW' denunciam",
-      "summary": "Num comparativo lado a lado, membros identificaram o genuíno com facilidade pelo tom de cinza da luneta e pela fonte do 'DW' no mostrador, mesmo sendo uma das últimas unidades Clean antes da batida policial.",
+      "title": "Clean Bruce Wayne lado a lado com o genuíno: membros acertam qual é qual",
+      "summary": "Os membros identificaram o genuíno sem dificuldade. O cinza da luneta e a fonte 'DW' do mostrador continuam entregando a Clean, uma das últimas peças de antes do raid.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/clean-vs-gen-bw-gmt-master-2-new-member.11054927/",
-          "title": "Clean vs Gen BW GMT Master 2 (New Member)",
+          "title": "Clean vs Gen BW GMT Master 2",
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
@@ -580,8 +638,8 @@
       "brand": "IWC",
       "model": "Ingenieur Automatic 40 50th Anniversary (mostrador cinza)",
       "factory": "A7F",
-      "title": "A7F lança Ingenieur 50 anos com 2892 ou opção SW300",
-      "summary": "A A7F lançou o Ingenieur 40 edição 50 anos com mostrador cinza e movimento tipo 2892, e os revendedores também oferecem opção SW300. Membros desconfiam que as fotos promocionais mostrem o genuíno usado como amostra; as primeiras fotos de QC saíram em 09/10.",
+      "title": "A7F lança o Ingenieur 50 anos com movimento tipo 2892",
+      "summary": "O Ingenieur 40 edição de 50 anos sai com movimento tipo 2892, e há opção de SW300 suíço. Membros questionam se as fotos promocionais mostram a peça da fábrica ou o genuíno usado de amostra, e as primeiras fotos de QC saíram em 09/10.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -590,7 +648,7 @@
           "title": "A7F Releasing IWC Ingenieur 50th Anniversary Edition",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -603,7 +661,7 @@
       "model": "Pilot's Watch Chronograph (azul e verde)",
       "factory": "OCTA",
       "title": "OCTA vai retomar a linha IWC da APSF, começando pelo Pilot Chrono",
-      "summary": "A OCTA quer trazer de volta toda a linha IWC que era da APSF. Os primeiros são os Pilot Chronograph azul e verde com movimento Dandong, com a meta de ficar o mais perto possível das antigas versões APSF. Cerâmica e titânio virão depois, aos poucos.",
+      "summary": "A OCTA estaria trazendo de volta toda a linha IWC que a APSF fazia. Os primeiros são os Pilot Chronograph azul e verde com movimento Dandong, com a meta de ficar o mais perto possível das antigas versões da APSF. As versões em cerâmica e titânio viriam aos poucos.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -612,20 +670,20 @@
           "title": "OCTA Bringing Back APSF IWC Reps with Clone Dandong Movements",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
     {
-      "id": "2026-10-07-gh-jlc-master-control-perpetual",
+      "id": "2026-10-07-ghf-jlc-master-control-perpetual",
       "date": "2026-10-07",
       "kind": "lancamento",
       "tone": "neutro",
       "brand": "Jaeger-LeCoultre",
       "model": "Master Control Chronometre Perpetual Calendar",
-      "factory": "GH",
-      "title": "GH Factory lança JLC Master Control calendário perpétuo",
-      "summary": "A espessura da caixa e dos anéis dos submostradores foi elogiada, mas a cor do mostrador parece fora do genuíno. Membros duvidam que todas as complicações funcionem, lembrando os atalhos da GH nas versões com reserva de marcha.",
+      "factory": "GHF",
+      "title": "GH Factory clona o Master Control Calendário Perpétuo",
+      "summary": "A espessura da caixa e os anéis dos submostradores parecem certos, mas a cor do mostrador estaria bem diferente do genuíno. Há dúvida se as complicações funcionam de verdade, já que a GHF cortou caminho nas versões com reserva de marcha.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -634,7 +692,7 @@
           "title": "GH Factory JLC Master Control Chronometre Perpetual Calendar",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -644,10 +702,10 @@
       "kind": "defeito",
       "tone": "negativo",
       "brand": "Patek Philippe",
-      "model": "Nautilus 5711 (mostrador custom aftermarket)",
+      "model": "Nautilus 5711 (mostrador custom)",
       "factory": "Aftermarket (custom)",
-      "title": "Mostradores custom de 5711 com falhas de impressão e índices",
-      "summary": "Num QC de dois mostradores custom, um não tem um ponto da minuteria e tem o índice das 9h caído, e o outro tem lume grosso no marcador das 10h. O revendedor reconheceu e pediu reposição à fábrica.",
+      "title": "Mostradores custom de 5711 chegam com falhas de impressão e índice",
+      "summary": "Um dos mostradores veio sem um ponto na minuteria e com o índice das 9h caído, e o outro com lume grosso e estranho no marcador das 10h. O revendedor reconheceu o defeito e pediu reposição à fábrica.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -668,8 +726,8 @@
       "brand": "",
       "model": "",
       "factory": "VSF",
-      "title": "VSF com atrasos de meses e falta de estoque generalizada",
-      "summary": "Lançamentos como o Planet Ocean azul, o Seamaster Bond 50 anos, o PAM 1697 e vários Rolex estão com espera que passou de semanas para meses, algo inédito fora de períodos de batida policial. No r/RepTime há relatos de 3 a 4 meses de espera por QC do Explorer.",
+      "title": "VSF tem atrasos de meses e falta de estoque em vários lançamentos",
+      "summary": "Esperas que deviam ser de semanas viraram meses, sem atualização, no Planet Ocean azul novo, no Seamaster Bond 50 anos, no PAM 1697 e em vários Rolex. Membros dizem que um atraso assim só foi visto antes em épocas de raid.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -678,14 +736,7 @@
           "title": "What's happening at VSF factory ??",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
-        },
-        {
-          "url": "https://www.reddit.com/r/RepTime/new/.rss",
-          "title": "Alternatives to VSF for Explorer (r/RepTime)",
-          "site": "reddit.com",
-          "type": "reddit",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -697,8 +748,8 @@
       "brand": "Rolex",
       "model": "Datejust 36 (azul sunburst)",
       "factory": "Clean",
-      "title": "DJ36 Clean com índice das 9h torto e falta de mostradores de reposição",
-      "summary": "Um dono relata o índice aplicado das 9h torto e quase nenhuma oferta de mostrador aftermarket para o DJ36 azul. A única saída seria comprar um VSF, ERF ou ARF completo, que também pode vir com imperfeições.",
+      "title": "Clean DJ36 com índice das 9h torto e quase nenhum mostrador de reposição",
+      "summary": "O dono relata o índice aplicado das 9h visivelmente torto. Praticamente não há mostrador aftermarket para o DJ36, já que a SW não fabrica, e as opções VSF, ERF e ARF também teriam mostradores imperfeitos.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -785,8 +836,8 @@
       "brand": "Patek Philippe",
       "model": "Aquanaut 5167 DIW (carbono, várias cores)",
       "factory": "SF (Sonic Factory)",
-      "title": "Sonic Factory leva o estilo DIW de carbono ao Aquanaut 5167",
-      "summary": "A Sonic lançou versões customizadas de carbono do 5167 em laranja, areia, vermelho/branco e amarelo. A recepção foi majoritariamente de deboche e não há dados de qualidade.",
+      "title": "Sonic Factory lança Aquanaut 5167 customizado 'DIW' em carbono",
+      "summary": "A Sonic Factory lançou Aquanaut 5167 customizados em carbono, nas cores laranja, areia, vermelho/branco e amarelo, que não existem no genuíno. A reação do fórum foi quase toda de deboche, e ninguém trouxe dados de qualidade.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -795,7 +846,7 @@
           "title": "PP Aquanaut 5167 Orange DIW SONIC Factory SF",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -807,14 +858,14 @@
       "brand": "Cartier",
       "model": "Tank Américaine Small WSTA0043",
       "factory": "8848F (K11F)",
-      "title": "8848F Tank Américaine Small aprovado após 6 meses de uso",
-      "summary": "O revisor considera a recriação fiel, com falhas pequenas: microtexto um pouco grosso, cor mais apagada, sunburst fraco e coroa de formato diferente. As pulseiras de fábrica são muito ruins. A 8848F segue competitiva com AF e BVF.",
+      "title": "8848F Tank Américaine Small é fiel após 6 meses de uso",
+      "summary": "Depois de mais de 6 meses de uso, a peça é descrita como recriação fiel, com microtexto um pouco grosso, cor mais apagada, sunburst fraco e coroa de formato diferente. As pulseiras de fábrica são muito ruins, mas a 8848F segue competitiva com AF e BVF.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/review-8848f-tank-americaine-small-wsta0043-and-af-tank-americaine-medium-wsta0017%F0%9F%90%88.11054644/",
-          "title": "Review: 8848F Tank Americaine Small WSTA0043 and AF Tank Americaine Medium WSTA0017",
+          "title": "Review: 8848F Tank Americaine Small and AF Tank Americaine Medium",
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
@@ -829,14 +880,14 @@
       "brand": "Cartier",
       "model": "Tank Américaine Medium WSTA0017",
       "factory": "AF",
-      "title": "AF Tank Américaine Medium reprovado: mostrador curvo e ponteiro de quartzo",
-      "summary": "Numa revisão de longo prazo, o mostrador curvo e o tique de quartzo do ponteiro de segundos denunciam a réplica, e o modelo 'fica abaixo do mínimo aceitável'. Os tamanhos Small e Large da AF não parecem ter esses problemas.",
+      "title": "AF Tank Américaine Medium fica abaixo do mínimo aceitável",
+      "summary": "O mostrador curvo e o ponteiro de segundos com tique de quartzo denunciam a réplica, e o review a classifica abaixo do padrão mínimo. As fotos de QC dos tamanhos Small e Large da AF não parecem ter esses problemas.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/review-8848f-tank-americaine-small-wsta0043-and-af-tank-americaine-medium-wsta0017%F0%9F%90%88.11054644/",
-          "title": "Review: 8848F Tank Americaine Small WSTA0043 and AF Tank Americaine Medium WSTA0017",
+          "title": "Review: 8848F Tank Americaine Small and AF Tank Americaine Medium",
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
@@ -844,15 +895,15 @@
       ]
     },
     {
-      "id": "2026-10-03-vsf-15510-vs-zf-octa",
+      "id": "2026-10-03-vsf-15510-vs-zf-apsf",
       "date": "2026-10-03",
       "kind": "comparativo",
       "tone": "neutro",
       "brand": "Audemars Piguet",
       "model": "Royal Oak 15510",
-      "factory": "VSF × ZF × APSF/OCTA",
-      "title": "Royal Oak 15510: tapisserie da VSF à frente, movimento free-sprung dos rivais",
-      "summary": "Membros apontam o mostrador tapisserie da VSF como melhor que o de ZF e APSF/OCTA, e o 15510 VSF como 'número um' hoje. O contraponto é que os rivais têm movimento free-sprung real, e mods comuns continuam sendo polir o bracelete, banhar o rotor e trocar o cristal.",
+      "factory": "VSF",
+      "title": "Royal Oak 15510: VSF ganha na tapisserie, ZF e APSF/OCTA no movimento",
+      "summary": "Membros apontam o VSF 15510 como o número um atual pela tapisserie do mostrador, melhor que a de ZF e APSF/OCTA. Em compensação, as concorrentes têm balanço free-sprung de verdade, e o consenso é que o mostrador pesa mais.",
       "catalogRank": 140,
       "status": "observacao",
       "sources": [
@@ -861,7 +912,7 @@
           "title": "Questions about VSF 15500/15510, modding and options",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -988,19 +1039,19 @@
       "kind": "lancamento",
       "tone": "neutro",
       "brand": "Patek Philippe",
-      "model": "Nautilus 5810G-001 50th Anniversary (azul texturizado)",
+      "model": "Nautilus 5810G-001 50º Aniversário (azul texturizado)",
       "factory": "PPF",
-      "title": "PPF lança Nautilus 5810G de 50 anos com clone do cal. 240",
-      "summary": "A PPF lançou o 5810G com mostrador azul texturizado, em pulseira de compósito ou bracelete de aço e movimento micro-rotor PPF 240. Por ora só há fotos, sem avaliação em mãos.",
+      "title": "PPF lança o Nautilus 5810G de 50 anos com clone do calibre 240",
+      "summary": "O Nautilus 5810G de 50 anos, com mostrador azul texturizado, sai em pulseira compósita ou bracelete de aço, com clone do calibre 240 de micro-rotor. Por enquanto só há fotos de divulgação, sem avaliação de quem tenha a peça.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://forum.replica-watch.info/threads/new-release-nautilus-5810g-001-50th-anniversary-ppf-1-1-blue-textured-dial.11054503/",
-          "title": "New Release - Nautilus 5810G-001 50th Anniversary PPF 1:1 Blue Textured Dial",
+          "title": "New Release - Nautilus 5810G-001 50th Anniversary PPF",
           "site": "forum.replica-watch.info",
           "type": "forum",
-          "bias": "enthusiast"
+          "bias": "neutral"
         }
       ]
     },
@@ -1011,9 +1062,9 @@
       "tone": "positivo",
       "brand": "Patek Philippe",
       "model": "Nautilus 5711/1A (azul)",
-      "factory": "BBF × DDF",
-      "title": "BBF adota clone 330 com parada de segundos; DDF melhora degradê do mostrador",
-      "summary": "A BBF passou a usar o clone do 330 com parada de segundos, que a DDF já tinha, e a 3K deve seguir. No comparativo, a DDF tem degradê mais natural e gravações do movimento mais profundas e limpas, enquanto a BBF tem mostrador mais escuro e gravações rasas.",
+      "factory": "BBF",
+      "title": "BBF adota o clone do calibre 330 com parada de segundos no 5711",
+      "summary": "A BBF passou a usar o clone do 330 com parada de segundos (hacking), que a DDF já tinha. Segundo o blog, a 3K deve lançar o mesmo em breve.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -1022,20 +1073,20 @@
           "title": "Nautilus 5711 BBF vs DDF",
           "site": "wristwatchspot.com",
           "type": "blog",
-          "bias": "neutral"
+          "bias": "enthusiast"
         }
       ]
     },
     {
-      "id": "2026-10-02-bbf-ddf-5711-330-hacking",
+      "id": "2026-10-02-ddf-bbf-5711-comparativo",
       "date": "2026-10-02",
       "kind": "comparativo",
-      "tone": "positivo",
+      "tone": "neutro",
       "brand": "Patek Philippe",
-      "model": "Nautilus 5711/1A (Azul)",
-      "factory": "BBF × DDF",
-      "title": "Nautilus 5711: BBF também passa a usar o clone 330 com parada de segundos",
-      "summary": "A BBF adotou o clone 330 com parada de segundos, como a DDF já tinha feito, e a 3K deve seguir. No comparativo, a DDF tem azul mais claro e com degradê mais natural e gravações do movimento mais fundas. A BBF tem mostrador mais escuro e gravações rasas.",
+      "model": "Nautilus 5711/1A (azul)",
+      "factory": "DDF / BBF",
+      "title": "Nautilus 5711: DDF × BBF",
+      "summary": "A DDF tem azul mais claro com degradê mais natural, impressão mais grossa (com duas variantes de 'PATEK PHILIPPE GENEVE') e gravações do movimento mais fundas e limpas. A BBF tem mostrador mais escuro e gravações mais rasas.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -1341,9 +1392,9 @@
       "tone": "neutro",
       "brand": "Vacheron Constantin",
       "model": "Overseas 4500V",
-      "factory": "MKS × PPF",
-      "title": "4500V MKS × PPF: balanço já às 8h nas duas, gravações divergem",
-      "summary": "As duas fábricas corrigiram o balanço para as 8h, como no genuíno. A MKS tem gravações profundas na ponte e engrenagens que giram com o rotor, enquanto na PPF as gravações são rasas, quase impressas, e as engrenagens ficam fixas. Há relatos de alto índice de reparo na PPF.",
+      "factory": "MKS / PPF",
+      "title": "Overseas 4500V: MKS × PPF, os dois agora com balanço na posição certa",
+      "summary": "MKS e PPF agora põem o balanço às 8h, como no genuíno; antes ficava às 6h. A MKS grava fundo o logo e o 'VACHERON CONSTANTIN 5100/1', enquanto a PPF grava raso, com aspecto de impresso. A autora também cita relatos de taxa alta de conserto no movimento da PPF.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -1352,7 +1403,7 @@
           "title": "VC 4500V MKS vs PPF",
           "site": "susanreviews.com",
           "type": "blog",
-          "bias": "neutral"
+          "bias": "enthusiast"
         }
       ]
     },

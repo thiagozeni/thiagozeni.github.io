@@ -87,6 +87,31 @@
       ]
     },
     {
+      "key": "audemarspiguet|15510bcoo1320bc04",
+      "brand": "Audemars Piguet",
+      "ref": "15510BC.OO.1320BC.04",
+      "label": "Audemars Piguet Royal Oak Selfwinding 41 (white gold)",
+      "factories": [
+        "VSF",
+        "ZF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Royal Oak Selfwinding 41 (white gold)",
+        "released": "2025-06"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
       "key": "rolex|134303",
       "brand": "Rolex",
       "ref": "134303",
@@ -289,29 +314,6 @@
       ]
     },
     {
-      "key": "audemarspiguet|15510bcoo1320bc04",
-      "brand": "Audemars Piguet",
-      "ref": "15510BC.OO.1320BC.04",
-      "label": "Audemars Piguet Royal Oak Selfwinding 41 (white gold)",
-      "factories": [
-        "ZF"
-      ],
-      "stores": 1,
-      "reasons": [
-        "genuino"
-      ],
-      "genuine": {
-        "name": "Royal Oak Selfwinding 41 (white gold)",
-        "released": "2025-06"
-      },
-      "radarIds": [],
-      "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-09",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": []
-    },
-    {
       "key": "patekphilippe|58101g001",
       "brand": "Patek Philippe",
       "ref": "5810/1G-001",
@@ -415,6 +417,7 @@
       "label": "Audemars Piguet Royal Oak 15605 / 15600Ti / 15600CE",
       "factories": [
         "Desconhecida",
+        "Indefinida",
         "Não identificada"
       ],
       "stores": 0,
@@ -424,7 +427,8 @@
       "genuine": null,
       "radarIds": [
         "2026-10-09-desconhecida-royal-oak-15605-15600ti-15600ce",
-        "2026-10-09-desconhecida-ap-15605-15600ti-15600ce"
+        "2026-10-09-desconhecida-ap-15605-15600ti-15600ce",
+        "2026-10-09-indefinida-ap-15605-15600"
       ],
       "firstSeen": "2026-10-12",
       "lastSignal": "2026-10-12",
@@ -510,6 +514,28 @@
         "/media/alerta/al-5810g-tk-1.jpg",
         "/media/alerta/al-5810g-tk-2.jpg"
       ]
+    },
+    {
+      "key": "vacheronconstantin|4600v",
+      "brand": "Vacheron Constantin",
+      "ref": "4600V",
+      "label": "Vacheron Constantin Overseas 4600V",
+      "factories": [
+        "CCF (CC Factory)"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-10-09-ccf-vc-4600v"
+      ],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
     },
     {
       "key": "patekphilippe|5990",
