@@ -1424,29 +1424,17 @@
       "reviewedAt": "2026-10-09T23:55:28.219Z"
     },
     "Royal Oak Offshore 26420 Chronograph": {
+      "rank": 124,
       "verdict": "incerto",
       "bestImageId": null,
-      "factoryResolved": true,
-      "collectedFactory": "APSF",
-      "collectedCount": 5,
-      "reasoning": "Mídia factory-correta (APSF) coletada e validada (5 fotos).",
-      "quarantineReason": "brand-mismatch: registro=Rolex, catálogo=Audemars Piguet; missing-local-file: /media/img/f-124-3a9a6bb3.jpg",
-      "quarantinedAt": "2026-07-10T22:10:47.469Z",
-      "wrongIds": [
-        "f-124-3a9a6bb3",
-        "f-124-7f74118a",
-        "f-124-75e2d8d1",
-        "f-124-3e8523be",
-        "st-124-ul-147418-3"
+      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=DDF, catálogo=APSF",
+      "candidateIds": [
+        "st-124-tk-198166-4",
+        "st-124-tk-198166-3",
+        "st-124-tk-198166-2",
+        "st-124-tk-198166-1"
       ],
-      "wrongNotes": {
-        "f-124-3a9a6bb3": "lixo: colagem de QC",
-        "f-124-7f74118a": "errada: fundo de caixa ouro rosa",
-        "f-124-75e2d8d1": "lixo: SEM IMAGEM",
-        "f-124-3e8523be": "lixo: SEM IMAGEM",
-        "st-124-ul-147418-3": "lixo: fundo da caixa/movimento"
-      },
-      "galleryAuditedAt": "2026-10-08"
+      "reviewedAt": "2026-10-12T19:01:49.923Z"
     },
     "Seamaster Diver 300M (2024 update, V4)": {
       "verdict": "incerto",
@@ -1734,7 +1722,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-10-09T23:55:28.218Z"
+      "reviewedAt": "2026-10-12T19:01:49.922Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -3963,20 +3951,20 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-10-09T23:55:28.218Z"
+      "reviewedAt": "2026-10-12T19:01:49.923Z"
     },
     "Royal Oak 15500ST": {
       "rank": 110,
-      "verdict": "rejeitado",
-      "bestImageId": null,
-      "reasoning": "Fotos mostram caixa/pulseira de cerâmica preta, não aço ST; candidata -4 sem arquivo",
+      "verdict": "confirmado",
+      "bestImageId": "hunt-royal-oak-15500st-1",
+      "reasoning": "RO de aço com mostrador azul Grande Tapisserie e data às 3h. As fotos de cerâmica preta (TK) não são ST",
       "candidateIds": [
+        "hunt-royal-oak-15500st-2",
+        "hunt-royal-oak-15500st-1",
         "st-110-tk-200255-4",
-        "st-110-tk-200255-3",
-        "st-110-tk-200255-2",
-        "st-110-tk-200255-1"
+        "st-110-tk-200255-3"
       ],
-      "reviewedAt": "2026-10-09T23:54:35.106Z"
+      "reviewedAt": "2026-10-12T19:01:06.008Z"
     },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
@@ -3984,12 +3972,12 @@
       "bestImageId": null,
       "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Omega",
       "candidateIds": [
-        "hunt-seamaster-planet-ocean-600m-2",
         "hunt-seamaster-planet-ocean-600m-1",
+        "hunt-seamaster-planet-ocean-600m-2",
         "hunt-seamaster-planet-ocean-600m-3",
         "f-119-2e19a199"
       ],
-      "reviewedAt": "2026-10-09T23:55:28.218Z"
+      "reviewedAt": "2026-10-12T19:01:49.923Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -4002,7 +3990,7 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-10-09T23:55:28.219Z"
+      "reviewedAt": "2026-10-12T19:01:49.923Z"
     },
     "Royal Oak 15510ST": {
       "rank": 117,
@@ -4015,7 +4003,7 @@
         "f-117-61214ae0",
         "f-117-0e671be6"
       ],
-      "reviewedAt": "2026-10-09T23:55:28.219Z"
+      "reviewedAt": "2026-10-12T19:01:49.923Z"
     }
   },
   "galleryAudit": {
