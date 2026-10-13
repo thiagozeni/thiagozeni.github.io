@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-13",
   "items": [
     {
       "key": "rolex|134300",
@@ -58,6 +58,35 @@
       ]
     },
     {
+      "key": "rolex|134303",
+      "brand": "Rolex",
+      "ref": "134303",
+      "label": "Rolex Oyster Perpetual 41 Yellow Rolesor",
+      "factories": [
+        "QF",
+        "VSF"
+      ],
+      "stores": 4,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Oyster Perpetual 41 Yellow Rolesor",
+        "released": "2026-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-13",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-134303-tk-1.jpg",
+        "/media/alerta/al-134303-vsf-2.jpg",
+        "/media/alerta/al-134303-vsf-3.jpg"
+      ]
+    },
+    {
       "key": "rolex|127336",
       "brand": "Rolex",
       "ref": "127336",
@@ -110,35 +139,6 @@
       "status": "observacao",
       "catalogRank": null,
       "photos": []
-    },
-    {
-      "key": "rolex|134303",
-      "brand": "Rolex",
-      "ref": "134303",
-      "label": "Rolex Oyster Perpetual 41 Yellow Rolesor",
-      "factories": [
-        "QF",
-        "VSF"
-      ],
-      "stores": 3,
-      "reasons": [
-        "genuino",
-        "lojas"
-      ],
-      "genuine": {
-        "name": "Oyster Perpetual 41 Yellow Rolesor",
-        "released": "2026-04"
-      },
-      "radarIds": [],
-      "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-09",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-134303-tk-1.jpg",
-        "/media/alerta/al-134303-vsf-2.jpg",
-        "/media/alerta/al-134303-vsf-3.jpg"
-      ]
     },
     {
       "key": "patekphilippe|71281g001",
@@ -428,15 +428,68 @@
       "radarIds": [
         "2026-10-09-desconhecida-royal-oak-15605-15600ti-15600ce",
         "2026-10-09-desconhecida-ap-15605-15600ti-15600ce",
-        "2026-10-09-indefinida-ap-15605-15600"
+        "2026-10-09-indefinida-ap-15605-15600",
+        "2026-10-09-desconhecida-15600ti-15605"
       ],
       "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-12",
+      "lastSignal": "2026-10-13",
       "status": "observacao",
       "catalogRank": null,
       "photos": [
         "/media/alerta/al-15605-py-1.webp",
         "/media/alerta/al-15605-py-2.webp"
+      ]
+    },
+    {
+      "key": "audemarspiguet|15210",
+      "brand": "Audemars Piguet",
+      "ref": "15210",
+      "label": "Audemars Piguet Code 11.59 15210",
+      "factories": [
+        "APKF"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-10-10-apkf-code1159-15210",
+        "2026-10-10-apkf-15210"
+      ],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-13",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-15210-py-1.jpg",
+        "/media/alerta/al-15210-py-2.jpg"
+      ]
+    },
+    {
+      "key": "patekphilippe|5810g",
+      "brand": "Patek Philippe",
+      "ref": "5810G",
+      "label": "Patek Philippe Nautilus 5810G-001 (50 anos, mostrador azul texturizado)",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-10-02-ppf-5810g-001",
+        "2026-10-02-ppf-5810g"
+      ],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-13",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-5810g-tk-1.jpg",
+        "/media/alerta/al-5810g-tk-2.jpg"
       ]
     },
     {
@@ -463,56 +516,6 @@
       "photos": [
         "/media/alerta/al-15300-py-1.jpg",
         "/media/alerta/al-15300-py-2.jpg"
-      ]
-    },
-    {
-      "key": "audemarspiguet|15210",
-      "brand": "Audemars Piguet",
-      "ref": "15210",
-      "label": "Audemars Piguet Code 11.59 15210",
-      "factories": [
-        "APKF"
-      ],
-      "stores": 0,
-      "reasons": [
-        "radar"
-      ],
-      "genuine": null,
-      "radarIds": [
-        "2026-10-10-apkf-code1159-15210"
-      ],
-      "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-12",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-15210-py-1.jpg",
-        "/media/alerta/al-15210-py-2.jpg"
-      ]
-    },
-    {
-      "key": "patekphilippe|5810g",
-      "brand": "Patek Philippe",
-      "ref": "5810G",
-      "label": "Patek Philippe Nautilus 5810G-001 (50 anos, mostrador azul texturizado)",
-      "factories": [
-        "PPF"
-      ],
-      "stores": 0,
-      "reasons": [
-        "radar"
-      ],
-      "genuine": null,
-      "radarIds": [
-        "2026-10-02-ppf-5810g-001"
-      ],
-      "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-12",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-5810g-tk-1.jpg",
-        "/media/alerta/al-5810g-tk-2.jpg"
       ]
     },
     {

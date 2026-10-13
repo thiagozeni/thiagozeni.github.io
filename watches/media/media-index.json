@@ -72052,6 +72052,80 @@
     }
   },
   {
+    "id": "hunt-seamaster-planet-ocean-600m-1",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
+    "source": "thevsfactory.com",
+    "sourceDomain": "thevsfactory.com",
+    "image": "https://thevsfactory.com/wp-content/uploads/2026/06/i1694185438_3406_0-1.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Main gallery image. Page title: 'VS Factory Omega Seamaster Planet Ocean 600M 43.5mm Black/Orange Dial (215.32.44.21.01.001) 1:1 Super Clone – DD8900 Movement'. VSF + 8900 + 43.5mm match the batch. Validated image/jpeg 476 KB; watermark not checked visually."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-13T03:01:29.079Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-2",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
+    "source": "thevsfactory.com",
+    "sourceDomain": "thevsfactory.com",
+    "image": "https://thevsfactory.com/wp-content/uploads/2026/06/i1694185438_221_5.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Another gallery image from the same product page (ref 215.32.44.21.01.001). Validated image/jpeg 473 KB."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-13T03:01:29.298Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
     "id": "hunt-seamaster-planet-ocean-600m-3",
     "model": "Seamaster Planet Ocean 600M",
     "brand": "Omega",
@@ -72068,14 +72142,14 @@
       "marca:Omega",
       "fabrica:VSF",
       "caca-agentica",
-      "Imagem da galeria da mesma página (215.32.44.21.01.001, VSF, 8900). Respondeu image/jpeg, 458.4KB. Não verifiquei a marca d'água visualmente."
+      "Another gallery image from the same product page. Validated image/jpeg 458 KB."
     ],
     "factoryVerified": true,
     "tags": [
       "hunt",
       "clean"
     ],
-    "collectedAt": "2026-10-12T21:31:18.511Z",
+    "collectedAt": "2026-10-13T03:01:29.745Z",
     "mediaType": "image",
     "entity": {
       "kind": "model",
@@ -72086,80 +72160,6 @@
       "height": null,
       "hasWatermark": false,
       "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-seamaster-planet-ocean-600m-1",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
-    "source": "realcleanfactory.com",
-    "sourceDomain": "realcleanfactory.com",
-    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727410592454.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
-    "confidence": 70,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Primeira imagem da galeria. Título da página: 'VS Factory Omega Seamaster Planet Ocean 600M Co-Axial Master Chronometer 43.5mm 215.30.44.21.01.002 Super Clone 8900'. A descrição cita mostrador preto brilhante de cerâmica com 6/9/12 laranja e bisel de cerâmica preta com escala laranja de 15 minutos. URL validada como image/jpeg (165,7 KB). Conteúdo da imagem não verificado visualmente."
-    ],
-    "factoryVerified": false,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-12T23:37:39.887Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 2
-    }
-  },
-  {
-    "id": "hunt-seamaster-planet-ocean-600m-2",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
-    "source": "realcleanfactory.com",
-    "sourceDomain": "realcleanfactory.com",
-    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727409438677.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
-    "confidence": 70,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Segunda imagem da galeria da mesma página (VSF 215.30.44.21.01.002, preto/laranja, 8900). URL validada como image/jpeg (290,7 KB). Conteúdo da imagem não verificado visualmente."
-    ],
-    "factoryVerified": false,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-12T23:37:40.174Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 2
     }
   }
 ]
