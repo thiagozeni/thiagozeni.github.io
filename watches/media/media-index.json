@@ -72161,5 +72161,205 @@
       "hasWatermark": false,
       "sourceTier": 1
     }
+  },
+  {
+    "id": "st-48-tk-202212-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Stick Dial on Oyster Bracelet VS3235v2 V2s (141g)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13063923/20261013_001.jpg",
+    "localImage": "/media/img/st-48-tk-202212-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:24.451Z"
+  },
+  {
+    "id": "st-48-tk-202212-2",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Stick Dial on Oyster Bracelet VS3235v2 V2s (141g)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13063923/20261013_001.jpg",
+    "localImage": "/media/img/st-48-tk-202212-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:24.503Z"
+  },
+  {
+    "id": "st-48-tk-202212-3",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Stick Dial on Oyster Bracelet VS3235v2 V2s (141g)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13063935/20261013_002.jpg",
+    "localImage": "/media/img/st-48-tk-202212-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:24.596Z"
+  },
+  {
+    "id": "st-48-tk-202212-4",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Stick Dial on Oyster Bracelet VS3235v2 V2s (141g)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13063950/20261013_003-scaled.jpg",
+    "localImage": "/media/img/st-48-tk-202212-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:24.654Z"
+  },
+  {
+    "id": "st-49-tk-202330-1",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 VSF 1:1 Best Edition 904L Steel White Roman Dial on Jubilee Bracelet VS3235 V2",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13071705/20261013_114.jpg",
+    "localImage": "/media/img/st-49-tk-202330-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:25.559Z"
+  },
+  {
+    "id": "st-49-tk-202330-2",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 VSF 1:1 Best Edition 904L Steel White Roman Dial on Jubilee Bracelet VS3235 V2",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13071705/20261013_114.jpg",
+    "localImage": "/media/img/st-49-tk-202330-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:25.601Z"
+  },
+  {
+    "id": "st-49-tk-202330-3",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 VSF 1:1 Best Edition 904L Steel White Roman Dial on Jubilee Bracelet VS3235 V2",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13071714/20261013_115.jpg",
+    "localImage": "/media/img/st-49-tk-202330-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:25.664Z"
+  },
+  {
+    "id": "st-49-tk-202330-4",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 36 SS 126234 VSF 1:1 Best Edition 904L Steel White Roman Dial on Jubilee Bracelet VS3235 V2",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/13071723/20261013_116.jpg",
+    "localImage": "/media/img/st-49-tk-202330-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-13T12:41:25.780Z"
   }
 ]

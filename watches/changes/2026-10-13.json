@@ -3,17 +3,45 @@
   "previousStamp": "2026-10-12",
   "newModels": [],
   "removedModels": [],
-  "scoreChanges": [],
-  "confidenceChanges": [],
-  "newMedia": [],
+  "scoreChanges": [
+    {
+      "rank": 137,
+      "from": 8,
+      "to": 8.14,
+      "delta": 0.14
+    }
+  ],
+  "confidenceChanges": [
+    {
+      "rank": 137,
+      "from": 40,
+      "to": 75
+    },
+    {
+      "rank": 147,
+      "from": 68,
+      "to": 76
+    }
+  ],
+  "newMedia": [
+    {
+      "rank": 48,
+      "count": 4
+    },
+    {
+      "rank": 49,
+      "count": 4
+    }
+  ],
   "newNews": [
+    "https://www.bbtwatch.com/en/dj/lspc/132143.html",
     "https://www.bbtwatch.com/en/dj/lspc/132075.html",
     "https://www.bbtwatch.com/en/dj/lspc/132065.html"
   ],
   "summary": {
     "newModels": 0,
-    "scoreChanges": 0,
-    "newMedia": 0,
-    "newNews": 2
+    "scoreChanges": 1,
+    "newMedia": 8,
+    "newNews": 3
   }
 }
