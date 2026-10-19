@@ -72052,80 +72052,6 @@
     }
   },
   {
-    "id": "hunt-seamaster-planet-ocean-600m-1",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
-    "source": "thevsfactory.com",
-    "sourceDomain": "thevsfactory.com",
-    "image": "https://thevsfactory.com/wp-content/uploads/2026/06/i1694185438_3406_0-1.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Main gallery image. Page title: 'VS Factory Omega Seamaster Planet Ocean 600M 43.5mm Black/Orange Dial (215.32.44.21.01.001) 1:1 Super Clone – DD8900 Movement'. VSF + 8900 + 43.5mm match the batch. Validated image/jpeg 476 KB; watermark not checked visually."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-13T03:01:29.079Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-seamaster-planet-ocean-600m-2",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
-    "source": "thevsfactory.com",
-    "sourceDomain": "thevsfactory.com",
-    "image": "https://thevsfactory.com/wp-content/uploads/2026/06/i1694185438_221_5.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Another gallery image from the same product page (ref 215.32.44.21.01.001). Validated image/jpeg 473 KB."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-13T03:01:29.298Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
     "id": "hunt-seamaster-planet-ocean-600m-3",
     "model": "Seamaster Planet Ocean 600M",
     "brand": "Omega",
@@ -72361,5 +72287,579 @@
       "tk"
     ],
     "collectedAt": "2026-10-13T12:41:25.780Z"
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-1",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
+    "source": "realcleanfactory.com",
+    "sourceDomain": "realcleanfactory.com",
+    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727410592454.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Main image on the page. The page names 'VS Factory ... Planet Ocean 600M ... 43.5mm 215.30.44.21.01.002 Super Clone 8900' and describes a glossy black ceramic dial, black ceramic bezel with orange 15-minute scale, and orange 6/9/12. Validated as image/jpeg (165.7KB). Pixels not inspected, so the watermark is unconfirmed."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-19T16:31:11.675Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-2",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
+    "source": "realcleanfactory.com",
+    "sourceDomain": "realcleanfactory.com",
+    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727409438677.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Second gallery image from the same VSF 215.30.44.21.01.002 page. Validated as image/jpeg (290.7KB). Pixels not inspected, so the angle and watermark are unconfirmed."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-19T16:31:11.775Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "st-48-lcw-20158-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial m126334-0021 Oyster 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/rolex-super-clone-watches-11-datejust-grey-roman-dial-m126334-0021-oyster-41mm-3235-movement.jpg",
+    "localImage": "/media/img/st-48-lcw-20158-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:13.153Z"
+  },
+  {
+    "id": "st-48-lcw-20158-2",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial m126334-0021 Oyster 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-roman-dial-m126334-0021-oyster-41mm-3235-movement-2.jpg",
+    "localImage": "/media/img/st-48-lcw-20158-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:14.577Z"
+  },
+  {
+    "id": "st-48-lcw-20158-3",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial m126334-0021 Oyster 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-roman-dial-m126334-0021-oyster-41mm-3235-movement-1.jpg",
+    "localImage": "/media/img/st-48-lcw-20158-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:16.001Z"
+  },
+  {
+    "id": "st-48-lcw-20158-4",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial m126334-0021 Oyster 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-roman-dial-m126334-0021-oyster-41mm-3235-movement-4.jpg",
+    "localImage": "/media/img/st-48-lcw-20158-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:17.377Z"
+  },
+  {
+    "id": "st-48-lcw-20148-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Dial m126334-0014 Jubilee 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/rolex-super-clone-watches-11-datejust-grey-dial-m126334-0014-jubilee-41mm-3235-movement.jpg",
+    "localImage": "/media/img/st-48-lcw-20148-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:18.788Z"
+  },
+  {
+    "id": "st-48-lcw-20148-2",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Dial m126334-0014 Jubilee 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-dial-m126334-0014-jubilee-41mm-3235-movement-9.jpg",
+    "localImage": "/media/img/st-48-lcw-20148-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:20.328Z"
+  },
+  {
+    "id": "st-48-lcw-20148-3",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Dial m126334-0014 Jubilee 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-dial-m126334-0014-jubilee-41mm-3235-movement-5.jpg",
+    "localImage": "/media/img/st-48-lcw-20148-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:21.695Z"
+  },
+  {
+    "id": "st-48-lcw-20148-4",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Dial m126334-0014 Jubilee 41MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-dial-m126334-0014-jubilee-41mm-3235-movement-1.jpg",
+    "localImage": "/media/img/st-48-lcw-20148-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:23.219Z"
+  },
+  {
+    "id": "st-48-tk-202679-1",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Dial on Jubilee Bracelet VS3235 (Free Sprung) V2 Weighted 133g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22072545/20260722_078.jpg",
+    "localImage": "/media/img/st-48-tk-202679-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-19T16:32:25.194Z"
+  },
+  {
+    "id": "st-48-tk-202679-2",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Dial on Jubilee Bracelet VS3235 (Free Sprung) V2 Weighted 133g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22072545/20260722_078.jpg",
+    "localImage": "/media/img/st-48-tk-202679-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-19T16:32:25.371Z"
+  },
+  {
+    "id": "st-48-tk-202679-3",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Dial on Jubilee Bracelet VS3235 (Free Sprung) V2 Weighted 133g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22072537/20260722_077.jpg",
+    "localImage": "/media/img/st-48-tk-202679-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-19T16:32:25.617Z"
+  },
+  {
+    "id": "st-48-tk-202679-4",
+    "model": "Datejust 41 Rhodium",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "DateJust 41 126334 904L SS VSF 1:1 Best Edition Gray Dial on Jubilee Bracelet VS3235 (Free Sprung) V2 Weighted 133g",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22072512/20260722_074.jpg",
+    "localImage": "/media/img/st-48-tk-202679-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126334",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-10-19T16:32:25.766Z"
+  },
+  {
+    "id": "st-49-lcw-20156-1",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust M126234 – 0051 Green Dial Jubilee 36MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/rolex-super-clone-watches-11-datejust-m126234-0051-green-dial-jubilee-36mm-3235-movement.jpg",
+    "localImage": "/media/img/st-49-lcw-20156-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:29.247Z"
+  },
+  {
+    "id": "st-49-lcw-20156-2",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust M126234 – 0051 Green Dial Jubilee 36MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-m126234-0051-green-dial-jubilee-36mm-3235-movement-2.jpg",
+    "localImage": "/media/img/st-49-lcw-20156-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:30.651Z"
+  },
+  {
+    "id": "st-49-lcw-20156-3",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust M126234 – 0051 Green Dial Jubilee 36MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-m126234-0051-green-dial-jubilee-36mm-3235-movement-3.jpg",
+    "localImage": "/media/img/st-49-lcw-20156-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:32.057Z"
+  },
+  {
+    "id": "st-49-lcw-20156-4",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust M126234 – 0051 Green Dial Jubilee 36MM 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-m126234-0051-green-dial-jubilee-36mm-3235-movement-6.jpg",
+    "localImage": "/media/img/st-49-lcw-20156-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:33.406Z"
+  },
+  {
+    "id": "st-49-lcw-20146-1",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial Jubilee 36MM m126234-0045 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/rolex-super-clone-watches-11-datejust-grey-roman-dial-jubilee-36mm-m126234-0045-3235-movement-2.jpg",
+    "localImage": "/media/img/st-49-lcw-20146-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:34.781Z"
+  },
+  {
+    "id": "st-49-lcw-20146-2",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial Jubilee 36MM m126234-0045 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-roman-dial-jubilee-36mm-m126234-0045-3235-movement-6.jpg",
+    "localImage": "/media/img/st-49-lcw-20146-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:36.426Z"
+  },
+  {
+    "id": "st-49-lcw-20146-3",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial Jubilee 36MM m126234-0045 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-roman-dial-jubilee-36mm-m126234-0045-3235-movement-1.jpg",
+    "localImage": "/media/img/st-49-lcw-20146-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:37.948Z"
+  },
+  {
+    "id": "st-49-lcw-20146-4",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Super Clone Watches 1:1 DateJust Grey Roman Dial Jubilee 36MM m126234-0045 3235 Movement",
+    "source": "luxuryclonewatch.com",
+    "sourceDomain": "luxuryclonewatch.com",
+    "image": "https://luxuryclonewatch.com/wp-content/uploads/2026/02/11-datejust-grey-roman-dial-jubilee-36mm-m126234-0045-3235-movement-3.jpg",
+    "localImage": "/media/img/st-49-lcw-20146-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126234",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "lcw"
+    ],
+    "collectedAt": "2026-10-19T16:32:39.622Z"
   }
 ]

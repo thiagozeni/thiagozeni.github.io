@@ -1,5 +1,19 @@
 [
   {
+    "stamp": "2026-10-19",
+    "previousStamp": "2026-10-13",
+    "summary": {
+      "newModels": 1,
+      "scoreChanges": 0,
+      "newMedia": 20,
+      "newNews": 2
+    },
+    "newModels": [
+      151
+    ],
+    "scoreChanges": []
+  },
+  {
     "stamp": "2026-10-13",
     "previousStamp": "2026-10-12",
     "summary": {

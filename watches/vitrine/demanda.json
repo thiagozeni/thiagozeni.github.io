@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-19",
   "storesRead": 11,
   "items": [
     {
@@ -11,7 +11,7 @@
         "RICH",
         "VSF"
       ],
-      "stores": 8,
+      "stores": 7,
       "catalogRanks": [
         1
       ]
@@ -26,7 +26,7 @@
         "RICH",
         "VSF"
       ],
-      "stores": 7,
+      "stores": 6,
       "catalogRanks": [
         101,
         138,
@@ -46,34 +46,6 @@
       "stores": 5,
       "catalogRanks": [
         20
-      ]
-    },
-    {
-      "key": "rolex|126610lv",
-      "brand": "Rolex",
-      "ref": "126610LV",
-      "label": "Rolex Submariner 41mm 126610LV Kermit",
-      "factories": [
-        "VSF"
-      ],
-      "stores": 5,
-      "catalogRanks": [
-        2
-      ]
-    },
-    {
-      "key": "rolex|126710blro",
-      "brand": "Rolex",
-      "ref": "126710BLRO",
-      "label": "Rolex GMT-Master II 126710BLRO",
-      "factories": [
-        "Clean",
-        "RICH",
-        "VSF"
-      ],
-      "stores": 4,
-      "catalogRanks": [
-        19
       ]
     },
     {
@@ -136,6 +108,19 @@
       ]
     },
     {
+      "key": "rolex|126610lv",
+      "brand": "Rolex",
+      "ref": "126610LV",
+      "label": "Rolex Submariner 41mm 126610LV Kermit",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 4,
+      "catalogRanks": [
+        2
+      ]
+    },
+    {
       "key": "audemarspiguet|15500",
       "brand": "Audemars Piguet",
       "ref": "15500",
@@ -150,6 +135,21 @@
         15,
         26,
         110
+      ]
+    },
+    {
+      "key": "rolex|126710blro",
+      "brand": "Rolex",
+      "ref": "126710BLRO",
+      "label": "Rolex GMT-Master II 126710BLRO",
+      "factories": [
+        "Clean",
+        "RICH",
+        "VSF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        19
       ]
     },
     {
@@ -168,18 +168,6 @@
       ]
     },
     {
-      "key": "rolex|126234",
-      "brand": "Rolex",
-      "ref": "126234",
-      "label": "Rolex DateJust Black Diamond Dial 126234 Oyster 36MM",
-      "factories": [
-        "Clean",
-        "VSF"
-      ],
-      "stores": 3,
-      "catalogRanks": []
-    },
-    {
       "key": "rolex|116506",
       "brand": "Rolex",
       "ref": "116506",
@@ -190,6 +178,20 @@
       ],
       "stores": 3,
       "catalogRanks": []
+    },
+    {
+      "key": "patekphilippe|5712",
+      "brand": "Patek Philippe",
+      "ref": "5712",
+      "label": "Patek Philippe Nautilus Moon Phase 5712 Blue Dial New Clasp",
+      "factories": [
+        "PPF",
+        "ZF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        61
+      ]
     },
     {
       "key": "rolex|116500",
@@ -204,20 +206,6 @@
       "stores": 3,
       "catalogRanks": [
         11
-      ]
-    },
-    {
-      "key": "patekphilippe|5712",
-      "brand": "Patek Philippe",
-      "ref": "5712",
-      "label": "Patek Philippe Nautilus Moon Phase 5712 Blue Dial New Clasp",
-      "factories": [
-        "PPF",
-        "ZF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        61
       ]
     },
     {
@@ -240,21 +228,6 @@
       "label": "Patek Philippe Aquanaut 5167A",
       "factories": [
         "ZF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        24,
-        102
-      ]
-    },
-    {
-      "key": "patekphilippe|5167",
-      "brand": "Patek Philippe",
-      "ref": "5167",
-      "label": "Patek Philippe Aquanaut 5167 SS Gray Dial",
-      "factories": [
-        "3KF",
-        "DDF"
       ],
       "stores": 3,
       "catalogRanks": [
@@ -287,6 +260,33 @@
       "stores": 3,
       "catalogRanks": [
         47
+      ]
+    },
+    {
+      "key": "rolex|126519",
+      "brand": "Rolex",
+      "ref": "126519",
+      "label": "Rolex Daytona 126519 Gray Dial",
+      "factories": [
+        "Clean",
+        "VSF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        137
+      ]
+    },
+    {
+      "key": "rolex|326934",
+      "brand": "Rolex",
+      "ref": "326934",
+      "label": "Rolex Sky-Dweller 326934 “Blue Dial” Super Accurate",
+      "factories": [
+        "ZF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        112
       ]
     }
   ]

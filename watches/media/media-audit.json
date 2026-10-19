@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-13T12:41:15.345Z",
-  "totalImages": 2373,
+  "generatedAt": "2026-10-19T16:31:46.045Z",
+  "totalImages": 2381,
   "summary": {
-    "models": 150,
+    "models": 151,
     "verified": 140,
     "strong": 9,
     "weak": 1,
     "rejected": 0,
-    "missing": 0,
-    "conflictsDiscarded": 388,
+    "missing": 1,
+    "conflictsDiscarded": 396,
     "coveragePct": 99
   },
   "backlog": [
@@ -17,6 +17,12 @@
       "model": "Seamaster Planet Ocean 600M",
       "brand": "Omega",
       "state": "fraco"
+    },
+    {
+      "rank": 151,
+      "model": "Royal Oak 15300 (39mm, mostrador prata)",
+      "brand": "Audemars Piguet",
+      "state": "sem-imagem"
     }
   ]
 }

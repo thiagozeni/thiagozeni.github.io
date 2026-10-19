@@ -1,0 +1,30 @@
+{
+  "stamp": "2026-10-19",
+  "previousStamp": "2026-10-13",
+  "newModels": [
+    151
+  ],
+  "removedModels": [],
+  "scoreChanges": [],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 48,
+      "count": 12
+    },
+    {
+      "rank": 49,
+      "count": 8
+    }
+  ],
+  "newNews": [
+    "https://www.bbtwatch.com/en/dj/lspc/132246.html",
+    "https://www.bbtwatch.com/en/dj/lspc/132236.html"
+  ],
+  "summary": {
+    "newModels": 1,
+    "scoreChanges": 0,
+    "newMedia": 20,
+    "newNews": 2
+  }
+}

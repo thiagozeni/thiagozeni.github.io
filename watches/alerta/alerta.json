@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-19",
   "items": [
     {
       "key": "rolex|134300",
@@ -10,7 +10,7 @@
         "QF",
         "VSF"
       ],
-      "stores": 6,
+      "stores": 8,
       "reasons": [
         "genuino",
         "lojas"
@@ -21,7 +21,7 @@
       },
       "radarIds": [],
       "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-12",
+      "lastSignal": "2026-10-19",
       "status": "observacao",
       "catalogRank": null,
       "photos": [
@@ -411,6 +411,97 @@
       ]
     },
     {
+      "key": "rolex|126234",
+      "brand": "Rolex",
+      "ref": "126234",
+      "label": "Rolex DateJust 36 SS 126234 Silver Diamonds Roman Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 4,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-19",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126234-tk-3.jpg"
+      ]
+    },
+    {
+      "key": "rolex|126333",
+      "brand": "Rolex",
+      "ref": "126333",
+      "label": "Rolex DateJust 41 126333 SS Gray Dial Green Roman Dial",
+      "factories": [
+        "QF",
+        "VSF"
+      ],
+      "stores": 4,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-10-19",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126333-tk-3.jpg"
+      ]
+    },
+    {
+      "key": "rolex|126509",
+      "brand": "Rolex",
+      "ref": "126509",
+      "label": "Rolex Daytona 126509 Blue Dial",
+      "factories": [
+        "VSF",
+        "ZF"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-10-19",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126509-tk-3.jpg"
+      ]
+    },
+    {
+      "key": "rolex|228238",
+      "brand": "Rolex",
+      "ref": "228238",
+      "label": "Rolex DayDate 40 228238 YG Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-19",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-228238-ul-1.webp",
+        "/media/alerta/al-228238-ul-2.webp"
+      ]
+    },
+    {
       "key": "audemarspiguet|15605",
       "brand": "Audemars Piguet",
       "ref": "15605",
@@ -493,32 +584,6 @@
       ]
     },
     {
-      "key": "audemarspiguet|15300",
-      "brand": "Audemars Piguet",
-      "ref": "15300",
-      "label": "Audemars Piguet Royal Oak 15300 (39mm)",
-      "factories": [
-        "ZF"
-      ],
-      "stores": 0,
-      "reasons": [
-        "radar"
-      ],
-      "genuine": null,
-      "radarIds": [
-        "2026-10-03-zf-15300",
-        "2026-09-25-zf-15300"
-      ],
-      "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-09",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-15300-py-1.jpg",
-        "/media/alerta/al-15300-py-2.jpg"
-      ]
-    },
-    {
       "key": "vacheronconstantin|4600v",
       "brand": "Vacheron Constantin",
       "ref": "4600V",
@@ -561,6 +626,32 @@
       "status": "observacao",
       "catalogRank": null,
       "photos": []
+    },
+    {
+      "key": "audemarspiguet|15300",
+      "brand": "Audemars Piguet",
+      "ref": "15300",
+      "label": "Audemars Piguet Royal Oak 15300 (39mm)",
+      "factories": [
+        "ZF"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-10-03-zf-15300",
+        "2026-09-25-zf-15300"
+      ],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-09",
+      "status": "graduado",
+      "catalogRank": 151,
+      "photos": [
+        "/media/alerta/al-15300-py-1.jpg",
+        "/media/alerta/al-15300-py-2.jpg"
+      ]
     }
   ]
 }
