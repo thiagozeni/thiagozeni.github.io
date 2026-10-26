@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-07-08T11:14:16.134Z",
   "method": "visual-review-subagents + deep-per-image (etapa4)",
-  "reviewed": 150,
+  "reviewed": 151,
   "verdicts": {
     "Seamaster Diver 300M (Preto)": {
       "rank": 12,
@@ -1750,14 +1750,14 @@
       "rank": 18,
       "verdict": "incerto",
       "bestImageId": null,
-      "reasoning": "guard determinístico rebaixou confirmação: factory-mismatch: registro=Clean (Legacy), catálogo=ARF",
+      "reasoning": "Explorer preto 3-6-9 com ponteiros lumes como na 214270, mas sem como confirmar 39mm; a 124270 de 36mm tem o mesmo mostrador",
       "candidateIds": [
         "bb-18-4",
         "bb-18-3",
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-10-19T16:31:45.781Z"
+      "reviewedAt": "2026-10-26T16:12:30.981Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -3999,7 +3999,7 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-10-19T16:31:45.780Z"
+      "reviewedAt": "2026-10-26T16:12:30.983Z"
     },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
@@ -4012,7 +4012,7 @@
         "hunt-seamaster-planet-ocean-600m-3",
         "f-119-2e19a199"
       ],
-      "reviewedAt": "2026-10-19T16:31:45.780Z"
+      "reviewedAt": "2026-10-26T16:12:30.983Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -4025,7 +4025,7 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-10-19T16:31:45.780Z"
+      "reviewedAt": "2026-10-26T16:12:30.983Z"
     },
     "Royal Oak 15510ST": {
       "rank": 117,
@@ -4038,7 +4038,7 @@
         "f-117-61214ae0",
         "f-117-0e671be6"
       ],
-      "reviewedAt": "2026-10-19T16:31:45.780Z"
+      "reviewedAt": "2026-10-26T16:12:30.983Z"
     },
     "Royal Oak Offshore 26420 Chronograph": {
       "rank": 124,
@@ -4051,7 +4051,19 @@
         "st-124-tk-198166-2",
         "st-124-tk-198166-1"
       ],
-      "reviewedAt": "2026-10-19T16:31:45.781Z"
+      "reviewedAt": "2026-10-26T16:12:30.983Z"
+    },
+    "Royal Oak 15300 (39mm, mostrador prata)": {
+      "rank": 151,
+      "verdict": "confirmado",
+      "bestImageId": "hunt-royal-oak-15300-39mm-mostrador-prata-1",
+      "reasoning": "AP Royal Oak em aço, mostrador prata tapisserie, logo AP às 12, 'Automatic', data às 3h — típico do 15300.",
+      "candidateIds": [
+        "hunt-royal-oak-15300-39mm-mostrador-prata-3",
+        "hunt-royal-oak-15300-39mm-mostrador-prata-2",
+        "hunt-royal-oak-15300-39mm-mostrador-prata-1"
+      ],
+      "reviewedAt": "2026-10-26T16:11:51.477Z"
     }
   },
   "galleryAudit": {

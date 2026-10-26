@@ -1,16 +1,513 @@
 {
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "items": [
     {
-      "id": "2026-10-19-p1f-ddf-5968",
+      "id": "2026-10-26-vsf-politica-devolucao",
+      "date": "2026-10-26",
+      "kind": "fabrica",
+      "tone": "neutro",
+      "brand": "",
+      "model": "",
+      "factory": "VSF",
+      "title": "VSF deixa de aceitar devolução de peças sem defeito a partir de 29/10",
+      "summary": "Aviso atribuído à VS Factory, reproduzido no site de um vendedor e postado no r/RepTime: a partir de 29 de outubro, peças em bom estado no envio não podem mais ser devolvidas nem trocadas.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/new/.rss",
+          "title": "VSF to no longer accept returns for products without defects (r/RepTime)",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-26-vsf-126500-luneta-110",
+      "date": "2026-10-26",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Daytona 126500LN",
+      "factory": "VSF",
+      "title": "Daytona 126500 da VSF segue com a falha \"110\" na luneta",
+      "summary": "Posts no r/RepTime citam um erro conhecido no \"110\" da escala da luneta do 126500 da VSF, ainda sem correção, além de mostrador branco claro demais e espessura irregular das subdials. Por isso, um guia indica o 116500 da VSF como opção melhor.",
+      "catalogRank": 111,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/new/.rss",
+          "title": "VSF 126500 / Are there any overt tells on the VSF 116500 Daytona panda? (r/RepTime)",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-vsf-datejust36-v2-121g",
+      "date": "2026-10-25",
+      "kind": "versao",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Datejust 36",
+      "factory": "VSF",
+      "title": "Datejust 36 V2 da VSF: o único ganho real é o peso (≈121 g)",
+      "summary": "A V2 do Datejust 36 só acrescenta peso na luneta (≈121 g; o de 41 mm pesa ≈133 g). Mostrador, ponteiros e o calibre Dandong 3235 não mudaram, e esse calibre não é free sprung de verdade. Revendedores confirmam no r/RepTime que a opção free sprung da VSF só existe no Datejust de 41 mm.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.bssysu.com/4215.html",
+          "title": "VS厂劳力士36日志升级真相：121克配重是唯一实质变化",
+          "site": "bssysu.com",
+          "type": "comparativo",
+          "bias": "reseller"
+        },
+        {
+          "url": "https://www.reddit.com/r/RepTime/new/.rss",
+          "title": "VSF free sprung only available with 41mm datejust? (r/RepTime)",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-qf-126502-luneta-cinza",
+      "date": "2026-10-25",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Daytona 126502 (Rolesium)",
+      "factory": "QF",
+      "title": "Luneta do Daytona 126502 da QF fica cinza demais sob sol",
+      "summary": "Donos relatam que a luneta cerâmica do 126502 da QF tende ao cinza sob sol direto e parece usar o mesmo tom do 126500LN Panda. Esperam uma V4 da luneta, com cinza mais discreto.",
+      "catalogRank": 150,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/rolex-daytona-rolesium-126502-likelihood-of-rep.11039790/",
+          "title": "Rolex Daytona Rolesium 126502 - likelihood of rep?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-vsf-226570-mostrador-desalinhado",
+      "date": "2026-10-24",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Explorer II 226570",
+      "factory": "VSF",
+      "title": "Explorer II 226570 da VSF sai com índices desalinhados no primeiro lote",
+      "summary": "Membros do RWI dizem que a grande maioria das unidades do primeiro lote tem índices fora de alinhamento e que a VSF continua vendendo assim mesmo. Um QC recebido em 23/10 estava limpo, mas o índice das 12 também vinha levemente girado no sentido horário.",
+      "catalogRank": 130,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/vsf-new-release-explorer-ii-226570-true.11055423/",
+          "title": "VSF New Release: Explorer II 226570 true ?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-ddf-boato-raid",
+      "date": "2026-10-24",
+      "kind": "fabrica",
+      "tone": "negativo",
+      "brand": "",
+      "model": "",
+      "factory": "DDF",
+      "title": "Boato de batida policial na DDF; atrasos em pedidos",
+      "summary": "Revendedor diz a um comprador, com pedido atrasado há 6 semanas, que a DDF \"foi pega\", e um dono diz que só sobra estoque. Um membro experiente afirma que a batida foi em um distribuidor e que os pedidos seguem saindo. Não está confirmado.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/ddf-factory-gone.11056160/",
+          "title": "Ddf factory gone?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        },
+        {
+          "url": "https://forum.replica-watch.info/threads/review-ddf-patek-philippe-5711-%E2%80%9Enautilus%E2%80%9C.11020659/",
+          "title": "Review: DDF Patek Philippe 5711 „Nautilus“",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-ddf-5711-relatos-donos",
+      "date": "2026-10-24",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Patek Philippe",
+      "model": "Nautilus 5711/1A",
+      "factory": "DDF",
+      "title": "Nautilus 5711 da DDF divide donos frente a PPF e 3KF",
+      "summary": "Um dono que já teve PPF e 3KF considera o da DDF o melhor, com mostrador bonito e +1 s/dia. Outro achou o relógio frágil: peças com folga, pulseira solta e rotor barulhento, e diz que o 3KF é mais sólido.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/review-ddf-patek-philippe-5711-%E2%80%9Enautilus%E2%80%9C.11020659/",
+          "title": "Review: DDF Patek Philippe 5711 „Nautilus“",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-qf-daydate40-v9",
+      "date": "2026-10-24",
+      "kind": "versao",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Day-Date 40",
+      "factory": "QF",
+      "title": "QF lança Day-Date 40 V9 com peso extra e calibre free sprung",
+      "summary": "Revendedores passaram a vender no último mês a V9 do Day-Date 40 da QF, mais pesada e com calibre free sprung. No mesmo tópico, um comprador relata que o RCF V3 em ouro rosa usa o mesmo JH3255 da V2, e não o DD3255 free sprung, que só sai na versão em ouro amarelo.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/qf-factory-40mm-daydate-v9-gain-weight-with-free-sprung-movement.11053609/",
+          "title": "QF Factory 40MM DayDate v9 - Gain Weight with Free Sprung movement",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-qf-126622-jh3235",
+      "date": "2026-10-24",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Yacht-Master 126622",
+      "factory": "QF",
+      "title": "Yacht-Master 126622 da QF: boa caixa, gravação e luneta falham",
+      "summary": "Um dono que também tem o genuíno diz que o formato da caixa é superior ao das outras fábricas, mas a gravação segue a referência antiga 116622 e a fixação da luneta não é boa. Outros temem queda de qualidade com o aumento da demanda.",
+      "catalogRank": 23,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/review-qf-yacht-master-126622-jh3235-free-sprung.11049313/",
+          "title": "Review: QF Yacht-Master 126622 JH3235 Free Sprung",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-octa-iwc-pilot-chrono",
+      "date": "2026-10-24",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "IWC",
+      "model": "Pilot Chronograph / Portugieser Chrono",
+      "factory": "OCTA",
+      "title": "OCTA retoma a linha IWC da extinta APSF com calibres Dandong",
+      "summary": "A OCTA começa pelos Pilot Chronograph (calibre 69385) e Portugieser Chrono (69355), com calibres Dandong, e pretende retomar toda a linha IWC da APSF. O blog afirma que a OCTA herdou peças e calibres da APS, mas não é a mesma fábrica.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/octa-bringing-back-apsf-iwc-reps-with-clone-dandong-movements.11054865/",
+          "title": "OCTA Bringing Back APSF IWC Reps with Clone Dandong Movements",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        },
+        {
+          "url": "https://www.wristwatchspot.com/2026/10/23/about-octa-factory/",
+          "title": "About OCTA Factory",
+          "site": "wristwatchspot.com",
+          "type": "blog",
+          "bias": "reseller"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-aof-iwc-lake-tahoe",
+      "date": "2026-10-24",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "IWC",
+      "model": "Pilot Chronograph Top Gun Lake Tahoe",
+      "factory": "AOF",
+      "title": "AOF entra em IWC com o Pilot Top Gun Lake Tahoe",
+      "summary": "Revendedor anuncia o Lake Tahoe da AOF, ligada à V7/A7. Nas fotos de QC de um membro, a roda da data parece desalinhada, mas fica correta no vídeo. As fotos reais foram bem avaliadas.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/has-anyone-experienced-about-aof-iwc-rep-before-my-td-recommend-them-for-iwc-lake-tahoe-but-never-heard-about-the-factory-before.11055703/",
+          "title": "Has anyone experienced about AOF IWC rep before?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-smf-speedmaster-v2",
+      "date": "2026-10-24",
+      "kind": "versao",
+      "tone": "neutro",
+      "brand": "Omega",
+      "model": "Speedmaster Moonwatch Professional",
+      "factory": "SMF",
+      "title": "SMF lança Speedmaster V2; donos aprovam dimensões e calibre",
+      "summary": "Um dono acha a V2 melhor que a versão anterior e que o ERF, com calibre confiável e dimensões corretas. Um modificador ressalta que ainda é preciso travar as subdials e que o ERF exigiria mais retrabalho para tirar o tremor do ponteiro de segundos.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/smf-speedmaster-v2-hope-true.11054249/",
+          "title": "SMF Speedmaster V2 - hope true",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-fp-journe-elegante-titanio",
+      "date": "2026-10-24",
+      "kind": "lancamento",
+      "tone": "neutro",
+      "brand": "F.P. Journe",
+      "model": "Élégante (titânio 48mm)",
+      "factory": "FP Factory (custom)",
+      "title": "Nova versão do F.P. Journe Élégante em titânio, por ora só 48mm",
+      "summary": "A fábrica \"custom\" do Élégante lança uma versão nova em caixa de titânio, por enquanto só em 48 mm, com o calibre suíço Ronda das versões anteriores. Esse calibre não tem a parada automática do genuíno.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/it%E2%80%99s-happening-fp-journe-%C3%89l%C3%A9gante.11046108/",
+          "title": "IT’S HAPPENING - FP Journe Élégante",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-fp-journe-elegante-v2-falsa",
+      "date": "2026-10-24",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "F.P. Journe",
+      "model": "Élégante V2",
+      "factory": "Fábrica não identificada (cópia da V2)",
+      "title": "Alerta: \"V2\" do Élégante de outra fábrica com erros grosseiros",
+      "summary": "Donos alertam para uma \"V2\" de outra fábrica com fonte, cor do PVD e grafia errados e parafusos soltos, diferente da V2 da fábrica original. Também apontam coroas bulbosas e falta de chanfro nos parafusos frontais.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/it%E2%80%99s-happening-fp-journe-%C3%89l%C3%A9gante.11046108/",
+          "title": "IT’S HAPPENING - FP Journe Élégante",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-umi-rich-rm6702-carbono",
+      "date": "2026-10-24",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Richard Mille",
+      "model": "RM 67-02",
+      "factory": "UMI × RICH",
+      "title": "Carbono do RM 67-02: UMI V2 rivaliza com a RICH",
+      "summary": "Fotos lado a lado com o genuíno RM 67-02 Zverev mostram que o carbono da UMI V2 tem linhas de largura parecida com o genuíno, nítidas e limpas, apesar da fama da RICH. A diferença fica em fontes, largura de textos e pintura.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/a-quick-look-at-rm-rep-carbon-tiers-ordinary-vs-premium-vs-top-tier.11052187/",
+          "title": "A Quick Look at RM Rep Carbon Tiers",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-jlc-mut-moonphase-pos-apsf",
+      "date": "2026-10-24",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Jaeger-LeCoultre",
+      "model": "Master Ultra Thin Moonphase",
+      "factory": "RZF × ZF × GF × JJF",
+      "title": "Com a APSF fechada, alternativas para o JLC MUT Moonphase deixam a desejar",
+      "summary": "Opções citadas após o fechamento da APSF:\n- GF: Miyota decorado.\n- ZF V2: a mais fiel no geral, mas com discos de fase da lua piores e difícil de achar.\n- RZF: decoração impressa no movimento e balanço free sprung aparentemente falso.\n- JJF: ninguém mostra fotos da fábrica.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/jjf-jlc-master-ultra-thin-moonphase.11055501/",
+          "title": "JJF JLC Master Ultra Thin Moonphase",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-vsf-gmt-lotes-inconsistentes",
+      "date": "2026-10-23",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "GMT-Master II 126710",
+      "factory": "VSF",
+      "title": "Lotes recentes do GMT da VSF com qualidade irregular",
+      "summary": "Donos relatam piora a partir do lote 5X: cristais mal alinhados, problemas de vedação e acabamento da caixa, e QCs ruins no lote 6W. Também atribuem a irregularidade à mudança da produção para o Vietnã. Já o lote 6X é descrito como limpo: data bem posicionada, luneta firme e lupa (cyclops) correta.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/vsf-gmt-quality-pouring-down-the-drain%E2%80%A6-stop-praising-it-please.11051369/",
+          "title": "VSF GMT Quality pouring down the drain… (stop praising it! - please)",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-custom-cnc-ap-frosted-mini",
+      "date": "2026-10-23",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak Frosted Mini (Lady)",
+      "factory": "Custom CNC (via revendedor)",
+      "title": "AP Frosted Mini em ouro maciço CNC sai com proporções erradas",
+      "summary": "Build custom em ouro maciço chegou após meses de atraso com luneta larga demais, caixa grossa, acabamento \"frosted\" incorreto e elos desalinhados. Mostrador e ponteiros parecem reaproveitados do modelo de linha, e a versão de linha MF/MZ é considerada mais fiel.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/bought-lady-ap-frosted-mini-solid-gold-from-td-%E2%80%93-is-it-off.11056106/",
+          "title": "Bought Lady AP Frosted Mini Solid Gold from TD – Is it OFF?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-vsf-seamaster300m-v4-8800",
+      "date": "2026-10-22",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Omega",
+      "model": "Seamaster Diver 300M (V4)",
+      "factory": "VSF",
+      "title": "Seamaster V4 da VSF: calibre 8800 integrado melhora, mas não é co-axial",
+      "summary": "A V4 troca o Seagull 2824 com placa decorativa por um Dandong 8800 integrado: a data passa a ser ajustada no sentido anti-horário, como no genuíno, e a reserva fica entre 50 e 54h. A desmontagem no RWI confirma que não há escape co-axial nem balanço free sprung, e um dono mediu adiantamento de cerca de +15 s/dia.",
+      "catalogRank": 132,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.bssysu.com/4213.html",
+          "title": "VS厂欧米茄海马300米V4版深度测评",
+          "site": "bssysu.com",
+          "type": "comparativo",
+          "bias": "reseller"
+        },
+        {
+          "url": "https://forum.replica-watch.info/threads/vsf-omega-8800-movement-teardown.11018176/",
+          "title": "VSF Omega 8800 movement teardown",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-kf-fabrica-ouro-envolto",
+      "date": "2026-10-22",
+      "kind": "fabrica",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Submariner / Yacht-Master (ouro envolto)",
+      "factory": "KF (K Factory)",
+      "title": "Surge a K Factory, com Submariner e Yacht-Master de ouro \"envolto\"",
+      "summary": "Nova fábrica que, segundo o RWI, parte dos antigos modelos de ouro envolto da VRF e usa os calibres VR3135 e VR3235. Um membro diz que o Yacht-Master 226659 da KF é o único com peso igual ao genuíno, com banho de ouro branco.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/has-anyone-heard-of-the-kf-factory.11056012/",
+          "title": "Has anyone heard of the KF Factory?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-vsf-226570-dd3285",
+      "date": "2026-10-19",
+      "kind": "versao",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Explorer II 226570",
+      "factory": "VSF",
+      "title": "VSF refaz o molde do Explorer II 226570 com calibre Dandong 3285",
+      "summary": "Nova caixa em 904L com o calibre Dandong 3285 (cerca de 72h de reserva), mas ainda regulado por raquete, sem balanço free sprung e sem parada do segundo ao puxar a coroa, ao contrário do genuíno. No RWI, a fonte da luneta da VSF é elogiada frente às rivais, e o lançamento é confirmado por QCs de donos.",
+      "catalogRank": 130,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.bssysu.com/4210.html",
+          "title": "VS厂再次开模劳力士探二：丹东3285机芯加持",
+          "site": "bssysu.com",
+          "type": "comparativo",
+          "bias": "reseller"
+        },
+        {
+          "url": "https://forum.replica-watch.info/threads/vsf-new-release-explorer-ii-226570-true.11055423/",
+          "title": "VSF New Release: Explorer II 226570 true ?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-ddf-p1-aquanaut-5968",
       "date": "2026-10-19",
       "kind": "comparativo",
       "tone": "neutro",
       "brand": "Patek Philippe",
       "model": "Aquanaut 5968 (laranja)",
-      "factory": "P1F / DDF",
-      "title": "Aquanaut 5968: a P1 acerta a função, a DDF acerta o mostrador",
-      "summary": "Nenhuma das duas acerta a espessura: DDF 12,37 mm, P1 12,94 mm, genuíno 11,9 mm. A DDF tem sunburst e impressão melhores, mas o ponteiro das 6 h funciona como segundos contínuos (errado); a P1 reproduz o contador de 60 min, mas tem ponteiros laranja puxando para o vermelho e numeral da data grosso.",
+      "factory": "DDF × P1",
+      "title": "Aquanaut 5968: DDF tem mostrador melhor, P1 tem função correta",
+      "summary": "Ambas as caixas são mais grossas que o genuíno (11,9 mm): DDF com 12,37 mm e P1 com 12,94 mm. A DDF tem sunburst e cor dos ponteiros mais fiéis, mas o ponteiro das 6 é um pequeno segundos sempre andando. Na P1, ele funciona como contador de 60 minutos do cronógrafo, como no genuíno.",
       "catalogRank": null,
       "status": "observacao",
       "sources": [
@@ -97,6 +594,42 @@
       ]
     },
     {
+      "id": "2026-10-18-a7-v7-renomeacao",
+      "date": "2026-10-18",
+      "kind": "fabrica",
+      "tone": "neutro",
+      "brand": "IWC",
+      "model": "Ingenieur",
+      "factory": "A7 (ex-V7) / AOF",
+      "title": "V7 volta como A7, e agora também aparece como AOF",
+      "summary": "Segundo o blog, a A7 é a mesma V7 de antes com outro rótulo: o Ingenieur volta com 40 mm, 10,8 mm, 148 g, calibre Seagull 2892 ou SW300 e elo de ajuste rápido sem ferramenta. No RWI, um cartaz de revendedor traz V7 no texto e \"AOF\" no título, e um membro resume: V7 = A7 = AOF.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.bssysu.com/4209.html",
+          "title": "A7厂万国工程师是“换牌”还是“换芯”？",
+          "site": "bssysu.com",
+          "type": "comparativo",
+          "bias": "reseller"
+        },
+        {
+          "url": "https://forum.replica-watch.info/threads/has-anyone-experienced-about-aof-iwc-rep-before-my-td-recommend-them-for-iwc-lake-tahoe-but-never-heard-about-the-factory-before.11055703/",
+          "title": "Has anyone experienced about AOF IWC rep before?",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        },
+        {
+          "url": "https://www.bbtwatch.com/blog",
+          "title": "A7 厂万国工程师 Ingenieur 六款不同表盘配色实拍",
+          "site": "bbtwatch.com",
+          "type": "reseller",
+          "bias": "reseller"
+        }
+      ]
+    },
+    {
       "id": "2026-10-18-a7f-v7f-rebrand",
       "date": "2026-10-18",
       "kind": "fabrica",
@@ -129,6 +662,28 @@
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17-vsf-116610lv-mk3-mostrador",
+      "date": "2026-10-17",
+      "kind": "comparativo",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Submariner 116610LV (Hulk)",
+      "factory": "VSF",
+      "title": "Hulk Mk3 da VSF tem mostrador escuro demais",
+      "summary": "No comparativo de Hulks do RWI, o mostrador Mk3 da VSF parece quase preto sob luz normal. Entre os Mk2, o melhor mostrador é o da ARF; entre os Mk3, o sunburst mais aceitável é o da antiga Clean v5. Nenhum chega ao genuíno.",
+      "catalogRank": 20,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/the-who-has-the-best-hulk-review.9504356/",
+          "title": "The \"Who Has the Best Hulk\" Review",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
         }
       ]
     },
@@ -528,28 +1083,6 @@
       ]
     },
     {
-      "id": "2026-10-12-hkf-speedmaster-racing-cronografo",
-      "date": "2026-10-12",
-      "kind": "defeito",
-      "tone": "negativo",
-      "brand": "Omega",
-      "model": "Speedmaster Racing",
-      "factory": "HKF",
-      "title": "HKF Speedmaster Racing: contador de minutos do cronógrafo não zera",
-      "summary": "O comprador relata que o contador de minutos do cronógrafo não volta a zero, enquanto segundos e horas zeram. O revendedor diz que é comum a todas as réplicas de Speedmaster, sem confirmação independente.",
-      "catalogRank": null,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://www.reddit.com/r/RepTime/new/.rss",
-          "title": "First rep HKF Speedmaster racing ... minute hand chrono dial doesn't reset",
-          "site": "reddit.com",
-          "type": "reddit",
-          "bias": "neutral"
-        }
-      ]
-    },
-    {
       "id": "2026-10-10-ppmf-sky-dweller",
       "date": "2026-10-10",
       "kind": "lancamento",
@@ -587,28 +1120,6 @@
         {
           "url": "https://forum.replica-watch.info/threads/apkf-releasing-code-11-59-15210-series.11055067/",
           "title": "APKF Releasing Code 11.59 15210 Series",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
-          "bias": "neutral"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-10-vsf-gmt-lotes-ruins",
-      "date": "2026-10-10",
-      "kind": "defeito",
-      "tone": "negativo",
-      "brand": "Rolex",
-      "model": "GMT-Master II (série 1267xx)",
-      "factory": "VSF",
-      "title": "Membros relatam queda de qualidade da VSF nos GMT desde o lote 5X",
-      "summary": "Os relatos falam de peças misturadas de lotes diferentes, cristais desalinhados, juntas ruins e lunetas sem os recortes fresados do genuíno. Os posts de 6 a 10/10 acrescentam um anel branco por refração na borda do cristal, guarda-coroas mal formados, rehaut curvo e Daytonas com série '6W' de junta leitosa; os lotes antigos com caixa Y2L3 e bracelete F6U são lembrados como os melhores.",
-      "catalogRank": null,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://forum.replica-watch.info/threads/vsf-gmt-quality-pouring-down-the-drain%E2%80%A6-stop-praising-it-please.11051369/",
-          "title": "VSF GMT Quality pouring down the drain… (stop praising it! - please)",
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "neutral"
@@ -1123,28 +1634,6 @@
           "site": "reddit.com",
           "type": "forum",
           "bias": "neutral"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-07-octa-iwc-pilot-chrono-dandong",
-      "date": "2026-10-07",
-      "kind": "lancamento",
-      "tone": "positivo",
-      "brand": "IWC",
-      "model": "Pilot's Watch Chronograph (azul/verde)",
-      "factory": "OCTA",
-      "title": "OCTA vai retomar a linha IWC da extinta APSF, começando pelos Pilot Chrono com movimento Dandong",
-      "summary": "Segundo o relato, a OCTA quer refazer toda a linha IWC que era da APSF, chegando o mais perto possível das versões antigas. Os primeiros são os Pilot Chronograph azul e verde com movimento clone Dandong; as versões em cerâmica e titânio virão aos poucos.",
-      "catalogRank": null,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://forum.replica-watch.info/threads/octa-bringing-back-apsf-iwc-reps-with-clone-dandong-movements.11054865/",
-          "title": "OCTA Bringing Back APSF IWC Reps with Clone Dandong Movements",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
-          "bias": "enthusiast"
         }
       ]
     },

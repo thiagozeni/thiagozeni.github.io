@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "storesRead": 11,
   "items": [
     {
@@ -144,7 +144,6 @@
       "label": "Rolex GMT-Master II 126710BLRO",
       "factories": [
         "Clean",
-        "RICH",
         "VSF"
       ],
       "stores": 3,
@@ -194,6 +193,19 @@
       ]
     },
     {
+      "key": "rolex|126711chnr",
+      "brand": "Rolex",
+      "ref": "126711CHNR",
+      "label": "Rolex Rootbeer GMT Master II 126711CHNR Oyster",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        30
+      ]
+    },
+    {
       "key": "rolex|116500",
       "brand": "Rolex",
       "ref": "116500",
@@ -209,16 +221,18 @@
       ]
     },
     {
-      "key": "rolex|126711chnr",
-      "brand": "Rolex",
-      "ref": "126711CHNR",
-      "label": "Rolex Rootbeer GMT Master II 126711CHNR Oyster",
+      "key": "patekphilippe|5167",
+      "brand": "Patek Philippe",
+      "ref": "5167",
+      "label": "Patek Philippe Aquanaut 5167 SS Gray Dial",
       "factories": [
-        "VSF"
+        "3KF",
+        "DDF"
       ],
       "stores": 3,
       "catalogRanks": [
-        30
+        24,
+        102
       ]
     },
     {
@@ -260,20 +274,6 @@
       "stores": 3,
       "catalogRanks": [
         47
-      ]
-    },
-    {
-      "key": "rolex|126519",
-      "brand": "Rolex",
-      "ref": "126519",
-      "label": "Rolex Daytona 126519 Gray Dial",
-      "factories": [
-        "Clean",
-        "VSF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        137
       ]
     },
     {

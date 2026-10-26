@@ -72289,80 +72289,6 @@
     "collectedAt": "2026-10-13T12:41:25.780Z"
   },
   {
-    "id": "hunt-seamaster-planet-ocean-600m-1",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
-    "source": "realcleanfactory.com",
-    "sourceDomain": "realcleanfactory.com",
-    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727410592454.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Main image on the page. The page names 'VS Factory ... Planet Ocean 600M ... 43.5mm 215.30.44.21.01.002 Super Clone 8900' and describes a glossy black ceramic dial, black ceramic bezel with orange 15-minute scale, and orange 6/9/12. Validated as image/jpeg (165.7KB). Pixels not inspected, so the watermark is unconfirmed."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-19T16:31:11.675Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
-    "id": "hunt-seamaster-planet-ocean-600m-2",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — realcleanfactory.com",
-    "source": "realcleanfactory.com",
-    "sourceDomain": "realcleanfactory.com",
-    "image": "https://realcleanfactory.com/wp-content/uploads/2024/09/1727409438677.jpg",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
-    "confidence": 85,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Second gallery image from the same VSF 215.30.44.21.01.002 page. Validated as image/jpeg (290.7KB). Pixels not inspected, so the angle and watermark are unconfirmed."
-    ],
-    "factoryVerified": true,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-10-19T16:31:11.775Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 1
-    }
-  },
-  {
     "id": "st-48-lcw-20158-1",
     "model": "Datejust 41 Rhodium",
     "brand": "Rolex",
@@ -72861,5 +72787,190 @@
       "lcw"
     ],
     "collectedAt": "2026-10-19T16:32:39.622Z"
+  },
+  {
+    "id": "hunt-royal-oak-15300-39mm-mostrador-prata-1",
+    "model": "Royal Oak 15300 (39mm, mostrador prata)",
+    "brand": "Audemars Piguet",
+    "factory": "ZF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak 15300 (39mm, mostrador prata) — declock.gr",
+    "source": "declock.gr",
+    "sourceDomain": "declock.gr",
+    "image": "https://declock.gr/cdn/shop/files/audemars-piguet-royal-oak-15300-zf-silver-white-sa3120-front-view-01.jpg?v=1789944480&width=1946",
+    "localImage": "/media/img/hunt-royal-oak-15300-39mm-mostrador-prata-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:ZF",
+      "caca-agentica",
+      "Título da página: 'Royal Oak 15300ST.OO.1220ST.01 Silver White Dial ZF SA3120'. Mostrador Grande Tapisserie prata/branco, 39mm. Vista frontal (arquivo 01), validada como image/jpeg. Marca d'água não verificada."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-26T16:11:09.010Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak 15300 (39mm, mostrador prata)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-royal-oak-15300-39mm-mostrador-prata-2",
+    "model": "Royal Oak 15300 (39mm, mostrador prata)",
+    "brand": "Audemars Piguet",
+    "factory": "ZF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak 15300 (39mm, mostrador prata) — declock.gr",
+    "source": "declock.gr",
+    "sourceDomain": "declock.gr",
+    "image": "https://declock.gr/cdn/shop/files/audemars-piguet-royal-oak-15300-zf-silver-white-sa3120-front-dial-close-up-02.jpg?v=1789944490&width=1946",
+    "localImage": "/media/img/hunt-royal-oak-15300-39mm-mostrador-prata-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:ZF",
+      "caca-agentica",
+      "Mesma página. Close do mostrador (arquivo 02), validada como image/jpeg."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-26T16:11:09.270Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak 15300 (39mm, mostrador prata)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-royal-oak-15300-39mm-mostrador-prata-3",
+    "model": "Royal Oak 15300 (39mm, mostrador prata)",
+    "brand": "Audemars Piguet",
+    "factory": "ZF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Audemars Piguet Royal Oak 15300 (39mm, mostrador prata) — dealerclocks.io",
+    "source": "dealerclocks.io",
+    "sourceDomain": "dealerclocks.io",
+    "image": "https://www.dealerclocks.io/wp-content/uploads/2026/09/IMG_0035-23.jpg",
+    "localImage": "/media/img/hunt-royal-oak-15300-39mm-mostrador-prata-3.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Audemars Piguet",
+      "fabrica:ZF",
+      "caca-agentica",
+      "Título da página: 'Royal Oak 39mm 15300 SS ZF 1:1 Best Edition Silver Textured Dial'. Primeira foto da galeria (foto própria, Canon G16), validada como image/jpeg. A ordem da galeria não foi conferida visualmente."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-26T16:11:10.020Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Royal Oak 15300 (39mm, mostrador prata)"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-1",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
+    "source": "thevsfactory.com",
+    "sourceDomain": "thevsfactory.com",
+    "image": "https://thevsfactory.com/wp-content/uploads/2026/03/a1720700102351_8366-1.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Título da página: 'VS Factory Planet Ocean 600M 43.5mm Gunmetal Grey Dial Brushed Bezel (215.32.44.21.01.002) DD8900'. Imagem principal, validada como image/jpeg. Marca d'água não verificada."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-26T16:11:10.704Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-2",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — thevsfactory.com",
+    "source": "thevsfactory.com",
+    "sourceDomain": "thevsfactory.com",
+    "image": "https://thevsfactory.com/wp-content/uploads/2026/04/i1740295107_9500_1-1.jpg",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
+    "confidence": 85,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Título da página: 'VS Factory Planet Ocean 600M 43.5mm Beige Dial Brown Bezel (215.32.44.21.09.001) DD8900'. Imagem principal, validada como image/jpeg. Variante diferente da primeira candidata."
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-10-26T16:11:11.055Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 1
+    }
   }
 ]

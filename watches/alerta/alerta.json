@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "items": [
     {
       "key": "rolex|134300",
@@ -10,7 +10,7 @@
         "QF",
         "VSF"
       ],
-      "stores": 8,
+      "stores": 9,
       "reasons": [
         "genuino",
         "lojas"
@@ -21,12 +21,42 @@
       },
       "radarIds": [],
       "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-19",
+      "lastSignal": "2026-10-26",
       "status": "observacao",
       "catalogRank": null,
       "photos": [
         "/media/alerta/al-134300-ul-1.webp",
         "/media/alerta/al-134300-tk-3.jpg"
+      ]
+    },
+    {
+      "key": "rolex|134303",
+      "brand": "Rolex",
+      "ref": "134303",
+      "label": "Rolex Oyster Perpetual 41 Yellow Rolesor",
+      "factories": [
+        "Clean",
+        "QF",
+        "VSF"
+      ],
+      "stores": 5,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Oyster Perpetual 41 Yellow Rolesor",
+        "released": "2026-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-134303-tk-1.jpg",
+        "/media/alerta/al-134303-vsf-2.jpg",
+        "/media/alerta/al-134303-vsf-3.jpg"
       ]
     },
     {
@@ -55,35 +85,6 @@
         "/media/alerta/al-126729vtnr-lcw-1.jpg",
         "/media/alerta/al-126729vtnr-lcw-2.jpg",
         "/media/alerta/al-126729vtnr-tk-3.jpg"
-      ]
-    },
-    {
-      "key": "rolex|134303",
-      "brand": "Rolex",
-      "ref": "134303",
-      "label": "Rolex Oyster Perpetual 41 Yellow Rolesor",
-      "factories": [
-        "QF",
-        "VSF"
-      ],
-      "stores": 4,
-      "reasons": [
-        "genuino",
-        "lojas"
-      ],
-      "genuine": {
-        "name": "Oyster Perpetual 41 Yellow Rolesor",
-        "released": "2026-04"
-      },
-      "radarIds": [],
-      "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-13",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-134303-tk-1.jpg",
-        "/media/alerta/al-134303-vsf-2.jpg",
-        "/media/alerta/al-134303-vsf-3.jpg"
       ]
     },
     {
@@ -116,6 +117,36 @@
       ]
     },
     {
+      "key": "rolex|126003",
+      "brand": "Rolex",
+      "ref": "126003",
+      "label": "Rolex Oyster Perpetual 36 Yellow Rolesor",
+      "factories": [
+        "Clean",
+        "QF",
+        "VSF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Oyster Perpetual 36 Yellow Rolesor",
+        "released": "2026-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126003-tk-1.jpg",
+        "/media/alerta/al-126003-py-2.jpg",
+        "/media/alerta/al-126003-py-3.jpg"
+      ]
+    },
+    {
       "key": "audemarspiguet|15510bcoo1320bc04",
       "brand": "Audemars Piguet",
       "ref": "15510BC.OO.1320BC.04",
@@ -139,6 +170,33 @@
       "status": "observacao",
       "catalogRank": null,
       "photos": []
+    },
+    {
+      "key": "patekphilippe|58101g001",
+      "brand": "Patek Philippe",
+      "ref": "5810/1G-001",
+      "label": "Patek Philippe Nautilus 50th Anniversary (limited, white gold)",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 2,
+      "reasons": [
+        "genuino",
+        "lojas"
+      ],
+      "genuine": {
+        "name": "Nautilus 50th Anniversary (limited, white gold)",
+        "released": "2026-04"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-10-09",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-5810-1g-001-tk-3.jpg",
+        "/media/alerta/al-5810-1g-001-tk-4.jpg"
+      ]
     },
     {
       "key": "patekphilippe|71281g001",
@@ -167,35 +225,6 @@
         "/media/alerta/al-7128-1g-001-lcw-2.jpg",
         "/media/alerta/al-7128-1g-001-py-3.jpg",
         "/media/alerta/al-7128-1g-001-py-4.jpg"
-      ]
-    },
-    {
-      "key": "rolex|126003",
-      "brand": "Rolex",
-      "ref": "126003",
-      "label": "Rolex Oyster Perpetual 36 Yellow Rolesor",
-      "factories": [
-        "QF",
-        "VSF"
-      ],
-      "stores": 2,
-      "reasons": [
-        "genuino",
-        "lojas"
-      ],
-      "genuine": {
-        "name": "Oyster Perpetual 36 Yellow Rolesor",
-        "released": "2026-04"
-      },
-      "radarIds": [],
-      "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-09",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-126003-tk-1.jpg",
-        "/media/alerta/al-126003-py-2.jpg",
-        "/media/alerta/al-126003-py-3.jpg"
       ]
     },
     {
@@ -314,29 +343,6 @@
       ]
     },
     {
-      "key": "patekphilippe|58101g001",
-      "brand": "Patek Philippe",
-      "ref": "5810/1G-001",
-      "label": "Patek Philippe Nautilus 50th Anniversary (limited, white gold)",
-      "factories": [
-        "PPF"
-      ],
-      "stores": 1,
-      "reasons": [
-        "genuino"
-      ],
-      "genuine": {
-        "name": "Nautilus 50th Anniversary (limited, white gold)",
-        "released": "2026-04"
-      },
-      "radarIds": [],
-      "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-09",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": []
-    },
-    {
       "key": "patekphilippe|71281r001",
       "brand": "Patek Philippe",
       "ref": "7128/1R-001",
@@ -418,14 +424,14 @@
       "factories": [
         "VSF"
       ],
-      "stores": 4,
+      "stores": 5,
       "reasons": [
         "lojas"
       ],
       "genuine": null,
       "radarIds": [],
       "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-19",
+      "lastSignal": "2026-10-26",
       "status": "observacao",
       "catalogRank": null,
       "photos": [
@@ -456,12 +462,190 @@
       ]
     },
     {
+      "key": "audemarspiguet|26238",
+      "brand": "Audemars Piguet",
+      "ref": "26238",
+      "label": "Audemars Piguet Royal Oak Offshore 42mm 26238 Khaki Green Titanium",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
+      "key": "patekphilippe|5810",
+      "brand": "Patek Philippe",
+      "ref": "5810",
+      "label": "Patek Philippe Nautilus 5810 SS Blue Textured Dial",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
       "key": "rolex|126509",
       "brand": "Rolex",
       "ref": "126509",
       "label": "Rolex Daytona 126509 Blue Dial",
       "factories": [
         "VSF",
+        "ZF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-126509-tk-3.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw371604",
+      "brand": "IWC",
+      "ref": "IW371604",
+      "label": "IWC Portugieser Chrono IW371604 White/YG Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371604-tk-1.jpg",
+        "/media/alerta/al-iw371604-py-2.jpg",
+        "/media/alerta/al-iw371604-py-3.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw371605",
+      "brand": "IWC",
+      "ref": "IW371605",
+      "label": "IWC Portugieser Chrono IW371605 White/Blue Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371605-tk-1.jpg",
+        "/media/alerta/al-iw371605-py-2.jpg",
+        "/media/alerta/al-iw371605-py-3.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw371606",
+      "brand": "IWC",
+      "ref": "IW371606",
+      "label": "IWC Portugieser Chrono IW371606 Blue Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371606-tk-1.jpg",
+        "/media/alerta/al-iw371606-py-2.jpg",
+        "/media/alerta/al-iw371606-py-3.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw371624",
+      "brand": "IWC",
+      "ref": "IW371624",
+      "label": "IWC Portugieser Chrono IW371624 YG Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371624-tk-1.jpg",
+        "/media/alerta/al-iw371624-py-2.jpg",
+        "/media/alerta/al-iw371624-py-3.jpg"
+      ]
+    },
+    {
+      "key": "richardmille|rm6702",
+      "brand": "Richard Mille",
+      "ref": "RM67-02",
+      "label": "Richard Mille RM67-02 Velcro Strap Colors",
+      "factories": [
+        "RICH"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-10-26",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
+      "key": "rolex|126508",
+      "brand": "Rolex",
+      "ref": "126508",
+      "label": "Rolex Daytona 126508 White Dial",
+      "factories": [
         "ZF"
       ],
       "stores": 2,
@@ -471,12 +655,10 @@
       "genuine": null,
       "radarIds": [],
       "firstSeen": "2026-10-19",
-      "lastSignal": "2026-10-19",
+      "lastSignal": "2026-10-26",
       "status": "observacao",
       "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-126509-tk-3.jpg"
-      ]
+      "photos": []
     },
     {
       "key": "rolex|228238",
