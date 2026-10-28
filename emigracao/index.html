@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Onde a saída do Brasil economiza imposto, quanto patrimônio ela pede para pagar os dias fora e o que muda na herança: Uruguai, Paraguai e Panamá, com perfis fictícios e simulador.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sair do Brasil, quando a conta fecha">
+<meta property="og:description" content="Onde a saída do Brasil economiza imposto, quanto patrimônio ela pede para pagar os dias fora e o que muda na herança: Uruguai, Paraguai e Panamá, com perfis fictícios e simulador.">
+<meta property="og:url" content="https://thiagozeni.com/emigracao/">
+<meta property="og:image" content="https://thiagozeni.com/emigracao/img/jose-ignacio.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Sair do Brasil, residência fiscal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap">
+<style>
+/* Edição genérica, marca Thiago Zeni: escuro por padrão, lime como acento pontual, Unbounded nos títulos e DM Sans no corpo.
+   Ordem: resposta curta → como funciona → imposto por R$ 1 milhão → equilíbrio → perfis → simulador → detalhe por país → moradia → sucessão → fontes. */
+:root {
+  --bg: #050505; --bg2: #0D0D0D; --panel: #111111; --tx: #F2F2F2; --mut: #8A8A8A; --faint: #3A3A3A;
+  --ac: #C6FF00; --ac-bg: #C6FF00; --ac-tx: #050505; --dim: rgba(198, 255, 0, 0.08); --red: #FF2D2D;
+  --bd: rgba(198, 255, 0, 0.18); --bd2: rgba(255, 255, 255, 0.09); --glow: 0 0 12px rgba(198, 255, 0, 0.45);
+  --l-br: #F2F2F2; --l-fl: #8A8A8A; --l-pt: #5A5A5A; --l-uy: #C6FF00; --l-py: #C6FF00; --l-pa: #C6FF00;
+  --display: 'Unbounded', 'Arial Black', sans-serif; --body: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) {
+  --bg: #F5F5F5; --bg2: #ECECEC; --panel: #E4E4E4; --tx: #050505; --mut: #555555; --faint: #9A9A9A;
+  --ac: #050505; --ac-bg: #C6FF00; --ac-tx: #050505; --dim: rgba(198, 255, 0, 0.35); --red: #FF2D2D;
+  --bd: rgba(5, 5, 5, 0.22); --bd2: rgba(5, 5, 5, 0.1); --glow: none;
+  --l-br: #050505; --l-fl: #8A8A8A; --l-pt: #B5B5B5; --l-uy: #C6FF00; --l-py: #C6FF00; --l-pa: #C6FF00;
+  color-scheme: light; } }
+:root[data-theme="light"] {
+  --bg: #F5F5F5; --bg2: #ECECEC; --panel: #E4E4E4; --tx: #050505; --mut: #555555; --faint: #9A9A9A;
+  --ac: #050505; --ac-bg: #C6FF00; --ac-tx: #050505; --dim: rgba(198, 255, 0, 0.35); --red: #FF2D2D;
+  --bd: rgba(5, 5, 5, 0.22); --bd2: rgba(5, 5, 5, 0.1); --glow: none;
+  --l-br: #050505; --l-fl: #8A8A8A; --l-pt: #B5B5B5; --l-uy: #C6FF00; --l-py: #C6FF00; --l-pa: #C6FF00;
+  color-scheme: light; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--tx); font: 400 16px/1.6 var(--body); font-variant-numeric: tabular-nums;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 72px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.pagina { max-width: 1100px; margin: 0 auto; min-width: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ac-bg); outline-offset: 2px; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; font-family: var(--display); }
+p { margin: 0; }
+.rotulo { font: 700 11px/1.2 var(--display); letter-spacing: 0.22em; text-transform: uppercase; color: var(--ac); }
+.mut { color: var(--mut); }
+
+/* navegação */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--bd);
+  display: flex; align-items: center; gap: 18px; padding-block: 10px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+.nav-marca { font: 800 12px var(--display); letter-spacing: 0.04em; white-space: nowrap; }
+.nav-marca b { color: var(--ac); }
+.nav-links { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; min-width: 0; }
+.nav-links a { font: 500 12.5px var(--body); text-decoration: none; padding: 6px 10px; border-radius: 1px; white-space: nowrap; color: var(--mut); }
+.nav-links a:hover, .nav-links a.ativo { color: var(--ac-tx); background: var(--ac-bg); }
+
+/* capa */
+.capa { padding-block: 56px 40px; display: grid; gap: 24px; }
+.capa h1 { font-size: clamp(34px, 7.2vw, 84px); font-weight: 900; letter-spacing: -0.04em; line-height: 0.95; }
+.capa h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--ac-bg); }
+:root[data-theme="light"] .capa h1 span { -webkit-text-stroke-color: var(--tx); }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .capa h1 span { -webkit-text-stroke-color: var(--tx); } }
+.capa .sub { font-size: clamp(17px, 2vw, 21px); max-width: 60ch; color: var(--mut); }
+.capa .sub b { color: var(--tx); font-weight: 500; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 22px; font: 500 11px var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mut); }
+.meta b { color: var(--ac); font-weight: 700; }
+.atlas { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 2px; }
+.atlas-item { margin: 0; position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--panel); max-width: 100%; }
+.atlas-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(25%) contrast(1.05); display: block; }
+.atlas-item:nth-child(3) img { object-position: 88% 50%; }
+.atlas-item figcaption { position: absolute; inset: auto 0 0; padding: 40px 12px 10px; background: linear-gradient(transparent, rgba(5, 5, 5, 0.85));
+  color: #F2F2F2; display: grid; gap: 2px; }
+.atlas-item b { font: 700 13px var(--display); }
+.atlas-item span { font-size: 12px; }
+.atlas-item small { font-size: 10px; opacity: 0.7; }
+@media (max-width: 700px) { .atlas { grid-template-columns: repeat(2, minmax(0, 1fr)); } .atlas-item:last-child { grid-column: span 2; aspect-ratio: 16 / 9; } }
+
+/* seções */
+.sec { padding-top: 88px; scroll-margin-top: 48px; }
+.sec-cab { display: grid; gap: 14px; margin-bottom: 28px; border-top: 1px solid var(--bd); padding-top: 22px; }
+.sec-cab h2 { font-size: clamp(26px, 4vw, 46px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.04; }
+.lead { font-size: 18px; max-width: 64ch; color: var(--mut); }
+.lead b { color: var(--tx); font-weight: 500; }
+
+/* achados da resposta curta */
+.achados { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; }
+.achado { background: var(--panel); padding: 26px 24px; display: grid; gap: 12px; align-content: start; min-width: 0; border-left: 4px solid transparent; }
+.achado:first-child { border-left-color: var(--ac-bg); }
+.achado .n { font: 300 13px var(--display); color: var(--mut); }
+.achado h3 { font-size: clamp(18px, 2.1vw, 23px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; }
+.achado .grande { font: 800 clamp(30px, 4vw, 44px)/1 var(--display); letter-spacing: -0.03em; color: var(--ac); text-shadow: var(--glow); }
+.achado .grande small { font: 400 14px var(--body); letter-spacing: 0; color: var(--mut); text-shadow: none; display: block; margin-top: 8px; }
+.achado p { color: var(--mut); }
+.achado p b { color: var(--tx); font-weight: 500; }
+@media (max-width: 760px) { .achados { grid-template-columns: minmax(0, 1fr); } }
+
+/* passos e risco */
+.passos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; }
+.passo { background: var(--panel); padding: 22px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.passo i { font: 900 34px var(--display); font-style: normal; color: var(--ac); }
+.passo h3 { font-size: 16px; font-weight: 700; }
+.passo p { color: var(--mut); font-size: 15px; }
+@media (max-width: 760px) { .passos { grid-template-columns: minmax(0, 1fr); } }
+.risco { margin-top: 18px; padding: 20px 22px; border: 1px solid var(--red); display: grid; gap: 10px; max-width: 80ch; }
+.risco-tit { font: 700 11px var(--display); letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); }
+.combs-mini { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px 24px; margin-top: 28px; }
+.comb-mini { display: grid; gap: 8px; min-width: 0; }
+.comb-cab { font: 600 14px var(--display); display: flex; gap: 10px; align-items: center; }
+.cal-id { display: inline-grid; place-items: center; width: 22px; height: 22px; border: 1px solid var(--bd); font: 700 11px var(--display); flex: none; }
+.faixa { display: flex; height: 42px; gap: 2px; }
+.seg { display: flex; flex-direction: column; justify-content: center; padding: 0 8px; min-width: 0; overflow: hidden; color: var(--bg); }
+.seg b { font: 700 11px var(--display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.seg i { font-style: normal; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.l-BR { background: var(--l-br); } .l-FL { background: var(--l-fl); } .l-PT { background: var(--l-pt); }
+.l-UY, .l-PY, .l-PA { background: var(--l-uy); color: #050505; }
+.rbr { display: grid; gap: 4px; }
+.rbr-t { position: relative; height: 4px; background: var(--bd2); display: block; }
+.rbr-ok { position: absolute; inset: 0 auto 0 0; width: 50%; background: var(--mut); opacity: 0.5; }
+.rbr-alto { display: none; }
+.rbr-m { position: absolute; top: -4px; width: 2px; height: 12px; background: var(--red); }
+.rbr-txt { font-size: 12px; color: var(--mut); }
+
+/* tabelas */
+.rolagem { overflow-x: auto; max-width: 100%; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--bd2); }
+thead th { font: 700 10.5px var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mut); border-bottom: 1px solid var(--bd); }
+tbody th { font-weight: 500; }
+th small, td small { display: block; font-size: 12px; font-weight: 400; color: var(--mut); margin-top: 2px; }
+.num { text-align: right; }
+td.zero { color: var(--faint); }
+tr.grupo th { font: 700 10.5px var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ac); padding-top: 22px; }
+table.pormi { min-width: 560px; font-size: 15px; }
+table.pormi b { font: 700 16px var(--display); letter-spacing: -0.02em; }
+table.eq { min-width: 860px; }
+table.eq td b { font: 700 15px var(--display); color: var(--ac); }
+table.perfis-t { min-width: 680px; }
+table.vert { min-width: 620px; font-size: 13.5px; }
+table.suc-t { min-width: 760px; font-size: 13.5px; }
+.nota { font-size: 13.5px; color: var(--mut); margin-top: 12px; max-width: 80ch; }
+.formula { margin: 0 0 22px; padding: 18px 20px; background: var(--dim); border-left: 4px solid var(--ac-bg); font-size: 16px; max-width: 80ch; }
+.formula b { font-family: var(--display); font-weight: 700; font-size: 14px; }
+
+/* chips e selos */
+.chip { display: inline-block; font: 700 10.5px var(--display); letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 1px; white-space: nowrap; }
+.chip.c-sim { background: var(--ac-bg); color: var(--ac-tx); }
+.chip.c-nao { background: var(--red); color: #050505; }
+.chip.c-dep { border: 1px solid var(--tx); }
+.selo { display: inline-grid; place-items: center; min-width: 18px; height: 16px; padding: 0 3px; font: 700 9px var(--display); vertical-align: 1px; border-radius: 1px; }
+.selo.conf { background: var(--tx); color: var(--bg); }
+.selo.inf { border: 1px solid var(--tx); }
+.selo.hip { border: 1px dashed var(--red); color: var(--red); }
+.selo.nc { border: 1px dashed var(--mut); color: var(--mut); }
+.legenda { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12.5px; color: var(--mut); margin-top: 14px; }
+
+/* perfis */
+.perfis-desc { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; color: var(--mut); }
+.perfis-desc b { color: var(--tx); font-family: var(--display); font-size: 13px; }
+
+/* simulador */
+.sim { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2px; }
+.sim-form, .sim-res { background: var(--panel); padding: 24px; min-width: 0; }
+.sim-form { display: grid; gap: 14px; align-content: start; }
+.sim-perfis { display: flex; flex-wrap: wrap; gap: 6px; }
+.sim-perfis button { font: 700 10.5px var(--display); letter-spacing: 0.1em; text-transform: uppercase; background: none; color: var(--tx);
+  border: 1px solid var(--bd); padding: 8px 10px; border-radius: 1px; cursor: pointer; transition: background 0.3s var(--ease); }
+.sim-perfis button:hover, .sim-perfis button[aria-pressed="true"] { background: var(--ac-bg); color: var(--ac-tx); border-color: var(--ac-bg); }
+.campo { display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 10px; align-items: center; }
+.campo label { font-size: 14px; }
+.campo label small { display: block; color: var(--mut); font-size: 12px; }
+.campo input { font: 600 16px var(--display); width: 100%; background: var(--bg); color: var(--tx); border: 1px solid var(--bd); border-radius: 1px; padding: 8px 10px; text-align: right; }
+.campo input:focus { border-color: var(--ac-bg); outline: none; box-shadow: var(--glow); }
+.sim-sub { font: 700 10.5px var(--display); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ac); margin-top: 6px; }
+.sim-res { display: grid; gap: 18px; align-content: start; }
+.sim-res > * { min-width: 0; }
+.res-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; }
+.res-tile { background: var(--bg); padding: 14px; display: grid; gap: 4px; min-width: 0; }
+.res-tile span { font: 700 11px var(--display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mut); }
+.res-tile b { font: 800 20px var(--display); letter-spacing: -0.02em; color: var(--ac); }
+.res-tile small { font-size: 12px; color: var(--mut); }
+#sim-combs td, #sim-combs tbody th { font-size: 13.5px; }
+@media (max-width: 860px) { .sim { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .res-tiles { grid-template-columns: minmax(0, 1fr); } .campo { grid-template-columns: minmax(0, 1fr) 100px; } }
+
+/* residência */
+.res { padding: 28px 0; border-top: 1px solid var(--bd2); display: grid; gap: 16px; }
+.res-cab { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px; }
+.res-cab h3 { font-size: clamp(28px, 4vw, 42px); font-weight: 900; letter-spacing: -0.04em; }
+.res-selo { font: 700 10.5px var(--display); letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 9px; border: 1px solid var(--tx); }
+.res.ok .res-selo { background: var(--ac-bg); color: var(--ac-tx); border-color: var(--ac-bg); }
+.res-resumo { font-size: 17px; max-width: 72ch; }
+.fichas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; margin: 0; }
+.ficha { background: var(--panel); padding: 14px 16px; min-width: 0; }
+.ficha dt { font: 700 10px var(--display); letter-spacing: 0.16em; text-transform: uppercase; color: var(--mut); }
+.ficha dd { margin: 6px 0 0; font-weight: 500; }
+.pc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.pc ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; }
+.pc-tit { font: 700 11px var(--display); letter-spacing: 0.18em; text-transform: uppercase; }
+.pc-tit.mais { color: var(--ac); }
+.pc-tit.menos { color: var(--red); }
+@media (max-width: 700px) { .fichas, .pc { grid-template-columns: minmax(0, 1fr); } }
+
+/* moradia (componentes reaproveitados do dossiê) */
+.mors { display: grid; gap: 2px; }
+.mor { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); background: var(--panel); min-width: 0; }
+.mor-foto { margin: 0; position: relative; min-height: 260px; overflow: hidden; }
+.mor-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(25%) contrast(1.05); }
+.mor-foto figcaption { position: absolute; inset: auto 0 0; padding: 30px 12px 10px; background: linear-gradient(transparent, rgba(5, 5, 5, 0.85)); color: #F2F2F2; font-size: 12px; }
+.mor-foto figcaption a { display: block; font-size: 10px; opacity: 0.7; text-decoration: none; }
+.mor-corpo { padding: 22px; display: grid; gap: 10px; min-width: 0; }
+.mor-cab { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 14px; align-items: baseline; }
+.mor-cab h3 { font-size: 24px; font-weight: 800; letter-spacing: -0.03em; }
+.mor-lim { font-size: 12.5px; color: var(--ac); }
+.mor-rec { font-size: 12.5px; color: var(--mut); }
+.inds { margin: 0; display: grid; gap: 8px; }
+.inds > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 10px; font-size: 13.5px; }
+.inds dt { color: var(--mut); font-size: 12px; }
+.inds dd { margin: 0; min-width: 0; }
+.mini { display: flex; align-items: center; gap: 10px; }
+.mini-t { position: relative; flex: 1; height: 6px; background: var(--bd2); max-width: 220px; }
+.mini-v { position: absolute; inset: 0 auto 0 0; }
+.mini-v.bom { background: var(--ac-bg); }
+.mini-v.ruim { background: var(--red); }
+.mini-ref { position: absolute; top: -3px; width: 2px; height: 12px; background: var(--tx); }
+.voos { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.voo.nc { color: var(--mut); }
+.custo-n { font: 800 20px var(--display); color: var(--ac); }
+@media (max-width: 760px) { .mor { grid-template-columns: minmax(0, 1fr); } .mor-foto { min-height: 0; aspect-ratio: 16 / 9; } .inds > div { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+
+/* confirmar e fontes */
+.lista-conf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; padding: 0; margin: 0; list-style: none; counter-reset: c; }
+.lista-conf li { background: var(--panel); padding: 18px 20px 18px 56px; position: relative; counter-increment: c; min-width: 0; }
+.lista-conf li::before { content: counter(c, decimal-leading-zero); position: absolute; left: 18px; top: 18px; font: 800 14px var(--display); color: var(--ac); }
+@media (max-width: 700px) { .lista-conf { grid-template-columns: minmax(0, 1fr); } }
+.fontes { margin-top: 88px; border-top: 1px solid var(--bd); padding-top: 22px; }
+.fontes summary { cursor: pointer; font: 900 clamp(22px, 3vw, 32px) var(--display); letter-spacing: -0.03em; }
+.fontes h4 { font-size: 13px; margin: 24px 0 8px; color: var(--ac); }
+.fontes ul { padding-left: 18px; display: grid; gap: 6px; font-size: 13.5px; color: var(--mut); max-width: 90ch; }
+.fontes .selo { min-width: 0; padding: 0 6px; height: auto; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; }
+.fontes a { word-break: break-all; }
+.rodape { margin-top: 48px; font-size: 13px; color: var(--mut); display: grid; gap: 6px; }
+.rodape b { font-family: var(--display); color: var(--tx); }
+@media (prefers-reduced-motion: no-preference) {
+  .achado, .passo, .res, .mor { animation: sobe 0.8s var(--ease) both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
+  @keyframes sobe { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+}
+</style>
+</head>
+<body>
+
+
+<div class="pagina">
+<nav class="nav" aria-label="Seções">
+  <span class="nav-marca">THIAGO <b>ZENI</b></span>
+  <div class="nav-links">
+    <a href="#resposta">Resposta</a><a href="#como">Como funciona</a><a href="#por-milhao">Por milhão</a>
+    <a href="#equilibrio">Equilíbrio</a><a href="#perfis">Perfis</a><a href="#simule">Simule</a>
+    <a href="#residencia">Países</a><a href="#moradia">Moradia</a><a href="#sucessao">Sucessão</a><a href="#confirmar">Antes de decidir</a>
+  </div>
+</nav>
+
+<header class="capa">
+  <p class="rotulo">Estudo · residência fiscal</p>
+  <h1>Sair do Brasil<br><span>quando a conta fecha</span></h1>
+  <p class="sub">Onde a saída economiza imposto, quanto patrimônio ela pede para pagar os dias fora e o que muda na herança. <b>Uruguai, Paraguai e Panamá</b> como residência fiscal; Flórida e Portugal como moradia parcial.</p>
+  <div class="atlas" role="group" aria-label="Lugares em análise"><figure class="atlas-item"><img src="img/sarasota.webp" alt="Sarasota, Flórida" decoding="async"><figcaption><b>Sarasota</b><span>Flórida · moradia</span><small>foto Fred Hsu on en.wikipedia, CC BY-SA 3.0</small></figcaption></figure><figure class="atlas-item"><img src="img/cascais.webp" alt="Cascais, Portugal" decoding="async"><figcaption><b>Cascais</b><span>Portugal · moradia</span><small>foto bvi4092, CC BY 4.0</small></figcaption></figure><figure class="atlas-item"><img src="img/jose-ignacio.webp" alt="José Ignacio, Uruguai" decoding="async"><figcaption><b>José Ignacio</b><span>Uruguai · residência fiscal e moradia</span><small>foto Lorisstragliotto, CC BY-SA 3.0</small></figcaption></figure><figure class="atlas-item"><img src="img/assuncao.webp" alt="Assunção, Paraguai" decoding="async"><figcaption><b>Assunção</b><span>Paraguai · residência fiscal</span><small>foto FF MM, CC BY-SA 3.0</small></figcaption></figure><figure class="atlas-item"><img src="img/panama.webp" alt="Cidade do Panamá, Panamá" decoding="async"><figcaption><b>Cidade do Panamá</b><span>Panamá · residência fiscal, morando lá</span><small>foto Mariordo (Mario Roberto Duran Ortiz), CC BY-SA 3.0</small></figcaption></figure></div>
+  <p class="meta"><span>Thiago <b>Zeni</b></span><span>Índices de 30/09/2026</span><span>Estudo, não parecer jurídico</span><span>Perfis fictícios</span></p>
+</header>
+
+<section class="sec" id="resposta">
+  <div class="sec-cab"><p class="rotulo">01 — Resposta curta</p><h2>A saída só reduz o imposto em três lugares da carteira</h2></div>
+  <div class="achados">
+    <div class="achado"><span class="n">01</span><h3>Títulos públicos, bolsa e offshore: é só aí que o imposto cai</h3>
+      <p class="grande">R$ 21,7 mil<small>por R$ 1 milhão em títulos públicos ou bolsa, por ano, no Uruguai ou no Paraguai <span class="selo inf" title="inferido">I</span></small></p>
+      <p>Offshore: <b>R$ 5,5 mil</b> por milhão nos três países. Renda fixa privada, isentos e dividendos: <b>praticamente zero</b>. Com CDI de 14,47% em 12 meses; a economia cai junto com os juros.</p></div>
+    <div class="achado"><span class="n">02</span><h3>O custo dos dias decide a combinação</h3>
+      <p class="grande">R$ 6,3 mi<small>em títulos ou bolsa para pagar meio ano no Uruguai, com gasto de R$ 40 mil/mês <span class="selo inf" title="inferido">I</span></small></p>
+      <p>Com 60 dias no Uruguai e o resto na Flórida ou em Portugal, cerca de <b>R$ 2,3 mi</b>. O Paraguai custa menos que o Brasil para viver; o Panamá, na lista da Receita, não economiza em títulos nem bolsa.</p></div>
+    <div class="achado"><span class="n">03</span><h3>Antes do capital e da estrutura</h3>
+      <p>A conta não inclui o <b>imóvel no Uruguai</b> (US$ 0,6 mi a US$ 2,0 mi nas vias de poucos dias), os <b>US$ 200 mil no Paraguai</b>, advogados e contabilidade nos dois países, passagens e casa dupla. Cada <b>R$ 50 mil por ano</b> desses custos pede mais <b>R$ 2,3 mi</b> em títulos ou bolsa <span class="selo inf" title="inferido">I</span>.</p></div>
+    <div class="achado"><span class="n">04</span><h3>Na herança, a saída muda quem cobra</h3>
+      <p>Com quem morre e os herdeiros fora do Brasil, a <b>offshore</b> pode sair do ITCMD, se o domicílio fora for provado <span class="selo inf" title="inferido">I</span>. Imóvel no Brasil continua no inventário brasileiro <span class="selo conf" title="confirmado">C</span>. Nenhum número de dias no Brasil garante que a Receita aceite a saída <span class="selo inf" title="inferido">I</span>.</p></div>
+  </div>
+  <p class="legenda"><span><span class="selo conf">C</span> confirmado em fonte primária</span><span><span class="selo inf">I</span> inferido, com raciocínio</span><span><span class="selo hip">H</span> hipótese</span><span><span class="selo nc">NC</span> não confirmado</span></p>
+</section>
+
+<section class="sec" id="como">
+  <div class="sec-cab"><p class="rotulo">02 — Como funciona</p><h2>Três peças independentes</h2></div>
+  <div class="passos">
+    <div class="passo"><i>1</i><h3>Sair do Brasil</h3><p>Saída formal na Receita e menos vínculos aqui.</p></div>
+    <div class="passo"><i>2</i><h3>Residência fiscal</h3><p>Num país que a dá por investimento ou presença: Uruguai, Paraguai ou Panamá.</p></div>
+    <div class="passo"><i>3</i><h3>Morar onde quiser</h3><p>O resto do ano na Flórida, em Portugal ou no próprio país, sem virar residente fiscal lá: cada lugar olha dias, casa e vínculos.</p></div>
+  </div>
+  <div class="risco">
+    <p class="risco-tit">Risco comum a todas as combinações</p>
+    <p>Para brasileiro não há número de dias que garanta a saída. Se casa, negócio e família ficarem no Brasil, a Receita pode não aceitar a saída, qualquer que seja o destino <span class="selo inf" title="inferido">I</span>.</p>
+    <p class="mut">As combinações abaixo deixam o máximo possível no Brasil, até 182 dias: meio ano, por simetria com a regra do estrangeiro, não um limite. A pesquisa sugeriu cerca de 120 dias como referência prudente, com confiança baixa a moderada.</p>
+  </div>
+  <div class="combs-mini"><div class="comb-mini"><p class="comb-cab"><span class="cal-id">1</span>Uruguai + Brasil</p><div class="faixa"><span class="seg l-BR" style="flex:181" title="Brasil: 181 dias"><b>Brasil</b><i>181 dias</i></span><span class="seg l-UY" style="flex:184" title="Uruguai: 184 dias"><b>Uruguai</b><i>184 dias · residência fiscal</i></span></div><div class="rbr"><span class="rbr-t"><span class="rbr-ok"></span><span class="rbr-alto"></span><span class="rbr-m" style="left:75.4%"></span></span><span class="rbr-txt">Brasil 181 dias: 61 dias acima da referência de 120; nenhum número é seguro</span></div></div><div class="comb-mini"><p class="comb-cab"><span class="cal-id">2</span>Uruguai + Brasil + Flórida</p><div class="faixa"><span class="seg l-BR" style="flex:182" title="Brasil: 182 dias"><b>Brasil</b><i>182 dias</i></span><span class="seg l-FL" style="flex:115" title="Flórida: 115 dias"><b>Flórida</b><i>115 dias</i></span><span class="seg l-UY" style="flex:68" title="Uruguai: 68 dias"><b>Uruguai</b><i>68 dias · residência fiscal</i></span></div><div class="rbr"><span class="rbr-t"><span class="rbr-ok"></span><span class="rbr-alto"></span><span class="rbr-m" style="left:75.8%"></span></span><span class="rbr-txt">Brasil 182 dias: 62 dias acima da referência de 120; nenhum número é seguro</span></div></div><div class="comb-mini"><p class="comb-cab"><span class="cal-id">3</span>Uruguai + Brasil + Portugal</p><div class="faixa"><span class="seg l-BR" style="flex:150" title="Brasil: 150 dias"><b>Brasil</b><i>150 dias</i></span><span class="seg l-PT" style="flex:150" title="Portugal: 150 dias"><b>Portugal</b><i>150 dias</i></span><span class="seg l-UY" style="flex:65" title="Uruguai: 65 dias"><b>Uruguai</b><i>65 dias · residência fiscal</i></span></div><div class="rbr"><span class="rbr-t"><span class="rbr-ok"></span><span class="rbr-alto"></span><span class="rbr-m" style="left:62.5%"></span></span><span class="rbr-txt">Brasil 150 dias: 30 dias acima da referência de 120; nenhum número é seguro</span></div></div><div class="comb-mini"><p class="comb-cab"><span class="cal-id">4</span>Paraguai + Brasil</p><div class="faixa"><span class="seg l-BR" style="flex:182" title="Brasil: 182 dias"><b>Brasil</b><i>182 dias</i></span><span class="seg l-PY" style="flex:183" title="Paraguai: 183 dias"><b>Paraguai</b><i>183 dias · residência fiscal</i></span></div><div class="rbr"><span class="rbr-t"><span class="rbr-ok"></span><span class="rbr-alto"></span><span class="rbr-m" style="left:75.8%"></span></span><span class="rbr-txt">Brasil 182 dias: 62 dias acima da referência de 120; nenhum número é seguro</span></div></div><div class="comb-mini"><p class="comb-cab"><span class="cal-id">5</span>Paraguai + Brasil + Flórida</p><div class="faixa"><span class="seg l-BR" style="flex:182" title="Brasil: 182 dias"><b>Brasil</b><i>182 dias</i></span><span class="seg l-FL" style="flex:115" title="Flórida: 115 dias"><b>Flórida</b><i>115 dias</i></span><span class="seg l-PY" style="flex:68" title="Paraguai: 68 dias"><b>Paraguai</b><i>68 dias · residência fiscal</i></span></div><div class="rbr"><span class="rbr-t"><span class="rbr-ok"></span><span class="rbr-alto"></span><span class="rbr-m" style="left:75.8%"></span></span><span class="rbr-txt">Brasil 182 dias: 62 dias acima da referência de 120; nenhum número é seguro</span></div></div><div class="comb-mini"><p class="comb-cab"><span class="cal-id">6</span>Paraguai + Brasil + Portugal</p><div class="faixa"><span class="seg l-BR" style="flex:182" title="Brasil: 182 dias"><b>Brasil</b><i>182 dias</i></span><span class="seg l-PT" style="flex:150" title="Portugal: 150 dias"><b>Portugal</b><i>150 dias</i></span><span class="seg l-PY" style="flex:33" title="Paraguai: 33 dias"><b>Paraguai</b><i>33 dias · residência fiscal</i></span></div><div class="rbr"><span class="rbr-t"><span class="rbr-ok"></span><span class="rbr-alto"></span><span class="rbr-m" style="left:75.8%"></span></span><span class="rbr-txt">Brasil 182 dias: 62 dias acima da referência de 120; nenhum número é seguro</span></div></div><div class="comb-mini"><p class="comb-cab"><span class="cal-id">7</span>Panamá + Brasil</p><div class="faixa"><span class="seg l-BR" style="flex:181" title="Brasil: 181 dias"><b>Brasil</b><i>181 dias</i></span><span class="seg l-PA" style="flex:184" title="Panamá: 184 dias"><b>Panamá</b><i>184 dias · residência fiscal</i></span></div><div class="rbr"><span class="rbr-t"><span class="rbr-ok"></span><span class="rbr-alto"></span><span class="rbr-m" style="left:75.4%"></span></span><span class="rbr-txt">Brasil 181 dias: 61 dias acima da referência de 120; nenhum número é seguro</span></div></div></div>
+</section>
+
+<section class="sec" id="por-milhao">
+  <div class="sec-cab"><p class="rotulo">03 — Imposto por R$ 1 milhão</p><h2>Quanto cada milhão economiza por ano</h2>
+    <p class="lead">Economia de imposto de renda de quem deixa de ser residente, contra ficar, para <b>R$ 1 milhão</b> numa só classe. Faixa = leitura favorável a leitura adversa.</p></div>
+  <div class="rolagem"><table class="pormi"><thead><tr><th>R$ 1 milhão em…</th><th class="num">Uruguai</th><th class="num">Paraguai</th><th class="num">Panamá</th></tr></thead><tbody><tr><th scope="row">Renda fixa privada<small>CDB, debêntures comuns, fundos tributáveis</small></th><td class="num zero">zero</td><td class="num zero">zero</td><td class="num zero">zero</td></tr><tr><th scope="row">Isentos de pessoa física<small>LCI, LCA, CRI, CRA, fundos imobiliários</small></th><td class="num zero">zero</td><td class="num zero">zero</td><td class="num zero">zero</td></tr><tr><th scope="row">Títulos públicos<small>Tesouro Direto e títulos federais</small></th><td class="num"><b>R$ 21,7 mil</b></td><td class="num"><b>zero a R$ 21,7 mil</b></td><td class="num zero">zero</td></tr><tr><th scope="row">Bolsa no Brasil<small>ganho realizado em ações e ETFs</small></th><td class="num"><b>R$ 21,7 mil</b></td><td class="num"><b>zero a R$ 21,7 mil</b></td><td class="num zero">zero</td></tr><tr><th scope="row">Offshore<small>empresa no exterior, R$ 1 mi convertido em dólar</small></th><td class="num"><b>R$ 1,1 mil a R$ 5,5 mil</b></td><td class="num"><b>R$ 5,5 mil</b></td><td class="num"><b>R$ 5,5 mil</b></td></tr></tbody></table></div>
+  <p class="nota">Renda estimada por índice: CDI de 14,47% em 12 meses para as classes no Brasil, inclusive o ganho em bolsa, e T-bill de 3,69% para a offshore, até 30/09/2026. É proxy, não retorno esperado <span class="selo hip" title="hipótese">H</span>. Leituras adversas: no Paraguai, títulos e bolsa voltam a 15% pela letra do critério de 20%; no Uruguai, a offshore paga 12% se for imputada à pessoa. Títulos e bolsa a 0% dependem de a conta de não residente ser aberta no regime do investidor estrangeiro <span class="selo nc" title="não confirmado">NC</span>.</p>
+</section>
+
+<section class="sec" id="equilibrio">
+  <div class="sec-cab"><p class="rotulo">04 — Ponto de equilíbrio</p><h2>Quanto patrimônio paga os dias fora</h2>
+    <p class="lead">Viver no país da residência custa mais ou menos que viver no Brasil. A residência fiscal compensa quando a economia de imposto paga essa diferença.</p></div>
+  <p class="formula"><b>Patrimônio mínimo</b> = custo de vida a mais dos dias no país da residência ÷ economia por R$ 1 milhão. Custo de vida a mais = gasto mensal × 12 × dias/365 × (nível de preços do país − 1), com o Brasil = 1 e níveis do Banco Mundial <span class="selo inf" title="inferido">I</span>.</p>
+  <div class="rolagem"><table class="mtx eq"><thead><tr><th></th><th>Combinação</th><th class="num">Dias no Brasil</th><th class="num">Custo dos dias, gasto R$ 40 mil/mês</th><th class="num">Com R$ 80 mil/mês</th><th class="num">Patrimônio mínimo em títulos ou bolsa</th><th class="num">Ou em offshore</th></tr></thead><tbody><tr><td class="mtx-n">1</td><th scope="row">Uruguai + Brasil<small>Uruguai, morando (mais de 183 dias) · capital: nenhum obrigatório</small></th><td class="num">181</td><td class="num">R$ 138 mil</td><td class="num">R$ 275 mil</td><td class="num"><b>R$ 6,3 mi</b><small>R$ 12,7 mi com R$ 80 mil</small></td><td class="num"><b>R$ 24,9 mi</b><small>R$ 49,8 mi com R$ 80 mil</small></td></tr><tr><td class="mtx-n">2</td><th scope="row">Uruguai + Brasil + Flórida<small>Uruguai, imóvel + 60 dias, com o regime · capital: imóvel ≈ US$ 2,0 mi, ou ≈ US$ 0,6 mi + fundo ≈ US$ 0,1 mi/ano</small></th><td class="num">182</td><td class="num">R$ 51 mil</td><td class="num">R$ 102 mil</td><td class="num"><b>R$ 2,3 mi</b><small>R$ 4,7 mi com R$ 80 mil</small></td><td class="num"><b>R$ 9,2 mi</b><small>R$ 18,4 mi com R$ 80 mil</small></td></tr><tr><td class="mtx-n">3</td><th scope="row">Uruguai + Brasil + Portugal<small>Uruguai, imóvel + 60 dias, com o regime · capital: imóvel ≈ US$ 2,0 mi, ou ≈ US$ 0,6 mi + fundo ≈ US$ 0,1 mi/ano</small></th><td class="num">150</td><td class="num">R$ 49 mil</td><td class="num">R$ 97 mil</td><td class="num"><b>R$ 2,2 mi</b><small>R$ 4,5 mi com R$ 80 mil</small></td><td class="num"><b>R$ 8,8 mi</b><small>R$ 17,6 mi com R$ 80 mil</small></td></tr><tr><td class="mtx-n">4</td><th scope="row">Paraguai + Brasil<small>Paraguai, residência permanente · capital: US$ 200 mil (aplicação por 2 anos ou imóvel de renda)</small></th><td class="num">182</td><td class="num">R$ 42 mil a menos</td><td class="num">R$ 84 mil a menos</td><td class="num"><b>sem mínimo</b></td><td class="num"><b>sem mínimo</b></td></tr><tr><td class="mtx-n">5</td><th scope="row">Paraguai + Brasil + Flórida<small>Paraguai, residência permanente · capital: US$ 200 mil (aplicação por 2 anos ou imóvel de renda)</small></th><td class="num">182</td><td class="num">R$ 16 mil a menos</td><td class="num">R$ 31 mil a menos</td><td class="num"><b>sem mínimo</b></td><td class="num"><b>sem mínimo</b></td></tr><tr><td class="mtx-n">6</td><th scope="row">Paraguai + Brasil + Portugal<small>Paraguai, residência permanente · capital: US$ 200 mil (aplicação por 2 anos ou imóvel de renda)</small></th><td class="num">182</td><td class="num">R$ 8 mil a menos</td><td class="num">R$ 15 mil a menos</td><td class="num"><b>sem mínimo</b></td><td class="num"><b>sem mínimo</b></td></tr><tr><td class="mtx-n">7</td><th scope="row">Panamá + Brasil<small>Panamá, mais de 183 dias · capital: residência de investidora</small></th><td class="num">181</td><td class="num">R$ 18 mil</td><td class="num">R$ 36 mil</td><td class="num"><b>não paga</b></td><td class="num"><b>R$ 3,3 mi</b><small>R$ 6,6 mi com R$ 80 mil</small></td></tr></tbody></table></div>
+  <p class="nota">Leitura favorável de cada país. "Sem mínimo": viver lá custa menos que no Brasil. "Não paga": a classe não economiza nada nesse país. Não entram capital exigido, passagens, casa dupla, advogados e contabilidade; a moradia em terceiro país (Flórida, Portugal) é escolha de qualidade de vida, com custo à parte.</p>
+</section>
+
+<section class="sec" id="perfis">
+  <div class="sec-cab"><p class="rotulo">05 — Três perfis</p><h2>O tipo de carteira muda a resposta mais que o tamanho</h2>
+    <p class="lead">Três perfis fictícios com cerca de <b>R$ 20 milhões</b> cada e o mesmo gasto. Valores por pessoa, por ano.</p></div>
+  <ul class="perfis-desc"><li><b>A · Renda fixa privada.</b> CDB, fundos tributáveis e uma parte em isentos (LCI, CRI, CRA): R$ 16 mi em renda fixa privada, R$ 4 mi em isentos.</li><li><b>B · Títulos públicos e bolsa.</b> Tesouro e ações no Brasil, uma parte em isentos: R$ 10 mi em títulos públicos, R$ 6 mi em bolsa, R$ 4 mi em isentos.</li><li><b>C · Offshore.</b> empresa offshore em dólar e uma parte em renda fixa no Brasil: US$ 3 mi em offshore, R$ 4 mi em renda fixa privada.</li></ul><div class="rolagem"><table class="perfis-t"><thead><tr><th></th><th class="num">A · Renda fixa privada</th><th class="num">B · Títulos públicos e bolsa</th><th class="num">C · Offshore</th></tr></thead><tbody><tr class="grupo"><th colspan="4">Economia de imposto por ano, só imposto</th></tr><tr><th scope="row">Uruguai</th><td class="num">zero</td><td class="num">+R$ 347 mil</td><td class="num">+R$ 17 mil a +R$ 86 mil</td></tr><tr><th scope="row">Paraguai</th><td class="num">zero</td><td class="num">zero a +R$ 347 mil</td><td class="num">+R$ 86 mil</td></tr><tr><th scope="row">Panamá</th><td class="num">zero</td><td class="num">zero</td><td class="num">+R$ 86 mil</td></tr><tr class="grupo"><th colspan="4">Economia menos o custo de vida dos dias no país, gasto de R$ 40 mil/mês</th></tr><tr><th scope="row"><span class="cal-id">1</span> Uruguai + Brasil</th><td class="num"><span class="chip c-nao">não compensa</span><small>−R$ 138 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 210 mil</small></td><td class="num"><span class="chip c-nao">não compensa</span><small>−R$ 120 mil a −R$ 52 mil</small></td></tr><tr><th scope="row"><span class="cal-id">2</span> Uruguai + Brasil + Flórida</th><td class="num"><span class="chip c-nao">não compensa</span><small>−R$ 51 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 296 mil</small></td><td class="num"><span class="chip c-dep">depende</span><small>−R$ 34 mil a +R$ 35 mil</small></td></tr><tr><th scope="row"><span class="cal-id">3</span> Uruguai + Brasil + Portugal</th><td class="num"><span class="chip c-nao">não compensa</span><small>−R$ 49 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 299 mil</small></td><td class="num"><span class="chip c-dep">depende</span><small>−R$ 31 mil a +R$ 37 mil</small></td></tr><tr><th scope="row"><span class="cal-id">4</span> Paraguai + Brasil</th><td class="num"><span class="chip c-sim">compensa*</span><small>+R$ 42 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 42 mil a +R$ 389 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 128 mil</small></td></tr><tr><th scope="row"><span class="cal-id">5</span> Paraguai + Brasil + Flórida</th><td class="num"><span class="chip c-sim">compensa*</span><small>+R$ 16 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 16 mil a +R$ 363 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 102 mil</small></td></tr><tr><th scope="row"><span class="cal-id">6</span> Paraguai + Brasil + Portugal</th><td class="num"><span class="chip c-sim">compensa*</span><small>+R$ 8 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 8 mil a +R$ 355 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 94 mil</small></td></tr><tr><th scope="row"><span class="cal-id">7</span> Panamá + Brasil</th><td class="num"><span class="chip c-nao">não compensa</span><small>−R$ 18 mil</small></td><td class="num"><span class="chip c-nao">não compensa</span><small>−R$ 18 mil</small></td><td class="num"><span class="chip c-sim">compensa</span><small>+R$ 68 mil</small></td></tr></tbody></table></div>
+  <p class="nota">* Saldo positivo sem nenhuma economia de imposto: vem só de viver mais barato nos dias passados no Paraguai. Faixa = leitura adversa a favorável. Antes do capital exigido e dos custos de estrutura.</p>
+</section>
+
+<section class="sec" id="simule">
+  <div class="sec-cab"><p class="rotulo">06 — Simule</p><h2>A conta com a sua carteira</h2>
+    <p class="lead">Saldos por pessoa. Os números ficam só neste navegador.</p></div>
+  <form class="sim" id="sim-form" autocomplete="off">
+    <div class="sim-form">
+      <div class="sim-perfis" role="group" aria-label="Carregar perfil de exemplo">
+        <button type="button" data-perfil="A">Perfil A</button><button type="button" data-perfil="B">Perfil B</button><button type="button" data-perfil="C">Perfil C</button>
+      </div>
+      <p class="sim-sub">Aplicações, em milhões</p>
+      <div class="campo"><label for="s-rf">Renda fixa privada<small>R$ mi · CDB, fundos tributáveis</small></label><input id="s-rf" inputmode="decimal" value="0"></div>
+      <div class="campo"><label for="s-isento">Isentos<small>R$ mi · LCI, CRI, CRA, FII</small></label><input id="s-isento" inputmode="decimal" value="4"></div>
+      <div class="campo"><label for="s-tpub">Títulos públicos<small>R$ mi</small></label><input id="s-tpub" inputmode="decimal" value="10"></div>
+      <div class="campo"><label for="s-bolsa">Bolsa no Brasil<small>R$ mi</small></label><input id="s-bolsa" inputmode="decimal" value="6"></div>
+      <div class="campo"><label for="s-off">Offshore<small>US$ mi · empresa no exterior</small></label><input id="s-off" inputmode="decimal" value="0"></div>
+      <p class="sim-sub">Renda e custos</p>
+      <div class="campo"><label for="s-div">Dividendos de empresa brasileira<small>R$ mil por ano</small></label><input id="s-div" inputmode="decimal" value="0"></div>
+      <div class="campo"><label for="s-gasto">Gasto mensal<small>R$ mil, padrão de vida no Brasil</small></label><input id="s-gasto" inputmode="decimal" value="40"></div>
+      <div class="campo"><label for="s-extra">Estrutura e capital<small>R$ mil por ano · advogados, contador, passagens, custo do capital exigido</small></label><input id="s-extra" inputmode="decimal" value="0"></div>
+    </div>
+    <div class="sim-res" aria-live="polite">
+      <div><p class="sim-sub">Economia de imposto por ano</p><div class="res-tiles" id="sim-eco"></div></div>
+      <div><p class="sim-sub">Economia menos custo de vida e estrutura</p><div class="rolagem"><table id="sim-combs"></table></div></div>
+      <p class="nota" id="sim-nota"></p>
+    </div>
+  </form>
+</section>
+
+<section class="sec" id="residencia">
+  <div class="sec-cab"><p class="rotulo">07 — Residência fiscal</p><h2>Os três países, regra por regra</h2>
+    <p class="lead">Como se obtém, quanto pede e o imposto de cada classe antes e depois da saída.</p></div>
+  
+<article class="res ok" id="res-UY">
+  <div class="res-cab"><h3>Uruguai</h3><span class="res-selo">Viável, se confirmadas as premissas</span></div>
+  <p class="res-resumo">Tratado com o Brasil e regime que deixa a renda de capital do exterior fora do imposto uruguaio por 11 anos, só para quem não foi residente fiscal lá nos dois exercícios anteriores nem usou o regime antigo. Pede investimento alto nas vias de poucos dias; morando mais de 183 dias, nenhum. O regime foi reescrito em 12/2025 e ajustado por quatro decretos em 2026.</p>
+  <dl class="fichas"><div class="ficha"><dt>Como se obtém</dt><dd>imóvel + 60 dias, ou imóvel grande sem dias; morando +183 dias, sem investimento</dd></div><div class="ficha"><dt>Investimento</dt><dd>imóvel comprado desde 1/9/2025 ≈ US$ 2,0 mi, ou ≈ US$ 0,6 mi + fundo ≈ US$ 0,1 mi/ano (dólar estimado); morando, nenhum</dd></div><div class="ficha"><dt>Prazo do benefício</dt><dd>11 anos; 12 a 16 só com novo investimento</dd></div><div class="ficha"><dt>Tratado · lista da Receita</dt><dd>tem tratado · fora da lista (resta a menção antiga às Safis, até 2010)</dd></div></dl>
+  <div class="pc"><div><p class="pc-tit mais">A favor</p><ul><li>Renda de capital mobiliário do exterior fora do imposto uruguaio por 11 anos, por opção (derivativos fora; classificar produto a produto) <span class="selo inf" title="inferido">I</span></li><li>Títulos públicos e bolsa a 0% no Brasil, se a conta de não residente for aberta no regime do investidor estrangeiro (condição operacional em aberto) <span class="selo nc" title="não confirmado">NC</span></li><li>Tratado pode limitar o JCP a 15%; a fonte pagadora precisa confirmar <span class="selo hip" title="hipótese">H</span></li></ul></div>
+    <div><p class="pc-tit menos">Contra</p><ul><li>Vias de poucos dias pedem imóvel de US$ 0,6 mi a US$ 2,0 mi (dólar estimado) <span class="selo conf" title="confirmado">C</span></li><li>Regime instável; sem ele, 12% sobre a renda do exterior <span class="selo inf" title="inferido">I</span></li><li>Imputação da renda da offshore à pessoa não confirmada: pode pagar 12% <span class="selo hip" title="hipótese">H</span></li><li>Imóvel no Uruguai: imposto ao patrimônio, transmissão e legítima <span class="selo conf" title="confirmado">C</span></li></ul></div></div>
+  <div class="rolagem"><table class="vert"><thead><tr><th>Classe</th><th>Hoje, residente</th><th>Depois: no Brasil</th><th>Depois: no Uruguai</th></tr></thead><tbody><tr><th scope="row">Renda fixa privada</th><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>15% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td></tr><tr><th scope="row">Isentos de pessoa física</th><td>0% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td></tr><tr><th scope="row">Títulos públicos</th><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td></tr><tr><th scope="row">Bolsa</th><td>15% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo nc" title="não confirmado">NC</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td></tr><tr><th scope="row">Previdência, no resgate</th><td>10% a 35% <span class="selo conf" title="confirmado">C</span></td><td>25% (ou tabela progressiva) <span class="selo hip" title="hipótese">H</span></td><td>NC <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">Offshore</th><td>15% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td><td>0% (ou 12%) <span class="selo hip" title="hipótese">H</span></td></tr><tr><th scope="row">Dividendos de empresa brasileira</th><td>0% a 10% (mínimo anual) <span class="selo conf" title="confirmado">C</span></td><td>10% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td></tr><tr><th scope="row">JCP</th><td>17,5% <span class="selo conf" title="confirmado">C</span></td><td>15% pelo tratado (17,5% se o tratado não alcançar o JCP) <span class="selo hip" title="hipótese">H</span></td><td>0% <span class="selo hip" title="hipótese">H</span></td></tr><tr><th scope="row">Venda de quotas</th><td>15% a 22,5% <span class="selo inf" title="inferido">I</span></td><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr class="minimo"><th scope="row">Tributação mínima anual</th><td colspan="3">só para residente no Brasil: 0% até R$ 600 mil de renda anual total, subindo até 10% em R$ 1,2 mi, descontado o que já foi pago (a partir de 2026); inclui dividendos</td></tr></tbody></table></div>
+</article>
+<article class="res atencao" id="res-PY">
+  <div class="res-cab"><h3>Paraguai</h3><span class="res-selo">Viável, com mais ressalvas</span></div>
+  <p class="res-resumo">Imposto territorial: a renda de fora do Paraguai não paga lá. Investimento menor, sem tratado com o Brasil e com a residência fiscal sem dias por confirmar por escrito.</p>
+  <dl class="fichas"><div class="ficha"><dt>Como se obtém</dt><dd>residência permanente por investimento</dd></div><div class="ficha"><dt>Investimento</dt><dd>US$ 200 mil em aplicação mantida por 2 anos, ou em imóvel de renda (a casa de moradia não serve); US$ 70 mil com 5 empregos</dd></div><div class="ficha"><dt>Prazo do benefício</dt><dd>sem prazo: é a regra geral do país</dd></div><div class="ficha"><dt>Tratado · lista da Receita</dt><dd>sem tratado · fora da lista</dd></div></dl>
+  <div class="pc"><div><p class="pc-tit mais">A favor</p><ul><li>Renda do exterior fora do imposto paraguaio, sem prazo <span class="selo inf" title="inferido">I</span></li><li>Títulos públicos e bolsa a 0% no Brasil enquanto fora da lista, com a mesma condição operacional do Uruguai (não confirmada) <span class="selo nc" title="não confirmado">NC</span></li><li>Investimento de entrada de US$ 200 mil <span class="selo conf" title="confirmado">C</span></li></ul></div>
+    <div><p class="pc-tit menos">Contra</p><ul><li>Residência fiscal sem dias: leitura indireta, confirmar por escrito <span class="selo inf" title="inferido">I</span></li><li>A Receita pode ler o critério de 20% pela letra e voltar bolsa e títulos a 15% <span class="selo inf" title="inferido">I</span></li><li>Sem tratado: JCP 17,5% e nenhum desempate se o Brasil discordar <span class="selo inf" title="inferido">I</span></li><li>Se entrar na lista da Receita, a vantagem cai <span class="selo inf" title="inferido">I</span></li><li>Origem dos recursos levados ao país precisa de prova; imóvel lá segue legítima de 4/5 <span class="selo inf" title="inferido">I</span></li></ul></div></div>
+  <div class="rolagem"><table class="vert"><thead><tr><th>Classe</th><th>Hoje, residente</th><th>Depois: no Brasil</th><th>Depois: no Paraguai</th></tr></thead><tbody><tr><th scope="row">Renda fixa privada</th><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>15% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Isentos de pessoa física</th><td>0% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Títulos públicos</th><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>0% (ou 15% pela letra dos 20%) <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Bolsa</th><td>15% <span class="selo conf" title="confirmado">C</span></td><td>0% (ou 15% pela letra dos 20%) <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Previdência, no resgate</th><td>10% a 35% <span class="selo conf" title="confirmado">C</span></td><td>25% (ou tabela progressiva) <span class="selo hip" title="hipótese">H</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Offshore</th><td>15% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Dividendos de empresa brasileira</th><td>0% a 10% (mínimo anual) <span class="selo conf" title="confirmado">C</span></td><td>10% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">JCP</th><td>17,5% <span class="selo conf" title="confirmado">C</span></td><td>17,5% (ou 15%) <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Venda de quotas</th><td>15% a 22,5% <span class="selo inf" title="inferido">I</span></td><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr class="minimo"><th scope="row">Tributação mínima anual</th><td colspan="3">só para residente no Brasil: 0% até R$ 600 mil de renda anual total, subindo até 10% em R$ 1,2 mi, descontado o que já foi pago (a partir de 2026); inclui dividendos</td></tr></tbody></table></div>
+</article>
+<article class="res atencao" id="res-PA">
+  <div class="res-cab"><h3>Panamá</h3><span class="res-selo">Pede mais de 183 dias lá; a via por casa é incerta</span></div>
+  <p class="res-resumo">Imposto territorial, mas a residência fiscal objetiva pede mais de 183 dias; a via por casa permanente existe no papel e fica a critério do fisco. Consta da lista da Receita: no Brasil, as aplicações pagam como residente e JCP e venda de quotas sobem a 25%.</p>
+  <dl class="fichas"><div class="ficha"><dt>Como se obtém</dt><dd>mais de 183 dias no ano ou no anterior, ou casa permanente a critério do fisco</dd></div><div class="ficha"><dt>Investimento</dt><dd>residência de investidor (sem presença mínima para o visto)</dd></div><div class="ficha"><dt>Prazo do benefício</dt><dd>sem prazo: é a regra geral do país</dd></div><div class="ficha"><dt>Tratado · lista da Receita</dt><dd>sem tratado · na lista</dd></div></dl>
+  <div class="pc"><div><p class="pc-tit mais">A favor</p><ul><li>Renda do exterior fora do imposto panamenho (regra geral; texto da Ley 526/2026 não lido) <span class="selo inf" title="inferido">I</span></li><li>Offshore a 0% no Brasil, como nos outros destinos <span class="selo conf" title="confirmado">C</span></li></ul></div>
+    <div><p class="pc-tit menos">Contra</p><ul><li>Mais de metade do ano no Panamá <span class="selo inf" title="inferido">I</span></li><li>Na lista da Receita: aplicações no Brasil como residente; JCP e quotas a 25% <span class="selo inf" title="inferido">I</span></li><li>Dividendos a 10% no Brasil pela orientação da Receita, ou 25% em leitura não resolvida <span class="selo hip" title="hipótese">H</span></li><li>Lado panamenho de dividendos, JCP e aluguel não apurado <span class="selo nc" title="não confirmado">NC</span></li></ul></div></div>
+  <div class="rolagem"><table class="vert"><thead><tr><th>Classe</th><th>Hoje, residente</th><th>Depois: no Brasil</th><th>Depois: no Panamá</th></tr></thead><tbody><tr><th scope="row">Renda fixa privada</th><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Isentos de pessoa física</th><td>0% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Títulos públicos</th><td>15% a 22,5% <span class="selo conf" title="confirmado">C</span></td><td>15% a 22,5% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Bolsa</th><td>15% <span class="selo conf" title="confirmado">C</span></td><td>15% <span class="selo inf" title="inferido">I</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Previdência, no resgate</th><td>10% a 35% <span class="selo conf" title="confirmado">C</span></td><td>25% <span class="selo hip" title="hipótese">H</span></td><td>NC <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">Offshore</th><td>15% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Dividendos de empresa brasileira</th><td>0% a 10% (mínimo anual) <span class="selo conf" title="confirmado">C</span></td><td>10% (ou 25%) <span class="selo hip" title="hipótese">H</span></td><td>NC <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">JCP</th><td>17,5% <span class="selo conf" title="confirmado">C</span></td><td>25% <span class="selo nc" title="não confirmado">NC</span></td><td>NC <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">Venda de quotas</th><td>15% a 22,5% <span class="selo inf" title="inferido">I</span></td><td>25% <span class="selo conf" title="confirmado">C</span></td><td>0% <span class="selo inf" title="inferido">I</span></td></tr><tr class="minimo"><th scope="row">Tributação mínima anual</th><td colspan="3">só para residente no Brasil: 0% até R$ 600 mil de renda anual total, subindo até 10% em R$ 1,2 mi, descontado o que já foi pago (a partir de 2026); inclui dividendos</td></tr></tbody></table></div>
+</article>
+</section>
+
+<section class="sec" id="moradia">
+  <div class="sec-cab"><p class="rotulo">08 — Moradia parcial</p><h2>Onde passar o resto do ano</h2>
+    <p class="lead">Qualidade de vida e custo de cada lugar, com o <b>Brasil como referência</b> (traço vertical nas barras). Indicadores nacionais, salvo onde indicado; não é ranking.</p></div>
+  <div class="mors">
+<article class="mor" id="mor-FL">
+  <figure class="mor-foto"><img src="img/sarasota.webp" alt="Sarasota, Lido Key" loading="lazy" decoding="async"><figcaption><b>Sarasota, Lido Key</b> <a href="https://commons.wikimedia.org/wiki/File:2017_Sarasota_Lido_Key_Beach_2_FRD_9567.jpg">foto Fred Hsu on en.wikipedia, CC BY-SA 3.0</a></figcaption></figure>
+  <div class="mor-corpo">
+  <div class="mor-cab"><h3>Flórida</h3><span class="mor-lim">115 dias com folga, se os dois anos anteriores também forem curtos</span></div>
+  <p class="mor-rec">Indicadores: Miami e média dos EUA</p>
+  <dl class="inds">
+    <div><dt>Clima</dt><dd><b>29,0° / 20,4°</b> mês quente / frio · 1.712 mm/ano · melhor dez a mar</dd></div>
+    <div><dt>Habitantes</dt><dd>Miami 487 mil · condado 2,84 mi</dd></div>
+    <div><dt>PIB per capita (EUA)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:94.8%"></span><span class="mini-ref" style="left:24.7%"></span></span><b>US$ 90 mil</b></span></dd></div>
+    <div><dt>Homicídios/100 mil (EUA)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:28.8%"></span><span class="mini-ref" style="left:96.4%"></span></span><b>5,8</b></span><small>Miami 5,95 (polícia, registrada; cálculo nosso)</small></dd></div>
+    <div><dt>Educação · PISA matemática</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:93.0%"></span><span class="mini-ref" style="left:75.8%"></span></span><b>465</b></span><small>EUA; amostragem fora do padrão</small></dd></div>
+    <div><dt>Mobilidade</dt><dd>Metrorail 25 milhas até o aeroporto · Metromover 21 estações</dd></div>
+    <div><dt>Voos diretos</dt><dd class="voos"><span class="voo sim"><b>EUA</b> é EUA</span><span class="voo sim"><b>Europa</b> Lisboa, Madri, Paris</span><span class="voo sim"><b>Brasil</b> São Paulo, Rio; Porto Alegre não consta da lista de out/2026</span></dd></div>
+    <div class="custo"><dt>Custo de vida × Brasil</dt><dd><b class="custo-n">2,47×</b><small>Miami ≈ 2,47 × Brasil (média EUA × preços da área de Miami)</small></dd></div>
+  </dl>
+  </div>
+</article>
+<article class="mor" id="mor-PT">
+  <figure class="mor-foto"><img src="img/cascais.webp" alt="Costa de Cascais" loading="lazy" decoding="async"><figcaption><b>Costa de Cascais</b> <a href="https://commons.wikimedia.org/wiki/File:View_of_windsurfer_zipping_across_across_Cascais_Bay_-_Cascais,_Portugal_(54634539123).jpg">foto bvi4092, CC BY 4.0</a></figcaption></figure>
+  <div class="mor-corpo">
+  <div class="mor-cab"><h3>Portugal</h3><span class="mor-lim">≈ 150 dias em 2 blocos, sem casa fixa</span></div>
+  <p class="mor-rec">Indicadores: Lisboa e Cascais</p>
+  <dl class="inds">
+    <div><dt>Clima</dt><dd><b>23,8° / 11,8°</b> mês quente / frio · 794 mm/ano · melhor mai a set</dd></div>
+    <div><dt>Habitantes</dt><dd>Lisboa 546 mil · área metropolitana 2,87 mi · Cascais 214 mil</dd></div>
+    <div><dt>PIB per capita (Portugal)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:55.9%"></span><span class="mini-ref" style="left:24.7%"></span></span><b>US$ 53 mil</b></span></dd></div>
+    <div><dt>Homicídios/100 mil (Portugal)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:3.6%"></span><span class="mini-ref" style="left:96.4%"></span></span><b>0,7</b></span><small>por cidade não apurado</small></dd></div>
+    <div><dt>Educação · PISA matemática</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:94.4%"></span><span class="mini-ref" style="left:75.8%"></span></span><b>472</b></span></dd></div>
+    <div><dt>Mobilidade</dt><dd>Metro de Lisboa 44,5 km, 56 estações, até o aeroporto</dd></div>
+    <div><dt>Voos diretos</dt><dd class="voos"><span class="voo sim"><b>EUA</b> Miami</span><span class="voo sim"><b>Europa</b> é Europa</span><span class="voo nc"><b>Brasil</b> rotas de Lisboa não lidas</span></dd></div>
+    <div class="custo"><dt>Custo de vida × Brasil</dt><dd><b class="custo-n">1,41×</b><small>média nacional</small></dd></div>
+  </dl>
+  </div>
+</article>
+<article class="mor" id="mor-UY">
+  <figure class="mor-foto"><img src="img/punta-del-este.webp" alt="Punta del Este, península e porto" loading="lazy" decoding="async"><figcaption><b>Punta del Este, península e porto</b> <a href="https://commons.wikimedia.org/wiki/File:Punta_del_Este_Skyline_Aerial_Photography-2.jpg">foto Jimmy Baikovicius from Montevideo, Uruguay, CC BY-SA 2.0</a></figcaption></figure>
+  <div class="mor-corpo">
+  <div class="mor-cab"><h3>Uruguai</h3><span class="mor-lim">sem limite (é residência fiscal)</span></div>
+  <p class="mor-rec">Indicadores: Montevideo e Punta del Este</p>
+  <dl class="inds">
+    <div><dt>Clima</dt><dd><b>22,6° / 10,6°</b> mês quente / frio · 1.163 mm/ano · melhor nov a mar</dd></div>
+    <div><dt>Habitantes</dt><dd>Montevideo 1,30 mi · Maldonado 213 mil (departamentos)</dd></div>
+    <div><dt>PIB per capita (Uruguai)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:40.3%"></span><span class="mini-ref" style="left:24.7%"></span></span><b>US$ 38 mil</b></span></dd></div>
+    <div><dt>Homicídios/100 mil (Uruguai)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:56.2%"></span><span class="mini-ref" style="left:96.4%"></span></span><b>11,2</b></span><small>Montevideo 15,8 (registrada, 2022 a 2024)</small></dd></div>
+    <div><dt>Educação · PISA matemática</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:81.8%"></span><span class="mini-ref" style="left:75.8%"></span></span><b>409</b></span></dd></div>
+    <div><dt>Mobilidade</dt><dd>não apurado</dd></div>
+    <div><dt>Voos diretos</dt><dd class="voos"><span class="voo lista"><b>EUA</b> Miami*</span><span class="voo lista"><b>Europa</b> Madri*</span><span class="voo lista"><b>Brasil</b> São Paulo, Rio, Porto Alegre*</span></dd></div>
+    <div class="custo"><dt>Custo de vida × Brasil</dt><dd><b class="custo-n">1,57×</b><small>média nacional</small></dd></div>
+  </dl>
+  </div>
+</article>
+<article class="mor" id="mor-PY">
+  <figure class="mor-foto"><img src="img/assuncao.webp" alt="Assunção" loading="lazy" decoding="async"><figcaption><b>Assunção</b> <a href="https://commons.wikimedia.org/wiki/File:ASUNCI%C3%93N_Asunci%C3%B3n_Paraguay.jpg">foto FF MM, CC BY-SA 3.0</a></figcaption></figure>
+  <div class="mor-corpo">
+  <div class="mor-cab"><h3>Paraguai</h3><span class="mor-lim">sem limite (é residência fiscal)</span></div>
+  <p class="mor-rec">Indicadores: Assunção</p>
+  <dl class="inds">
+    <div><dt>Clima</dt><dd><b>27,8° / 17,5°</b> mês quente / frio · 1.496 mm/ano · melhor jun a ago</dd></div>
+    <div><dt>Habitantes</dt><dd>Assunção 462 mil · com o departamento Central ≈ 2,35 mi</dd></div>
+    <div><dt>PIB per capita (Paraguai)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v ruim" style="width:21.2%"></span><span class="mini-ref" style="left:24.7%"></span></span><b>US$ 20 mil</b></span></dd></div>
+    <div><dt>Homicídios/100 mil (Paraguai)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:33.9%"></span><span class="mini-ref" style="left:96.4%"></span></span><b>6,8</b></span><small>por cidade não apurado</small></dd></div>
+    <div><dt>Educação · PISA matemática</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v ruim" style="width:67.6%"></span><span class="mini-ref" style="left:75.8%"></span></span><b>338</b></span><small>cobertura de 50% a 75% dos jovens</small></dd></div>
+    <div><dt>Mobilidade</dt><dd>não apurado</dd></div>
+    <div><dt>Voos diretos</dt><dd class="voos"><span class="voo nc"><b>EUA</b> Assunção não consta da lista de Miami</span><span class="voo nc"><b>Europa</b> não apurado</span><span class="voo nc"><b>Brasil</b> não apurado</span></dd></div>
+    <div class="custo"><dt>Custo de vida × Brasil</dt><dd><b class="custo-n">0,82×</b><small>média nacional</small></dd></div>
+  </dl>
+  </div>
+</article>
+<article class="mor" id="mor-PA">
+  <figure class="mor-foto"><img src="img/panama.webp" alt="Cidade do Panamá, orla" loading="lazy" decoding="async"><figcaption><b>Cidade do Panamá, orla</b> <a href="https://commons.wikimedia.org/wiki/File:Panama_08_2013_7046.JPG">foto Mariordo (Mario Roberto Duran Ortiz), CC BY-SA 3.0</a></figcaption></figure>
+  <div class="mor-corpo">
+  <div class="mor-cab"><h3>Panamá</h3><span class="mor-lim">até 183 dias, sem casa permanente</span></div>
+  <p class="mor-rec">Indicadores: Cidade do Panamá</p>
+  <dl class="inds">
+    <div><dt>Clima</dt><dd><b>28,1° / 26,3°</b> mês quente / frio · 1.917 mm/ano · melhor jan a abr</dd></div>
+    <div><dt>Habitantes</dt><dd>distrito 1,09 mi · província 1,44 mi</dd></div>
+    <div><dt>PIB per capita (Panamá)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:46.2%"></span><span class="mini-ref" style="left:24.7%"></span></span><b>US$ 44 mil</b></span></dd></div>
+    <div><dt>Homicídios/100 mil (Panamá)</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v bom" style="width:58.6%"></span><span class="mini-ref" style="left:96.4%"></span></span><b>11,7</b></span><small>província 18 (preliminar 2024)</small></dd></div>
+    <div><dt>Educação · PISA matemática</dt><dd><span class="mini"><span class="mini-t"><span class="mini-v ruim" style="width:71.4%"></span><span class="mini-ref" style="left:75.8%"></span></span><b>357</b></span><small>cobertura parcial; amostragem fora do padrão</small></dd></div>
+    <div><dt>Mobilidade</dt><dd>Metro linha 1 ≈ 16 km · linha 2 21 km</dd></div>
+    <div><dt>Voos diretos</dt><dd class="voos"><span class="voo sim"><b>EUA</b> Miami</span><span class="voo nc"><b>Europa</b> não apurado</span><span class="voo nc"><b>Brasil</b> não apurado</span></dd></div>
+    <div class="custo"><dt>Custo de vida × Brasil</dt><dd><b class="custo-n">1,08×</b><small>média nacional</small></dd></div>
+  </dl>
+  </div>
+</article></div>
+</section>
+
+<section class="sec" id="sucessao">
+  <div class="sec-cab"><p class="rotulo">09 — Sucessão</p><h2>O que muda na herança quando a pessoa sai</h2></div>
+  <div class="rolagem"><table class="suc-t"><thead><tr><th>Bem</th><th>Hoje, residente no Brasil</th><th>Depois da saída, no Brasil</th><th>No país de residência</th></tr></thead><tbody><tr><th scope="row">Aplicações no Brasil</th><td>ITCMD do estado de domicílio de quem morre <span class="selo conf" title="confirmado">C</span></td><td>ITCMD do estado de cada herdeiro; se todos estiverem fora, do estado onde os bens estão <span class="selo conf" title="confirmado">C</span></td><td>Uruguai e Paraguai: nenhum imposto localizado nos textos lidos <span class="selo inf" title="inferido">I</span><br>Panamá: não confirmado <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">Previdência</th><td>fora do ITCMD <span class="selo conf" title="confirmado">C</span></td><td>nada muda no imposto <span class="selo inf" title="inferido">I</span></td><td>não confirmado <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">Offshore</th><td>ITCMD do estado de domicílio de quem morre, onde quer que estejam os bens <span class="selo conf" title="confirmado">C</span></td><td>com quem morre e os herdeiros fora, nenhuma regra aponta um estado: pode sair do ITCMD, se o domicílio fora for provado <span class="selo inf" title="inferido">I</span></td><td>Uruguai e Paraguai: nenhum imposto localizado nos textos lidos <span class="selo inf" title="inferido">I</span><br>Panamá: não confirmado <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">Quotas de holding brasileira</th><td>ITCMD do estado de domicílio de quem morre <span class="selo inf" title="inferido">I</span></td><td>com todos fora, depende de onde a lei considera que as quotas estão: não confirmado <span class="selo nc" title="não confirmado">NC</span></td><td>Uruguai e Paraguai: nenhum imposto localizado nos textos lidos <span class="selo inf" title="inferido">I</span><br>Panamá: não confirmado <span class="selo nc" title="não confirmado">NC</span></td></tr><tr><th scope="row">Imóvel no Brasil em nome da pessoa</th><td>ITCMD do estado do imóvel; inventário no Brasil <span class="selo conf" title="confirmado">C</span></td><td>nada muda <span class="selo conf" title="confirmado">C</span></td><td>— </td></tr><tr><th scope="row">Imóvel no Uruguai ou no Paraguai</th><td>segue a legítima local: Uruguai 2/3 com dois filhos, Paraguai 4/5 para descendentes <span class="selo conf" title="confirmado">C</span></td><td>igual; o ITCMD passa ao estado do herdeiro <span class="selo conf" title="confirmado">C</span></td><td>Uruguai: imposto de transmissão por morte, 3% em linha reta <span class="selo conf" title="confirmado">C</span><br>Paraguai: nenhum localizado <span class="selo inf" title="inferido">I</span></td></tr><tr><th scope="row">Imóvel na Flórida</th><td>imposto federal americano até 40%, crédito que equivale a US$ 60 mil de base <span class="selo conf" title="confirmado">C</span></td><td>igual; casa de uso contínuo pode criar domicílio americano <span class="selo inf" title="inferido">I</span></td><td>sem imposto estadual <span class="selo conf" title="confirmado">C</span></td></tr></tbody></table></div>
+  <div class="risco" style="border-color: var(--bd)">
+    <p class="risco-tit" style="color: var(--ac)">Qual lei rege a herança dos bens no Brasil</p>
+    <p>É provável que o inventário brasileiro aplique a lei brasileira aos bens situados aqui, mesmo com a pessoa fora; não há decisão do caso direto <span class="selo inf" title="inferido">I</span>. O Paraguai pode abrir um segundo inventário sobre os mesmos bens móveis <span class="selo inf" title="inferido">I</span>. No Panamá, um tratado ratificado pelos dois países pode levar a lei panamenha também aos bens daqui <span class="selo inf" title="inferido">I</span>. O cônjuge herda conforme o regime de bens <span class="selo inf" title="inferido">I</span>.</p>
+  </div>
+</section>
+
+<section class="sec" id="confirmar">
+  <div class="sec-cab"><p class="rotulo">10 — Antes de decidir</p><h2>O que confirmar com advogado, caso a caso</h2></div>
+  <ol class="lista-conf">
+    <li>Quantos dias no Brasil, com casa, negócio e família aqui: nenhum número garante a saída.</li>
+    <li>Se a conta de não residente sai no regime do investidor estrangeiro: é dele que vêm títulos e bolsa a 0%.</li>
+    <li>Paraguai: residência fiscal sem contagem de dias, por escrito com o fisco paraguaio.</li>
+    <li>Uruguai: se a renda da offshore é imputada à pessoa, o que levaria a 12%.</li>
+    <li>Regime de bens, filhos e testamento: mudam quem herda e quem paga ITCMD.</li>
+    <li>Parecer de tributarista no Brasil e no país escolhido antes de qualquer passo.</li>
+  </ol>
+</section>
+
+<details class="fontes" id="fontes">
+  <summary>Fontes e ressalvas</summary>
+  <h4>Lógica e risco comum</h4><ul><li><span class="selo inf">Inferido</span> Três peças independentes: sair formalmente do Brasil; ter residência fiscal num país que a dê por investimento ou presença; morar o resto do ano onde quiser, sem virar residente fiscal lá, o que depende de dias, casa e vínculos de cada lugar (dossiê 02).</li><li><span class="selo inf">Inferido</span> Para brasileiro não há número de dias que garanta a saída; com casa, negócio e família no Brasil, a Receita pode não aceitar a saída qualquer que seja o destino (dossiê 02, 10).</li><li><span class="selo inf">Inferido</span> As combinações maximizam o tempo no Brasil (até 182 dias); os 182 dias são meio ano, por simetria com a regra do estrangeiro, não um limite para brasileiros (dossiê 10).</li><li><span class="selo inf">Inferido</span> O dossiê sugeriu cerca de 120 dias no Brasil como referência prudente, com confiança baixa a moderada, e os revisores divergiram sobre esse número (dossiê 02, 10).</li></ul><h4>Residência fiscal</h4><ul><li><span class="selo conf">Confirmado</span> Vias: imóvel acima de 3,5 mi UI mais 60 dias; imóvel acima de 15 mi UI sem dias; ou morar mais de 183 dias (dossiê 02, 61).</li><li><span class="selo conf">Confirmado</span> Regime de novos residentes: renda de capital do exterior fora do imposto uruguaio por 11 exercícios, por opção; nas vias de investimento exige também imóvel acima de 12,5 mi UI ou aporte anual de 625 mil UI em fundo; quem passa de 183 dias dispensa essas condições (dossiê 61).</li><li><span class="selo conf">Confirmado</span> Condição do regime: não ter sido residente fiscal no Uruguai nos dois exercícios anteriores nem ter usado o regime anterior (dossiê 61).</li><li><span class="selo hip">Hipótese</span> Em dólar: 3,5 mi UI ≈ US$ 0,6 mi; 12,5 mi UI ≈ US$ 2,0 mi; 15 mi UI ≈ US$ 2,4 mi; 625 mil UI ≈ US$ 0,1 mi por ano (dossiê 02).</li><li><span class="selo inf">Inferido</span> Regime instável: reescrito em 12/2025 e ajustado quatro vezes em 2026; sem ele, 12% sobre a renda de capital do exterior, com crédito do imposto brasileiro (dossiê 02, 20, 76).</li><li><span class="selo conf">Confirmado</span> Tratado com o Brasil; fora do art. 1º da lista da Receita; o art. 2º ainda menciona o regime das Safis uruguaias até 31/12/2010 (dossiê 90).</li><li><span class="selo inf">Inferido</span> Offshore: se o Uruguai imputa a renda da offshore à pessoa e se o regime a cobre não está confirmado; leitura adversa a 12% (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Residência permanente por investimento de US$ 200 mil em instrumento financeiro mantido por 2 anos ou em imóvel de renda (exclui uso exclusivamente pessoal ou familiar), ou US$ 70 mil na via produtiva com 5 empregos (dossiê 62).</li><li><span class="selo inf">Inferido</span> Residência fiscal ligada à residência permanente, sem contagem de dias, por leitura indireta; o decreto lido é de outro imposto e remete a lei revogada; confirmar por escrito com o fisco paraguaio (dossiê 62).</li><li><span class="selo inf">Inferido</span> Imposto paraguaio territorial: renda de fonte estrangeira da pessoa física fica fora (dossiê 76).</li><li><span class="selo inf">Inferido</span> Fora da lista da Receita: bolsa e títulos públicos a 0% no Brasil pelo regime do investidor estrangeiro; resta risco de leitura pela letra do critério de 20%, que volta os dois a 15% (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Sem tratado com o Brasil (dossiê 02).</li><li><span class="selo conf">Confirmado</span> Duas vias na lei: mais de 183 dias no ano ou no anterior, ou casa permanente; a DGI diz que ter casa não basta e decide caso a caso (dossiê 67).</li><li><span class="selo inf">Inferido</span> Por isso a via com poucos dias não é previsível; na prática, morar mais de 183 dias lá (dossiê 67).</li><li><span class="selo inf">Inferido</span> Imposto territorial: renda do exterior da pessoa física fica fora (dossiê 76).</li><li><span class="selo inf">Inferido</span> Na lista da Receita: no Brasil, renda fixa, títulos públicos e bolsa seguem as regras do residente; JCP e venda de quotas a 25% (dossiê 76).</li><li><span class="selo inf">Inferido</span> Lado panamenho de dividendos, JCP e aluguel não apurado (dossiê 76).</li></ul><h4>Onde a saída economiza imposto</h4><ul><li><span class="selo conf">Confirmado</span> Renda fixa tributável: 15% a 22,5% para residente; 15% para não residente fora da lista (dossiê 76).</li><li><span class="selo inf">Inferido</span> Isentos de pessoa física (LCI, CRI, CRA, fundos imobiliários): 0% para residente e não residente (dossiê 76).</li><li><span class="selo inf">Inferido</span> Títulos públicos e bolsa: 0% no Brasil para não residente fora da lista, sob condição operacional não confirmada; Panamá, regras do residente (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Offshore como pessoa jurídica controlada: 15% ao ano sobre o lucro para residente; 0% no Brasil para não residente (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Dividendos de empresa brasileira: residente com tributação mínima anual até 10%; não residente 10% na fonte pela orientação da Receita (dossiê 76).</li><li><span class="selo inf">Inferido</span> Logo, a saída só reduz o imposto de renda anual sobre títulos públicos, bolsa e offshore; renda fixa privada, isentos e dividendos ficam praticamente iguais (dossiê 76).</li><li><span class="selo inf">Inferido</span> Índices de 30/09/2026: CDI acumulado em 12 meses 14,47%, calculado da série SGS 4391 do Banco Central; T-bill de 3 meses acumulado 3,69%, série DTB3 do FRED; PTAX de venda 5,1809. Fontes: https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries e https://fred.stlouisfed.org/series/DTB3</li><li><span class="selo hip">Hipótese</span> Renda anual estimada por índice: CDI para todas as classes no Brasil, inclusive o ganho realizado em bolsa, e T-bill para a offshore; é proxy, não retorno esperado.</li><li><span class="selo inf">Inferido</span> Por R$ 1 milhão ao ano, com esses índices: títulos públicos ou bolsa economizam R$ 21,7 mil no Uruguai e no Paraguai (no Paraguai, zero na leitura adversa); offshore economiza R$ 5,5 mil nos três países (no Uruguai, R$ 1,1 mil na leitura adversa); renda fixa privada e isentos, zero. Aritmética: renda × diferença de alíquota.</li><li><span class="selo inf">Inferido</span> A economia acompanha os juros: com CDI de 10%, títulos e bolsa economizam R$ 15 mil por milhão (aritmética).</li></ul><h4>Ponto de equilíbrio</h4><ul><li><span class="selo inf">Inferido</span> Custo de vida a mais = gasto mensal × 12 × soma, em cada lugar, de (dias/365) × (nível de preços do lugar − 1), com o Brasil como base (dossiê 75).</li><li><span class="selo conf">Confirmado</span> Nível nacional de preços do consumo privado (Banco Mundial, 2025, EUA = 100): EUA 100, Uruguai 72,5, Portugal 64,9, Panamá 49,7, Brasil 46,2, Paraguai 38,1 (dossiê 75).</li><li><span class="selo inf">Inferido</span> Normalizado com Brasil = 1,00: EUA 2,16, Uruguai 1,57, Portugal 1,41, Panamá 1,08, Paraguai 0,82; Flórida pela área de Miami, cerca de 2,47 (dossiê 75).</li><li><span class="selo inf">Inferido</span> Patrimônio de equilíbrio = custo de vida a mais dos dias no país da residência ÷ economia por R$ 1 milhão. Com gasto de R$ 40 mil por mês, em títulos públicos ou bolsa: Uruguai morando 184 dias, cerca de R$ 6,3 mi; Uruguai com 68 dias e Flórida, cerca de R$ 2,3 mi; Uruguai com 65 dias e Portugal, cerca de R$ 2,2 mi; Paraguai, custo de vida menor que o do Brasil, sem patrimônio mínimo por esse critério; Panamá, sem economia em títulos e bolsa (aritmética; simulador).</li><li><span class="selo inf">Inferido</span> Não entram: capital exigido (imóvel e fundo no Uruguai, investimento no Paraguai) e seu custo de oportunidade, passagens, casa dupla, advogados e contabilidade nos dois países; cada R$ 50 mil por ano desses custos pede mais cerca de R$ 2,3 mi em títulos ou bolsa (aritmética).</li><li><span class="selo inf">Inferido</span> Perfis fictícios de cerca de R$ 20 mi, gasto de R$ 40 mil por mês: só renda fixa privada e isentos, nenhuma economia de imposto em lugar nenhum; títulos públicos e bolsa, cerca de R$ 347 mil por ano no Uruguai e de zero a R$ 347 mil no Paraguai; offshore de US$ 3 mi, cerca de R$ 86 mil por ano nos três (de R$ 17 mil no Uruguai na leitura adversa) (simulador; dados).</li><li><span class="selo inf">Inferido</span> Quando o saldo da combinação é positivo sem economia de imposto (Paraguai no perfil de renda fixa), ele vem só do custo de vida menor nos dias lá, não da residência fiscal.</li></ul><h4>Moradia parcial</h4><ul><li><span class="selo inf">Inferido</span> Comparativo preliminar: indicadores nacionais, salvo onde indicado (dossiê 75).</li><li><span class="selo conf">Confirmado</span> Flórida: até 121 dias por ano no teste de presença; 115 com folga só se os dois anos anteriores também forem curtos (dossiê 02).</li><li><span class="selo inf">Inferido</span> Portugal: cerca de 150 dias em dois blocos, sem casa fixa (dossiê 02).</li><li><span class="selo conf">Confirmado</span> PIB per capita por paridade de poder de compra, 2025 (US$): EUA 90.027, Portugal 53.146, Panamá 43.902, Uruguai 38.315, Brasil 23.433, Paraguai 20.181 (dossiê 75).</li><li><span class="selo conf">Confirmado</span> Homicídios por 100 mil, série nacional do Banco Mundial: Portugal 0,72 (2022), EUA 5,76, Paraguai 6,78, Uruguai 11,25, Panamá 11,71, Brasil 19,28 (2023) (dossiê 75).</li><li><span class="selo conf">Confirmado</span> PISA 2022, matemática: Portugal 472, EUA 465, Uruguai 409, Brasil 379, Panamá 357, Paraguai 338; Paraguai e Panamá com cobertura amostral parcial (dossiê 75).</li><li><span class="selo inf">Inferido</span> Lacunas: escolas internacionais, segurança municipal comparável, voos da maioria dos aeroportos e custo por cidade (dossiê 75).</li></ul><h4>Sucessão</h4><ul><li><span class="selo conf">Confirmado</span> Aplicações no Brasil: hoje, ITCMD do estado do domicílio do falecido; depois da saída, do estado do herdeiro, ou do estado dos bens se todos estiverem fora (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Previdência: fora do ITCMD antes e depois (dossiê 76).</li><li><span class="selo inf">Inferido</span> Offshore: é onde a saída mais pesa; com falecido e herdeiros fora, nenhuma regra nomeia estado competente, e pode sair do ITCMD; depende da prova de domicílio (dossiê 76).</li><li><span class="selo inf">Inferido</span> Quotas de holding brasileira: com falecido e herdeiros fora, a incidência depende de onde a lei considera que as quotas estão, critério não confirmado (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Imóvel no Brasil em nome da pessoa física: ITCMD do estado do bem e inventário no Brasil, sempre (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Imóvel no Uruguai ou no Paraguai segue a legítima local (Uruguai 2/3 com dois filhos, Paraguai 4/5 para descendentes); no Uruguai, imposto de transmissão por morte de 3% em linha reta (dossiê 76).</li><li><span class="selo conf">Confirmado</span> Imóvel na Flórida: imposto federal de não domiciliado até 40%, com crédito que equivale a US$ 60 mil de base (dossiê 76).</li><li><span class="selo inf">Inferido</span> Lei aplicável aos bens no Brasil depois da saída: é provável que o inventário brasileiro aplique a lei brasileira aos bens situados aqui; não há precedente do caso direto (dossiê 77). Fonte: https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm</li><li><span class="selo inf">Inferido</span> O Paraguai rege a sucessão pela lei do domicílio e pode reivindicar os mesmos bens móveis: dois inventários com leis diferentes (dossiê 73, 77).</li><li><span class="selo inf">Inferido</span> Panamá: o Código Bustamante, ratificado pelos dois países, manda aplicar a lei pessoal do falecido a toda a sucessão (dossiê 77).</li><li><span class="selo inf">Inferido</span> O cônjuge herda conforme o regime de bens: na separação convencional concorre com os filhos; na obrigatória, não concorre, mas pode ter meação (dossiê 77).</li></ul>
+  <h4>Fotos</h4><ul><li>Sarasota: Fred Hsu on en.wikipedia, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:2017_Sarasota_Lido_Key_Beach_2_FRD_9567.jpg">Wikimedia Commons</a>; reduzida e convertida.</li><li>Cascais: bvi4092, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:View_of_windsurfer_zipping_across_across_Cascais_Bay_-_Cascais,_Portugal_(54634539123).jpg">Wikimedia Commons</a>; reduzida e convertida.</li><li>Punta del Este: Jimmy Baikovicius from Montevideo, Uruguay, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Punta_del_Este_Skyline_Aerial_Photography-2.jpg">Wikimedia Commons</a>; reduzida e convertida.</li><li>José Ignacio: Lorisstragliotto, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Faro_de_Jos%C3%A9_Ignacio_-_Maldonado_-_Uruguay.JPG">Wikimedia Commons</a>; reduzida e convertida.</li><li>Assunção: FF MM, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:ASUNCI%C3%93N_Asunci%C3%B3n_Paraguay.jpg">Wikimedia Commons</a>; reduzida e convertida.</li><li>Cidade do Panamá: Mariordo (Mario Roberto Duran Ortiz), <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Panama_08_2013_7046.JPG">Wikimedia Commons</a>; reduzida e convertida.</li></ul>
+</details>
+
+<footer class="rodape">
+  <p><b>Thiago Zeni</b> · estudo de 30/09/2026</p>
+  <p>Estudo de decisão, não parecer jurídico. As regras mudam: a do Uruguai foi reescrita em 2025 e ajustada quatro vezes em 2026. Perfis fictícios; nenhum número aqui descreve uma pessoa real.</p>
+</footer>
+</div>
+
+<script type="application/json" id="dados-guia">{"motor": {"classes": ["dividendos_holding", "jcp_holding", "ganho_bolsa_br", "juros_titulo_publico_br", "juros_renda_fixa_privada_br", "aluguel_pf_br", "renda_offshore", "resgate_previdencia", "ganho_capital_imovel_quotas", "renda_isenta_br"], "foraDaBase": ["ganho_capital_imovel_quotas", "renda_isenta_br"], "cenarios": [{"nome": "Ficar residente no Brasil", "br": {"dividendos_holding": 0.0, "jcp_holding": 0.175, "ganho_bolsa_br": 0.15, "juros_titulo_publico_br": 0.15, "juros_renda_fixa_privada_br": 0.15, "aluguel_pf_br": 0.275, "renda_offshore": 0.15, "resgate_previdencia": 0.1, "ganho_capital_imovel_quotas": 0.15, "renda_isenta_br": 0.0}, "destino": {"dividendos_holding": 0.0, "jcp_holding": 0.0, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.0, "aluguel_pf_br": 0.0, "renda_offshore": 0.0, "resgate_previdencia": 0.0, "ganho_capital_imovel_quotas": 0.0, "renda_isenta_br": 0.0}, "credito_imposto_br": false, "residente": true, "custo_fixo_anual": 0.0}, {"nome": "Uruguai — impatriada (ano 1 a 11)", "br": {"dividendos_holding": 0.1, "jcp_holding": 0.15, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.15, "aluguel_pf_br": 0.15, "renda_offshore": 0.0, "resgate_previdencia": 0.25, "ganho_capital_imovel_quotas": 0.15, "renda_isenta_br": 0.0}, "destino": {"dividendos_holding": 0.0, "jcp_holding": 0.0, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.0, "aluguel_pf_br": 0.0, "renda_offshore": 0.0, "resgate_previdencia": 0.0, "ganho_capital_imovel_quotas": 0.0, "renda_isenta_br": 0.0}, "credito_imposto_br": false, "residente": false, "custo_fixo_anual": 0.0}, {"nome": "Paraguai — residência permanente (CIE)", "br": {"dividendos_holding": 0.1, "jcp_holding": 0.175, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.15, "aluguel_pf_br": 0.15, "renda_offshore": 0.0, "resgate_previdencia": 0.25, "ganho_capital_imovel_quotas": 0.15, "renda_isenta_br": 0.0}, "destino": {"dividendos_holding": 0.0, "jcp_holding": 0.0, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.0, "aluguel_pf_br": 0.0, "renda_offshore": 0.0, "resgate_previdencia": 0.0, "ganho_capital_imovel_quotas": 0.0, "renda_isenta_br": 0.0}, "credito_imposto_br": false, "residente": false, "custo_fixo_anual": 0.0}, {"nome": "Panamá — investidor (jurisdição listada)", "br": {"dividendos_holding": 0.1, "jcp_holding": 0.25, "ganho_bolsa_br": 0.15, "juros_titulo_publico_br": 0.15, "juros_renda_fixa_privada_br": 0.15, "aluguel_pf_br": 0.25, "renda_offshore": 0.0, "resgate_previdencia": 0.25, "ganho_capital_imovel_quotas": 0.25, "renda_isenta_br": 0.0}, "destino": {"dividendos_holding": 0.0, "jcp_holding": 0.0, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.0, "aluguel_pf_br": 0.0, "renda_offshore": 0.0, "resgate_previdencia": 0.0, "ganho_capital_imovel_quotas": 0.0, "renda_isenta_br": 0.0}, "credito_imposto_br": false, "residente": false, "custo_fixo_anual": 0.0}]}, "indices": {"cdi": 0.1446883, "tbill": 0.036863, "ptax": 5.1809, "data_base": "2026-09-30"}, "residente": "Ficar residente no Brasil", "residencias": {"UY": "Uruguai — impatriada (ano 1 a 11)", "PY": "Paraguai — residência permanente (CIE)", "PA": "Panamá — investidor (jurisdição listada)"}, "pior": {"UY": {"nome": "Uruguai — impatriada (ano 1 a 11) — adversa", "br": {"dividendos_holding": 0.1, "jcp_holding": 0.15, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.15, "aluguel_pf_br": 0.15, "renda_offshore": 0.0, "resgate_previdencia": 0.25, "ganho_capital_imovel_quotas": 0.15, "renda_isenta_br": 0.0}, "destino": {"dividendos_holding": 0.0, "jcp_holding": 0.0, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.0, "aluguel_pf_br": 0.0, "renda_offshore": 0.12, "resgate_previdencia": 0.0, "ganho_capital_imovel_quotas": 0.0, "renda_isenta_br": 0.0}, "credito_imposto_br": false, "residente": false, "custo_fixo_anual": 0.0}, "PY": {"nome": "Paraguai — residência permanente (CIE) — adversa", "br": {"dividendos_holding": 0.1, "jcp_holding": 0.175, "ganho_bolsa_br": 0.15, "juros_titulo_publico_br": 0.15, "juros_renda_fixa_privada_br": 0.15, "aluguel_pf_br": 0.15, "renda_offshore": 0.0, "resgate_previdencia": 0.25, "ganho_capital_imovel_quotas": 0.15, "renda_isenta_br": 0.0}, "destino": {"dividendos_holding": 0.0, "jcp_holding": 0.0, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.0, "aluguel_pf_br": 0.0, "renda_offshore": 0.0, "resgate_previdencia": 0.0, "ganho_capital_imovel_quotas": 0.0, "renda_isenta_br": 0.0}, "credito_imposto_br": false, "residente": false, "custo_fixo_anual": 0.0}, "PA": {"nome": "Panamá — investidor (jurisdição listada) — adversa", "br": {"dividendos_holding": 0.25, "jcp_holding": 0.25, "ganho_bolsa_br": 0.15, "juros_titulo_publico_br": 0.15, "juros_renda_fixa_privada_br": 0.15, "aluguel_pf_br": 0.25, "renda_offshore": 0.0, "resgate_previdencia": 0.25, "ganho_capital_imovel_quotas": 0.25, "renda_isenta_br": 0.0}, "destino": {"dividendos_holding": 0.0, "jcp_holding": 0.0, "ganho_bolsa_br": 0.0, "juros_titulo_publico_br": 0.0, "juros_renda_fixa_privada_br": 0.0, "aluguel_pf_br": 0.0, "renda_offshore": 0.0, "resgate_previdencia": 0.0, "ganho_capital_imovel_quotas": 0.0, "renda_isenta_br": 0.0}, "credito_imposto_br": false, "residente": false, "custo_fixo_anual": 0.0}}, "pior_rotulo": {"UY": "offshore a 12% no Uruguai", "PY": "bolsa e títulos a 15% pela letra dos 20%", "PA": "dividendos a 25% no Brasil"}, "nomes": {"BR": "Brasil", "FL": "Flórida", "PT": "Portugal", "UY": "Uruguai", "PY": "Paraguai", "PA": "Panamá"}, "combinacoes": [{"nome": "Uruguai + Brasil", "res": "UY", "custo_por_mil": 3440.4056306784055, "moradia_por_mil": 0}, {"nome": "Uruguai + Brasil + Flórida", "res": "UY", "custo_por_mil": 1271.4542548159325, "moradia_por_mil": 5560.5703882257585}, {"nome": "Uruguai + Brasil + Portugal", "res": "UY", "custo_por_mil": 1215.3606847505237, "moradia_por_mil": 2000.0864811601054}, {"nome": "Paraguai + Brasil", "res": "PY", "custo_por_mil": -1055.5861652476956, "moradia_por_mil": 0}, {"nome": "Paraguai + Brasil + Flórida", "res": "PY", "custo_por_mil": -392.23966796089235, "moradia_por_mil": 5560.5703882257585}, {"nome": "Paraguai + Brasil + Portugal", "res": "PY", "custo_por_mil": -190.35160356925655, "moradia_por_mil": 2000.0864811601054}, {"nome": "Panamá + Brasil", "res": "PA", "custo_por_mil": 454.01874843442, "moradia_por_mil": 0}], "perfis": [{"id": "A", "nome": "Renda fixa privada", "descricao": "CDB, fundos tributáveis e uma parte em isentos (LCI, CRI, CRA)", "saldos": {"juros_renda_fixa_privada_br": 16, "renda_isenta_br": 4}}, {"id": "B", "nome": "Títulos públicos e bolsa", "descricao": "Tesouro e ações no Brasil, uma parte em isentos", "saldos": {"juros_titulo_publico_br": 10, "ganho_bolsa_br": 6, "renda_isenta_br": 4}}, {"id": "C", "nome": "Offshore", "descricao": "empresa offshore em dólar e uma parte em renda fixa no Brasil", "saldos": {"renda_offshore_usd": 3, "juros_renda_fixa_privada_br": 4}}]}</script>
+<script>// Motor de imposto do artefato: porta fiel de scripts/simulador.py (imposto_anual).
+// Alíquotas e cenários vêm do Python, serializados pelo build; aqui só o algoritmo.
+// Paridade conferida por tests/test_motor_paridade.py.
+const MOTOR = (() => {
+  function aliquotaMinima(base) {
+    if (base <= 600000) return 0;
+    if (base >= 1200000) return 0.10;
+    return (base / 60000 - 10) / 100;
+  }
+
+  function minimoDevido(perfil, outros, comDividendos, ctx) {
+    let base = 0;
+    for (const c of ctx.classes) {
+      if (ctx.foraDaBase.includes(c)) continue;
+      if (!comDividendos && c === "dividendos_holding") continue;
+      base += perfil[c] || 0;
+    }
+    let deducoes = 0;
+    for (const c of Object.keys(outros)) if (!ctx.foraDaBase.includes(c)) deducoes += outros[c];
+    return Math.max(0, aliquotaMinima(base) * base - deducoes);
+  }
+
+  function residente(perfil, cen, ctx) {
+    const outros = {};
+    for (const c of ctx.classes) outros[c] = (perfil[c] || 0) * (cen.br[c] || 0);
+    let minimo = minimoDevido(perfil, outros, true, ctx);
+    const div = perfil.dividendos_holding || 0;
+    if (div > 0) {
+      const acrescimo = minimo - minimoDevido(perfil, outros, false, ctx);
+      const excesso = perfil.aliquota_efetiva_pj + acrescimo / div - 0.34;
+      if (excesso > 0) minimo = Math.max(0, minimo - div * excesso);
+    }
+    let total = minimo;
+    for (const c of ctx.classes) total += outros[c];
+    return total;
+  }
+
+  function impostoAnual(perfil, cen, ctx) {
+    if (cen.residente) return residente(perfil, cen, ctx) + cen.custo_fixo_anual;
+    let total = 0;
+    for (const c of ctx.classes) {
+      const renda = perfil[c] || 0;
+      const br = renda * (cen.br[c] || 0);
+      let dest = renda * (cen.destino[c] || 0);
+      if (cen.credito_imposto_br) dest = Math.max(0, dest - br);
+      total += br + dest;
+    }
+    return total + cen.custo_fixo_anual;
+  }
+
+  return { impostoAnual };
+})();
+if (typeof module !== "undefined") module.exports = MOTOR;
+</script>
+<script>// Simulador da edição genérica: saldos por classe → renda por índice → imposto por residência (motor.js),
+// e economia contra o custo de vida dos dias no país da residência mais estrutura. Campos ficam só neste navegador.
+(() => {
+  const D = JSON.parse(document.getElementById("dados-guia").textContent);
+  const CHAVE = "tz-guia-saida-v1";
+  const CAMPOS = ["s-rf", "s-isento", "s-tpub", "s-bolsa", "s-off", "s-div", "s-gasto", "s-extra"];
+  const CLASSE = { "s-rf": "juros_renda_fixa_privada_br", "s-isento": "renda_isenta_br", "s-tpub": "juros_titulo_publico_br", "s-bolsa": "ganho_bolsa_br" };
+  const fmt = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 });
+  const { cdi, tbill, ptax } = D.indices;
+  const cen = Object.fromEntries(D.motor.cenarios.map((c) => [c.nome, c]));
+  const el = (id) => document.getElementById(id);
+  const ler = (id) => Number(el(id).value.replace(/\./g, "").replace(",", ".").replace(/[^\d.]/g, "")) || 0;
+  const mil = (v) => "R$ " + fmt.format(Math.round(v / 1000)) + " mil";
+  const sinal = (v) => (Math.round(v / 1000) === 0 ? "zero" : (v >= 0 ? "+" : "−") + mil(Math.abs(v)));
+  const faixa = (a, b) => { const lo = Math.min(a, b), hi = Math.max(a, b); return Math.round(lo / 1000) === Math.round(hi / 1000) ? sinal(hi) : `${sinal(lo)} a ${sinal(hi)}`; };
+
+  function restaurar() {
+    try {
+      const s = JSON.parse(localStorage.getItem(CHAVE) || "null");
+      if (s) for (const id of CAMPOS) if (s[id] != null) el(id).value = s[id];
+    } catch (e) { /* sem armazenamento */ }
+  }
+  function guardar() {
+    try { localStorage.setItem(CHAVE, JSON.stringify(Object.fromEntries(CAMPOS.map((id) => [id, el(id).value])))); } catch (e) { /* ignora */ }
+  }
+
+  function perfil() {
+    const p = { aliquota_efetiva_pj: 0.10, dividendos_holding: ler("s-div") * 1000 };
+    for (const [id, cl] of Object.entries(CLASSE)) p[cl] = ler(id) * 1e6 * cdi;
+    p.renda_offshore = ler("s-off") * 1e6 * tbill * ptax;
+    return p;
+  }
+
+  function atualizar() {
+    const p = perfil();
+    const ficar = MOTOR.impostoAnual(p, cen[D.residente], D.motor);
+    const eco = {};
+    for (const [k, nome] of Object.entries(D.residencias)) {
+      eco[k] = [ficar - MOTOR.impostoAnual(p, cen[nome], D.motor), ficar - MOTOR.impostoAnual(p, D.pior[k], D.motor)];
+    }
+    const comDiv = p.dividendos_holding > 0;
+    el("sim-eco").innerHTML = Object.keys(eco).map((k) => {
+      const [m, a] = eco[k];
+      const indet = k === "PA" && comDiv;
+      return `<div class="res-tile"><span>${D.nomes[k]}</span><b>${indet ? "indeterminado" : faixa(a, m)}</b>`
+        + `<small>${indet ? "lado panamenho dos dividendos não apurado" : Math.round(a) !== Math.round(m) ? "adversa: " + D.pior_rotulo[k] : "por ano, só imposto"}</small></div>`;
+    }).join("");
+    const gasto = ler("s-gasto"), extra = ler("s-extra") * 1000;
+    const linhas = D.combinacoes.map((c, i) => {
+      const custo = c.custo_por_mil * gasto + extra;
+      const [m, a] = eco[c.res];
+      const lo = Math.min(m, a) - custo, hi = Math.max(m, a) - custo;
+      const indet = c.res === "PA" && comDiv;
+      const [cls, txt] = indet ? ["c-dep", "indeterminado"] : lo >= 0 ? ["c-sim", "compensa"] : hi >= 0 ? ["c-dep", "depende"] : ["c-nao", "não compensa"];
+      return `<tr><th scope="row"><span class="cal-id">${i + 1}</span> ${c.nome}</th><td class="num">${sinal(-custo)}</td>`
+        + `<td class="num"><span class="chip ${cls}">${txt}</span><small>${indet ? "—" : faixa(lo, hi)}</small></td></tr>`;
+    }).join("");
+    el("sim-combs").innerHTML = `<thead><tr><th>Combinação</th><th class="num">Dias e estrutura</th><th class="num">Saldo por ano</th></tr></thead><tbody>${linhas}</tbody>`;
+    el("sim-nota").textContent = `Renda por índice: CDI de ${(cdi * 100).toFixed(2).replace(".", ",")}% e T-bill de ${(tbill * 100).toFixed(2).replace(".", ",")}% em 12 meses; dólar a R$ ${ptax.toFixed(2).replace(".", ",")}. `
+      + "Dias e estrutura = custo de vida a mais dos dias no país da residência, contra passá-los no Brasil, mais o campo de estrutura. A moradia em terceiro país fica à parte.";
+    for (const b of document.querySelectorAll("[data-perfil]")) b.setAttribute("aria-pressed", "false");
+    guardar();
+  }
+
+  function carregar(id) {
+    const pf = D.perfis.find((x) => x.id === id);
+    if (!pf) return;
+    const s = pf.saldos;
+    el("s-rf").value = s.juros_renda_fixa_privada_br || 0;
+    el("s-isento").value = s.renda_isenta_br || 0;
+    el("s-tpub").value = s.juros_titulo_publico_br || 0;
+    el("s-bolsa").value = s.ganho_bolsa_br || 0;
+    el("s-off").value = s.renda_offshore_usd || 0;
+    el("s-div").value = 0;
+    atualizar();
+    document.querySelector(`[data-perfil="${id}"]`).setAttribute("aria-pressed", "true");
+  }
+
+  restaurar();
+  for (const id of CAMPOS) el(id).addEventListener("input", atualizar);
+  el("sim-form").addEventListener("submit", (e) => e.preventDefault());
+  for (const b of document.querySelectorAll("[data-perfil]")) b.addEventListener("click", () => carregar(b.dataset.perfil));
+  atualizar();
+
+  const links = new Map([...document.querySelectorAll(".nav-links a")].map((a) => [a.getAttribute("href").slice(1), a]));
+  if ("IntersectionObserver" in window) {
+    const obs = new IntersectionObserver((ents) => {
+      for (const e of ents) if (e.isIntersecting && links.has(e.target.id)) {
+        for (const a of links.values()) a.classList.remove("ativo");
+        const a = links.get(e.target.id);
+        a.classList.add("ativo");
+        const box = a.parentElement;
+        if (box.scrollWidth > box.clientWidth) box.scrollLeft = a.offsetLeft - (box.clientWidth - a.offsetWidth) / 2;
+      }
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    for (const id of links.keys()) { const s = el(id); if (s) obs.observe(s); }
+  }
+})();
+</script>
+
+</body>
+</html>
