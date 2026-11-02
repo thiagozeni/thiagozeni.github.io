@@ -72972,5 +72972,57 @@
       "hasWatermark": false,
       "sourceTier": 1
     }
+  },
+  {
+    "id": "st-116-ul-189109-1",
+    "model": "RM 011 Felipe Massa Flyback Chrono",
+    "brand": "Richard Mille",
+    "factory": "KV (KVF / KW)",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Richard Mille RM11-FM Felipe Massa Chronograph Signature Copy Edition",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2026/10/Yeni-Proje-2026-10-29T175413.375.webp",
+    "localImage": "/media/img/st-116-ul-189109-1.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:rm11",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-11-02T19:24:59.279Z",
+    "needsReview": true
+  },
+  {
+    "id": "st-116-ul-189109-2",
+    "model": "RM 011 Felipe Massa Flyback Chrono",
+    "brand": "Richard Mille",
+    "factory": "KV (KVF / KW)",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Richard Mille RM11-FM Felipe Massa Chronograph Signature Copy Edition",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2026/10/Yeni-Proje-2026-10-29T175427.602.webp",
+    "localImage": "/media/img/st-116-ul-189109-2.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:rm11",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-11-02T19:24:59.407Z",
+    "needsReview": true
   }
 ]

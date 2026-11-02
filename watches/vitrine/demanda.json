@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-26",
-  "storesRead": 11,
+  "updatedAt": "2026-11-02",
+  "storesRead": 9,
   "items": [
     {
       "key": "rolex|126610ln",
@@ -11,7 +11,7 @@
         "RICH",
         "VSF"
       ],
-      "stores": 7,
+      "stores": 6,
       "catalogRanks": [
         1
       ]
@@ -26,26 +26,11 @@
         "RICH",
         "VSF"
       ],
-      "stores": 6,
+      "stores": 4,
       "catalogRanks": [
         101,
         138,
         139
-      ]
-    },
-    {
-      "key": "rolex|116610ln",
-      "brand": "Rolex",
-      "ref": "116610LN",
-      "label": "Rolex Submariner Date 116610LN “Black Ceramic”",
-      "factories": [
-        "Clean",
-        "VSF",
-        "ZZF"
-      ],
-      "stores": 5,
-      "catalogRanks": [
-        20
       ]
     },
     {
@@ -57,9 +42,37 @@
         "Clean",
         "VSF"
       ],
-      "stores": 4,
+      "stores": 3,
       "catalogRanks": [
         8
+      ]
+    },
+    {
+      "key": "rolex|116610ln",
+      "brand": "Rolex",
+      "ref": "116610LN",
+      "label": "Rolex Submariner Date 116610LN “Black Ceramic”",
+      "factories": [
+        "Clean",
+        "VSF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        20
+      ]
+    },
+    {
+      "key": "rolex|126710grnr",
+      "brand": "Rolex",
+      "ref": "126710GRNR",
+      "label": "Rolex Bruce Wayne GMT Master II 126710GRNR Oyster",
+      "factories": [
+        "RICH",
+        "VSF"
+      ],
+      "stores": 3,
+      "catalogRanks": [
+        10
       ]
     },
     {
@@ -72,52 +85,9 @@
         "RICH",
         "VSF"
       ],
-      "stores": 4,
+      "stores": 3,
       "catalogRanks": [
         7
-      ]
-    },
-    {
-      "key": "rolex|116610lv",
-      "brand": "Rolex",
-      "ref": "116610LV",
-      "label": "Rolex Submariner Date 116610LV “Hulk”",
-      "factories": [
-        "Clean",
-        "VSF",
-        "ZZF"
-      ],
-      "stores": 4,
-      "catalogRanks": [
-        25
-      ]
-    },
-    {
-      "key": "rolex|126710grnr",
-      "brand": "Rolex",
-      "ref": "126710GRNR",
-      "label": "Rolex Bruce Wayne GMT Master II 126710GRNR Jubilee",
-      "factories": [
-        "Clean",
-        "RICH",
-        "VSF"
-      ],
-      "stores": 4,
-      "catalogRanks": [
-        10
-      ]
-    },
-    {
-      "key": "rolex|126610lv",
-      "brand": "Rolex",
-      "ref": "126610LV",
-      "label": "Rolex Submariner 41mm 126610LV Kermit",
-      "factories": [
-        "VSF"
-      ],
-      "stores": 4,
-      "catalogRanks": [
-        2
       ]
     },
     {
@@ -127,56 +97,14 @@
       "label": "Audemars Piguet Royal Oak 15500 White Dial",
       "factories": [
         "APSF",
-        "VSF",
-        "ZF"
+        "VSF"
       ],
-      "stores": 4,
+      "stores": 3,
       "catalogRanks": [
         15,
         26,
         110
       ]
-    },
-    {
-      "key": "rolex|126710blro",
-      "brand": "Rolex",
-      "ref": "126710BLRO",
-      "label": "Rolex GMT-Master II 126710BLRO",
-      "factories": [
-        "Clean",
-        "VSF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        19
-      ]
-    },
-    {
-      "key": "rolex|126500",
-      "brand": "Rolex",
-      "ref": "126500",
-      "label": "Rolex Daytona 126500 Black Dial",
-      "factories": [
-        "Clean",
-        "VSF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        3,
-        111
-      ]
-    },
-    {
-      "key": "rolex|116506",
-      "brand": "Rolex",
-      "ref": "116506",
-      "label": "Rolex ICE BLUE Daytona 116506",
-      "factories": [
-        "KIF",
-        "Noob"
-      ],
-      "stores": 3,
-      "catalogRanks": []
     },
     {
       "key": "patekphilippe|5712",
@@ -206,36 +134,6 @@
       ]
     },
     {
-      "key": "rolex|116500",
-      "brand": "Rolex",
-      "ref": "116500",
-      "label": "Rolex Daytona 116500 White Dial",
-      "factories": [
-        "BTF",
-        "Clean",
-        "VSF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        11
-      ]
-    },
-    {
-      "key": "patekphilippe|5167",
-      "brand": "Patek Philippe",
-      "ref": "5167",
-      "label": "Patek Philippe Aquanaut 5167 SS Gray Dial",
-      "factories": [
-        "3KF",
-        "DDF"
-      ],
-      "stores": 3,
-      "catalogRanks": [
-        24,
-        102
-      ]
-    },
-    {
       "key": "patekphilippe|5167a",
       "brand": "Patek Philippe",
       "ref": "5167A",
@@ -250,44 +148,127 @@
       ]
     },
     {
-      "key": "rolex|226659",
+      "key": "rolex|116610lv",
       "brand": "Rolex",
-      "ref": "226659",
-      "label": "Rolex Yacht Master White Gold 226659",
+      "ref": "116610LV",
+      "label": "Rolex Submariner Date 116610LV “Hulk”",
       "factories": [
         "VSF"
       ],
-      "stores": 3,
+      "stores": 2,
       "catalogRanks": [
-        55
+        25
       ]
     },
     {
-      "key": "rolex|226627",
+      "key": "rolex|126710blro",
       "brand": "Rolex",
-      "ref": "226627",
-      "label": "Rolex Yacht-Master 226627 Titanium VF Black Dial",
+      "ref": "126710BLRO",
+      "label": "Rolex GMT-Master II 126710BLRO",
       "factories": [
-        "Clean",
         "VSF"
       ],
-      "stores": 3,
+      "stores": 2,
       "catalogRanks": [
-        47
+        19
       ]
     },
     {
-      "key": "rolex|326934",
+      "key": "rolex|116520",
       "brand": "Rolex",
-      "ref": "326934",
-      "label": "Rolex Sky-Dweller 326934 “Blue Dial” Super Accurate",
+      "ref": "116520",
+      "label": "Rolex GMT-Master II “Pepsi” Jubilee 116520",
       "factories": [
-        "ZF"
+        "VSF"
       ],
-      "stores": 3,
+      "stores": 2,
       "catalogRanks": [
-        112
+        98
       ]
+    },
+    {
+      "key": "rolex|126500ln",
+      "brand": "Rolex",
+      "ref": "126500LN",
+      "label": "Rolex Panda Daytona 126500LN",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        3,
+        111
+      ]
+    },
+    {
+      "key": "rolex|116506",
+      "brand": "Rolex",
+      "ref": "116506",
+      "label": "Rolex ICE BLUE Daytona 116506",
+      "factories": [
+        "KIF"
+      ],
+      "stores": 2,
+      "catalogRanks": []
+    },
+    {
+      "key": "rolex|126500",
+      "brand": "Rolex",
+      "ref": "126500",
+      "label": "Rolex Daytona 126500 Black Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        3,
+        111
+      ]
+    },
+    {
+      "key": "rolex|126660",
+      "brand": "Rolex",
+      "ref": "126660",
+      "label": "Rolex Deepsea Sea Dweller Gradient Blue Dial 126660",
+      "factories": [],
+      "stores": 2,
+      "catalogRanks": []
+    },
+    {
+      "key": "rolex|116500",
+      "brand": "Rolex",
+      "ref": "116500",
+      "label": "Rolex Daytona 116500 White Dial",
+      "factories": [
+        "BTF",
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": [
+        11
+      ]
+    },
+    {
+      "key": "omega|omegaseamasterdiver300mblackceramicblack",
+      "brand": "Omega",
+      "ref": null,
+      "label": "Omega Seamaster Diver 300M Black Ceramic Black Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": []
+    },
+    {
+      "key": "omega|omegaaquaterra150mssturquoisedial",
+      "brand": "Omega",
+      "ref": null,
+      "label": "Omega Aqua Terra 150M SS Turquoise Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "catalogRanks": []
     }
   ]
 }

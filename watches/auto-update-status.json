@@ -1,6 +1,163 @@
 {
-  "generatedAt": "2026-10-26T16:15:39.029Z",
+  "generatedAt": "2026-11-02T19:26:16.371Z",
   "runs": [
+    {
+      "stamp": "2026-11-02",
+      "startedAt": "2026-11-02T19:20:45.947Z",
+      "running": false,
+      "interrupted": false,
+      "phases": [
+        {
+          "name": "news",
+          "label": "Notícias (bbtwatch)",
+          "status": "ok",
+          "startedAt": "2026-11-02T19:20:45.984Z",
+          "finishedAt": "2026-11-02T19:20:48.967Z",
+          "secs": 3,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "vitrine",
+          "label": "vitrine",
+          "status": "ok",
+          "startedAt": "2026-11-02T19:20:48.967Z",
+          "finishedAt": "2026-11-02T19:20:49.108Z",
+          "secs": 0,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "discover",
+          "label": "Descoberta de mercado",
+          "status": "falhou",
+          "startedAt": "2026-11-02T19:20:49.108Z",
+          "finishedAt": "2026-11-02T19:20:51.565Z",
+          "secs": 2,
+          "failures": [
+            {
+              "step": "discover-agent",
+              "detail": null,
+              "at": "2026-11-02T19:20:51.463Z"
+            },
+            {
+              "step": "discover-capture",
+              "detail": null,
+              "at": "2026-11-02T19:20:51.533Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "name": "radar",
+          "label": "Radar de mercado",
+          "status": "falhou",
+          "startedAt": "2026-11-02T19:20:51.565Z",
+          "finishedAt": "2026-11-02T19:23:40.590Z",
+          "secs": 169,
+          "failures": [
+            {
+              "step": "radar-agent",
+              "detail": null,
+              "at": "2026-11-02T19:20:53.270Z"
+            },
+            {
+              "step": "radar-capture",
+              "detail": null,
+              "at": "2026-11-02T19:20:53.346Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "name": "hunt",
+          "label": "Caça de mídia",
+          "status": "falhou",
+          "startedAt": "2026-11-02T19:23:40.591Z",
+          "finishedAt": "2026-11-02T19:23:44.141Z",
+          "secs": 4,
+          "failures": [
+            {
+              "step": "hunt-capture",
+              "detail": "alerta: lista de espera — 25/25 referências conferidas em 7 lojas, 16 avistamento(s), 25 erro(s) de loja (sci: 25).",
+              "at": "2026-11-02T19:23:44.039Z"
+            },
+            {
+              "step": "hunt-out",
+              "detail": "alerta: lista de espera — 25/25 referências conferidas em 7 lojas, 16 avistamento(s), 25 erro(s) de loja (sci: 25).",
+              "at": "2026-11-02T19:23:44.079Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "name": "curate",
+          "label": "Curadoria (revisão visual)",
+          "status": "falhou",
+          "startedAt": "2026-11-02T19:23:44.142Z",
+          "finishedAt": "2026-11-02T19:25:53.109Z",
+          "secs": 129,
+          "failures": [
+            {
+              "step": "curate-loop",
+              "detail": null,
+              "at": "2026-11-02T19:23:46.132Z"
+            },
+            {
+              "step": "store-media-check",
+              "detail": null,
+              "at": "2026-11-02T19:25:13.058Z"
+            },
+            {
+              "step": "alerta-check",
+              "detail": "curl: (22) The requested URL returned error: 410",
+              "at": "2026-11-02T19:25:53.017Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "name": "refresh",
+          "label": "Re-pesquisa de evidência",
+          "status": "falhou",
+          "startedAt": "2026-11-02T19:25:53.110Z",
+          "finishedAt": "2026-11-02T19:25:56.847Z",
+          "secs": 4,
+          "failures": [
+            {
+              "step": "refresh-capture",
+              "detail": null,
+              "at": "2026-11-02T19:25:56.808Z"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "name": "rescore",
+          "label": "Re-score",
+          "status": "ok",
+          "startedAt": "2026-11-02T19:25:56.848Z",
+          "finishedAt": "2026-11-02T19:25:57.154Z",
+          "secs": 0,
+          "failures": [],
+          "warnings": []
+        },
+        {
+          "name": "gate",
+          "label": "Gate + commit",
+          "status": "ok",
+          "startedAt": "2026-11-02T19:25:57.154Z",
+          "finishedAt": "2026-11-02T19:26:15.944Z",
+          "secs": 19,
+          "failures": [],
+          "warnings": []
+        }
+      ],
+      "coveragePct": 99,
+      "commit": "aba1bde",
+      "finishedAt": "2026-11-02T19:26:15.944Z",
+      "secs": 330
+    },
     {
       "stamp": "2026-10-26",
       "startedAt": "2026-10-26T16:00:08.222Z",
@@ -105,7 +262,7 @@
         }
       ],
       "coveragePct": 99,
-      "commit": "f04cc71",
+      "commit": null,
       "finishedAt": "2026-10-26T16:15:38.309Z",
       "secs": 930
     },
@@ -720,108 +877,6 @@
       "commit": null,
       "finishedAt": "2026-10-12T19:05:25.624Z",
       "secs": 971
-    },
-    {
-      "stamp": "2026-10-09",
-      "startedAt": "2026-10-09T23:43:57.397Z",
-      "running": false,
-      "interrupted": false,
-      "phases": [
-        {
-          "name": "news",
-          "label": "Notícias (bbtwatch)",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:43:57.431Z",
-          "finishedAt": "2026-10-09T23:44:00.162Z",
-          "secs": 3,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "vitrine",
-          "label": "vitrine",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:44:00.162Z",
-          "finishedAt": "2026-10-09T23:44:11.536Z",
-          "secs": 11,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "discover",
-          "label": "Descoberta de mercado",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:44:11.537Z",
-          "finishedAt": "2026-10-09T23:45:54.875Z",
-          "secs": 103,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "radar",
-          "label": "Radar de mercado",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:45:54.876Z",
-          "finishedAt": "2026-10-09T23:52:41.864Z",
-          "secs": 407,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "hunt",
-          "label": "Caça de mídia",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:52:41.864Z",
-          "finishedAt": "2026-10-09T23:53:53.663Z",
-          "secs": 72,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "curate",
-          "label": "Curadoria (revisão visual)",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:53:53.663Z",
-          "finishedAt": "2026-10-09T23:56:15.689Z",
-          "secs": 142,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "refresh",
-          "label": "Re-pesquisa de evidência",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:56:15.689Z",
-          "finishedAt": "2026-10-09T23:58:29.777Z",
-          "secs": 134,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "rescore",
-          "label": "Re-score",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:58:29.777Z",
-          "finishedAt": "2026-10-09T23:58:30.088Z",
-          "secs": 0,
-          "failures": [],
-          "warnings": []
-        },
-        {
-          "name": "gate",
-          "label": "Gate + commit",
-          "status": "ok",
-          "startedAt": "2026-10-09T23:58:30.088Z",
-          "finishedAt": "2026-10-09T23:58:50.418Z",
-          "secs": 20,
-          "failures": [],
-          "warnings": []
-        }
-      ],
-      "coveragePct": 99,
-      "commit": null,
-      "finishedAt": "2026-10-09T23:58:50.418Z",
-      "secs": 893
     }
   ]
 }

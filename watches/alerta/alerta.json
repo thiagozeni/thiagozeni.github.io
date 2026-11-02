@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-11-02",
   "items": [
     {
       "key": "rolex|134300",
@@ -439,6 +439,26 @@
       ]
     },
     {
+      "key": "patekphilippe|5810",
+      "brand": "Patek Philippe",
+      "ref": "5810",
+      "label": "Patek Philippe Nautilus 5810 SS Blue Textured Dial",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 4,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-11-02",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
       "key": "rolex|126333",
       "brand": "Rolex",
       "ref": "126333",
@@ -462,6 +482,102 @@
       ]
     },
     {
+      "key": "iwc|iw371604",
+      "brand": "IWC",
+      "ref": "IW371604",
+      "label": "IWC Portugieser Chrono IW371604 White/YG Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-11-02",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371604-tk-1.jpg",
+        "/media/alerta/al-iw371604-py-2.jpg",
+        "/media/alerta/al-iw371604-py-3.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw371605",
+      "brand": "IWC",
+      "ref": "IW371605",
+      "label": "IWC Portugieser Chrono IW371605 White/Blue Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-11-02",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371605-tk-1.jpg",
+        "/media/alerta/al-iw371605-py-2.jpg",
+        "/media/alerta/al-iw371605-py-3.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw371606",
+      "brand": "IWC",
+      "ref": "IW371606",
+      "label": "IWC Portugieser Chrono IW371606 Blue Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-11-02",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371606-tk-1.jpg",
+        "/media/alerta/al-iw371606-py-2.jpg",
+        "/media/alerta/al-iw371606-py-3.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw371624",
+      "brand": "IWC",
+      "ref": "IW371624",
+      "label": "IWC Portugieser Chrono IW371624 YG Dial",
+      "factories": [
+        "OCTA"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-11-02",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw371624-tk-1.jpg",
+        "/media/alerta/al-iw371624-py-2.jpg",
+        "/media/alerta/al-iw371624-py-3.jpg"
+      ]
+    },
+    {
       "key": "audemarspiguet|26238",
       "brand": "Audemars Piguet",
       "ref": "26238",
@@ -476,26 +592,6 @@
       "genuine": null,
       "radarIds": [],
       "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-26",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": []
-    },
-    {
-      "key": "patekphilippe|5810",
-      "brand": "Patek Philippe",
-      "ref": "5810",
-      "label": "Patek Philippe Nautilus 5810 SS Blue Textured Dial",
-      "factories": [
-        "PPF"
-      ],
-      "stores": 3,
-      "reasons": [
-        "lojas"
-      ],
-      "genuine": null,
-      "radarIds": [],
-      "firstSeen": "2026-10-19",
       "lastSignal": "2026-10-26",
       "status": "observacao",
       "catalogRank": null,
@@ -525,10 +621,10 @@
       ]
     },
     {
-      "key": "iwc|iw371604",
-      "brand": "IWC",
-      "ref": "IW371604",
-      "label": "IWC Portugieser Chrono IW371604 White/YG Dial",
+      "key": "audemarspiguet|15412bc",
+      "brand": "Audemars Piguet",
+      "ref": "15412BC",
+      "label": "Audemars Piguet Royal Oak 15412BC.YG.1224BC.03-B Double Balance Wheel Openworked",
       "factories": [
         "OCTA"
       ],
@@ -538,23 +634,19 @@
       ],
       "genuine": null,
       "radarIds": [],
-      "firstSeen": "2026-10-26",
-      "lastSignal": "2026-10-26",
+      "firstSeen": "2026-11-02",
+      "lastSignal": "2026-11-02",
       "status": "observacao",
       "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-iw371604-tk-1.jpg",
-        "/media/alerta/al-iw371604-py-2.jpg",
-        "/media/alerta/al-iw371604-py-3.jpg"
-      ]
+      "photos": []
     },
     {
-      "key": "iwc|iw371605",
-      "brand": "IWC",
-      "ref": "IW371605",
-      "label": "IWC Portugieser Chrono IW371605 White/Blue Dial",
+      "key": "rolex|126000",
+      "brand": "Rolex",
+      "ref": "126000",
+      "label": "Rolex ROYP040C – Oyster Pert 36mm 904 126000 SS/SS T-Blu",
       "factories": [
-        "OCTA"
+        "VSF"
       ],
       "stores": 2,
       "reasons": [
@@ -562,23 +654,19 @@
       ],
       "genuine": null,
       "radarIds": [],
-      "firstSeen": "2026-10-26",
-      "lastSignal": "2026-10-26",
+      "firstSeen": "2026-11-02",
+      "lastSignal": "2026-11-02",
       "status": "observacao",
       "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-iw371605-tk-1.jpg",
-        "/media/alerta/al-iw371605-py-2.jpg",
-        "/media/alerta/al-iw371605-py-3.jpg"
-      ]
+      "photos": []
     },
     {
-      "key": "iwc|iw371606",
-      "brand": "IWC",
-      "ref": "IW371606",
-      "label": "IWC Portugieser Chrono IW371606 Blue Dial",
+      "key": "rolex|126331",
+      "brand": "Rolex",
+      "ref": "126331",
+      "label": "Rolex DateJust 41 126331 SS/RG RG Diamonds Dial",
       "factories": [
-        "OCTA"
+        "QF"
       ],
       "stores": 2,
       "reasons": [
@@ -587,38 +675,10 @@
       "genuine": null,
       "radarIds": [],
       "firstSeen": "2026-10-26",
-      "lastSignal": "2026-10-26",
+      "lastSignal": "2026-11-02",
       "status": "observacao",
       "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-iw371606-tk-1.jpg",
-        "/media/alerta/al-iw371606-py-2.jpg",
-        "/media/alerta/al-iw371606-py-3.jpg"
-      ]
-    },
-    {
-      "key": "iwc|iw371624",
-      "brand": "IWC",
-      "ref": "IW371624",
-      "label": "IWC Portugieser Chrono IW371624 YG Dial",
-      "factories": [
-        "OCTA"
-      ],
-      "stores": 2,
-      "reasons": [
-        "lojas"
-      ],
-      "genuine": null,
-      "radarIds": [],
-      "firstSeen": "2026-10-26",
-      "lastSignal": "2026-10-26",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-iw371624-tk-1.jpg",
-        "/media/alerta/al-iw371624-py-2.jpg",
-        "/media/alerta/al-iw371624-py-3.jpg"
-      ]
+      "photos": []
     },
     {
       "key": "richardmille|rm6702",
