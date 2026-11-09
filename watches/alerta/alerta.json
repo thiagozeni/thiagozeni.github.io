@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-09",
   "items": [
     {
       "key": "rolex|134300",
@@ -10,7 +10,7 @@
         "QF",
         "VSF"
       ],
-      "stores": 9,
+      "stores": 10,
       "reasons": [
         "genuino",
         "lojas"
@@ -21,7 +21,7 @@
       },
       "radarIds": [],
       "firstSeen": "2026-10-09",
-      "lastSignal": "2026-10-26",
+      "lastSignal": "2026-11-09",
       "status": "observacao",
       "catalogRank": null,
       "photos": [
@@ -417,6 +417,26 @@
       ]
     },
     {
+      "key": "patekphilippe|5810",
+      "brand": "Patek Philippe",
+      "ref": "5810",
+      "label": "Patek Philippe Nautilus 5810 SS Blue Textured Dial",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 5,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-11-09",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
       "key": "rolex|126234",
       "brand": "Rolex",
       "ref": "126234",
@@ -439,12 +459,12 @@
       ]
     },
     {
-      "key": "patekphilippe|5810",
-      "brand": "Patek Philippe",
-      "ref": "5810",
-      "label": "Patek Philippe Nautilus 5810 SS Blue Textured Dial",
+      "key": "audemarspiguet|26238",
+      "brand": "Audemars Piguet",
+      "ref": "26238",
+      "label": "Audemars Piguet Royal Oak Offshore 42mm 26238 Khaki Green Titanium",
       "factories": [
-        "PPF"
+        "OCTA"
       ],
       "stores": 4,
       "reasons": [
@@ -452,8 +472,29 @@
       ],
       "genuine": null,
       "radarIds": [],
-      "firstSeen": "2026-10-19",
-      "lastSignal": "2026-11-02",
+      "firstSeen": "2026-10-12",
+      "lastSignal": "2026-11-09",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
+      "key": "rolex|126331",
+      "brand": "Rolex",
+      "ref": "126331",
+      "label": "Rolex DateJust 41 126331 SS/RG RG Diamonds Dial",
+      "factories": [
+        "QF",
+        "VSF"
+      ],
+      "stores": 4,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-26",
+      "lastSignal": "2026-11-09",
       "status": "observacao",
       "catalogRank": null,
       "photos": []
@@ -480,6 +521,26 @@
       "photos": [
         "/media/alerta/al-126333-tk-3.jpg"
       ]
+    },
+    {
+      "key": "rolex|126508",
+      "brand": "Rolex",
+      "ref": "126508",
+      "label": "Rolex Daytona 126508 White Dial",
+      "factories": [
+        "ZF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-11-09",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
     },
     {
       "key": "iwc|iw371604",
@@ -578,26 +639,6 @@
       ]
     },
     {
-      "key": "audemarspiguet|26238",
-      "brand": "Audemars Piguet",
-      "ref": "26238",
-      "label": "Audemars Piguet Royal Oak Offshore 42mm 26238 Khaki Green Titanium",
-      "factories": [
-        "OCTA"
-      ],
-      "stores": 3,
-      "reasons": [
-        "lojas"
-      ],
-      "genuine": null,
-      "radarIds": [],
-      "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-26",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": []
-    },
-    {
       "key": "rolex|126509",
       "brand": "Rolex",
       "ref": "126509",
@@ -621,6 +662,50 @@
       ]
     },
     {
+      "key": "panerai|pam1678",
+      "brand": "Panerai",
+      "ref": "PAM1678",
+      "label": "Panerai Luminor Marina Bronzo Blue Ombre Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-11-09",
+      "lastSignal": "2026-11-09",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-pam1678-tk-1.jpg"
+      ]
+    },
+    {
+      "key": "rolex|228235",
+      "brand": "Rolex",
+      "ref": "228235",
+      "label": "Rolex DayDate 40 228235 Gray Ombre Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-11-09",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-228235-tk-3.jpg"
+      ]
+    },
+    {
       "key": "audemarspiguet|15412bc",
       "brand": "Audemars Piguet",
       "ref": "15412BC",
@@ -638,7 +723,9 @@
       "lastSignal": "2026-11-02",
       "status": "observacao",
       "catalogRank": null,
-      "photos": []
+      "photos": [
+        "/media/alerta/al-15412bc-tk-2.jpg"
+      ]
     },
     {
       "key": "rolex|126000",
@@ -658,27 +745,9 @@
       "lastSignal": "2026-11-02",
       "status": "observacao",
       "catalogRank": null,
-      "photos": []
-    },
-    {
-      "key": "rolex|126331",
-      "brand": "Rolex",
-      "ref": "126331",
-      "label": "Rolex DateJust 41 126331 SS/RG RG Diamonds Dial",
-      "factories": [
-        "QF"
-      ],
-      "stores": 2,
-      "reasons": [
-        "lojas"
-      ],
-      "genuine": null,
-      "radarIds": [],
-      "firstSeen": "2026-10-26",
-      "lastSignal": "2026-11-02",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": []
+      "photos": [
+        "/media/alerta/al-126000-tk-3.jpg"
+      ]
     },
     {
       "key": "richardmille|rm6702",
@@ -695,26 +764,6 @@
       "genuine": null,
       "radarIds": [],
       "firstSeen": "2026-10-12",
-      "lastSignal": "2026-10-26",
-      "status": "observacao",
-      "catalogRank": null,
-      "photos": []
-    },
-    {
-      "key": "rolex|126508",
-      "brand": "Rolex",
-      "ref": "126508",
-      "label": "Rolex Daytona 126508 White Dial",
-      "factories": [
-        "ZF"
-      ],
-      "stores": 2,
-      "reasons": [
-        "lojas"
-      ],
-      "genuine": null,
-      "radarIds": [],
-      "firstSeen": "2026-10-19",
       "lastSignal": "2026-10-26",
       "status": "observacao",
       "catalogRank": null,

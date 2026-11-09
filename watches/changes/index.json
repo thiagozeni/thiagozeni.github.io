@@ -1,5 +1,22 @@
 [
   {
+    "stamp": "2026-11-09",
+    "previousStamp": "2026-11-02",
+    "summary": {
+      "newModels": 0,
+      "scoreChanges": 1,
+      "newMedia": 7,
+      "newNews": 0
+    },
+    "newModels": [],
+    "scoreChanges": [
+      {
+        "rank": 19,
+        "delta": -0.06
+      }
+    ]
+  },
+  {
     "stamp": "2026-11-02",
     "previousStamp": "2026-10-26",
     "summary": {
