@@ -264,7 +264,8 @@
         "st-49-lcw-20156-2",
         "st-49-lcw-20156-3",
         "st-49-lcw-20156-4",
-        "sv-49-py-5116"
+        "sv-49-py-5116",
+        "sv-49-py-13829"
       ],
       "wrongNotes": {
         "49-superclonewatches-1irm0s2": "errada: bicolor ouro rosé",
@@ -293,7 +294,8 @@
         "st-49-lcw-20156-2": "errada: mostrador verde-menta, não ardósia Wimbledon",
         "st-49-lcw-20156-3": "errada: mostrador verde-menta, não ardósia Wimbledon",
         "st-49-lcw-20156-4": "errada: mostrador verde-menta, não ardósia Wimbledon",
-        "sv-49-py-5116": "errada: bracelete parece President, não Jubilee; imagem pequena, variante duvidosa"
+        "sv-49-py-5116": "errada: bracelete parece President, não Jubilee; imagem pequena, variante duvidosa",
+        "sv-49-py-13829": "errada: mostrador prateado com índices de bastão; não é o ardósia Wimbledon com algarism"
       },
       "galleryAuditedAt": "2026-10-08"
     },
@@ -1767,7 +1769,7 @@
         "bb-18-2",
         "bb-18-1"
       ],
-      "reviewedAt": "2026-11-09T19:49:09.129Z"
+      "reviewedAt": "2026-11-12T18:49:29.979Z"
     },
     "Submersible PAM968 (Bronzo)": {
       "rank": 39,
@@ -3985,7 +3987,15 @@
       "candidateIds": [
         "hunt-daytona-126502-rolesium-mostrador-esmalte-branco-luneta-cerachrom-antracite-1"
       ],
-      "reviewedAt": "2026-10-09T15:56:40.055Z"
+      "reviewedAt": "2026-10-09T15:56:40.055Z",
+      "wrongIds": [
+        "st-150-tk-190521-1",
+        "st-150-tk-190521-2"
+      ],
+      "wrongNotes": {
+        "st-150-tk-190521-1": "errada: luneta com escala diferente (\"50\" no topo, número que o Daytona não tem): peça i",
+        "st-150-tk-190521-2": "errada: mesma imagem da foto 2: luneta com escala diferente (\"50\" no topo)"
+      }
     },
     "Royal Oak 15500ST": {
       "rank": 110,
@@ -4023,7 +4033,7 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-11-09T19:49:09.129Z"
+      "reviewedAt": "2026-11-12T18:49:29.978Z"
     },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
@@ -4036,7 +4046,7 @@
         "hunt-seamaster-planet-ocean-600m-1",
         "f-119-2e19a199"
       ],
-      "reviewedAt": "2026-11-09T19:49:09.129Z"
+      "reviewedAt": "2026-11-12T18:49:29.979Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -4049,7 +4059,7 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-11-09T19:49:09.129Z"
+      "reviewedAt": "2026-11-12T18:49:29.979Z"
     },
     "Royal Oak 15510ST": {
       "rank": 117,
@@ -4062,7 +4072,7 @@
         "f-117-61214ae0",
         "f-117-0e671be6"
       ],
-      "reviewedAt": "2026-11-09T19:49:09.129Z"
+      "reviewedAt": "2026-11-12T18:49:29.979Z"
     },
     "Royal Oak Offshore 26420 Chronograph": {
       "rank": 124,
@@ -4075,7 +4085,7 @@
         "st-124-tk-198166-2",
         "st-124-tk-198166-1"
       ],
-      "reviewedAt": "2026-11-09T19:49:09.129Z"
+      "reviewedAt": "2026-11-12T18:49:29.979Z"
     }
   },
   "galleryAudit": {

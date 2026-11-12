@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-12",
   "items": [
     {
       "key": "rolex|134300",
@@ -872,6 +872,59 @@
       "photos": [
         "/media/alerta/al-5810g-tk-1.jpg",
         "/media/alerta/al-5810g-tk-2.jpg"
+      ]
+    },
+    {
+      "key": "iwc|iw389401",
+      "brand": "IWC",
+      "ref": "IW389401",
+      "label": "IWC Pilot's Watch Chronograph Top Gun IW389401 (cerâmica preta)",
+      "factories": [
+        "ZF"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": null,
+      "radarIds": [
+        "2026-11-12-zf-iw389401-top-gun"
+      ],
+      "firstSeen": "2026-11-12",
+      "lastSignal": "2026-11-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-iw389401-py-1.jpg",
+        "/media/alerta/al-iw389401-py-2.jpg"
+      ]
+    },
+    {
+      "key": "patekphilippe|58101g",
+      "brand": "Patek Philippe",
+      "ref": "5810/1G",
+      "label": "Patek Philippe Nautilus 50th Anniversary (limited, white gold)",
+      "factories": [
+        "PPF"
+      ],
+      "stores": 0,
+      "reasons": [
+        "radar"
+      ],
+      "genuine": {
+        "name": "Nautilus 50th Anniversary (limited, white gold)",
+        "released": "2026-04"
+      },
+      "radarIds": [
+        "2026-11-05-ppf-5810-1g"
+      ],
+      "firstSeen": "2026-11-12",
+      "lastSignal": "2026-11-12",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-5810-1g-tk-1.jpg",
+        "/media/alerta/al-5810-1g-tk-2.jpg"
       ]
     },
     {

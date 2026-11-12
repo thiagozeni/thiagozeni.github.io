@@ -1,0 +1,28 @@
+{
+  "stamp": "2026-11-12",
+  "previousStamp": "2026-11-09",
+  "newModels": [],
+  "removedModels": [],
+  "scoreChanges": [
+    {
+      "rank": 43,
+      "from": 7.4,
+      "to": 7.54,
+      "delta": 0.14
+    }
+  ],
+  "confidenceChanges": [],
+  "newMedia": [
+    {
+      "rank": 150,
+      "count": 6
+    }
+  ],
+  "newNews": [],
+  "summary": {
+    "newModels": 0,
+    "scoreChanges": 1,
+    "newMedia": 6,
+    "newNews": 0
+  }
+}

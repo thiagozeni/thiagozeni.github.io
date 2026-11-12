@@ -73180,5 +73180,184 @@
       "py"
     ],
     "collectedAt": "2026-11-09T19:54:16.539Z"
+  },
+  {
+    "id": "st-150-ul-186295-1",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "QF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Rolex Daytona 126502 “Panda” Elite Super Clone",
+    "source": "unitedluxury.net",
+    "sourceDomain": "unitedluxury.net",
+    "image": "https://www.unitedluxury.net/wp-content/uploads/2026/04/Yeni-Proje-2026-04-30T232606.584.webp",
+    "localImage": "/media/img/st-150-ul-186295-1.webp",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126502",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "ul"
+    ],
+    "collectedAt": "2026-11-12T18:50:49.138Z"
+  },
+  {
+    "id": "st-150-tk-190521-1",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "QF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Daytona 126502 904L SS QF 1:1 Best Edition White Dial On 904L SS Bracelet JH4131 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22083613/20260722_166.jpg",
+    "localImage": "/media/img/st-150-tk-190521-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126502",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-11-12T18:50:50.327Z"
+  },
+  {
+    "id": "st-150-tk-190521-2",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "QF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Daytona 126502 904L SS QF 1:1 Best Edition White Dial On 904L SS Bracelet JH4131 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22083613/20260722_166.jpg",
+    "localImage": "/media/img/st-150-tk-190521-2.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126502",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-11-12T18:50:50.356Z"
+  },
+  {
+    "id": "st-150-tk-190521-3",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "QF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Daytona 126502 904L SS QF 1:1 Best Edition White Dial On 904L SS Bracelet JH4131 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22083605/20260722_165.jpg",
+    "localImage": "/media/img/st-150-tk-190521-3.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126502",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-11-12T18:50:50.961Z"
+  },
+  {
+    "id": "st-150-tk-190521-4",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "QF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Daytona 126502 904L SS QF 1:1 Best Edition White Dial On 904L SS Bracelet JH4131 (Free Sprung)",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/07/22083541/20260722_162.jpg",
+    "localImage": "/media/img/st-150-tk-190521-4.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126502",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-11-12T18:50:51.794Z"
+  },
+  {
+    "id": "st-150-tk-202682-1",
+    "model": "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Daytona 126502 VSF 1:1 Best Edition 904L Steel White Dial on SS Braclet DD4131 V1s",
+    "source": "tkwatch.xyz",
+    "sourceDomain": "tkwatch.xyz",
+    "image": "https://image.tkwatch.xyz/2026/10/17180356/20261017_002.jpg",
+    "localImage": "/media/img/st-150-tk-202682-1.jpg",
+    "mediaType": "image",
+    "confidence": 80,
+    "matchReasons": [
+      "referencia:126502",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "loja-api",
+      "tk"
+    ],
+    "collectedAt": "2026-11-12T18:50:51.902Z"
+  },
+  {
+    "id": "sv-49-py-13829",
+    "model": "Datejust 36 Wimbledon",
+    "brand": "Rolex",
+    "factory": "VSF",
+    "type": "video",
+    "status": "validado",
+    "title": "Rolex Datejust 126234 Silver Luminous Dial Jubilee Bracelet 1:1 Best Replica VSF 36mm — vídeo de produto (pyluxury.com)",
+    "source": "pyluxury.com",
+    "sourceDomain": "pyluxury.com",
+    "sourceUrl": "https://pyluxury.com/product/rolex-datejust-126234-silver-luminous-dial-jubilee-bracelet-11-best-replica/",
+    "embedUrl": "https://player.vimeo.com/video/1236788786",
+    "embedKind": "vimeo",
+    "image": null,
+    "thumb": "https://i.vimeocdn.com/video/2213386079-21f28d4da1d4757981c90c43b515fbdffd84fc611149e795a57172080a8b32cb-d_200x150?region=us",
+    "mediaType": "video",
+    "confidence": 80,
+    "matchReasons": [
+      "product-page-video",
+      "loja-api:titulo"
+    ],
+    "factoryVerified": true,
+    "tags": [
+      "product-video",
+      "vimeo",
+      "py"
+    ],
+    "collectedAt": "2026-11-12T18:51:46.154Z"
   }
 ]
