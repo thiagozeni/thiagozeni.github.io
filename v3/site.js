@@ -227,9 +227,18 @@
     if (portrait) tl.to(portrait.state, { intro: 1, duration: 3, ease: 'power2.out' }, 0);
   }
 
+  /* Chegada com âncora (ex.: voltando de um case): vai direto à seção depois que os pins foram medidos */
+  function goHash() {
+    var t = null;
+    try { t = location.hash.length > 1 && document.querySelector(location.hash); } catch (e) { }
+    if (!t || t.id === 'hero') return;
+    if (lenis) lenis.scrollTo(t, { immediate: true, force: true });
+    else t.scrollIntoView();
+  }
+
   (function loader() {
     var el = $('#loader');
-    if (CALM || !el) { if (el) el.remove(); return; }
+    if (CALM || !el) { if (el) el.remove(); window.addEventListener('load', function () { setTimeout(goHash, 60); }); return; }
     var yearEl = $('#loader-year'), bar = $('#loader-bar');
     var seen = false; try { seen = sessionStorage.getItem('zn-seen') === '1'; sessionStorage.setItem('zn-seen', '1'); } catch (e) { }
     if (lenis) lenis.stop();
@@ -240,7 +249,7 @@
       gsap.timeline()
         .to(el, { yPercent: -100, duration: 1, ease: 'power4.inOut' })
         .add(heroIntro, 0.25)
-        .add(function () { el.remove(); if (lenis) lenis.start(); ScrollTrigger.refresh(); }, 1.05);
+        .add(function () { el.remove(); if (lenis) lenis.start(); ScrollTrigger.refresh(); goHash(); }, 1.05);
     }
     var t1 = gsap.to(o, { y: 2026, duration: seen ? 0.7 : 1.7, ease: 'power2.inOut', onUpdate: function () { yearEl.textContent = Math.round(o.y); }, onComplete: function () { counted = true; finish(); } });
     var t2 = gsap.to(bar, { scaleX: 1, duration: seen ? 0.7 : 1.7, ease: 'power2.inOut' });
