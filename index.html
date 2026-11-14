@@ -5,35 +5,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#050505" />
-  <script>try { if (document.referrer && new URL(document.referrer).host === location.host && document.referrer !== location.href) document.documentElement.classList.add("no-preloader"); } catch (e) { }</script>
+  <script>document.documentElement.classList.add('js'); try { if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('calm'); } catch (e) { }</script>
   <link rel="manifest" href="/site.webmanifest">
   <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
-  <title>Thiago Zeni — Inovação, Estratégia & Inteligência Artificial</title>
+  <title>Thiago Zeni · Inovação, Estratégia e Inteligência Artificial</title>
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 
-  <!-- SEO -->
   <meta name="description"
-    content="Thiago Zeni — 28 anos inovando dentro do marketing, da web à Inteligência Artificial. Estrategista de negócios e consultor de Inovação & IA. Porto Alegre · Florianópolis · São Paulo." />
+    content="Thiago Zeni: 28 anos trazendo o próximo passo antes de ele virar tendência, da web à Inteligência Artificial. Consultor de Inovação e IA com a ótica de quem dirige o negócio. Porto Alegre · Florianópolis · São Paulo." />
   <meta name="author" content="Thiago Zeni" />
   <link rel="canonical" href="https://thiagozeni.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thiagozeni.com/" />
-  <meta property="og:title" content="Thiago Zeni — Inovação, Estratégia & Inteligência Artificial" />
+  <meta property="og:title" content="Thiago Zeni · Inovação, Estratégia e Inteligência Artificial" />
   <meta property="og:description"
-    content="28 anos fazendo marcas inovarem — da web à Inteligência Artificial. Consultor de Inovação & IA com a ótica de quem dirige o negócio." />
+    content="28 anos trazendo o próximo passo antes de ele virar tendência, da web à Inteligência Artificial. Consultor de Inovação e IA com a ótica de quem dirige o negócio." />
   <meta property="og:image" content="https://thiagozeni.com/img/perfil_thiago_zeni.jpg" />
   <meta property="og:locale" content="pt_BR" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Thiago Zeni — Inovação, Estratégia & Inteligência Artificial" />
+  <meta name="twitter:title" content="Thiago Zeni · Inovação, Estratégia e Inteligência Artificial" />
   <meta name="twitter:description"
-    content="28 anos fazendo marcas inovarem — da web à Inteligência Artificial. Consultor de Inovação & IA com a ótica de quem dirige o negócio." />
+    content="28 anos trazendo o próximo passo antes de ele virar tendência, da web à Inteligência Artificial." />
   <meta name="twitter:image" content="https://thiagozeni.com/img/perfil_thiago_zeni.jpg" />
 
-  <!-- Schema.org / JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,3863 +51,696 @@
   }
   </script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-F44T3HG5PZ');
+    window.addEventListener('load', function () {
+      setTimeout(function () { var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-F44T3HG5PZ'; document.head.appendChild(s); }, 2500);
+    });
   </script>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Martian+Mono:wght@300;400;500&display=swap"
     rel="stylesheet">
-
-  <style>
-    /* ─── RESET & TOKENS ─────────────────────────────────── */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      /* ─ Base ─ */
-      --black: #050505;
-      --deep: #0D0D0D;
-      --panel: #111111;
-
-      /* ─ Accent: Electric Lime ─ */
-      --lime: #C6FF00;
-      --lime2: #DEFF4F;
-      --lime-dim: rgba(198, 255, 0, 0.08);
-
-      /* ─ Text ─ */
-      --white: #F2F2F2;
-      --muted: #7A7A7A;
-      --faint: #3A3A3A;
-
-      /* ─ Pop accent (used sparingly) ─ */
-      --red: #FF2D2D;
-
-      /* ─ Borders ─ */
-      --border: rgba(198, 255, 0, 0.14);
-      --border2: rgba(255, 255, 255, 0.07);
-
-      /* ─ Typography ─ */
-      --font-display: 'Unbounded', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
-      --font-serif: 'Cormorant Garamond', serif;
-
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    html {
-      scroll-behavior: auto;
-      /* sem font boosting do Chrome Android: tamanhos iguais aos projetados */
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* Cursor custom só onde há ponteiro fino (mouse). Em touch o cursor nativo é preservado. */
-    #cursor-dot, #cursor-ring { display: none; }
-    @media (hover: hover) and (pointer: fine) {
-      body, a { cursor: none; }
-      #cursor-dot, #cursor-ring { display: block; }
-    }
-
-    img {
-      display: block;
-    }
-
-    /* ─── GRAIN OVERLAY ──────────────────────────────────── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0.028;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      background-size: 200px 200px;
-    }
-
-    /* ─── SCROLL PROGRESS ────────────────────────────────── */
-    #progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 2px;
-      width: 0%;
-      background: var(--lime);
-      z-index: 10000;
-      transition: width 0.1s linear;
-      box-shadow: 0 0 12px rgba(198, 255, 0, 0.6);
-    }
-
-    /* ─── CUSTOM CURSOR ──────────────────────────────────── */
-    #cursor-dot {
-      position: fixed;
-      width: 7px;
-      height: 7px;
-      background: var(--lime);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 99999;
-      transform: translate(-50%, -50%);
-      transition: width 0.2s var(--ease), height 0.2s var(--ease), background 0.2s;
-      will-change: transform;
-      box-shadow: 0 0 8px rgba(198, 255, 0, 0.8);
-    }
-
-    #cursor-ring {
-      position: fixed;
-      width: 38px;
-      height: 38px;
-      border: 1.5px solid var(--lime);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 99998;
-      transform: translate(-50%, -50%);
-      transition: width 0.4s var(--ease), height 0.4s var(--ease),
-        border-color 0.3s, opacity 0.3s;
-      will-change: transform;
-      opacity: 0.45;
-    }
-
-    body.cursor-hover #cursor-dot {
-      width: 12px;
-      height: 12px;
-      background: var(--lime2);
-      box-shadow: 0 0 18px rgba(198, 255, 0, 0.9);
-    }
-
-    body.cursor-hover #cursor-ring {
-      width: 64px;
-      height: 64px;
-      border-color: var(--lime2);
-      opacity: 0.25;
-    }
-
-    /* ─── PRELOADER ──────────────────────────────────────── */
-    #preloader {
-      position: fixed;
-      inset: 0;
-      background: var(--black);
-      z-index: 100000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.9s var(--ease), visibility 0.9s;
-    }
-
-    #preloader.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .preloader-monogram {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(4rem, 12vw, 10rem);
-      color: transparent;
-      -webkit-text-stroke: 1.5px var(--lime);
-      letter-spacing: -0.05em;
-      position: relative;
-      overflow: hidden;
-      text-shadow: none;
-      filter: drop-shadow(0 0 20px rgba(198, 255, 0, 0.4));
-    }
-
-    .preloader-monogram::after {
-      content: 'ZN';
-      position: absolute;
-      inset: 0;
-      color: var(--lime);
-      clip-path: inset(100% 0 0 0);
-      animation: preloader-fill 1s var(--ease) 0.3s forwards;
-    }
-
-    @keyframes preloader-fill {
-      to {
-        clip-path: inset(0% 0 0 0);
-      }
-    }
-
-    .preloader-line {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      background: var(--lime);
-      width: 0;
-      animation: preloader-line 1.4s var(--ease) 0.1s forwards;
-      box-shadow: 0 0 12px rgba(198, 255, 0, 0.7);
-    }
-
-    @keyframes preloader-line {
-      to {
-        width: 100%;
-      }
-    }
-
-    /* ─── NAVBAR ─────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.4rem 3rem;
-      transition: background 0.5s, padding 0.4s;
-    }
-
-    nav.scrolled {
-      background: rgba(5, 5, 5, 0.94);
-      backdrop-filter: blur(24px);
-      padding: 1rem 3rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 1.15rem;
-      letter-spacing: -0.04em;
-      color: var(--lime);
-      filter: drop-shadow(0 0 10px rgba(198, 255, 0, 0.4));
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.7rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      transition: color 0.3s;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: var(--lime);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s var(--ease);
-    }
-
-    .nav-links a:hover {
-      color: var(--lime);
-    }
-
-    .nav-links a:hover::after {
-      transform: scaleX(1);
-    }
-
-    .nav-cta {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--black);
-      background: var(--lime);
-      padding: 0.55rem 1.4rem;
-      border-radius: 1px;
-      transition: background 0.3s, box-shadow 0.3s;
-      box-shadow: 0 0 0 rgba(198, 255, 0, 0);
-    }
-
-    .nav-cta:hover {
-      background: var(--lime2);
-      box-shadow: 0 0 24px rgba(198, 255, 0, 0.35);
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: none;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 26px;
-      height: 1.5px;
-      background: var(--white);
-      transition: 0.3s;
-    }
-
-    /* ─── HERO ───────────────────────────────────────────── */
-    /* Pin wrapper — absorve 200vh de scroll antes de liberar a página */
-    #hero-pin {
-      height: 300vh;
-    }
-
-    #hero {
-      height: 100vh;
-      height: 100svh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 0 3rem 4rem;
-      position: sticky;
-      top: 0;
-      overflow: hidden;
-    }
-
-    .hero-bg-photo {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .hero-bg-photo video {
-      display: block;
-      width: 100%;
-      height: 130%;
-      /* extra height para o parallax não cortar */
-      object-fit: cover;
-      object-position: center top;
-      filter: grayscale(100%) brightness(0.28) contrast(1.2);
-      will-change: transform;
-      transform-origin: center top;
-      transition: opacity 0.5s linear;
-    }
-
-    .hero-video-clone {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-    }
-
-    /* Lime tint overlay */
-    .hero-bg-photo::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 70% 40%, rgba(198, 255, 0, 0.06) 0%, transparent 70%);
-      z-index: 1;
-    }
-
-    .hero-bg-photo::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background: linear-gradient(to bottom,
-          rgba(5, 5, 5, 0.1) 0%,
-          rgba(5, 5, 5, 0.0) 25%,
-          rgba(5, 5, 5, 0.45) 60%,
-          rgba(5, 5, 5, 0.98) 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1300px;
-      margin: 0 auto;
-      width: 100%;
-      will-change: transform;
-    }
-
-    .hero-location {
-      font-size: 0.75rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--lime);
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      transform: translateY(15px);
-      animation: reveal-up 0.8s var(--ease) 1.8s forwards;
-    }
-
-    .hero-name {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(4rem, 11vw, 13rem);
-      line-height: 0.9;
-      letter-spacing: -0.04em;
-      margin-bottom: 0.1em;
-      overflow: hidden;
-    }
-
-    .hero-name-line {
-      display: block;
-      opacity: 0;
-      transform: translateY(120%);
-    }
-
-    .hero-name-line:nth-child(1) {
-      animation: slide-up 1s var(--ease) 1.9s forwards;
-    }
-
-    .hero-name-line:nth-child(2) {
-      animation: slide-up 1s var(--ease) 2.05s forwards;
-      color: transparent;
-      -webkit-text-stroke: 2px var(--lime);
-      filter: drop-shadow(0 0 30px rgba(198, 255, 0, 0.3));
-    }
-
-    @keyframes slide-up {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes reveal-up {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-bottom {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 2rem;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(198, 255, 0, 0.2);
-      opacity: 0;
-      animation: reveal-up 0.9s var(--ease) 2.5s forwards;
-    }
-
-    .hero-tagline {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(1rem, 2vw, 1.4rem);
-      font-weight: 300;
-      color: rgba(242, 242, 242, 0.6);
-      max-width: 500px;
-      line-height: 1.5;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-    }
-
-    .hero-stat {
-      text-align: right;
-    }
-
-    .hero-stat-num {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 2.2rem;
-      color: var(--lime);
-      line-height: 1;
-      display: block;
-      text-shadow: 0 0 20px rgba(198, 255, 0, 0.5);
-    }
-
-    .hero-stat-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 0.3rem;
-    }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 3.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      z-index: 2;
-      opacity: 0;
-      animation: reveal-up 0.8s var(--ease) 3s forwards;
-    }
-
-    .hero-scroll span {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .scroll-line {
-      width: 1px;
-      height: 50px;
-      background: linear-gradient(to bottom, var(--lime), transparent);
-      animation: scroll-pulse 2s ease-in-out infinite 3.5s;
-      box-shadow: 0 0 6px rgba(198, 255, 0, 0.5);
-    }
-
-    @keyframes scroll-pulse {
-
-      0%,
-      100% {
-        opacity: 0.3;
-        transform: scaleY(1);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scaleY(1.1);
-      }
-    }
-
-    /* ─── MANIFESTO ──────────────────────────────────────── */
-    #manifesto {
-      background: #F5F5F5;
-      color: var(--black);
-      padding: 10rem 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* ::before removido — substituído por .manifesto-deco para poder fazer parallax */
-
-    /* Lime stripe on the left */
-    #manifesto::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 4px;
-      background: var(--lime);
-    }
-
-    /* Decorative quote — parallax real element */
-    .manifesto-deco {
-      position: absolute;
-      top: -0.15em;
-      left: 0.5rem;
-      font-family: var(--font-serif);
-      font-size: 30rem;
-      line-height: 1;
-      color: rgba(0, 0, 0, 0.05);
-      pointer-events: none;
-      will-change: transform;
-      user-select: none;
-    }
-
-    .manifesto-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    .manifesto-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 3rem;
-    }
-
-    .manifesto-text {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: clamp(1.4rem, 3.8vw, 4.2rem);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      max-width: 1100px;
-    }
-
-    /* revelação por "cortina": UMA máscara por LINHA de texto (estilo Lando) — assinatura do site */
-    #manifestoText,
-    .section-title,
-    .contact-headline {
-      position: relative;
-    }
-
-    .manifesto-text .word {
-      display: inline-block;
-    }
-
-    .line-mask {
-      position: absolute;
-      background: #242424;          /* títulos em fundo escuro */
-      transform: scaleX(1);
-      transform-origin: right;
-      transition: transform 0.6s var(--ease) var(--d, 0s);
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    #manifestoText .line-mask {
-      background: #d6d6d3;          /* manifesto (fundo claro) */
-    }
-
-    .revealed .line-mask {
-      transform: scaleX(0);
-    }
-
-    /* palavras-chave: Cormorant itálico + traço lime (toque de cor legível no claro) */
-    .manifesto-text .key {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-weight: 500;
-      font-size: 1.1em;
-      box-shadow: inset 0 -0.09em 0 var(--lime);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .line-mask { display: none; }
-    }
-
-    /* ─── ABOUT ──────────────────────────────────────────── */
-    #about {
-      padding: 9rem 3rem;
-      background: var(--black);
-    }
-
-    .about-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 6rem;
-      align-items: start;
-    }
-
-    .about-left {
-      position: sticky;
-      top: 6rem;
-    }
-
-    .section-num {
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      color: var(--lime);
-      margin-bottom: 1.5rem;
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(2rem, 4vw, 3.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin-bottom: 2rem;
-    }
-
-    .about-photo-frame {
-      position: absolute;
-      inset: -12px;
-      border: 1px solid rgba(198, 255, 0, 0.35);
-      border-radius: 2px;
-    }
-
-    .about-photo-frame2 {
-      position: absolute;
-      bottom: -20px;
-      right: -20px;
-      width: 60%;
-      height: 60%;
-      border: 1px solid rgba(198, 255, 0, 0.15);
-      border-radius: 2px;
-    }
-
-    .about-photo-wrap img {
-      width: 100%;
-      height: auto;
-      border-radius: 2px;
-      filter: grayscale(20%) contrast(1.05);
-      transform: translateY(15px);
-    }
-
-    .about-photo-wrap {
-      position: relative;
-      margin-top: 2.5rem;
-      will-change: transform;
-    }
-
-    /* Lime corner accent */
-    .about-photo-corner {
-      position: absolute;
-      top: -4px;
-      left: -4px;
-      width: 30px;
-      height: 30px;
-      border-top: 3px solid var(--lime);
-      border-left: 3px solid var(--lime);
-      box-shadow: 0 0 12px rgba(198, 255, 0, 0.4);
-    }
-
-    .about-photo-corner2 {
-      position: absolute;
-      bottom: -4px;
-      right: -4px;
-      width: 30px;
-      height: 30px;
-      border-bottom: 3px solid var(--lime);
-      border-right: 3px solid var(--lime);
-      box-shadow: 0 0 12px rgba(198, 255, 0, 0.4);
-    }
-
-    .about-right {
-      padding-top: 4rem;
-    }
-
-    .about-body p {
-      color: rgba(242, 242, 242, 0.6);
-      font-size: 1.05rem;
-      margin-bottom: 1.4rem;
-      line-height: 1.75;
-    }
-
-    .about-body p strong {
-      color: var(--white);
-      font-weight: 500;
-    }
-
-    .about-highlights {
-      margin-top: 3rem;
-      display: grid;
-      /* minmax(0,1fr): palavra longa não alarga uma coluna às custas da outra */
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--border2);
-      border: 1px solid var(--border2);
-    }
-
-    .ab-item {
-      background: var(--black);
-      padding: 1.5rem;
-      border: 1px solid transparent;
-      transition: background 0.3s, border-color 0.3s;
-    }
-
-    .ab-item:hover {
-      background: var(--lime-dim);
-      border-color: var(--border);
-    }
-
-    .ab-icon {
-      font-size: 1.3rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .ab-title {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.82rem;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.4rem;
-      color: var(--white);
-    }
-
-    .ab-desc {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* ─── EXPERIENCE ─────────────────────────────────────── */
-    #experience {
-      padding: 9rem 3rem;
-      background: var(--deep);
-    }
-
-    .exp-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    .exp-header {
-      margin-bottom: 4rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .exp-list {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .exp-item {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 3rem;
-      padding: 2.5rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      position: relative;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-    }
-
-    .exp-item.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Lime left stripe on hover */
-    .exp-item::before {
-      content: '';
-      position: absolute;
-      left: -3rem;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: transparent;
-      transition: background 0.4s, box-shadow 0.4s;
-    }
-
-    .exp-item:hover::before {
-      background: var(--lime);
-      box-shadow: 0 0 12px rgba(198, 255, 0, 0.5);
-    }
-
-    .exp-date {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--lime);
-      margin-bottom: 0.5rem;
-    }
-
-    .exp-company {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .exp-role {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      letter-spacing: -0.03em;
-      margin-bottom: 0.8rem;
-      color: var(--white);
-    }
-
-    .exp-desc {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-      max-width: 600px;
-    }
-
-    .exp-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .exp-tag {
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--lime);
-      border: 1px solid rgba(198, 255, 0, 0.25);
-      padding: 0.25rem 0.7rem;
-      border-radius: 1px;
-      background: var(--lime-dim);
-    }
-
-    /* ─── SKILLS ─────────────────────────────────────────── */
-    #skills {
-      padding: 9rem 3rem;
-      background: var(--black);
-    }
-
-    .skills-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    .skills-header {
-      margin-bottom: 4rem;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1px;
-      background: var(--border2);
-      border: 1px solid var(--border2);
-    }
-
-    .skill-cell {
-      background: var(--black);
-      padding: 2rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s;
-    }
-
-    .skill-cell::before {
-      content: attr(data-num);
-      position: absolute;
-      bottom: -0.2em;
-      right: 0.1em;
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 6rem;
-      color: rgba(198, 255, 0, 0.04);
-      line-height: 1;
-      pointer-events: none;
-      transition: color 0.3s, font-size 0.3s;
-    }
-
-    .skill-cell:hover {
-      background: var(--lime-dim);
-    }
-
-    .skill-cell:hover::before {
-      color: rgba(198, 255, 0, 0.12);
-      font-size: 7rem;
-    }
-
-    /* Lime top border on hover */
-    .skill-cell::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--lime);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s var(--ease);
-      box-shadow: 0 0 8px rgba(198, 255, 0, 0.5);
-    }
-
-    .skill-cell:hover::after {
-      transform: scaleX(1);
-    }
-
-    .skill-name {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.78rem;
-      letter-spacing: -0.01em;
-      color: var(--white);
-      position: relative;
-      z-index: 1;
-    }
-
-    .skill-sub {
-      font-size: 0.75rem;
-      color: var(--lime);
-      margin-top: 0.3rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ─── BRANDS MARQUEE ─────────────────────────────────── */
-    #brands {
-      padding: 7rem 0;
-      background: var(--deep);
-      overflow: hidden;
-    }
-
-    .brands-label {
-      text-align: center;
-      font-size: 0.75rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 3.5rem;
-    }
-
-    .marquee-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .marquee-row {
-      display: flex;
-      overflow: hidden;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    }
-
-    .marquee-track {
-      display: flex;
-      gap: 1.5rem;
-      animation: marquee 28s linear infinite;
-      will-change: transform;
-    }
-
-    .marquee-track2 {
-      animation: marquee2 22s linear infinite;
-    }
-
-    .marquee-track3 {
-      animation: marquee 34s linear infinite;
-    }
-
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
-    @keyframes marquee2 {
-      from {
-        transform: translateX(-50%);
-      }
-
-      to {
-        transform: translateX(0);
-      }
-    }
-
-    .brand-chip {
-      display: inline-flex;
-      flex-direction: column;
-      white-space: nowrap;
-      padding: 0.85rem 1.75rem;
-      border: 1px solid var(--border2);
-      border-radius: 1px;
-      background: rgba(255, 255, 255, 0.02);
-      flex-shrink: 0;
-      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
-    }
-
-    .brand-chip:hover {
-      background: var(--lime-dim);
-      border-color: var(--border);
-      box-shadow: 0 0 20px rgba(198, 255, 0, 0.08);
-    }
-
-    .brand-chip-name {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 0.82rem;
-      letter-spacing: -0.01em;
-      color: var(--white);
-    }
-
-    .brand-chip-sub {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.15rem;
-    }
-
-    /* ─── AWARDS ─────────────────────────────────────────── */
-    #awards {
-      padding: 9rem 3rem;
-      background: var(--black);
-    }
-
-    .awards-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    .awards-header {
-      margin-bottom: 4rem;
-    }
-
-    .awards-photo {
-      position: relative;
-      overflow: hidden;
-      border-radius: 2px;
-      margin-bottom: 4rem;
-      aspect-ratio: 21/9;
-    }
-
-    .awards-photo video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 40%;
-      display: block;
-      filter: brightness(0.82);
-    }
-
-    .awards-photo::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 50%, rgba(5, 5, 5, 0.55) 100%);
-      pointer-events: none;
-    }
-
-    .awards-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .award-card {
-      padding: 2.5rem;
-      border: 1px solid var(--border2);
-      border-radius: 2px;
-      position: relative;
-      overflow: hidden;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), border-color 0.4s, box-shadow 0.4s;
-    }
-
-    .award-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .award-card:hover {
-      border-color: var(--border);
-      box-shadow: 0 0 40px rgba(198, 255, 0, 0.06);
-    }
-
-    .award-card::before {
-      content: '★';
-      position: absolute;
-      top: -0.2em;
-      right: 0.1em;
-      font-size: 10rem;
-      color: rgba(198, 255, 0, 0.03);
-      line-height: 1;
-      pointer-events: none;
-      transition: color 0.4s;
-    }
-
-    .award-card:hover::before {
-      color: rgba(198, 255, 0, 0.07);
-    }
-
-    .award-year {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--lime);
-      margin-bottom: 0.5rem;
-    }
-
-    .award-event {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .award-title {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: -0.03em;
-      color: var(--white);
-      margin-bottom: 1.5rem;
-    }
-
-    .award-prizes {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .award-prize {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .prize-medal {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      border: 1.5px solid var(--muted);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    /* Lime-tinted gold medals */
-    .prize-medal.gold {
-      background: linear-gradient(135deg, var(--lime), var(--lime2));
-      border-color: transparent;
-      color: var(--black);
-      box-shadow: 0 0 10px rgba(198, 255, 0, 0.4);
-    }
-
-    .prize-medal.silver {
-      background: linear-gradient(135deg, #9E9E9E, #BDBDBD);
-      border-color: transparent;
-      color: var(--black);
-    }
-
-    .prize-medal.bronze {
-      background: linear-gradient(135deg, #A0785A, #C49A7A);
-      border-color: transparent;
-      color: var(--black);
-    }
-
-    .award-prize.is-gold {
-      color: var(--white);
-    }
-
-    /* ─── CONTACT ────────────────────────────────────────── */
-    #contact {
-      padding: 10rem 3rem;
-      background: var(--deep);
-      text-align: center;
-    }
-
-    .contact-inner {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .contact-headline {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(2.5rem, 6vw, 6rem);
-      letter-spacing: -0.05em;
-      line-height: 1;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Lime outline for the second word */
-    .contact-headline .outline {
-      color: transparent;
-      -webkit-text-stroke: 2px var(--lime);
-      filter: drop-shadow(0 0 20px rgba(198, 255, 0, 0.25));
-    }
-
-    .contact-sub {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1.2rem;
-      color: var(--muted);
-      margin-bottom: 4rem;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      text-align: left;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .form-field label {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .form-field input,
-    .form-field textarea {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 0.75rem 0;
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-color: var(--lime);
-      box-shadow: 0 2px 0 rgba(198, 255, 0, 0.2);
-    }
-
-    .form-field textarea {
-      resize: none;
-      height: 100px;
-    }
-
-    .btn-submit {
-      align-self: center;
-      margin-top: 1.5rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--black);
-      background: var(--lime);
-      padding: 1rem 2.5rem;
-      border: none;
-      border-radius: 1px;
-      cursor: none;
-      position: relative;
-      overflow: hidden;
-      transition: box-shadow 0.3s;
-      box-shadow: 0 0 0 rgba(198, 255, 0, 0);
-    }
-
-    .btn-submit::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--lime2);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s var(--ease);
-    }
-
-    .btn-submit:hover {
-      box-shadow: 0 0 30px rgba(198, 255, 0, 0.4);
-    }
-
-    .btn-submit:hover::before {
-      transform: scaleX(1);
-    }
-
-    .btn-submit span {
-      position: relative;
-      z-index: 1;
-    }
-
-    .form-status {
-      margin-top: 1.25rem;
-      font-size: 0.85rem;
-      letter-spacing: 0.02em;
-      min-height: 1.2em;
-      opacity: 0;
-      transition: opacity 0.3s var(--ease);
-    }
-    .form-status.show { opacity: 1; }
-    .form-status.ok { color: var(--lime); }
-    .form-status.err { color: #ff6b6b; }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 4rem;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      transition: color 0.3s;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 2px;
-    }
-
-    .contact-link:hover {
-      color: var(--lime);
-      border-color: var(--lime);
-    }
-
-    /* ─── FOOTER ─────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid var(--border2);
-      padding: 2.5rem 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .footer-logo {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 1rem;
-      letter-spacing: -0.04em;
-      color: var(--lime);
-      filter: drop-shadow(0 0 8px rgba(198, 255, 0, 0.4));
-    }
-
-    .footer-copy {
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-
-    /* ─── CASES ──────────────────────────────────────────── */
-    #cases {
-      padding: 9rem 3rem;
-      background: var(--deep);
-    }
-
-    .cases-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    .cases-header {
-      margin-bottom: 4rem;
-    }
-
-    .cases-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .case-grid-card {
-      background: var(--panel);
-      border: 1px solid var(--border2);
-      border-radius: 4px;
-      padding: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      color: inherit;
-      text-decoration: none;
-      opacity: 0;
-      transform: translateY(24px);
-      position: relative;
-      overflow: hidden;
-      transition: opacity 0.7s var(--ease), transform 0.6s var(--ease), border-color 0.3s;
-      scroll-margin-top: 90px;
-    }
-
-    .case-grid-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .case-grid-card:hover {
-      border-color: rgba(198, 255, 0, 0.35);
-    }
-
-    /* Linha lime deslizante no topo — igual ao skill-cell */
-    .case-grid-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--lime);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s var(--ease);
-      box-shadow: 0 0 8px rgba(198, 255, 0, 0.5);
-    }
-
-    .case-grid-card:hover::after {
-      transform: scaleX(1);
-    }
-
-    .cgc-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .cgc-year {
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--lime);
-    }
-
-    .cgc-agency {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .cgc-client {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      letter-spacing: -0.04em;
-      line-height: 1;
-      color: var(--white);
-    }
-
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .case-tag {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.28rem 0.65rem;
-      border: 1px solid var(--border);
-      border-radius: 1px;
-      color: var(--lime);
-      white-space: nowrap;
-    }
-
-    .cgc-desc {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.65;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .cgc-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      padding: 1.2rem 0;
-      border-top: 1px solid var(--border2);
-      border-bottom: 1px solid var(--border2);
-    }
-
-    .cgc-stat-value {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(1.2rem, 2vw, 1.7rem);
-      letter-spacing: -0.04em;
-      color: var(--lime);
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-
-    .cgc-stat-label {
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      line-height: 1.3;
-    }
-
-    .cgc-awards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .cgc-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-top: auto;
-      align-self: flex-start;
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--lime);
-      border-bottom: 1px solid rgba(198, 255, 0, 0.3);
-      padding-bottom: 0.1rem;
-      transition: color 0.3s, border-color 0.3s;
-    }
-
-    .case-grid-card:hover .cgc-cta {
-      color: var(--lime2);
-      border-color: var(--lime2);
-    }
-
-    .case-award-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      padding: 0.45rem 0.9rem;
-      background: rgba(198, 255, 0, 0.05);
-      border: 1px solid var(--border);
-      border-radius: 1px;
-      color: var(--white);
-    }
-
-    .case-award-badge .medal {
-      font-size: 0.75rem;
-      font-weight: 900;
-      font-family: var(--font-display);
-      color: var(--lime);
-    }
-
-    @media (max-width: 768px) {
-      .cases-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cgc-client {
-        font-size: clamp(1.5rem, 5vw, 2rem);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .case-grid-card {
-        padding: 1.75rem 1.5rem;
-      }
-    }
-
-    /* ─── LAB THUMBS ─────────────────────────────────────── */
-    .lab-thumb {
-      position: relative;
-      margin: -2.5rem -2.5rem 0;
-      aspect-ratio: 16 / 7;
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-      border-bottom: 1px solid var(--border2);
-      background:
-        radial-gradient(120% 130% at 78% 12%, rgba(198, 255, 0, 0.12), transparent 55%),
-        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0) 0 0 / 20px 20px,
-        linear-gradient(135deg, #101010, #060606);
-    }
-
-    .lab-thumb::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 3;
-      background:
-        radial-gradient(130% 140% at 82% 8%, rgba(198, 255, 0, 0.05), transparent 52%),
-        linear-gradient(to bottom, transparent 55%, var(--panel) 100%);
-      pointer-events: none;
-    }
-
-    .lab-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      /* harmonização leve entre as telas claras e dark (sem escurecer) */
-      filter: grayscale(0.18) contrast(1.03) saturate(0.92);
-      transition: transform 0.5s var(--ease);
-    }
-
-    .case-grid-card:hover .lab-thumb img {
-      transform: scale(1.03);
-    }
-
-    /* camada multiply suave: só dá uma leve liga entre as telas, sem escurecer */
-    .lab-thumb::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background: #4c4c52;
-      mix-blend-mode: multiply;
-      pointer-events: none;
-    }
-
-    .lab-thumb-icon {
-      width: 58px;
-      height: 58px;
-      stroke: var(--lime);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      opacity: 0.72;
-      filter: drop-shadow(0 0 14px rgba(198, 255, 0, 0.4));
-    }
-
-    .case-grid-card:hover .lab-thumb-icon {
-      opacity: 1;
-    }
-
-    /* ─── GENERIC REVEAL ─────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── FUNDO TOPOGRÁFICO POLIGONAL ────────────────────── */
-    .topo-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .topo-svg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    [data-topo] { position: relative; overflow: hidden; }
-    [data-topo] > :not(.topo-bg) { position: relative; z-index: 1; }
-
-    /* ─── VITRINE WEBGL estilo apechain (Laboratório) ────── */
-    .cases-grid.cf-gl {
-      display: block;
-      position: relative;
-      margin-top: 2.5rem;
-    }
-
-    .cf-gl-stage {
-      position: relative;
-      width: 100%;
-      height: 680px;
-      cursor: grab;
-    }
-
-    .cf-gl-stage.grabbing { cursor: grabbing; }
-    .cf-gl-stage canvas { display: block; width: 100%; height: 100%; }
-
-    /* overlay de texto à esquerda (como o apechain) */
-    .cf-gl-info {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(calc(-50% - 200px));
-      width: 40%;
-      max-width: 470px;
-      z-index: 6;
-      text-align: left;
-      pointer-events: none;
-    }
-    .cf-gl-info > * { pointer-events: auto; }
-    .cf-gl-info .cgc-client { font-size: clamp(1.5rem, 3vw, 2.6rem); line-height: 1.05; margin: 0.6rem 0 1rem;
-      color: transparent; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #fff; }
-    .cf-gl-info .case-tags { margin-bottom: 1.2rem; }
-    .cf-gl-info .cgc-desc { -webkit-line-clamp: unset; line-clamp: unset; display: block; }
-    .cf-gl-info .cgc-cta { margin-top: 1.4rem; }
-
-    .cf-gl-nav {
-      position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%);
-      display: flex; flex-direction: column; gap: 12px; z-index: 6;
-    }
-    .cf-gl-nav button {
-      width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
-      background: rgba(5, 5, 5, 0.82); border: 1px solid rgba(198, 255, 0, 0.45); color: var(--lime);
-      font-family: var(--font-display); font-size: 1.1rem; line-height: 1; cursor: pointer;
-      backdrop-filter: blur(6px);
-      transition: background 0.3s, border-color 0.3s, transform 0.2s;
-    }
-    .cf-gl-nav button:hover { background: var(--lime); color: var(--black); transform: scale(1.08); }
-
-    .cf-gl-thumbs { position: absolute; bottom: calc(1rem + 100px); right: 1.2rem; display: flex; gap: 8px; z-index: 6; }
-    .cf-gl-thumb {
-      width: 50px; height: 28px; border-radius: 3px; overflow: hidden; padding: 0;
-      opacity: 0.4; cursor: pointer; border: 1px solid transparent; transition: opacity 0.3s, border-color 0.3s;
-    }
-    .cf-gl-thumb.on { opacity: 1; border-color: var(--lime); }
-    .cf-gl-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-    /* ─── RESPONSIVE ─────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .about-inner {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      .about-left {
-        position: static;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 1.2rem 1.5rem;
-      }
-
-      nav.scrolled {
-        padding: 0.9rem 1.5rem;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .nav-cta {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      #hero-pin {
-        height: auto;
-      }
-
-      #hero {
-        position: relative;
-        height: auto;
-        min-height: 100vh;
-        min-height: 100svh;
-        padding: 0 1.5rem calc(3rem + env(safe-area-inset-bottom));
-      }
-
-      .hero-name {
-        font-size: clamp(3rem, 15vw, 6rem);
-      }
-
-      .hero-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-stats {
-        gap: 1.5rem;
-      }
-
-      .hero-stat {
-        text-align: left;
-      }
-
-      .hero-name-line:nth-child(2) {
-        -webkit-text-stroke-width: 1.5px;
-      }
-
-      #manifesto {
-        padding: 6rem 1.5rem;
-      }
-
-      #manifesto::before {
-        display: none;
-      }
-
-      #about,
-      #experience,
-      #skills,
-      #cases,
-      #awards,
-      #contact {
-        padding: 6rem 1.5rem;
-      }
-
-      /* estas duas têm padding inline de desktop */
-      #oferta,
-      #lab {
-        padding: 6rem 1.5rem !important;
-      }
-
-      /* uma coluna: 4 blocos de texto não cabem lado a lado em 390px */
-      .about-highlights {
-        grid-template-columns: 1fr;
-      }
-
-      .ab-item {
-        padding: 1.5rem 1.25rem;
-      }
-
-      .ab-title {
-        font-size: 1.05rem;
-      }
-
-      .ab-desc {
-        font-size: 1rem;
-      }
-
-      .exp-item {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-      }
-
-      .exp-item::before {
-        left: -1.5rem;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .awards-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-      }
-
-      #cursor-dot,
-      #cursor-ring {
-        display: none;
-      }
-
-      body {
-        cursor: auto;
-      }
-
-      a {
-        cursor: auto;
-      }
-    }
-  
-    /* ─── Mobile: áreas seguras, toque, transições (mobile-playbook) ─── */
-    @media (max-width: 768px) {
-      nav { padding-top: max(1.2rem, env(safe-area-inset-top)); padding-left: max(1.5rem, env(safe-area-inset-left)); padding-right: max(1.5rem, env(safe-area-inset-right)); }
-      nav.scrolled { padding-top: max(0.9rem, env(safe-area-inset-top)); }
-    }
-    .contact-link { min-height: 44px; }
-    @view-transition { navigation: auto; }
-    html.no-preloader #preloader { display: none; }
-    /* ─── Mobile rodada 2: zona do polegar, hero, reduced-motion ─── */
-    .thumb-cta { display: none; }
-    @media (max-width: 768px) {
-      .hero-scroll { display: none; }
-      .hero-location { letter-spacing: 0.14em; }
-      .thumb-cta {
-        display: inline-flex; align-items: center; gap: 0.7rem;
-        position: fixed; left: 50%; z-index: 900;
-        bottom: calc(1rem + env(safe-area-inset-bottom));
-        min-height: 48px; padding: 0 1.6rem;
-        font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
-        color: var(--black); background: var(--lime); border-radius: 1px;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), 0 0 24px rgba(198, 255, 0, 0.22);
-        opacity: 0; pointer-events: none; transform: translate(-50%, 140%);
-        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
-      }
-      .thumb-cta.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
-      .thumb-cta.show.reading { opacity: 0; pointer-events: none; transform: translate(-50%, 140%); }
-      .thumb-cta:active { transform: translate(-50%, 0) scale(0.97); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .marquee-track, .marquee-track2, .marquee-track3 { animation: none !important; flex-wrap: wrap; justify-content: center; gap: 0.75rem; transform: none !important; }
-      .marquee-row { overflow: visible; -webkit-mask-image: none; mask-image: none; margin-bottom: 0.75rem; }
-      .brand-chip.dup { display: none; }
-      .brand-chip { white-space: normal; flex-shrink: 1; }
-      .thumb-cta { transition: opacity 0.2s; }
-    }
-  </style>
-  <noscript><style>.contact-form { display: none !important; } .exp-item, .award-card { opacity: 1 !important; transform: none !important; } .reveal, .line-mask, .hero-location, .hero-name, .hero-content * { opacity: 1 !important; transform: none !important; } .line-mask { display: none !important; } #preloader { display: none !important; }</style></noscript>
+  <link rel="preload" as="image" href="/img/v3/retrato.webp" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/unbounded-900.woff2" crossorigin>
+  <link rel="stylesheet" href="site.css">
 </head>
 
 <body>
+  <a class="skip" href="#about">Pular para o conteúdo</a>
 
-  <div id="progress"></div>
-
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-
-  <!-- Smooth scroll (Lenis) — desligado sob prefers-reduced-motion; fallback = scroll nativo -->
-  <script type="module">
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      try {
-        const { default: Lenis } = await import('https://esm.sh/lenis');
-        const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-        requestAnimationFrame(raf);
-        window.lenis = lenis;
-      } catch (err) { /* sem rede / falha de import: mantém scroll nativo */ }
-    }
-  </script>
-
-  <!-- ── Preloader ── -->
-  <div id="preloader">
-    <div class="preloader-monogram">
-      ZN
-      <div class="preloader-line"></div>
+  <!-- ───────── Abertura ───────── -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-row">
+      <span class="loader-label mono">desde</span>
+      <span class="loader-year" id="loader-year">1998</span>
     </div>
+    <div class="loader-line"><i id="loader-bar"></i></div>
   </div>
 
-  <!-- ── Navbar ── -->
-  <nav id="navbar">
-    <div class="nav-logo">ZN.</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#experience">Trajetória</a></li>
-      <li><a href="#skills">Competências</a></li>
-      <li><a href="#oferta">Como trabalho</a></li>
-      <li><a href="#cases">Cases</a></li>
-      <li><a href="#lab">Laboratório</a></li>
-      <li><a href="#awards">Prêmios</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Fale comigo</a>
-    <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></div>
-  </nav>
-  <a href="#contact" class="thumb-cta" id="thumb-cta" inert aria-hidden="true">Fale comigo <span aria-hidden="true">→</span></a>
+  <!-- ───────── Cursor ───────── -->
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor-dot"></i><i class="cursor-ring"><b id="cursor-label"></b></i></div>
 
-  <!-- ── Mobile Menu ── -->
-  <div id="mobileMenu" data-lenis-prevent style="
-    display:none; position:fixed; inset:0; background:rgba(5,5,5,0.97);
-    z-index:999; flex-direction:column; align-items:center; justify-content:safe center; overflow-y:auto; overscroll-behavior:contain; padding:calc(5rem + env(safe-area-inset-top)) 1.5rem calc(2rem + env(safe-area-inset-bottom));
-    gap:2.5rem; backdrop-filter:blur(20px);
-  ">
-    <a href="#about" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Sobre</a>
-    <a href="#experience" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Trajetória</a>
-    <a href="#skills" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Competências</a>
-    <a href="#oferta" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Como trabalho</a>
-    <a href="#cases" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Cases</a>
-    <a href="#lab" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Laboratório</a>
-    <a href="#awards" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;">Prêmios</a>
-    <a href="#contact" onclick="closeMobile()"
-      style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;letter-spacing:-0.03em;color:var(--lime);">Contato</a>
+  <!-- ───────── Fio de progresso ───────── -->
+  <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+
+  <!-- ───────── Navegação ───────── -->
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#top" aria-label="Thiago Zeni, início">ZN<span>.</span></a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#about">Sobre</a>
+      <a href="#linha">Linha</a>
+      <a href="#oferta">Como trabalho</a>
+      <a href="#cases">Cases</a>
+      <a href="#lab">Laboratório</a>
+      <a href="#awards">Prêmios</a>
+    </nav>
+    <a class="nav-cta" href="#contact" data-magnet>Fale comigo</a>
+    <button class="nav-burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true" data-lenis-prevent>
+    <nav aria-label="Menu">
+      <a href="#about"><small class="mono">01</small>Sobre</a>
+      <a href="#linha"><small class="mono">02</small>Linha da inovação</a>
+      <a href="#oferta"><small class="mono">03</small>Como trabalho</a>
+      <a href="#cases"><small class="mono">04</small>Cases</a>
+      <a href="#lab"><small class="mono">05</small>Laboratório</a>
+      <a href="#awards"><small class="mono">06</small>Prêmios</a>
+      <a href="#contact"><small class="mono">07</small>Contato</a>
+    </nav>
+    <p class="menu-foot mono">Porto Alegre · Florianópolis · São Paulo</p>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════
-       HERO  (pin wrapper = 300vh — hero sticky até vídeo terminar)
-  ══════════════════════════════════════════════════════════ -->
-  <div id="hero-pin">
-    <section id="hero">
-      <div class="hero-bg-photo">
-        <video id="hero-video" muted playsinline preload="auto" poster="/img/hero-poster.jpg"><source src="/videos/perfil-360-m.mp4" media="(max-width: 767px)"><source src="/videos/perfil-360.mp4"></video>
-      </div>
+  <main id="top">
 
-      <div class="hero-scroll">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
+    <!-- ───────── Hero ───────── -->
+    <section class="hero" id="hero">
+      <canvas class="hero-gl" id="gl" aria-hidden="true"></canvas>
+      <img class="hero-still" src="/img/v3/retrato.webp" alt="Retrato de Thiago Zeni" width="900" height="738">
 
-      <div class="hero-content">
-        <div class="hero-location">Porto Alegre &middot; Florianópolis &middot; São Paulo</div>
-        <h1 class="hero-name">
-          <span class="hero-name-line">THIAGO</span>
-          <span class="hero-name-line">ZENI</span>
+      <div class="hero-ui" id="hero-ui">
+        <p class="hero-kicker mono"><span>Inovação</span><span>Estratégia de negócio</span><span>Inteligência artificial</span></p>
+        <h1 class="hero-name" aria-label="Thiago Zeni">
+          <span class="hero-line"><span class="hero-word" id="hw1">THIAGO</span></span>
+          <span class="hero-line"><span class="hero-word hero-word--stroke" id="hw2">ZENI</span></span>
         </h1>
-        <div class="hero-bottom">
-          <p class="hero-tagline">
-            Inovação &middot; Estratégia de Negócio &middot; Inteligência Artificial<br>
-            <em>Há quase 30 anos inovando através do marketing e da tecnologia.</em>
-          </p>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <span class="hero-stat-num" data-target="28">28+</span>
-              <span class="hero-stat-label">Anos inovando</span>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-num" data-target="40">40+</span>
-              <span class="hero-stat-label">Marcas atendidas</span>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-num" data-target="10">10+</span>
-              <span class="hero-stat-label">Prêmios &amp; distinções</span>
+        <div class="hero-foot">
+          <p class="hero-tag">Há 28 anos trazendo o próximo passo <br>antes de ele virar tendência.</p>
+          <span class="hero-scroll mono" aria-hidden="true">role e siga o fio<i></i></span>
+        </div>
+      </div>
+
+      <div class="manifesto" id="manifesto">
+        <p class="manifesto-kicker mono">Manifesto</p>
+        <p class="manifesto-text" id="manifesto-text">O fio que costura tudo nunca foi o marketing. <em>Foi a inovação.</em></p>
+      </div>
+    </section>
+
+    <!-- ───────── Sobre ───────── -->
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-photo" data-reveal="photo">
+          <img src="/img/perfil_thiago_zeni.webp" alt="Thiago Zeni" width="1400" height="1148" decoding="async">
+          <span class="about-photo-tag mono">Thiago Zeni · 41</span>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow mono"><b>01</b>Sobre</p>
+          <h2 class="about-lead" data-split>41 anos de idade. 28 deles construindo a web.</h2>
+          <p data-reveal>Comecei como webmaster quando a internet ainda engatinhava no Brasil e passei por todas as cadeiras que formam um profissional completo: desenvolvimento, direção de arte, planejamento, gestão de contas, novos negócios e consultoria estratégica. Fui sócio de agência digital por mais de dez anos e dirigi marketing e tecnologia ao mesmo tempo.</p>
+          <p data-reveal>Nesse caminho, construí estratégias para algumas das maiores marcas do Brasil e da América Latina, da STIHL ao Grupo Harman, da Mormaii à Unicasa. Mas a constante nunca foi o marketing. Foi chegar antes:</p>
+          <ul class="waves" id="waves" aria-label="Ondas de inovação">
+            <li>motion</li><li>advergames</li><li>social media</li><li>realidade aumentada</li><li>realidade virtual</li><li>pesquisa netnográfica</li><li>e-commerce omnichannel</li><li>mídia de performance</li><li>produções web-native</li><li>EAD</li><li>BI</li><li class="is-now">inteligência artificial</li>
+          </ul>
+          <p data-reveal>Hoje me dedico à consultoria em Inovação e Inteligência Artificial, a mais transformadora dessas ondas. Falo inglês fluente, espanhol em bom nível e estou aprendendo italiano.</p>
+        </div>
+      </div>
+
+      <div class="figures" aria-label="Números">
+        <p class="figures-row" id="figures"><span><b data-count="28">28</b> anos de web</span><i></i><span><b data-count="40" data-suffix="+">40+</b> marcas atendidas</span><i></i><span><b data-count="10" data-suffix="+">10+</b> prêmios e distinções</span></p>
+      </div>
+
+      <div class="wrap layers">
+        <div class="layers-head">
+          <p class="eyebrow mono"><b>02</b>Competências</p>
+          <h2 class="h2" data-split>Camadas que se acumulam</h2>
+          <p class="layers-note" data-reveal>Nenhuma cadeira substituiu a anterior. Cada uma ficou embaixo, sustentando a próxima.</p>
+        </div>
+        <ol class="layers-list" id="layers">
+          <li><span>Webmaster</span><small class="mono">desde o início</small></li>
+          <li><span>Desenvolvedor web</span><small class="mono">front e back-end</small></li>
+          <li><span>Diretor de arte</span><small class="mono">criação e design</small></li>
+          <li><span>Planner</span><small class="mono">estratégia</small></li>
+          <li><span>Key account</span><small class="mono">relacionamento</small></li>
+          <li><span>Diretor de novos negócios</span><small class="mono">business development</small></li>
+          <li><span>Estratégia de comunicação</span><small class="mono">consultoria</small></li>
+          <li><span>E-commerce</span><small class="mono">consultoria especializada</small></li>
+          <li><span>CMO / CTO</span><small class="mono">liderança executiva</small></li>
+          <li class="is-now"><span>Consultor de IA</span><small class="mono">inovação e transformação</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────── Linha da inovação ───────── -->
+    <section class="linha" id="linha" aria-label="A linha da inovação">
+      <div class="linha-track" id="linha-track">
+        <div class="linha-thread" aria-hidden="true"><i id="linha-thread"></i></div>
+
+        <div class="linha-intro">
+          <p class="eyebrow mono"><b>03</b>Trajetória</p>
+          <h2 class="h1">A linha da<br><span class="stroke">inovação</span></h2>
+          <p>Quase três décadas no digital brasileiro. Em cada capítulo, a mesma busca: trazer o próximo passo antes de ele virar padrão.</p>
+          <span class="linha-hint mono" aria-hidden="true">siga o fio <i></i></span>
+        </div>
+
+        <article class="stop">
+          <figure class="stop-img" data-video="/videos/v3/onda-web.mp4"><img src="/img/v3/onda-web.webp" alt="Monitor CRT dos anos 90 atravessado por um feixe de luz verde-limão" width="1100" height="1375" loading="lazy"></figure>
+          <div class="stop-copy">
+            <div class="stop-top"><span class="stop-n mono">01 / 07</span><span class="stop-year">1998</span></div>
+            <div class="stop-bottom">
+              <h3>A web, do zero</h3>
+              <p>Webmaster quando a internet brasileira ainda engatinhava. Código, layout e servidor na mesma mão: a base técnica de tudo o que veio depois.</p>
+              <ul class="tags mono"><li>Desenvolvimento web</li><li>Direção de arte</li></ul>
             </div>
           </div>
+        </article>
+
+        <article class="stop">
+          <figure class="stop-img" data-video="/videos/v3/onda-agencia.mp4"><img src="/img/v3/onda-agencia.webp" alt="Joystick de fliperama atravessado por um feixe de luz verde-limão" width="1100" height="1375" loading="lazy"></figure>
+          <div class="stop-copy">
+            <div class="stop-top"><span class="stop-n mono">02 / 07</span><span class="stop-year">2009</span></div>
+            <div class="stop-bottom">
+              <h3>Agência antes da curva</h3>
+              <p>Na BRA Marketing Digital, de gerente de projetos a diretor de novos negócios e sócio. Motion, advergames, social media e realidade aumentada quando ainda eram aposta. Em paralelo, oito anos na ABRADi, como diretor e vice-presidente.</p>
+              <ul class="tags mono"><li>BRA Marketing Digital</li><li>ABRADi-RS e Nacional</li></ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <figure class="stop-img" data-video="/videos/v3/onda-omni.mp4"><img src="/img/v3/onda-omni.webp" alt="Sacola de compras e smartphone atravessados por um feixe de luz verde-limão" width="1100" height="1375" loading="lazy"></figure>
+          <div class="stop-copy">
+            <div class="stop-top"><span class="stop-n mono">03 / 07</span><span class="stop-year">2017</span></div>
+            <div class="stop-bottom">
+              <h3>Omnichannel de verdade</h3>
+              <p>Para a Mormaii, o e-commerce virou o maior aliado do franqueado: ship-from-store e ERP integrado em tempo real, quando o varejo ainda operava com estoques isolados.</p>
+              <ul class="tags mono"><li>Mormaii</li><li>~35% do faturamento via digital</li></ul>
+              <a class="link" href="cases/mormaii-omnichannel.html">Ver o case</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <figure class="stop-img" data-video="/videos/v3/onda-conteudo.mp4"><img src="/img/v3/onda-conteudo.webp" alt="Claquete de cinema ao lado de uma muda brotando, atravessadas por um feixe de luz verde-limão" width="1100" height="1375" loading="lazy"></figure>
+          <div class="stop-copy">
+            <div class="stop-top"><span class="stop-n mono">04 / 07</span><span class="stop-year">2018</span></div>
+            <div class="stop-bottom">
+              <h3>Conteúdo como produto</h3>
+              <p>STIHL 50 Dias de Verde: uma websérie que transformou um quintal em jardim em 50 dias corridos. 42 episódios, 8 lives e distribuição transmídia, do YouTube à TV por assinatura.</p>
+              <ul class="tags mono"><li>+6M de visualizações</li><li>Ouro no Top de Marketing</li></ul>
+              <a class="link" href="cases/stihl-50-dias.html">Ver o case</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <figure class="stop-img" data-video="/videos/v3/onda-vr.mp4"><img src="/img/v3/onda-vr.webp" alt="Óculos de realidade virtual flutuando, atravessados por um feixe de luz verde-limão" width="1100" height="1375" loading="lazy"></figure>
+          <div class="stop-copy">
+            <div class="stop-top"><span class="stop-n mono">05 / 07</span><span class="stop-year">2020</span></div>
+            <div class="stop-bottom">
+              <h3>Imersão e ensino</h3>
+              <p>A primeira experiência de realidade virtual da STIHL no Brasil levou a colheita de café para dentro do estande. No mesmo ciclo nasceu o Pró-Jardim, a primeira plataforma de capacitação online e gratuita do setor.</p>
+              <ul class="tags mono"><li>VR 360°</li><li>EAD</li><li>3× Ouro ADVB-RS</li></ul>
+              <a class="link" href="cases/stihl-vr-cafezais.html">Ver o case</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <figure class="stop-img" data-video="/videos/v3/onda-live.mp4"><img src="/img/v3/onda-live.webp" alt="Microfone de estúdio com luz de gravação acesa, atravessado por um feixe de luz verde-limão" width="1100" height="1375" loading="lazy"></figure>
+          <div class="stop-copy">
+            <div class="stop-top"><span class="stop-n mono">06 / 07</span><span class="stop-year">2021</span></div>
+            <div class="stop-bottom">
+              <h3>Ao vivo, em escala</h3>
+              <p>CMO e CTO da Brasil Media House. Como sócio idealizador do Programa 4 por 4, ajudei a construir o maior programa ao vivo independente do YouTube Brasil.</p>
+              <ul class="tags mono"><li>140 mil simultâneos</li><li>9+ plataformas</li></ul>
+              <a class="link" href="cases/programa-4por4.html">Ver o case</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop stop--now">
+          <figure class="stop-img" data-video="/videos/v3/onda-ia.mp4"><img src="/img/v3/onda-ia.webp" alt="Esfera de fios de luz verde-limão entrelaçados como uma rede neural" width="1100" height="1375" loading="lazy"></figure>
+          <div class="stop-copy">
+            <div class="stop-top"><span class="stop-n mono">07 / 07</span><span class="stop-year">Hoje</span></div>
+            <div class="stop-bottom">
+              <h3>Inteligência artificial</h3>
+              <p>Consultoria para empresas de relevância em diversos setores, ao lado das áreas de inovação: onde a IA cabe, onde não cabe e como ela vira operação. E um laboratório próprio, porque não basta falar de IA.</p>
+              <ul class="tags mono"><li>Consultoria</li><li>Investidor desde 2019</li></ul>
+              <a class="link" href="#lab">Ver o laboratório</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="linha-end">
+          <p class="h2">E o fio<br>continua.</p>
+          <a class="btn" href="#cases" data-magnet>Ver os cases</a>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- ══════════════════════════════════════════════════════
-       MANIFESTO
-  ══════════════════════════════════════════════════════════ -->
-  <section id="manifesto">
-    <span class="manifesto-deco" aria-hidden="true">"</span>
-    <div class="manifesto-inner">
-      <div class="manifesto-label">Manifesto</div>
-      <p class="manifesto-text" id="manifestoText">Três décadas de inovação na comunicação, e uma vida de entusiasmo tecnológico: conectando marcas às revoluções que transformam a sociedade.
-      </p>
-    </div>
-  </section>
+    <!-- ───────── Como trabalho ───────── -->
+    <section class="oferta" id="oferta">
+      <div class="wrap oferta-grid">
+        <div class="oferta-head">
+          <p class="eyebrow mono"><b>04</b>Como trabalho</p>
+          <h2 class="h1" data-split>Inovação que vira decisão</h2>
+          <p class="oferta-lead" data-reveal>Não vendo pacotes. Sento ao lado de quem dirige o negócio e traduzo inovação e IA em decisão e operação, com a ótica de gestor, não de fornecedor.</p>
+        </div>
+        <ol class="oferta-list">
+          <li data-reveal="row">
+            <span class="oferta-n mono">01</span>
+            <div><h3>Diagnóstico de maturidade</h3><p>Onde a IA cabe no seu negócio, e onde não cabe. Uma leitura honesta de oportunidades, riscos e prontidão real.</p></div>
+          </li>
+          <li data-reveal="row">
+            <span class="oferta-n mono">02</span>
+            <div><h3>Roadmap de inovação</h3><p>Da oportunidade ao plano: prioridades, sequência e os ganhos que justificam cada passo.</p></div>
+          </li>
+          <li data-reveal="row">
+            <span class="oferta-n mono">03</span>
+            <div><h3>Implementação assistida</h3><p>Do conceito ao sistema rodando. Não paro no slide: acompanho até a inovação virar operação.</p></div>
+          </li>
+          <li data-reveal="row">
+            <span class="oferta-n mono">04</span>
+            <div><h3>Advisory de board</h3><p>Conselho contínuo a lideranças que querem decidir sobre IA com quem entende de tecnologia e de negócio.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-  <!-- ══════════════════════════════════════════════════════
-       ABOUT
-  ══════════════════════════════════════════════════════════ -->
-  <section id="about">
-    <div class="about-inner">
-      <div class="about-left reveal">
-        <div class="section-num">01 — Sobre</div>
-        <h2 class="section-title">Quem<br>sou eu</h2>
-        <div class="about-photo-wrap">
-          <div class="about-photo-frame"></div>
-          <div class="about-photo-frame2"></div>
-          <div class="about-photo-corner"></div>
-          <div class="about-photo-corner2"></div>
-          <img src="/img/perfil_thiago_zeni.jpg" alt="Thiago Zeni" width="1400" height="1148" loading="lazy" decoding="async" />
+    <!-- ───────── Cases ───────── -->
+    <section class="cases" id="cases">
+      <div class="wrap">
+        <header class="cases-head">
+          <p class="eyebrow mono"><b>05</b>Cases</p>
+          <h2 class="h1" data-split>Apostas que viraram resultado</h2>
+          <p data-reveal>Cada um nasceu de algo que ainda não era padrão. Toque em um case para abrir.</p>
+        </header>
+
+        <div class="case-list" id="case-list">
+
+          <article class="case" id="case-rba">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-rba">
+              <span class="case-year mono">2026 · em andamento</span>
+              <span class="case-name">RBA+</span>
+              <span class="case-kind mono">Consultoria de IA</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-rba"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media case-media--shot"><img src="/img/cases/rba/rba-50anos.webp" alt="Site dos 50 anos da RBA" width="1440" height="900" loading="lazy"></figure>
+              <div class="case-text">
+                <p>Programa de IA para uma agência de 50 anos do Sul: um sistema de inteligência de marca que confere e redige peças de JBL e STIHL dentro da régua de cada cliente, e trilhas práticas de IA para toda a equipe.</p>
+                <ul class="case-metrics"><li><b>2</b><span>marcas globais no sistema</span></li><li><b>50</b><span>anos de agência</span></li><li><b>5</b><span>áreas com trilha de IA</span></li></ul>
+                <a class="link" href="cases/rba-consultoria-ia.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-eat">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-eat">
+              <span class="case-year mono">2026</span>
+              <span class="case-name">EAT+KITCHEN</span>
+              <span class="case-kind mono">Presença digital com IA</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-eat"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media case-media--shot"><img src="/img/cases/eat/home-0.webp" alt="Home do site do EAT+KITCHEN" width="1440" height="900" loading="lazy"></figure>
+              <div class="case-text">
+                <p>A rede de comida saudável com cinco casas no Sul trocou um site de template por uma plataforma editorial cinematográfica que a própria equipe opera, construída com agentes de IA, do conceito ao código.</p>
+                <ul class="case-metrics"><li><b>5</b><span>casas em 3 cidades</span></li><li><b>4</b><span>idiomas no cardápio da mesa</span></li><li><b>150+</b><span>testes automatizados</span></li></ul>
+                <a class="link" href="cases/eat-kitchen.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-florense">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-florense">
+              <span class="case-year mono">2024 — 2025</span>
+              <span class="case-name">Florense</span>
+              <span class="case-kind mono">IA e inovação</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-florense"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media" data-video="/videos/v3/onda-ia.mp4"><img src="/img/v3/onda-ia.webp" alt="" width="1100" height="1375" loading="lazy"></figure>
+              <div class="case-text">
+                <p>Consultoria estratégica para uma das principais marcas brasileiras de móveis planejados premium: mapear oportunidades de IA, modernizar a estrutura de marketing e construir um roteiro de inovação fundamentado em dados.</p>
+                <ul class="case-notes"><li>Diagnóstico de presença digital cross-channel</li><li>Roteiro de adoção de IA por departamento</li><li>Reestruturação organizacional do marketing</li></ul>
+                <p class="case-nda mono">Sob acordo de confidencialidade: métricas de divulgação restrita.</p>
+                <a class="link" href="cases/florense.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-4por4">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-4por4">
+              <span class="case-year mono">2021 — 2024</span>
+              <span class="case-name">Programa 4 por 4</span>
+              <span class="case-kind mono">Ao vivo multiplataforma</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-4por4"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media" data-video="/videos/v3/onda-live.mp4"><img src="/img/v3/onda-live.webp" alt="" width="1100" height="1375" loading="lazy"></figure>
+              <div class="case-text">
+                <p>Como sócio idealizador, estrategista de marketing digital e arquiteto de tecnologia, ajudei a construir o maior programa ao vivo independente do YouTube Brasil: de zero a 500 mil inscritos em menos de dois meses.</p>
+                <ul class="case-metrics"><li><b>140K</b><span>espectadores simultâneos no pico</span></li><li><b>~1M</b><span>inscritos no YouTube</span></li><li><b>9+</b><span>plataformas simultâneas</span></li></ul>
+                <a class="link" href="cases/programa-4por4.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-jbl">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-jbl">
+              <span class="case-year mono">2021</span>
+              <span class="case-name">JBL Wind</span>
+              <span class="case-kind mono">Conteúdo multiperfilado</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-jbl"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media" data-video="/videos/v3/onda-som.mp4"><img src="/img/v3/onda-som.webp" alt="" width="1100" height="1375" loading="lazy"></figure>
+              <div class="case-text">
+                <p>Lançar um som portátil para veículos de duas rodas em um mercado saturado. A resposta foi uma arquitetura de conteúdo multiperfilada: vários vídeos nativos no YouTube, cada um criado para uma persona específica.</p>
+                <ul class="case-metrics"><li><b>4</b><span>personas segmentadas</span></li><li><b class="is-word">Esgotado</b><span>estoque no 1º ciclo de pedidos</span></li><li><b>↑</b><span>aumento de produção solicitado</span></li></ul>
+                <a class="link" href="cases/jbl-wind.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-projardim">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-projardim">
+              <span class="case-year mono">2020 — 2021</span>
+              <span class="case-name">Pró-Jardim STIHL</span>
+              <span class="case-kind mono">E-learning e branding</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-projardim"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media" data-video="/videos/v3/onda-ead.mp4"><img src="/img/v3/onda-ead.webp" alt="" width="1100" height="1375" loading="lazy"></figure>
+              <div class="case-text">
+                <p>Com o isolamento social impulsionando o interesse por jardinagem, identifiquei para a STIHL uma oportunidade além da venda de máquinas: ocupar o papel de educadora. Nasceu a primeira plataforma de capacitação 100% online e gratuita do setor.</p>
+                <ul class="case-metrics"><li><b>4</b><span>módulos de capacitação</span></li><li><b>#1</b><span>plataforma do setor, inédita no Brasil</span></li><li><b>3×</b><span>Ouro ADVB-RS 2021</span></li></ul>
+                <a class="link" href="cases/stihl-projardim.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-vr-cafezais">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-vr">
+              <span class="case-year mono">2020</span>
+              <span class="case-name">STIHL Cafezais 360°</span>
+              <span class="case-kind mono">Realidade virtual</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-vr"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media" data-video="/videos/v3/onda-vr.mp4"><img src="/img/v3/onda-vr.webp" alt="" width="1100" height="1375" loading="lazy"></figure>
+              <div class="case-text">
+                <p>A primeira experiência de realidade virtual da STIHL no Brasil: uma simulação 360° que transportava produtores rurais para o centro da colheita de café e demonstrava o Derriçador SP 20 sem uma única planta no estande.</p>
+                <ul class="case-metrics"><li><b>#1</b><span>experiência VR da STIHL no Brasil</span></li><li><b>360°</b><span>simulação imersiva de colheita</span></li><li><b>3</b><span>configurações de garras em VR</span></li></ul>
+                <a class="link" href="cases/stihl-vr-cafezais.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-stihl">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-50dias">
+              <span class="case-year mono">2018</span>
+              <span class="case-name">STIHL 50 Dias de Verde</span>
+              <span class="case-kind mono">Branded content transmídia</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-50dias"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media" data-video="/videos/v3/onda-conteudo.mp4"><img src="/img/v3/onda-conteudo.webp" alt="" width="1100" height="1375" loading="lazy"></figure>
+              <div class="case-text">
+                <p>Websérie de branded content que transformou um quintal comum em Holambra (SP) em um jardim dos sonhos em 50 dias corridos: 42 episódios gravados e 8 lives, com distribuição entre YouTube, Facebook, Instagram e TV por assinatura.</p>
+                <ul class="case-metrics"><li><b>+6M</b><span>visualizações nas plataformas</span></li><li><b>50</b><span>dias de conteúdo contínuo</span></li><li><b>+46M</b><span>impactos de mídia</span></li></ul>
+                <a class="link" href="cases/stihl-50-dias.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
+          <article class="case" id="case-mormaii">
+            <h3><button class="case-head" aria-expanded="false" aria-controls="cb-mormaii">
+              <span class="case-year mono">2017</span>
+              <span class="case-name">Mormaii</span>
+              <span class="case-kind mono">Omnichannel</span>
+              <span class="case-x" aria-hidden="true"></span>
+            </button></h3>
+            <div class="case-body" id="cb-mormaii"><div class="case-inner"><div class="case-pad">
+              <figure class="case-media" data-video="/videos/v3/onda-omni.mp4"><img src="/img/v3/onda-omni.webp" alt="" width="1100" height="1375" loading="lazy"></figure>
+              <div class="case-text">
+                <p>Em 2017, quando o e-commerce brasileiro ainda operava com estoques isolados das redes físicas, idealizei para a Mormaii uma arquitetura de negócios que transformou o e-commerce no maior aliado do franqueado, e não em seu concorrente.</p>
+                <ul class="case-metrics"><li><b>~35%</b><span>do faturamento via digital</span></li><li><b>+8</b><span>anos de legado ativo</span></li><li><b>#1</b><span>benchmark omnichannel no Brasil</span></li></ul>
+                <a class="link" href="cases/mormaii-omnichannel.html">Ver case completo</a>
+              </div>
+            </div></div></div>
+          </article>
+
         </div>
       </div>
+    </section>
 
-      <div class="about-right">
-        <div class="about-body reveal">
-          <p>
-            <strong>41 anos. 28 anos de web.</strong> Uma trajetória que começou quando a internet
-            ainda engatinhava no Brasil — e que, desde então, nunca parou de se reinventar.
-          </p>
-          <p>
-            De <strong>Webmaster a Diretor de Grupo de Comunicação</strong>, passei por todas as
-            disciplinas que constroem um profissional verdadeiramente completo: desenvolvimento web,
-            direção de arte, planejamento, gestão de contas, novos negócios e consultoria estratégica.
-          </p>
-          <p>
-            Sócio de agência digital por <strong>mais de 10 anos</strong>, construí e liderei
-            estratégias de marketing digital para algumas das maiores marcas do Brasil e da
-            América Latina — da Stihl ao Grupo Harman, de Mormaii à Unicasa.
-          </p>
-          <p>
-            Mas o fio que costura tudo nunca foi o marketing — foi a <strong>inovação</strong>. Sempre
-            trouxe o próximo passo antes de virar tendência: motion, advergames, social-media, realidade
-            aumentada, realidade virtual, pesquisas (net)nográficas, e-commerce omnichannel, mídia de
-            performance, produções web-native, EADs, BI como motor de inteligência. Hoje dedico-me à
-            <strong>consultoria em Inovação e Inteligência Artificial</strong> — a mais transformadora
-            dessas ondas. Fluente em inglês, bom nível em espanhol e aprendiz de italiano.
-          </p>
-        </div>
-
-        <div class="about-highlights reveal">
-          <div class="ab-item">
-            <div class="ab-icon">📈</div>
-            <div class="ab-title">28 Anos de Web</div>
-            <div class="ab-desc">Do Webmaster ao Diretor — visão 360° do digital, construída na prática.</div>
-          </div>
-          <div class="ab-item">
-            <div class="ab-icon">🏆</div>
-            <div class="ab-title">Projetos Premiados</div>
-            <div class="ab-desc">Múltiplos Ouros ADVB-RS, incluindo Ouro da Noite e Agência do Ano.</div>
-          </div>
-          <div class="ab-item">
-            <div class="ab-icon">💼</div>
-            <div class="ab-title">Sócio &amp; Investidor</div>
-            <div class="ab-desc">Mais de 10 anos como sócio de agência digital e investidor ativo.</div>
-          </div>
-          <div class="ab-item">
-            <div class="ab-icon">🤖</div>
-            <div class="ab-title">Consultoria em IA</div>
-            <div class="ab-desc">Apoio estratégico a grandes empresas na adoção prática de IA.</div>
-          </div>
-        </div>
+    <!-- ───────── Marcas ───────── -->
+    <section class="brands" id="brands" aria-label="Marcas atendidas">
+      <div class="wrap brands-head"><p class="eyebrow mono"><b>06</b>Marcas atendidas</p>
+        <h2 class="h2" data-split>Quem já confiou no trabalho</h2></div>
+      <div class="brands-rows" id="brands-rows">
+        <div class="brands-row" data-dir="-1"><div class="brands-set">
+          <span class="is-logo"><img src="/img/v3/logos/stihl.webp" alt="STIHL" width="1056" height="220" style="--k:0.87" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/harman.webp" alt="Grupo Harman" width="376" height="220" style="--k:1.30" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/jbl.webp" alt="JBL" width="234" height="220" style="--k:1.30" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/mormaii.webp" alt="Mormaii" width="417" height="220" style="--k:1.30" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/via-marte.webp" alt="Via Marte" width="1400" height="170" style="--k:0.66" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/luz-da-lua.webp" alt="Luz da Lua" width="1400" height="184" style="--k:0.69" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/klin.webp" alt="Klin" width="385" height="220" style="--k:1.30" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/saccaro.webp" alt="Saccaro" width="1125" height="220" style="--k:0.84" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/minelab.webp" alt="Minelab" width="436" height="220" style="--k:1.30" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/tri-joias.webp" alt="Tri-Jóias" width="1132" height="220" style="--k:0.84" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/gedore.webp" alt="Gedore" width="1400" height="215" style="--k:0.74" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/robust.webp" alt="Robust" width="1400" height="200" style="--k:0.72" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/rba.webp" alt="RBA+" width="880" height="220" style="--k:0.95" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/eat-kitchen.webp" alt="EAT+KITCHEN" width="1400" height="141" style="--k:0.60" decoding="async" draggable="false"></span>
+        </div></div>
+        <div class="brands-row" data-dir="1"><div class="brands-set">
+          <span class="is-logo"><img src="/img/v3/logos/unicasa.webp" alt="Grupo Unicasa" width="1231" height="220" style="--k:0.80" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/bontempo.webp" alt="Bontempo" width="1400" height="89" style="--k:0.50" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/florense.webp" alt="Florense" width="1400" height="178" style="--k:0.68" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/dakota.webp" alt="Grupo Dakota" width="873" height="220" style="--k:0.95" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/coca-cola-clothing.webp" alt="Coca-Cola Clothing" width="698" height="220" style="--k:1.07" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/colombo.webp" alt="Lojas Colombo" width="1092" height="220" style="--k:0.85" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/lebes.webp" alt="Lojas Lebes" width="572" height="220" style="--k:1.18" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/sinosserra.webp" alt="Grupo Sinosserra" width="1160" height="220" style="--k:0.83" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/grupo-k1.webp" alt="Grupo K1" width="192" height="220" style="--k:1.30" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/kildare.webp" alt="Kildare" width="1400" height="185" style="--k:0.69" decoding="async" draggable="false"></span>
+        </div></div>
+        <div class="brands-row" data-dir="-1"><div class="brands-set">
+          <span class="is-logo"><img src="/img/v3/logos/sicredi.webp" alt="Sicredi" width="935" height="220" style="--k:0.92" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/motorcraft.webp" alt="Ford Motorcraft" width="695" height="220" style="--k:1.07" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/shell.webp" alt="Shell" width="726" height="220" style="--k:1.04" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/hercosul.webp" alt="Hercosul" width="532" height="220" style="--k:1.22" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/feevale.webp" alt="Feevale" width="880" height="220" style="--k:0.95" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/cobasi.webp" alt="Cobasi" width="920" height="220" style="--k:0.93" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/pernod-ricard.webp" alt="Pernod Ricard" width="598" height="220" style="--k:1.15" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/jameson.webp" alt="Jameson" width="629" height="220" style="--k:1.12" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/pamplona.webp" alt="Pamplona" width="756" height="220" style="--k:1.02" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/bibi.webp" alt="Calçados Bibi" width="519" height="220" style="--k:1.24" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/freeway.webp" alt="Freeway" width="1400" height="216" style="--k:0.75" decoding="async" draggable="false"></span><span class="is-logo"><img src="/img/v3/logos/para-evento.webp" alt="Para-Evento" width="1014" height="220" style="--k:0.88" decoding="async" draggable="false"></span>
+        </div></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════════════════════
-       EXPERIENCE
-  ══════════════════════════════════════════════════════════ -->
-  <section id="experience">
-    <div class="exp-inner">
-      <div class="exp-header reveal">
-        <div>
-          <div class="section-num">02 — Trajetória</div>
-          <h2 class="section-title">Experiência<br>Profissional</h2>
-        </div>
-        <p
-          style="max-width:360px; font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.6;">
-          Quase três décadas no digital brasileiro — e, em cada capítulo, a mesma busca por trazer
-          o próximo passo antes de virar tendência.
-        </p>
+    <!-- ───────── Laboratório ───────── -->
+    <section class="lab" id="lab">
+      <div class="wrap lab-head">
+        <p class="eyebrow mono"><b>07</b>Laboratório</p>
+        <h2 class="h1" data-split>Feito com IA</h2>
+        <p data-reveal>Não basta falar de IA: eu construo com ela. Projetos autorais em que a inteligência artificial não é o tema, é a ferramenta de produção.</p>
       </div>
 
-      <div class="exp-list">
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <div class="exp-date">Presente</div>
-            <div class="exp-company">Consultoria multi-setorial</div>
-          </div>
-          <div class="exp-right">
-            <div class="exp-role">Consultor de Inovação &amp; IA</div>
-            <p class="exp-desc">Consultoria para empresas de relevância em diversos setores, atuando junto às áreas
-              de inovação na identificação de oportunidades e na implementação prática de inteligência artificial —
-              a mais transformadora das ondas que venho surfando há quase 30 anos.</p>
-            <div class="exp-tags">
-              <span class="exp-tag">Inteligência Artificial</span>
-              <span class="exp-tag">Inovação Corporativa</span>
-              <span class="exp-tag">Transformação Digital</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <div class="exp-date">Jan 2019 — Presente</div>
-            <div class="exp-company">ZN</div>
-          </div>
-          <div class="exp-right">
-            <div class="exp-role">Investidor</div>
-            <p class="exp-desc">Identificação e apoio a iniciativas com potencial de crescimento no ecossistema de
-              tecnologia e inovação digital.</p>
-            <div class="exp-tags">
-              <span class="exp-tag">Investimentos</span>
-              <span class="exp-tag">Tecnologia</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <div class="exp-date">Jan 2021 — Jan 2024</div>
-            <div class="exp-company">Brasil Media House · SP</div>
-          </div>
-          <div class="exp-right">
-            <div class="exp-role">CMO / CTO</div>
-            <p class="exp-desc">Liderança dupla de Marketing e Tecnologia — uma combinação rara que uniu visão
-              estratégica de comunicação à execução tecnológica para escalar a operação da empresa.</p>
-            <div class="exp-tags">
-              <span class="exp-tag">CMO</span>
-              <span class="exp-tag">CTO</span>
-              <span class="exp-tag">Estratégia Digital</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <div class="exp-date">Jul 2013 — Jun 2023</div>
-            <div class="exp-company">BRA Marketing Digital</div>
-          </div>
-          <div class="exp-right">
-            <div class="exp-role">Business Development Director</div>
-            <p class="exp-desc">10 anos desenvolvendo novos negócios e consolidando a agência como referência em
-              marketing digital no Brasil. Expansão de carteira e relacionamento com grandes marcas.</p>
-            <div class="exp-tags">
-              <span class="exp-tag">Business Development</span>
-              <span class="exp-tag">Marketing Digital</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <div class="exp-date">Jun 2009 — Jun 2013</div>
-            <div class="exp-company">BRA Marketing Digital</div>
-          </div>
-          <div class="exp-right">
-            <div class="exp-role">Project Manager</div>
-            <p class="exp-desc">Gerência de projetos digitais, coordenando equipes multidisciplinares e garantindo a
-              entrega de campanhas e soluções dentro do prazo e escopo.</p>
-            <div class="exp-tags">
-              <span class="exp-tag">Gestão de Projetos</span>
-              <span class="exp-tag">Liderança de Times</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-left">
-            <div class="exp-date">2008 — 2017</div>
-            <div class="exp-company">ABRADi-RS &amp; Nacional</div>
-          </div>
-          <div class="exp-right">
-            <div class="exp-role">Diretor &amp; Vice-presidente</div>
-            <p class="exp-desc">8 anos na Associação Brasileira dos Agentes Digitais — Diretor por 6 anos,
-              Vice-presidente por 2 anos e representação na ABRADi Nacional, promovendo o ecossistema digital
-              brasileiro.</p>
-            <div class="exp-tags">
-              <span class="exp-tag">Diretoria</span>
-              <span class="exp-tag">Vice-presidência</span>
-              <span class="exp-tag">Representação Setorial</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════
-       SKILLS
-  ══════════════════════════════════════════════════════════ -->
-  <section id="skills">
-    <div class="skills-inner">
-      <div class="skills-header reveal">
-        <div class="section-num">03 — Competências</div>
-        <h2 class="section-title">Camadas que<br>se acumulam</h2>
-      </div>
-      <div class="skills-grid reveal">
-        <div class="skill-cell" data-num="01">
-          <div class="skill-name">Webmaster</div>
-          <div class="skill-sub">Desde o início</div>
-        </div>
-        <div class="skill-cell" data-num="02">
-          <div class="skill-name">Desenvolvedor Web</div>
-          <div class="skill-sub">Front &amp; Back-end</div>
-        </div>
-        <div class="skill-cell" data-num="03">
-          <div class="skill-name">Diretor de Arte</div>
-          <div class="skill-sub">Criação &amp; Design</div>
-        </div>
-        <div class="skill-cell" data-num="04">
-          <div class="skill-name">Planner</div>
-          <div class="skill-sub">Estratégia</div>
-        </div>
-        <div class="skill-cell" data-num="05">
-          <div class="skill-name">Key Account</div>
-          <div class="skill-sub">Relacionamento</div>
-        </div>
-        <div class="skill-cell" data-num="06">
-          <div class="skill-name">Dir. Novos Negócios</div>
-          <div class="skill-sub">Business Development</div>
-        </div>
-        <div class="skill-cell" data-num="07">
-          <div class="skill-name">Estratégia de Comunicação</div>
-          <div class="skill-sub">Consultoria</div>
-        </div>
-        <div class="skill-cell" data-num="08">
-          <div class="skill-name">E-commerce</div>
-          <div class="skill-sub">Consultoria Especializada</div>
-        </div>
-        <div class="skill-cell" data-num="09">
-          <div class="skill-name">CMO / CTO</div>
-          <div class="skill-sub">Liderança Executiva</div>
-        </div>
-        <div class="skill-cell" data-num="10">
-          <div class="skill-name">Consultor de IA</div>
-          <div class="skill-sub">Inovação &amp; Transformação</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════
-       OFERTA — "Como trabalho"
-  ══════════════════════════════════════════════════════════ -->
-  <section id="oferta" data-topo style="padding:9rem 3rem; background:var(--deep);">
-    <div style="max-width:1300px; margin:0 auto;">
-      <div class="reveal" style="margin-bottom:3.5rem;">
-        <div class="section-num">04 — Como trabalho</div>
-        <h2 class="section-title">Inovação que<br>vira decisão</h2>
-        <p style="max-width:640px; margin-top:1.5rem; font-family:var(--font-serif); font-style:italic;
-          font-size:1.15rem; color:var(--muted); line-height:1.65;">
-          Não vendo pacotes. Sento ao lado de quem dirige o negócio e traduzo inovação e IA em
-          decisão e operação — com a ótica de gestor, não de fornecedor. Quatro formas de fazer isso:
-        </p>
+      <div class="ring-stage" id="ring-stage" aria-hidden="true">
+        <div class="ring" id="ring"></div>
       </div>
 
-      <div class="about-highlights reveal">
-        <div class="ab-item">
-          <div class="ab-icon">🧭</div>
-          <div class="ab-title">Diagnóstico de maturidade</div>
-          <div class="ab-desc">Onde a IA cabe — e onde não — no seu negócio. Leitura honesta de oportunidades,
-            riscos e prontidão real.</div>
+      <div class="wrap lab-panel">
+        <div class="lab-ctrl">
+          <button class="lab-arrow" id="lab-prev" aria-label="Projeto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg></button>
+          <span class="lab-count mono" id="lab-count">01 / 13</span>
+          <button class="lab-arrow" id="lab-next" aria-label="Próximo projeto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg></button>
+          <span class="lab-drag mono" aria-hidden="true">arraste para girar</span>
         </div>
-        <div class="ab-item">
-          <div class="ab-icon">🗺️</div>
-          <div class="ab-title">Roadmap de inovação</div>
-          <div class="ab-desc">Da oportunidade ao plano: prioridades, sequência e os ganhos que justificam
-            cada passo.</div>
-        </div>
-        <div class="ab-item">
-          <div class="ab-icon">🛠️</div>
-          <div class="ab-title">Implementação assistida</div>
-          <div class="ab-desc">Do conceito ao sistema rodando. Não paro no slide — acompanho até a inovação
-            virar operação.</div>
-        </div>
-        <div class="ab-item">
-          <div class="ab-icon">🤝</div>
-          <div class="ab-title">Advisory de board</div>
-          <div class="ab-desc">Conselho contínuo a lideranças que querem decidir sobre IA com quem entende de
-            tecnologia <em>e</em> de negócio.</div>
-        </div>
+
+        <ul class="lab-items" id="lab-items">
+          <li class="lab-item">
+            <img src="/img/lab/3contratodos-2.webp" alt="Partida do jogo 3 Contra Todos" width="1400" height="788" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · app stores e web</p>
+              <h3>3 Contra Todos</h3>
+              <p>O beat'em up do Werdum, nas lojas Apple e Google e no navegador. A segunda versão tem arte refeita com IA generativa, co-op online e balanceamento calibrado por bots que jogam centenas de partidas simuladas.</p>
+              <ul class="tags mono"><li>Game dev</li><li>Co-op online</li><li>Pipeline com IA</li></ul>
+              <a class="link" href="https://3contratodos.com" target="_blank" rel="noopener">Ver projeto</a>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/bodytwin.webp" alt="Figura humana em quatro camadas: pele, músculos, órgãos e esqueleto" width="1400" height="781" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · saúde e visão computacional</p>
+              <h3>BodyTwin</h3>
+              <p>Um gêmeo digital do corpo: quatro fotos de celular viram um avatar 3D em escala real, que se explora por camadas (pele, músculos, órgãos e ossos). Os exames são lidos por IA e tudo fica cifrado no próprio aparelho.</p>
+              <ul class="tags mono"><li>Image-to-3D</li><li>Saúde</li><li>Local-first</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/redazione.webp" alt="Tela do acervo do Redazione" width="1400" height="787" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · redes sociais</p>
+              <h3>Redazione</h3>
+              <p>Plataforma de automação de redes sociais para agências e seus clientes: linha editorial e calendário, acervo catalogado por IA, esteira de produção com aprovação em camadas e publicação direta no Instagram e no Facebook.</p>
+              <ul class="tags mono"><li>Automação</li><li>Multi-cliente</li><li>Aprovação em camadas</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/radar-2.webp" alt="Painel do Radar de IA" width="1400" height="788" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · ferramenta própria</p>
+              <h3>Radar de IA</h3>
+              <p>Sistema próprio que monitora e cura os avanços em IA: pontuação dupla (relevância × substância), agrupamento de temas e um ciclo de aprendizado que refina as recomendações sozinho. Uma triagem em três níveis cortou o custo de IA em cerca de 4×.</p>
+              <ul class="tags mono"><li>Pesquisa</li><li>Scoring</li><li>Clustering</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/video-editor.webp" alt="Esteira do editor de vídeo com IA" width="1400" height="640" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · edição com IA</p>
+              <h3>Editor de vídeo com IA</h3>
+              <p>Horas de material bruto viram um filme editado em uma conversa: a IA assiste cada trecho, descarta repetições, escolhe o que conta a história, corta no tempo da trilha e renderiza com cartelas e tratamento de cor.</p>
+              <ul class="tags mono"><li>Visão por IA</li><li>Curadoria</li><li>ffmpeg</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/prumo.webp" alt="Painel de investimentos com dados fictícios" width="1400" height="778" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · gestão patrimonial</p>
+              <h3>Painel de investimentos</h3>
+              <p>Carteiras espalhadas por bancos e gestoras reunidas em uma visão só. Os relatórios mensais em PDF são anonimizados ainda no navegador, lidos por IA e conferidos antes de entrar no painel. Na imagem, dados fictícios.</p>
+              <ul class="tags mono"><li>Leitura de PDFs</li><li>Privacidade</li><li>Conciliação</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/ferramental-2.webp" alt="Painel do ambiente de trabalho com IA" width="1400" height="705" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · infraestrutura própria</p>
+              <h3>Ferramental de IA</h3>
+              <p>Meu próprio ambiente de trabalho com IA: roteamento entre modelos locais e em nuvem, agentes que rodam rotinas sozinhos toda semana e uma diretriz única seguida por diferentes IAs. As ferramentas propõem melhorias a partir do uso real e só as adotam depois de passar em avaliações.</p>
+              <ul class="tags mono"><li>Orquestração</li><li>Local + nuvem</li><li>Automação</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/prospeccao.webp" alt="Funil do Radar de Prospecção" width="1400" height="640" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Sob medida · inteligência comercial</p>
+              <h3>Radar de Prospecção</h3>
+              <p>Toda a base pública de empresas do Rio Grande do Sul filtrada até as que valem uma conversa. Um modelo de IA revisa o topo do ranking, monta o dossiê de cada empresa, rascunha a sequência de abordagem e responde perguntas sobre a base em um chat.</p>
+              <ul class="tags mono"><li>Dados públicos</li><li>LLM-judge</li><li>CRM</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/eat-site.webp" alt="Abertura do site do EAT+KITCHEN" width="1400" height="800" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Site · gastronomia</p>
+              <h3>Site EAT+KITCHEN</h3>
+              <p>Site institucional de tom cinematográfico para o restaurante: vídeo e fotografia em tela cheia, cardápio, eventos e reservas, com direção de arte, texto e código produzidos com IA do começo ao fim.</p>
+              <ul class="tags mono"><li>Site</li><li>Direção de arte</li><li>Vídeo</li></ul>
+              <a class="link" href="https://eatkitchen.com.br" target="_blank" rel="noopener">Ver site</a>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/concierge.webp" alt="Concierge gastronômico em conversa" width="1400" height="720" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · setor gastronômico</p>
+              <h3>Concierge gastronômico</h3>
+              <p>Concierge conversacional que recomenda pratos, tira dúvidas e conduz o cliente, com a voz da marca, do cardápio à reserva. Antes de ir ao ar, passa por agentes de IA que simulam dez perfis diferentes de cliente.</p>
+              <ul class="tags mono"><li>IA conversacional</li><li>Atendimento</li><li>Gastronomia</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/cachorradas.webp" alt="Abertura do site do Cachorradas Estúdios" width="1400" height="800" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · canal no YouTube</p>
+              <h3>Site Cachorradas Estúdios</h3>
+              <p>O site de um canal no YouTube que se atualiza sozinho: todos os dias uma rotina automática busca os números e os vídeos novos e republica as páginas, sem ninguém tocar em nada.</p>
+              <ul class="tags mono"><li>Site</li><li>Automação</li><li>YouTube</li></ul>
+              <a class="link" href="https://thiagozeni.github.io/cachorradas-estudios/" target="_blank" rel="noopener">Ver site</a>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/painel.webp" alt="Painel esportivo semanal" width="1400" height="857" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · sports bar</p>
+              <h3>Painel esportivo</h3>
+              <p>A agenda de jogos da semana de um sports bar, montada e atualizada automaticamente, pronta para o telão, sem curadoria manual.</p>
+              <ul class="tags mono"><li>Tempo real</li><li>Dados</li><li>Automação</li></ul>
+            </div>
+          </li>
+          <li class="lab-item">
+            <img src="/img/lab/gestao.webp" alt="Sistema de gestão imobiliária" width="1400" height="670" loading="lazy">
+            <div class="lab-info">
+              <p class="lab-kind mono">Autoral · gestão patrimonial</p>
+              <h3>Gestão imobiliária</h3>
+              <p>Gestão de aluguéis e patrimônio imobiliário de ponta a ponta: extração automática dos portais das imobiliárias, conciliação e relatórios, sem uma linha de digitação manual.</p>
+              <ul class="tags mono"><li>Automação</li><li>Integração</li><li>Scraping</li></ul>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════════════════════
-       BRANDS MARQUEE
-  ══════════════════════════════════════════════════════════ -->
-  <section id="brands">
-    <p class="brands-label">05 — Marcas que confiaram no meu trabalho</p>
-    <div class="marquee-wrapper">
-      <div class="marquee-row">
-        <div class="marquee-track">
-          <div class="brand-chip"><span class="brand-chip-name">Stihl</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Harman AL</span><span class="brand-chip-sub">JBL · AKG · Harman Kardon</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Mormaii</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Via Marte</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Luz da Lua</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Klin</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Móveis Saccaro</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Minelab</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Tri-Jóias</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Gedore</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Robust</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">RBA+</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">EAT+KITCHEN</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Stihl</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Harman AL</span><span class="brand-chip-sub">JBL · AKG · Harman Kardon</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Mormaii</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Via Marte</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Luz da Lua</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Klin</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Móveis Saccaro</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Minelab</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Tri-Jóias</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Gedore</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Robust</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">RBA+</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">EAT+KITCHEN</span></div>
-        </div>
+    <!-- ───────── Prêmios ───────── -->
+    <section class="awards" id="awards">
+      <video class="awards-bg" id="awards-video" muted loop playsinline preload="none" poster="/img/awards-poster.jpg" aria-hidden="true">
+        <source src="/videos/premios-cinematic-m.mp4" media="(max-width: 767px)" type="video/mp4">
+        <source src="/videos/premios-cinematic.mp4" type="video/mp4">
+      </video>
+      <div class="wrap awards-in">
+        <header class="awards-head">
+          <p class="eyebrow mono"><b>08</b>Reconhecimento</p>
+          <h2 class="h1" data-split>Prêmios</h2>
+          <p data-reveal>Projetos reconhecidos pelos principais prêmios de comunicação e marketing digital do Sul do Brasil.</p>
+        </header>
+        <ul class="awards-list">
+          <li data-reveal="row">
+            <span class="aw-year">2021</span>
+            <div class="aw-main"><h3>Top de Marketing ADVB-RS</h3><p>O ano mais premiado</p></div>
+            <ul class="chips mono"><li class="au">Ouro da Noite</li><li class="au">Agência do Ano</li><li class="au">Ouro · Branding</li><li class="au">Ouro · Marketing Digital</li><li class="au">Ouro · Indústria</li></ul>
+          </li>
+          <li data-reveal="row">
+            <span class="aw-year">2018</span>
+            <div class="aw-main"><h3>Top de Marketing ADVB-RS</h3><p>Duplo ouro</p></div>
+            <ul class="chips mono"><li class="au">Ouro da Noite</li><li class="au">Ouro · Estratégias Digitais</li><li class="au">Ouro · Indústria</li></ul>
+          </li>
+          <li data-reveal="row">
+            <span class="aw-year">2018</span>
+            <div class="aw-main"><h3>Prêmio Colunistas-RS</h3><p>Três categorias premiadas</p></div>
+            <ul class="chips mono"><li class="ag">Prata</li><li class="br">Bronze</li><li>Finalista</li></ul>
+          </li>
+          <li data-reveal="row">
+            <span class="aw-year">2018</span>
+            <div class="aw-main"><h3>Top de Mídia RS</h3><p>Excelência em mídia</p></div>
+            <ul class="chips mono"><li class="au">Projeto premiado</li></ul>
+          </li>
+        </ul>
       </div>
-      <div class="marquee-row">
-        <div class="marquee-track marquee-track2">
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Unicasa</span><span class="brand-chip-sub">Favorita · Dellano · New · Casa Brasileira</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Bontempo</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Florense</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Dakota</span><span class="brand-chip-sub">Tanara · Campesi · Kolosh</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Coca-Cola Clothing</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Lojas Colombo</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Lojas Lebes</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Grupo K1</span><span class="brand-chip-sub">Kappesberg · Idélli · UZ</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Kildare</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Unicasa</span><span class="brand-chip-sub">Favorita · Dellano · New · Casa Brasileira</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Bontempo</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Florense</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Dakota</span><span class="brand-chip-sub">Tanara · Campesi · Kolosh</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Coca-Cola Clothing</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Lojas Colombo</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Lojas Lebes</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo Sinoserra</span><span class="brand-chip-sub">Sinoscar · Guaibacar · Tramonto · Aplicap</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Grupo K1</span><span class="brand-chip-sub">Kappesberg · Idélli · UZ</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Kildare</span></div>
+    </section>
+
+    <!-- ───────── Contato ───────── -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-top">
+          <p class="eyebrow mono"><b>09</b>Contato</p>
+          <h2 class="contact-title"><span>Vamos</span> <span class="stroke">conversar?</span></h2>
         </div>
-      </div>
-      <div class="marquee-row">
-        <div class="marquee-track marquee-track3">
-          <div class="brand-chip"><span class="brand-chip-name">Sicred</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Ford Motorcraft</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Shell</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Hercosul</span><span class="brand-chip-sub">Biofresh · Three Dogs · Three Cats · Primocão e Primogato</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Universidade Feevale</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Cobasi</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Pamplona Alimentos</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Calçados Bibi</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Freeway</span></div>
-          <div class="brand-chip"><span class="brand-chip-name">Para-Evento</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Sicred</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Ford Motorcraft</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Shell</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Hercosul</span><span class="brand-chip-sub">Biofresh · Three Dogs · Three Cats · Primocão e Primogato</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Universidade Feevale</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Cobasi</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Pernod Ricard</span><span class="brand-chip-sub">Jameson Irish Whiskey</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Pamplona Alimentos</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Calçados Bibi</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Freeway</span></div>
-          <div class="brand-chip dup" aria-hidden="true"><span class="brand-chip-name">Para-Evento</span></div>
+        <div class="contact-head">
+          <p class="contact-lead" data-reveal>Tem um projeto, uma dúvida sobre IA no seu negócio ou só quer trocar uma ideia? Respondo pessoalmente.</p>
+          <ul class="contact-links">
+            <li><a href="mailto:thiagoazeni@gmail.com"><span class="mono">E-mail</span>thiagoazeni@gmail.com</a></li>
+            <li><a href="https://linkedin.com/in/thiagozeni" target="_blank" rel="noopener"><span class="mono">LinkedIn</span>/in/thiagozeni</a></li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════════════════════
-       CASES
-  ══════════════════════════════════════════════════════════ -->
-  <section id="cases">
-    <div class="cases-inner">
-      <div class="cases-header reveal">
-        <div>
-          <div class="section-num">06 — Cases</div>
-          <h2 class="section-title">Inovações que<br>viraram resultado</h2>
-        </div>
-        <p
-          style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
-          Cada um nasceu de uma aposta no que ainda não era padrão — e virou
-          impacto real em audiência, reputação e reconhecimento de mercado.
-        </p>
-      </div>
-      <div class="cases-grid">
-
-        <!-- Case: RBA+ — Consultoria de IA -->
-        <a href="/cases/rba-consultoria-ia.html" class="case-grid-card reveal" id="case-rba">
-          <div class="cgc-top">
-            <span class="cgc-year">2026 · em andamento</span>
-            <span class="cgc-agency">Consultoria de IA</span>
-          </div>
-          <h3 class="cgc-client">RBA+</h3>
-          <div class="case-tags">
-            <span class="case-tag">Consultoria de IA</span>
-            <span class="case-tag">Sistema de Marca</span>
-            <span class="case-tag">Letramento em IA</span>
-          </div>
-          <p class="cgc-desc">Programa de IA para uma agência de 50 anos do Sul: um sistema de inteligência de
-            marca que confere e redige peças de JBL e STIHL dentro da régua de cada cliente, e trilhas
-            práticas de IA para toda a equipe.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">2</div>
-              <div class="cgc-stat-label">marcas globais no sistema</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">50</div>
-              <div class="cgc-stat-label">anos de agência</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">5</div>
-              <div class="cgc-stat-label">áreas com trilha de IA</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Sistema de marca com IA em produção</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Site dos 50 anos da agência no ar</div>
-            <div class="case-award-badge"><span class="medal">◈</span> STIHL 100 anos em português e espanhol</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: EAT+KITCHEN — Presença Digital -->
-        <a href="/cases/eat-kitchen.html" class="case-grid-card reveal" id="case-eat">
-          <div class="cgc-top">
-            <span class="cgc-year">2026</span>
-            <span class="cgc-agency">Projeto independente</span>
-          </div>
-          <h3 class="cgc-client">EAT+KITCHEN</h3>
-          <div class="case-tags">
-            <span class="case-tag">Presença Digital</span>
-            <span class="case-tag">Direção Criativa</span>
-            <span class="case-tag">Desenvolvimento com IA</span>
-          </div>
-          <p class="cgc-desc">A rede de comida saudável com cinco casas no Sul trocou um site de template por uma
-            plataforma editorial cinematográfica que a própria equipe opera — construída com agentes de IA,
-            do conceito ao código.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">5</div>
-              <div class="cgc-stat-label">casas em 3 cidades</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">4</div>
-              <div class="cgc-stat-label">idiomas no cardápio da mesa</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">150+</div>
-              <div class="cgc-stat-label">testes automatizados</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Home editorial em atos, com vídeo e WebGL</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Conteúdo, vagas e eventos operados pela equipe</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Cardápio digital por QR em PT, EN, ES e RU</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: Florense — IA & Inovação -->
-        <a href="/cases/florense.html" class="case-grid-card reveal" id="case-florense">
-          <div class="cgc-top">
-            <span class="cgc-year">2024–2025</span>
-            <span class="cgc-agency">Consultoria independente</span>
-          </div>
-          <h3 class="cgc-client">Florense</h3>
-          <div class="case-tags">
-            <span class="case-tag">IA & Inovação</span>
-            <span class="case-tag">Estratégia Digital</span>
-            <span class="case-tag">Pesquisa</span>
-            <span class="case-tag">Org Design</span>
-          </div>
-          <p class="cgc-desc">Consultoria estratégica para uma das principais marcas brasileiras de móveis planejados
-            premium, com foco em mapear oportunidades de IA, modernizar a estrutura de marketing e construir um roteiro
-            de inovação fundamentado em dados.</p>
-          <p
-            style="font-size:0.75rem; letter-spacing:0.06em; color:var(--muted); padding:0.6rem 1rem; border-left:2px solid var(--border); line-height:1.6;">
-            ⚠ Por acordo de confidencialidade (NDA), métricas e resultados são de divulgação restrita.</p>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Diagnóstico de presença digital cross-channel
-            </div>
-            <div class="case-award-badge"><span class="medal">◈</span> Roteiro de adoção de IA por departamento</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Reestruturação organizacional do marketing</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: Programa 4 por 4 -->
-        <a href="/cases/programa-4por4.html" class="case-grid-card reveal" id="case-4por4">
-          <div class="cgc-top">
-            <span class="cgc-year">2021–2024</span>
-            <span class="cgc-agency">Brasil Media House</span>
-          </div>
-          <h3 class="cgc-client">Programa 4 por 4</h3>
-          <div class="case-tags">
-            <span class="case-tag">YouTube</span>
-            <span class="case-tag">Produção ao Vivo</span>
-            <span class="case-tag">Marketing Digital</span>
-            <span class="case-tag">Multiplataforma</span>
-          </div>
-          <p class="cgc-desc">Como sócio idealizador, estrategista de marketing digital e arquiteto de tecnologia,
-            ajudei a construir o maior programa ao vivo independente do YouTube Brasil — 140 mil espectadores
-            simultâneos no pico, 500 mil inscritos em menos de dois meses.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">140K</div>
-              <div class="cgc-stat-label">espectadores simultâneos (pico)</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">~1M</div>
-              <div class="cgc-stat-label">inscritos no YouTube</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">9+</div>
-              <div class="cgc-stat-label">plataformas simultâneas</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Maior programa ao vivo independente do YouTube
-              Brasil</div>
-            <div class="case-award-badge"><span class="medal">◈</span> 0 → 500K inscritos em menos de 2 meses</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Ecossistema de 9+ plataformas com app próprio
-              iOS/Android</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: JBL Wind -->
-        <a href="/cases/jbl-wind.html" class="case-grid-card reveal" id="case-jbl">
-          <div class="cgc-top">
-            <span class="cgc-year">2021</span>
-            <span class="cgc-agency">via BRA Digital</span>
-          </div>
-          <h3 class="cgc-client">JBL Wind</h3>
-          <div class="case-tags">
-            <span class="case-tag">YouTube</span>
-            <span class="case-tag">Multiperfilamento</span>
-            <span class="case-tag">Branded Content</span>
-            <span class="case-tag">Segmentação</span>
-          </div>
-          <p class="cgc-desc">O desafio era lançar um som portátil para veículos de duas rodas num mercado saturado. A
-            solução foi uma arquitetura de conteúdo multiperfilada — múltiplos vídeos nativos no YouTube, cada um criado
-            para uma persona específica.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">4</div>
-              <div class="cgc-stat-label">personas segmentadas</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">Esgotado</div>
-              <div class="cgc-stat-label">estoque no 1º ciclo de pedidos</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">↑</div>
-              <div class="cgc-stat-label">aumento de produção solicitado</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Conteúdo nativo por persona — ciclistas,
-              entusiastas urbanos e delivery</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Multiperfilamento de targets via algoritmos
-              YouTube</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Estoque esgotado e produção ampliada no primeiro
-              ciclo</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: Pró-Jardim STIHL -->
-        <a href="/cases/stihl-projardim.html" class="case-grid-card reveal" id="case-projardim">
-          <div class="cgc-top">
-            <span class="cgc-year">2020–2021</span>
-            <span class="cgc-agency">via BRA Digital</span>
-          </div>
-          <h3 class="cgc-client">Pró-Jardim STIHL</h3>
-          <div class="case-tags">
-            <span class="case-tag">E-learning</span>
-            <span class="case-tag">Inbound</span>
-            <span class="case-tag">Branding</span>
-            <span class="case-tag">Marketing Digital</span>
-          </div>
-          <p class="cgc-desc">Com o isolamento social impulsionando o interesse por jardinagem, identifiquei para a
-            STIHL uma oportunidade além da venda de máquinas: ocupar o papel de educadora. Nasceu o Pró-Jardim — a
-            primeira plataforma de capacitação 100% online e gratuita do setor.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">4</div>
-              <div class="cgc-stat-label">módulos de capacitação</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">#1</div>
-              <div class="cgc-stat-label">plataforma do setor — inédita no Brasil</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">3×</div>
-              <div class="cgc-stat-label">Ouro ADVB-RS 2021</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">Au</span> Ouro — Branding · ADVB-RS 2021</div>
-            <div class="case-award-badge"><span class="medal">Au</span> Ouro — Marketing Digital · ADVB-RS 2021</div>
-            <div class="case-award-badge"><span class="medal">Au</span> Ouro — Indústria · ADVB-RS 2021</div>
-            <div class="case-award-badge"><span class="medal">★</span> Top de Marketing ADVB-RS 2021</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: STIHL VR Cafezais 360° -->
-        <a href="/cases/stihl-vr-cafezais.html" class="case-grid-card reveal" id="case-vr-cafezais">
-          <div class="cgc-top">
-            <span class="cgc-year">2020</span>
-            <span class="cgc-agency">via BRA Digital</span>
-          </div>
-          <h3 class="cgc-client">STIHL Cafezais 360°</h3>
-          <div class="case-tags">
-            <span class="case-tag">Realidade Virtual</span>
-            <span class="case-tag">Inovação</span>
-            <span class="case-tag">Agronegócio</span>
-            <span class="case-tag">Experiência Imersiva</span>
-          </div>
-          <p class="cgc-desc">Primeira experiência de realidade virtual da STIHL no Brasil — uma simulação 360° de
-            alta fidelidade que transportava produtores rurais para o centro da colheita de café, demonstrando
-            a performance do Derriçador SP 20 sem uma única planta no estande.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">#1</div>
-              <div class="cgc-stat-label">experiência VR da STIHL no Brasil</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">360°</div>
-              <div class="cgc-stat-label">simulação imersiva de colheita</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">3</div>
-              <div class="cgc-stat-label">configurações de garras em VR</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Primeira experiência VR da STIHL no Brasil</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Destaque na Expocafé 2020 — engajamento massivo no estande</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Pioneirismo em transformação digital no agronegócio</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: STIHL 50 Dias de Verde -->
-        <a href="/cases/stihl-50-dias.html" class="case-grid-card reveal" id="case-stihl">
-          <div class="cgc-top">
-            <span class="cgc-year">2018</span>
-            <span class="cgc-agency">via BRA Digital</span>
-          </div>
-          <h3 class="cgc-client">STIHL 50 Dias de Verde</h3>
-          <div class="case-tags">
-            <span class="case-tag">Branded Content</span>
-            <span class="case-tag">Transmídia</span>
-            <span class="case-tag">Inbound</span>
-            <span class="case-tag">YouTube</span>
-          </div>
-          <p class="cgc-desc">Webserie de branded content que transformou um quintal comum em Holambra (SP) em um jardim
-            dos sonhos em 50 dias corridos — 42 episódios gravados e 8 lives ao vivo, com distribuição transmídia entre
-            YouTube, Facebook, Instagram e TV por assinatura.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">+6M</div>
-              <div class="cgc-stat-label">visualizações nas plataformas</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">50</div>
-              <div class="cgc-stat-label">dias de conteúdo contínuo</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">+46M</div>
-              <div class="cgc-stat-label">impactos de mídia</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">Au</span> Ouro — Colunistas Sul · Não Ficção Online</div>
-            <div class="case-award-badge"><span class="medal">Ag</span> Prata — Colunistas Sul · Branded Content</div>
-            <div class="case-award-badge"><span class="medal">Au</span> Top de Marketing ADVB-RS 2018 · Ouro</div>
-            <div class="case-award-badge"><span class="medal">Au</span> Top de Marketing ADVB-RS 2018 · Estratégias
-              Digitais</div>
-            <div class="case-award-badge"><span class="medal">Au</span> Top de Marketing ADVB-RS 2018 · Indústria</div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-        <!-- Case: Mormaii Omnichannel -->
-        <a href="/cases/mormaii-omnichannel.html" class="case-grid-card reveal" id="case-mormaii">
-          <div class="cgc-top">
-            <span class="cgc-year">2017</span>
-            <span class="cgc-agency">via BRA Digital</span>
-          </div>
-          <h3 class="cgc-client">Mormaii</h3>
-          <div class="case-tags">
-            <span class="case-tag">Omnichannel</span>
-            <span class="case-tag">E-commerce</span>
-            <span class="case-tag">Estratégia Digital</span>
-            <span class="case-tag">Integração</span>
-          </div>
-          <p class="cgc-desc">Em 2017, quando o e-commerce brasileiro ainda operava com estoques isolados das redes
-            físicas, idealizei para a Mormaii uma arquitetura de negócios disruptiva: transformar o e-commerce no maior
-            aliado do franqueado — e não em seu concorrente.</p>
-          <div class="cgc-stats">
-            <div>
-              <div class="cgc-stat-value">~35%</div>
-              <div class="cgc-stat-label">do faturamento via digital</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">+8</div>
-              <div class="cgc-stat-label">anos de legado ativo</div>
-            </div>
-            <div>
-              <div class="cgc-stat-value">#1</div>
-              <div class="cgc-stat-label">benchmark omnichannel no Brasil</div>
-            </div>
-          </div>
-          <div class="cgc-awards">
-            <div class="case-award-badge"><span class="medal">◈</span> Ship-from-store pioneiro no Brasil</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Integração ERP + e-commerce em tempo real</div>
-            <div class="case-award-badge"><span class="medal">◈</span> Modelo replicado por toda a rede de franquias
-            </div>
-          </div>
-          <span class="cgc-cta">Ver case completo →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════
-       LABORATÓRIO
-  ══════════════════════════════════════════════════════════ -->
-  <section id="lab" data-topo style="padding:9rem 3rem; background:var(--deep);">
-    <div class="cases-inner">
-      <div class="cases-header reveal">
-        <div>
-          <div class="section-num">07 — Laboratório</div>
-          <h2 class="section-title">Feito<br>com IA</h2>
-        </div>
-        <p
-          style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
-          Não basta falar de IA — eu construo com ela. Projetos autorais onde a inteligência
-          artificial não é o tema: é a ferramenta de produção.
-        </p>
+        <form class="form" id="contact-form" novalidate>
+          <label class="field"><span class="mono">Nome</span><input type="text" name="name" autocomplete="name" required placeholder="Seu nome"></label>
+          <label class="field"><span class="mono">E-mail</span><input type="email" name="email" autocomplete="email" required placeholder="voce@empresa.com"></label>
+          <label class="field"><span class="mono">Mensagem</span><textarea name="message" rows="4" required placeholder="Sobre o que quer conversar?"></textarea></label>
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--big" type="submit" data-magnet><span>Enviar mensagem</span></button>
+          <p class="form-status mono" id="form-status" aria-live="polite"></p>
+        </form>
       </div>
 
-      <div class="cases-grid" id="lab-coverflow">
-
-        <a href="https://3contratodos.com" target="_blank" rel="noopener" class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/3contratodos.jpg" srcset="/img/lab/m/3contratodos.jpg 800w, /img/lab/3contratodos.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="3 Contra Todos — beat'em up do Werdum" loading="lazy" style="object-position:center 40%"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">app stores · web</span>
-          </div>
-          <h3 class="cgc-client">3 Contra Todos</h3>
-          <div class="case-tags">
-            <span class="case-tag">Game Dev</span>
-            <span class="case-tag">Co-op online</span>
-            <span class="case-tag">Pipeline com IA</span>
-          </div>
-          <p class="cgc-desc">O beat'em up do Werdum, nas lojas Apple e Google e no navegador. A segunda versão
-            tem arte refeita com IA generativa, co-op online e balanceamento calibrado por bots que jogam
-            centenas de partidas simuladas.</p>
-          <span class="cgc-cta">Ver projeto →</span>
-        </a>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/avatar3d.jpg" srcset="/img/lab/m/avatar3d.jpg 800w, /img/lab/avatar3d.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Esteira de três fotos para avatar 3D" loading="lazy" style="object-position:center"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">visão computacional</span>
-          </div>
-          <h3 class="cgc-client">Avatar 3D em 3 Fotos</h3>
-          <div class="case-tags">
-            <span class="case-tag">Image-to-3D</span>
-            <span class="case-tag">Visão Computacional</span>
-            <span class="case-tag">Controle de Qualidade</span>
-          </div>
-          <p class="cgc-desc">Uma esteira que transforma três fotos de celular num avatar 3D em escala real, articulado
-            e navegável no app. Filtros automáticos medem a fidelidade do rosto e das correções feitas por IA
-            antes de aprovar cada resultado.</p>
+      <footer class="foot">
+        <div class="foot-mark" aria-hidden="true">ZN<span>.</span></div>
+        <div class="foot-row wrap mono">
+          <span>© 2026 Thiago Zeni</span>
+          <span>Porto Alegre · Florianópolis · São Paulo</span>
+          <a href="#top">Voltar ao topo</a>
         </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/radar.jpg" srcset="/img/lab/m/radar.jpg 800w, /img/lab/radar.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Radar de IA" loading="lazy"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">ferramenta própria</span>
-          </div>
-          <h3 class="cgc-client">Radar de IA</h3>
-          <div class="case-tags">
-            <span class="case-tag">Pesquisa</span>
-            <span class="case-tag">Scoring</span>
-            <span class="case-tag">Clustering</span>
-          </div>
-          <p class="cgc-desc">Sistema próprio que monitora e cura os avanços em IA — pontuação dupla
-            (relevância × substância), agrupamento de temas e um ciclo de aprendizado que refina as
-            recomendações sozinho. Uma triagem em três níveis decide quanto cada notícia merece de
-            processamento e cortou o custo de IA em cerca de 4×.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/video-editor.jpg" srcset="/img/lab/m/video-editor.jpg 800w, /img/lab/video-editor.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Pipeline de edição de vídeo em oito estágios" loading="lazy" style="object-position:center"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">edição com IA</span>
-          </div>
-          <h3 class="cgc-client">Editor de Vídeo com IA</h3>
-          <div class="case-tags">
-            <span class="case-tag">Visão por IA</span>
-            <span class="case-tag">Curadoria</span>
-            <span class="case-tag">ffmpeg</span>
-          </div>
-          <p class="cgc-desc">Horas de material bruto viram um filme editado numa conversa: a IA assiste cada trecho,
-            descarta repetições, escolhe o que conta a história, corta no tempo da trilha e renderiza com
-            cartelas e tratamento de cor. Cada etapa deixa um registro que dá para revisar.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/ferramental.jpg" srcset="/img/lab/m/ferramental.jpg 800w, /img/lab/ferramental.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Ferramental de IA" loading="lazy"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">infraestrutura própria</span>
-          </div>
-          <h3 class="cgc-client">Ferramental de IA</h3>
-          <div class="case-tags">
-            <span class="case-tag">Orquestração</span>
-            <span class="case-tag">Local + Nuvem</span>
-            <span class="case-tag">Automação</span>
-          </div>
-          <p class="cgc-desc">Construí meu próprio ambiente de trabalho com IA — roteamento entre modelos
-            locais e em nuvem, agentes que rodam rotinas sozinhos toda semana e uma diretriz única seguida
-            por diferentes IAs. As próprias ferramentas se aperfeiçoam: propõem melhorias a partir do uso
-            real e só as adotam depois de passar em avaliações.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/prospeccao.jpg" srcset="/img/lab/m/prospeccao.jpg 800w, /img/lab/prospeccao.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Radar de prospecção B2B com dados públicos" loading="lazy" style="object-position:center"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Sob medida</span>
-            <span class="cgc-agency">inteligência comercial</span>
-          </div>
-          <h3 class="cgc-client">Radar de Prospecção</h3>
-          <div class="case-tags">
-            <span class="case-tag">Dados Públicos</span>
-            <span class="case-tag">LLM-judge</span>
-            <span class="case-tag">CRM</span>
-          </div>
-          <p class="cgc-desc">Toda a base pública de empresas do Rio Grande do Sul filtrada até as que valem uma
-            conversa: 27.847 candidatas, 720 quentes. Um modelo de IA revisa o topo do ranking, monta o
-            dossiê de cada empresa e rascunha a primeira abordagem.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/concierge.jpg" srcset="/img/lab/m/concierge.jpg 800w, /img/lab/concierge.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Concierge Gastronômico" loading="lazy" style="object-position:center"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">setor gastronômico</span>
-          </div>
-          <h3 class="cgc-client">Concierge Gastronômico</h3>
-          <div class="case-tags">
-            <span class="case-tag">IA Conversacional</span>
-            <span class="case-tag">Atendimento</span>
-            <span class="case-tag">Gastronomia</span>
-          </div>
-          <p class="cgc-desc">Concierge conversacional por IA para o setor gastronômico — recomenda pratos,
-            tira dúvidas e conduz o cliente, com a voz da marca, do cardápio à reserva. Antes de ir ao
-            ar, passa por agentes de IA que simulam dez perfis diferentes de cliente.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/painel.jpg" srcset="/img/lab/m/painel.jpg 800w, /img/lab/painel.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Painel Esportivo" loading="lazy" style="object-position:center 38%"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">sports bar</span>
-          </div>
-          <h3 class="cgc-client">Painel Esportivo</h3>
-          <div class="case-tags">
-            <span class="case-tag">Tempo Real</span>
-            <span class="case-tag">Dados</span>
-            <span class="case-tag">Automação</span>
-          </div>
-          <p class="cgc-desc">Painel esportivo dinâmico para sports bar — a agenda de jogos da semana montada e
-            atualizada automaticamente, pronta para o telão, sem curadoria manual.</p>
-        </div>
-
-        <div class="case-grid-card reveal">
-          <div class="lab-thumb"><img src="/img/lab/gestao.jpg" srcset="/img/lab/m/gestao.jpg 800w, /img/lab/gestao.jpg 1400w" sizes="(max-width: 768px) 92vw, 45vw" alt="Gestão Imobiliária" loading="lazy" style="object-position:top"></div>
-          <div class="cgc-top">
-            <span class="cgc-year">Autoral</span>
-            <span class="cgc-agency">gestão patrimonial</span>
-          </div>
-          <h3 class="cgc-client">Gestão Imobiliária</h3>
-          <div class="case-tags">
-            <span class="case-tag">Automação</span>
-            <span class="case-tag">Integração</span>
-            <span class="case-tag">Scraping</span>
-          </div>
-          <p class="cgc-desc">Gestão de aluguéis e patrimônio imobiliário ponta a ponta — extração automática
-            dos portais das imobiliárias, conciliação e relatórios, sem uma linha de digitação manual.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════
-       AWARDS
-  ══════════════════════════════════════════════════════════ -->
-  <section id="awards">
-    <div class="awards-inner">
-      <div class="awards-header reveal">
-        <div>
-          <div class="section-num">08 — Reconhecimento</div>
-          <h2 class="section-title">Prêmios &amp;<br>Premiações</h2>
-        </div>
-        <p
-          style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--muted); line-height:1.65;">
-          Projetos reconhecidos pelos principais prêmios do mercado de comunicação
-          e marketing digital do Brasil.
-        </p>
-      </div>
-      <div class="awards-photo reveal">
-        <video id="awards-video" muted playsinline preload="metadata" poster="/img/awards-poster.jpg"><source src="/videos/premios-cinematic-m.mp4" media="(max-width: 767px)"><source src="/videos/premios-cinematic.mp4"></video>
-      </div>
-      <div class="awards-grid">
-        <div class="award-card">
-          <div class="award-year">2021</div>
-          <div class="award-event">Top de Marketing ADVB-RS</div>
-          <div class="award-title">O ano mais premiado</div>
-          <div class="award-prizes">
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Ouro da Noite
-            </div>
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Agência do Ano
-            </div>
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Ouro — Categoria 1
-            </div>
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Ouro — Categoria 2
-            </div>
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Ouro — Categoria 3
-            </div>
-          </div>
-        </div>
-        <div class="award-card">
-          <div class="award-year">2018</div>
-          <div class="award-event">Top de Marketing ADVB-RS</div>
-          <div class="award-title">Duplo Ouro</div>
-          <div class="award-prizes">
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Ouro da Noite
-            </div>
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Ouro — Categoria 1
-            </div>
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Ouro — Categoria 2
-            </div>
-          </div>
-        </div>
-        <div class="award-card">
-          <div class="award-year">2018</div>
-          <div class="award-event">Prêmio Colunistas-RS</div>
-          <div class="award-title">Três categorias premiadas</div>
-          <div class="award-prizes">
-            <div class="award-prize is-gold">
-              <div class="prize-medal silver">Ag</div>Prata
-            </div>
-            <div class="award-prize">
-              <div class="prize-medal bronze">Br</div>Bronze
-            </div>
-            <div class="award-prize">
-              <div class="prize-medal">★</div>Finalista
-            </div>
-          </div>
-        </div>
-        <div class="award-card">
-          <div class="award-year">2018</div>
-          <div class="award-event">Top de Mídia RS</div>
-          <div class="award-title">Excelência em Mídia</div>
-          <div class="award-prizes">
-            <div class="award-prize is-gold">
-              <div class="prize-medal gold">Au</div>Projeto Premiado
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════
-       CONTACT
-  ══════════════════════════════════════════════════════════ -->
-  <section id="contact">
-    <div class="contact-inner">
-      <div class="reveal">
-        <h2 class="contact-headline">
-          Vamos<br><span class="outline">conversar?</span>
-        </h2>
-        <p class="contact-sub">Tem um projeto ou quer trocar uma ideia?</p>
-      </div>
-      <form class="contact-form reveal" id="contactForm">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="name">Nome</label>
-            <input type="text" id="name" placeholder="Seu nome" required />
-          </div>
-          <div class="form-field">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="seu@email.com" required />
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="message">Mensagem</label>
-          <textarea id="message" placeholder="Sobre o que quer conversar?" required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">
-          <span>Enviar mensagem</span>
-          <span>→</span>
-        </button>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
-      <div class="contact-links reveal">
-        <a href="mailto:thiagoazeni@gmail.com" class="contact-link">✉ thiagoazeni@gmail.com</a>
-        <a href="https://linkedin.com/in/thiagozeni" class="contact-link" target="_blank" rel="noopener">in LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Footer ── -->
-  <footer>
-    <div class="footer-logo">ZN.</div>
-    <div class="footer-copy">&copy; 2026 Thiago Zeni · Todos os direitos reservados</div>
-  </footer>
-
-  <!-- Config pública (Web3Forms access key) — ver config.js -->
-  <script src="config.js"></script>
-
-  <script>
-    // ── Preloader ──────────────────────────────────────────
-    window.addEventListener('load', () => {
-      const fromInternalPage = document.referrer.includes(location.hostname) && document.referrer !== location.href;
-      const preloader = document.getElementById('preloader');
-      if (fromInternalPage) {
-        preloader.classList.add('hidden');
-        startCounters();
-      } else {
-        setTimeout(() => {
-          preloader.classList.add('hidden');
-          startCounters();
-        }, 2000);
-      }
-    });
-
-    // ── Scroll Progress ────────────────────────────────────
-    const progress = document.getElementById('progress');
-    window.addEventListener('scroll', () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      progress.style.width = ((window.scrollY / max) * 100) + '%';
-    }, { passive: true });
-
-    // ── Custom Cursor (apenas em dispositivos com ponteiro fino) ──
-    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      const dot = document.getElementById('cursor-dot');
-      const ring = document.getElementById('cursor-ring');
-      let mx = 0, my = 0, rx = 0, ry = 0;
-
-      document.addEventListener('mousemove', e => {
-        mx = e.clientX; my = e.clientY;
-        dot.style.left = mx + 'px';
-        dot.style.top = my + 'px';
-      });
-
-      (function animRing() {
-        rx += (mx - rx) * 0.12;
-        ry += (my - ry) * 0.12;
-        ring.style.left = rx + 'px';
-        ring.style.top = ry + 'px';
-        requestAnimationFrame(animRing);
-      })();
-
-      document.querySelectorAll('a, button, .skill-cell, .award-card, .brand-chip, .exp-item, .ab-item').forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-      });
-    }
-
-    // ── Navbar scroll ──────────────────────────────────────
-    // No desktop o hero fica pinned por 200vh de scrub — só muda o nav
-    // após esse range, quando a página efetivamente começa a rolar
-    const navbar = document.getElementById('navbar');
-    const navScrollThreshold = window.innerWidth < 768 ? 60 : window.innerHeight * 2 + 60;
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > navScrollThreshold);
-    }, { passive: true });
-
-    // ── Mobile menu ────────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    let menuOpen = false;
-
-    function setMenu(open) {
-      menuOpen = open;
-      mobileMenu.style.display = open ? 'flex' : 'none';
-      hamburger.setAttribute('aria-expanded', String(open));
-      hamburger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-      document.documentElement.style.overflow = open ? 'hidden' : '';
-      document.body.classList.toggle('menu-open', open);
-      if (window.lenis) open ? window.lenis.stop() : window.lenis.start();
-    }
-    hamburger.addEventListener('click', () => setMenu(!menuOpen));
-    hamburger.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setMenu(!menuOpen); }
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menuOpen) { setMenu(false); hamburger.focus(); }
-    });
-
-    function closeMobile() {
-      setMenu(false);
-    }
-    // girar/redimensionar para desktop com o menu aberto: restaura scroll e Lenis
-    const mqMenu = matchMedia('(max-width: 768px)');
-    const onMqMenu = (e) => { if (!e.matches && menuOpen) setMenu(false); };
-    // Safari < 14 só tem addListener
-    if (mqMenu.addEventListener) mqMenu.addEventListener('change', onMqMenu); else mqMenu.addListener(onMqMenu);
-
-    // ── Intersection Observer ──────────────────────────────
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          revealObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal, .exp-item, .award-card, .case-card').forEach(el => revealObs.observe(el));
-
-    document.querySelectorAll('.exp-item').forEach((el, i) => {
-      el.style.transitionDelay = (i * 0.07) + 's';
-    });
-
-    // ── Counter animation ──────────────────────────────────
-    // O HTML traz o valor final (fallback sem JS); com JS, zera e anima
-    document.querySelectorAll('[data-target]').forEach(el => { el.textContent = '0'; });
-    function startCounters() {
-      document.querySelectorAll('[data-target]').forEach(el => {
-        const target = +el.dataset.target;
-        let start = 0;
-        const duration = 1800;
-        const step = target / (duration / 16);
-        const timer = setInterval(() => {
-          start = Math.min(start + step, target);
-          el.textContent = Math.floor(start) + '+';
-          if (start >= target) {
-            el.textContent = target + '+';
-            clearInterval(timer);
-          }
-        }, 16);
-      });
-    }
-
-    // ── Manifesto word reveal ──────────────────────────────
-    const manifestoRaw = [
-      { text: 'Três', cls: '' },
-      { text: 'décadas', cls: '' },
-      { text: 'de', cls: '' },
-      { text: 'inovação', cls: 'key' },
-      { text: 'na', cls: '' },
-      { text: 'comunicação,', cls: '' },
-      { text: 'e', cls: '' },
-      { text: 'uma', cls: '' },
-      { text: 'vida', cls: '' },
-      { text: 'de', cls: '' },
-      { text: 'entusiasmo', cls: '' },
-      { text: 'tecnológico:', cls: '' },
-      { text: 'conectando', cls: '' },
-      { text: 'marcas', cls: '' },
-      { text: 'às', cls: '' },
-      { text: 'revoluções', cls: 'key' },
-      { text: 'que', cls: '' },
-      { text: 'transformam', cls: '' },
-      { text: 'a', cls: '' },
-      { text: 'sociedade.', cls: '' }
-    ];
-
-    const manifestoEl = document.getElementById('manifestoText');
-    manifestoEl.innerHTML = '';
-    manifestoRaw.forEach((w) => {
-      const span = document.createElement('span');
-      span.className = 'word' + (w.cls ? ' ' + w.cls : '');
-      span.textContent = w.text;
-      manifestoEl.appendChild(span);
-      manifestoEl.appendChild(document.createTextNode(' '));
-    });
-
-    // cria UMA máscara por linha visual em qualquer título (mede o wrap; recalcula no resize)
-    function buildLineMasks(el) {
-      el.querySelectorAll('.line-mask').forEach(n => n.remove());
-      const base = el.getBoundingClientRect();
-      if (!base.width) return;
-      const range = document.createRange();
-      range.selectNodeContents(el);
-      const rects = [...range.getClientRects()].filter(r => r.width > 1 && r.height > 1);
-      const lines = [];
-      rects.forEach(r => {
-        const g = lines.find(L => Math.abs(L.top - r.top) < r.height * 0.6);
-        if (!g) lines.push({ top: r.top, bottom: r.bottom, left: r.left, right: r.right });
-        else { g.top = Math.min(g.top, r.top); g.bottom = Math.max(g.bottom, r.bottom); g.left = Math.min(g.left, r.left); g.right = Math.max(g.right, r.right); }
-      });
-      lines.sort((a, b) => a.top - b.top);
-      lines.forEach((L, i) => {
-        const m = document.createElement('span');
-        m.className = 'line-mask';
-        m.style.left = (L.left - base.left - 4) + 'px';
-        m.style.top = (L.top - base.top - 3) + 'px';
-        m.style.width = (L.right - L.left + 8) + 'px';
-        m.style.height = (L.bottom - L.top + 6) + 'px';
-        m.style.setProperty('--d', (i * 0.09) + 's');
-        el.appendChild(m);
-      });
-    }
-
-    // alvos: manifesto + todos os títulos de seção + headline do contato
-    const revealTargets = [document.getElementById('manifestoText')]
-      .concat([...document.querySelectorAll('.section-title, .contact-headline')])
-      .filter(Boolean);
-
-    const lineRevealObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('revealed'); lineRevealObs.unobserve(e.target); }
-      });
-    }, { threshold: 0.45 });
-
-    (function initLineReveal() {
-      const buildAll = () => revealTargets.forEach(buildLineMasks);
-      const start = () => { buildAll(); revealTargets.forEach(el => lineRevealObs.observe(el)); };
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
-      else start();
-      let rsz;
-      window.addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(buildAll, 200); });
-    })();
-
-    // ── Contact form (Web3Forms) ───────────────────────────
-    // A access key vem de config.js (window.WEB3FORMS_KEY). Edite lá, não aqui.
-    const WEB3FORMS_KEY = window.WEB3FORMS_KEY || 'COLE_SUA_ACCESS_KEY_AQUI';
-
-    document.getElementById('contactForm').addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const form = this;
-      const btn = form.querySelector('.btn-submit span');
-      const status = document.getElementById('formStatus');
-      const original = btn.textContent;
-      const setStatus = (msg, kind) => {
-        status.textContent = msg;
-        status.className = 'form-status show' + (kind ? ' ' + kind : '');
-      };
-
-      btn.textContent = 'Enviando…';
-      status.className = 'form-status';
-
-      try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_KEY,
-            subject: 'Contato via site — ' + document.getElementById('name').value,
-            from_name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value,
-          }),
-        });
-        const data = await res.json();
-        if (data.success) {
-          setStatus('Mensagem enviada — obrigado! Retorno em breve.', 'ok');
-          form.reset();
-        } else {
-          throw new Error(data.message || 'Falha no envio');
-        }
-      } catch (err) {
-        setStatus('Não consegui enviar agora. Tente novamente ou escreva direto para thiagoazeni@gmail.com.', 'err');
-      } finally {
-        btn.textContent = original;
-      }
-    });
-
-    // ── Parallax ───────────────────────────────────────────
-    // Desativa em mobile (sem hover / touch = sem necessidade)
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isMobile = window.innerWidth < 768;
-
-    const heroVideo = document.getElementById('hero-video');
-
-    // Mobile: autoplay+loop passivo (sem scrubbing — causa travamento)
-    // Desktop: parado no frame 0, scrubbing por scroll
-    const awardsVideo = document.getElementById('awards-video');
-    if (isMobile && !prefersReduced) {
-      // Hero: crossfade loop com double-buffering
-      if (heroVideo) {
-        const FADE = 0.5;
-        const clone = document.createElement('video');
-        clone.src = '/videos/perfil-360-m.mp4';
-        clone.muted = true;
-        clone.setAttribute('playsinline', '');
-        clone.setAttribute('preload', 'auto');
-        clone.poster = heroVideo.poster;
-        clone.className = 'hero-video-clone';
-        heroVideo.parentNode.appendChild(clone);
-
-        let a = heroVideo, b = clone, xfading = false;
-
-        function heroSwap(from, to) {
-          if (xfading) return;
-          xfading = true;
-          to.currentTime = 0;
-          // só troca quando o outro buffer realmente tocar; se falhar, o atual segue em loop
-          to.play().then(() => {
-            to.style.opacity = '1';
-            from.style.opacity = '0';
-            setTimeout(() => {
-              from.pause();
-              from.currentTime = 0;
-              a = to; b = from;
-              xfading = false;
-            }, FADE * 1000);
-          }).catch(() => { from.currentTime = 0; from.play().catch(() => { }); xfading = false; });
-        }
-
-        function onHeroTimeUpdate() {
-          if (this === a && this.duration && this.currentTime >= this.duration - FADE) {
-            heroSwap(a, b);
-          }
-        }
-
-        heroVideo.addEventListener('timeupdate', onHeroTimeUpdate);
-        clone.addEventListener('timeupdate', onHeroTimeUpdate);
-        heroVideo.play().catch(() => { });
-      }
-
-      // Awards: loop só quando visível (economiza dados e bateria)
-      if (awardsVideo) {
-        awardsVideo.loop = true;
-        new IntersectionObserver(([e]) => {
-          if (e.isIntersecting) awardsVideo.play().catch(() => { }); else awardsVideo.pause();
-        }, { threshold: 0.2 }).observe(awardsVideo);
-      }
-    } else if (!isMobile) {
-      if (awardsVideo) awardsVideo.preload = 'auto';
-      if (heroVideo) {
-        heroVideo.addEventListener('loadedmetadata', () => { heroVideo.currentTime = 0; });
-      }
-      if (awardsVideo) {
-        awardsVideo.addEventListener('loadedmetadata', () => { awardsVideo.currentTime = 0; });
-      }
-    }
-
-    if (!prefersReduced && !isMobile) {
-      const heroBgVideo = heroVideo;
-      const heroContent = document.querySelector('.hero-content');
-      const heroScroll = document.querySelector('.hero-scroll');
-      const manifestoDeco = document.querySelector('.manifesto-deco');
-      const aboutPhoto = document.querySelector('.about-photo-wrap');
-      const awVid = awardsVideo;
-
-      // Guarda os offsets de cada seção para cálculo local
-      function getSectionOffset(el) {
-        let top = 0;
-        while (el) { top += el.offsetTop; el = el.offsetParent; }
-        return top;
-      }
-
-      let ticking = false;
-
-      function applyParallax() {
-        const sy = window.scrollY;
-        const vh = window.innerHeight;
-
-        // ① Scrubbing: mapeia os 200vh do pin wrapper → currentTime do vídeo
-        //    Para de atualizar após o scrub para evitar flickering no loop boundary
-        if (heroBgVideo && heroBgVideo.readyState >= 2 && heroBgVideo.duration) {
-          const scrubRange = vh * 2;
-          if (sy <= scrubRange) {
-            heroBgVideo.currentTime = (sy / scrubRange) * heroBgVideo.duration;
-          }
-        }
-
-        // ② Hero content — fadeout suave ao sair da zona de pin
-        if (heroContent) {
-          const fadeStart = vh * 2;          // começa a sair depois do scrub
-          const rel = sy - fadeStart;
-          heroContent.style.transform = rel > 0
-            ? `translateY(${rel * 0.10}px)` : '';
-        }
-
-        // ③ Hero scroll indicator — desaparece mais rápido
-        if (heroScroll) {
-          heroScroll.style.opacity = Math.max(0, 1 - sy / (vh * 0.3));
-        }
-
-        // ④ Manifesto deco — move para cima mais devagar que o conteúdo
-        if (manifestoDeco) {
-          const sec = document.getElementById('manifesto');
-          const secTop = sec.offsetTop;
-          const rel = sy - secTop + vh;
-          if (rel > 0 && rel < sec.offsetHeight + vh) {
-            manifestoDeco.style.transform = `translateY(${rel * -0.12}px)`;
-          }
-        }
-
-        // ⑤ About photo — sobe mais devagar que o texto ao lado
-        if (aboutPhoto) {
-          const sec = document.getElementById('about');
-          const secTop = sec.offsetTop;
-          const rel = sy - secTop + vh;
-          if (rel > 0 && rel < sec.offsetHeight + vh) {
-            aboutPhoto.style.transform = `translateY(${rel * -0.07}px)`;
-          }
-        }
-
-        // ⑥ Awards video — scrubbing baseado na passagem do elemento pela viewport
-        if (awVid && awVid.readyState >= 2 && awVid.duration) {
-          const elTop = awVid.closest('.awards-photo').offsetTop;
-          const elH = awVid.closest('.awards-photo').offsetHeight;
-          // 0 = elemento entra pela base da viewport; 1 = sai pelo topo
-          const start = elTop - vh;
-          const end = elTop + elH;
-          const progress = Math.max(0, Math.min(1, (sy - start) / (end - start)));
-          awVid.currentTime = progress * Math.min(awVid.duration, 6);
-        }
-
-        ticking = false;
-      }
-
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          requestAnimationFrame(applyParallax);
-          ticking = true;
-        }
-      }, { passive: true });
-
-      // Roda uma vez no carregamento
-      applyParallax();
-    }
-
-    // ── Cases grid — stagger reveal ────────────────────────
-    document.querySelectorAll('.case-grid-card').forEach((card, i) => {
-      card.style.transitionDelay = (i * 0.08) + 's';
-    });
-
-    // ── Smooth scroll ──────────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          if (window.lenis) window.lenis.scrollTo(target);
-          else target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-
-    // ── Fundo topográfico poligonal (morph orgânico) ───────
-    function buildTopo(container, seed, cx, cy) {
-      let s = seed; const rnd = () => { s = Math.sin(s * 99991) * 1e4; return s - Math.floor(s); };
-      const verts = 16, sig = [], phase = [];
-      for (let v = 0; v < verts; v++) { sig.push(0.5 + rnd() * 0.95); phase.push(rnd() * 6.283); }
-      const NS = 'http://www.w3.org/2000/svg', rings = 13, paths = [];
-      const svg = document.createElementNS(NS, 'svg');
-      svg.setAttribute('class', 'topo-svg');
-      svg.setAttribute('viewBox', '0 0 1280 760');
-      svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
-      for (let i = 1; i <= rings; i++) {
-        const pth = document.createElementNS(NS, 'path');
-        pth.setAttribute('fill', 'none');
-        pth.setAttribute('stroke', '#ffffff');
-        pth.setAttribute('stroke-width', '1');
-        pth.setAttribute('stroke-opacity', (0.022 + i * 0.002).toFixed(4));
-        svg.appendChild(pth); paths.push(pth);
-      }
-      container.appendChild(svg);
-      return function (t) {
-        for (let i = 1; i <= rings; i++) {
-          const base = i * 36, pts = [];
-          for (let v = 0; v < verts; v++) {
-            const a = v / verts * 6.283;
-            const osc = 1 + 0.055 * Math.sin(t * 0.00035 + phase[v] + i * 0.13);
-            const rad = base * sig[v] * osc;
-            pts.push((cx + Math.cos(a) * rad).toFixed(1) + ',' + (cy + Math.sin(a) * rad).toFixed(1));
-          }
-          paths[i - 1].setAttribute('d', 'M' + pts.join('L') + 'Z');
-        }
-      };
-    }
-    (function initTopo() {
-      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const items = [];
-      document.querySelectorAll('[data-topo]').forEach((sec, idx) => {
-        const div = document.createElement('div'); div.className = 'topo-bg';
-        sec.insertBefore(div, sec.firstChild);
-        const frame = buildTopo(div, 7 + idx * 3, 980, 300);
-        frame(0);
-        items.push({ sec, frame, visible: false });
-      });
-      if (reduced || !items.length) return;
-      const io = new IntersectionObserver(es => es.forEach(e => {
-        const it = items.find(x => x.sec === e.target); if (it) it.visible = e.isIntersecting;
-      }));
-      items.forEach(it => io.observe(it.sec));
-      function loop(t) { for (const it of items) if (it.visible) it.frame(t); requestAnimationFrame(loop); }
-      requestAnimationFrame(loop);
-    })();
-
-    // Coverflow do Laboratório: implementado em WebGL (OGL) no <script type="module"> ao fim do body.
-  </script>
-
-  <!-- ══════════════════════════════════════════════════════
-       COVERFLOW WEBGL (Laboratório) — OGL
-  ══════════════════════════════════════════════════════════ -->
-  <script type="module">
-  (async function () {
-    const root = document.getElementById('lab-coverflow');
-    if (!root || window.innerWidth < 880) return;
-    let OGL;
-    try { OGL = await import('https://esm.sh/ogl@1.0.11'); }
-    catch (e) { console.warn('OGL falhou ao carregar', e); return; }
-    const { Renderer, Camera, Transform, Plane, Mesh, Program, Texture } = OGL;
-
-    const cards = [...root.querySelectorAll('.case-grid-card')];
-    const items = cards.map(c => ({
-      src: c.querySelector('.lab-thumb img')?.getAttribute('src'),
-      title: c.querySelector('.cgc-client')?.textContent.trim(),
-      year: c.querySelector('.cgc-year')?.textContent.trim(),
-      agency: c.querySelector('.cgc-agency')?.textContent.trim(),
-      tags: [...c.querySelectorAll('.case-tag')].map(t => t.textContent.trim()),
-      desc: c.querySelector('.cgc-desc')?.textContent.trim(),
-      href: c.tagName === 'A' ? c.getAttribute('href') : null,
-      cta: c.querySelector('.cgc-cta')?.textContent.trim()
-    })).filter(it => it.src);
-    if (items.length < 2) return;
-
-    root.classList.add('cf-gl');
-    root.innerHTML = '<div class="cf-gl-stage"></div><div class="cf-gl-info"></div><div class="cf-gl-nav"></div><div class="cf-gl-thumbs"></div>';
-    const stage = root.querySelector('.cf-gl-stage');
-    const info = root.querySelector('.cf-gl-info');
-    const navWrap = root.querySelector('.cf-gl-nav');
-    const thumbsWrap = root.querySelector('.cf-gl-thumbs');
-
-    const vertex = `
-      attribute vec3 position; attribute vec2 uv;
-      uniform mat4 modelViewMatrix; uniform mat4 projectionMatrix; uniform float uSpeed; uniform float uPW; uniform float uR;
-      varying vec2 vUv;
-      void main(){ vUv = uv; vec3 p = position;
-        float xw = position.x * uPW;       // x local escalado (largura do card)
-        float th = xw / uR;                // ângulo do vértice no arco
-        p.x = (uR * sin(th)) / uPW;        // curva o card acompanhando a circunferência (bend)
-        p.z = (uR * cos(th) - uR);
-        p.z += sin(uv.x * 3.14159265) * uSpeed * 3.0;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
-    const fragment = `
-      precision highp float;
-      uniform sampler2D tMap; uniform vec2 uImg; uniform vec2 uPlane; uniform float uActive; uniform float uVis;
-      varying vec2 vUv;
-      float sdRound(vec2 p, vec2 b, float r){ vec2 d = abs(p) - b + r; return min(max(d.x, d.y), 0.0) + length(max(d, 0.0)) - r; }
-      void main(){
-        vec2 r = vec2(min((uPlane.x/uPlane.y)/(uImg.x/uImg.y),1.0), min((uPlane.y/uPlane.x)/(uImg.y/uImg.x),1.0));
-        vec2 uv = (vUv - 0.5) * r + 0.5;
-        vec3 col = texture2D(tMap, uv).rgb;
-        col *= mix(0.4, 1.0, uActive);
-        vec2 pp = (vUv - 0.5) * uPlane;
-        float d = sdRound(pp, uPlane * 0.5, 0.16);
-        float alpha = (1.0 - smoothstep(0.0, 0.018, d)) * uVis;
-        gl_FragColor = vec4(col, alpha); }`;
-
-    const renderer = new Renderer({ alpha: true, dpr: Math.min(devicePixelRatio, 2) });
-    const gl = renderer.gl;
-    stage.appendChild(gl.canvas);
-    const camera = new Camera(gl, { fov: 50 });
-    camera.position.z = 5.5;
-    const scene = new Transform();
-    scene.rotation.z = Math.PI / 180 * 12;   // gira o componente inteiro 12° anti-horário no plano da tela
-    // pivô do bambolê: posicionado NO CENTRO do anel (z = -R) para que as inclinações
-    // X/Y girem em torno do centro da "esfera", não da face frontal.
-    // rotation.y = 12° fixo; rotation.x dinâmico (-10°..+10° com a rolagem) — ver no frame()
-    const pivot = new Transform();
-    pivot.setParent(scene);
-    pivot.rotation.y = Math.PI / 180 * 12;
-    const geometry = new Plane(gl, { widthSegments: 24, heightSegments: 1 });
-
-    // BAMBOLÊ 360°: cards curvados que se juntam num círculo liso e rotacionam no eixo central
-    const PW = 4.05, PH = 2.25, OFFSET_X = 1.35;
-    const REP = 2;                               // cada projeto repetido no anel → curva suave por card + círculo cheio
-    const ring = [];
-    for (let r = 0; r < REP; r++) items.forEach((it, pi) => ring.push({ src: it.src, proj: pi }));
-    const N = ring.length;
-    const ANGLE = (2 * Math.PI) / N;            // ângulo (pequeno) de cada card no anel
-    const R = (PW / ANGLE) * 1.09;              // raio: leve folga → pequeno espaço entre os cards
-    pivot.position.set(OFFSET_X, 0, -R);        // origem do pivô = centro do anel (a frente do anel volta para z≈0 em mundo)
-    const smoothstep = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-
-    const medias = ring.map((it) => {
-      const program = new Program(gl, { vertex, fragment, transparent: true, cullFace: false, uniforms: {
-        tMap: { value: new Texture(gl) }, uSpeed: { value: 0 }, uActive: { value: 0 }, uVis: { value: 1 },
-        uImg: { value: [1, 1] }, uPlane: { value: [PW, PH] }, uPW: { value: PW }, uR: { value: R }
-      } });
-      const img = new Image(); img.crossOrigin = 'anonymous'; img.src = it.src;
-      img.onload = () => { program.uniforms.tMap.value.image = img; program.uniforms.uImg.value = [img.naturalWidth, img.naturalHeight]; };
-      const mesh = new Mesh(gl, { geometry, program });
-      mesh.scale.set(PW, PH, 1);
-      mesh.setParent(pivot);
-      return { mesh, program };
-    });
-
-    const scroll = { current: 0, target: 0, last: 0, ease: 0.09 };
-    let speed = 0, centerIdx = -1;
-    // leva o projeto pi à frente, escolhendo a cópia mais próxima no anel
-    function goProj(pi) {
-      const cur = ((scroll.target % N) + N) % N;
-      let best = scroll.target, bestAbs = Infinity;
-      for (let r = 0; r < REP; r++) {
-        const k = pi + r * items.length;
-        let d = k - cur; if (d > N / 2) d -= N; if (d < -N / 2) d += N;
-        if (Math.abs(d) < bestAbs) { bestAbs = Math.abs(d); best = scroll.target + d; }
-      }
-      scroll.target = Math.round(best);
-    }
-
-    const mkBtn = (label, fn) => { const b = document.createElement('button'); b.textContent = label; b.addEventListener('click', fn); navWrap.appendChild(b); };
-    mkBtn('‹', () => { scroll.target -= 1; });
-    mkBtn('›', () => { scroll.target += 1; });
-    items.forEach((it, i) => {
-      const t = document.createElement('button'); t.className = 'cf-gl-thumb';
-      t.innerHTML = '<img src="' + it.src + '" alt="">';
-      t.addEventListener('click', () => goProj(i));
-      thumbsWrap.appendChild(t);
-    });
-
-    function resize() { const w = stage.clientWidth, h = stage.clientHeight; renderer.setSize(w, h); camera.perspective({ aspect: w / h }); }
-    resize(); window.addEventListener('resize', resize);
-
-    stage.addEventListener('wheel', e => { scroll.target += (e.deltaY + e.deltaX) * 0.0016; }, { passive: true });
-    let down = false, sx = 0, ss = 0, moved = false;
-    stage.addEventListener('pointerdown', e => { down = true; sx = e.clientX; ss = scroll.target; moved = false; stage.classList.add('grabbing'); });
-    window.addEventListener('pointermove', e => { if (!down) return; if (Math.abs(e.clientX - sx) > 4) moved = true; scroll.target = ss + (sx - e.clientX) * 0.0055; });
-    window.addEventListener('pointerup', () => { if (!down) return; down = false; stage.classList.remove('grabbing'); scroll.target = Math.round(scroll.target); });
-
-    function setInfo(i) {
-      const it = items[i];
-      info.innerHTML = '<div class="cgc-top"><span class="cgc-year">' + (it.year || 'Autoral') + '</span><span class="cgc-agency">' + (it.agency || '') + '</span></div>'
-        + '<h3 class="cgc-client">' + it.title + '</h3>'
-        + '<div class="case-tags">' + it.tags.map(t => '<span class="case-tag">' + t + '</span>').join('') + '</div>'
-        + '<p class="cgc-desc">' + (it.desc || '') + '</p>'
-        + (it.href ? '<a href="' + it.href + '" target="_blank" rel="noopener" class="cgc-cta">' + (it.cta || 'Ver projeto →') + '</a>' : '');
-      [...thumbsWrap.children].forEach((t, k) => t.classList.toggle('on', k === i));
-    }
-
-    function frame() {
-      scroll.current += (scroll.target - scroll.current) * scroll.ease;
-      speed += ((scroll.current - scroll.last) - speed) * 0.3;
-      scroll.last = scroll.current;
-      medias.forEach((m, i) => {
-        let an = (i - scroll.current) * ANGLE;
-        an = Math.atan2(Math.sin(an), Math.cos(an));     // normaliza p/ [-π, π]
-        const ax = Math.abs(an);
-        m.mesh.position.x = R * Math.sin(an);            // posição no anel (relativa ao centro = origem do pivô)
-        m.mesh.position.z = R * Math.cos(an);            // centro do anel na origem do pivô
-        m.mesh.rotation.y = an;                          // tangente ao círculo
-        m.program.uniforms.uActive.value = (Math.cos(an) + 1) * 0.5;   // 1 na frente, escurece em direção ao fundo
-        m.program.uniforms.uVis.value = 1.0;                           // anel oco: os cards do fundo aparecem (verso espelhado)
-        m.program.uniforms.uSpeed.value = speed;
-      });
-      const ci = ((Math.round(scroll.current) % N) + N) % N;
-      const proj = ring[ci].proj;
-      if (proj !== centerIdx) { centerIdx = proj; setInfo(proj); }
-      // eixo X dinâmico: varia -10°..+10° conforme a posição vertical da vitrine na tela (rolagem)
-      const rc = root.getBoundingClientRect();
-      let tt = ((rc.top + rc.height / 2) - window.innerHeight / 2) / (window.innerHeight / 2);
-      tt = Math.max(-1, Math.min(1, tt));
-      pivot.rotation.x = tt * (Math.PI / 18);
-      renderer.render({ scene, camera });
-      requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  })();
-  </script>
-
-  <script>
-  // CTA na zona do polegar (mobile): aparece depois do hero, some no contato e com o menu aberto
-  (function () {
-    const cta = document.getElementById('thumb-cta');
-    const hero = document.getElementById('hero');
-    const contact = document.getElementById('contact');
-    if (!cta || !hero || !contact || !('IntersectionObserver' in window)) return;
-    let pastHero = false, atContact = false;
-    // invisível = fora do Tab e do leitor de tela
-    const sync = () => { const on = cta.classList.contains('show') && !cta.classList.contains('reading'); cta.inert = !on; if (on) cta.removeAttribute('aria-hidden'); else cta.setAttribute('aria-hidden', 'true'); };
-    sync();
-    const update = () => {
-      const menuOpen = document.body.classList.contains('menu-open');
-      cta.classList.toggle('show', pastHero && !atContact && !menuOpen);
-      sync();
-    };
-    new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.top < 0; update(); }).observe(hero);
-    new IntersectionObserver(([e]) => { atContact = e.isIntersecting; update(); }, { rootMargin: '0px 0px -20% 0px' }).observe(contact);
-    new MutationObserver(update).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    // Lendo (rolando para baixo) o CTA recolhe para não cobrir texto; volta ao subir ou ao parar
-    let prevY = window.scrollY, idle;
-    window.addEventListener('scroll', () => {
-      const d = window.scrollY - prevY; prevY = window.scrollY;
-      if (d < -2) { cta.classList.remove('reading'); sync(); return; }
-      if (d <= 2) return;                             // cauda da inércia do Lenis não conta como leitura
-      cta.classList.add('reading'); sync();
-      clearTimeout(idle); idle = setTimeout(() => { cta.classList.remove('reading'); sync(); }, 700);
-    }, { passive: true });
-  })();
-  </script>
+      </footer>
+    </section>
+  </main>
+
+  <a class="thumb-cta" id="thumb-cta" href="#contact">Fale comigo</a>
+
+  <noscript>
+    <style>
+      .loader, .cursor, .hero-gl { display: none !important }
+    </style>
+  </noscript>
+
+  <script src="/config.js"></script>
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/SplitText.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script src="site.js"></script>
 </body>
 
 </html>
