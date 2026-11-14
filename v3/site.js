@@ -168,7 +168,7 @@
       canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
       gl.viewport(0, 0, canvas.width, canvas.height);
       var a = state.aspect || 1.22;
-      if (small()) { scale = (W * 1.3) / a; cxp = W * 0.5; cyp = H * 0.1 + scale * 0.5; }
+      if (small()) { scale = (W * 1.24) / a; cxp = W * 0.5; cyp = H * 0.075 + scale * 0.5; }
       else { scale = Math.min(H * 1.04, (W * 0.72) / a); cxp = W * 0.715; cyp = H - scale * 0.5; }
     }
 
@@ -222,7 +222,7 @@
     tl.from('.hero-word', { yPercent: 112, duration: 1.5, stagger: 0.12 }, 0.1)
       .from('.hero-kicker span', { opacity: 0, y: 14, duration: 1, stagger: 0.07 }, 0.5)
       .from('.hero-foot', { opacity: 0, y: 20, duration: 1.2 }, 0.75)
-      .from('.hero-scroll', { opacity: 0, duration: 1 }, 1.1)
+      .add(function () { $$('.hero-line').forEach(function (l) { l.classList.add('is-done'); }); }, 1.9)
       .fromTo('.nav', { opacity: 0 }, { opacity: 1, duration: 1.2, clearProps: 'opacity' }, 0.6);
     if (portrait) tl.to(portrait.state, { intro: 1, duration: 3, ease: 'power2.out' }, 0);
   }
@@ -242,8 +242,9 @@
         .add(heroIntro, 0.25)
         .add(function () { el.remove(); if (lenis) lenis.start(); ScrollTrigger.refresh(); }, 1.05);
     }
-    gsap.to(o, { y: 2026, duration: seen ? 0.7 : 1.7, ease: 'power2.inOut', onUpdate: function () { yearEl.textContent = Math.round(o.y); }, onComplete: function () { counted = true; finish(); } });
-    gsap.to(bar, { scaleX: 1, duration: seen ? 0.7 : 1.7, ease: 'power2.inOut' });
+    var t1 = gsap.to(o, { y: 2026, duration: seen ? 0.7 : 1.7, ease: 'power2.inOut', onUpdate: function () { yearEl.textContent = Math.round(o.y); }, onComplete: function () { counted = true; finish(); } });
+    var t2 = gsap.to(bar, { scaleX: 1, duration: seen ? 0.7 : 1.7, ease: 'power2.inOut' });
+    el.addEventListener('pointerdown', function () { t1.timeScale(8); t2.timeScale(8); }, { once: true });
     var imgReady = new Promise(function (res) { if (!portrait || portrait.state.ready) return res(); portrait.onready = res; });
     Promise.all([fontsReady, imgReady]).then(function () { ready = true; finish(); });
     setTimeout(function () { ready = true; finish(); }, 3500);
@@ -369,7 +370,6 @@
     }
     items.forEach(function (item) {
       var head = $('.case-head', item);
-      head.setAttribute('data-cursor', 'abrir');
       head.addEventListener('click', function () {
         var willOpen = !item.classList.contains('is-open');
         items.forEach(function (o) { if (o !== item) toggle(o, false); });
@@ -394,7 +394,8 @@
     });
     var visible = false, vel = 0;
     new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { rootMargin: '20% 0px' }).observe($('#brands'));
-    window.addEventListener('resize', function () { rows.forEach(function (r) { r.w = r.set.getBoundingClientRect().width || r.w; }); });
+    function remeasure() { rows.forEach(function (r) { r.w = r.set.getBoundingClientRect().width || r.w; }); }
+    window.addEventListener('resize', remeasure); fontsReady.then(remeasure); window.addEventListener('load', remeasure);
     gsap.ticker.add(function (t, dt) {
       if (!visible) return;
       var v = lenis ? lenis.velocity : 0;
@@ -481,6 +482,30 @@
     }
   })();
 
+  /* ───────── Still-lifes vivos: vídeo em loop sobre a imagem, só perto da tela ───────── */
+  (function liveStills() {
+    var figs = $$('[data-video]');
+    if (!figs.length || CALM || !('IntersectionObserver' in window)) return;
+    var conn = navigator.connection; if (conn && conn.saveData) return;
+    var vo = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) {
+        var fig = en.target, v = fig._v;
+        if (en.isIntersecting) {
+          if (!v) {
+            v = document.createElement('video');
+            v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+            v.setAttribute('aria-hidden', 'true'); v.preload = 'auto'; v.className = 'live';
+            v.addEventListener('playing', function () { v.classList.add('is-on'); }, { once: true });
+            v.src = fig.getAttribute('data-video');
+            fig.appendChild(v); fig._v = v;
+          }
+          var pr = v.play(); if (pr && pr.catch) pr.catch(function () { });
+        } else if (v) v.pause();
+      });
+    }, { rootMargin: '0px 60% 0px 60%', threshold: 0.01 });
+    figs.forEach(function (f) { vo.observe(f); });
+  })();
+
   /* ───────── Prêmios: vídeo só quando visível ───────── */
   (function awards() {
     var v = $('#awards-video'); if (!v || CALM || !('IntersectionObserver' in window)) return;
@@ -493,7 +518,7 @@
   /* ───────── Navegação ───────── */
   (function nav() {
     var nav = $('#nav'), burger = $('#burger'), menu = $('#menu'), bar = $('#progress-bar'), thumb = $('#thumb-cta');
-    var lastY = 0, contactTop = Infinity;
+    var lastY = 0, prevY = 0, thumbUp = false, contactTop = Infinity;
     function measure() { var c = $('#contact'); if (c) contactTop = c.getBoundingClientRect().top + window.scrollY; }
     measure(); window.addEventListener('resize', measure); setInterval(measure, 2000);
 
@@ -505,7 +530,11 @@
       if (y < lastY - 2) nav.classList.remove('is-hidden');
       lastY = y;
       if (bar) bar.style.transform = 'scaleY(' + (max > 0 ? Math.min(1, y / max) : 0).toFixed(4) + ')';
-      if (thumb) thumb.classList.toggle('show', y > window.innerHeight * 1.2 && y < contactTop - window.innerHeight * 0.55 && !menu.classList.contains('is-open'));
+      if (thumb) {
+        if (y < prevY - 4) thumbUp = true; else if (y > prevY + 4) thumbUp = false;
+        prevY = y;
+        thumb.classList.toggle('show', thumbUp && y > window.innerHeight * 1.2 && y < contactTop - window.innerHeight * 0.55 && !menu.classList.contains('is-open'));
+      }
     }
     window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
