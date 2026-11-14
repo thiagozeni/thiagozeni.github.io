@@ -581,6 +581,10 @@ html:not(.js) .linha, .calm .linha { overflow-x: auto }
   transition: color .35s, -webkit-text-stroke-color .35s;
 }
 .brands-set span::after { content: '/'; -webkit-text-stroke: 0; color: var(--lime); margin-left: .32em; font-weight: 300 }
+.brands-set span.is-logo { display: inline-flex; align-items: center }
+.brands-set span.is-logo img { display: block; height: calc(.72em * var(--k, 1)); width: auto; max-width: none; opacity: .86; transition: opacity .35s; user-select: none }
+.brands-row:nth-child(2) .brands-set span.is-logo img { opacity: .62 }
+@media (hover: hover) { .brands-set span.is-logo:hover img { opacity: 1 } }
 .brands-row:nth-child(2) .brands-set span { -webkit-text-stroke-color: rgba(242, 242, 242, .5) }
 @media (hover: hover) { .brands-set span:hover { color: var(--lime); -webkit-text-stroke-color: var(--lime) } }
 html:not(.js) .brands-row, .calm .brands-row { flex-wrap: wrap; white-space: normal; padding-inline: var(--gut) }
