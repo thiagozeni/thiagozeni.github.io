@@ -277,6 +277,9 @@ img, video { max-width: 100%; display: block }
 .shot img { width: 100%; height: auto; transition: transform 1.4s var(--ease) }
 .shot:hover img { transform: scale(1.02) }
 .shot figcaption, .case-studio-caption { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .04em; line-height: 1.6; color: var(--muted) }
+.shot--concept { background: #000 }
+.shot--concept figcaption { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap }
+.shot--concept figcaption span { color: var(--faint); text-transform: uppercase; letter-spacing: .08em; color: #6f716a }
 .shot figcaption { padding: .9rem 1.1rem; border-top: 1px solid var(--border2); position: relative; background: var(--black) }
 .case-studio-photo { width: 100%; margin-top: clamp(2rem, 5vh, 3.5rem); border: 1px solid var(--border2) }
 .case-studio-caption { margin-top: .8rem }
