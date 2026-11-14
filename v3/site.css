@@ -570,7 +570,9 @@ html:not(.js) .linha, .calm .linha { overflow-x: auto }
 
 /* ───────── Marcas ───────── */
 .brands { padding-block: clamp(4rem, 10vh, 7rem) clamp(5rem, 13vh, 9rem); overflow: hidden; background: var(--deep); border-block: 1px solid var(--border2) }
-.brands .eyebrow { margin-bottom: clamp(2rem, 5vh, 3.5rem) }
+.brands .eyebrow { margin-bottom: 1.25rem }
+.brands-head { margin-bottom: clamp(2.25rem, 6vh, 4rem) }
+.brands-head .h2 { font-size: clamp(1.75rem, 3.6vw, 3.25rem) }
 .brands-row { display: flex; white-space: nowrap; will-change: transform }
 .brands-set { display: flex; flex: none; align-items: center }
 .brands-set span {
@@ -583,7 +585,6 @@ html:not(.js) .linha, .calm .linha { overflow-x: auto }
 .brands-set span::after { content: '/'; -webkit-text-stroke: 0; color: var(--lime); margin-left: .32em; font-weight: 300 }
 .brands-set span.is-logo { display: inline-flex; align-items: center }
 .brands-set span.is-logo img { display: block; height: calc(.72em * var(--k, 1)); width: auto; max-width: none; opacity: .86; transition: opacity .35s; user-select: none }
-.brands-row:nth-child(2) .brands-set span.is-logo img { opacity: .62 }
 @media (hover: hover) { .brands-set span.is-logo:hover img { opacity: 1 } }
 .brands-row:nth-child(2) .brands-set span { -webkit-text-stroke-color: rgba(242, 242, 242, .5) }
 @media (hover: hover) { .brands-set span:hover { color: var(--lime); -webkit-text-stroke-color: var(--lime) } }

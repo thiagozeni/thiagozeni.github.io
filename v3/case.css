@@ -179,7 +179,7 @@ img, video { max-width: 100%; display: block }
 .case-section > * { grid-column: 2; min-width: 0 }
 .case-section > .section-label {
   grid-column: 1; grid-row: 1 / span 30; align-self: start; position: sticky; top: calc(var(--nav-h) + 1.5rem);
-  font-family: var(--font-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); line-height: 1.5;
+  font-family: var(--font-mono); font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); line-height: 1.5;
 }
 .section-label::before { content: counter(sec, decimal-leading-zero); display: block; color: var(--lime); margin-bottom: .6rem }
 .section-label::after { content: ''; display: block; width: 2.25rem; height: 1px; background: var(--lime); opacity: .6; margin-top: .9rem }
@@ -221,7 +221,7 @@ img, video { max-width: 100%; display: block }
   font-family: var(--font-display); font-weight: 700; font-size: 1.0625rem; letter-spacing: -.02em; line-height: 1.25; color: var(--white); margin-bottom: .7rem;
 }
 .timeline-milestone { font-size: clamp(1.35rem, 2.2vw, 1.85rem); letter-spacing: -.04em }
-.frente-desc, .module-desc, .pillar-desc, .persona-desc, .feature-desc, .role-desc, .timeline-desc, .channel-card p { font-size: .9375rem; line-height: 1.6; color: #b4b6ad; margin: 0 }
+.frente-desc, .module-desc, .pillar-desc, .persona-desc, .feature-desc, .role-desc, .timeline-desc, .channel-card p { font-size: 1rem; line-height: 1.65; color: #c6c8bf; margin: 0 }
 .persona-targeting { font-family: var(--font-mono); font-size: .75rem; line-height: 1.6; letter-spacing: .03em; color: var(--lime); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border2) }
 .feature-icon { display: none }
 .features-grid { counter-reset: feat }

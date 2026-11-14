@@ -289,7 +289,11 @@
     var io = new IntersectionObserver(function (ents) {
       ents.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
     }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
-    revealEls.forEach(function (e) { io.observe(e); });
+    /* a foto do Sobre revela antes de entrar na tela, para a moldura nunca aparecer vazia */
+    var ioEarly = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); ioEarly.unobserve(en.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px 30% 0px' });
+    revealEls.forEach(function (e) { (e.getAttribute('data-reveal') === 'photo' ? ioEarly : io).observe(e); });
   }
 
   if (!CALM) {
