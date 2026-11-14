@@ -98,6 +98,8 @@ img, video { max-width: 100%; display: block }
 .h-title .line { overflow: hidden; padding-block: .06em .1em; margin-block: -.06em -.1em }
 
 .case-lead { font-size: clamp(1.0625rem, 1.35vw, 1.3125rem); line-height: 1.55; color: var(--soft); max-width: 40rem }
+/* O fio fica no plano do fundo: ao descer com a imagem, passa por trás do texto */
+.hero-bottom .case-lead { background: var(--black); box-shadow: calc(var(--gut) * -1) 0 0 0 var(--black), 0 0 12px 10px var(--black); padding-right: 1.5rem }
 .case-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: clamp(1.1rem, 2.6vh, 1.75rem) }
 .case-tag { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--lime); border: 1px solid var(--border); background: rgba(198, 255, 0, .05); padding: .4rem .7rem; border-radius: 1px }
 .case-agency-line { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 1.1rem }

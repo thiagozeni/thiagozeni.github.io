@@ -115,7 +115,12 @@
     if (lenis) lenis.on('scroll', ScrollTrigger.update);
     var fig = $('.hero-fig');
     if (fig && window.matchMedia('(min-width: 1001px)').matches) {
-      gsap.to(fig, { yPercent: 14, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });
+      /* A imagem e o fio descem juntos, na mesma profundidade: o feixe nunca desencaixa do objeto */
+      var drift = function () { return fig.offsetHeight * 0.14; };
+      var st = { trigger: hero, start: 'top top', end: 'bottom top', scrub: true, invalidateOnRefresh: true };
+      gsap.to(fig, { y: drift, ease: 'none', scrollTrigger: st });
+      var thread = $('.hero-thread', hero);
+      if (thread) gsap.to(thread, { y: drift, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true, invalidateOnRefresh: true } });
     }
     window.addEventListener('load', function () { ScrollTrigger.refresh(); });
   }
