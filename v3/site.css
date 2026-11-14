@@ -483,7 +483,7 @@ html:not(.js) .waves li.is-now, .calm .waves li.is-now { color: var(--lime) }
 .stop-bottom p { color: #c9cbc2; font-size: 1rem; line-height: 1.65; max-width: 44ch; margin-bottom: 1.1rem }
 .stop-bottom .link { margin-top: .4rem }
 
-.linha-end { flex: none; width: min(70vw, 52rem); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2.25rem; padding: 0 var(--gut) 0 2vw; position: relative; z-index: 1 }
+.linha-end { flex: none; width: min(54vw, 42rem); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2.25rem; padding: 0 var(--gut) 0 2vw; position: relative; z-index: 1 }
 .linha-end .h2 { font-size: clamp(2.5rem, 6vw, 6rem); background: var(--black); padding: .1em .15em .14em 0; box-shadow: 0 0 40px 30px var(--black) }
 
 html:not(.js) .linha, .calm .linha { overflow-x: auto }
@@ -711,7 +711,7 @@ html:not(.js) .ring-stage, html:not(.js) .lab-ctrl { display: none }
 .form-status.ok { color: var(--lime) }
 .form-status.err { color: #ff6b5e }
 
-.foot { margin-top: clamp(5rem, 14vh, 9rem); position: relative }
+.foot { margin-top: clamp(3rem, 8vh, 5.5rem); position: relative }
 .foot-mark {
   font-family: var(--font-display); font-weight: 900;
   font-size: clamp(9rem, 40vw, 42rem); letter-spacing: -.09em; line-height: .72;
