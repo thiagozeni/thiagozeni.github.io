@@ -627,8 +627,8 @@ html:not(.js) .ring-stage, html:not(.js) .lab-ctrl { display: none }
 
 /* ───────── Prêmios ───────── */
 .awards { position: relative; padding-block: clamp(6rem, 16vh, 11rem); overflow: hidden; background: var(--black); isolation: isolate }
-.awards-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: grayscale(1) contrast(1.15) brightness(.5); opacity: .55 }
-.awards::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--black), rgba(5, 5, 5, .55) 30%, rgba(5, 5, 5, .7) 70%, var(--black)), linear-gradient(90deg, rgba(5, 5, 5, .85), transparent 80%) }
+.awards-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: grayscale(1) contrast(1.12) brightness(.82); opacity: .9 }
+.awards::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--black), rgba(5, 5, 5, .28) 22%, rgba(5, 5, 5, .42) 72%, var(--black)), linear-gradient(90deg, rgba(5, 5, 5, .78), rgba(5, 5, 5, .1) 75%) }
 .awards-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 24rem); column-gap: 3rem; align-items: end; margin-bottom: clamp(3rem, 8vh, 5.5rem) }
 .awards-head .eyebrow { grid-column: 1 / -1 }
 .awards-head .h1 { font-size: clamp(3rem, 11vw, 11rem) }
