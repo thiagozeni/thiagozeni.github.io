@@ -267,7 +267,7 @@
     gsap.set(mSplit.words, { opacity: 0.1 });
     var htl = gsap.timeline({
       scrollTrigger: {
-        trigger: '#hero', start: 'top top', end: '+=240%', pin: true, scrub: 0.9, anticipatePin: 1,
+        trigger: '#hero', start: 'top top', end: '+=205%', pin: true, scrub: 0.9, anticipatePin: 1,
         onToggle: function (self) { if (portrait) portrait.state.active = self.isActive || self.progress < 1; }
       }
     });
@@ -387,6 +387,45 @@
       });
     });
     toggle(items[0], true);
+
+    /* Prévia que acompanha o cursor nos cases fechados */
+    if (hasGsap && !CALM && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      var peek = document.createElement('div'), pimg = document.createElement('img');
+      peek.className = 'case-peek'; peek.setAttribute('aria-hidden', 'true'); pimg.alt = ''; peek.appendChild(pimg);
+      document.body.appendChild(peek);
+      var px = gsap.quickTo(peek, 'x', { duration: 0.55, ease: 'power3.out' }), py = gsap.quickTo(peek, 'y', { duration: 0.55, ease: 'power3.out' });
+      var pr = gsap.quickTo(peek, 'rotation', { duration: 0.7, ease: 'power3.out' }), lastX = 0;
+      var hide = function () { peek.classList.remove('is-on'); };
+      items.forEach(function (item) {
+        var head = $('.case-head', item), src = $('.case-media img', item);
+        if (!src) return;
+        head.addEventListener('mouseenter', function (e) {
+          if (item.classList.contains('is-open')) return;
+          pimg.src = src.getAttribute('src'); lastX = e.clientX;
+          gsap.set(peek, { x: e.clientX + 28, y: e.clientY - peek.offsetHeight * 0.5 });
+          peek.classList.add('is-on');
+        });
+        head.addEventListener('mousemove', function (e) {
+          var w = peek.offsetWidth, x = e.clientX + 28;
+          if (x + w > window.innerWidth - 24) x = e.clientX - w - 28;
+          px(x); py(Math.max(16, Math.min(window.innerHeight - peek.offsetHeight - 16, e.clientY - peek.offsetHeight * 0.5)));
+          pr(Math.max(-7, Math.min(7, (e.clientX - lastX) * 0.5))); lastX = e.clientX;
+        });
+        head.addEventListener('mouseleave', function () { hide(); pr(0); });
+        head.addEventListener('click', hide);
+      });
+      window.addEventListener('scroll', hide, { passive: true });
+    }
+
+    /* A cena do case viaja da home para a página do case (View Transitions) */
+    $$('a[href^="cases/"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var box = a.closest('.stop, .case'), fig = box && $('.stop-img, .case-media', box);
+        if (fig && fig.hasAttribute('data-video')) fig.style.viewTransitionName = 'case-fig';
+      });
+    });
+    window.addEventListener('pageshow', function () { $$('.stop-img, .case-media').forEach(function (f) { f.style.viewTransitionName = ''; }); });
+
     var hash = location.hash && $(location.hash);
     if (hash && hash.classList.contains('case')) { toggle(items[0], false); toggle(hash, true); }
   })();
