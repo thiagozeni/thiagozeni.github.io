@@ -465,6 +465,9 @@
     var stage = $('#ring-stage'), ring = $('#ring'), items = $$('#lab-items .lab-item');
     if (!stage || !items.length) return;
     var N = items.length, STEP = 360 / N, angle = 0, active = -1, cards = [];
+    /* passo e raio do anel acompanham a quantidade de projetos */
+    stage.style.setProperty('--ring-step', STEP + 'deg');
+    stage.style.setProperty('--ring-k', (0.553 / Math.tan(Math.PI / N)).toFixed(3));
     items.forEach(function (it, i) {
       var card = document.createElement('div');
       card.className = 'ring-card'; card.style.setProperty('--k', i);
@@ -513,7 +516,7 @@
       if (locked === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) locked = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
       if (locked !== 'x') return;
       moved = true;
-      var k = 62 / Math.max(260, stage.clientWidth * 0.36);
+      var k = 62 / Math.max(260, stage.clientWidth * 0.36) * (STEP / 40);
       angle = sa + dx * k * 0.62; render();
       var now = performance.now(); v = (e.clientX - lastX) / Math.max(1, now - lastT) * k * 0.62; lastX = e.clientX; lastT = now;
     }, { passive: true });

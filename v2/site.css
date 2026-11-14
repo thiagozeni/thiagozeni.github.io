@@ -600,7 +600,7 @@ html:not(.js) .brands-set span, .calm .brands-set span { font-size: clamp(1.25re
 
 .ring-stage {
   --ring-w: clamp(17rem, 36vw, 34rem);
-  --ring-r: calc(var(--ring-w) * 1.52);
+  --ring-r: calc(var(--ring-w) * var(--ring-k, 1.52));
   height: calc(var(--ring-w) * .9);
   margin-block: clamp(3.5rem, 9vh, 6rem) clamp(2.5rem, 6vh, 4rem);
   perspective: 1400px; perspective-origin: 50% 42%;
@@ -612,7 +612,7 @@ html:not(.js) .brands-set span, .calm .brands-set span { font-size: clamp(1.25re
 .ring { position: absolute; left: 50%; top: 0; width: var(--ring-w); height: calc(var(--ring-w) * .64); margin-left: calc(var(--ring-w) / -2); transform-style: preserve-3d; transform: translateZ(calc(var(--ring-r) * -1)) rotateX(-7deg) rotateY(0deg); will-change: transform }
 .ring-card {
   position: absolute; inset: 0;
-  transform: rotateY(calc(var(--k) * 40deg)) translateZ(var(--ring-r));
+  transform: rotateY(calc(var(--k) * var(--ring-step, 40deg))) translateZ(var(--ring-r));
   backface-visibility: hidden; -webkit-backface-visibility: hidden;
   overflow: hidden; background: var(--panel);
   border: 1px solid var(--border2);
