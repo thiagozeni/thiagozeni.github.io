@@ -3979,24 +3979,6 @@
       ],
       "reviewedAt": "2026-10-09T15:56:40.055Z"
     },
-    "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)": {
-      "rank": 150,
-      "verdict": "incerto",
-      "bestImageId": null,
-      "reasoning": "Daytona branco com luneta preta em aço; não dá para ver Rolesium nem luneta antracite, parece 126500LN.",
-      "candidateIds": [
-        "hunt-daytona-126502-rolesium-mostrador-esmalte-branco-luneta-cerachrom-antracite-1"
-      ],
-      "reviewedAt": "2026-10-09T15:56:40.055Z",
-      "wrongIds": [
-        "st-150-tk-190521-1",
-        "st-150-tk-190521-2"
-      ],
-      "wrongNotes": {
-        "st-150-tk-190521-1": "errada: luneta com escala diferente (\"50\" no topo, número que o Daytona não tem): peça i",
-        "st-150-tk-190521-2": "errada: mesma imagem da foto 2: luneta com escala diferente (\"50\" no topo)"
-      }
-    },
     "Royal Oak 15500ST": {
       "rank": 110,
       "verdict": "confirmado",
@@ -4033,7 +4015,7 @@
         "30-superclonewatches-1tbxoft",
         "30-superluxuryreps-1peyjoj"
       ],
-      "reviewedAt": "2026-11-12T18:49:29.978Z"
+      "reviewedAt": "2026-11-16T19:36:19.846Z"
     },
     "Seamaster Planet Ocean 600M": {
       "rank": 119,
@@ -4041,12 +4023,12 @@
       "bestImageId": null,
       "reasoning": "guard determinístico rebaixou confirmação: brand-mismatch: registro=Rolex, catálogo=Omega",
       "candidateIds": [
-        "hunt-seamaster-planet-ocean-600m-3",
         "hunt-seamaster-planet-ocean-600m-2",
         "hunt-seamaster-planet-ocean-600m-1",
+        "hunt-seamaster-planet-ocean-600m-3",
         "f-119-2e19a199"
       ],
-      "reviewedAt": "2026-11-12T18:49:29.979Z"
+      "reviewedAt": "2026-11-16T19:36:19.846Z"
     },
     "Aquanaut 5167A (40mm)": {
       "rank": 102,
@@ -4059,7 +4041,7 @@
         "f-102-3eabe200",
         "f-102-076a4194"
       ],
-      "reviewedAt": "2026-11-12T18:49:29.979Z"
+      "reviewedAt": "2026-11-16T19:36:19.846Z"
     },
     "Royal Oak 15510ST": {
       "rank": 117,
@@ -4072,7 +4054,7 @@
         "f-117-61214ae0",
         "f-117-0e671be6"
       ],
-      "reviewedAt": "2026-11-12T18:49:29.979Z"
+      "reviewedAt": "2026-11-16T19:36:19.846Z"
     },
     "Royal Oak Offshore 26420 Chronograph": {
       "rank": 124,
@@ -4085,7 +4067,20 @@
         "st-124-tk-198166-2",
         "st-124-tk-198166-1"
       ],
-      "reviewedAt": "2026-11-12T18:49:29.979Z"
+      "reviewedAt": "2026-11-16T19:36:19.846Z"
+    },
+    "Daytona 126502 (Rolesium, mostrador esmalte branco, luneta Cerachrom antracite)": {
+      "rank": 150,
+      "verdict": "incerto",
+      "bestImageId": null,
+      "reasoning": "Daytona com mostrador branco e luneta preta, parece o 126500LN. Rolesium, esmalte e luneta antracite não verificáveis.",
+      "candidateIds": [
+        "st-150-tk-202682-1",
+        "st-150-tk-190521-4",
+        "st-150-tk-190521-3",
+        "st-150-tk-190521-2"
+      ],
+      "reviewedAt": "2026-11-16T19:36:19.846Z"
     }
   },
   "galleryAudit": {

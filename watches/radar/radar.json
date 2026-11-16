@@ -1,25 +1,252 @@
 {
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-16",
   "items": [
     {
-      "id": "2026-11-12-a7f-iwc-mark-xx-ponteiros",
-      "date": "2026-11-12",
+      "id": "2026-11-16-rich-vs-vsf-gmt",
+      "date": "2026-11-16",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "GMT-Master II (126710)",
+      "factory": "RICH vs VSF",
+      "title": "RICH × VSF no GMT: quase iguais, VSF com lupa melhor e relatos de covinha no mostrador",
+      "summary": "Donos dizem que o GMT da RICH e o da VSF são quase indistinguíveis; a lupa da data da VSF é um pouco mais nítida. Também relatam bracelete A9A da VSF leve e de bordas cortantes e uma covinha no mostrador de uma VSF v2, além de que nenhuma fábrica acertou a cor da luneta Pepsi ou Bruce Wayne.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.reddit.com/r/RepTime/comments/1xxsulx/is_vsf_still_king/.rss",
+          "title": "Is VSF Still King? 🤔",
+          "site": "reddit.com",
+          "type": "reddit",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-richf-cartier-skeleton-issues",
+      "date": "2026-11-16",
       "kind": "defeito",
       "tone": "negativo",
-      "brand": "IWC",
-      "model": "Pilot Mark XX",
-      "factory": "A7F (ex-V7F)",
-      "title": "IWC Mark XX da A7F chega com ponteiros entortados",
-      "summary": "Um comprador relata que os ponteiros de minutos e segundos do Mark XX da A7F têm curvatura excessiva nas pontas, bem além da leve curva do genuíno, e pergunta se é problema do lote.",
-      "catalogRank": 21,
+      "brand": "Cartier",
+      "model": "Santos Skeleton",
+      "factory": "RICH",
+      "title": "Relatos de problemas no movimento do Cartier esqueleto da RICH",
+      "summary": "Um post no r/RepTime cita \"supostos problemas recentes\" no mecanismo do Cartier esqueleto da RICH e pergunta se a MLF virou a melhor opção. O defeito não é detalhado.",
+      "catalogRank": null,
       "status": "observacao",
       "sources": [
         {
           "url": "https://www.reddit.com/r/RepTime/new/.rss",
-          "title": "IWC Mark XX- Bent Hands",
+          "title": "Cartier Skeleton: Rich Factory vs MLF (feed r/RepTime)",
           "site": "reddit.com",
           "type": "reddit",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-15-gh-jlc-master-control-perpetual",
+      "date": "2026-11-15",
+      "kind": "comparativo",
+      "tone": "positivo",
+      "brand": "Jaeger-LeCoultre",
+      "model": "Master Control Chronometre Perpetual Calendar",
+      "factory": "GH Factory",
+      "title": "GH JLC calendário perpétuo: lado a lado com o genuíno, impressiona",
+      "summary": "Um membro comparou a GH com o genuíno em ouro rosa em um evento temporário da JLC e elogiou o resultado, destacando a espessura dos anéis dos submostradores e da caixa. Ressalvas: a versão em ouro rosa não é lastreada, e há dúvida se todas as funções do calendário funcionam.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/gh-factory-jlc-master-master-control-chronometre-perpetual-calendar.11054896/page-7",
+          "title": "GH Factory JLC Master Control Chronometre Perpetual Calendar (p.7)",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-15-arf-tungsten-4801-rumor",
+      "date": "2026-11-15",
+      "kind": "versao",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Daytona",
+      "factory": "ARF",
+      "title": "Boato: ARF preparando Daytonas lastreados com tungstênio e movimento 4801",
+      "summary": "Membro do RWI relata ter visto no Telegram que a ARF lançaria modelos lastreados com tungstênio e movimento 4801. É um boato não confirmado, sem nenhuma resposta até a leitura.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/arf-releases-new-cheap-daytonas.11039279/page-4",
+          "title": "ARF Releases New Cheap Daytonas (p.4)",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
           "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-15-gold-maker-gold-factory",
+      "date": "2026-11-15",
+      "kind": "fabrica",
+      "tone": "neutro",
+      "brand": "",
+      "model": "",
+      "factory": "Gold Maker / Gold Factory (GF)",
+      "title": "\"Gold Maker\" é a própria Gold Factory, não uma fábrica nova",
+      "summary": "Membros concluem que Gold Maker é a Gold Factory com outro nome: mesmo carimbo de cachorro verde e mesma etiqueta V2. Um dono do Yacht-Master de titânio da GF diz que ela usa titânio grau 5 (a VSF usaria grau 2), e o modelo é visto como concorrente real da VSF.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/new-factory-called-gold-maker.11052065/page-2",
+          "title": "New Factory called Gold Maker? (p.2)",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-15-topf-15510-rotor",
+      "date": "2026-11-15",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak 15510 (mostrador branco/prata)",
+      "factory": "TopF",
+      "title": "TopF 15510 chega com decoração do rotor se soltando",
+      "summary": "Comprador relata que o TopF 15510 de mostrador branco/prata chegou com parte da decoração do rotor se soltando.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/bought-a-white-silver-15510-topf-from-steve.11056197/",
+          "title": "Bought a white/silver 15510 Topf from Steve",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-arf-126710blro-dead-on-arrival",
+      "date": "2026-11-14",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "GMT-Master II 126710BLRO (Pepsi)",
+      "factory": "ARF",
+      "title": "ARF Pepsi: uma de duas unidades parou de vez em 3 dias",
+      "summary": "Comprador de dois ARF Pepsi viu um deles funcionar mal desde a chegada e parar totalmente em 3 dias, com última leitura de amplitude em 199°; o vídeo de timegrapher do controle de qualidade da loja não batia com o desempenho real. Em resposta, outro membro relata que um VSF também morreu no 2º dia e que movimento que chega morto costuma ter mais de um problema.",
+      "catalogRank": 10,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/arf-gmt-master-2-died-after-3-days-of-use.11057968/",
+          "title": "ARF GMT Master 2 died after 3 days of use.",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        },
+        {
+          "url": "https://forum.replica-watch.info/threads/ordered-2-arf-pepsi-gmt-master-2-one-running-poorly.11057700/",
+          "title": "Ordered 2 ARF Pepsi GMT Master 2 - one running poorly",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-arf-vsf-126613ln-gold-tone",
+      "date": "2026-11-14",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Rolex",
+      "model": "Submariner Date 126613LN (Two-Tone, lastreado)",
+      "factory": "ARF vs VSF",
+      "title": "126613LN lastreado: tom do ouro da ARF e da VSF ainda difere do genuíno",
+      "summary": "Um dono do genuíno 126613LB e do VSF lastreado diz que o peso do VSF está perfeito, mas o tom do ouro não bate com o genuíno, a ponto de ele ter refeito o banho. Nas fotos de controle de qualidade da versão lastreada da ARF, ele também acha o tom errado, enquanto outros membros o veem mais próximo do original.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/arf-126613ln-tt-black-dial-sub.11057944/",
+          "title": "ARF 126613LN - TT Black Dial Sub",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-umi-5711-vs-ppf",
+      "date": "2026-11-14",
+      "kind": "comparativo",
+      "tone": "negativo",
+      "brand": "Patek Philippe",
+      "model": "Nautilus 5711/1A",
+      "factory": "Umi vs PPF",
+      "title": "Umi 5711 é basicamente o PPF com balanço free-sprung",
+      "summary": "Segundo o blog, a Umi (mesma equipe da PPF) pegou o 5711 da PPF e trocou o movimento por um 330 com balanço free-sprung com pesos. As diferenças visíveis são só a fonte da data mais grossa e as alças mais angulosas, e as gravações do movimento continuam rasas e pouco nítidas.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.wristwatchspot.com/2026/11/14/umi-factory-replica-patek-philippe-nautilus-5711/",
+          "title": "Umi Factory Replica Patek Philippe Nautilus 5711",
+          "site": "wristwatchspot.com",
+          "type": "blog",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-ddf-closed",
+      "date": "2026-11-14",
+      "kind": "fabrica",
+      "tone": "negativo",
+      "brand": "",
+      "model": "",
+      "factory": "DDF",
+      "title": "DDF está fechada e não aceita pedidos",
+      "summary": "O wristwatchspot afirma que a DDF \"tem alguns problemas\" e que no momento está fechada, sem aceitar pedidos. O motivo não é detalhado.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://www.wristwatchspot.com/2026/11/14/umi-factory-replica-patek-philippe-nautilus-5711/",
+          "title": "Umi Factory Replica Patek Philippe Nautilus 5711",
+          "site": "wristwatchspot.com",
+          "type": "blog",
+          "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-octa-26238-qc",
+      "date": "2026-11-13",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak Offshore 26238",
+      "factory": "OCTA",
+      "title": "OCTA 26238: marcador das 6h torto e cor do Baby Blue fora",
+      "summary": "Membros avisam que o marcador das 6h sai torto na maioria dos mostradores e que, no Baby Blue, a cor do mostrador e da pulseira destoa do genuíno; também houve unidade com ponteiros errados e fivela que não encaixa na pulseira original. Por outro lado, o acabamento é elogiado como superior ao da DDF.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/ap-26238-with-4404-super-clone.11053732/page-19",
+          "title": "AP 26238 with 4404 super clone (p.19)",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
         }
       ]
     },
@@ -156,6 +383,28 @@
       ]
     },
     {
+      "id": "2026-11-07-c+-daytona-hand-clearance",
+      "date": "2026-11-07",
+      "kind": "defeito",
+      "tone": "negativo",
+      "brand": "Rolex",
+      "model": "Daytona (referência não informada)",
+      "factory": "C+ Factory",
+      "title": "Daytona C+ para sozinho: ponteiro do cronógrafo encosta no de minutos",
+      "summary": "Dono relata que o Daytona da C+ parava várias vezes por dia. O diagnóstico no fórum, confirmado pelo dono, é que o ponteiro de segundos do cronógrafo encosta no ponteiro de minutos: é falha de montagem e de folga entre ponteiros, não do movimento.",
+      "catalogRank": null,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/got-a-daytona-last-week-and-having-problems.11057317/",
+          "title": "Got a Daytona last week and having problems",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "neutral"
+        }
+      ]
+    },
+    {
       "id": "2026-11-07-zf-15300",
       "date": "2026-11-07",
       "kind": "lancamento",
@@ -188,28 +437,6 @@
           "site": "bbtwatch.com",
           "type": "reseller",
           "bias": "reseller"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-07-cplus-daytona-folga-ponteiros",
-      "date": "2026-11-07",
-      "kind": "defeito",
-      "tone": "negativo",
-      "brand": "Rolex",
-      "model": "Daytona (referência não informada)",
-      "factory": "C+ Factory",
-      "title": "Daytona C+ para sozinho: ponteiro de minutos raspa no cronógrafo",
-      "summary": "Daytona da C+ parava várias vezes ao dia. O dono confirmou que isso sempre acontece quando o ponteiro de minutos passa sobre o ponteiro de segundos do cronógrafo, por falta de folga entre os ponteiros. Ao reposicionar o ponteiro de minutos, o relógio volta a funcionar.",
-      "catalogRank": null,
-      "status": "observacao",
-      "sources": [
-        {
-          "url": "https://forum.replica-watch.info/threads/got-a-daytona-last-week-and-having-problems.11057317/",
-          "title": "Got a Daytona last week and having problems",
-          "site": "forum.replica-watch.info",
-          "type": "forum",
-          "bias": "neutral"
         }
       ]
     },
@@ -276,6 +503,35 @@
           "site": "forum.replica-watch.info",
           "type": "forum",
           "bias": "enthusiast"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-zf-15300-review",
+      "date": "2026-11-05",
+      "kind": "comparativo",
+      "tone": "neutro",
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak 15300 (39mm)",
+      "factory": "ZF",
+      "title": "Review do ZF 15300: mostrador bem feito, mas coroa sem rosca entrega",
+      "summary": "No review do RWI, o mostrador tapisserie e a escovação do bracelete são bem avaliados (+3 s/d, 318° de amplitude). Porém a ZF usou coroa de puxar em vez de rosqueada, o que entrega a réplica de imediato, as bordas do bracelete podem cortar e o rehaut é reto; um membro diz ainda que o mostrador azul atual parece mostrador de serviço.",
+      "catalogRank": 151,
+      "status": "observacao",
+      "sources": [
+        {
+          "url": "https://forum.replica-watch.info/threads/review-zf-audemars-piguet-royal-oak-15300.11057137/",
+          "title": "Review: ZF Audemars Piguet Royal Oak 15300",
+          "site": "forum.replica-watch.info",
+          "type": "forum",
+          "bias": "enthusiast"
+        },
+        {
+          "url": "https://crwatch.ru/",
+          "title": "China replica watch – Newest Products (15300 ZF azul/branco/preto)",
+          "site": "crwatch.ru",
+          "type": "reseller",
+          "bias": "reseller"
         }
       ]
     },

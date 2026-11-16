@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-16",
   "items": [
     {
       "key": "rolex|134300",
@@ -225,6 +225,30 @@
         "/media/alerta/al-7128-1g-001-lcw-2.jpg",
         "/media/alerta/al-7128-1g-001-py-3.jpg",
         "/media/alerta/al-7128-1g-001-py-4.jpg"
+      ]
+    },
+    {
+      "key": "omega|31030425001004",
+      "brand": "Omega",
+      "ref": "310.30.42.50.01.004",
+      "label": "Omega Speedmaster Moonwatch Reverse Panda (steel)",
+      "factories": [],
+      "stores": 1,
+      "reasons": [
+        "genuino"
+      ],
+      "genuine": {
+        "name": "Speedmaster Moonwatch Reverse Panda (steel)",
+        "released": "2026-01"
+      },
+      "radarIds": [],
+      "firstSeen": "2026-11-16",
+      "lastSignal": "2026-11-16",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-310-30-42-50-01-004-py-1.jpg",
+        "/media/alerta/al-310-30-42-50-01-004-py-2.jpg"
       ]
     },
     {
@@ -497,7 +521,9 @@
       "lastSignal": "2026-11-09",
       "status": "observacao",
       "catalogRank": null,
-      "photos": []
+      "photos": [
+        "/media/alerta/al-126331-tk-4.jpg"
+      ]
     },
     {
       "key": "rolex|126333",
@@ -519,7 +545,30 @@
       "status": "observacao",
       "catalogRank": null,
       "photos": [
-        "/media/alerta/al-126333-tk-3.jpg"
+        "/media/alerta/al-126333-tk-3.jpg",
+        "/media/alerta/al-126333-tk-5.jpg"
+      ]
+    },
+    {
+      "key": "panerai|pam1678",
+      "brand": "Panerai",
+      "ref": "PAM1678",
+      "label": "Panerai Luminor Marina Bronzo Blue Ombre Dial",
+      "factories": [
+        "VSF"
+      ],
+      "stores": 3,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-11-09",
+      "lastSignal": "2026-11-16",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": [
+        "/media/alerta/al-pam1678-tk-1.jpg"
       ]
     },
     {
@@ -658,14 +707,15 @@
       "status": "observacao",
       "catalogRank": null,
       "photos": [
-        "/media/alerta/al-126509-tk-3.jpg"
+        "/media/alerta/al-126509-tk-3.jpg",
+        "/media/alerta/al-126509-tk-4.jpg"
       ]
     },
     {
-      "key": "panerai|pam1678",
-      "brand": "Panerai",
-      "ref": "PAM1678",
-      "label": "Panerai Luminor Marina Bronzo Blue Ombre Dial",
+      "key": "rolex|126518",
+      "brand": "Rolex",
+      "ref": "126518",
+      "label": "Rolex Daytona 126518 YG Dial",
       "factories": [
         "VSF"
       ],
@@ -675,13 +725,47 @@
       ],
       "genuine": null,
       "radarIds": [],
-      "firstSeen": "2026-11-09",
-      "lastSignal": "2026-11-09",
+      "firstSeen": "2026-10-19",
+      "lastSignal": "2026-11-16",
       "status": "observacao",
       "catalogRank": null,
-      "photos": [
-        "/media/alerta/al-pam1678-tk-1.jpg"
-      ]
+      "photos": []
+    },
+    {
+      "key": "rolex|126680",
+      "brand": "Rolex",
+      "ref": "126680",
+      "label": "Rolex YachtMaster II 126680 Blue Ceramic Bezel SS KF Best White Dial",
+      "factories": [],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-11-02",
+      "lastSignal": "2026-11-16",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
+    },
+    {
+      "key": "rolex|126688",
+      "brand": "Rolex",
+      "ref": "126688",
+      "label": "Rolex YachtMaster II 126688 Blue Ceramic Bezel YG KF Best White Dial",
+      "factories": [],
+      "stores": 2,
+      "reasons": [
+        "lojas"
+      ],
+      "genuine": null,
+      "radarIds": [],
+      "firstSeen": "2026-11-02",
+      "lastSignal": "2026-11-16",
+      "status": "observacao",
+      "catalogRank": null,
+      "photos": []
     },
     {
       "key": "rolex|228235",

@@ -72913,80 +72913,6 @@
     "collectedAt": "2026-11-02T19:24:59.407Z"
   },
   {
-    "id": "hunt-seamaster-planet-ocean-600m-1",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — vsfwatches.com",
-    "source": "vsfwatches.com",
-    "sourceDomain": "vsfwatches.com",
-    "image": "https://www.vsfwatches.com/wp-content/uploads/2026/01/QQ20260129-213601.png",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.png",
-    "confidence": 70,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Título da página: 'Replica OMEGA Seamaster Planet Ocean 600M Black dial 43.5mm'. A descrição cita o calibre 8900 de réplica e a caixa de 43,5 mm. Fetch retornou image/png de 1,4 MB. Conteúdo visual não verificado: nem modelo, nem bisel, nem marca d'água."
-    ],
-    "factoryVerified": false,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-11-09T19:48:29.401Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 2
-    }
-  },
-  {
-    "id": "hunt-seamaster-planet-ocean-600m-2",
-    "model": "Seamaster Planet Ocean 600M",
-    "brand": "Omega",
-    "factory": "VSF",
-    "type": "imagem",
-    "status": "validado",
-    "title": "Omega Seamaster Planet Ocean 600M — vsfwatches.com",
-    "source": "vsfwatches.com",
-    "sourceDomain": "vsfwatches.com",
-    "image": "https://www.vsfwatches.com/wp-content/uploads/2026/01/QQ20260129-213620.png",
-    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.png",
-    "confidence": 70,
-    "matchReasons": [
-      "marca:Omega",
-      "fabrica:VSF",
-      "caca-agentica",
-      "Mesma página de produto, imagem 2 da galeria. Fetch retornou image/png de 1,1 MB. Conteúdo visual não verificado."
-    ],
-    "factoryVerified": false,
-    "tags": [
-      "hunt",
-      "clean"
-    ],
-    "collectedAt": "2026-11-09T19:48:29.521Z",
-    "mediaType": "image",
-    "entity": {
-      "kind": "model",
-      "key": "Seamaster Planet Ocean 600M"
-    },
-    "quality": {
-      "width": null,
-      "height": null,
-      "hasWatermark": false,
-      "sourceTier": 2
-    }
-  },
-  {
     "id": "hunt-seamaster-planet-ocean-600m-3",
     "model": "Seamaster Planet Ocean 600M",
     "brand": "Omega",
@@ -73359,5 +73285,79 @@
       "py"
     ],
     "collectedAt": "2026-11-12T18:51:46.154Z"
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-1",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — holloshoe.com",
+    "source": "holloshoe.com",
+    "sourceDomain": "holloshoe.com",
+    "image": "https://holloshoe.com/cdn/shop/files/Omega-Seamaster-Planet-Ocea-600M_1.jpg?v=1772720162&width=1946",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-1.jpg",
+    "confidence": 70,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Página de produto que se declara '1:1 Super Clone, not an authentic Omega': Planet Ocean 600M ref. 215.30.44.21.01.002, 43.5mm, mostrador cerâmico preto com laranja, Calibre 8900. URL validada (image/jpeg, 119KB). Fábrica não citada. Não vi o conteúdo; marca d'água desconhecida."
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-11-16T19:35:42.168Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 2
+    }
+  },
+  {
+    "id": "hunt-seamaster-planet-ocean-600m-2",
+    "model": "Seamaster Planet Ocean 600M",
+    "brand": "Omega",
+    "factory": "VSF",
+    "type": "imagem",
+    "status": "validado",
+    "title": "Omega Seamaster Planet Ocean 600M — holloshoe.com",
+    "source": "holloshoe.com",
+    "sourceDomain": "holloshoe.com",
+    "image": "https://holloshoe.com/cdn/shop/files/Omega-Seamaster-Planet-Ocea-600M_2.jpg?v=1772720162&width=1946",
+    "localImage": "/media/img/hunt-seamaster-planet-ocean-600m-2.jpg",
+    "confidence": 70,
+    "matchReasons": [
+      "marca:Omega",
+      "fabrica:VSF",
+      "caca-agentica",
+      "Mesma página e mesma variante (215.30.44.21.01.002, preto/laranja). URL validada (image/jpeg, 87.5KB). Não vi o conteúdo."
+    ],
+    "factoryVerified": false,
+    "tags": [
+      "hunt",
+      "clean"
+    ],
+    "collectedAt": "2026-11-16T19:35:42.204Z",
+    "mediaType": "image",
+    "entity": {
+      "kind": "model",
+      "key": "Seamaster Planet Ocean 600M"
+    },
+    "quality": {
+      "width": null,
+      "height": null,
+      "hasWatermark": false,
+      "sourceTier": 2
+    }
   }
 ]
